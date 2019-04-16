@@ -1,0 +1,21 @@
+toc:
+  - title: General
+    subfolderitems:
+      - page: How we track things
+        url: /track
+  - title: Embed script
+    subfolderitems:
+      - page: How to embed the script
+        url: /script/
+      - page: Trigger custom page views
+        url: /script/custom
+      - page: Bypass script blockers
+        url: /script/bypass
+  - title: API
+    subfolderitems:
+      - page: Authenticate
+        url: /api/auth
+      - page: Endpoints
+        url: /api/endpoints
+      - page: Roadmap
+        url: /api/roadmap
