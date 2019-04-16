@@ -27,5 +27,3 @@ You can just copy paste links from the normal dashboard, like these:
 - `https://simpleanalytics.io/simpleanalytics.io/?start=2018-09-17&end=2018-09-23`
 
 > If you include multiple graphs on your website make sure you include `<script src="https://cdn.simpleanalytics.io/embed.js"></script>` only once.
-
-> In case somebody blocks the graph embed script you can detect this and show a warning to those users.
