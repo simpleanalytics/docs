@@ -19,11 +19,21 @@
   li {
     margin: 0 0 .5rem;
     font-size: 14px;
+
+    a {
+      text-decoration: none;
+    }
+
+    &.active a {
+      text-decoration: underline;
+    }
   }
   h3 {
     margin: 0 0 .5rem;
   }
-  h3:first-of-type {
-    // margin-top: 3rem;
-  }
 }
+
+
+.text-light {
+  font-weight:100
+ }

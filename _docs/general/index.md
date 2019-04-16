@@ -1,6 +1,9 @@
 ---
-layout: default
 title: Introduction
+category: general
+category_order: 1
+order: 1
+permalink: /
 ---
 
 In this documentation you will find most of our features explained and find instruction on how to enable certain features.

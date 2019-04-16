@@ -2,12 +2,10 @@
 <html prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <title>{{ site.title }}</title>
 
     <!-- Mobile settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-
 
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.simpleanalytics.io/apple-touch-icon.png">
@@ -19,29 +17,22 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#FFFFFF">
 
-    <!-- Social -->
-    <meta name="description" content="{{ site.description }}">
-    <meta name="og:image" content="https://simpleanalytics.io/images/screenshot.png">
-    <meta name="twitter:image" content="https://simpleanalytics.io/images/screenshot.png">
+{% seo %}
 
     <!-- Style -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.simpleanalytics.io/app.css?hash=bqKrybiUMZ%2BVmrqoWdyUUYX3CXs%3D"> -->
     <link rel="stylesheet" type="text/css" href="/css/app.css">
-
-    <!-- Common js logic -->
-    <script src="/js/common.js?hash=efNAzwh1pnOLUWhD4ObbZDp7zh8%3D"></script>
   </head>
 <body class="feedback-template">
   <nav>
     <ul>
       <li>
-        <a href="https://cdn.simpleanalytics.io/websites" class="brand">
+        <a href="/" class="brand">
           <svg style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
             <rect x="20" y="53" width="10" height="30"></rect>
             <rect x="44" y="35" width="10" height="48"></rect>
             <rect x="68" y="18" width="10" height="65"></rect>
           </svg>
-          Simple Analytics
+          Simple Analytics&nbsp;<span class="text-light">Docs</span>
         </a>
       </li>
       <li class="menu-toggle">
@@ -51,10 +42,10 @@
           </div>
         </div>
       </li>
-      <li class="menu-item m-l-a"><a href="https://cdn.simpleanalytics.io/contact">Contact</a></li>
-    <li class="menu-item"><a href="https://cdn.simpleanalytics.io/feedback">Give feedback</a></li>
-    <li class="menu-item"><a href="https://cdn.simpleanalytics.io/websites">Dashboard</a></li>
-    <li class="menu-item auth"><a href="https://cdn.simpleanalytics.io/account">simpleanalytics@adriaan.io</a> <a href="https://cdn.simpleanalytics.io/logout">(logout)</a></li>
+      <li class="menu-item m-l-a"><a href="https://simpleanalytics.io/contact?ref=docs.simpleanalytics.io">Contact</a></li>
+    <li class="menu-item"><a href="https://simpleanalytics.io/feedback?ref=docs.simpleanalytics.io">Give feedback</a></li>
+    <li class="menu-item"><a href="https://simpleanalytics.io/websites?ref=docs.simpleanalytics.io">Dashboard</a></li>
+    <li class="menu-item auth"><a href="https://simpleanalytics.io/websites?ref=docs.simpleanalytics.io">Login</a></li>
     </ul>
   </nav>
   <script>
@@ -79,11 +70,14 @@
       <div class="split-nav-body">
         <div class="nav">
           <h1 style="visibility: hidden;">Docs</h1>
-          {% for item in site.data.samplelist.toc %}
-            <h3>{{ item.title }}</h3>
+          {% assign mydocs = site.docs | sort: 'category_order' | group_by: 'category' %}
+
+          {% for cat in mydocs %}
+            <h3>{% if cat.name == 'api' %}API{% else %}{{ cat.name | capitalize }}{% endif %}</h3>
             <ul>
-              {% for entry in item.subfolderitems %}
-                <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+              {% assign items = cat.items | sort: 'order' %}
+              {% for item in items %}
+                <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
               {% endfor %}
             </ul>
           {% endfor %}
