@@ -69,17 +69,18 @@
     <main>
       <div class="split-nav-body">
         <div class="nav">
-          <h1 style="visibility: hidden;">Docs</h1>
           {% assign mydocs = site.docs | sort: 'category_order' | group_by: 'category' %}
 
           {% for cat in mydocs %}
-            <h3>{% if cat.name == 'api' %}API{% else %}{{ cat.name | capitalize }}{% endif %}</h3>
-            <ul>
-              {% assign items = cat.items | sort: 'order' %}
-              {% for item in items %}
-                <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
-              {% endfor %}
-            </ul>
+            {% if cat.name != 'api' %}
+              <h3>{% if cat.name == 'api' %}API{% else %}{{ cat.name | capitalize }}{% endif %}</h3>
+              <ul>
+                {% assign items = cat.items | sort: 'order' %}
+                {% for item in items %}
+                  <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
           {% endfor %}
         </div>
         <div>
