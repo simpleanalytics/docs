@@ -64,15 +64,17 @@ blockquote {
   }
 }
 
-img {
-  max-width: 100%;
-}
+.content {
+  img {
+    max-width: 100%;
+  }
 
-li img {
-  border: 1px solid #00c5e5;
-  border-radius: 5px;
-}
+  li img {
+    border: 1px solid #00c5e5;
+    border-radius: 5px;
+  }
 
-li p:first-of-type {
-  margin-top: 0;
+  li p:first-of-type {
+    margin-top: 0;
+  }
 }
