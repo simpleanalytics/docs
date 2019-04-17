@@ -140,6 +140,20 @@
   </script>
   <script src="https://chat.simpleanalytics.io/js/widget.js"></script>
 
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function(event) {
+      event.target.closest('nav').classList.toggle('is-active')
+    }, false)
+
+    document.querySelectorAll('[data-timestamp]').forEach(function(element) {
+      if (!Intl || !Intl.DateTimeFormat || !Date.prototype.toLocaleDateString) return
+      var timestamp = parseInt(element.getAttribute('data-timestamp'), 10)
+      var options = { year: 'numeric', month: 'long', day: 'numeric' }
+      element.textContent = (new Date(timestamp)).toLocaleDateString('en-US', options)
+      element.title = Intl.DateTimeFormat().resolvedOptions().timeZone
+    })
+  </script>
+
   <!-- Privacy friendly website statistics -->
   <script async src="https://cdn.simpleanalytics.io/hello.js"></script>
   <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>

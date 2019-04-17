@@ -751,11 +751,13 @@ nav ul li a {
 nav ul li.auth {
   display: flex;
 }
-nav ul li.auth a:first-of-type {
-  padding-right: 0.2rem;
-}
-nav ul li.auth a:last-of-type {
-  padding-left: 0.2rem;
+@media (min-width: 769px) {
+  nav ul li.auth a:first-of-type {
+    padding-right: 0.2rem;
+  }
+  nav ul li.auth a:last-of-type {
+    padding-left: 0.2rem;
+  }
 }
 nav .brand {
   display: flex;
