@@ -24,3 +24,5 @@ This way Simple Analytics knows where the visitor did come from (email) and will
 If there is no parameter found we save the URL of the referrer. We only save the part before any `?` or `#`. So for example if the referrer URL is `https://referrer.com/search?query=sensitive+information` we only store `referrer.com/search`. You don't have to do anything to make this work.
 
 Go to [what we collect](/what-we-collect) if you want to know more about what we collect and store of your visitors.
+
+<img class="undraw-svg" src="/images/undraw_segment.svg" alt="">

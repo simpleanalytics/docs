@@ -8,6 +8,8 @@ permalink: /what-we-collect
 
 To say we don't collect any information would be silly for an analytics tool. We do collect information that is needed to show you the simple analytics. But unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we collect from your users.
 
+<img class="undraw-svg" src="/images/undraw_collecting.svg" alt="">
+
 ### IP addresses
 
 > We don't collect and store IPs

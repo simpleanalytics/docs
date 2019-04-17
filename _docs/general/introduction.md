@@ -12,3 +12,5 @@ If you think there is something missing, [please let us know](https://simpleanal
 If you're curious about our upcoming features you should check out our [roadmap](https://simpleanalytics.io/roadmap?ref=docs.simpleanalytics.io).
 
 > Are you looking for our embed script? Go to [how to add our script](/script).
+
+<img class="undraw-svg" src="/images/undraw-filing-system.svg" alt="">

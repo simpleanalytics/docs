@@ -14,6 +14,8 @@ By storing the data in Iceland we get a notification before any goverment wants 
 
 Our founder Adriaan wrote [a blog post](https://blog.simpleanalytics.io/why-we-moved-our-servers-to-iceland?ref=docs.simpleanalytics.io) _(which went viral [on Hacker News](https://news.ycombinator.com/item?id=19526521))_ about why we moved our servers to Iceland.
 
+<img class="undraw-svg" src="/images/undraw_around_the_world.svg" alt="">
+
 ## Network of servers
 
 Having a server in Iceland is great for privacy and environmental benefits, but it's only one location on the world. So if a visitor visits a webpage of one of our customers it's slower at the other side of the world. This is why we will offer another solution. And it will be very fast!
