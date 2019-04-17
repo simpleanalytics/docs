@@ -1,12 +1,11 @@
 ---
-title: How to track
+title: How to use URL parameters
+menu: How to use URL params
 category: general
 category_order: 1
 order: 3
-permalink: /how-to-track
+permalink: /how-to-use-url-parameters
 ---
-
-> Are you looking for our embed script? Go to [how to add our script](/script).
 
 When you want to know where visitors are coming from you can add certain parameters to your URL. Browsers send the previous page (referrer) to the next page so you can see where a visitor did come from. There are a few ways how we determine where a visitor comes from.
 

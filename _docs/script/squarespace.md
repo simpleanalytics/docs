@@ -1,5 +1,6 @@
 ---
-title: Install on Squarespace
+title: Install Simple Analytics on Squarespace
+menu: Install on Squarespace
 category: script
 category_order: 3
 order: 10

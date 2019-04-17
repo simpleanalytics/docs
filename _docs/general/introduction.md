@@ -10,3 +10,5 @@ In this documentation you will find most of our features explained and find inst
 
 If you think there is something missing, [please let us know](https://simpleanalytics.io/feedback?ref=docs.simpleanalytics.io).
 If you're curious about our upcoming features you should check out our [roadmap](https://simpleanalytics.io/roadmap?ref=docs.simpleanalytics.io).
+
+> Are you looking for our embed script? Go to [how to add our script](/script).

@@ -1,5 +1,6 @@
 ---
-title: Install on WIX
+title: Install Simple Analytics on WIX
+menu: Install on WIX
 category: script
 category_order: 3
 order: 9

@@ -73,11 +73,25 @@
 
           {% for cat in mydocs %}
             {% if cat.name != 'api' %}
-              <h3>{% if cat.name == 'api' %}API{% else %}{{ cat.name | capitalize }}{% endif %}</h3>
+              <h3>
+                {% if cat.name == 'api' %}
+                  API
+                {% else %}
+                  {{ cat.name | capitalize }}
+                {% endif %}
+              </h3>
               <ul>
                 {% assign items = cat.items | sort: 'order' %}
                 {% for item in items %}
-                  <li class="{% if item.url == page.url %}active{% endif %}"><a href="{{ item.url }}">{{ item.title }}</a></li>
+                  <li class="{% if item.url == page.url %}active{% endif %}">
+                    <a href="{{ item.url }}">
+                      {% if item.menu %}
+                        {{ item.menu }}
+                      {% else %}
+                        {{ item.title }}
+                      {% endif %}
+                    </a>
+                  </li>
                 {% endfor %}
               </ul>
             {% endif %}
