@@ -9,12 +9,20 @@ permalink: /embed-graph-on-your-site
 Simple Analytics has a script which you can use to embed public website statistics. It's in beta, so **use at your own risk**.
 
 ```html
-<p>This website has <span id="pageviews"></span> page views in the last month
+<p>This website has <span id="pageviews"></span> page views in the last month.</p>
 <div data-sa-graph-url="https://simpleanalytics.io/simpleanalytics.io/?color=75b5aa" data-sa-page-views-selector="#pageviews">
   <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
 </div>
 <script src="https://cdn.simpleanalytics.io/embed.js"></script>
 ```
+
+## Example
+
+<p>Simple Analytics has <span id="pageviews">...</span> page views in the last month.</p>
+<div data-sa-graph-url="https://simpleanalytics.io/simpleanalytics.io/?color=FF4F64" data-sa-page-views-selector="#pageviews">
+  <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
+</div>
+<script src="https://cdn.simpleanalytics.io/embed.js"></script>
 
 ## Customize
 
