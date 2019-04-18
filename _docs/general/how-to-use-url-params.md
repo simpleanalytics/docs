@@ -40,8 +40,10 @@ If there is no parameter found we save the URL of the referrer. We only save the
 
 > You don't have to do anything to make this work.
 
+## Parsing of values
 
+We parse the URL parameters differently then the referrer URL. Because people generate the URL parameters themselves we don't want to touch those too much. What we do is we decode their values (so you can use forbidden characters) and convert hostnames to more general names. For example we convert `www.google.com` to `google`. We still store the original value, but we show google as a referrer in the dashboard. We do this so we can combine similar referrers into one. So we count `www.google.com`, `google.nl`, and `google.fr` as `google`.
 
-Go to [what we collect](/what-we-collect) if you want to know more about what we collect and store of your visitors.
+Referrer URLs contain the full URL that the browser gives us. It's something like `https://www.referrer.com/search?query=sensitive+information`. From this URL we store only `referrer.com` as the referrer and we keep `referrer.com/search` as the original referrer. We drop the query, protocol, and common subdomain.
 
 <img class="undraw-svg" src="/images/undraw_segment.svg" alt="">

@@ -1,3 +1,15 @@
+
+body {
+  scroll-behavior: smooth;
+}
+
+:target:before {
+	content: "";
+	display: block;
+	height: 20px; /* fixed header height*/
+	margin: -20px 0 0; /* negative fixed header height */
+}
+
 .split-nav-body {
   display: flex;
 
@@ -105,5 +117,16 @@ blockquote {
 
   li p:first-of-type {
     margin-top: 0;
+  }
+}
+
+a.anchor-link {
+  display: none;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+  &[id]:hover > a.anchor-link {
+    display: inline;
   }
 }

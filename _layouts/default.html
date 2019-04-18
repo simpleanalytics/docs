@@ -152,6 +152,10 @@
       element.textContent = (new Date(timestamp)).toLocaleDateString('en-US', options)
       element.title = Intl.DateTimeFormat().resolvedOptions().timeZone
     })
+
+    document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id]').forEach(function(heading) {
+      heading.innerHTML = heading.textContent + ' <a href="#' + heading.getAttribute('id') + '" class="anchor-link">#</a>'
+    })
   </script>
 
   <!-- Privacy friendly website statistics -->
