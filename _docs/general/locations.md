@@ -12,7 +12,7 @@ We do everything in our power to keep our user data safe. First of all we don't 
 
 By storing the data in Iceland we get a notification before any goverment wants to peek in the data. Because we encrypted the server where we store the data it's a matter of powering off the server and nobody can access the data. Iceland is known for it's brave privacy actions towards the freedom of speech concerning journalists.
 
-Our founder Adriaan wrote [a blog post](https://blog.simpleanalytics.io/why-we-moved-our-servers-to-iceland?ref=docs.simpleanalytics.io) _(which went viral [on Hacker News](https://news.ycombinator.com/item?id=19526521))_ about why we moved our servers to Iceland.
+Our founder Adriaan wrote [a blog post](https://blog.simpleanalytics.io/why-we-moved-our-servers-to-iceland?ref={{ site.hostname }}) _(which went viral [on Hacker News](https://news.ycombinator.com/item?id=19526521))_ about why we moved our servers to Iceland.
 
 <img class="undraw-svg" src="/images/undraw_around_the_world.svg" alt="">
 
