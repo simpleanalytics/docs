@@ -1,0 +1,171 @@
+footer.general {
+  background-color: #EEF9FF;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem 2rem;
+  align-items: center;
+  text-align: left;
+  flex-direction: row;
+
+  @media (max-width: $breakpoint-footer) {
+    flex-direction: column-reverse;
+    padding: 2rem 2rem 1rem;
+    align-items: start;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+
+    font-size: 23px;
+    font-weight: 500;
+
+    @media (max-width: $breakpoint-medium) {
+      font-size: 16px;
+    }
+
+    svg {
+      height: 30px;
+      width: 30px;
+      fill: $primary-color;
+      margin-right: 0.5rem;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: unset;
+    margin-bottom: 1rem;
+
+    @media (max-width: $breakpoint-footer) {
+      margin-top: 2rem;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover h1 {
+      opacity: 1;
+    }
+    h1 {
+      opacity: 0.6;
+      transition: opacity 250ms linear;
+    }
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  > .intro {
+    flex: 2;
+    margin-right: 2rem;
+
+    @media (max-width: $breakpoint-medium) {
+      margin-right: 0;
+    }
+  }
+
+  > .link-container {
+    flex: 5;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    > div {
+      padding: .5rem;
+
+      @media (max-width: $breakpoint-small) {
+        padding: 0;
+      }
+    }
+
+    .flex-tablet-devider {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint-footer) {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    @media (max-width: $breakpoint-small) {
+      div + div {
+        padding-top: 1.5rem;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-small) and (max-width: 1080px) {
+    .intro {
+      max-width: 360px;
+    }
+
+    > .link-container {
+      flex: 2;
+      justify-content: unset;
+      margin-left: 3rem;
+
+      > div:nth-child(2),
+      > div:nth-child(5) {
+        margin-left: 2rem;
+      }
+      .flex-tablet-devider {
+        flex-basis: 100%;
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-small) and (max-width: $breakpoint-footer) {
+    > .link-container {
+      margin-left: 0;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    div + div {
+      padding-top: 0;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+
+  li {
+    font-size: 14px;
+  }
+
+  li + li {
+    margin-top: 0.5rem;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #7D9598;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #8AA3A6;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+
+    font-size: 13px;
+    color: #7D9598;
+    transition: color 250ms linear;
+
+    &:hover {
+      color: black;
+    }
+  }
+}

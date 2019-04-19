@@ -2,6 +2,9 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import "variables";
 @import "simpleanalytics";
 @import "highlighting";
 @import "base";
+@import "header";
+@import "footer";
