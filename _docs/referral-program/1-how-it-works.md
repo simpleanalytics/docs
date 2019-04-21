@@ -15,7 +15,7 @@ On [your referrals page](https://simpleanalytics.io/account/referrals?ref={{ sit
 
 ## To sum it up
 
-- New customer gets one month (one month extra free trail)
+- New customer gets one month (one month extra free trial)
 - You get the value of that month (of the new customer)
 - Money we send you goes to the same credit card as you have on file
 
@@ -32,7 +32,7 @@ On [your referrals page](https://simpleanalytics.io/account/referrals?ref={{ sit
 
 ## How it works for new customers
 
-When you click the "Get one month for free"-button on the referral page you go to the main sales funnel of Simple Analytics. We will set a cookie with the referral code so we can apply the discount on checkout. You will get one month for free so the trail period is not 7 days but 37 days. During this period (or after) you can always cancel but we don't do refunds.
+When you click the "Get one month for free"-button on the referral page you go to the main sales funnel of Simple Analytics. We will set a cookie with the referral code so we can apply the discount on checkout. You will get one month for free so the trial period is not 7 days but 37 days. During this period (or after) you can always cancel but we don't do refunds.
 
 When you payed your first invoice we will give the promoter of this referral link one month in cash. The promoter will not get your email address or anything else, for them you are anonymous.
 
