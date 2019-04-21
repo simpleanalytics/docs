@@ -174,7 +174,7 @@
     })(window)
   </script>
   <script src="https://chat.simpleanalytics.io/js/widget.js"></script>
-
+  <script src="/js/pjax.min.js"></script>
   <script>
     document.querySelector('.hamburger').addEventListener('click', function(event) {
       event.target.closest('nav').classList.toggle('is-active')
@@ -190,6 +190,15 @@
 
     document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id]').forEach(function(heading) {
       heading.innerHTML = heading.textContent + ' <a href="#' + heading.getAttribute('id') + '" class="anchor-link">#</a>'
+    })
+
+    var pjax = new Pjax({
+      cacheBust: false,
+      selectors: [
+        "title",
+        "meta[name=description]",
+        "main",
+      ]
     })
   </script>
 
