@@ -130,3 +130,14 @@ h1, h2, h3, h4, h5 {
     display: inline;
   }
 }
+
+img.icon {
+  width: 16px;
+}
+
+h1 img.icon {
+  display: none;
+}
+h1:hover img.icon {
+  display: inline-block;
+}
