@@ -1,7 +1,7 @@
 ---
 title: How to add our script
 category: script
-category_order: 3
+category_order: 2
 order: 1
 permalink: /script
 ---

@@ -2,7 +2,7 @@
 title: Install Simple Analytics on Squarespace
 menu: Install on Squarespace
 category: script
-category_order: 3
+category_order: 2
 order: 10
 permalink: /install-simple-analytics-on-squarespace
 ---

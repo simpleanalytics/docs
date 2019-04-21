@@ -30,4 +30,10 @@ On [your referrals page](https://simpleanalytics.io/account/referrals?ref={{ sit
 - New customer signs up for the starter plan (for $19 a month).
   They fail to pay us. **You get nothing**.
 
+## How it works for new customers
+
+When you click the "Get one month for free"-button on the referral page you go to the main sales funnel of Simple Analytics. We will set a cookie with the referral code so we can apply the discount on checkout. You will get one month for free so the trail period is not 7 days but 37 days. During this period (or after) you can always cancel but we don't do refunds.
+
+When you payed your first invoice we will give the promoter of this referral link one month in cash. The promoter will not get your email address or anything else, for them you are anonymous.
+
 > Read our [referral program terms of service](/referral-program/terms-of-service) to get familiar with our rules.
