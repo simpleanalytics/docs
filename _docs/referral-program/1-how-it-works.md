@@ -13,6 +13,8 @@ When people signup via your link:
 - They get one month for free (one month extra free trial)
 - You get paid **in cash** the value of one month of their chosen plan
 
+> Go to [your referrals page](https://simpleanalytics.io/account/referrals?ref={{ site.hostname }}) to create your personal referral link
+
 <img class="undraw-svg" src="/images/undraw-hang-out.svg" alt="">
 
 ## How it works for the referrer
@@ -30,6 +32,8 @@ Some examples:
 | Starter plan (for $19 a month) | Cancel their plan within one month + 7 days | **You get nothing** |
 | Starter plan (for $19 a month) | Fail to pay us | **You get nothing** |
 
+> Go to [your referrals page](https://simpleanalytics.io/account/referrals?ref={{ site.hostname }}) to create your personal referral link
+
 ## How it works for new customers
 
 When you click the **"Get one month for free"** button on the referral page you go to the main sales funnel of Simple Analytics. We will set a cookie with the referral code so we can apply the discount on checkout. 
@@ -39,10 +43,6 @@ You will get **one month for free** so the trial period will be 37 days (instead
 When your first invoice has been paid, we will give the promoter of the referral link one month in cash. 
 
 Note: We are privacy focused, so the promoter will not receive any indication of who you are (i.e. you will be totally anonymous).
-
-
-## Setup your Referral Link
-> Go to [your referrals page](https://simpleanalytics.io/account/referrals?ref={{ site.hostname }}) to create your personal referral link
 
 
 > Read our [referral program terms of service](/referral-program/terms-of-service) to get familiar with our rules.
