@@ -58,6 +58,9 @@
       }
     })()
 
+    NodeList.prototype.forEach = Array.prototype.forEach
+    HTMLCollection.prototype.forEach = Array.prototype.forEach
+
     var IS_ROBOT = (!window || !window.navigator || !window.navigator.userAgent || window.navigator.userAgent.search(/(bot|spider|crawl|monit)/ig) > -1)
     var HAS_ASYNC
     try {
@@ -216,6 +219,20 @@
         "main",
       ]
     })
+  </script>
+  <script>
+    (function() {
+      document.getElementsByTagName('table').forEach(function(table) {
+        var newTable = table.cloneNode(true)
+        var div = document.createElement('div')
+        div.className = 'table-wrapper'
+        div.appendChild(newTable)
+        table.parentElement.replaceChild(div, table)
+        console.log(table)
+        console.log(newTable)
+        console.log(table.parentElement)
+      })
+    })()
   </script>
 </body>
 </html>
