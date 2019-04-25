@@ -4,7 +4,7 @@ menu: Install on Ghost
 category: script
 category_order: 2
 order: 6
-permalink: /install-simple-analytics-on-Ghost
+permalink: /install-simple-analytics-on-ghost
 ---
 
 You can embed our script in Ghost using their feature called "Code Injection". On this page we will explain how to use this feature and help you installing the Simple Analytics script on Ghost.
