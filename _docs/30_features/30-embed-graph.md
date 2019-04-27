@@ -3,6 +3,7 @@ title: Embed graph on your site
 category: features
 category_order: 3
 order: 5
+skip_pjax: true
 permalink: /embed-graph-on-your-site
 ---
 

@@ -89,7 +89,7 @@
                 {% assign items = cat.items | sort: 'order' %}
                 {% for item in items %}
                   <li class="{% if item.url == page.url %}active{% endif %}">
-                    <a href="{{ item.url }}">
+                    <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
                       {% if item.menu %}
                         {{ item.menu }}
                       {% else %}
@@ -213,6 +213,7 @@
 
     var pjax = new Pjax({
       cacheBust: false,
+      elements: 'a:not([data-js="skip-pjax"])',
       selectors: [
         "title",
         "meta[name=description]",
