@@ -1,7 +1,7 @@
 ---
 title: Bypass ad-blockers
-category: script
-category_order: 2
+category: features
+category_order: 3
 order: 4
 permalink: /bypass-ad-blockers
 ---

@@ -74,7 +74,7 @@
     <main>
       <div class="split-nav-body">
         <div class="nav">
-          {% assign mydocs = site.docs | sort: 'category_order' | group_by: 'category' %}
+          {% assign mydocs = site.docs | sort: 'path' | group_by: 'category' %}
 
           {% for cat in mydocs %}
             {% if cat.name != 'api' %}
