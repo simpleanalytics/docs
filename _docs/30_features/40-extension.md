@@ -6,7 +6,7 @@ order: 6
 permalink: /extension
 ---
 
-If you are a customer of Simple Analytics and you want to block your own visits this extension if for you. With it enabled your stats will not include your visits.
+If you are a customer of Simple Analytics and you want to block your own visits this extension is for you. With it enabled your stats will not include your visits.
 
 > Download the extension [for Google Chrome here](https://chrome.google.com/webstore/detail/simple-analytics/ehkndchainpkdfpnancgobgfnfjnmmeh)
 
