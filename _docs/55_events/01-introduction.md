@@ -86,7 +86,7 @@ There is no personally identifiable information in the cookie whatsoever. We wan
 <details markdown="1">
 <summary>Read more in depth how our matching works</summary>
 <div markdown="1">
-lalalal
+We will add more information here.
 </div>
 </details>
 
