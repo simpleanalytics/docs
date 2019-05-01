@@ -29,7 +29,7 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 
 > **Developers** place this script right in the `<head>` or top part of your `<body>` in your html.
 
-This little snipped creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have an effect on your page load).
+This little snippet creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have an effect on your page load).
 
 The `sa`-function is the function you'll need to use to create events. To track an event it's as simple as this:
 
@@ -58,7 +58,7 @@ Here is an example code of that:
   // Cookie is not yet set
   sa('sa_cookie', false)
 
-  // Events happen (they are send to Simple Analytics)
+  // Events happen (they are sent to Simple Analytics)
   sa('signup')
 
   // User approves cookie (Simple Analytics will set a cookie)
@@ -68,7 +68,7 @@ Here is an example code of that:
   </div>
 </details>
 
-When a user came from Google on May 18, 2019 and clicked on the FAQ and after that did sign up the cookie would look like this:
+When a user came from Google on May 18, 2019 and clicked on the FAQ and after that signed up the cookie would look like this:
 
 ```js
 [
@@ -78,7 +78,7 @@ When a user came from Google on May 18, 2019 and clicked on the FAQ and after th
 ]
 ```
 
-There is no personal information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personal identifiable information.
+There is no personally identifiable information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personal identifiable information.
 
 <details markdown="1">
 <summary>Read more in depth how our matching works</summary>
@@ -89,7 +89,7 @@ lalalal
 
 ## The variable `sa` is already used
 
-If that is the case, you can change it with the `data-sa-global` attribute:
+If the `sa` variable is already in use you can change it with the `data-sa-global` attribute:
 
 ```html
 <script>window.ba=window.ba||function(){a=arguments;ba.q?ba.q.push(a):ba.q=[a]};</script>
