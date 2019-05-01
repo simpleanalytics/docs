@@ -70,7 +70,7 @@ Here is an example code of that:
   </div>
 </details>
 
-When a user came from Google on May 18, 2019 and clicked on the FAQ and after that signed up the cookie would look like this:
+When a user came from Google on May 18, 2019 and clicked on the FAQ, the next day again and signed up the cookie would look like this:
 
 ```js
 [
