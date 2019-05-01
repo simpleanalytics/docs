@@ -75,8 +75,9 @@ When a user came from Google on May 18, 2019 and clicked on the FAQ and after th
 ```js
 [
   { ref: 'google.com', date: '2019-05-18' },
-  { name: 'click_faq' },
-  { name: 'click_signup' }
+  { name: 'click_faq', date: '2019-05-18' },
+  { name: 'click_faq', date: '2019-05-19' },
+  { name: 'click_signup', date: '2019-05-19' }
 ]
 ```
 
