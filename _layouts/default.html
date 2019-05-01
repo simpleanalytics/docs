@@ -77,7 +77,7 @@
           {% assign mydocs = site.docs | sort: 'path' | group_by: 'category' %}
 
           {% for cat in mydocs %}
-            {% if cat.name != 'api' %}
+            {% if cat.name != 'api' and cat.name != 'events' %}
               <h3>
                 {% if cat.name == 'api' %}
                   API
@@ -201,7 +201,7 @@
       })
 
       document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id]').forEach(function(heading) {
-        heading.innerHTML = heading.textContent + ' <a href="#' + heading.getAttribute('id') + '" class="anchor-link">#</a>'
+        heading.innerHTML = heading.innerHTML + ' <a href="#' + heading.getAttribute('id') + '" class="anchor-link">#</a>'
       })
     }
 
