@@ -43,6 +43,8 @@ In the background we add the referrer to every event. So in the tool you can sel
 
 When you use events (this is completely optional) we use a cookie. Make sure to have permission to use this cookie from the user before running our script.
 
+> Our cookies will expire after 30 days of no activity
+
 <details>
   <summary>How to wait for cookie permissions of the visitor</summary>
 
