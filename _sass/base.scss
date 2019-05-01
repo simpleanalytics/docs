@@ -2,6 +2,15 @@ h2 code {
   font-size: 24px;
 }
 
+details > div {
+  border-left: 10px solid #f6f6f6;
+  padding-left: 1rem;
+}
+
+blockquote strong {
+  font-weight: 600;
+  color: #00c5e5;
+}
 
 /* old stuff */
 

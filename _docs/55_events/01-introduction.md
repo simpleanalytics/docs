@@ -27,7 +27,7 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 <script async defer src="https://www.simpleanalyticscdn.com/app.js"></script>
 ```
 
-> For developers: Place this script right in the `<head>` or top part of your `<body>` in your html.
+> **Developers** place this script right in the `<head>` or top part of your `<body>` in your html.
 
 This little snipped creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have an effect on your page load).
 
@@ -43,27 +43,10 @@ In the background we add the referrer to every event. So in the tool you can sel
 
 When you use events (this is completely optional) we use a cookie. Make sure to have permission to use this cookie from the user before running our script.
 
-The cookie content could look like this:
+<details>
+  <summary>How to wait for cookie permissions of the visitor</summary>
 
-```js
-[
-  { ref: 'google.com', date: '2019-05-18' },
-  { name: 'click_faq' },
-  { name: 'click_signup' }
-]
-```
-
-There is no personal information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personal identifiable information.
-
-<details markdown="1">
-  <summary>Read more in depth how our matching works</summary>
-
-  lalalal
-
-</details>
-
-## How to wait for cookie permissions of the visitor
-
+  <div markdown="1">
 If you're using a cookie permission (and you are required to do so in the EU), you tell us not set a cookie until you have permission.
 
 Here is an example code of that:
@@ -82,6 +65,27 @@ Here is an example code of that:
   sa('sa_cookie', true)
 </script>
 ```
+  </div>
+</details>
+
+When a user came from Google on May 18, 2019 and clicked on the FAQ and after that did sign up the cookie would look like this:
+
+```js
+[
+  { ref: 'google.com', date: '2019-05-18' },
+  { name: 'click_faq' },
+  { name: 'click_signup' }
+]
+```
+
+There is no personal information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personal identifiable information.
+
+<details markdown="1">
+<summary>Read more in depth how our matching works</summary>
+<div markdown="1">
+lalalal
+</div>
+</details>
 
 ## The variable `sa` is already used
 
