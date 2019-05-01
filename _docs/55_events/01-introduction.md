@@ -11,6 +11,16 @@ permalink: /events
 
 To start working with events you need (or maybe already have) to install the embed script.
 
+{% comment %}
+```html
+<script>
+!function(s,i,m,p,l,e){(s.SimpleAnalyticsFunction=p)in s||(s.sa=s.sa||function(){
+s.sa.q.push(arguments)},s.sa.q=[]),(l=i.createElement("script")).src=m,
+l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
+}(window,document,'//www.simpleanalyticscdn.com/app.js','sa');
+</script>
+```
+{% endcomment %}
 
 ```html
 <script>window.sa=window.sa||function(){a=arguments;sa.q?sa.q.push(a):sa.q=[a]};</script>
@@ -33,7 +43,24 @@ In the background we add the referrer to every event. So in the tool you can sel
 
 When you use events (this is completely optional) we use a cookie. Make sure to have permission to use this cookie from the user before running our script.
 
-...
+The cookie content could look like this:
+
+```js
+[
+  { ref: 'google.com', date: '2019-05-18' },
+  { name: 'click_faq' },
+  { name: 'click_signup' }
+]
+```
+
+There is no personal information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personal identifiable information.
+
+<details markdown="1">
+  <summary>Read more in depth how our matching works</summary>
+
+  lalalal
+
+</details>
 
 ## How to wait for cookie permissions of the visitor
 
@@ -66,6 +93,7 @@ If that is the case, you can change it with the `data-sa-global` attribute:
 ```
 
 
+{% comment %}
 <details markdown="1">
   <summary>The embed script explained for developers</summary>
 
@@ -100,3 +128,5 @@ If that is the case, you can change it with the `data-sa-global` attribute:
 })(window, document, 'www.simpleanalyticscdn.com', 'sa')
 ```
 </details>
+
+{% endcomment %}
