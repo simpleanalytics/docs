@@ -78,10 +78,10 @@ For example, if a user came from Google on May 18, 2019, clicked on the FAQ, and
 
 ```js
 [
-  { ref: 'google.com', date: '2019-05-18' },
-  { name: 'click_faq', date: '2019-05-18' },
-  { name: 'click_faq', date: '2019-05-19' },
-  { name: 'click_signup', date: '2019-05-19' }
+  { v: 1, ref: 'google.com', date: '2019-05-18' },
+  ['click_faq', 0],
+  ['click_faq', 1],
+  ['click_signup', 1]}
 ]
 ```
 
