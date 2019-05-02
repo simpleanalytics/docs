@@ -23,7 +23,7 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 {% endcomment %}
 
 ```html
-<script>window.sa=window.sa||function(){a=arguments;sa.q?sa.q.push(a):sa.q=[a]};</script>
+<script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
 <script async defer src="https://www.simpleanalyticscdn.com/app.js"></script>
 ```
 
@@ -54,7 +54,7 @@ If you're using a cookie permission (which you are required to do in the EU), yo
 Here is an example code of that:
 
 ```html
-<script>window.sa=window.sa||function(){a=arguments;sa.q?sa.q.push(a):sa.q=[a]};</script>
+<script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
 <script async defer src="https://www.simpleanalyticscdn.com/app.js"></script>
 <script>
   // Cookie is not yet set
@@ -95,7 +95,7 @@ We will add more information here.
 If the `sa` variable is already in use you can change it with the `data-sa-global` attribute:
 
 ```html
-<script>window.ba=window.ba||function(){a=arguments;ba.q?ba.q.push(a):ba.q=[a]};</script>
+<script>window.ba=window.ba||function(){a=[].slice.call(arguments);ba.q?ba.q.push(a):ba.q=[a]};</script>
 <script async defer data-sa-global="ba" src="https://www.simpleanalyticscdn.com/app.js"></script>
 ```
 
