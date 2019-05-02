@@ -41,7 +41,7 @@ In the background we add the referrer to every event. So in the tool you can sel
 
 ### Valid event names
 
-We want to keep event very simple. That's why we only allow certain characters: alphanumeric, `.`, `_`, `-`. We convert events to lower case.
+We want to keep event very simple. That's why we only allow certain characters: alphanumeric, `.`, `_`, `-`. We convert events to lower case and invalid names to a version which is valid. So your events are always saved.
 
 ## What we store about a visitor
 
