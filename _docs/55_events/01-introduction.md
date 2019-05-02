@@ -9,7 +9,7 @@ permalink: /events
 
 > This page is not published yet and is a work in progress
 
-To start working with events you need (or maybe already have) to install the embed script.
+If you haven't already done so, to start working with events you need to first install the embed script.
 
 {% comment %}
 ```html
@@ -27,7 +27,7 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 <script async defer src="https://www.simpleanalyticscdn.com/app.js"></script>
 ```
 
-> **Developers** place this script right in the `<head>` or top part of your `<body>` in your html.
+> **Developers:** place this script in the `<head>` or top part of your `<body>` in your html.
 
 This little snippet creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have an effect on your page load).
 
@@ -37,11 +37,11 @@ The `sa`-function is the function you'll need to use to create events. To track 
 sa('click_signup')
 ```
 
-In the background we add the referrer to every event. So in the tool you can select the referrer with every event. We also save the day of the first event, which we will use to match the events with the previous events.
+In the background we add the referrer to every event. So in the tool you can select the referrer with every event. We also save the date of the first event, which we will use to match the events with the previous events.
 
 ## What we store about a visitor
 
-When you use events (this is completely optional) we use a cookie. Make sure to have permission to use this cookie from the user before running our script.
+When you use events (which is completely optional), we use a cookie. Make sure to have permission to use this cookie from the user before running our script.
 
 > Our cookies will expire after 30 days of no activity
 
@@ -49,7 +49,7 @@ When you use events (this is completely optional) we use a cookie. Make sure to 
   <summary>How to wait for cookie permissions of the visitor</summary>
 
   <div markdown="1">
-If you're using a cookie permission (and you are required to do so in the EU), you tell us not set a cookie until you have permission.
+If you're using a cookie permission (which you are required to do in the EU), you can tell us not to set a cookie until you have permission.
 
 Here is an example code of that:
 
@@ -70,7 +70,7 @@ Here is an example code of that:
   </div>
 </details>
 
-When a user came from Google on May 18, 2019 and clicked on the FAQ, the next day again and signed up the cookie would look like this:
+For example, if a user came from Google on May 18, 2019, clicked on the FAQ, and the next day returned again to sign up, the cookie would look like this:
 
 ```js
 [
@@ -81,7 +81,7 @@ When a user came from Google on May 18, 2019 and clicked on the FAQ, the next da
 ]
 ```
 
-There is no personally identifiable information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personal identifiable information.
+There is no personally identifiable information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personally identifiable information.
 
 <details markdown="1">
 <summary>Read more in depth how our matching works</summary>
