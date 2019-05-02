@@ -1,13 +1,12 @@
 ---
-title: Screenshots of mini websites
-menu: Mini websites
+title: Mini websites
 category: features
 category_order: 3
 order: 1
 permalink: /mini-websites
 ---
 
-Referral links are so boring. Why not make them beautiful? That's why we created mini websites.
+Referral links are so boring. Why not make them beautiful? That's why we created mini websites. Screenshots of the websites but then very mini!
 
 <img class="border" style="width: 100%;" src="/images/mini-websites-simple-analytics.gif" alt="">
 
