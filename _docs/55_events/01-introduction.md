@@ -39,6 +39,10 @@ sa('click_signup')
 
 In the background we add the referrer to every event. So in the tool you can select the referrer with every event. We also save the date of the first event, which we will use to match the events with the previous events.
 
+### Valid event names
+
+We want to keep event very simple. That's why we only allow certain characters: alphanumeric, `.`, `_`, `-`. We convert events to lower case.
+
 ## What we store about a visitor
 
 When you use events (which is completely optional), we use a cookie. Make sure to have permission to use this cookie from the user before running our script.
