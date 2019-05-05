@@ -19,6 +19,6 @@ We have a website setup wizard to test if you installed your script correctly. I
 
 <img class="undraw-svg" src="/images/undraw_setup_wizard.svg" alt="">
 
-> Read about [_Single Page Apps_ (SPA's)](/script/trigger-custom-page-views) like React, Vue, and Angular and [hash navigation](/script/hash-mode).
+> Read about [_Single Page Apps_ (SPA's)](/trigger-custom-page-views) like React, Vue, and Angular and [hash navigation](/hash-mode).
 
 When you are done [go to your dashboard](https://simpleanalytics.io/websites?ref={{ site.hostname }}).
