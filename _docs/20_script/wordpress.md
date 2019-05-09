@@ -33,7 +33,7 @@ Follow these steps to add Simple Analytics to your WordPress website:
 
     ![](/images/wordpress-click-install-now.jpg)
 
-1. Click on **Active Plugin**:
+1. Click on **Activate Plugin**:
 
     ![](/images/wordpress-click-activate-plugin.jpg)
 
