@@ -11,7 +11,7 @@ You can embed our script in WordPress using a plugin. On this page we will expla
 
 Follow these steps to add Simple Analytics to your WordPress website:
 
-1. First download our plugin: [wordpress-plugin-1.0.zip](https://github.com/simpleanalytics/wordpress-plugin/archive/1.0.zip)
+1. First download our plugin: [wordpress-plugin-1.1.zip](https://github.com/simpleanalytics/wordpress-plugin/archive/1.1.zip)
 1. Go to your WordPress admin (likely on /wp-admin or [wordpress.com/log-in](https://wordpress.com/log-in))
 1. Next click on **Plugins** > **Add New** in the sidebar menu:
 
