@@ -77,7 +77,7 @@
           {% assign mydocs = site.docs | sort: 'path' | group_by: 'category' %}
 
           {% for cat in mydocs %}
-            {% if cat.name != 'api' and cat.name != 'events' %}
+            {% if cat.name != 'events' %}
               <h3>
                 {% if cat.name == 'api' %}
                   API
