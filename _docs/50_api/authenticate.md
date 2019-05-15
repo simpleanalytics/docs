@@ -1,5 +1,6 @@
 ---
-title: Authenticate
+title: API Authenticate
+menu: Authenticate
 category: api
 category_order: 9
 order: 2

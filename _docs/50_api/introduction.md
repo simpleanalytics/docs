@@ -1,5 +1,6 @@
 ---
-title: Introduction
+title: API Introduction
+menu: Introduction
 category: api
 category_order: 9
 order: 1
