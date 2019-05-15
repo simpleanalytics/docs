@@ -19,6 +19,10 @@ You can set the JSON format by adding `.json` to the URL of Simple Analytics. Fo
 
 If you have your website set to private you can still export this data. You need to authenticate yourself. [See here how to authenticate](/api/authenticate).
 
+### Get data for specific pages
+
+With the stats API you can also retrieve data for a specific page of your website. By adding the path to the URL Simple Analytics returns the data for that path. For example if you want to know how many visits you got on `simpleanalytics.io/contact`, you can get the JSON with this URL: `https://simpleanalytics.io/simpleanalytics.io/contact.json` ([link](https://simpleanalytics.io/simpleanalytics.io/contact.json))
+
 ## Business API
 
 Use this if you want to administer your account.
@@ -27,4 +31,4 @@ With this API you can for example add websites to your dashboard. This API is on
 
 ### Custom endpoints
 
-For bigger customers we make custom endpoints. If you are in the need to a custom endpoint, [let us know](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
+For bigger customers we make custom endpoints. If you are in the need of a custom endpoint, [let us know](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
