@@ -7,4 +7,16 @@ order: 2
 permalink: /api/authenticate
 ---
 
-You need to authenticate with an `Api-Key`-header and the key starts with `sa_api_key_...`. If you would like a key, or have any problems, drop us a line via [our contact page](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
+For some API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...`.
+
+In your [account settings](https://simpleanalytics.com/account) you can create this key.
+
+To test if your API key works correctly you can replace the example values of this cURL example with your own:
+
+```
+curl "https://simpleanalytics.io/private.example.com.json" \
+     -H 'Content-Type: application/json' \
+     -H 'Api-Key: sa_api_key_yiALgmbkPYpff8wxS7dfVnzq27a7TqLugha'
+```
+
+If you have any problems, drop us a line via [our contact page](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
