@@ -9,9 +9,24 @@ permalink: /install-simple-analytics-on-wordpress
 
 You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress.
 
+There are two ways to add our WordPress plugin to your site. Via the your WordPress dashboard or by manually installing the plugin.
+
+## Install via WordPress dashboard
+
+1. Go to your WordPress admin (likely on /wp-admin or [wordpress.com/log-in](https://wordpress.com/log-in))
+1. Go to plugins in your WordPress admin and click on **Add new**:
+
+    ![](/images/wordpress-click-add-new-plugin.jpg)
+    
+1. Click on Search Plugins and type `simpleanalytics` *(do not use a space)*
+1. Click on **Install Now**
+1. After this click on **Activate** and our plugin is installed
+
+## Manual install
+
 Follow these steps to add Simple Analytics to your WordPress website:
 
-1. First download our plugin: [wordpress-plugin-1.5.zip](https://github.com/simpleanalytics/wordpress-plugin/archive/1.5.zip)
+1. First download our plugin via WordPress: [wordpress.org/plugins/simpleanalytics](https://wordpress.org/plugins/simpleanalytics/)
 1. Go to your WordPress admin (likely on /wp-admin or [wordpress.com/log-in](https://wordpress.com/log-in))
 1. Next click on **Plugins** > **Add New** in the sidebar menu:
 
