@@ -42,6 +42,8 @@ curl "https://simpleanalytics.io/api/websites" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000'
 ```
 
+Your user ID and API key are shown in [your account settings](https://simpleanalytics.io/account).
+
 ### Custom endpoints
 
 For bigger customers we make custom endpoints. If you are in the need of a custom endpoint, [let us know](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
