@@ -13,10 +13,19 @@ In your [account settings](https://simpleanalytics.com/account) you can create t
 
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
-```
+```bash
 curl "https://simpleanalytics.io/private.example.com.json" \
      -H 'Content-Type: application/json' \
-     -H 'Api-Key: sa_api_key_yiALgmbkPYpff8wxS7dfVnzq27a7TqLugha'
+     -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+```
+
+For some API calls you'll need a user ID:
+
+```bash
+curl "https://simpleanalytics.io/api/websites" \
+     -H 'Content-Type: application/json' \
+     -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+     -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000'
 ```
 
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
