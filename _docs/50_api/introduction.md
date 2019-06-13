@@ -29,6 +29,19 @@ Use this if you want to administer your account.
 
 With this API you can do a few things, for example add websites to your dashboard. This API is only available on request because we want to know what the use case for the API will be. Just drop us a line via [our contact page](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
 
+### List websites
+
+> `GET` [https://simpleanalytics.io/api/websites](https://simpleanalytics.io/api/websites)
+
+The only Business API endpoint that is available for all plans.
+
+```bash
+curl "https://simpleanalytics.io/api/websites" \
+     -H 'Content-Type: application/json' \
+     -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+     -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000'
+```
+
 ### Custom endpoints
 
 For bigger customers we make custom endpoints. If you are in the need of a custom endpoint, [let us know](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
