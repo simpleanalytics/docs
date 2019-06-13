@@ -28,4 +28,6 @@ curl "https://simpleanalytics.io/api/websites" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000'
 ```
 
+Your user ID is shown in [your account settings](https://simpleanalytics.com/account).
+
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
