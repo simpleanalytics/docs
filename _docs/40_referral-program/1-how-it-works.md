@@ -19,7 +19,7 @@ When people signup via your link:
 
 ## How it works for the referrer
 
-Each referral will only be equivilant to one month's of their chosen plan.
+Each referral will only be equivalent to one month's of their chosen plan.
 
 Payment will only be paid into the credit card you have on file when the referred customer pays their first invoice.
 
