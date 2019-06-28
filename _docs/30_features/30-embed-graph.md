@@ -11,7 +11,7 @@ Simple Analytics has a script which you can use to embed public website statisti
 
 ```html
 <p>This website has <span id="pageviews"></span> page views in the last month.</p>
-<div data-sa-graph-url="https://simpleanalytics.io/simpleanalytics.io/?color=75b5aa" data-sa-page-views-selector="#pageviews">
+<div data-sa-graph-url="https://simpleanalytics.com/simpleanalytics.com/?color=75b5aa" data-sa-page-views-selector="#pageviews">
   <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
 </div>
 <script src="https://cdn.simpleanalytics.io/embed.js"></script>
@@ -20,7 +20,7 @@ Simple Analytics has a script which you can use to embed public website statisti
 ## Example
 
 <p>Simple Analytics has <span id="pageviews">...</span> page views in the last month.</p>
-<div data-sa-graph-url="https://simpleanalytics.io/simpleanalytics.io/?color=FF4F64" data-sa-page-views-selector="#pageviews">
+<div data-sa-graph-url="https://simpleanalytics.com/simpleanalytics.com/?color=FF4F64" data-sa-page-views-selector="#pageviews">
   <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
 </div>
 <script src="https://cdn.simpleanalytics.io/embed.js"></script>
@@ -31,8 +31,8 @@ You can give the graphs different colors by adding `?color=75b5aa` to the url of
 
 You can just copy paste links from the normal dashboard, like these:
 
-- `https://simpleanalytics/simpleanalytics.io`
-- `https://simpleanalytics.io/simpleanalytics.io?color=ff6600`
-- `https://simpleanalytics.io/simpleanalytics.io/?start=2018-09-17&end=2018-09-23`
+- `https://simpleanalytics.com/simpleanalytics.com`
+- `https://simpleanalytics.com/simpleanalytics.com?color=ff6600`
+- `https://simpleanalytics.com/simpleanalytics.com/?start=2018-09-17&end=2018-09-23`
 
 > If you include multiple graphs on your website make sure you include `<script src="https://cdn.simpleanalytics.io/embed.js"></script>` only once.
