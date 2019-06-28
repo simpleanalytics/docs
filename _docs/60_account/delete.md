@@ -6,7 +6,7 @@ order: 3
 permalink: /delete-account
 ---
 
-It's very easy to delete your account. Go to your [account settings](https://simpleanalytics.io/account) and click the button "Delete your account".
+It's very easy to delete your account. Go to your [account settings](https://simpleanalytics.com/account) and click the button "Delete your account".
 
 ## What we will delete
 

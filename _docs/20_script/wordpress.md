@@ -17,7 +17,7 @@ There are two ways to add our WordPress plugin to your site. Via the your WordPr
 1. Go to plugins in your WordPress admin and click on **Add new**:
 
     ![](/images/wordpress-click-add-new-plugin.jpg)
-    
+
 1. Click on Search Plugins and type `simpleanalytics` *(do not use a space)*
 1. Click on **Install Now**
 1. After this click on **Activate** and our plugin is installed
@@ -56,7 +56,7 @@ Follow these steps to add Simple Analytics to your WordPress website:
 
     ![](/images/wordpress-installed-plugins.jpg)
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.io/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
 
 
 <!-- Read more on implementing Simple Analytics in the [Ghost docs](https://docs.ghost.org/integrations/simpleanalytics/). -->
