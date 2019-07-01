@@ -11,27 +11,27 @@ Using any external service may require updating your privacy policy. So naturall
 
 ## Should we update our privacy policy if we install Simple Analytics?
 
-We are a privacy first product, which is why we made everything necessary to be able to respond to this with a simple *"No you don't have to"*.
+We are a privacy first product, which is why we've made everything necessary to be able to respond to, with a simple *"No you don't have to"*.
 
-Indeed, by law (for example with GDPR) there is no need to add us to your privacy policy because Simple Analytics doesn't store IP addresses or any other personal identifiable information. We don’t use cookies, so we don’t need to be added to your cookie banner either.
+Indeed, by law (for example with GDPR) there is no need to add us to your privacy policy document because Simple Analytics doesn't store any IP addresses or any other personal identifiable information. We don’t use cookies, thereofre, we don’t need to be added to your cookie banner either.
 
 > For more information on what we collect (and mostly what we don't) go to [what we collect](https://docs.simpleanalytics.com/what-we-collect).
 
-Still we advise our customers to mention us in their privacy policy and let their visitors know that they use a privacy friendly analytics tool which does not collect any personal identifiable information. To make it easy for you, you can copy paste the following into your privacy policy:
+Although, we advise our customers to mention us in their privacy policy document and let their visitors know that they are using a privacy friendly analytics tool which does not collect any personal identifiable information. To make it easier for you, we've made a short paragraph that you can copy-paste into your privacy policy document:
 
-## Copy paste this text into your privacy policy
+## Copy paste this text into your privacy policy document
 
-Again, it's not required by law to do to, but we advise to include this anyhow to be transparent towards your visitors.
+Again, it's not required by law to do so, but we advise you to include this in spite of the fact, to enhance trust and transparency for visitors.
 
-> To get critical information about the behavior of our visitors we use [Simple Analytics](https://simpleanalytics.com). This analytics software does give us insights about our visitors in general but not about individuals as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics does collect (and mostly what they don't).
+> For us to get critical information about the behavior of our visitors, we use [Simple Analytics](https://simpleanalytics.com). This analytics software gives us insight about our visitors only in general, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics collects (and most importantly what they don't).
 
 <details class="nowrap">
    <summary>The HTML version of above text</summary>
    <div markdown="1">
-Copy paste this into your privacy policy or send a link to this page to your developer.
+Copy paste this into your privacy policy statement or send a link to this page to your developer.
 
 ```html
-To get critical information about the behavior of our visitors we use <a href="https://simpleanalytics.com" target="_blank">Simple Analytics</a>. This analytics software does give us insights about our visitors in general but not about individuals as it does not track visitors and does not store any personal identifiable information. <a href="https://docs.simpleanalytics.com/what-we-collect" target="_blank">Go to their documentation</a> to find out what Simple Analytics does collect (and mostly what they don't).
+To get critical information about the behavior of our visitors, we use <a href="https://simpleanalytics.com" target="_blank">Simple Analytics</a>. This analytics software gives us insights only about our visitors in general, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. <a href="https://docs.simpleanalytics.com/what-we-collect" target="_blank">Go to their documentation</a> to find out what Simple Analytics collects (and most importantly what they don't).
 ```
    </div>
 </details>
@@ -39,10 +39,10 @@ To get critical information about the behavior of our visitors we use <a href="h
 <details class="nowrap">
    <summary>The Markdown version of above text</summary>
    <div markdown="1">
-Copy paste this into your privacy policy or send a link to this page to your developer.
+Copy paste this into your privacy policy document or send a link to this page to your developer.
 
 ```markdown
-To get critical information about the behavior of our visitors we use [Simple Analytics](https://simpleanalytics.com). This analytics software does give us insights about our visitors in general but not about individuals as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics does collec (and mostly what they don't).
+To get critical information about the behavior of our visitors we use [Simple Analytics](https://simpleanalytics.com). This analytics software gives us insight about our visitors in general only, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics collects (and most importantly what they don't).
 ```
    </div>
 </details>
