@@ -7,7 +7,7 @@ order: 10
 permalink: /your-gdpr
 ---
 
-Using any external service may require updating your Privacy Policy. So naturally you may ask:
+Using any external service may require updating your Privacy Policy. So naturally you may ask the folowing question.
 
 ## Should you update your PP if you install our analytics solution on your website?
 
