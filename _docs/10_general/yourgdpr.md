@@ -1,9 +1,9 @@
 ---
-title: Should you update your PP
+title: Your GDPR using Simple Analytics
 category: general
 category_order: 1
 order: 10
-permalink: /yourprivacypolicy
+permalink: /your-gdpr
 ---
 ## Should you update your PP if you install our analytics solution on your website?
 
