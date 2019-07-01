@@ -23,21 +23,24 @@ Again, it's not required by law to do to, but we advise to include this anyhow t
 
 > To get critical information about the behavior of our visitors we use [Simple Analytics](https://simpleanalytics.com). This analytics software does give us insights about our visitors in general but not about individuals as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics does collect (and mostly what they don't).
 
-<details>
-<summary>The HTML version of above text</summary>
+<details class="nowrap">
+   <summary>The HTML version of above text</summary>
+   <div markdown="1">
+Copy paste this into your privacy policy or send a link to this page to your developer.
 
-   ```html
+```html
 To get critical information about the behavior of our visitors we use <a href="https://simpleanalytics.com" target="_blank">Simple Analytics</a>. This analytics software does give us insights about our visitors in general but not about individuals as it does not track visitors and does not store any personal identifiable information. <a href="https://docs.simpleanalytics.com/what-we-collect" target="_blank">Go to their documentation</a> to find out what Simple Analytics does collect (and mostly what they don't).
-   ```
-
+```
+   </div>
 </details>
 
+<details class="nowrap">
+   <summary>The Markdown version of above text</summary>
+   <div markdown="1">
+Copy paste this into your privacy policy or send a link to this page to your developer.
 
-<details>
-<summary>The Markdown version of above text</summary>
-
-   ```markdown
+```markdown
 To get critical information about the behavior of our visitors we use [Simple Analytics](https://simpleanalytics.com). This analytics software does give us insights about our visitors in general but not about individuals as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics does collec (and mostly what they don't).
-   ```
-
+```
+   </div>
 </details>

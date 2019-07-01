@@ -8,3 +8,7 @@
 @import "base";
 @import "header";
 @import "footer";
+
+.nowrap pre {
+  white-space: normal;
+}
