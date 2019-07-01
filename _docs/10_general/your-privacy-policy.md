@@ -1,10 +1,10 @@
 ---
-title: Your GDPR using Simple Analytics
-menu: Your GDPR
+title: Your privacy policy using Simple Analytics
+menu: Your privacy policy
 category: general
 category_order: 1
 order: 10
-permalink: /your-gdpr
+permalink: /your-privacy-policy
 ---
 
 Using any external service may require updating your privacy policy. So naturally you may ask the following question:
