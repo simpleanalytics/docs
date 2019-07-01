@@ -13,7 +13,9 @@ Using any external service may require updating your privacy policy. So naturall
 
 We are a privacy first product, which is why we made everything necessary to be able to respond to this with a simple *"No you don't have to"*.
 
-Indeed, by law (for example with GDPR) there is no need to add us to your privacy policy because Simple Analytics doesn't store IP addresses or any other personal identifiable information. We don’t use cookies, so we don’t need to be added to your cookie banner either. For more information on what we collect (and mostly what we don't) go to [what we collect](https://docs.simpleanalytics.com/what-we-collect).
+Indeed, by law (for example with GDPR) there is no need to add us to your privacy policy because Simple Analytics doesn't store IP addresses or any other personal identifiable information. We don’t use cookies, so we don’t need to be added to your cookie banner either.
+
+> For more information on what we collect (and mostly what we don't) go to [what we collect](https://docs.simpleanalytics.com/what-we-collect).
 
 Still we advise our customers to mention us in their privacy policy and let their visitors know that they use a privacy friendly analytics tool which does not collect any personal identifiable information. To make it easy for you, you can copy paste the following into your privacy policy:
 
