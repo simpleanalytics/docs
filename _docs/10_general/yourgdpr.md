@@ -1,10 +1,12 @@
 ---
 title: Your GDPR using Simple Analytics
+menu: Your GDPR
 category: general
 category_order: 1
 order: 10
 permalink: /your-gdpr
 ---
+
 ## Should you update your PP if you install our analytics solution on your website?
 
 We are a privacy first product, which is why we made everything necessary to be able to respond to this with a simple "No you don't have to".
