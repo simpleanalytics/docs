@@ -11,7 +11,13 @@ permalink: /events
   <p>This page is not published yet and is a work in progress. <b>Please don't share.</b></p>
 </blockquote>
 
-If you haven't already done so, to start working with events you need to first install the embed script.
+## Create custom subdomain
+
+How to add a custom subdomain is described in [Bypass ad-blockers](/bypass-ad-blockers).
+
+## Install embed script
+
+To start working with events you need to first install the events embed script. This script includes the normal page view functionality, so **do not include them both**.
 
 {% comment %}
 ```html
@@ -32,6 +38,8 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 > **Developers:** place this script in the `<head>` or top part of your `<body>` in your html.
 
 This little snippet creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have an effect on your page load).
+
+## `sa`-function
 
 The `sa`-function is the function you'll need to use to create events. To track an event it's as simple as this:
 
