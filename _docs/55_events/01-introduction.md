@@ -13,7 +13,7 @@ permalink: /events
 
 ## Create custom subdomain
 
-How to add a custom subdomain is described in [Bypass ad-blockers](/bypass-ad-blockers).
+How to add a custom subdomain is described in [bypass ad-blockers](/bypass-ad-blockers).
 
 ## Install embed script
 
