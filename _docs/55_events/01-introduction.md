@@ -7,7 +7,9 @@ order: 1
 permalink: /events
 ---
 
-> This page is not published yet and is a work in progress
+<blockquote class="red">
+  <p>This page is not published yet and is a work in progress. <b>Please don't share.</b></p>
+</blockquote>
 
 If you haven't already done so, to start working with events you need to first install the embed script.
 
@@ -24,7 +26,7 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 
 ```html
 <script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
-<script async defer src="https://www.simpleanalyticscdn.com/app.js"></script>
+<script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
 ```
 
 > **Developers:** place this script in the `<head>` or top part of your `<body>` in your html.
@@ -37,17 +39,17 @@ The `sa`-function is the function you'll need to use to create events. To track 
 sa('click_signup')
 ```
 
-In the background we add the referrer to every event. So in the tool you can select the referrer with every event. We also save the date of the first event, which we will use to match the events with the previous events.
+In the background we add the referrer to every event. So in the tool you can select the referrer with every event. We also save the date (`YYYY-MM-DD`) of the first event, which we will use to match the events with the previous events.
 
 ### Valid event names
 
-We want to keep event very simple. That's why we only allow certain characters: alphanumeric, `.`, `_`, `-`. We convert events to lower case and invalid names to a version which is valid. So your events are always saved.
+We want to keep events very simple. That's why we only allow certain characters: alphanumeric, `.`, `_`, `-`. We convert events to lower case and invalid names to a version which is valid. This way your events are always saved.
 
 ## What we store about a visitor
 
-When you use events (which is completely optional), we use a cookie. Make sure to have permission to use this cookie from the user before running our script.
+When you use events (which is completely optional), we use [sessionStorage](https://en.wikipedia.org/wiki/Web_storage) to store the past events of a user. From now on we use the more general term cookie. Make sure to have permission from your visitor to use cookies before using events.
 
-> Our cookies will expire after 30 days of no activity
+> The cookie will be cleared when a browser closes (session ends)
 
 <details>
   <summary>How to wait for cookie permissions of the visitor</summary>
@@ -55,11 +57,11 @@ When you use events (which is completely optional), we use a cookie. Make sure t
   <div markdown="1">
 If you're using a cookie permission (which you are required to do in the EU), you can tell us not to set a cookie until you have permission.
 
-Here is an example code of that:
+Here is an example code:
 
 ```html
 <script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
-<script async defer src="https://www.simpleanalyticscdn.com/app.js"></script>
+<script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
 <script>
   // Cookie is not yet set
   sa('sa_cookie', false)
@@ -74,12 +76,14 @@ Here is an example code of that:
   </div>
 </details>
 
+This way you can still have events before the approval of a visitor but they don't survive page reloads. So make sure to have permission on the first page the visitor lands.
+
 For example, if a user came from Google on May 18, 2019, clicked on the FAQ, and the next day returned again to sign up, the cookie would look like this:
 
 ```js
 [
   { v: 1, ref: 'google.com', date: '2019-05-18' },
-  ['click_faq', 0],
+  ['click_faq'],
   ['click_faq', 1],
   ['click_signup', 1]}
 ]
@@ -100,7 +104,7 @@ If the `sa` variable is already in use you can change it with the `data-sa-globa
 
 ```html
 <script>window.ba=window.ba||function(){a=[].slice.call(arguments);ba.q?ba.q.push(a):ba.q=[a]};</script>
-<script async defer data-sa-global="ba" src="https://www.simpleanalyticscdn.com/app.js"></script>
+<script async defer data-sa-global="ba" src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
 ```
 
 
