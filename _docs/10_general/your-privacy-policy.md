@@ -21,7 +21,7 @@ Although, we advise our customers to mention us in their privacy policy document
 
 ## Copy paste this text into your privacy policy document
 
-Again, it's not required by law to do so, but we advise you to include this in spite of the fact, to enhance trust and transparency for visitors.
+Again, it's not required by law to do so, but we advise you to include this in spite of the fact, to enhance trust and transparency for your visitors.
 
 > For us to get critical information about the behavior of our visitors, we use [Simple Analytics](https://simpleanalytics.com). This analytics software gives us insight about our visitors only in general, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics collects (and most importantly what they don't).
 
