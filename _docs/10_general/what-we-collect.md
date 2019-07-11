@@ -14,7 +14,7 @@ To say we don't collect any information would be silly for an analytics tool. We
 
 > We don't collect and store IPs
 
-We drop the IP address from every request. So don't store them in the logs. We just don't save or collect them. Period.
+We drop the IP address from every request. So don't store them in the logs. We don't hash them with cryptography. We just don't save or collect them. Period.
 
 ### Timestamps
 
