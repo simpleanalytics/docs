@@ -1,9 +1,9 @@
 ---
 title: Your privacy policy using Simple Analytics
 menu: Your privacy policy
-category: general
+category: legal
 category_order: 1
-order: 10
+order: 1
 permalink: /your-privacy-policy
 ---
 
