@@ -31,4 +31,7 @@ All cookies that are used for analytics do require a consent. Simple Analytics d
 
 Use [ICO's tool](https://ico.org.uk/for-organisations/where-does-consent-apply-for-cookies/) to determine where consent applies for your use of cookies.
 
+
+We advise you to include us in your privacy policy. [Read more on that here](your-privacy-policy).
+
 <small>Sources used: [insideprivacy.com](https://www.insideprivacy.com/data-privacy/ico-updates-guidance-on-cookies-and-similar-technologies/).</small>
