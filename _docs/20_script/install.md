@@ -7,20 +7,20 @@ order: 4
 permalink: /install-on-other-platforms
 ---
 
-## Platforms
+## Platform guides
 
-We try to make installing Simple Analytics as simple as possible. We want privacy to be accessible at as little costs as possible.
+We try to make installing Simple Analytics as simple as possible. We want privacy to be accessible as possible. We don't require the need of a developer if you use any of the following tools.
 
-Guides on how to install Simple Analytics on:
+Read our guides on how to install Simple Analytics on:
 
 - [Wordpress](/install-simple-analytics-on-wordpress) <small>(source on [GitHub](https://github.com/simpleanalytics/wordpress-plugin#readme))</small>
 - [Ghost](/install-simple-analytics-on-ghost)
 - [WIX](/install-simple-analytics-on-wix)
 - [Squarespace](/install-simple-analytics-on-squarespace)
 
-> Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a guide for you.
+> Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a guide or plugin for you.
 
-## Frameworks
+## Framework plugins
 
 For most frameworks you can just include the script. We track page views in a magic way so you don't have to change your app code. [Read on how we do that](/trigger-custom-page-views). For some we got requests to create a plugin for them.
 
