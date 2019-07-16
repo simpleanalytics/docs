@@ -4,6 +4,7 @@ menu: Install on WordPress
 category: script
 category_order: 2
 order: 5
+hidden: true
 permalink: /install-simple-analytics-on-wordpress
 ---
 

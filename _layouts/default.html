@@ -88,15 +88,17 @@
               <ul>
                 {% assign items = cat.items | sort: 'order' %}
                 {% for item in items %}
-                  <li class="{% if item.url == page.url %}active{% endif %}">
-                    <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
-                      {% if item.menu %}
-                        {{ item.menu }}
-                      {% else %}
-                        {{ item.title }}
-                      {% endif %}
-                    </a>
-                  </li>
+                  {% if item.hidden != true %}
+                    <li class="{% if item.url == page.url %}active{% endif %}">
+                      <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
+                        {% if item.menu %}
+                          {{ item.menu }}
+                        {% else %}
+                          {{ item.title }}
+                        {% endif %}
+                      </a>
+                    </li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             {% endif %}

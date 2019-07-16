@@ -4,6 +4,7 @@ menu: Install on Ghost
 category: script
 category_order: 2
 order: 6
+hidden: true
 permalink: /install-simple-analytics-on-ghost
 ---
 

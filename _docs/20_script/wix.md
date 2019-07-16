@@ -4,6 +4,7 @@ menu: Install on WIX
 category: script
 category_order: 2
 order: 9
+hidden: true
 permalink: /install-simple-analytics-on-wix
 ---
 
