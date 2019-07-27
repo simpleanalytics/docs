@@ -24,4 +24,4 @@ On the options page you will find all websites being blocked and you can change 
 
 Enjoy and if you have any feedback, go to our website and let us know!
 
-> For now the extension is only available in Chrome, Firefox and Opera are coming.
+> For now the extension is only available in Chrome. Firefox and Opera are coming.
