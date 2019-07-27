@@ -14,9 +14,9 @@ We do this via an extension so we don't need to record IP addresses. It basicall
 
 <img class="border" style="width: 100%;" src="/images/extension-chrome-closeup.jpg" alt="">
 
-When you click on the icon you as asked to allow the extension to load the data from the current website. This is needed to block the visits. You need to do once this per website.
+When you click on the icon you are asked to allow the extension to load the data from the current website. This is needed to block the visits. You need to do this once per website. We don't get access to other websites.
 
-When a visits is blocked it shows up as a counter on the icon. The counter does reset when you close your tab. For more stats of blocked visits you can go to the options page.
+When a visits is blocked it shows as a counter on the icon. The counter does reset when you close your tab. For more stats of blocked visits you can go to the options page.
 
 <img class="border" style="width: 100%;" src="/images/extension-chrome-options.jpg" alt="">
 
@@ -24,4 +24,4 @@ On the options page you will find all websites being blocked and you can change 
 
 Enjoy and if you have any feedback, go to our website and let us know!
 
-> For now the extension is only available in Chrome
+> For now the extension is only available in Chrome, Firefox and Opera are coming.
