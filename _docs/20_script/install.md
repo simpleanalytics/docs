@@ -17,8 +17,6 @@ Read our guides on how to install Simple Analytics on:
 - [Ghost](/install-simple-analytics-on-ghost)
 - [WIX](/install-simple-analytics-on-wix)
 - [Squarespace](/install-simple-analytics-on-squarespace)
-- [Open source `analytics` package](/install-simple-analytics-via-analytics-package)
-
 
 > Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a guide or plugin for you.
 
@@ -32,5 +30,6 @@ Get our official plugins for these frameworks:
 - [Vue](https://www.npmjs.com/package/simple-analytics-vue) <small>(source on [GitHub](https://github.com/simpleanalytics/vue-plugin#readme))</small>
 - [Gridsome](https://gridsome.org/plugins/gridsome-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/gridsome-plugin#readme))</small>
 - [Django](https://pypi.org/project/simpleanalytics/) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
+- [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
 
 > Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a plugin for you.
