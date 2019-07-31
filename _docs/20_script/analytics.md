@@ -70,3 +70,7 @@ Include this line at the end of your `<body>`
 ```
 <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
 ```
+
+## View the source
+
+You can view the source code of this plugin on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics)
