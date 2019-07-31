@@ -17,6 +17,8 @@ Read our guides on how to install Simple Analytics on:
 - [Ghost](/install-simple-analytics-on-ghost)
 - [WIX](/install-simple-analytics-on-wix)
 - [Squarespace](/install-simple-analytics-on-squarespace)
+- [Open source `analytics` package](/install-simple-analytics-via-analytics-package)
+
 
 > Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a guide or plugin for you.
 
