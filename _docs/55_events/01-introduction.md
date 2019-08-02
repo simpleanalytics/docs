@@ -8,7 +8,7 @@ permalink: /events
 ---
 
 <blockquote class="red">
-  <p>This page is not published yet and is a work in progress. <b>Please don't share.</b></p>
+  <p>The event feature is highly experimental, expect issues and please report them!</p>
 </blockquote>
 
 ## Create custom subdomain
@@ -51,7 +51,7 @@ In the background we add the referrer to every event. So in the tool you can sel
 
 ### Valid event names
 
-We want to keep events very simple. That's why we only allow certain characters: alphanumeric, `.`, `_`, `-`. We convert events to lower case and invalid names to a version which is valid. This way your events are always saved.
+We want to keep events very simple. That's why we only allow alphanumeric characters and underscores (`_`). We convert events to lower case and invalid names to a version which is valid. This way your events are always saved.
 
 ## What we store about a visitor
 
@@ -86,14 +86,14 @@ Here is an example code:
 
 This way you can still have events before the approval of a visitor but they don't survive page reloads. So make sure to have permission on the first page the visitor lands.
 
-For example, if a user came from Google on May 18, 2019, clicked on the FAQ, and the next day returned again to sign up, the cookie would look like this:
+For example, if a user came from DuckDuckGo on May 18, 2019, clicked on the FAQ, and the next day returned, clicked again on FAQ and then does sign up, the cookie would look like this:
 
 ```js
 [
-  { v: 1, ref: 'google.com', date: '2019-05-18' },
-  ['click_faq'],
-  ['click_faq', 1],
-  ['click_signup', 1]}
+  { v: 1, ref: 'duckduckgo.com', date: '2019-05-18' },
+  'click_faq'
+  'click_faq'
+  'click_signup'
 ]
 ```
 
