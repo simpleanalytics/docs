@@ -17,7 +17,7 @@ How to add a custom subdomain is described in [bypass ad-blockers](/bypass-ad-bl
 
 ## Install embed script
 
-To start working with events you need to first install the events embed script. This script includes the normal page view functionality, so **do not include them both**.
+To start working with events you need to first install the events embed script. This script includes the normal page view functionality, so **do not include both at the same time**.
 
 {% comment %}
 ```html
@@ -37,7 +37,7 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 
 > **Developers:** place this script in the `<head>` or top part of your `<body>` in your html.
 
-This little snippet creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have an effect on your page load).
+This little snippet creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
 
 ## `sa`-function
 
@@ -55,15 +55,15 @@ We want to keep events very simple. That's why we only allow alphanumeric charac
 
 ## What we store about a visitor
 
-When you use events (which is completely optional), we use [sessionStorage](https://en.wikipedia.org/wiki/Web_storage) to store the past events of a user. From now on we use the more general term cookie. Make sure to have permission from your visitor to use cookies before using events.
+When you use events (which is completely optional), we use [sessionStorage](https://en.wikipedia.org/wiki/Web_storage) to store past events of a user. From now on, we use the more general term "cookie". Make sure to have permissions from your visitor to allow cookies before using events.
 
-> The cookie will be cleared when a browser closes (session ends)
+> The "cookie" will be cleared when a browser closes (session ends)
 
 <details>
-  <summary>How to wait for cookie permissions of the visitor</summary>
+  <summary>How to wait for cookie permissions by the visitor</summary>
 
   <div markdown="1">
-If you're using a cookie permission (which you are required to do in the EU), you can tell us not to set a cookie until you have permission.
+If you're using a cookie permission (which you are required to do in the EU), you can tell us not to set a "cookie" until you have permission.
 
 Here is an example code:
 
@@ -97,7 +97,7 @@ For example, if a user came from DuckDuckGo on May 18, 2019, clicked on the FAQ,
 ]
 ```
 
-There is no personally identifiable information in the cookie whatsoever. We want to keep it that way. After every event we send the contents of the cookie to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personally identifiable information.
+There isnt any personal identification information on the cookie whatsoever. We want to keep it that way. After every event we send the contents of the "cookie" to our server and update the row that matches the path of events (minus the last event). This way we don't need to have any personally identifiable information.
 
 <details markdown="1">
 <summary>Read more in depth how our matching works</summary>
