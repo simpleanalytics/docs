@@ -8,7 +8,7 @@ permalink: /events
 ---
 
 <blockquote class="red">
-  <p>The event feature is highly experimental, expect issues and please report them!</p>
+  <p>The event feature is highly experimental, expect issues and please report them! To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b></p>
 </blockquote>
 
 ## Create custom subdomain
@@ -35,7 +35,7 @@ l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
 <script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
 ```
 
-> **Developers:** place this script in the `<head>` or top part of your `<body>` in your html.
+> **Developers:** place this script in the `<head>` or top part of your `<body>` in your html. The second script (`e.js`) can be placed elsewhere on the page if you like.
 
 This little snippet creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
 
