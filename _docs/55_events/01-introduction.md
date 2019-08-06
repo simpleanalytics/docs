@@ -19,17 +19,6 @@ How to add a custom subdomain is described in [bypass ad-blockers](/bypass-ad-bl
 
 To start working with events you need to first install the events embed script. This script includes the normal page view functionality, so **do not include both at the same time**.
 
-{% comment %}
-```html
-<script>
-!function(s,i,m,p,l,e){(s.SimpleAnalyticsFunction=p)in s||(s.sa=s.sa||function(){
-s.sa.q.push(arguments)},s.sa.q=[]),(l=i.createElement("script")).src=m,
-l.async=!0,(e=i.getElementsByTagName('script')[0]).parentNode.insertBefore(l,e)
-}(window,document,'//www.simpleanalyticscdn.com/app.js','sa');
-</script>
-```
-{% endcomment %}
-
 ```html
 <script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
 <script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
@@ -114,42 +103,3 @@ If the `sa` variable is already in use you can change it with the `data-sa-globa
 <script>window.ba=window.ba||function(){a=[].slice.call(arguments);ba.q?ba.q.push(a):ba.q=[a]};</script>
 <script async defer data-sa-global="ba" src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
 ```
-
-
-{% comment %}
-<details markdown="1">
-  <summary>The embed script explained for developers</summary>
-
-```js
-(function(window, document, hostname, functionName, script, firstScript) {
-  // Store the name of the Analytics object
-  window.SimpleAnalyticsFunction = functionName
-
-  // Check whether the Analytics object is defined
-  if (!(functionName in window)) {
-
-    // Define the Analytics object
-    window[functionName] = window[functionName] || function() {
-
-      // Add the tasks to the queue
-      window[functionName].q.push(arguments)
-    }
-
-    // Create the queue
-    window[functionName].q = []
-  }
-
-  // Create a new script element
-  script   = document.createElement('script')
-  script.src   = '//' + hostname + '/app.js'
-  script.async = true
-
-  // Insert the script element into the document
-  firstScript = document.getElementsByTagName('script')[0]
-  firstScript.parentNode.insertBefore(script, firstScript)
-
-})(window, document, 'www.simpleanalyticscdn.com', 'sa')
-```
-</details>
-
-{% endcomment %}
