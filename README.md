@@ -1,7 +1,6 @@
 # Simple Analytics Documentation
 
-Feel free to submit PRs for everything :smile: My grammar probably isn't the best as I'm Dutch.
-
+Feel free to submit PRs for everything including grammar errors :smile:
 
 ## Run on your computer
 
