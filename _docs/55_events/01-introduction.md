@@ -8,7 +8,7 @@ permalink: /events
 ---
 
 <blockquote class="red">
-  <p>The event feature is highly experimental, expect issues and please report them! To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b></p>
+  <p>The event feature is highly experimental, expect issues and please report them! To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b>. We are also thinking about making events work without cookies. This will only give you sessions events. Discuss with us if this is what you want.</p>
 </blockquote>
 
 ## Create custom subdomain
