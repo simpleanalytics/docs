@@ -77,31 +77,29 @@
           {% assign mydocs = site.docs | sort: 'path' | group_by: 'category' %}
 
           {% for cat in mydocs %}
-            {% if cat.name != 'events' %}
-              <h3>
-                {% if cat.name == 'api' %}
-                  API
-                {% else %}
-                  {{ cat.name | capitalize }}
+            <h3>
+              {% if cat.name == 'api' %}
+                API
+              {% else %}
+                {{ cat.name | capitalize }}
+              {% endif %}
+            </h3>
+            <ul>
+              {% assign items = cat.items | sort: 'order' %}
+              {% for item in items %}
+                {% if item.hidden != true %}
+                  <li class="{% if item.url == page.url %}active{% endif %}">
+                    <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
+                      {% if item.menu %}
+                        {{ item.menu }}
+                      {% else %}
+                        {{ item.title }}
+                      {% endif %}
+                    </a>
+                  </li>
                 {% endif %}
-              </h3>
-              <ul>
-                {% assign items = cat.items | sort: 'order' %}
-                {% for item in items %}
-                  {% if item.hidden != true %}
-                    <li class="{% if item.url == page.url %}active{% endif %}">
-                      <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
-                        {% if item.menu %}
-                          {{ item.menu }}
-                        {% else %}
-                          {{ item.title }}
-                        {% endif %}
-                      </a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            {% endif %}
+              {% endfor %}
+            </ul>
           {% endfor %}
         </div>
         <div class="content">
