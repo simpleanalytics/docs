@@ -22,7 +22,7 @@ Simple Analytics has a script which you can use to embed public website statisti
 ## Example
 
 <p>Simple Analytics has <span id="pageviews">...</span> page views in the last month.</p>
-<div data-sa-graph-url="https://simpleanalytics.com/example.com?color=FF4F64" data-sa-page-views-selector="#pageviews">
+<div data-sa-graph-url="https://simpleanalytics.com/simpleanalytics.com?color=FF4F64" data-sa-page-views-selector="#pageviews">
   <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
 </div>
 <script src="https://cdn.simpleanalytics.io/embed.js"></script>
