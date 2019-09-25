@@ -23,7 +23,7 @@ Although, we advise our customers to mention us in their privacy policy and let 
 
 Again, it's not required by law to do so, but we advise you to include this in spite of the fact, to enhance trust and transparency for your visitors.
 
-> To get critical information about the behavior of our visitors, we use [Simple Analytics](https://simpleanalytics.com). This analytics software gives us insight about our visitors only in general, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics collects (and most importantly what they don't).
+> To get critical information about the behavior of our visitors, we use [Simple Analytics](https://simpleanalytics.com). This analytics software gives us insight about our visitors only in general, but not about individuals by itself, as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics collects (and most importantly what they don't).
 
 <details class="nowrap">
    <summary>The HTML version of above text</summary>
