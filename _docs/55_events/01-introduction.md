@@ -11,6 +11,10 @@ permalink: /events
   <p>The event feature is highly experimental, expect issues and please report them! To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b>. We are also thinking about making events work without cookies. This will only give you sessions events. Discuss with us if this is what you want.</p>
 </blockquote>
 
+<blockquote class="red">
+  <p>In the beta version we use cookies, this will be removed in our next version. We want to stay a cookie-less solution to be GDPR, CCPA, and PECR complient out-of-the-box.</p>
+</blockquote>
+
 ## Create custom subdomain
 
 How to add a custom subdomain is described in [bypass ad-blockers](/bypass-ad-blockers).
