@@ -54,6 +54,6 @@ With the collection of dimensions of the browser window (`window.innerWidth`) we
 
 > We skip when Do Not Track is enabled
 
-The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> setting requests that a web application disables either its tracking or cross-site user tracking of an individual user. <a href="/no-tracking">We never track</a> your users, so we skip requests with the Do Not Track enabled. The stats will not include visitors with the Do Not Track enabled.
+The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> setting requests that a web application disables either its tracking or cross-site user tracking of an individual user. <a href="https://simpleanalytics.com/no-tracking">We never track</a> your users, so we skip requests with the Do Not Track enabled. The stats will not include visitors with the Do Not Track enabled.
 
 > We are thinking of making skipping of DNT visitors optional. We don't track or profile anyway. What do you think? Let us know [on Twitter](https://twitter.com/intent/user?screen_name=SimpleAnalytic).
