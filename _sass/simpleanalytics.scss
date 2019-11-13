@@ -351,8 +351,8 @@ a {
   align-items: flex-end;
 }
 @supports ((position: -webkit-sticky) or (position: sticky)) {
-#intergramPlaceholder {
-    position: -webkit-sticky;
-    position: sticky
-}
+  #intergramPlaceholder {
+      position: -webkit-sticky;
+      position: sticky
   }
+}
