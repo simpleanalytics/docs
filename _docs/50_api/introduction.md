@@ -23,6 +23,29 @@ If you have your website set to private you can still export this data. You need
 
 With the stats API you can also retrieve data for a specific page of your website. By adding the path to the URL Simple Analytics returns the data for that path. For example if you want to know how many visits you got on `simpleanalytics.io/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json`](https://simpleanalytics.com/simpleanalytics.com/contact.json))
 
+### CORS
+
+We have support for JSONP and CORS. Here are two examples with jQuery:
+
+```js
+$.ajax({
+  url: 'https://simpleanalytics.com/simpleanalytics.com.json?callback=?',
+  dataType:'jsonp',
+  success: function(data) {
+    console.log(data)
+  }
+})
+
+$.ajax({
+  url: 'https://simpleanalytics.com/simpleanalytics.com.json',
+  success: function(data) {
+    console.log(data)
+  }
+})
+```
+
+We append the `Access-Control-Allow-Origin`-header with the `*`-value , so any modern browser should accept the request without any effort.
+
 ## Business API
 
 Use this if you want to administer your account.
