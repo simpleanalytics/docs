@@ -41,6 +41,30 @@ You can just copy paste links from the normal dashboard, like these:
 
 > If you include multiple graphs on your website make sure you include `<script src="https://cdn.simpleanalytics.io/embed.js"></script>` only once.
 
-## Issues
+## Scaling issues
 
-Sometimes the graph does not stretch to the full page width. This can be caused by adding the `div` with the `data-sa-graph-url`-attribute in a flex element. This makes the div not stretch to the full width anymore. It can be solved by adding `align-self: stretch;` to the `div`.
+Sometimes the graph does not stretch to the full page width. This can be caused by adding the `div` with the `data-sa-graph-url`-attribute in a flex element with `align-items: center`. This makes the div not stretch to the full width anymore. It can be solved by adding `align-self: stretch` to the `div` with the `data-sa-graph-url`-attribute. See this example:
+
+```html
+<div class="your-parent-class">
+  <p>This website has <span id="pageviews"></span> page views in the last month.</p>
+  <div class="your-graph-class" data-sa-graph-url="https://simpleanalytics.com/example.com?color=75b5aa" data-sa-page-views-selector="#pageviews">
+    <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
+  </div>
+</div>
+
+<script src="https://cdn.simpleanalytics.io/embed.js"></script>
+
+<style>
+  .your-parent-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .your-graph-class {
+    align-self: stretch; /* This is the needed styling */
+  }
+</style>
+```
+
+If you have other issues, <a href="https://simpleanalytics.com/contact?ref=docs.simpleanalytics.com">please let us know</a> because we love to help you!
