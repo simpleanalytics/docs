@@ -13,7 +13,9 @@ Include these two lines at the end of your `<body>`
 <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
 ```
 
-> To install the script on Wordpress, Ghost, WIX, Squarespace, Gatsby, Vue, Django, and others, go to [Install on other platforms](/install-on-other-platforms). If you want to see the source code, open [hello.js](https://github.com/simpleanalytics/cdn/blob/master/hello.js).
+> To install the script on Wordpress, Ghost, WIX, Squarespace, Gatsby, Vue, Django, and others, go to [Install on other platforms](/install-on-other-platforms).
+
+> Our user facing scripts are [open source on GitHub](https://github.com/simpleanalytics/scripts).
 
 We have a website setup wizard to test if you installed your script correctly. If you still have problems installing it, please let us know! We helped a few people with setting up their script and we love to help you as well. Just [contact](https://simpleanalytics.com/contact?ref={{ site.hostname }}) us.
 
