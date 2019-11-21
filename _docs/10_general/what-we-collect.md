@@ -15,7 +15,7 @@ To say we don't collect any information would be silly for an analytics tool. We
 We drop the IP address from request. We don't hash them with cryptography. We just don't save or collect them. Period.
 
 <blockquote class="note">
-  <p markdown="1">Update: Nov 21, 2019. Just to be completely transparent: we found IPs in our logs when requests on our server where failing. We fixed this by filtering all log messages and replace IPs with zero's using [mmanon](https://www.rsyslog.com/doc/v8-stable/configuration/modules/mmanon.html). Now all IPs (like `1.1.1.1` or `2606:4700:4700::1111`) will become `0.0.0.0` or `0:0:0::0` before it enters our logs.</p>
+  <p markdown="1">Update: Nov 21, 2019. Just to be completely transparent: we found IPs in our logs when requests on our server where failing. We fixed this by filtering all log messages and replace IPs with zero's using [mmanon](https://www.rsyslog.com/doc/v8-stable/configuration/modules/mmanon.html). Now all IPs (like `1.1.1.1` or `2606:4700:4700::1111`) will become `0.0.0.0` or `0:0:0:0:0:0:0:0` before it enters our logs.</p>
 </blockquote>
 
 ### Unique views
