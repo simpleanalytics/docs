@@ -1,5 +1,5 @@
 ---
-title: Server side
+title: Server side tracking
 category: script
 category_order: 2
 order: 20
@@ -26,8 +26,10 @@ Please strip all sensitive data from your URLs. We do this at our end as well, b
   table td, table th {
     white-space: nowrap;
   }
-  table tr td:last-of-type, table tr th:last-of-type {
-    white-space: inherit;
+  @media screen and (min-width: 768px) {
+    table tr td:last-of-type, table tr th:last-of-type {
+      white-space: inherit;
+    }
   }
 </style>
 
