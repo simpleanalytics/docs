@@ -31,7 +31,9 @@ Please strip all sensitive data from your URLs. We do this at our end as well, b
   }
 </style>
 
-In JSON a request could look like this:
+Our API is located at `https://api.simpleanalytics.io/post`.
+
+The request should be a POST with JSON like this:
 
 ```json
 {
@@ -42,6 +44,55 @@ In JSON a request could look like this:
   "timezone": "Europe/Amsterdam"
 }
 ```
+
+<details markdown="1">
+  <summary>Send request in Node.js</summary>
+
+```js
+const https = require("https");
+
+const data = JSON.stringify({
+  url: "https://example.com/",
+  ua:
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0",
+  width: 1440,
+  unique: true,
+  timezone: "Europe/Amsterdam"
+});
+
+const options = {
+  hostname: "api.simpleanalytics.io",
+  path: "/post",
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    "Content-Length": data.length
+  }
+};
+
+const req = https
+  .request(options, res => {
+    let data = "";
+
+    console.log("Status Code:", res.statusCode);
+
+    res.on("data", chunk => {
+      data += chunk;
+    });
+
+    res.on("end", () => {
+      console.log("Body: ", JSON.parse(data));
+    });
+  })
+  .on("error", err => {
+    console.log("Error: ", err.message);
+  });
+
+req.write(data);
+req.end();
+```
+
+</details>
 
 The response for this request will look like this:
 
