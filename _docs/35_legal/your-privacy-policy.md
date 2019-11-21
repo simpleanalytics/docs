@@ -11,7 +11,7 @@ Using any external service may require updating your privacy policy. So naturall
 
 ## Should we update our privacy policy if we install Simple Analytics?
 
-We are a privacy first product, which is why we've made everything necessary to be able to respond to, with a simple *"No you don't have to"*.
+We are a privacy first product, which is why we've made everything necessary to be able to respond to, with a simple _"No you don't have to"_.
 
 Indeed, by law (for example with GDPR) there is no need to add us to your privacy policy because Simple Analytics doesn't store any IP addresses or any other personal identifiable information. We don’t use cookies, therefore, we don’t need to be added to your cookie banner either.
 
@@ -30,9 +30,18 @@ Again, it's not required by law to do so, but we advise you to include this in s
    <div markdown="1">
 Copy paste this into your privacy policy or send a link to this page to your developer.
 
+<!-- prettier-ignore -->
 ```html
-To get critical information about the behavior of our visitors, we use <a href="https://simpleanalytics.com" target="_blank">Simple Analytics</a>. This analytics software gives us insight about our visitors only in general, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. <a href="https://docs.simpleanalytics.com/what-we-collect" target="_blank">Go to their documentation</a> to find out what Simple Analytics collects (and most importantly what they don't).
+To get critical information about the behavior of our visitors, we use
+<a href="https://simpleanalytics.com" target="_blank">Simple Analytics</a>. This
+analytics software gives us insight about our visitors only in general, but not
+about individuals per say, as it does not track visitors and does not store any
+personal identifiable information.
+<a href="https://docs.simpleanalytics.com/what-we-collect" target="_blank">Go
+to their documentation</a> to find out what Simple Analytics collects (and most
+importantly what they don't).
 ```
+
    </div>
 </details>
 
@@ -44,5 +53,6 @@ Copy paste this into your privacy policy or send a link to this page to your dev
 ```markdown
 To get critical information about the behavior of our visitors, we use [Simple Analytics](https://simpleanalytics.com). This analytics software gives us insight about our visitors only in general, but not about individuals per say, as it does not track visitors and does not store any personal identifiable information. [Go to their documentation](https://docs.simpleanalytics.com/what-we-collect) to find out what Simple Analytics collects (and most importantly what they don't).
 ```
+
    </div>
 </details>

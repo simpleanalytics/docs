@@ -23,6 +23,7 @@ How to add a custom subdomain is described in [bypass ad-blockers](/bypass-ad-bl
 
 To start working with events you need to first install the events embed script. This script includes the normal page view functionality, so **do not include both at the same time**.
 
+<!-- prettier-ignore -->
 ```html
 <script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
 <script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
@@ -37,7 +38,7 @@ This little snippet creates a simple function called `sa`. After that it loads t
 The `sa`-function is the function you'll need to use to create events. To track an event it's as simple as this:
 
 ```js
-sa('click_signup')
+sa("click_signup");
 ```
 
 In the background we add the referrer to every event. So in the tool you can select the referrer with every event. We also save the date (`YYYY-MM-DD`) of the first event, which we will use to match the events with the previous events.
@@ -60,6 +61,7 @@ If you're using a cookie permission (which you are required to do in the EU), yo
 
 Here is an example code:
 
+<!-- prettier-ignore -->
 ```html
 <script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
 <script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
@@ -74,6 +76,7 @@ Here is an example code:
   sa('sa_cookie', true)
 </script>
 ```
+
   </div>
 </details>
 
@@ -103,6 +106,7 @@ We will add more information here.
 
 If the `sa` variable is already in use you can change it with the `data-sa-global` attribute:
 
+<!-- prettier-ignore -->
 ```html
 <script>window.ba=window.ba||function(){a=[].slice.call(arguments);ba.q?ba.q.push(a):ba.q=[a]};</script>
 <script async defer data-sa-global="ba" src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>

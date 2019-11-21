@@ -19,3 +19,11 @@ blockquote.red {
   border-left-color: #E51800;
   background-color: #FFF0EE;
 }
+blockquote.note {
+  border-left-color: #B1B1B1;
+  background-color: #F2F2F2;
+
+  p {
+    font-size: 14px;
+  }
+}

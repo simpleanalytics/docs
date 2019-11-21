@@ -10,9 +10,17 @@ permalink: /embed-graph-on-your-site
 Simple Analytics has a script which you can use to embed public website statistics. It's in beta, so **use at your own risk**.
 
 ```html
-<p>This website has <span id="pageviews"></span> page views in the last month.</p>
-<div data-sa-graph-url="https://simpleanalytics.com/example.com?color=75b5aa" data-sa-page-views-selector="#pageviews">
-  <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
+<p>
+  This website has <span id="pageviews"></span> page views in the last month.
+</p>
+<div
+  data-sa-graph-url="https://simpleanalytics.com/example.com?color=75b5aa"
+  data-sa-page-views-selector="#pageviews"
+>
+  <p>
+    Ad blockers don't like the Simple Analytics embed, disable yours to view
+    this graph.
+  </p>
 </div>
 <script src="https://cdn.simpleanalytics.io/embed.js"></script>
 ```
@@ -47,9 +55,18 @@ Sometimes the graph does not stretch to the full page width. This can be caused 
 
 ```html
 <div class="your-parent-class">
-  <p>This website has <span id="pageviews"></span> page views in the last month.</p>
-  <div class="your-graph-class" data-sa-graph-url="https://simpleanalytics.com/example.com?color=75b5aa" data-sa-page-views-selector="#pageviews">
-    <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
+  <p>
+    This website has <span id="pageviews"></span> page views in the last month.
+  </p>
+  <div
+    class="your-graph-class"
+    data-sa-graph-url="https://simpleanalytics.com/example.com?color=75b5aa"
+    data-sa-page-views-selector="#pageviews"
+  >
+    <p>
+      Ad blockers don't like the Simple Analytics embed, disable yours to view
+      this graph.
+    </p>
   </div>
 </div>
 

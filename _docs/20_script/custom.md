@@ -10,9 +10,11 @@ Normally you want to trigger a custom page view for _Single Page Apps_ (SPA's) l
 
 For some analytics tools like Google Analytics you need to trigger a page view via their script. For Simple Analytics this is different.
 
-> You **don't** have to implement anything to detect page views in SPA's
+> With Simple Analytics there is **no** need to implement anything to detect page views in SPA's. It all works out of the box.
 
-## Technical explanation
+<details markdown="1">
+<summary>Technical explanation</summary>
+<div markdown="1">
 
 We make this work by overwriting the native `pushState`-function of the browser.
 
@@ -42,4 +44,7 @@ if (history.pushState && Event && dispatchEvent) {
 }
 ```
 
-You can read our source code [on GitHub](https://github.com/simpleanalytics/cdn/blob/849c8237ced90683b410d389ef6d114758e6d1db/hello.js#L81-L98).
+You can read our source code [on GitHub](https://github.com/simpleanalytics/scripts/blob/4ad5c1b6cb4c42ae2e483dc43a578e25399d53a4/src/default.js#L120-L137).
+
+</div>
+</details>

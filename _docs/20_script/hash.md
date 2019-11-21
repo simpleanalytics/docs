@@ -1,5 +1,6 @@
 ---
 title: Hash mode
+menu: Hash mode &#35;
 category: script
 category_order: 2
 order: 3
@@ -10,6 +11,7 @@ Some websites don't really navigate to other pages but us the hash (`#`) in the 
 
 To allow the script to detect those hash changes you can add `data-mode="hash"` to the script tag:
 
+<!-- prettier-ignore -->
 ```html
 <script data-mode="hash" async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
 <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
