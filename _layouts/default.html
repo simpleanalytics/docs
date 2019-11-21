@@ -77,29 +77,39 @@
           {% assign mydocs = site.docs | sort: 'path' | group_by: 'category' %}
 
           {% for cat in mydocs %}
-            <h3>
-              {% if cat.name == 'api' %}
-                API
-              {% else %}
-                {{ cat.name | capitalize }}
+            {% assign isOpen = false %}
+            {% assign items = cat.items | sort: 'order' %}
+            {% for item in items %}
+              {% if item.hidden != true and item.url == page.url %}
+                {% assign isOpen = true %}
               {% endif %}
-            </h3>
-            <ul>
-              {% assign items = cat.items | sort: 'order' %}
-              {% for item in items %}
-                {% if item.hidden != true %}
-                  <li class="{% if item.url == page.url %}active{% endif %}">
-                    <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
-                      {% if item.menu %}
-                        {{ item.menu }}
-                      {% else %}
-                        {{ item.title }}
-                      {% endif %}
-                    </a>
-                  </li>
+            {% endfor %}
+
+            <details {% if isOpen %}open{% endif %}>
+              <summary>
+                {% if cat.name == 'api' %}
+                  API
+                {% else %}
+                  {{ cat.name | capitalize }}
                 {% endif %}
-              {% endfor %}
-            </ul>
+              </summary>
+              <ul>
+                {% assign items = cat.items | sort: 'order' %}
+                {% for item in items %}
+                  {% if item.hidden != true %}
+                    <li class="{% if item.url == page.url %}active{% endif %}">
+                      <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
+                        {% if item.menu %}
+                          {{ item.menu }}
+                        {% else %}
+                          {{ item.title }}
+                        {% endif %}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </details>
           {% endfor %}
         </div>
         <div class="content">

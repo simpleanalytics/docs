@@ -19,10 +19,10 @@ body {
 }
 
 :target:before {
-	content: "";
-	display: block;
-	height: 20px; /* fixed header height*/
-	margin: -20px 0 0; /* negative fixed header height */
+  content: "";
+  display: block;
+  height: 20px; /* fixed header height*/
+  margin: -20px 0 0; /* negative fixed header height */
 }
 
 .split-nav-body {
@@ -55,11 +55,11 @@ body {
 .nav {
   ul {
     padding: 0;
-    margin: 0 0 2rem;
+    margin: 1rem 0 2rem 23px;
     list-style-type: none;
   }
   li {
-    margin: 0 0 .5rem;
+    margin: 0 0 0.5rem;
     font-size: 14px;
 
     a {
@@ -68,10 +68,9 @@ body {
     }
     &.active a {
       color: black;
-
     }
     &.active:before {
-      content: '→';
+      content: "→";
       position: absolute;
       transform: translateX(calc(-100% - 0.5rem));
 
@@ -80,14 +79,11 @@ body {
       }
     }
   }
-  h3 {
-    margin: 0 0 .5rem;
-  }
-  h3:first-of-type {
+  details:first-of-type {
     margin-top: 2.8rem;
 
     @media (max-width: 768px) {
-      // margin-top: 0;
+      margin-top: 0;
     }
   }
 }
@@ -97,12 +93,12 @@ body {
 }
 
 blockquote {
-  border-left: 5px solid #00C5E5;
+  border-left: 5px solid #00c5e5;
   padding-left: 1rem;
   margin-left: 0;
   margin-right: 0;
   font-style: italic;
-  background-color: #EEF9FF;
+  background-color: #eef9ff;
   border-radius: 3px;
   padding: 0.5rem 1rem;
 
@@ -125,7 +121,8 @@ blockquote {
     margin-top: 1rem;
   }
 
-  li img, img.border {
+  li img,
+  img.border {
     border: 1px solid #00c5e5;
     border-radius: 5px;
   }
@@ -140,7 +137,11 @@ a.anchor-link {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   &[id]:hover > a.anchor-link {
     display: inline;
   }
@@ -177,10 +178,11 @@ tbody tr td:last-child {
 tbody tr:last-child td {
   border-bottom: 2px solid #eef9ff;
 }
-tr:nth-child(2n+1) {
+tr:nth-child(2n + 1) {
   background: #eef9ff;
 }
-td, th {
+td,
+th {
   padding: 0.3rem 0.6rem;
   vertical-align: top;
 }
