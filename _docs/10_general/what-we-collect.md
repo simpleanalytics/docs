@@ -6,7 +6,7 @@ order: 10
 permalink: /what-we-collect
 ---
 
-To say we don't collect any information would be silly for an analytics tool. We do collect information that is needed to show you the simple analytics. But unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we collect from your users.
+If you assume we don't collect any information would be silly for an analytics tool. We do collect information that is necessary to show you the simple analytics. But unlike other analytics tools, we don't collect more than absolutely unnecessary. Here is a list of what we do collect from our users.
 
 ### IP addresses
 
@@ -22,9 +22,9 @@ We drop the IP address from request. We don't hash them with cryptography. We ju
 
 > We **collect** and **store** if visits are unique
 
-Our unique detection of visits is quite unique by itself. Most services use cookies or IP addresses to see if a visitor has visited the website. We don't use cookies or IP addresses, so also not for detecting unique visits. In UK for example you can't use IP addresses (even hashed) without an active opt-in. This is why Simple Analytics is compatible with all existing privacy laws. You don't need an opt-in for our service.
+Our unique detection of visits is quite unique by itself. Most services use cookies or IP addresses to see if a visitor has visited the website. We don't use cookies or IP addresses, so not either for detecting unique visits. In the UK for example you can't use IP addresses (even hashed) without an active opt-in. This is why Simple Analytics is compatible with all existing privacy laws. You don't need an opt-in for our service.
 
-We detect a unique visit based on the hostname of the _referrer_ of the page. If a user comes from one domain to another it shares the previous domain with the next via a so called _referrer_. If the domain is the same as the one in the _referrer_ we know it's a non-unique visit. We add a few other cases to detect the uniqueness of a visit. When using SPA all visits after the first are non-unique and when using the back-, forward- or reload buttons it's non-unique.
+We detect a unique visit based on the hostname of the _referrer_ of the page. If a user comes from one domain to another it shares the previous domain with the next via a so called _referrer_. If the domain is the same as the one in the _referrer_ we know it's a non-unique visit. We add a few other cases to detect the uniqueness of a visit. When using SPA, all visits after the first are non-unique and when using the back-, forward- or reload buttons it's non-unique.
 
 ### Timestamps
 
@@ -36,10 +36,10 @@ We use timestamps to show you the graphs. We store this data because we want to 
 
 > We **collect** and **store** user agents for a maximum of **90 days**
 
-We detect and exclude bots and spiders based on the User Agent. We don't believe this data is useful for any other function, but we keep it in our logs (not database) for 90 days. When an incoming request fails for some reason we store the request body in our logs. After 90 days the logs are deleted including the user agents. We don't use User Agents for fingerprinting, but only for showing the OS, device, and browser version.
+We detect and exclude bots and spiders based on the User Agent. We don't believe this data is useful for any other function, but we keep it in our logs (not database) for 90 days. When an incoming request fails for some reason we store the request body in our logs. After 90 days the logs are deleted including the user agents. We don't use User Agents for fingerprinting, rather only for showing the OS, device, and browser version.
 
 <blockquote class="note">
-  <p>Update: Jan 14, 2019. We didn't store the User Agents before, but now we save failed requests to our logs, so we added this as a clarification to the paragraph above.</p>
+  <p>Update: Jan 14, 2019. Previously, we didn't store the User Agents, but now we save failed requests to our logs, so we added this as a clarification to the paragraph above.</p>
 </blockquote>
 
 ### URLs
@@ -52,7 +52,7 @@ Too much information in the URL can be confusing and can make your stats messy. 
 
 > We **collect** and **partly store** referrer's
 
-Referrers answer the question _"Where did the visitor come from?"_. We have 2 ways of checking from which source a user came to your website.
+Referrers answer the question _"Where did the visitor come from?"_. We have two ways of checking the source of a user that visited your website.
 
 First of all; With most requests, browsers send the URL of the previous website as a referrer. Second; website owners can add a URL param (`utm_source=...`) in the links they post elsewhere. The URL param can also be called `ref=...` or `source=...`. In case we get the referrer via the browser (with full URL) we store it the same as URLs (see above). You can find a list of the most popular referrers in your analytics dashboard.
 
@@ -64,6 +64,6 @@ With the collection of dimensions of the browser window (`window.innerWidth`) we
 
 ### Do Not Track
 
-> We skip when Do Not Track is enabled
+> We skip when Do-Not-Track is enabled
 
-The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> setting requests that a web application disables either its tracking or cross-site user tracking of an individual user. <a href="https://simpleanalytics.com/no-tracking">We never track</a> your users, but by default we also skip requests with the Do Not Track enabled. The stats will not include visitors with the Do Not Track enabled. Read more on [how to disable](/dnt) this behavior.
+The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> setting requests that a web application disables either its tracking or cross-site user tracking of an individual user. <a href="https://simpleanalytics.com/no-tracking">We never track</a> your users, but by default we also skip requests with Do-Not-Track enabled. The stats will not include visitors when Do-Not-Track is enabled. Read more on [how to disable](/dnt) this behavior.
