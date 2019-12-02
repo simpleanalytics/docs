@@ -71,7 +71,7 @@ Your user ID and API key are shown in [your account settings](https://simpleanal
 
 > `POST` [https://simpleanalytics.com/api/websites/add](https://simpleanalytics.com/api/websites/add)
 
-For this endpoint you will need a Business plan. You can specify a time zone via `timezone` and set the website to public or private via the `public` boolean. [See wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of valid time zones.
+For this endpoint you will need a Business plan. You can specify a time zone via `timezone` and set the website to public or private via the `public` boolean. [See wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of valid time zones. If you don't specify a time zone we will set it to UTC.
 
 ```bash
 curl -X "POST" "http://localhost:3000/api/websites/add" \
