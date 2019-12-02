@@ -15,7 +15,7 @@ Use this if you want to retrieve aggregated stats from your website. Basically t
 
 While some websites are set to public, others are set to private. You can manually adjust this in your website settings. If your website is set to public you can get the JSON data without any credentials.
 
-You can set the JSON format by adding `.json` to the URL of Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json`](https://simpleanalytics.com/simpleanalytics.com.json). Alternatively, you can add *start* and *end* dates to the URL as well, for example: [`https://simpleanalytics.com/simpleanalytics.com.json?start=2019-01-01&end=2019-01-31`](https://simpleanalytics.com/simpleanalytics.com.json?start=2019-01-01&end=2019-01-31).
+You can set the JSON format by adding `.json` to the URL of Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json`](https://simpleanalytics.com/simpleanalytics.com.json). Alternatively, you can add _start_ and _end_ dates to the URL as well, for example: [`https://simpleanalytics.com/simpleanalytics.com.json?start=2019-01-01&end=2019-01-31`](https://simpleanalytics.com/simpleanalytics.com.json?start=2019-01-01&end=2019-01-31).
 
 If you have your website set to private you can still export this data. You need to authenticate yourself. [See here how to authenticate](/api/authenticate).
 
@@ -29,19 +29,19 @@ We have support for JSONP and CORS. Here are two examples with jQuery:
 
 ```js
 $.ajax({
-  url: 'https://simpleanalytics.com/simpleanalytics.com.json?callback=?',
-  dataType:'jsonp',
+  url: "https://simpleanalytics.com/simpleanalytics.com.json?callback=?",
+  dataType: "jsonp",
   success: function(data) {
-    console.log(data)
+    console.log(data);
   }
-})
+});
 
 $.ajax({
-  url: 'https://simpleanalytics.com/simpleanalytics.com.json',
+  url: "https://simpleanalytics.com/simpleanalytics.com.json",
   success: function(data) {
-    console.log(data)
+    console.log(data);
   }
-})
+});
 ```
 
 We append the `Access-Control-Allow-Origin`-header with the `*`-value , so any modern browser should accept the request without any effort.
@@ -66,6 +66,24 @@ curl "https://simpleanalytics.com/api/websites" \
 ```
 
 Your user ID and API key are shown in [your account settings](https://simpleanalytics.com/account).
+
+### Add a website
+
+> `POST` [https://simpleanalytics.com/api/websites/add](https://simpleanalytics.com/api/websites/add)
+
+For this endpoint you will need a Business plan. You can specify a time zone via `timezone` and set the website to public or private via the `public` boolean. [See wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of valid time zones.
+
+```bash
+curl -X "POST" "http://localhost:3000/api/websites/add" \
+     -H 'Content-Type: application/json' \
+     -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
+     -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
+     -d $'{
+  "public": true,
+  "hostname": "example.com",
+  "timezone": "Europe/Amsterdam"
+}'
+```
 
 ### Custom endpoints
 
