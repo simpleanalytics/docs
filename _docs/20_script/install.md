@@ -15,6 +15,7 @@ Read our guides on how to install Simple Analytics on:
 
 - [Wordpress](/install-simple-analytics-on-wordpress) <small>(source on [GitHub](https://github.com/simpleanalytics/wordpress-plugin#readme))</small>
 - [Ghost](/install-simple-analytics-on-ghost)
+- [CloudFlare](/install-simple-analytics-on-cloudflare)
 - [WIX](/install-simple-analytics-on-wix)
 - [Squarespace](/install-simple-analytics-on-squarespace)
 - [Webflow](/install-simple-analytics-on-webflow)
