@@ -31,16 +31,16 @@ Example code:
 
 ```js
 /* src/analytics.js */
-import Analytics from 'analytics'
-import simpleAnalyticsPlugin from 'analytics-plugin-simple-analytics'
+import Analytics from "analytics";
+import simpleAnalyticsPlugin from "analytics-plugin-simple-analytics";
 
 const analytics = Analytics({
-  app: 'awesome-app',
+  app: "awesome-app",
   plugins: [
     // Load simple analytics! 🎉
-    simpleAnalyticsPlugin(),
+    simpleAnalyticsPlugin()
   ]
-})
+});
 
 /* All page views are now tracked by simple analytics */
 ```
@@ -64,3 +64,5 @@ Include this line at the end of your `<body>`
 ## View the source
 
 You can view the source code of this plugin on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics)
+
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).

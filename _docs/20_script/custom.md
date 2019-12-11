@@ -21,26 +21,25 @@ We make this work by overwriting the native `pushState`-function of the browser.
 ```js
 // We check if the browser supports pushState
 if (history.pushState && Event && dispatchEvent) {
-
   // We create a listener based on the original browser feature
   var stateListener = function(type) {
-    var orig = history[type]
+    var orig = history[type];
     return function() {
-      var rv = orig.apply(this, arguments)
-      var event = new Event(type)
-      event.arguments = arguments
-      dispatchEvent(event)
-      return rv
-    }
-  }
+      var rv = orig.apply(this, arguments);
+      var event = new Event(type);
+      event.arguments = arguments;
+      dispatchEvent(event);
+      return rv;
+    };
+  };
 
   // We connect our own created a listener to the pushState feature
-  history.pushState = stateListener('pushState')
+  history.pushState = stateListener("pushState");
 
   // Now we can listen for pushState events and keep the original feature of the browser working
-  window.addEventListener('pushState', function() {
+  window.addEventListener("pushState", function() {
     // Here we trigger the page view
-  })
+  });
 }
 ```
 
@@ -48,3 +47,5 @@ You can read our source code [on GitHub](https://github.com/simpleanalytics/scri
 
 </div>
 </details>
+
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).

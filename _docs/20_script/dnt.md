@@ -21,3 +21,5 @@ To also record DNT visitors you can add `data-skip-dnt="true"` to the script tag
 ```
 
 If you don't add the `data-skip-dnt` attribute we will not record visits from users where DNT is enabled.
+
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).

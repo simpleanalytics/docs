@@ -25,3 +25,5 @@ We have a website setup wizard to test if you installed your script correctly. I
 > Read about [_Single Page Apps_ (SPA's)](/trigger-custom-page-views) like React, Vue, and Angular and [hash navigation](/hash-mode).
 
 When you are done [go to your dashboard](https://simpleanalytics.com/websites?ref={{ site.hostname }}).
+
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).

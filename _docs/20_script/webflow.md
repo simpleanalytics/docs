@@ -26,3 +26,5 @@ Follow these steps to add Simple Analytics to your website:
 1. Click on **Save Changes** and you are done
 
 > Custom scripts will only appear on the published site.
+
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).

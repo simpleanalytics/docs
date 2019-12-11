@@ -18,3 +18,5 @@ To allow the script to detect those hash changes you can add `data-mode="hash"` 
 ```
 
 This way the Simple Analytics script knows it should detect hash changes and records them as page views. We still drop everything after the question mark, but we keep the hash.
+
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).

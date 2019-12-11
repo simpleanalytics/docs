@@ -18,23 +18,24 @@ Follow these steps to add Simple Analytics to your website:
 1. Click on the website you want to edit.
 1. Click on **Settings** in the sidebar menu:
 
-    ![](/images/squarespace-click-on-settings.jpg)
+   ![](/images/squarespace-click-on-settings.jpg)
 
 1. Next click on **Advanced** in the same sidebar menu:
 
-    ![](/images/squarespace-click-on-advanced.jpg)
+   ![](/images/squarespace-click-on-advanced.jpg)
 
 1. Next click on **Code Injection** in the same sidebar menu:
 
-    ![](/images/squarespace-click-on-code-injection.jpg)
+   ![](/images/squarespace-click-on-code-injection.jpg)
 
 1. Paste the embed code from [how to add our script](/script) into the **footer** text input field:
 
-    ![](/images/squarespace-paste-embed-code.jpg)
+   ![](/images/squarespace-paste-embed-code.jpg)
 
 1. Click on **save** and you are done:
 
-    ![](/images/squarespace-save-embed-code.jpg)
-
+   ![](/images/squarespace-save-embed-code.jpg)
 
 Read more on using Code Injection in the [Squarespace docs](https://support.squarespace.com/hc/en-us/articles/205815908-Using-Code-Injection).
+
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
