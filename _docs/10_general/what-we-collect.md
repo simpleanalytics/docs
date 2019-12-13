@@ -26,6 +26,8 @@ Our unique detection of visits is quite unique by itself. Most services use cook
 
 We detect a unique visit based on the hostname of the _referrer_ of the page. If a user comes from one domain to another it shares the previous domain with the next via a so called _referrer_. If the domain is the same as the one in the _referrer_ we know it's a non-unique visit. We add a few other cases to detect the uniqueness of a visit. When using SPA, all visits after the first are non-unique and when using the back-, forward- or reload buttons it's non-unique.
 
+[Read more](/uniques) on how we register unique pages views.
+
 ### Timestamps
 
 > We **collect** and **store** timestamps
