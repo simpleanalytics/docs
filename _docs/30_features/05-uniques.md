@@ -18,7 +18,7 @@ With the new ruling of the European court ruling it's forbidden to have pre-tick
 
 > With Simple Analytics you don't need consent. It's one of our core values.
 
-We don't want you to ask for consent ever. Our service is targeted at companies that want to get the big picture. Tracking customers is not part of that. That's why we came up with are unique way of tracking unique visits.
+We don't want you to ask for consent ever. Our service is targeted at companies that want to get the big picture. Tracking customers is not part of that. That's why we came up with our unique way of tracking unique visits.
 
 ## How it works
 
