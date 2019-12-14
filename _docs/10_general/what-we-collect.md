@@ -24,7 +24,7 @@ We drop the IP address from request. We don't hash them with cryptography. We ju
 
 Our unique detection of visits is quite unique by itself. Most services use cookies or IP addresses to see if a visitor has visited the website. We don't use cookies or IP addresses, so not either for detecting unique visits. In the UK for example you can't use IP addresses (even hashed) without an active opt-in. This is why Simple Analytics is compatible with all existing privacy laws. You don't need an opt-in for our service.
 
-We detect a unique visit based on the hostname of the _referrer_ of the page. If a user comes from one domain to another it shares the previous domain with the next via a so called _referrer_. If the domain is the same as the one in the _referrer_ we know it's a non-unique visit. We add a few other cases to detect the uniqueness of a visit. When using SPA, all visits after the first are non-unique and when using the back-, forward- or reload buttons it's non-unique.
+We detect a unique visit based on the hostname of the _referrer_ of the page. If a user comes from one domain to another it shares the previous domain with the next via a so called _referrer_. If the domain is the same as the one in the _referrer_ we know it's a non-unique visit.
 
 [Read more](/uniques) on how we register unique pages views.
 
