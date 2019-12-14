@@ -34,4 +34,6 @@ When a user lands on your website without visiting another website (direct visit
 
 If you have a single-page application we automatically see all visits after the first visit as non unique. For the first visit we use above functionality to detect if a visit is unique.
 
-If you have any questions about legal aspects or anything else, please [shoot us a message](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+> If you have any questions about legal aspects or anything else, please [shoot us a message](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+
+[Follow Simple Analytics](https://twitter.com/SimpleAnalytic) or [the founder](https://twitter.com/adriaanvrossum) on Twitter to see how we approach our challenges.
