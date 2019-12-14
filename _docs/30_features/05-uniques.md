@@ -26,7 +26,7 @@ When a visitor navigates from website to website the browser sends a [referrer](
 
 ![](/images/referrer-visit.jpg)
 
-When a user lands on your website without visiting another website (direct visit) we will record it as a non unique visit:
+When a user lands on your website without visiting another website (direct visit) we will record it as a unique visit:
 
 ![](/images/direct-visit.jpg)
 
