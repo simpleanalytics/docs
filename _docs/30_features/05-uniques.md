@@ -32,7 +32,7 @@ When a user lands on your website without visiting another website (direct visit
 
 ## SPAs
 
-If you have a single-page application we automatically see all visits after the first visit as non unique visit. For the first visit we use above functionality to detect if a visit is unique.
+If you have a single-page application we automatically see all visits after the first visit as a non unique visit. For the first visit we use above functionality to detect if a visit is unique.
 
 > If you have any questions about legal aspects or anything else, please [shoot us a message](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
 
