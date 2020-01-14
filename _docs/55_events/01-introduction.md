@@ -11,13 +11,17 @@ permalink: /events
   <p>The event feature is highly experimental, expect issues and please report them! To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b>. In the previous version we used cookies, this is now removed. We want to stay a cookie-less solution to be GDPR, CCPA, and PECR complient out-of-the-box.</p>
 </blockquote>
 
-## Create custom subdomain
-
-How to add a custom subdomain is described in [bypass ad-blockers](/bypass-ad-blockers).
-
 ## Install embed script
 
-To start working with events you need to first install the events embed script. This script includes the normal page view functionality, so **do not include both at the same time**.
+To start working with events you need to have a recent version of our script. This script includes the normal page view functionality and the events feature.
+
+<!-- prettier-ignore -->
+```html
+<script>window.sa=window.sa||function(){a=[].slice.call(arguments);sa.q?sa.q.push(a):sa.q=[a]};</script>
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+```
+
+Or if you use our [custom domain feature](/bypass-ad-blockers):
 
 <!-- prettier-ignore -->
 ```html
