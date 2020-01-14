@@ -58,5 +58,5 @@ If the `sa` variable is already in use you can change it with the `data-sa-globa
 <!-- prettier-ignore -->
 ```html
 <script>window.ba=window.ba||function(){a=[].slice.call(arguments);ba.q?ba.q.push(a):ba.q=[a]};</script>
-<script async defer data-sa-global="ba" src="https://[YOUR SUBDOMAIN LINKING TO US]/e.js"></script>
+<script async defer data-sa-global="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
