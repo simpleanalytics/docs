@@ -1,20 +1,23 @@
 ---
-title: Install Simple Analytics on Jimdo
-menu: Install on Jimdo
+title: Install Simple Analytics on Jimdo Creator
+menu: Install on Jimdo Creator
 category: script
 category_order: 2
 order: 7
 hidden: true
-permalink: /install-simple-analytics-on-jimdo
+permalink: /install-simple-analytics-on-jimdo-creator
 ---
 
-You can embed our script in Jimdo using their blocks. On this page we will explain how to use this feature and help you installing the Simple Analytics script on Jimdo.
+You can embed our script in Jimdo Creator using their blocks. On this page we will explain how to use this feature and help you installing the Simple Analytics script on Jimdo Creator.
+
+> To install Simple Analytics on Jimdo you need Jimdo Creator. Jimdo Dolphin does not support custom elements.
 
 Follow these steps to add Simple Analytics to your website:
 
-1. Log in to your [Jimdo account](https://help.jimdo-dolphin.com/hc/en-us/articles/360000906806) and [choose the desired website](https://help.jimdo-dolphin.com/hc/en-us/articles/360018399172)
-1. Click **Edit** to enter your Dolphin website’s edit mode
-1. Hover over your website and click on the **plus icon** (add content) and click on **HTML**:
+1. Log in to your [Jimdo account](https://help.jimdo.com/hc/en-us/articles/115005536243) and [choose the desired website](https://help.jimdo.com/hc/en-us/articles/360018268112)
+1. Click **Edit** to enter your Jimdo Creator website's edit mode
+1. Hover over the content area with your mouse until the button **Add Element** appears
+1. Click on **More Elements and Add-ons** and select an **HTML** element:
 
    ![](/images/jimdo-add-element.png)
 
