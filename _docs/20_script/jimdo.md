@@ -22,6 +22,6 @@ Follow these steps to add Simple Analytics to your website:
 
    ![](/images/jimdo-add-html.png)
 
-1. Hit **Save** and the Simple Analytics script it installed!
+1. Hit **Save** and the Simple Analytics script is installed!
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
