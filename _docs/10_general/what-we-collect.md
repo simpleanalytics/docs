@@ -6,7 +6,7 @@ order: 10
 permalink: /what-we-collect
 ---
 
-If you assume we don't collect any information would be silly for an analytics tool. We do collect information that is necessary to show you the simple analytics. But unlike other analytics tools, we don't collect more than absolutely unnecessary. Here is a list of what we do collect from our users.
+Not collecting any information would be silly for an analytics tool. We do collect information that is necessary to show you the simple analytics. But unlike other analytics tools, we don't collect more than absolutely unnecessary. Here is a list of what we do collect from our users.
 
 ### IP addresses
 
