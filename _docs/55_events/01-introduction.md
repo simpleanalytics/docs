@@ -41,7 +41,8 @@ The `sa_event`-function is the function you'll need to use to create events. To 
 sa_event("click_signup");
 ```
 
-> In previous versions we used `sa` instead of `sa_event`, but it caused too many issues because minifiers would use this variable name as well. If you use that old script (`https://[YOUR SUBDOMAIN LINKING TO US]/e.js` and you are updating to `https://[YOUR SUBDOMAIN LINKING TO US]/latest.js`, make sure to rename those functions or overwrite with `sa-global` (see below)).
+> In previous versions we used `sa` instead of `sa_event`, but it caused too many issues because minifiers would use this variable name as well.
+> If you use that old script (ending with `/e.js`) and you are updating to `/latest.js`, make sure to rename those functions or overwrite with `sa-global` (see below).
 
 In the background we add the events to the current page view. With the page view is a referrer saved, this referrer is also saved with the event.
 
