@@ -8,10 +8,10 @@ permalink: /locations
 
 We do everything in our power to keep our user data safe. First of all we don't collect data we don't need and we go a step further.
 
-## Moving from Iceland to The Netherlands
+## Moved from Iceland to The Netherlands
 
 <blockquote class="red">
-  <p>We are moving our servers from Iceland to The Netherlands.</p>
+  <p>We moved our servers from Iceland to The Netherlands.</p>
 </blockquote>
 
 A year ago we wrote [a blog post](https://blog.simpleanalytics.io/why-we-moved-our-servers-to-iceland) about why we moved to Iceland. In hindsight, this was not a great move. Here is why:
