@@ -6,11 +6,13 @@ order: 3
 permalink: /email-reports
 ---
 
-Sometimes you don't have time to check the dashboard. Therefore you might miss a certain spike of traffic. That's why we created email reports. Do you want a monthly or weekly report of your website? Just enable it in [your account settings](https://simpleanalytics.com/account).
+Sometimes you don't have time to check the dashboard. Therefore you might miss a certain spike of traffic. That's why we created email reports.
+
+Do you want a monthly or weekly report of your website? Just enable it in [your account settings](https://simpleanalytics.com/account#email-report). Look for the section that looks like this:
 
 <img class="border" style="max-width: 521px;" src="../../images/email-report-setting.jpg" alt="">
 
-> A feature might be coming where you can send these reports directly to your clients or marketeers. See [our public task](https://github.com/simpleanalytics/roadmap/issues/261) in our issue tracker.
+> A feature might be coming where you can send these reports directly to your clients or marketeers. Discuss about email reports [in our issue tracker](https://github.com/simpleanalytics/roadmap/issues/261).
 
 The email will look more or less like this:
 
