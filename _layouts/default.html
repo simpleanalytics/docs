@@ -108,6 +108,9 @@
                     </li>
                   {% endif %}
                 {% endfor %}
+                {% if cat.name == 'features' %}
+                <li><a href="/events/">Events</a></li>
+                {% endif %}
               </ul>
             </details>
           {% endfor %}
