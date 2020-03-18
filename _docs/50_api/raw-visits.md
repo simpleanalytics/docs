@@ -28,6 +28,6 @@ added_unix,added_iso,url,referrer_raw,referrer,hostname,source,is_unique,scrolle
 1577887760,2020-01-01T14:09:20.156Z,https://simpleanalytics.com/,https://simpleanalytics.com/?ref=twitter-bio,simpleanalytics.com,simpleanalytics.com,js,false,,,375,375
 ```
 
-We include `added_unix` with a unix time stamp and `added_iso` with ISO 8601 encoded date. `device_width` is deprecated and is now replaced by `device_width_pixels`. We will add more data like `scrolled_percentage` and `duration_seconds` in the future.
+We included `added_unix` with a unix time stamp and `added_iso` with an ISO 8601 encoded date. `device_width` is deprecated and is now replaced by `device_width_pixels`. Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the user.
 
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
