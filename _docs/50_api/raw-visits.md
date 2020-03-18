@@ -8,7 +8,7 @@ permalink: /api/csv-export
 
 If you want to export raw visits without aggregations you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
 
-For this API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...` and with a user ID `sa_user_id_...`. You can create them in [your account settings](https://simpleanalytics.com/account).
+For this API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...` and with a `User-Id` header starting with `sa_user_id_...`. You can create them in [your account settings](https://simpleanalytics.com/account).
 
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
