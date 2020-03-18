@@ -23,7 +23,7 @@ The export will look like this:
 
 ```bash
 added_unix,added_iso,url,referrer_raw,referrer,hostname,source,is_unique,scrolled_percentage,duration_seconds,device_width_pixels,device_width
-1577867423,2020-01-01T08:30:23.343Z,https://simpleanalytics.com/baychecker.com,https://simpleanalytics.com/example.com?start=2019-12-30&amp;end=2019-12-30,simpleanalytics.com,simpleanalytics.com,js,false,,,375,375
+1577867423,2020-01-01T08:30:23.343Z,https://simpleanalytics.com/example.com,https://simpleanalytics.com/example.com?start=2019-12-30&amp;end=2019-12-30,simpleanalytics.com,simpleanalytics.com,js,false,,,375,375
 1577887745,2020-01-01T14:09:05.066Z,https://simpleanalytics.com/,twitter-bio,twitter,simpleanalytics.com,js,true,,,375,375
 1577887760,2020-01-01T14:09:20.156Z,https://simpleanalytics.com/,https://simpleanalytics.com/?ref=twitter-bio,simpleanalytics.com,simpleanalytics.com,js,false,,,375,375
 ```
