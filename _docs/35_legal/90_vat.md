@@ -1,7 +1,6 @@
 ---
 title: VAT
 category: legal
-order: 100
 permalink: /vat
 ---
 

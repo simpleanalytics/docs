@@ -18,6 +18,7 @@ Read our guides on how to install Simple Analytics on:
 - [Squarespace](/install-simple-analytics-on-squarespace)
 - [Webflow](/install-simple-analytics-on-webflow)
 - [Jimdo Creator](/install-simple-analytics-on-jimdo-creator)
+- [MailerLite](/install-simple-analytics-on-mailerlite)
 
 > Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a guide or plugin for you.
 

@@ -1,6 +1,5 @@
 ---
 title: Install Simple Analytics on Webflow
-menu: Install on Webflow
 category: script
 hidden: true
 permalink: /install-simple-analytics-on-webflow

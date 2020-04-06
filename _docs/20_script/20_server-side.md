@@ -1,7 +1,6 @@
 ---
 title: Server side tracking
 category: script
-order: 20
 permalink: /server-side-tracking
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Install Simple Analytics on Ghost
-menu: Install on Ghost
 category: script
 hidden: true
 permalink: /install-simple-analytics-on-ghost

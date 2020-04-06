@@ -1,7 +1,6 @@
 ---
 title: What we collect
 category: general
-order: 10
 permalink: /what-we-collect
 ---
 

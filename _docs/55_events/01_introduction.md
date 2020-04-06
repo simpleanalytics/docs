@@ -2,7 +2,6 @@
 title: Introduction to events
 menu: Introduction
 category: events
-category_order: 10
 permalink: /events
 ---
 

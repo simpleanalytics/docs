@@ -2,7 +2,6 @@
 title: Track events in iOS via Swift or Objective-C
 menu: Track events in iOS
 category: events
-order: 10
 permalink: /events/ios
 ---
 
