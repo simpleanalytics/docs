@@ -74,11 +74,11 @@
     <main>
       <div class="split-nav-body">
         <div class="nav">
-          {% assign mydocs = site.docs | sort: 'path' | group_by: 'category' %}
+          {% assign categories = site.docs | sort: 'path' | group_by: 'category' %}
 
-          {% for cat in mydocs %}
+          {% for cat in categories %}
             {% assign isOpen = false %}
-            {% assign items = cat.items | sort: 'order' %}
+            {% assign items = cat.items | sort: 'path' %}
             {% for item in items %}
               {% if item.hidden != true and item.url == page.url %}
                 {% assign isOpen = true %}
