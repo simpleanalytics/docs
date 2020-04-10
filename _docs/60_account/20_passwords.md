@@ -1,7 +1,7 @@
 ---
-title: Password
+title: Passwords
 category: account
-permalink: /password
+permalink: /passwords
 ---
 
 You can always login with just your email. Some users like to login with a password. This can be faster than with email only.
