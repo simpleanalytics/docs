@@ -8,8 +8,9 @@ Include these two lines at the end of your `<body>`
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+/></noscript>
 ```
 
 > To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, and others, go to [Install on other platforms](/install-on-other-platforms).
@@ -20,7 +21,7 @@ We have a website setup wizard to test if you installed your script correctly. I
 
 <img class="undraw-svg" src="/images/undraw_setup_wizard.svg" alt="">
 
-> Read about [_Single Page Apps_ (SPA's)](/trigger-custom-page-views) like React, Vue, and Angular and [hash navigation](/hash-mode).
+> Read about [_Single Page Apps_ (SPA's)](/trigger-custom-page-views) like React, Vue, and Angular. Or how to use [hash navigation](/hash-mode).
 
 When you are done [go to your dashboard](https://simpleanalytics.com/websites?ref={{ site.hostname }}).
 

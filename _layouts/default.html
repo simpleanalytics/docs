@@ -17,6 +17,13 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#FFFFFF">
 
+    <!-- Privacy friendly website statistics -->
+    <script
+      async
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+      referrerpolicy="no-referrer"
+    ></script>
+
 {% seo %}
 
     <!-- Style -->
@@ -47,8 +54,12 @@
   </nav>
 
   <!-- Privacy friendly website statistics -->
-  <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
-  <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+  <noscript
+    ><img
+      src="https://queue.simpleanalyticscdn.com/noscript.gif"
+      referrerpolicy="unsafe-url"
+      alt=""
+  /></noscript>
 
   <script>
     (function() {
@@ -94,7 +105,7 @@
                 {% endif %}
               </summary>
               <ul>
-                {% assign items = cat.items | sort: 'order' %}
+                {% assign items = cat.items | sort: 'path' %}
                 {% for item in items %}
                   {% if item.hidden != true %}
                     <li class="{% if item.url == page.url %}active{% endif %}">
