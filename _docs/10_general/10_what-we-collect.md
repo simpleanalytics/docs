@@ -4,39 +4,39 @@ category: general
 permalink: /what-we-collect
 ---
 
-Not collecting any information would be silly for an analytics tool. We do collect information that is necessary to show you the simple analytics. But unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we do collect from our users.
+Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your users.
 
 ### IP addresses
 
-> We don't collect and store IPs
+> We **do NOT collect or store** IP addresses
 
-We drop the IP address from request. We don't hash them with cryptography. We just don't save or collect them. Period.
+We drop the IP address from every single request. Period. We don't save or collect them. We don't hash them with cryptography.
 
 <blockquote class="note">
-  <p markdown="1">Update: Nov 21, 2019. Just to be completely transparent: we found IPs in our logs when requests on our server were failing. We fixed this by filtering all log messages and replace IPs with zero's using [mmanon](https://www.rsyslog.com/doc/v8-stable/configuration/modules/mmanon.html). Now all IPs (like `1.1.1.1` or `2606:4700:4700::1111`) will become `0.0.0.0` or `0:0:0:0:0:0:0:0` before it enters our logs.</p>
+  <p markdown="1">Update: Nov 21, 2019. Just to be completely transparent: we found IPs in our logs when requests on our server were failing. We fixed this by filtering all log messages and replacing IPs with zeros using [mmanon](https://www.rsyslog.com/doc/v8-stable/configuration/modules/mmanon.html). From now on, all IPs (like `1.1.1.1` or `2606:4700:4700::1111`) will become `0.0.0.0` or `0:0:0:0:0:0:0:0` before they enter our logs.</p>
 </blockquote>
 
 ### Unique views
 
-> We **collect** and **store** if visits are unique
+> We **do collect and store** whether visits are unique
 
-Our unique detection of visits is quite unique by itself. Most services use cookies or IP addresses to see if a visitor has visited the website. We don't use cookies or IP addresses, so not either for detecting unique visits. In the UK for example you can't use IP addresses (even hashed) without an active opt-in. This is why Simple Analytics is compatible with all existing privacy laws. You don't need an opt-in for our service.
+Our unique detection of visits is quite unique itself. Most services use cookies or IP addresses to see if a visitor has visited the website in the past, except we don't use cookies or IP addresses at all. In the UK, for example, websites can't use IP addresses (even hashed) without an active opt-in from each user. This is why Simple Analytics is compatible with all existing privacy laws, including GDPR. You don't need an opt-in for our service.
 
-We detect a unique visit based on the hostname of the _referrer_ of the page. If a user comes from one domain to another it shares the previous domain with the next via a so called _referrer_. If the domain is the same as the one in the _referrer_ we know it's a non-unique visit.
+We detect a unique visit based on the hostname of the _referrer_ of the page. When a user comes from one domain to another, their browser shares the previous domain with the next. If the current page's domain is the same as the one in the _referrer_, we know it's a non-unique visit.
 
-[Read more](/uniques) on how we register unique pages views.
+[Read more](/uniques) on how we register unique page views.
 
 ### Timestamps
 
-> We **collect** and **store** timestamps
+> We **do collect and store** timestamps
 
-We use timestamps to show you the graphs. We store this data because we want to be able to show the information of previous days as well.
+We use timestamps to generate the graphs you see on your dashboard, which allows you to analyze changes in your website's performance over various lengths of time.
 
 ### User agents
 
-> We **collect** and **store** user agents for a maximum of **90 days**
+> We **do collect and store** user agents for a maximum of **90 days**
 
-We detect and exclude bots and spiders based on the User Agent. We don't believe this data is useful for any other function, but we keep it in our logs (not database) for 90 days. When an incoming request fails for some reason we store the request body in our logs. After 90 days the logs are deleted including the user agents. We don't use User Agents for fingerprinting, rather only for showing the OS, device, and browser version.
+We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device sizes, and browsers** in your dashboard. We don't believe this data is useful for any other function, but we keep it in our logs (not database) for a maximum of 90 days. When an incoming request fails for some reason, we store the request body in our logs, which includes a User Agent. After 90 days, these logs are deleted.
 
 <blockquote class="note">
   <p>Update: Jan 14, 2019. Previously, we didn't store the User Agents, but now we save failed requests to our logs, so we added this as a clarification to the paragraph above.</p>
@@ -44,26 +44,27 @@ We detect and exclude bots and spiders based on the User Agent. We don't believe
 
 ### URLs
 
-> We **partly collect** and **partly store** URL's
+> We **partially collect** and **partially store** URLs
 
-Too much information in the URL can be confusing and can make your stats messy. So we only collect and store the first part of the URL. If an URL looks like this `https://example.com/index.html?search=keyword#top` we will only store `https://example.com/index.html`. Also known as the protocol, hostname, and pathname.
+Too much information in the URL can be confusing and can make your stats messy. We only collect and store the first part of the URL. If an URL looks like this `https://example.com/index.html?search=keyword#top` we will only store `https://example.com/index.html`, also known as the protocol (`https`), hostname (`example.com`), and pathname (`/index.html`).
 
 ### Referrers
 
-> We **collect** and **partly store** referrer's
+> We **do collect** and **partially store** referrers
 
-Referrers answer the question _"Where did the visitor come from?"_. We have two ways of checking the source of a user that visited your website.
+Referrers answer the question _"Where did this visitor come from?"_. We have two ways of checking the source of a user visiting your website.
 
-First of all; With most requests, browsers send the URL of the previous website as a referrer. Second; website owners can add a URL param (`utm_source=...`) in the links they post elsewhere. The URL param can also be called `ref=...` or `source=...`. In case we get the referrer via the browser (with full URL) we store it the same as URLs (see above). You can find a list of the most popular referrers in your analytics dashboard.
+1. In most cases, browsers send the URL of the previous website as a referrer. We store the referrer the same as URLs (see above). You can find a list of the most popular referrers in your analytics dashboard.
+1. Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. This overrides the referrer sent from the user's browser. Read more on [using URL parameters](/how-to-use-url-parameters).
 
 ### Device dimensions
 
-> We **collect** and **store** device dimensions
+> We **do collect and store** device dimensions
 
-With the collection of dimensions of the browser window (`window.innerWidth`) we can show the most popular screen sizes. This is useful for you so you can make sure your website works great on all of those dimensions.
+Collecting the dimensions of a user's browser window (`window.innerWidth`) allows us to show you the most popular screen sizes. This is useful for making sure your website works great on all screens: phones, tablets, desktops, etc.
 
 ### Do Not Track
 
-> We skip when Do-Not-Track is enabled
+> We **do NOT collect or store** any data **if a visitor has Do Not Track** enabled
 
-The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> setting requests that a web application disables either its tracking or cross-site user tracking of an individual user. <a href="https://simpleanalytics.com/no-tracking">We never track</a> your users, but by default we also skip requests with Do-Not-Track enabled. The stats will not include visitors when Do-Not-Track is enabled. Read more on [how to disable](/dnt) this behavior.
+The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> browser setting asks a web application to disable either its own tracking or third-party tracking of an individual user. <a href="https://simpleanalytics.com/no-tracking">We never track</a> your users anyway, but by default we also ignore visits with Do Not Track enabled and do not add them to your dashboard. Read more on [how to disable](/dnt) this behavior.
