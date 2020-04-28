@@ -4,10 +4,9 @@ category: general
 permalink: /
 ---
 
-In this documentation you will find most of our features explained and find instructions on how to enable certain features.
+Welcome to the Simple Analytics documentation! Here you will find detailed information on our features and how to customize them.
 
-If you think there is something missing, [please let us know](https://simpleanalytics.com/feedback?ref={{ site.hostname }}).
-If you're curious about our upcoming features you should check out our [roadmap](https://simpleanalytics.com/roadmap?ref={{ site.hostname }}).
+[Please let us know](https://simpleanalytics.com/feedback?ref={{ site.hostname }}) if you think we're missing something. If you're curious about our upcoming features, you should check out our [roadmap](https://simpleanalytics.com/roadmap?ref={{ site.hostname }}).
 
 > Are you looking for our embed script? Go to [how to add our script](/script).
 
