@@ -65,6 +65,6 @@ Collecting the dimensions of a user's browser window (`window.innerWidth`) allow
 
 ### Do Not Track
 
-> We **do NOT collect or store** any data **if a visitor has Do Not Track** enabled
+> By default we **do NOT collect or store** any data **if a visitor has Do Not Track** enabled
 
 The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> browser setting asks a web application to disable either its own tracking or third-party tracking of an individual user. <a href="https://simpleanalytics.com/no-tracking">We never track</a> your users anyway, but by default we also ignore visits with Do Not Track enabled and do not add them to your dashboard. Read more on [how to disable](/dnt) this behavior.

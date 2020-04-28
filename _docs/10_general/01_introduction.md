@@ -4,7 +4,7 @@ category: general
 permalink: /
 ---
 
-Welcome to the Simple Analytics documentation! Here you will find detailed information on our features and how to customize them.
+Whether you’re a startup or a global enterprise, learn how to integrate with Simple Analytics to move to privacy friendly analytics for your visitors without needed consent.
 
 [Please let us know](https://simpleanalytics.com/feedback?ref={{ site.hostname }}) if you think we're missing something. If you're curious about our upcoming features, you should check out our [roadmap](https://simpleanalytics.com/roadmap?ref={{ site.hostname }}).
 
