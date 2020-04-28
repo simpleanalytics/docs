@@ -42,6 +42,6 @@ If there is no referral parameter found, we save the URL of the referring page f
 
 We parse the URL parameter differently than the referrer URL. Because you generate the URL parameters yourself, we don't want to touch these too much. Instead, we decode their values (so you can use forbidden characters) and convert hostnames to more general names. For example, we convert `www.google.com` to `google`. We still store the original value, but we show `google` as the referrer in the dashboard. We do this so we can combine similar referrers, such as `www.google.com`, `google.nl`, and `google.fr`, into simply `google`.
 
-Referrer URLs contain the full URL that the browser gives us, such as `https://www.example.com/search?query=sensitive+information`. From this URL we store `referrer.example.com` as the referrer and keep `www.example.com/search` as the original URL. We drop the query (`?query=sensitive+information`), protocol (`https://`), and common subdomain (`www.`).
+Referrer URLs contain the full URL that the browser gives us, such as `https://www.example.com/search?query=sensitive+information`. From this URL we store `example.com` as the referrer and keep `example.com/search` as the original URL. We drop the query (`?query=sensitive+information`), protocol (`https://`), and common subdomain (`www.`).
 
 <img class="undraw-svg" src="/images/undraw_segment.svg" alt="">
