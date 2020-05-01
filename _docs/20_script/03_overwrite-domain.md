@@ -22,4 +22,6 @@ You see that we added an attribute (`data-hostname=""`) to the script tag. If yo
 <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
 ```
 
-Now all the visits you collect with this script are collected under the name `example.com`.
+## Add used domain to your dashboard
+
+Now all the visits you collect with this script are collected under the name `example.com`. Make sure you [add the new used domain name](https://simpleanalytics.com/websites/add) (`example.com`) to your dashboard.
