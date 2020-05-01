@@ -20,10 +20,10 @@ curl "https://simpleanalytics.com/api/export/visits?hostname=example.com&start=2
 The export will look like this:
 
 ```bash
-added_unix,added_iso,url,referrer_raw,referrer,hostname,source,is_unique,scrolled_percentage,duration_seconds,device_width_pixels,device_width
-1577867423,2020-01-01T08:30:23.343Z,https://simpleanalytics.com/example.com,https://simpleanalytics.com/example.com?start=2019-12-30&amp;end=2019-12-30,simpleanalytics.com,simpleanalytics.com,js,false,,,375,375
-1577887745,2020-01-01T14:09:05.066Z,https://simpleanalytics.com/,twitter-bio,twitter,simpleanalytics.com,js,true,,,375,375
-1577887760,2020-01-01T14:09:20.156Z,https://simpleanalytics.com/,https://simpleanalytics.com/?ref=twitter-bio,simpleanalytics.com,simpleanalytics.com,js,false,,,375,375
+added_unix,added_iso,url,referrer_raw,referrer,hostname,source,is_unique,scrolled_percentage,duration_seconds,device_width_pixels,utm_source,utm_campaign,utm_content
+1577867423,2020-01-01T08:30:23.343Z,https://simpleanalytics.com/example.com,https://simpleanalytics.com/example.com?start=2019-12-30&amp;end=2019-12-30,simpleanalytics.com,simpleanalytics.com,js,false,,,375,duckduckgo.com,,
+1577887745,2020-01-01T14:09:05.066Z,https://simpleanalytics.com/,twitter-bio,twitter,simpleanalytics.com,js,true,,,375,,,
+1577887760,2020-01-01T14:09:20.156Z,https://simpleanalytics.com/,https://simpleanalytics.com/?ref=twitter-bio,simpleanalytics.com,simpleanalytics.com,js,false,,,375,email,rl291,footer_button
 ```
 
 We included `added_unix` with a unix time stamp and `added_iso` with an ISO 8601 encoded date. `device_width` is deprecated and is now replaced by `device_width_pixels`. Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the user.
