@@ -44,7 +44,7 @@ If you do not want to open links in a new tab you can use this function. We crea
 <script>
   function captureOutboundLink(element) {
     if (!element) {
-      return console.warn('Simple Analytics: no element found in captureOutboundLink()');
+      return console.warn("Simple Analytics: no element found in captureOutboundLink");
     }
     var timeout = 0;
     if (window.sa_event) {
