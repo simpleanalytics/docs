@@ -43,8 +43,11 @@ If you do not want to open links in a new tab you can use this function. We crea
 ```html
 <script>
   function captureOutboundLink(element) {
+    if (!element) {
+      return console.warn('Simple Analytics: no element found in captureOutboundLink()');
+    }
     var timeout = 0;
-    if (element && window.sa_event) {
+    if (window.sa_event) {
       var href = element.getAttribute("href");
       var hostname = href.indexOf("://") ? href.split("/")[2] : href;
       var event = "outbound_" + hostname.replace(/[^a-z0-9]+/gi, "_");
@@ -55,7 +58,7 @@ If you do not want to open links in a new tab you can use this function. We crea
       timeout = 250;
     }
     window.setTimeout(function () {
-      document.location = href;
+      document.location = element.getAttribute("href");
     }, timeout);
   }
 </script>
