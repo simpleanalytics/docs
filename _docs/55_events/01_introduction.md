@@ -31,7 +31,7 @@ Or if you use our [custom domain feature](/bypass-ad-blockers):
 /></noscript>
 ```
 
-> **Developers:** place this script in the `<head>` or top part of your `<body>` in your html. The second script (`latest.js`) can be placed elsewhere on the page if you like.
+> **Developers:** place the first script (`window.sa_event=w...`) in the `<head>` or top part of your `<body>` in your HTML. The second script (`latest.js`) can be placed in the  `<head>` or `<body>`. The `<noscript>` should be placed in the `<body>`.
 
 This little snippet creates a simple function called `sa`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
 
