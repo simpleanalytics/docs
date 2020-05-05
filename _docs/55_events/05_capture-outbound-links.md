@@ -86,7 +86,7 @@ Or run this for all your links on the page:
     var link = a[i];
 
     // Test is a link does start with http
-    if (/^http/i.test(link.href)) 
+    if (/^http/i.test(link.href)) {
       link.setAttribute("onclick", "captureOutboundLink(this); return false;");
     }
   }
