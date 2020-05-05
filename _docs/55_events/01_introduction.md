@@ -17,6 +17,8 @@ To start working with events you need to have a recent version of our script. Th
 ```html
 <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+/></noscript>
 ```
 
 Or if you use our [custom domain feature](/bypass-ad-blockers):
@@ -25,6 +27,8 @@ Or if you use our [custom domain feature](/bypass-ad-blockers):
 ```html
 <script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
 <script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/latest.js"></script>
+<noscript><img src="https://[YOUR SUBDOMAIN LINKING TO US]/noscript.gif" alt=""
+/></noscript>
 ```
 
 > **Developers:** place this script in the `<head>` or top part of your `<body>` in your html. The second script (`latest.js`) can be placed elsewhere on the page if you like.
