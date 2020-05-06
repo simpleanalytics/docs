@@ -82,7 +82,7 @@ Or run this for all your links on the page:
 <script>
 (function createEvents() {
   // Wait for the DOM to be ready (so you can put this script anywhere on the page)
-  window.addEventListener('DOMContentLoaded', (event) => {
+  window.addEventListener('DOMContentLoaded', function(event) {
     // Get all links on the page
     var a = document.getElementsByTagName("a");
 
