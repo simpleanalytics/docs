@@ -81,18 +81,21 @@ Or run this for all your links on the page:
 ```html
 <script>
 (function createEvents() {
-  // Get all links on the page
-  var a = document.getElementsByTagName("a");
+  // Wait for the DOM to be ready (so you can put this script anywhere on the page)
+  window.addEventListener('DOMContentLoaded', (event) => {
+    // Get all links on the page
+    var a = document.getElementsByTagName("a");
 
-  // Loop over all links on the page
-  for (var i = 0; i < a.length; i++) {
-    var link = a[i];
+    // Loop over all links on the page
+    for (var i = 0; i < a.length; i++) {
+      var link = a[i];
 
-    // Test is a link does start with http
-    if (/^http/i.test(link.href)) {
-      link.setAttribute("onclick", "captureOutboundLink(this); return false;");
+      // Test is a link does start with http
+      if (/^http/i.test(link.href)) {
+        link.setAttribute("onclick", "captureOutboundLink(this); return false;");
+      }
     }
-  }
+  });
 })();
 </script>
 ```
