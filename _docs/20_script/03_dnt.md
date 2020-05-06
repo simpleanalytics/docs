@@ -20,4 +20,8 @@ To also record DNT visitors you can add `data-skip-dnt="true"` to the script tag
 
 If you don't add the `data-skip-dnt` attribute we will not record visits from users where DNT is enabled.
 
+## Enable collecting DNT visits for noscript.gif pixel
+
+If you use our [noscript.gif](/without-javascript) to collect page views you can also enable collecting DNT visits. Just append `ignore-dnt=true` to the pixel. Read more on [the collect without JavaScript page](/without-javascript).
+
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
