@@ -66,3 +66,5 @@ class Analytics: NSObject {
 
 }
 ```
+
+> Make sure to include a user agent in the headers of the request. This is not included in the example above.
