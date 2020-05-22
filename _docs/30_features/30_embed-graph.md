@@ -47,6 +47,10 @@ You can just copy paste links from the normal dashboard, like these:
 
 > If you include multiple graphs on your website make sure you include `<script src="https://cdn.simpleanalytics.io/embed.js"></script>` only once.
 
+## Spikes
+
+It happens that some data has huge spikes. This is great traffic wise, but you might want to cut off the spike in the graph to make more sense out of your data before and after the spikes. You can change this with the `y-limit` parameter. To limit your graph to – let's say 50,000 page views – you can add it like this: `https://simpleanalytics.com/example.com?y-limit=50000` .
+
 ## Scaling issues
 
 Sometimes the graph does not stretch to the full page width. This can be caused by adding the `div` with the `data-sa-graph-url`-attribute in a flex element with `align-items: center`. This makes the div not stretch to the full width anymore. It can be solved by adding `align-self: stretch` to the `div` with the `data-sa-graph-url`-attribute. See this example:
