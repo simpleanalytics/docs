@@ -34,5 +34,6 @@ Get our official plugins for these frameworks:
 - [Gridsome](https://gridsome.org/plugins/gridsome-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/gridsome-plugin#readme))</small>
 - [Django](https://pypi.org/project/simpleanalytics/) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
 - [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
+- [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
 
 > Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a plugin for you.
