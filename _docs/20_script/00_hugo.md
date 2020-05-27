@@ -5,7 +5,7 @@ hidden: true
 permalink: /install-simple-analytics-with-hugo
 ---
 
-<img src="https://d33wubrfki0l68.cloudfront.net/c38c7334cc3f23585738e40334284fddcaf03d5e/2e17c/images/hugo-logo-wide.svg" width="200px">
+<img src="/images/hugo-logo.svg" width="200px">
 
 You can embed our script in Hugo using their feature called ["Base Template"](https://gohugo.io/templates/base/). On this page we will explain how to use this feature and help you installing the Simple Analytics script with Hugo.
 
