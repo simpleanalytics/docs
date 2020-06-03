@@ -18,6 +18,8 @@ location /simple/ {
 }
 
 location = /proxy.js {
+  expires 7d;
+  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
   proxy_pass https://external.simpleanalytics.com/proxy.js?hostname=example.com&path=/simple;
 }
 ```
