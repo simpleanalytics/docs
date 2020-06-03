@@ -22,7 +22,11 @@ location = /proxy.js {
 }
 ```
 
+> Trailing slashed are very important here. Keep them as they are in the above example.
+
 Change `example.com` to the domain you run the proxy on. This can be the same domain as your own website is hosted on.
+
+> You can change the path that you proxy from (`/simple/`) to something else. Make sure to also update that in the second `proxy_pass` (`&path=/simple`).
 
 If you reload your NGINX config with `sudo nginx -t && sudo nginx -s reload` you should be able to visit the script at `https://example.com/proxy.js`. Just embed this script in your HTML:
 
