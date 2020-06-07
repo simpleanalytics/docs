@@ -1,7 +1,7 @@
 ---
 title: CSV export visits
 category: api
-permalink: /api/csv-export
+permalink: /api/csv-export-visits
 ---
 
 If you want to export raw visits without aggregations you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
