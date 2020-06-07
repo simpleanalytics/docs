@@ -58,7 +58,7 @@ Event names are limited to 200 characters. If this exceeds we truncate the name 
 
 We don't store anything on the computer of your visits so naturally events will not be linked when a visitor navigates between page. Unless it's a SPA (Single Page App) which does not reload the whole page but only a part of the page. If you don't have a SPA you can use [Pjax](https://github.com/MoOx/pjax/) to convert your website to a SPA website.
 
-# Export events
+## Export events
 
 To export events you can use our API. [Learn more](/api/csv-export-events).
 
