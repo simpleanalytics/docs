@@ -56,7 +56,7 @@ Remember to include the `noscript` image tag in your HTML for JS disabled browse
 Include this line at the end of your `<body>`
 
 ```
-<noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt=""></noscript>
 ```
 
 ## View the source
