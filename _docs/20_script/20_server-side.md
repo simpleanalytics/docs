@@ -31,7 +31,7 @@ Please strip all sensitive data from your URLs. We do this at our end as well, b
   }
 </style>
 
-Our API is located at `https://api.simpleanalytics.io/post`.
+Our API is located at `https://queue.simpleanalyticscdn.com/post`.
 
 The request should be a POST with JSON like this:
 
@@ -61,7 +61,7 @@ const data = JSON.stringify({
 });
 
 const options = {
-  hostname: "api.simpleanalytics.io",
+  hostname: "queue.simpleanalyticscdn.com",
   path: "/post",
   method: "POST",
   headers: {
