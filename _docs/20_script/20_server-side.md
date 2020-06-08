@@ -101,7 +101,7 @@ The response for this request will look like this:
   "success": true,
   "duration_ms": 1,
   "message": "Thank you",
-  "location": "Reykjavík, Iceland"
+  "location": "Amsterdam, The Netherlands"
 }
 ```
 
