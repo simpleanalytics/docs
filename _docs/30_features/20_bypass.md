@@ -12,4 +12,4 @@ You only need access to your DNS to set this up. Add a CNAME record to your DNS 
 
 You will need to enable the record in your website settings on Simple Analytics. We need to know this to request a certificate with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>. This means your analytics will travel safe via HTTPS to our servers.
 
-> If you are using <img src="https://cdn.simpleanalytics.io/images/cloudflare-icon.png" style="height: 10px; margin: 0 3px;" alt=""> CloudFlare, make sure to disable the orange cloud.
+> If you are using <img src="https://cdn.simpleanalytics.com/images/cloudflare-icon.png" style="height: 10px; margin: 0 3px;" alt=""> CloudFlare, make sure to disable the orange cloud.
