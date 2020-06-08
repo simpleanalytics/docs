@@ -12,7 +12,7 @@ We do everything in our power to keep your data safe. We collect the bare minimu
   <p>We moved our servers from Iceland to The Netherlands.</p>
 </blockquote>
 
-A year ago we wrote [a blog post](https://blog.simpleanalytics.io/why-we-moved-our-servers-to-iceland) about why we moved to Iceland. In hindsight, this was not a great move. Here is why:
+A year ago we wrote [a blog post](https://blog.simpleanalytics.com/why-we-moved-our-servers-to-iceland) about why we moved to Iceland. In hindsight, this was not a great move. Here is why:
 
 1. The Icelandic Modern Media Initiative was adopted by parliament but didn’t make it into law (so it’s not the internet freedom haven we thought it was).
 1. Our provider claimed to be the largest in Iceland but it was not as mature as bigger providers in Europe, which risked the security of our servers and infrastructure.
