@@ -20,7 +20,7 @@ Simple Analytics has a script which you can use to embed public website statisti
     this graph.
   </p>
 </div>
-<script src="https://cdn.simpleanalytics.io/embed.js"></script>
+<script src="https://scripts.simpleanalyticscdn.com/embed.js"></script>
 ```
 
 > Change `example.com` to your own website
@@ -31,7 +31,7 @@ Simple Analytics has a script which you can use to embed public website statisti
 <div data-sa-graph-url="https://simpleanalytics.com/simpleanalytics.com?color=FF4F64" data-sa-page-views-selector="#pageviews">
   <p>Ad blockers don't like the Simple Analytics embed, disable yours to view this graph.</p>
 </div>
-<script src="https://cdn.simpleanalytics.io/embed.js"></script>
+<script src="https://scripts.simpleanalyticscdn.com/embed.js"></script>
 
 ## Customize
 
@@ -45,7 +45,7 @@ You can just copy paste links from the normal dashboard, like these:
 - `https://simpleanalytics.com/example.com?color=ff6600`
 - `https://simpleanalytics.com/example.com?start=2018-09-17&end=2018-09-23`
 
-> If you include multiple graphs on your website make sure you include `<script src="https://cdn.simpleanalytics.io/embed.js"></script>` only once.
+> If you include multiple graphs on your website make sure you include `<script src="https://scripts.simpleanalyticscdn.com/embed.js"></script>` only once.
 
 ## Spikes
 
@@ -72,7 +72,7 @@ Sometimes the graph does not stretch to the full page width. This can be caused 
   </div>
 </div>
 
-<script src="https://cdn.simpleanalytics.io/embed.js"></script>
+<script src="https://scripts.simpleanalyticscdn.com/embed.js"></script>
 
 <style>
   .your-parent-class {
