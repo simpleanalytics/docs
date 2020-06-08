@@ -19,7 +19,7 @@ If you have your website set to private you can still export this data. You need
 
 ### Get data for specific pages
 
-With the stats API you can also retrieve data for a specific page of your website. By adding the path to the URL Simple Analytics returns the data for that path. For example if you want to know how many visits you got on `simpleanalytics.io/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json`](https://simpleanalytics.com/simpleanalytics.com/contact.json))
+With the stats API you can also retrieve data for a specific page of your website. By adding the path to the URL Simple Analytics returns the data for that path. For example if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json`](https://simpleanalytics.com/simpleanalytics.com/contact.json))
 
 ## Business API
 
