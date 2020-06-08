@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Simple Analytics Docs
-email: support@mail.simpleanalytics.io
+email: support@simpleanalytics.com
 hostname: docs.simpleanalytics.com
 description: >- # this means to ignore newlines until "baseurl:"
   On this website you'll find all the ways and possibilities how to use Simple Analytics.
