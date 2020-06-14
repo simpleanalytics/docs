@@ -17,7 +17,7 @@ Let's say you have pages that you want to ignore:
 Then you can define these with the `ignore-pages` attribute in your embed script. Every page you want to ignore starts with a slash (`/`) and is only the path after the domain name, not the full link. For `https://example.com/vouchers` it would be `/vouchers`:
 
 ```html
-<script ignore-pages="/vouchers" src="..." />
+<script ignore-pages="/vouchers" src="https://scripts.simpleanalyticscdn.com/latest.js" />
 ```
 
 ## Comma separated
@@ -25,7 +25,7 @@ Then you can define these with the `ignore-pages` attribute in your embed script
 If you have multiple pages you want to block you can separate them with a comma.
 
 ```html
-<script ignore-pages="/search/keyword,/account/@profilename,/vouchers" src="..." />
+<script ignore-pages="/search/keyword,/account/@profilename,/vouchers" src="https://scripts.simpleanalyticscdn.com/latest.js" />
 ```
 
 ## Wildcards
@@ -35,7 +35,7 @@ If you need to match a part of a string you need to add an wildcard asterisk (`*
 To block all above pages you can use the following code:
 
 ```html
-<script ignore-pages="/search/*,/account/*,/vouchers" src="..." />
+<script ignore-pages="/search/*,/account/*,/vouchers" src="https://scripts.simpleanalyticscdn.com/latest.js" />
 ```
 
 Need any help? We love to help you set up your script. Don't hesitate to [contact us](https://simpleanalytics.com/contact). Silly questions don't exist.
