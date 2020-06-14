@@ -28,7 +28,7 @@ If you have multiple pages you want to block you can separate them with a comma.
 <script ignore-pages="/search/keyword,/account/@profilename,/vouchers" src="..." />
 ```
 
-## Wildcard search
+## Wildcards
 
 Note that if you need to match a part of a string you need to add an asterisk (`*`). To match `/search/1` and `/search/2` you can use `/search/*`. If you use `/search/` it will only ignore that page and still collects ``/search/1` and `/search/2`.
 
