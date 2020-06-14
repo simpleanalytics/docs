@@ -14,7 +14,7 @@ Let's say you have pages that you want to ignore:
 - `https://example.com/account/@profilename` (where `profilename` kan be any name)
 - `https://example.com/vouchers` (only one page)
 
-Then you can define these with the `ignore-pages` attribute in your embed script. Every page you want to ignore starts with a slash (`/`) and is only the page of the page, not the full link. For `https://example.com/vouchers` it would be `/vouchers`:
+Then you can define these with the `ignore-pages` attribute in your embed script. Every page you want to ignore starts with a slash (`/`) and is only the path after the domain name, not the full link. For `https://example.com/vouchers` it would be `/vouchers`:
 
 ```html
 <script ignore-pages="/vouchers" src="..." />
