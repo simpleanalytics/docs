@@ -7,6 +7,8 @@ permalink: /ignore-pages
 
 Normally you install the script on all pages of your website. You add your script in the header or footer so you don't have to copy it to every page. But sometimes you don't want to record all pages on your website. That's why we have a feature where you can ignore pages easily.
 
+> This feature is being tested and not yet available, contact us if you want to use it.
+
 ## `ignore-pages`
 
 Let's say you have pages that you want to ignore:
