@@ -1,5 +1,5 @@
 ---
-title: Ignore specified pages
+title: Ignore pages
 menu: Ignore pages
 category: script
 permalink: /ignore-pages
@@ -37,3 +37,5 @@ To block all above pages you can use the following code:
 ```html
 <script ignore-pages="/search/*,/account/*,/vouchers" src="..." />
 ```
+
+Need any help? We love to help you set up your script. Don't hesitate to [contact us](https://simpleanalytics.com/contact). Silly questions don't exist.
