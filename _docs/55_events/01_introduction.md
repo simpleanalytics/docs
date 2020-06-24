@@ -62,6 +62,28 @@ We don't store anything on the computer of your visits so naturally events will 
 
 To export events you can use our API. [Learn more](/api/csv-export-events).
 
+## Event callbacks
+
+In some cases you want to send an event before the visitor navigates away. For example to [capture outbound links](/capture-outbound-links). You can add a callback function as the second parameter of the `sa_event`-function:
+
+```js
+sa_event('outbound_link_to_affiliate', function() {
+  window.location.href = 'https://example.com/?affiliate=...';
+});
+```
+
+The above example will capture the event before sending the visitor to `https://example.com/?affiliate=...`.
+
+It's always smart to check if `sa_event` is available before using it:
+
+```js
+function callback() {
+  window.location.href = 'https://example.com/?affiliate=...';
+}
+if (sa_event) sa_event('outbound_link_to_affiliate', callback);
+else callback();
+```
+
 ## The variable `sa_event` is already used
 
 If the `sa_event` variable is already in use you can change it with the `data-sa-global` attribute:
