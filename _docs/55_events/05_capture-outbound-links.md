@@ -5,101 +5,68 @@ category: events
 permalink: /capture-outbound-links
 ---
 
-To capture outbound links you need a function that saves the outbound link as an event. We have two ways to create outbound events from those links. One where the page opens in a new tab (easiest) and one where you can replace the current page with the links.
-
-## Track all external links and open in new tabs
+To capture outbound links you need a function that saves the outbound link as an event.
 
 Just copy and paste this code into your HTML:
 
 ```html
 <script>
-(function createEvents() {
-  // Get all links on the page
-  var a = document.getElementsByTagName("a");
+(function saInitializeLinkCapture(window) {
+  var log = function (message, type) {
+    var logger = type === "warn" ? console.warn : console.log;
+    return logger("Simple Analytics: " + message);
+  };
 
-  // Loop over all links on the page
-  for (var i = 0; i < a.length; i++) {
-    var link = a[i];
+  window.saCaptureOutboundLink = function saCaptureOutboundLink(element) {
+    if (!element) return log("no element found in saCaptureOutboundLink");
+    var sent = false;
 
-    // Test is a link does start with http
-    if (/^http/i.test(link.href)) {
+    var callback = function () {
+      if (!sent) document.location = element.getAttribute("href");
+      sent = true;
+    };
 
-      // Set event name with host of link without the www
-      var event = "outbound_" + link.host.replace(/^(www|l|m)\./, "");
-      link.setAttribute("target", "_blank");
-      link.setAttribute("onclick", "sa_event('" + event + "');");
-    }
-  }
-})();
-</script>
-```
-
-It will track all links with our events and it will open those links in a new tab. Easy, right?
-
-## Do not open links in a new tab
-
-If you do not want to open links in a new tab you can use this function. We created the `captureOutboundLink`-function for this purpose. Copy this code into your HTML:
-
-```html
-<script>
-  function captureOutboundLink(element) {
-    if (!element) {
-      return console.warn("Simple Analytics: no element found in captureOutboundLink");
-    }
-    var timeout = 0;
     if (window.sa_event) {
       var href = element.getAttribute("href");
       var hostname = href.indexOf("://") ? href.split("/")[2] : href;
-      var event = "outbound_" + hostname.replace(/[^a-z0-9]+/gi, "_");
-      sa_event(event);
-      console.info(
-        "Simple Analytics: captured outbound link as event: " + event
-      );
-      timeout = 250;
+      var event =
+        "outbound_" +
+        hostname.replace(/[^a-z0-9]+/gi, "_").replace(/(^_+|_+$)/g, "");
+      sa_event(event, callback);
+      log("captured outbound link as event: " + event);
+
+      return window.setTimeout(callback, 5000);
+    } else {
+      log("sa_event is not defined", "warn");
+      return callback();
     }
-    window.setTimeout(function () {
-      document.location = element.getAttribute("href");
-    }, timeout);
-  }
-</script>
-```
+  };
 
-It takes care of sending it as an event to Simple Analytics. As events can only be letters, numbers, and underscores we already convert this name.
-
-To use this function in your HTML you can add `onclick="captureOutboundLink(this); return false;"` to your links:
-
-```html
-<a
-  href="http://www.example.com"
-  onclick="captureOutboundLink(this); return false;"
-  >Check out example.com</a
->
-```
-
-Or run this for all your links on the page:
-
-```html
-<script>
-(function createEvents() {
-  // Wait for the DOM to be ready (so you can put this script anywhere on the page)
-  window.addEventListener('DOMContentLoaded', function(event) {
-    // Get all links on the page
+  function onDOMContentLoaded() {
     var a = document.getElementsByTagName("a");
 
     // Loop over all links on the page
     for (var i = 0; i < a.length; i++) {
       var link = a[i];
 
-      // Test is a link does start with http
-      if (/^http/i.test(link.href) && link.hostname !== window.location.hostname) {
-        link.setAttribute("onclick", "captureOutboundLink(this); return false;");
+      // Test is a link does start with http:// or https://
+      if (
+        /^https?:\/\//i.test(link.href) &&
+        link.hostname !== window.location.hostname
+      ) {
+        link.setAttribute(
+          "onclick",
+          "saCaptureOutboundLink(this); return false;"
+        );
       }
     }
-  });
-})();
+  }
+
+  window.addEventListener("DOMContentLoaded", onDOMContentLoaded);
+})(window);
 </script>
 ```
 
-> Out current implementation of events does not support callbacks yet, so that's why we use the 250ms timeout at the moment. It means that there is no guarantee that events will be saved before the user navigates away.
+It will track all links with our events. Easy, right? It takes care of sending it as an event to Simple Analytics. As events can only be letters, numbers, and underscores we already convert this name.
 
 We love to improve capturing outbound links. Please let us know if you need any help! We don't mind getting our hands dirty.
