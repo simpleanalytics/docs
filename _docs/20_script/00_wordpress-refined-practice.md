@@ -5,7 +5,7 @@ hidden: true
 permalink: /wordpress-plugin-by-refined-practice
 ---
 
-[Refined Practice](https://www.]refinedpractice.com/) has created a WordPress plugin with more features than [the official Simple Analytics plugin](/install-simple-analytics-on-wordpress). It shows you a chart widget when you have your stats set to public, has support for events, ...
+[Refined Practice](https://www.refinedpractice.com/) has created a WordPress plugin with more features than [the official Simple Analytics plugin](/install-simple-analytics-on-wordpress). It shows you a chart widget when you have your stats set to public, has support for events, ...
 
 > The [source code is public](https://github.com/Refined-Practice/rp-simple-analytics) but the plugin is not official so use it at your own risk.
 
