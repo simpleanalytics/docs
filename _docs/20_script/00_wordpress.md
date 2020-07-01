@@ -9,7 +9,9 @@ You can embed our script in WordPress using a plugin. On this page we will expla
 
 There are two ways to add our WordPress plugin to your site. Via the your WordPress dashboard or by manually installing the plugin.
 
-## Install via WordPress dashboard
+> There is a non-official plugin made by Refined Practice. It has more features then the official plugin. [Learn more](/wordpress-plugin-by-refined-practice) about this plugin.
+
+## Install official plugin via WordPress dashboard
 
 1. Go to your WordPress admin (likely on /wp-admin or [wordpress.com/log-in](https://wordpress.com/log-in))
 1. Go to plugins in your WordPress admin and click on **Add new**:
