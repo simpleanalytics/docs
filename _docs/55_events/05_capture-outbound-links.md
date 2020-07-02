@@ -12,6 +12,10 @@ Just copy and paste this code into your HTML:
 ```html
 <script>
 (function saInitializeLinkCapture(window) {
+  var options = {
+    fullUrl: false
+  };
+  
   var log = function (message, type) {
     var logger = type === "warn" ? console.warn : console.log;
     return logger("Simple Analytics: " + message);
@@ -31,7 +35,10 @@ Just copy and paste this code into your HTML:
       var hostname = href.indexOf("://") ? href.split("/")[2] : href;
       var event =
         "outbound_" +
-        hostname.replace(/[^a-z0-9]+/gi, "_").replace(/(^_+|_+$)/g, "");
+        (options.fullUrl ?
+          href.split('/').slice(3).join('/').split('?')[0] + ''
+          : hostname
+        ).replace(/[^a-z0-9]+/gi, "_").replace(/(^_+|_+$)/g, "");
       sa_event(event, callback);
       log("captured outbound link as event: " + event);
 
