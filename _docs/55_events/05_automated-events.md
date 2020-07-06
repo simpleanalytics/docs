@@ -156,6 +156,8 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 </script>
 ```
 
+> You can compress above code (after changing the options) via [jscompress.com](https://jscompress.com/).
+
 </details>
 
 It takes care of sending it as an event to Simple Analytics. As events can only be letters, numbers, and underscores we already convert this name.
