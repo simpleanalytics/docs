@@ -22,7 +22,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: simpleanalytic
-github_username:  simpleanalytics
+github_username: simpleanalytics
 
 # permalink: :title
 
@@ -32,6 +32,7 @@ theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -55,8 +56,7 @@ collections:
     permalink: /:title
 
 defaults:
-  -
-    scope:
+  - scope:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
