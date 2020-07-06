@@ -151,8 +151,7 @@ If you are a developer or you know your way around HTML it's easy to embed this 
       }
     }
 
-    // window.addEventListener("DOMContentLoaded", onDOMContentLoaded);
-    onDOMContentLoaded();
+    window.addEventListener("DOMContentLoaded", onDOMContentLoaded);
   })(window);
 </script>
 ```
