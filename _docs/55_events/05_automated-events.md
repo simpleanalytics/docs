@@ -162,4 +162,4 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 
 It takes care of sending it as an event to Simple Analytics. As events can only be letters, numbers, and underscores we already convert this name.
 
-We love to improve our automted events. Please let us know if you need any help! We don't mind getting our hands dirty.
+We love to improve our automated events. Please let us know if you need any help! We don't mind getting our hands dirty.
