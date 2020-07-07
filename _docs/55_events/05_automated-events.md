@@ -16,7 +16,7 @@ It's as easy as including the script below and making sure the `outbound` in con
 
 ## Emails
 
-Do you have links to email addresses on your website? Then it could make sense to see how many click you get on your `mailto` links.
+Do you have links to email addresses on your website? Then it could make sense to see how many clicks you get on your `mailto` links.
 
 It's as easy as including the script below and making sure the `emails` in config is set to `true`.
 
