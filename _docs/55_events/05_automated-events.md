@@ -36,7 +36,8 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 ```html
 <script>
   (function saAutomatedEvents(window) {
-    if (!window || !document) return;
+    // Skip server side rendered pages
+    if (typeof window === "undefined") return;
 
     var options = {
       // What to collect
@@ -117,9 +118,11 @@ If you are a developer or you know your way around HTML it's easy to embed this 
         for (var i = 0; i < a.length; i++) {
           var link = a[i];
 
-          // Test is a link does start with http:// or https://
+          // We don't want to overwrite website behaviour so we check for the onclick attribute
           if (!link.getAttribute("onclick")) {
             var collect;
+
+            // Collect download clicks
             if (
               options.downloads &&
               /^https?:\/\//i.test(link.href) &&
@@ -129,12 +132,16 @@ If you are a developer or you know your way around HTML it's easy to embed this 
               ).test(link.pathname)
             ) {
               collect = "download";
+
+            // Collect outbound links clicks
             } else if (
               options.outbound &&
               /^https?:\/\//i.test(link.href) &&
               link.hostname !== window.location.hostname
             ) {
               collect = "outbound";
+
+            // Collect email clicks
             } else if (options.emails && /^mailto:/i.test(link.href)) {
               collect = "email";
             }
