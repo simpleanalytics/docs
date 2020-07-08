@@ -30,8 +30,32 @@ It's as easy as including the script below and making sure the `downloads` in co
 
 If you are a developer or you know your way around HTML it's easy to embed this script on your website. If you need help with that, we are happy to help. Just [contact us](https://simpleanalytics.com/contact).
 
+<!-- prettier-ignore -->
+```html
+<script>
+(function(a){
+  var options = {
+    // What to collect
+    outbound: true,
+    emails: true,
+    downloads: true,
+
+    // Outbound: get full paths of the links? false for just the hostname
+    paths: false,
+
+    // Downloads: enter extensions you want to collect
+    extensions: ["pdf", "csv", "docx", "xlsx"],
+  };
+
+  function b(){try{for(var b,e=document.getElementsByTagName("a"),f=0;f<e.length;f++)if(b=e[f],!b.getAttribute("onclick")){var g;d.downloads&&/^https?:\/\//i.test(b.href)&&new RegExp(".("+(d.extensions||[]).join("|")+")","i").test(b.pathname)?g="download":d.outbound&&/^https?:\/\//i.test(b.href)&&b.hostname!==a.location.hostname?g="outbound":d.emails&&/^mailto:/i.test(b.href)&&(g="email"),g&&b.setAttribute("onclick","saAutomatedLink(this, '"+g+"'); return false;")}}catch(a){c(a.message,"warn")}}if("undefined"!=typeof a){var c=function(a,b){var c="warn"===b?console.warn:console.log;return c("Simple Analytics automated events: "+a)},d=options;"undefined"==typeof d&&c("options object not found, please specify","warn"),a.saAutomatedLink=function(b,e){try{if(!b)return c("no element found");var f=!1,g=function(){f||(document.location=b.getAttribute("href")),f=!0};if(a.sa_event){var h,i=b.hostname,j=b.pathname;switch(e){case"outbound":{h=i+(d.paths?j:"");break}case"download":{h=i+j;break}case"email":{var k=b.getAttribute("href");h=(k.split(":")[1]||"").split("?")[0];break}}var l=e+"_"+h.replace(/[^a-z0-9]+/gi,"_").replace(/(^_+|_+$)/g,"");return sa_event(l,g),c("collected "+l),a.setTimeout(g,5e3)}return c("sa_event is not defined","warn"),g()}catch(a){c(a.message,"warn")}},a.addEventListener("DOMContentLoaded",b)}
+})(window);
+</script>
+```
+
+The script is compressed with the public tool [jscompress.com](https://jscompress.com/).
+
 <details markdown="1">
-<summary>Copy and paste this code into your HTML</summary>
+<summary>The non-minified version of the above script</summary>
 
 ```html
 <script>
@@ -57,7 +81,10 @@ If you are a developer or you know your way around HTML it's easy to embed this 
       return logger("Simple Analytics automated events: " + message);
     };
 
-    if (typeof options === "undefined")
+    // For minifying the script
+    var optionsLink = options;
+
+    if (typeof optionsLink === "undefined")
       log("options object not found, please specify", "warn");
 
     window.saAutomatedLink = function saAutomatedLink(element, type) {
@@ -77,7 +104,7 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 
           switch (type) {
             case "outbound": {
-              event = hostname + (options.paths ? pathname : "");
+              event = hostname + (optionsLink.paths ? pathname : "");
               break;
             }
             case "download": {
@@ -124,25 +151,25 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 
             // Collect download clicks
             if (
-              options.downloads &&
+              optionsLink.downloads &&
               /^https?:\/\//i.test(link.href) &&
               new RegExp(
-                "\.(" + (options.extensions || []).join("|") + ")",
+                "\.(" + (optionsLink.extensions || []).join("|") + ")",
                 "i"
               ).test(link.pathname)
             ) {
               collect = "download";
 
-            // Collect outbound links clicks
+              // Collect outbound links clicks
             } else if (
-              options.outbound &&
+              optionsLink.outbound &&
               /^https?:\/\//i.test(link.href) &&
               link.hostname !== window.location.hostname
             ) {
               collect = "outbound";
 
-            // Collect email clicks
-            } else if (options.emails && /^mailto:/i.test(link.href)) {
+              // Collect email clicks
+            } else if (optionsLink.emails && /^mailto:/i.test(link.href)) {
               collect = "email";
             }
 
@@ -166,6 +193,8 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 > You can compress above code (after changing the options) via [jscompress.com](https://jscompress.com/).
 
 </details>
+
+> When you test with this script, note that it uses the `DOMContentLoaded` event. This event only fires when the script has been added before the page has loaded. If you want to test the script in your console make sure to replace <code>window.addEventListener("DOMContentLoaded", onDOMContentLoaded);</code> with `onDOMContentLoaded()`.
 
 It takes care of sending it as an event to Simple Analytics. As events can only be letters, numbers, and underscores we already convert this name.
 
