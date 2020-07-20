@@ -2,6 +2,8 @@
 title: Remove referral SPAM
 category: features
 permalink: /remove-referral-spam
+redirect_from:
+  - /delete-spam-from-your-analytics
 ---
 
 Simple Analytics has a feature where you can remove referral spam. Not by setting up complex filters, but just with a click on a button.
