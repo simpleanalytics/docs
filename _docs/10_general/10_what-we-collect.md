@@ -54,8 +54,23 @@ Too much information in the URL can be confusing and can make your stats messy. 
 
 Referrers answer the question _"Where did this visitor come from?"_. We have two ways of checking the source of a user visiting your website.
 
-1. In most cases, browsers send the URL of the previous website as a referrer. We store the referrer the same as URLs (see above). You can find a list of the most popular referrers in your analytics dashboard.
-1. Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. This overrides the referrer sent from the user's browser. Read more on [using URL parameters](/how-to-use-url-parameters).
+In most cases, browsers send the URL of the previous website as a referrer. We store the referrer the same as URLs (see above). You can find a list of the most popular referrers in your analytics dashboard.
+
+Secondly we check the source of the customer with the UTM-parameters.
+
+### UTM-parameters
+
+> We **do collect** and **store** UTM-codes
+
+We track these UTM codes:
+
+- `utm_source` (e.g.: `duckduckgo.com`)
+- `utm_medium` (e.g.: `search`)
+- `utm_campaign` (e.g.: `get_customers_02`)
+- `utm_content` (e.g.: `sidebar`)
+- `utm_term` (e.g.: `privacy friendly analytics`)
+
+Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. These are all saved as the `utm_source`. Read more on [using URL parameters](/how-to-use-url-parameters).
 
 ### Device dimensions
 
