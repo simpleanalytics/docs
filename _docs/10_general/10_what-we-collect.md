@@ -36,7 +36,7 @@ We use timestamps to generate the graphs you see on your dashboard, which allows
 
 > We **do collect and store** user agents for a maximum of **90 days**
 
-We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device sizes, and browsers** in your dashboard. We don't believe this data is useful for any other function, but we keep it in our logs (not database) for a maximum of 90 days. When an incoming request fails for some reason, we store the request body in our logs, which includes a User Agent. After 90 days, these logs are deleted.
+We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device types, and browsers** in your dashboard. We don't believe this data is useful for any other function, but we keep it in our logs (not database) for a maximum of 90 days. When an incoming request fails for some reason, we store the request body in our logs, which includes a User Agent. After 90 days, these logs are deleted.
 
 <blockquote class="note">
   <p>Update: Jan 14, 2019. Previously, we didn't store the User Agents, but now we save failed requests to our logs, so we added this as a clarification to the paragraph above.</p>
@@ -72,11 +72,19 @@ We track these UTM codes:
 
 Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. These are all saved as the `utm_source`. Read more on [using URL parameters](/how-to-use-url-parameters).
 
+<blockquote class="note">
+  <p>Added: July 20, 2020. We now store all UTM-parameters and not just the `utm_source`. UTM-parameters are not privacy invasive as they are being used for groups of visitors and not for individuals.</p>
+</blockquote>
+
 ### Device dimensions
 
 > We **do collect and store** device dimensions
 
-Collecting the dimensions of a user's browser window (`window.innerWidth`) allows us to show you the most popular screen sizes. This is useful for making sure your website works great on all screens: phones, tablets, desktops, etc.
+Collecting the dimensions of a user's browser window (`innerWidth` and `innerHeigth` as viewport) and device dimensions (`screen.width` and `screen.height`) allows us to show you the most popular screen sizes. This is useful for making sure your website works great on all screens: phones, tablets, desktops, etc.
+
+<blockquote class="note">
+  <p>Updated: July 20, 2020. Previously, we didn't store the device dimensions, but we they are useful for certain and accessability design tools, so we added this as a clarification to the paragraph above.</p>
+</blockquote>
 
 ### Do Not Track
 
