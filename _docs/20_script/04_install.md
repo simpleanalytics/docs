@@ -31,7 +31,7 @@ Get our official plugins for these frameworks:
 - [Gatsby](https://www.npmjs.com/package/gatsby-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/gatsby-plugin#readme))</small>
 - [Vue](https://www.npmjs.com/package/simple-analytics-vue) <small>(source on [GitHub](https://github.com/simpleanalytics/vue-plugin#readme))</small>
 - [VuePress](https://www.npmjs.com/package/vuepress-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/vuepress-plugin#readme))</small>
-- [Nuxt](/install-simple-analytics-with-nuxt) <small>(guide only)</small>
+- [Nuxt.js](/install-simple-analytics-with-nuxt) <small>(guide only)</small>
 - [Gridsome](https://gridsome.org/plugins/gridsome-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/gridsome-plugin#readme))</small>
 - [Django](https://pypi.org/project/simpleanalytics/) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
 - [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
