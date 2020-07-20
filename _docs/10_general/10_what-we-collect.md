@@ -83,7 +83,7 @@ Website owners can add a URL parameter to links to their website, like `ref=...`
 Collecting the dimensions of a user's browser window (`innerWidth` and `innerHeigth` as viewport) and device dimensions (`screen.width` and `screen.height`) allows us to show you the most popular screen sizes. This is useful for making sure your website works great on all screens: phones, tablets, desktops, etc.
 
 <blockquote class="note">
-  <p>Updated: July 20, 2020. Previously, we didn't store the device dimensions, but we they are useful for certain and accessability design tools, so we added this as a clarification to the paragraph above.</p>
+  <p>Updated: July 20, 2020. Previously, we didn't store the device dimensions, but we think they are useful for certain accessibility and design tools, so we added this as a clarification to the paragraph above.</p>
 </blockquote>
 
 ### Do Not Track
