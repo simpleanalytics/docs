@@ -34,12 +34,41 @@ We use timestamps to generate the graphs you see on your dashboard, which allows
 
 ### User agents
 
-> We **do collect and store** user agents for a maximum of **90 days**
+> We **do collect and store** user agents anonymized
 
-We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device types, and browsers** in your dashboard. We don't believe this data is useful for any other function, but we keep it in our logs (not database) for a maximum of 90 days. When an incoming request fails for some reason, we store the request body in our logs, which includes a User Agent. After 90 days, these logs are deleted.
+We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device types, and browsers** in your dashboard. We allow customers to download these counts alongside the User Agent string itself. We do anonymize the User Agent string. For example, when it has a very detailed version number we truncate it from `Chrome/78.0.3904.108` into `Chrome/78.0.0.0`.
+
+<details markdown="1">
+  <summary>Technical explanation of anonymize function</summary>
+  
+We drop certain information from the User Agent. Below it the function we use to anonymize the User Agent. Facebook for example sends way more information then just the normal User Agent. We drop all FB related information information from the string. The same goes for `V1_AND_...`.
+
+```js
+const truncate = (number) =>
+  (number + "").slice(0, 5) + (number + "").slice(5).replace(/[0-9]/g, "0");
+
+const anonymizeAgent = (ua) =>
+  ua
+    .replace(/( \[FB(.*))$/g, "")
+    .replace(/( V1_AND_(.*))$/g, "")
+    .replace(/([0-9]{5})([0-9]+)/g, (full, first, second) => {
+      return `${truncate(first)}${second.replace(/[0-9]/g, "0")}`;
+    })
+    .replace(/([0-9]+)\.([0-9]+)(\.[0-9]+){1,9}/g, (full, first, second) => {
+      return `${truncate(first)}.${truncate(second)}${".0".repeat(
+        (full.match(/\./g) || []).length - 1
+      )}`;
+    });
+```
+
+</details>
 
 <blockquote class="note">
   <p>Update: Jan 14, 2019. Previously, we didn't store the User Agents, but now we save failed requests to our logs, so we added this as a clarification to the paragraph above.</p>
+</blockquote>
+
+<blockquote class="note">
+  <p>Update: July 1, 2020. We now store User Agents anonymized. We drop possible identifiers from the User Agents.</p>
 </blockquote>
 
 ### URLs
