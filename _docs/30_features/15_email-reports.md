@@ -20,4 +20,4 @@ It includes the top 5 referrers and we compare them with the previous period. Th
 
 In the example above it shows that we got significantly more traffic from our referral website _(referral.simpleanalytics.com <span style="color: #227522;">+963%</span>)_ than last week. Time for us to find out why. Thanks email report :)
 
-We send this email at 9AM in your local time zone. You can change this time zone per website in your website settings.
+We send this email at 9AM in your local time zone. You can change this time zone per website in your [website settings](https://simpleanalytics.com/select-website/settings#timezone).
