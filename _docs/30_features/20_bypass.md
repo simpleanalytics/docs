@@ -10,6 +10,6 @@ Simple Analytics never collects any personal identifiable information. Ad-blocke
 
 You only need access to your DNS to set this up. Add a CNAME record to your DNS pointing to `external.simpleanalytics.com.` _(including the last dot `.`)_ and fill in your own full domain here. We advise to choose a domain like `api.example.com` instead of `track.example.com` _(tracking, analytics, collect, and similar keywords are usually blocked)_.
 
-You will need to enable the record in your website settings on Simple Analytics. We need to know this to request a certificate with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>. This means your analytics will travel safe via HTTPS to our servers.
+You will need to enable the record in [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers) on Simple Analytics. We need to know this to request a certificate with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>. This means your analytics will travel safe via HTTPS to our servers.
 
 > If you are using <img src="https://cdn.simpleanalytics.com/images/cloudflare-icon.png" style="height: 10px; margin: 0 3px;" alt=""> CloudFlare, make sure to disable the orange cloud.

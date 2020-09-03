@@ -11,7 +11,7 @@ There are a few ways to interact with our API. We have the stats API for basic s
 
 Use this if you want to retrieve aggregated stats from your website. Basically the stats you see in your dashboard (for now we show page views, but referrals and others will be added later).
 
-While some websites are set to public, others are set to private. You can manually adjust this in your website settings. If your website is set to public you can get the JSON data without any credentials.
+While some websites are set to public, others are set to private. You can manually adjust this in [your website settings](https://simpleanalytics.com/select-website/settings). If your website is set to public you can get the JSON data without any credentials.
 
 You can set the JSON format by adding `.json` to the URL of Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json`](https://simpleanalytics.com/simpleanalytics.com.json). Alternatively, you can add _start_ and _end_ dates to the URL as well, for example: [`https://simpleanalytics.com/simpleanalytics.com.json?start=2019-01-01&end=2019-01-31`](https://simpleanalytics.com/simpleanalytics.com.json?start=2019-01-01&end=2019-01-31).
 
