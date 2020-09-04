@@ -14,6 +14,6 @@ When you want to use our SRI version of our script you will need to update your 
 /></noscript>
 ```
 
-When using a [custom domain](/bypass-ad-blockers) you need to use this script: `https://CUSTOM.DOMAIN/v4/app.js`. Replace the `CUSTOM.DOMAIN` with your custom domain. To generate an SRI hash you can use [report-uri.com](https://report-uri.com/home/sri_hash) or [srihash.org](https://www.srihash.org/).
+When using a [custom domain](/bypass-ad-blockers) you need to use this script: `https://CUSTOM.DOMAIN/v4/app.js`. Replace the `CUSTOM.DOMAIN` with your custom domain. To generate an SRI hash for your custom domain you can use [report-uri.com](https://report-uri.com/home/sri_hash) or [srihash.org](https://www.srihash.org/).
 
 To verify if our script is an SRI version you can always check for `SRI-version` in the first line.
