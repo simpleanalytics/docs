@@ -1,6 +1,10 @@
-# Simple Analytics Documentation
+<a href="https://simpleanalytics.com/?ref=github.com/simpleanalytics/scripts">
+  <img src="https://assets.simpleanalytics.com/images/logos/logo-github-readme.png" alt="Simple Analytics logo" align="right" height="62" />
+</a>
 
-Feel free to submit PRs for everything including grammar errors :smile:
+# Documentation
+
+Please submit PRs for everything including grammar errors :smile:
 
 ## Run on your computer
 
