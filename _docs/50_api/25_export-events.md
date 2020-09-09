@@ -23,10 +23,12 @@ The export will look like this:
 
 ```bash
 date,events,referrer
-2020-06-05,visit_homepage,duckduckgo.com
+2020-06-05,visit_homepage.open_signup_modal,duckduckgo.com
 2020-06-05,visit_homepage
-2020-06-05,visit_homepage,twitter.com
+2020-06-05,visit_homepage.open_signup_modal,twitter.com
 ```
+
+> Do note that the events are exported per session. If two events happen in the same session (the same page or the session in a single page application) they are stored in one row. This way you can calculate conversions between events. We separate them with a dot (e.g.: `visit_homepage.open_signup_modal`).
 
 For privacy reasons we hide events when they only happen once per day. To get all events in your export, [ask us](https://simpleanalytics.com/contact) to whitelist your events. We manually make sure personal identifiers in events are excluded.
 
