@@ -15,7 +15,7 @@ Include these two lines at the end of your `<body>`
 
 > To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, and others, go to [Install on other platforms](/install-on-other-platforms).
 
-> Our user facing scripts are [open source on GitHub](https://github.com/simpleanalytics/scripts).
+> Our user facing scripts are [open source on GitHub](https://github.com/simpleanalytics/scripts). We also have [an extra light](/light) version.
 
 We have a website setup wizard to test if you installed your script correctly. If you still have problems installing it, please let us know! We helped a few people with setting up their script and we love to help you as well. Just [contact](https://simpleanalytics.com/contact?ref={{ site.hostname }}) us.
 
