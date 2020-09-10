@@ -23,7 +23,7 @@ Script | Compressed size (Gzip) | Compressed size (Brotli) | Uncompressed size
 light.js | 1.6 KB | 1.7 KB | 2.7 KB
 latest.js | 2.9 KB | 2.9 KB | 5.3 KB 
 
-Source: https://www.giftofspeed.com/gzip-test/ (for Brotli)
+Source: [giftofspeed.com](https://www.giftofspeed.com/gzip-test/) (for Brotli)
 
 ## Features
 
