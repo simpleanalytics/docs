@@ -28,6 +28,8 @@ It's as easy as including the script below and making sure the `downloads` in co
 
 ## Script
 
+> This script is additional to the normal embed script. Make sure to also include [that script](/script).
+
 If you are a developer or you know your way around HTML it's easy to embed this script on your website. If you need help with that, we are happy to help. Just [contact us](https://simpleanalytics.com/contact).
 
 <!-- prettier-ignore -->
