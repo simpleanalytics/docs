@@ -24,3 +24,26 @@ light.js | 1.6 KB | 1.7 KB | 2.7 KB
 latest.js | 2.9 KB | 2.9 KB | 5.3 KB 
 
 Source: https://www.giftofspeed.com/gzip-test/ (for Brotli)
+
+## Features
+
+Obviously not all features are available in our light script. Here an comparison of both versions:
+
+Feature                                             | `latest.js` | `light.js` 
+:---------------------------------------------------|:-----------:|:----------:
+Page views                                          |      x      |      x     
+Referrer                                            |      x      |      x     
+UTM codes                                           |      x      |      x     
+[Uniques](/uniques)                                 |      x      | (will be added)
+Time on page                                        |      x      |  
+[Events](/events)                                   |      x      |     
+[Hash navigation](/hash-mode)                       |      x      |     
+Scroll depth                                        |      x      |     
+[SPA](/trigger-custom-page-views)                   |      x      |     
+Screen sizes                                        |      x      |     
+[Ignore pages](/ignore-pages)                       |      x      |    
+[Overwrite domain name](/overwrite-domain-name)     |      x      |     
+Bot detection                                       |      x      |     
+Error reporting                                     |      x      |     
+Show warnings                                       |      x      |     
+[Ignore DNT](/dnt)                                  |      x      |     
