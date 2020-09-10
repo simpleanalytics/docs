@@ -190,26 +190,25 @@
   <script>
     (function(window) {
       if (IS_ROBOT) return console.warn('Not running chat bot because you look like a bot.')
-      var autoRepsponse = 'Looking for Adriaan or Şamil.'
-      var outOfOfficeText = 'One moment please.'
-      try {
-        var adriaanTime = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Bangkok', hour: 'numeric' }).format(new Date())
-        var samilTime = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Paris', hour: 'numeric' }).format(new Date())
-        autoRepsponse = 'Looking for Adriaan (' + adriaanTime + ') or Şamil (' + samilTime + '). If you are in a hurry or need to leave please leave your email so they will get back to you asap.'
-      } catch (e) { }
-      window.intergramId = '-1001381664193'
-      window.intergramServer = 'https://chat.simpleanalytics.io'
-      window.intergramCustomizations = {
-        alwaysUseFloatingButton: true,
-        autoResponse: autoRepsponse
-      }
-    })(window)
+        var autoRepsponse = 'Looking for Adriaan.'
+        var outOfOfficeText = 'One moment please.'
+        try {
+          var adriaanTime = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Amsterdam', hour: 'numeric' }).format(new Date())
+          autoRepsponse = 'Looking for Adriaan (' + adriaanTime + '). If you are in a hurry or need to leave please leave your email so they will get back to you asap.'
+        } catch (e) { }
+        window.intergramId = '-1001381664193'
+        window.intergramServer = 'https://chat.simpleanalytics.com'
+        window.intergramCustomizations = {
+          alwaysUseFloatingButton: true,
+          autoResponse: autoRepsponse
+        }
+    })(window);
   </script>
 
-  <script src="https://chat.simpleanalytics.io/js/widget.js"></script>
+  <script src="https://chat.simpleanalytics.com/js/widget.js"></script>
   <script src="/js/pjax.min.js"></script>
   <script>
-    // Hamber does not get replace by pjaz, so we keep this outside the pageSugar function
+    // Hamburger does not get replace by pjaz, so we keep this outside the pageSugar function
     document.querySelector('.hamburger').addEventListener('click', function(event) {
       event.target.closest('nav').classList.toggle('is-active')
     }, false)
