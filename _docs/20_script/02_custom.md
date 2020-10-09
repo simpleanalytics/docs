@@ -57,7 +57,8 @@ There might be situation where you don't want to auto collect page views. When y
 
 <script>
   if (window) window.addEventListener('DOMContentLoaded', function(event) {
-    if (window.sa_pageview) window.sa_pageview(window.location.pathname)
+    // Always check for the function before using it. The script might be blocked or not loaded for other reasons.
+    if (window.sa_pageview) window.sa_pageview(window.location.pathname);
   });
 </script>
 ```
