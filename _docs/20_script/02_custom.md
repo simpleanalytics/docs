@@ -46,4 +46,20 @@ You can read our source code [on GitHub](https://github.com/simpleanalytics/scri
 </div>
 </details>
 
+## Use custom collection anyway
+
+There might be situation where you don't want to auto collect page views. When you add the `data-auto-collect="false"` attribute you can expose a function called `sa_pageview`. When you call this fuction the script will send a page with the path you give as a parameter. If you don't give a path it will use `window.location.pathname` as a default.
+
+```html
+<script async defer data-auto-collect="false" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
+/></noscript>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    if (window.sa_pageview) window.sa_pageview(window.location.pathname)
+  });
+</script>
+```
+
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
