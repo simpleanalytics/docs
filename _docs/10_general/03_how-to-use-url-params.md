@@ -9,7 +9,7 @@ There are a few ways we determine where a visitor comes from. We automatically d
 
 ## Using a URL parameter
 
-If the current URL on your site includes a parameter named `ref`, `source`, or `utm_source`, we use this value instead of the browser's previous page.
+If the current URL on your site includes a parameter named `ref` or `utm_source`, we use this value instead of the browser's previous page.
 
 For example, if you were to include this link in an email newsletter, Simple Analytics records the referrer as `email` in your dashboard, no matter where user actually comes from:
 
