@@ -7,6 +7,8 @@ permalink: /install-simple-analytics-on-ghost
 
 You can embed our script in Ghost using their feature called "Code Injection". On this page we will explain how to use this feature and help you installing the Simple Analytics script on Ghost.
 
+> Ghost uses caching for its websites. Sometimes it can take a few minutes before the script is actually added.
+
 Follow these steps to add Simple Analytics to your website:
 
 1. Go to your Ghost Admin settings
