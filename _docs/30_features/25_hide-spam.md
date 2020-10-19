@@ -11,6 +11,8 @@ Simple Analytics has a feature where you can hide referral spam. Not by setting 
 
 Hiding spam in your dashboard works by creating a filter. We have some logic in place where you can see how many page views are found with a certain referral so you know how many page views you are hiding. Do note that this filter will also be used in all other Simple Analytics features. You don't see the filtered referrals anywhere anymore. This is also the case for future page views.
 
+> You can hide page views based on UTM codes as well. Go to [the cleaning feature](https://simpleanalytics.com/select-website/clean) to try it out.
+
 Let's say you have referral SPAM from _"buy-my-product-now"_ as shown in this dashboard:
 
 <img class="border" src="/images/spam-overview.jpg" alt="Overview of a SPAM referral">
