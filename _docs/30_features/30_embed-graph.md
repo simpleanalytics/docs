@@ -5,7 +5,9 @@ skip_pjax: true
 permalink: /embed-graph-on-your-site
 ---
 
-Simple Analytics has a script which you can use to embed public website statistics. It's in beta, so **use at your own risk**.
+Simple Analytics has a script which you can use to embed public website statistics.
+
+> Do you want to access your stats with even more freedom? Use our [API](/api) for that!
 
 ```html
 <p>
@@ -86,4 +88,4 @@ Sometimes the graph does not stretch to the full page width. This can be caused 
 </style>
 ```
 
-If you have other issues, <a href="https://simpleanalytics.com/contact?ref=docs.simpleanalytics.com">please let us know</a> because we love to help you!
+If you have other issues, <a href="https://simpleanalytics.com/contact?ref=docs.simpleanalytics.com">please let us know</a> because we love to help you! Do you want to access your stats with even more freedom? Use our [API](/api) for that.
