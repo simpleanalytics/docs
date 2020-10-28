@@ -11,7 +11,7 @@ For this API features you'll need to authenticate. You can do this with an `Api-
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
 ```bash
-curl "https://simpleanalytics.com/api/export/visits?hostname=example.com&start=2020-09-01&end=2020-09-02&timezone=Europe/Amsterdam" \
+curl "https://simpleanalytics.com/api/export/visits?version=1&hostname=example.com&start=2020-09-01&end=2020-09-02&timezone=Europe/Amsterdam" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'
