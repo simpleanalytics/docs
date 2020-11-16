@@ -6,7 +6,11 @@ permalink: /block-your-visits-on-all-websites
 
 If you want to block all your visits on all the websites that have Simple Analytics installed. Our own extension does not allow this we don't want access to all your websites that you browse. But if you want to block your visits on all, there is a way.
 
-> To block requests across all website you need to give an extension full access to all your websites. Only install such an extension if you trust it. We prefer people using our own extension (we only ask permission for websites you enable it for). Previously we listed another Site Blocker as an blocker before, but it seems to install ad ware. Please remove it from your browser.
+> To block requests across all website you need to give an extension full access to all your websites. Only install such an extension if you trust it. We prefer people using our own extension (we only ask permission for websites you enable it for).
+
+<blockquote class="red">
+  <p>Previously we listed another Site Blocker as an blocker before, but it seems to install ad ware. Please remove it from your browser.</p>
+</blockquote>
 
 1. [Download Site blocker](https://chrome.google.com/webstore/detail/site-blocker/emahmjfdojfhghkmhciaehdkobcohfbj/related) on the Chrome web store.
 1. Give the extsion access to all your websites*
