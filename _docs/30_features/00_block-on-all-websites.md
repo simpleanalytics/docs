@@ -13,7 +13,7 @@ If you want to block all your visits on all the websites that have Simple Analyt
 </blockquote>
 
 1. [Download Site blocker](https://chrome.google.com/webstore/detail/site-blocker/emahmjfdojfhghkmhciaehdkobcohfbj/related) on the Chrome web store.
-1. Give the extsion access to all your websites*
+1. Give the extension access to all your websites*
 
     <img class="border" style="width: 100%;" src="/images/new-site-blocker-01-install-extension.png" alt="">
 
