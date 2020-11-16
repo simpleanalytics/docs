@@ -1,6 +1,7 @@
 ---
 title: Block your visits on all websites
 category: features
+hidden: true
 permalink: /block-your-visits-on-all-websites
 ---
 
