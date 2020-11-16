@@ -5,9 +5,7 @@ category: events
 permalink: /events
 ---
 
-<blockquote class="red">
-  <p>The event feature is highly experimental, expect issues and please report them! To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b>. In the previous version we used cookies, this is now removed. We want to stay a cookie-less solution to be GDPR, CCPA, and PECR complient out-of-the-box.</p>
-</blockquote>
+> The event feature is not as fast as you would expect from other Simple Analytics features. To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b>.
 
 ## Install embed script
 
