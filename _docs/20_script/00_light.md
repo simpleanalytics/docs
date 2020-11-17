@@ -12,8 +12,7 @@ Just replace `latest.js` with `light.js` in your embed script. It will look simi
 <!-- prettier-ignore -->
 ```html
 <script async defer src="https://scripts.simpleanalyticscdn.com/light.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
-/></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 We support both Brotli and Gzip compression depending on the browser capabilities. To get an idea of our file sizes:
