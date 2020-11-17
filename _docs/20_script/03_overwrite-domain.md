@@ -11,7 +11,7 @@ Make sure to include the our <code>simpleanalytics<strong>cdn</strong>.com</code
 <!-- prettier-ignore -->
 ```html
 <script async defer data-hostname="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt=""></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 You see that we added an attribute (`data-hostname=""`) to the script tag. If you add your domain to it (eg `example.com`) it will look like this:
@@ -19,7 +19,7 @@ You see that we added an attribute (`data-hostname=""`) to the script tag. If yo
 <!-- prettier-ignore -->
 ```html
 <script async defer data-hostname="example.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt=""></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 ## Add used domain to your dashboard
