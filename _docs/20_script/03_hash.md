@@ -12,7 +12,7 @@ To allow the script to detect those hash changes you can add `data-mode="hash"` 
 <!-- prettier-ignore -->
 ```html
 <script data-mode="hash" async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 This way the Simple Analytics script knows it should detect hash changes and records them as page views. We still drop everything after the question mark, but we keep the hash.
