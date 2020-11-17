@@ -15,7 +15,7 @@ To also record DNT visitors you can add `data-skip-dnt="true"` to the script tag
 <!-- prettier-ignore -->
 ```html
 <script data-skip-dnt="true" async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript ><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt=""/></noscript>
+<noscript ><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 If you don't add the `data-skip-dnt` attribute we will not record visits from users where DNT is enabled.
