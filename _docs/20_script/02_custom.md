@@ -52,8 +52,7 @@ There might be situation where you don't want to auto collect page views. When y
 
 ```html
 <script async defer data-auto-collect="false" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
-/></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 
 <script>
   if (window) window.addEventListener('DOMContentLoaded', function(event) {
@@ -64,4 +63,4 @@ There might be situation where you don't want to auto collect page views. When y
 </script>
 ```
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
