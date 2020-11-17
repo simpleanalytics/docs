@@ -56,11 +56,11 @@ Remember to include the `noscript` image tag in your HTML for JS disabled browse
 Include this line at the end of your `<body>`
 
 ```
-<noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt=""></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 ## View the source
 
 You can view the source code of this plugin on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics)
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
