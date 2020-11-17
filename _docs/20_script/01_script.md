@@ -9,8 +9,7 @@ Include these two lines at the end of your `<body>`
 <!-- prettier-ignore -->
 ```html
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt=""
-/></noscript>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 > To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, and others, go to [Install on other platforms](/install-on-other-platforms).
