@@ -8,8 +8,8 @@ If you want to export raw visits without aggregations you can do so via our CSV 
 
 ## Fields
 
-| Field               | Type    | Description                                   |
-|---------------------|:-------:|--------------------------------------|
+| Field               | Type    | Description |
+|---------------------|---------|--------------------------------------|
 | added_unix          | number  | The time of the page view in unix time format |
 | added_iso           | date    | The time of the page view in ISO8601 format   |
 | hostname            | string  | The hostname of the website |
@@ -57,6 +57,8 @@ Data like `scrolled_percentage` and `duration_seconds` is not always added becau
 
 For this API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...` and with a `User-Id` header starting with `sa_user_id_...`. You can create them in [your account settings](https://simpleanalytics.com/account).
 
+You can specify all fields you like to export. Add them as a comma seperated list (e.g.: `&fields=added_iso,hostname,path`).
+
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
 ```bash
@@ -65,8 +67,6 @@ curl "https://simpleanalytics.com/api/export/visits?version=2&fields=added_iso,h
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'
 ```
-
-You can specify all fields you like to export. Add them as a comma seperated list (e.g.: `&fields=added_iso,hostname,path`).
 
 <details markdown="1">
      <summary>Deprecated API</summary>
@@ -94,3 +94,16 @@ We are not planning to remove this functionality but please don't use it for new
 </details>
 
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+
+<style>
+     /* Apply styling to first table */
+     .content div.table-wrapper:nth-of-type(1) td:nth-of-type(1),
+     .content div.table-wrapper:nth-of-type(1) td:nth-of-type(2) {
+         white-space: nowrap;
+     }
+
+     /* Apply styling to second table */
+     .content div.table-wrapper:nth-of-type(2) td:nth-of-type(1) {
+         white-space: nowrap;
+     }
+</style>
