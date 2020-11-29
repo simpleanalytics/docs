@@ -13,8 +13,11 @@ If you want to export raw visits without aggregations you can do so via our CSV 
 | added_unix          | number  | The time of the page view in unix time format |
 | added_iso           | date    | The time of the page view in ISO8601 format   |
 | hostname            | string  | The hostname of the website |
-| source              | string  | What is the source of this page view, mostly `js` from our JavaScript |
-| is_unique           | string  | Is this page view unique |
+| hostname_original   | string  | When the hostname is overwritten, we store the original hostname |
+| path                | string  | The path of the page view |
+| is_unique           | boolean  | Is this page view unique |
+| is_robot            | boolean | Is page view visits by a robot or crawler |
+| document_referrer   | string  | The [JavaScript `document.referrer`](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer) of the page |
 | utm_source          | string  | UTM source |
 | utm_medium          | string  | UTM medium |
 | utm_campaign        | string  | UTM campaign |
@@ -26,24 +29,23 @@ If you want to export raw visits without aggregations you can do so via our CSV 
 | viewport_height     | number  | Viewport height in pixels |
 | screen_width        | number  | Screen width in pixels |
 | screen_height       | number  | Screen height in pixels |
-| uuid                | string  | A UUID v4 of the page view |
-| hostname_original   | string  | When the hostname is overwritten, we store the original hostname |
-| is_robot            | boolean | Is page view visits by a robot or crawler |
+| user_agent          | string  | The [`navigator.userAgent`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) of a browser (in case of a fake one we don't store it. |
+| device_type         | string  | Either desktop, mobile, tablet, or tv. |
 | country_code        | string  | 2 letter country code |
 | browser_name        | string  | Browser name |
 | browser_version     | string  | Browser version (do note this is a string) |
 | os_name             | string  | OS name |
 | os_version          | string  | OS version (do note this is a string) |
-| user_agent          | string  | The [`navigator.userAgent`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) of a browser (in case of a fake one we don't store it. |
-| device_type         | string  | Either desktop, mobile, tablet, or tv. |
 | lang_region         | string  | The region part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language) |
 | lang_language       | string  | The language part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language) |
-| path                | string  | The path of the page view |
-| document_referrer   | string  | The [JavaScript `document.referrer`](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer) of the page |
+| uuid                | string  | A UUID v4 of the page view (this is not always unique) |
 
 Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the visitor.
 
-### Deprecated fields
+<details markdown="1">
+<summary>Deprecated fields</summary>
+
+These fields are deprecated but we keep them for backward compatibility. It's recommended to not use it for new projects.
 
 | Field               | Description                                      |
 |---------------------|--------------------------------------------------|
@@ -52,6 +54,9 @@ Data like `scrolled_percentage` and `duration_seconds` is not always added becau
 | referrer_raw        | We replaced this with document_referrer          |
 | device_width_pixels | We replaced this with viewport_width             |
 | device_width        | We replaced this with viewport_width             |
+| source              | What is the source of this page view, mostly `js` from our JavaScript |
+
+</details>
 
 ## API
 
@@ -89,7 +94,7 @@ added_unix,added_iso,url,referrer_raw,referrer,hostname,source,is_unique,utm_sou
 1598968423,2020-09-01T13:53:43.000Z,https://blog.simpleanalytics.com/,simpleanalytics.com,simpleanalytics.com,blog.simpleanalytics.com,js,true,simpleanalytics.com,,,,,,,1366,1366,1366,616,1366,768,1b69a6fb-dbbf-4871-a4f6-6b81edf753cb
 ```
 
-We are not planning to remove this functionality but please don't use it for new projects.
+This functionality is deprecated but we keep it for backward compatibility. It's recommended to not use it for new projects.
      
 </details>
 
