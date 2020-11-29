@@ -6,7 +6,7 @@ permalink: /api/csv-export-visits
 
 Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. This API is a good example of that. Most analytics companies do not give you access to their raw data. We believe it should be easy for our customers to get their raw data our of our database. What you do with that data is totally up to you.
 
-To export raw visits without aggregations you can do this via this API. Define a date range and it pull out the data via streaming. For us it does not matter how much data you export. We stream the data directly out of our database to your server or computer. No heavy load required. To make the export size smaller you can select the fields you want. The response will only include the fields you selected in the order you provided.
+With this API you can export raw visits (without sampling). Define a date range and it pull out the data via streaming. For us it does not matter how much data you export. We stream the data directly out of our database to your server or computer. No heavy load required. To make the export size smaller you can select the fields you want. The response will only include the fields you selected in the order you provided.
 
 <details markdown="1">
 <summary>Available fields in export</summary>
