@@ -4,7 +4,12 @@ category: api
 permalink: /api/csv-export-visits
 ---
 
-If you want to export raw visits without aggregations you can do so via our CSV export. You can define a date range and it pull out the data via streaming. We have a list of fields that we collect for page views.
+Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. This API is a good example of that. Most analytics companies do not give you access to their raw data. We believe it should be easy for our customers to get their raw data our of our database. What you do with that data is totally up to you.
+
+To export raw visits without aggregations you can do this via this API. Define a date range and it pull out the data via streaming. For us it does not matter how much data you export. We stream the data directly out of our database to your server or computer. No heavy load required. To make the export size smaller you can select the fields you want. The response will only include the fields you selected in the order you provided.
+
+<details markdown="1">
+<summary>Available fields in export</summary>
 
 ## Fields
 
@@ -41,6 +46,8 @@ If you want to export raw visits without aggregations you can do so via our CSV 
 | uuid                | string  | A UUID v4 of the page view (this is not always unique) |
 
 Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the visitor.
+
+</details>
 
 <details markdown="1">
 <summary>Deprecated fields</summary>
