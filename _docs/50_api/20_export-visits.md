@@ -11,8 +11,6 @@ To export raw visits without aggregations you can do this via this API. Define a
 <details markdown="1">
 <summary>Available fields in export</summary>
 
-## Fields
-
 | Field               | Type    | Description |
 |---------------------|---------|--------------------------------------|
 | added_unix          | number  | The time of the page view in unix time format |
