@@ -116,4 +116,9 @@ If you have any problems, drop us a line via [our contact page](https://simplean
      .content div.table-wrapper:nth-of-type(2) td:nth-of-type(1) {
          white-space: nowrap;
      }
+     
+     .content table td,
+     .content table th {
+          font-size: 14px;
+     }
 </style>
