@@ -21,11 +21,11 @@ With this API you can export raw visits (without sampling). Define a date range 
 | is_unique           | boolean  | Is this page view unique |
 | is_robot            | boolean | Is page view visits by a robot or crawler |
 | document_referrer   | string  | The [JavaScript `document.referrer`](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer) of the page |
-| utm_source          | string  | UTM source |
-| utm_medium          | string  | UTM medium |
-| utm_campaign        | string  | UTM campaign |
-| utm_content         | string  | UTM content |
-| utm_term            | string  | UTM term |
+| utm_source          | string  | UTM source (specify via `ref=` or `utm_source` in your URL) |
+| utm_medium          | string  | UTM medium (specify via `utm_medium` in your URL) |
+| utm_campaign        | string  | UTM campaign (specify via `utm_campaign` in your URL)  |
+| utm_content         | string  | UTM content (specify via `utm_content` in your URL)  |
+| utm_term            | string  | UTM term (specify via `utm_term` in your URL)  |
 | scrolled_percentage | number  | How far did a visitor scroll on the page (in steps of 5%) |
 | duration_seconds    | number  | How many seconds did a visitor stay on this page (we stop the counter when a page is hidden) |
 | viewport_width      | number  | Viewport width in pixels|
