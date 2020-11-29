@@ -69,7 +69,7 @@ curl "https://simpleanalytics.com/api/export/visits?version=2&fields=added_iso,h
 ```
 
 <details markdown="1">
-     <summary>Deprecated API</summary>
+<summary>Deprecated API</summary>
      
 If you don't specify any `fields` we return all the basic fields.
 
