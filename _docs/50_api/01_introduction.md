@@ -5,21 +5,15 @@ category: api
 permalink: /api
 ---
 
-There are a few ways to interact with our API. We have the stats API for basic stats and the business API for changing users, websites and other settings.
+There are a few ways to interact with our API. We have the statistics JSON API for aggregated data, CSV export API for raw level data, and the business API for changing users, websites and other settings.
 
-## Stats API
+## Statistics JSON API
 
-Use this if you want to retrieve aggregated stats from your website. Basically the stats you see in your dashboard (for now we show page views, but referrals and others will be added later).
+To get aggregated data (similar to what you see in our dashboard) you should use our [JSON API](/api/json-api).
 
-While some websites are set to public, others are set to private. You can manually adjust this in [your website settings](https://simpleanalytics.com/select-website/settings). If your website is set to public you can get the JSON data without any credentials.
+## CSV exports API
 
-You can set the JSON format by adding `.json` to the URL of Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json?version=2`](https://simpleanalytics.com/simpleanalytics.com.json?version=2). Alternatively, you can add _start_ and _end_ dates to the URL as well, for example: [`https://simpleanalytics.com/simpleanalytics.com.json?version=2&start=2019-01-01&end=2019-01-31`](https://simpleanalytics.com/simpleanalytics.com.json?version=2&start=2019-01-01&end=2019-01-31).
-
-If you have your website set to private you can still export this data. You need to authenticate yourself. [See here how to authenticate](/api/authenticate).
-
-### Get data for specific pages
-
-With the stats API you can also retrieve data for a specific page of your website. By adding the path to the URL Simple Analytics returns the data for that path. For example if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version=2`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version=2))
+To export raw data you should use our [CSV exports API](/api/csv-export-visits).
 
 ## Business API
 
