@@ -1,7 +1,9 @@
 ---
-title: CSV export events
+title: Export events API
 category: api
-permalink: /api/csv-export-events
+permalink: /api/export-events
+redirect_from:
+  - /api/csv-export-events
 ---
 
 If you want to export raw events you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
@@ -32,4 +34,4 @@ date,events,referrer
 
 For privacy reasons we hide events when they only happen once per day. To get all events in your export, [ask us](https://simpleanalytics.com/contact) to whitelist your events. We manually make sure personal identifiers in events are excluded.
 
-If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact).

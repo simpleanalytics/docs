@@ -1,14 +1,15 @@
 ---
-title: JSON API
-menu: JSON API
+title: Stats API
 category: api
-permalink: /api/json-api
+permalink: /api/stats
+redirect_from:
+  - /api/json-api
 version: 4
 ---
 
 To get aggregated statistics out of our API we created a JSON API. Basically it's the data your see in our dashboard. This API is useful for when you want to integrate Simple Analytics into your own systems. For example when embedding your data into a customized dashboard within your own website.
 
-> The data you get through this API is aggregated. If you are looking for raw data you can use our [CSV export API](/api/csv-export-visits).
+> The data you get through this API is aggregated. If you are looking for raw data you can use our [Export page views API](/api/export-page-views).
 
 For this API you need to be [autenticated with an API key](/api/authenticate). If your website is set to public you can get the JSON data without any credentials.
 
@@ -43,5 +44,10 @@ We have a list of query parameters that you can use with this API:
 
 ## Get data for specific pages
 
-With the stats API you can also retrieve data for a specific page of your website. By adding the path to the URL Simple Analytics returns the data for that path. For example if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram)). You can also specify this via the `pages` parameter: [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact)).
+With the Stats API you can also retrieve data for a specific page of your website. You can specify this via the `pages` parameter: [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact)).
 
+You can also add the path to the URL and Simple Analytics returns the data for only that path. For example if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram)).
+
+## CORS and JSONP
+
+By default we allow requests from any website. Some customers want to use JSONP for their requests. Learn more about how to use [JSONP with Simple Analytics](/api/cors-jsonp).

@@ -19,13 +19,13 @@ https://example.com/path?ref=email
 
 ### Forbidden characters
 
-Certain character are not allowed in the URL parameter. Letters and numbers are always okay, but if you want to use special characters (like spaces, `;`, `/`, `?`, `:`, `@`, `&`, `=`, `+`, `$`, or `,`) you need to escape your URL parameter. A good website that does this for you is [urlencoder.io](https://www.urlencoder.io/?ref={{ site.hostname }}).
+Certain character are not allowed in the URL parameter. Letters and numbers are always okay, but if you want to use special characters (like spaces, `;`, `/`, `?`, `:`, `@`, `&`, `=`, `+`, `$`, or `,`) you need to escape your URL parameter. A good website that does this for you is [urlencoder.io](https://www.urlencoder.io/).
 
 Valid examples of URL parameters:
 
 ```
 https://example.com/?ref=email-button
-https://example.com/?ref={{ site.hostname }}
+https://example.com/
 https://example.com/?ref=android%3A%2F%2Fcom.example.app%2Fpath
 https://example.com/?ref=exister%2C%20avoir%20une%20r%C3%A9alit%C3%A9
 ```

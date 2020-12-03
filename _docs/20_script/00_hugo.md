@@ -19,4 +19,4 @@ Follow these steps to add Simple Analytics to your website:
 
 > If you have a footer block in your base template you can also choose to paste the embed script there.
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

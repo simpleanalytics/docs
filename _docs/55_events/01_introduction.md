@@ -27,7 +27,7 @@ Or if you use our [custom domain feature](/bypass-ad-blockers):
 <noscript><img src="https://[YOUR SUBDOMAIN LINKING TO US]/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
-> **Developers:** place the first script (`window.sa_event=w...`) in the `<head>` or top part of your `<body>` in your HTML. The second script (`latest.js`) can be placed in the  `<head>` or `<body>`. The `<noscript>` should be placed in the `<body>`.
+> **Developers:** place the first script (`window.sa_event=w...`) in the `<head>` or top part of your `<body>` in your HTML. The second script (`latest.js`) can be placed in the `<head>` or `<body>`. The `<noscript>` should be placed in the `<body>`.
 
 This little snippet creates a simple function called `sa_event`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
 
@@ -56,15 +56,15 @@ We don't store anything on the computer of your visits so naturally events will 
 
 ## Export events
 
-To export events you can use our API. [Learn more](/api/csv-export-events).
+To export events you can use [our API](/api/export-events).
 
 ## Event callbacks
 
 In some cases you want to send an event before the visitor navigates away. For example to [capture outbound links](/capture-outbound-links). You can add a callback function as the second parameter of the `sa_event`-function:
 
 ```js
-sa_event('outbound_link_to_affiliate', function() {
-  window.location.href = 'https://example.com/?affiliate=...';
+sa_event("outbound_link_to_affiliate", function () {
+  window.location.href = "https://example.com/?affiliate=...";
 });
 ```
 
@@ -74,9 +74,9 @@ It's always smart to check if `sa_event` is available before using it:
 
 ```js
 function callback() {
-  window.location.href = 'https://example.com/?affiliate=...';
+  window.location.href = "https://example.com/?affiliate=...";
 }
-if (sa_event) sa_event('outbound_link_to_affiliate', callback);
+if (sa_event) sa_event("outbound_link_to_affiliate", callback);
 else callback();
 ```
 

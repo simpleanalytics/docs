@@ -23,4 +23,4 @@ Follow these steps to add Simple Analytics to your website:
 
    ![](/images/mailerlite-save.jpg)
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

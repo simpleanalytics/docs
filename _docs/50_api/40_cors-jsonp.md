@@ -1,6 +1,7 @@
 ---
 title: CORS and JSONP
 category: api
+hidden: true
 permalink: /api/cors-jsonp
 ---
 

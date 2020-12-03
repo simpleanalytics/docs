@@ -26,14 +26,12 @@ Then on your `nuxt.config.js`, make sure to include the plugin with `ssr: false`
 ```js
 // nuxt.config.js
 export default {
-  plugins: [
-    { src: '~/plugins/simple-analytics.js', ssr: false }
-  ],
-}
+  plugins: [{ src: "~/plugins/simple-analytics.js", ssr: false }],
+};
 ```
 
 > If you need any additional configuration options (as the ones mentioned above), you just need to apply to your plugin.
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
 
 Special thanks to [Joaquim Ley](https://github.com/simpleanalytics/vue-plugin/pull/8) for writing this guide.

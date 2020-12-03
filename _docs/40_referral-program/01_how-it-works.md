@@ -5,14 +5,14 @@ category: referral program
 permalink: /referral-program/how-it-works
 ---
 
-On [your referrals page](https://simpleanalytics.com/account/referrals?ref={{ site.hostname }}) you can create a personal referral link which you can share with others.
+On [your referrals page](https://simpleanalytics.com/account/referrals) you can create a personal referral link which you can share with others.
 
 When people signup via your link:
 
 - They get one month for free (one month extra free trial)
 - You get paid **in cash** the value of one month of their chosen plan
 
-> Go to [your referrals page](https://simpleanalytics.com/account/referrals?ref={{ site.hostname }}) to create your personal referral link
+> Go to [your referrals page](https://simpleanalytics.com/account/referrals) to create your personal referral link
 
 <img class="undraw-svg" src="/images/undraw-hang-out.svg" alt="">
 
@@ -31,7 +31,7 @@ Some examples:
 | Starter plan (for \$19 a month)  | Cancel their plan within one month + 7 days | **You get nothing**           |
 | Starter plan (for \$19 a month)  | Fail to pay us                              | **You get nothing**           |
 
-> Go to [your referrals page](https://simpleanalytics.com/account/referrals?ref={{ site.hostname }}) to create your personal referral link
+> Go to [your referrals page](https://simpleanalytics.com/account/referrals) to create your personal referral link
 
 ## How it works for new customers
 

@@ -5,55 +5,68 @@ category: api
 permalink: /api
 ---
 
-There are a few ways to interact with our API. We have the statistics JSON API for aggregated data, CSV export API for raw level data, and the business API for changing users, websites and other settings.
+Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. Our APIs are a good example of that. Most analytics companies do not give you access to their raw data. We believe it should be easy for our customers to get their raw data our of our database. You should decide what you want to do with your data.
 
-## Statistics JSON API
+There are a few ways to interact with our API. We have the Stats API for aggregated data, Export API for raw level data, and the Business API for changing users, websites and other settings.
 
-To get aggregated data (similar to what you see in our dashboard) you should use our [JSON API](/api/json-api).
+<div class="apis">
+     <a class="api" href="/api/stats">
+          <h2>Stats API</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00c5e5" d="M23 10.826v2.349c-1.562 0-3 1.312-3 2.857 0 2.181 1.281 5.968-6 5.968v-2.002c4.917 0 3.966-1.6 3.966-3.967 0-2.094 1.211-3.5 2.278-4.031-1.067-.531-2.278-1.438-2.278-3.312 0-2.372.94-4.692-3.966-4.686v-2.002c7.285 0 6 4.506 6 6.688 0 1.544 1.438 2.138 3 2.138zm-19-2.138c0-2.182-1.285-6.688 6-6.688v2.002c-4.906-.007-3.966 2.313-3.966 4.686 0 1.875-1.211 2.781-2.278 3.312 1.067.531 2.278 1.938 2.278 4.031 0 2.367-.951 3.967 3.966 3.967v2.002c-7.281 0-6-3.787-6-5.969 0-1.545-1.438-2.857-3-2.857v-2.349c1.562.001 3-.593 3-2.137z"/></svg>
+          <p class="text">Aggregated data</p>
+          <p>View docs</p>
+     </a>
+     <a class="api" href="/api/export-visits">
+          <h2>Export API</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00c5e5" d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"/></svg>
+          <p class="text">Raw page view data</p>
+          <p>View docs</p>
+     </a>
+     <a class="api" href="/api/admin">
+          <h2>Admin API</h2>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#00c5e5" d="M13.895 10.623l1.37-2.054c.35-.525 1.06-.667 1.585-.317.524.35.667 1.06.316 1.585l-1.369 2.054c-.35.525-1.06.667-1.585.317s-.667-1.06-.317-1.585zm-1.881-.684c.525.351 1.236.208 1.587-.317l1.383-2.074c.352-.526.209-1.237-.317-1.588-.525-.351-1.236-.208-1.587.318l-1.383 2.074c-.352.526-.21 1.237.317 1.587zm7.007 3.949l-1.212 1.817c-.322.483-.191 1.136.292 1.458s1.136.191 1.458-.292l1.211-1.817c.323-.483.192-1.136-.291-1.458-.483-.322-1.136-.192-1.458.292zm-3.071-.84c-.35.523-.208 1.231.315 1.58.524.349 1.231.208 1.58-.316l1.312-1.968c.35-.524.208-1.231-.316-1.58-.523-.349-1.23-.208-1.579.316l-1.312 1.968zm5.665 10.952c-.609 0-1.22-.232-1.686-.698l-7.022-7.144c1.088-1.203.56-3.279-1.182-3.588l-3.074-.546-1.058-1.058c-.601-.6-1.427-.916-2.273-.871-1.382.074-2.787-.417-3.842-1.472-.986-.987-1.478-2.279-1.478-3.572 0-.56.092-1.12.277-1.655l3.214 3.214c1.253.074 3.192-1.865 3.118-3.119l-3.213-3.214c.535-.185 1.094-.277 1.654-.277 1.293 0 2.586.493 3.572 1.479 1.055 1.055 1.545 2.46 1.472 3.842-.045.846.271 1.674.871 2.273l.027.027c-1.243 2.083.433 3.51 1.806 3.457-.247 1.181 1.017 2.411 2.102 2.411-.269 1.04.536 2.125 1.789 2.371-.505 1.822 2.258 3.767 3.857 1.315l2.756 2.755c.466.466.698 1.076.698 1.686 0 1.316-1.066 2.384-2.385 2.384zm.885-2.5c0-.552-.448-1-1.001-1-.552 0-1 .448-1 1s.448 1 1 1c.553 0 1.001-.448 1.001-1zm-9.631-3.939c-.667-.688-1.701-.739-3.584-.864-.286-.019-.462.165-.485.443l-.458 4.208s2.794 1.888 3.94 2.652c1.064-1.921 2.699-2.037 3.921-3.002l-3.334-3.437zm-1.622-1.692c1.457 0 1.678-2.064.303-2.308-5.171-.919-4.899-.889-5.069-.889-.635 0-1.186.453-1.309 1.078l-.446 3.946c-.061.631.145 1.176.633 1.532.487.354 2.026 1.449 2.026 1.449s.328-2.835.42-3.651c.093-.815.551-1.378 1.424-1.335.092.004 1.859.178 2.018.178z"/></svg>
+          <p class="text">Change settings</p>
+          <p>View docs</p>
+     </a>
+</div>
 
-## CSV exports API
+Depending on the public settings of a website you'll need to autenticate. Learn [how to authenticate with Simple Analytics APIs](/api/authenticate).
 
-To export raw data you should use our [CSV exports API](/api/csv-export-visits).
-
-## Business API
-
-Use this if you want to administer your account.
-
-With this API you can do a few things, for example add websites to your dashboard. This API is only available on request because we want to know what the use case for the API will be. Just drop us a line via [our contact page](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
-
-### List websites
-
-> `GET` [https://simpleanalytics.com/api/websites](https://simpleanalytics.com/api/websites)
-
-The only Business API endpoint that is available for all plans.
-
-```bash
-curl "https://simpleanalytics.com/api/websites" \
-     -H 'Content-Type: application/json' \
-     -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
-     -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000'
-```
-
-Your user ID and API key are shown in [your account settings](https://simpleanalytics.com/account).
-
-### Add a website
-
-> `POST` [https://simpleanalytics.com/api/websites/add](https://simpleanalytics.com/api/websites/add)
-
-For this endpoint you will need a Business plan. You can specify a time zone via `timezone` and set the website to public or private via the `public` boolean. [See wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of valid time zones. If you don't specify a time zone we will set it to UTC.
-
-```bash
-curl -X "POST" "http://localhost:3000/api/websites/add" \
-     -H 'Content-Type: application/json' \
-     -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
-     -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
-     -d $'{
-  "public": true,
-  "hostname": "example.com",
-  "timezone": "Europe/Amsterdam"
-}'
-```
-
-### Custom endpoints
-
-For bigger customers we make custom endpoints. If you are in the need of a custom endpoint, [let us know](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+<style>
+     .apis {
+          display: flex;
+          justify-content: space-between;
+     }
+     .api {
+          flex: 0 0 calc(100% / 3  - 2rem);
+          padding: 1rem;
+          border: 1px solid #00c5e5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-decoration: none;
+          text-align: center;
+     }
+     .api h2 {
+          margin: 0 0 1rem 0;
+     }
+     .api p {
+          margin: 1rem 0 0 0;
+     }
+     .api p.text {
+          color: #151515;
+     }
+     .api svg {
+          width: 100px;
+          height: 100px;
+     }
+     @media (max-width: 520px) {
+          .apis {
+               display: block;
+          }
+          .api + .api {
+               margin-top: 2rem;
+          }
+     }
+</style>

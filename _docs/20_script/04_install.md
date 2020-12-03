@@ -20,7 +20,7 @@ Read our guides on how to install Simple Analytics on:
 - [Jimdo Creator](/install-simple-analytics-on-jimdo-creator)
 - [MailerLite](/install-simple-analytics-on-mailerlite)
 
-> Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a guide or plugin for you.
+> Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact) Happy to create a guide or plugin for you.
 
 ## Framework plugins
 
@@ -37,4 +37,4 @@ Get our official plugins for these frameworks:
 - [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
 - [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
 
-> Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact?ref={{ site.hostname }}) Happy to create a plugin for you.
+> Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact) Happy to create a plugin for you.

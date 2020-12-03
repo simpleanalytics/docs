@@ -28,4 +28,4 @@ curl "https://simpleanalytics.com/api/websites" \
 
 Your user ID is shown in [your account settings](https://simpleanalytics.com/account).
 
-If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact).

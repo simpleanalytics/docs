@@ -35,4 +35,4 @@ Follow these steps to add Simple Analytics to your website:
 
 Read more on using Code Injection in the [Squarespace docs](https://support.squarespace.com/hc/en-us/articles/205815908-Using-Code-Injection).
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

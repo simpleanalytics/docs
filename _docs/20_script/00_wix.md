@@ -29,4 +29,4 @@ Follow these steps to add Simple Analytics to your website:
 
 Read more on the [WIX docs](https://support.wix.com/en/article/embedding-custom-code-to-your-site).
 
-If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact?ref={{ site.hostname }}).
+If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
