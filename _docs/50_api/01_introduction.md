@@ -1,11 +1,11 @@
 ---
-title: API Introduction
+title: Simple Analytics APIs
 menu: Introduction
 category: api
 permalink: /api
 ---
 
-Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. Our APIs are a good example of that. Most analytics companies do not give you access to their raw data. We believe it should be easy for our customers to get their raw data our of our database. You should decide what you want to do with your data.
+Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. Our APIs are a good example of that. Most analytics companies do not give you access to your raw data. We believe it should be easy for our customers to get their raw data our of our database. You should decide what you want to do with your data.
 
 There are a few ways to interact with our API. We have the Stats API for aggregated data, Export API for raw level data, and the Business API for changing users, websites and other settings.
 
