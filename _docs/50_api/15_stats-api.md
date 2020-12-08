@@ -13,7 +13,7 @@ To get aggregated statistics out of our API we created a Stats API. Basically it
 
 For this API you need to be [autenticated with an API key](/api/authenticate). If your website is set to public you can get the JSON data without any credentials.
 
-You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}).
+You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram).
 
 ## Query parameters
 
