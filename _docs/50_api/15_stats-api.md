@@ -7,13 +7,13 @@ redirect_from:
 version: 4
 ---
 
-To get aggregated statistics out of our API we created a JSON API. Basically it's the data your see in our dashboard. This API is useful for when you want to integrate Simple Analytics into your own systems. For example when embedding your data into a customized dashboard within your own website.
+To get aggregated statistics out of our API we created a Stats API. Basically it's the data your see in our dashboard. This API is useful for when you want to integrate Simple Analytics into your own systems. For example when embedding your data into a customized dashboard within your own website.
 
 > The data you get through this API is aggregated. If you are looking for raw data you can use our [Export page views API](/api/export-page-views).
 
 For this API you need to be [autenticated with an API key](/api/authenticate). If your website is set to public you can get the JSON data without any credentials.
 
-You can find the JSON API by adding `.json` to the URL of your dashboard in Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}).
+You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}).
 
 ## Query parameters
 
