@@ -4,7 +4,7 @@ category: script
 permalink: /script
 ---
 
-Include these two lines at the end of your `<body>`
+Include these two lines at the end of your `<body>` (or anywhere else):
 
 <!-- prettier-ignore -->
 ```html
