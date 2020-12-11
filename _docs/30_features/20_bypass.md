@@ -13,3 +13,15 @@ You only need access to your DNS to set this up. Add a CNAME record to your DNS 
 You will need to enable the record in [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers) on Simple Analytics. We need to know this to request a certificate with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>. This means your analytics will travel safe via HTTPS to our servers.
 
 > If you are using <img src="https://cdn.simpleanalytics.com/images/cloudflare-icon.png" style="height: 10px; margin: 0 3px;" alt=""> CloudFlare, make sure to disable the orange cloud.
+
+## Update your script
+
+Include these two lines at the end of your `<body>` (or anywhere else):
+
+<!-- prettier-ignore -->
+```html
+<script async defer src="https://custom.domain.com/latest.js"></script>
+<noscript><img src="https://custom.domain.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+```
+
+Make sure to replace `custom.domain.com` with your own custom domain.
