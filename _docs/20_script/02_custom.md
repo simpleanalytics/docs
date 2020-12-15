@@ -52,14 +52,14 @@ There might be situation where you don't want to auto collect page views. When y
 
 ```html
 <script>
-  function saLoaded(event) {
+  function saLoaded() {
     // Always check for the function before using it.
     // The script might be blocked or not loaded for other reasons.
     if (window.sa_pageview) window.sa_pageview(window.location.pathname);
   }
 </script>
 
-<script async defer data-auto-collect="false" onload="saLoaded" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async defer data-auto-collect="false" onload="saLoaded()" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
