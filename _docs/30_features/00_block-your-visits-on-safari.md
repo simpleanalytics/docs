@@ -5,7 +5,7 @@ hidden: true
 permalink: /block-your-visits-on-safari
 ---
 
-To block your own visits on your website on Safari you can use the about:blank extension. You can [download about:blank via the Mac App Store](https://apps.apple.com/us/app/about-blank/id1239207203).
+To block your own visits on your website on Safari you can use the about:blank extension. You can [download about:blank](https://apps.apple.com/us/app/about-blank/id1239207203) via the Mac App Store.
 
 > This is external software, so we can't guarantee your browsing data is safe. Use at your own risk.
 
@@ -26,4 +26,4 @@ If you want to block the non-JavaScript version as well you should add `https://
 
 ## iOS
 
-On iPhone you can [download about:blank on the App Store](https://apps.apple.com/us/app/about-blank/id1239181721). It should sync your block list when you have iCloud enabled. If not you should add the above URL(s) manually.
+On iPhone you can [download about:blank](https://apps.apple.com/us/app/about-blank/id1239181721) on the App Store. It should sync your block list when you have iCloud enabled. If not you should add the above URL(s) manually.
