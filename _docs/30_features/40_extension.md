@@ -6,7 +6,7 @@ permalink: /extension
 
 If you are a customer of Simple Analytics and you want to block your own visits this extension is for you. With it enabled your stats will not include your visits.
 
-> Download the extension [for Google Chrome](https://chrome.google.com/webstore/detail/simple-analytics/ehkndchainpkdfpnancgobgfnfjnmmeh) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/simpleanalytics/)
+> Download the extension for [Google Chrome](https://chrome.google.com/webstore/detail/simple-analytics/ehkndchainpkdfpnancgobgfnfjnmmeh) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/simpleanalytics/). If you want to block your visits on Safari (both mobile and desktop) [visit this tutorial](/block-your-visits-on-safari).
 
 We do this via an extension so we don't need to record IP addresses. It basically blocks requests on websites where you give permission for.
 
