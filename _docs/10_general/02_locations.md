@@ -20,7 +20,7 @@ A year ago we wrote [a blog post](https://blog.simpleanalytics.com/why-we-moved-
 1. The internet cables to Iceland are rather slow. Although it’s geographically ideal — located between North America and Europe — in practice, The Netherlands is a faster location.
 1. We don't want to move to Switzerland because it would be a marketing move only. The EU provides better privacy laws than Switzerland.
 1. We need to move anyway because our current provider does not offer the powerful servers we need.
-1. The second-biggest provider in Iceland is legally headquartered in Honk Kong, which is not a location we want to store our data in.
+1. The second-biggest provider in Iceland is legally headquartered in Hong Kong, which is not a location we want to store our data in.
 
 We asked our customers if they would be okay with the move and everybody who voted agreed with our decision.
 
