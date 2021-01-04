@@ -6,7 +6,11 @@ permalink: /events/ruby
 
 This is a draft of how to collect events with [Ruby](https://www.ruby-lang.org/en/). If you know how to improve it, please let us know.
 
+Save below code as `simple_analytics_event.rb`:
+
 ```ruby
+# simple_analytics_event.rb
+
 require 'net/http'
 require 'json'
 require 'date'
@@ -81,6 +85,17 @@ def post(data)
 end
 ```
 
-Make sure to include a user agent because the request will fail otherwise.
+To test run this in your console:
+
+```ruby
+% irb
+irb(main):001:0' require './simple_analytics_event'
+=> true
+irb(main):002:0> SimpleAnalyticsEvent.trigger('example_event')
+debug: {"success":true,"duration_ms":1,"message":"Thank you","location":"Amsterdam"}
+=> true
+```
+
+Make sure to include a user agent in the code because the request will fail otherwise.
 
 Thanks to [Tuomas Jomppanen](https://twitter.com/tuomasj) for providing this example.
