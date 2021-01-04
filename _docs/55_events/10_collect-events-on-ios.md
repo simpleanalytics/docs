@@ -1,11 +1,11 @@
 ---
-title: Track events in iOS via Swift or Objective-C
-menu: Track events in iOS
+title: Collect events on iOS with Swift
+menu: Collect events on iOS
 category: events
 permalink: /events/ios
 ---
 
-> This is a draft of how to track events with iOS. If you know how to improve it, please let us know.
+This is a draft of how to track events with iOS. If you know how to improve it, please let us know.
 
 ```swift
 import Foundation
@@ -67,4 +67,4 @@ class Analytics: NSObject {
 }
 ```
 
-> Make sure to include a user agent in the headers of the request. This is not included in the example above.
+Make sure to include a user agent in the headers of the request. This is not included in the example above.
