@@ -98,4 +98,4 @@ debug: {"success":true,"duration_ms":1,"message":"Thank you","location":"Amsterd
 
 Make sure to include a user agent in the code because the request will fail otherwise.
 
-Thanks to [Tuomas Jomppanen](https://twitter.com/tuomasj) for providing this example.
+Thanks to [Tuomas Jomppanen](https://www.tuomas.io/) for providing this example.
