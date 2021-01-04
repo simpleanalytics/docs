@@ -82,3 +82,5 @@ end
 ```
 
 Make sure to include a user agent because the request will fail otherwise.
+
+Thanks to [Tuomas Jomppanen](https://twitter.com/tuomasj) for providing this example.
