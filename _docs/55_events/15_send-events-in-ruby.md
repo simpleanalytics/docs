@@ -4,7 +4,7 @@ category: events
 permalink: /events/ruby
 ---
 
-> This is a draft of how to collect events with [Ruby](https://www.ruby-lang.org/en/). If you know how to improve it, please let us know.
+This is a draft of how to collect events with [Ruby](https://www.ruby-lang.org/en/). If you know how to improve it, please let us know.
 
 ```ruby
 require 'net/http'
@@ -81,4 +81,4 @@ def post(data)
 end
 ```
 
-> Make sure to include a user agent because the request will fail otherwise.
+Make sure to include a user agent because the request will fail otherwise.
