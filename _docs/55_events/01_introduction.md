@@ -29,7 +29,11 @@ Or if you use our [custom domain feature](/bypass-ad-blockers):
 
 > **Developers:** place the first script (`window.sa_event=w...`) in the `<head>` or top part of your `<body>` in your HTML. The second script (`latest.js`) can be placed in the `<head>` or `<body>`. The `<noscript>` should be placed in the `<body>`.
 
+### Developers
+
 This little snippet creates a simple function called `sa_event`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
+
+> Our scripts **do not send** data from localhost. We do this to prevent your localhost data to end up on our servers.
 
 ## `sa_event`-function
 
