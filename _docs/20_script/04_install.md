@@ -36,5 +36,6 @@ Get our official plugins for these frameworks:
 - [Django](https://pypi.org/project/simpleanalytics/) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
 - [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
 - [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
+- [Next.js](https://github.com/simpleanalytics/next-js-app) <small>(sample app only)</small>
 
 > Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact) Happy to create a plugin for you.
