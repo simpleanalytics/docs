@@ -27,3 +27,7 @@ Include these two lines at the end of your `<body>` (or anywhere else):
 ```
 
 Make sure to replace `custom.domain.com` with your own custom domain.
+
+## Multiple websites
+
+You can use one custom subdomain for all your websites. Make sure to link it to at least one domain via [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers). If you add the custom domain to one website we know which SSL certificates need renewal and which ones we can delete. Using one custom domain for multiple websites does not effect performance. It will be running through the same infrastructure.
