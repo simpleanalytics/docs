@@ -2,7 +2,7 @@
 title: SRI version
 category: script
 permalink: /sri
-sriVersion: 5
+sriVersion: 6
 sriHash: sha256-SsAnjogPdVtk4SMT17C1H4hnlmdROlA+F8e6HWisc4s= sha384-LyCEiwCP+ZHrg0L2SL6oSPengdhyuzj0UVZ5vk/Nb3D8Pdz5FHc2rDk/5Kvv+TxK sha512-G62RkDPYjOD3RbUpgAHIHpZ8hDCheNWZbPx7GG5S0HCOBtaA0ZkNpYK/ioAmcS7im1KQOTXQqcGfNGDaaOg6GA==
 ---
 
