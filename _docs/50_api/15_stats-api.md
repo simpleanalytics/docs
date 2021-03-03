@@ -37,6 +37,7 @@ We have a list of query parameters that you can use with this API:
   - `browser_names` a list of browser names
   - `os_names` a list of OS names
   - `device_types` a list of device types (mobile, tablet, desktop, tv)
+- `pages` a comma separated list of pages (`/contact,/product/*`)
 - `limit` a limit for the fields (1-1000)
 - `timezone` a valid time zone like `Europe/Amsterdam` (with capitals)
 - `info` shows more information about fields in the response (defaults to true)
@@ -47,6 +48,10 @@ We have a list of query parameters that you can use with this API:
 With the Stats API you can also retrieve data for a specific page of your website. You can specify this via the `pages` parameter: [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact)).
 
 You can also add the path to the URL and Simple Analytics returns the data for only that path. For example if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram)).
+
+## Wildcards
+
+The `pages` parameter supports wildcard searches. It's as easy as adding a `*` at the end of your page path. If you want to search for pages that have a path that starts with `/web` you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you want to get all pages with that contain a word in their path you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*)).
 
 ## CORS and JSONP
 
