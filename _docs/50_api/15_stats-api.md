@@ -51,7 +51,7 @@ You can also add the path to the URL and Simple Analytics returns the data for o
 
 ## Wildcards
 
-The `pages` parameter supports wildcard searches. It's as easy as adding a `*` at the end of your page path. If you want to search for pages that have a path that starts with `/web` you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you want to get all pages with that contain a word in their path you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*)).
+The `pages` parameter supports wildcard searches. It's as easy as adding an `*` at the end of your page path. If you want to search for pages that have a path that starts with `/web` you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you want to get all pages with that contain a word in their path you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*)).
 
 ## CORS and JSONP
 
