@@ -5,7 +5,7 @@ category: events
 permalink: /events
 ---
 
-> The event feature is not as fast as you would expect from other Simple Analytics features. To access this feature in your dashboard go to simpleanalytics.com<b>/events/[YOUR WEBSITE]</b>.
+> The event UI is not that feature rich as you would expect from other Simple Analytics features. To access this feature in your dashboard go to [your events page](https://simpleanalytics.com/select-website/events).
 
 ## Install embed script
 
