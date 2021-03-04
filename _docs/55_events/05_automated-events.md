@@ -6,7 +6,7 @@ redirect_from:
   - /capture-outbound-links
 ---
 
-To make it easier for our customers we added automated events. You can collect a few different events automatically: outbound links, email clicks, and amount of downloads. [Go to your events page](https://simpleanalytics.com/select-website/events).
+To make it easier for our customers we create a separate automated events script. You can collect a few different events automatically: outbound links, email clicks, and amount of downloads. [Go to your events page](https://simpleanalytics.com/select-website/events).
 
 ## Outbound
 
