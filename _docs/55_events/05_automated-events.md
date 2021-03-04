@@ -6,7 +6,7 @@ redirect_from:
   - /capture-outbound-links
 ---
 
-[Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, and amount of download for certain files. Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
+[Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, and amount of downloads for common files (pdf, csv, docx, xlsx). Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
 
 ## Outbound
 
