@@ -4,7 +4,7 @@ category: api
 permalink: /api/stats
 redirect_from:
   - /api/json-api
-version: 4
+version: 5
 ---
 
 To get aggregated statistics out of our API we created a Stats API. Basically it's the data your see in our dashboard. This API is useful for when you want to integrate Simple Analytics into your own systems. For example when embedding your data into a customized dashboard within your own website.
@@ -22,6 +22,10 @@ We have a list of query parameters that you can use with this API:
 - `version` the version of the API (the latest version is `{{ page.version }}`)
 - `start` the start date with this format `YYYY-MM-DD` (defaults to 1 month ago)
 - `end` the end data with above format (defaults to today)
+- `limit` a limit for the fields (1-1000)
+- `timezone` a valid time zone like `Europe/Amsterdam` (with capitals)
+- `info` shows more information about fields in the response (defaults to true)
+- `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
 - `fields` a comma seperated list of fields you want to get returned:
   - `pageviews` the total amount of page views in the specified period
   - `visitors` the total amount of visitors (unique page views) in the specified period
@@ -37,11 +41,21 @@ We have a list of query parameters that you can use with this API:
   - `browser_names` a list of browser names
   - `os_names` a list of OS names
   - `device_types` a list of device types (mobile, tablet, desktop, tv)
-- `pages` a comma separated list of pages (`/contact,/product/*`)
-- `limit` a limit for the fields (1-1000)
-- `timezone` a valid time zone like `Europe/Amsterdam` (with capitals)
-- `info` shows more information about fields in the response (defaults to true)
-- `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
+
+For filtering you can use:
+
+- `page` filter by a page
+- `pages` filter by a comma separated list of pages (`/contact,/product/*`)
+- `country` filter by a country code
+- `referrer` filter by a referrer (normalized)
+- `utm_source` filter by a UTM source
+- `utm_medium` filter by a UTM medium
+- `utm_campaign` filter by a UTM campaign
+- `utm_content` filter by a UTM content
+- `utm_term` filter by a UTM term
+- `browser_name` filter by a browser name
+- `os_name` filter by a OS name
+- `device_type` filter by a device type (mobile, tablet, desktop, tv)
 
 ## Get data for specific pages
 
@@ -51,7 +65,7 @@ You can also add the path to the URL and Simple Analytics returns the data for o
 
 ## Wildcards
 
-The `pages` parameter supports wildcard searches. It's as easy as adding an `*` at the end of your page path. If you want to search for pages that have a path that starts with `/web` you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you want all pages that contains a word in their path you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*)).
+The filtering parameters support wildcard searches. It's as easy as adding an `*` at the end of your parameter value. If you want to search for pages that have a path that starts with `/web` you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you want all pages that contains a word in their path you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*)).
 
 ## CORS and JSONP
 
