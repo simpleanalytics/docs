@@ -9,3 +9,5 @@ As a privacy friendly business we care a lot about who own the data. We are very
 {% include video.html red="true" slug="export-raw-data-gui" %}
 
 Go to [the export your data](https://simpleanalytics.com/select-website/export) in our dashboard to download your data as an CSV.
+
+If you want to get aggregated data you'll have to use [our Stats API](/api/stats) for that.
