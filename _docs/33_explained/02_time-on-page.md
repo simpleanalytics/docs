@@ -15,7 +15,7 @@ Take Google Analytics for example. Let's say you have Google Analytics installed
 
 ![](/images/time-on-page-ga-stop.png)
 
-In the illustration above you would expect to at least record the time for the first page (you see in browsers 1 & 3). But instead, you don't get any time on site for this situation in Google Analytics. It's because by default Google Analytics does not send a request at the end of the visit but only at the beginning. They have no way of knowing how long a visitor will be on the page at the beginning. They can however calculate the time between the first page and the following page (on the same domain). In that case, their flow works like this:
+In the illustration above you would expect to at least record the time for the first page (you see in browsers 1 & 3). But instead, you don't get any _time on page_ for this situation in Google Analytics. It's because by default Google Analytics does not send a request at the end of the visit but only at the beginning. They have no way of knowing how long a visitor will be on the page at the beginning. They can however calculate the time between the first page and the following page (on the same domain). In that case, their flow works like this:
 
 ![](/images/time-on-page-ga.png)
 
@@ -25,7 +25,7 @@ In this case, the visitor visits 2 pages (`page1` and `page2`) on `yourwebsite.c
 
 - It should record _time on page_ even if you only visit one page
 - It should not record the 20 seconds of a different website
-- It should record the time on site of the last page visited as well
+- It should record the _time on page_ of the last page visited as well
 
 ## Simple Analytics
 
@@ -37,15 +37,15 @@ In the above example, we get the expected result: a visitor was 15 seconds on `p
 
 ## Median versus average
 
-The dataset of _time on page_ can have a lot of outliers. There could be a visitor that keeps a website open before leaving the house. In this case, the time on page will be very high. As a privacy-friendly company, we don't want to track mouse movement or other signs of webpage interaction to detect if the user is still consuming the content. This means that the _time on site_ can be very high. Let's say that the visitor comes back after 2 hours and closes the website. The dataset now contains a super high number. This usually happens with data like this. So what can you do about those outliers?
+The dataset of _time on page_ can have a lot of outliers. There could be a visitor that keeps a website open before leaving the house. In this case, the _time on page_ will be very high. As a privacy-friendly company, we don't want to track mouse movement or other signs of webpage interaction to detect if the user is still consuming the content. This means that the _time on page_ can be very high. Let's say that the visitor comes back after 2 hours and closes the website. The dataset now contains a super high number. This usually happens with data like this. So what can you do about those outliers?
 
 At Simple Analytics we researched what the best way would be to have an accurate number representing the _time on page_ without including those extreme outliers. Where other tools use average we calculate the median for all the _time on page_ entries.
 
-| Page view #               | 1   | 2   | 3   | 4   | 5    |
-| ------------------------- | --- | --- | --- | --- | ---- |
-| Time on page (in seconds) | 10  | 20  | 15  | 10  | 1000 |
+| Page view #                 | 1   | 2   | 3   | 4   | 5    |
+| --------------------------- | --- | --- | --- | --- | ---- |
+| _Time on page_ (in seconds) | 10  | 20  | 15  | 10  | 1000 |
 
-When you calculate the average you sum all numbers and devide it by the amount of page views. 10 + 20 + 15 + 10 + 1000 = 1055. 1055 / 5 = 211. **The average for time on page for all 5 page views is 211 seconds.**
+When you calculate the average you sum all numbers and devide it by the amount of page views. 10 + 20 + 15 + 10 + 1000 = 1055. 1055 / 5 = 211. **The average for _time on page_ for all 5 page views is 211 seconds.**
 
 When you calculate the median you sort the numbers from low to high and pick the middle number. In this case, we sort the numbers link this: 10, 10, 15, 20, 1000. Then we pick the middle number: 15. **The median for all 5 page views is 15 seconds.**
 
