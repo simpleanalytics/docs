@@ -1,7 +1,10 @@
 ---
-title: Unique visits
-category: features
-permalink: /uniques
+title: Unique visits explained
+menu: Unique visits
+category: explained
+permalink: /explained/unique-visits
+redirect_from:
+  - /uniques
 ---
 
 At Simple Analytics we do things a bit differently. We put the privacy of your visitors first. At the same time we comply with strict (and necessary) privacy laws. This has an impact on our statistics, like unique visits. We record page views (which is very easy to do without invading the privacy of your visitors). With unique visits it's slightly difficult to invade. Traditional analytics tools will show you unique visits based on a cookie they place on the visitors computer. This can be extremely invasive to privacy because a visitor can be tracked for a longer period of time.
