@@ -55,6 +55,6 @@ We believe (and our customers with us) the more accurate number for the above da
 
 ### Bounce rate and bots
 
-To make the _time on page_ more accurate we exclude the page views with a _time on page_ lower than 5 seconds. We see those visits as bounced visits and don't include them.
+To make the _time on page_ more accurate we exclude the page views with a _time on page_ **lower than 5 seconds**. We see those visits as bounced visits and don't include them.
 
 Have any questions? [Ask away!](https://simpleanalytics.com/contact)
