@@ -51,7 +51,7 @@ When you calculate the median you sort the numbers from low to high and pick the
 
 We believe (and our customers with us) the more accurate number for the above dataset 15 seconds is. Those 1000 seconds represent likely somebody that left their computer running while not actively using it.
 
-[Read the discussion](https://github.com/simpleanalytics/roadmap/issues/100) we have with our customers on GitHub.
+[Read the discussion](https://github.com/simpleanalytics/roadmap/issues/100) we had with our customers on GitHub.
 
 ### Bounce rate and bots
 
