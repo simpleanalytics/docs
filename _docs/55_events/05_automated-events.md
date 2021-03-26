@@ -35,7 +35,7 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 <!-- prettier-ignore -->
 ```html
 <script>
-(function(a){
+(function(window) {
   var options = {
     // What to collect
     outbound: true,
@@ -53,7 +53,7 @@ If you are a developer or you know your way around HTML it's easy to embed this 
     downloadsFullUrl: false,
   };
 
-  function b(){try{for(var b,e=document.getElementsByTagName("a"),f=0;f<e.length;f++)if(b=e[f],!b.getAttribute("onclick")){var g;if(d.downloads&&/^https?:\/\//i.test(b.href)&&new RegExp(".("+(d.downloadsExtensions||[]).join("|")+")","i").test(b.pathname)?g="download":d.outbound&&/^https?:\/\//i.test(b.href)&&b.hostname!==a.location.hostname?g="outbound":d.emails&&/^mailto:/i.test(b.href)&&(g="email"),g)var h="saAutomatedLink(this, '"+g+"');";b.hasAttribute("target")&&"_self"!==b.hasAttribute("target")||(h+=" return false;"),b.setAttribute("onclick",h)}}catch(a){c(a.message,"warn")}}if("undefined"!=typeof a){var c=function(a,b){var c="warn"===b?console.warn:console.log;return c("Simple Analytics automated events: "+a)},d=options;"undefined"==typeof d&&c("options object not found, please specify","warn"),a.saAutomatedLink=function(b,e){try{if(!b)return c("no element found");var f=!1,g=function(){f||b.hasAttribute("target")||(document.location=b.getAttribute("href")),f=!0};if(a.sa_event){var h=b.hostname,i=b.pathname,j=!1;if(d.title&&b.hasAttribute("title")){var k=b.getAttribute("title").trim();""!=k&&(j=!0)}var l;if(j)l=k;else switch(e){case"outbound":{l=h+(d.outboundFullUrl?i:"");break}case"download":{l=d.downloadsFullUrl?h+i:i.split("/").pop();break}case"email":{var m=b.getAttribute("href");l=(m.split(":")[1]||"").split("?")[0];break}}var n=e+"_"+l.replace(/[^a-z0-9]+/gi,"_").replace(/(^_+|_+$)/g,"");return sa_event(n,g),c("collected "+n),a.setTimeout(g,5e3)}return c("sa_event is not defined","warn"),g()}catch(a){c(a.message,"warn")}},a.addEventListener("DOMContentLoaded",b)}
+  !function(u,t){var d,c;void 0!==u&&(d=function(t,e){return("warn"===e?console.warn:console.log)("Simple Analytics automated events: "+t)},void 0===(c=t)&&d("options object not found, please specify","warn"),u.saAutomatedLink=function(t,e){try{if(!t)return d("no element found");function n(){o||t.hasAttribute("target")||(document.location=t.getAttribute("href")),o=!0}var o=!1;if(u.sa_event){var a=t.hostname,s=t.pathname,i=!1;if(c.title&&t.hasAttribute("title")&&(""!=(l=t.getAttribute("title").trim())&&(i=!0)),i)r=l;else switch(e){case"outbound":r=a+(c.outboundFullUrl?s:"");break;case"download":r=c.downloadsFullUrl?a+s:s.split("/").pop();break;case"email":var r=(t.getAttribute("href").split(":")[1]||"").split("?")[0]}var l=e+"_"+r.replace(/[^a-z0-9]+/gi,"_").replace(/(^_+|_+$)/g,"");return sa_event(l,n),d("collected "+l),u.setTimeout(n,5e3)}return d("sa_event is not defined","warn"),n()}catch(t){d(t.message,"warn")}},u.addEventListener("DOMContentLoaded",function(){try{for(var t=document.getElementsByTagName("a"),e=0;e<t.length;e++){var n=t[e],o=!1;n.getAttribute("onclick")||(c.downloads&&/^https?:\/\//i.test(n.href)&&new RegExp(".("+(c.downloadsExtensions||[]).join("|")+")","i").test(n.pathname)?o="download":c.outbound&&/^https?:\/\//i.test(n.href)&&n.hostname!==u.location.hostname?o="outbound":c.emails&&/^mailto:/i.test(n.href)&&(o="email"),o&&(o="saAutomatedLink(this, '"+o+"');",n.hasAttribute("target")&&"_self"!==n.hasAttribute("target")||(o+=" return false;"),n.setAttribute("onclick",o)))}}catch(t){d(t.message,"warn")}}))}(window,options);
 })(window);
 </script>
 ```
@@ -168,10 +168,10 @@ The script is compressed with the public tool [jscompress.com](https://jscompres
         // Loop over all links on the page
         for (var i = 0; i < a.length; i++) {
           var link = a[i];
+          var collect = false;
 
           // We don't want to overwrite website behaviour so we check for the onclick attribute
           if (!link.getAttribute("onclick")) {
-            var collect;
 
             // Collect download clicks
             if (
@@ -197,17 +197,18 @@ The script is compressed with the public tool [jscompress.com](https://jscompres
               collect = "email";
             }
 
-            if (collect)
+            if (collect) {
               var onClickAttribute =
                 "saAutomatedLink(this, '" + collect + "');";
 
-            if (
-              !link.hasAttribute("target") ||
-              link.hasAttribute("target") === "_self"
-            )
-              onClickAttribute += " return false;";
+              if (
+                !link.hasAttribute("target") ||
+                link.hasAttribute("target") === "_self"
+              )
+                onClickAttribute += " return false;";
 
-            link.setAttribute("onclick", onClickAttribute);
+              link.setAttribute("onclick", onClickAttribute);
+            }
           }
         }
       } catch (error) {
