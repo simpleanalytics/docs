@@ -121,6 +121,18 @@ Collecting the dimensions of a user's browser window (`innerWidth` and `innerHei
   <p>Updated: July 20, 2020. Previously, we didn't store the device dimensions, but we think they are useful for certain accessibility and design tools, so we added this as a clarification to the paragraph above.</p>
 </blockquote>
 
+### Time on page
+
+> We **do collect and store** how long a page is being viewed
+
+When a visitor is on a page we collect the amount of seconds a page is viewed. If the page is hidden, we don't count those seconds. [Read this page](/explained/time-on-page) to learn more about how we measure time on page.
+
+### Scrolled percentage
+
+> We **do collect and store** how far a visitor scrolls on the page
+
+When a visitor scrolls on a page we record how far they scrolled. We do store this in a percentage with increments of 5%.
+
 ### Do Not Track
 
 > By default we **do NOT collect or store** any data **if a visitor has Do Not Track** enabled
