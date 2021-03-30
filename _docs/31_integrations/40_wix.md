@@ -1,7 +1,7 @@
 ---
 title: Install Simple Analytics on WIX
-category: script
-hidden: true
+menu: WIX
+category: integrations
 permalink: /install-simple-analytics-on-wix
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: Install Simple Analytics with Nuxt.js
-category: script
+menu: Nuxt.js
 hidden: true
+category: integrations
 permalink: /install-simple-analytics-with-nuxt
 ---
 

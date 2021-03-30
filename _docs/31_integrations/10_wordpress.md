@@ -1,7 +1,7 @@
 ---
 title: Install Simple Analytics on WordPress
-category: script
-hidden: true
+menu: WordPress
+category: integrations
 permalink: /install-simple-analytics-on-wordpress
 ---
 

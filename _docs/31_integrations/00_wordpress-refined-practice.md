@@ -1,6 +1,6 @@
 ---
 title: WordPress Plugin by Refined Practice
-category: script
+category: integrations
 hidden: true
 permalink: /wordpress-plugin-by-refined-practice
 ---

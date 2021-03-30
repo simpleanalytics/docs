@@ -1,7 +1,7 @@
 ---
 title: Install Simple Analytics on Squarespace
-category: script
-hidden: true
+menu: Squarespace
+category: integrations
 permalink: /install-simple-analytics-on-squarespace
 ---
 

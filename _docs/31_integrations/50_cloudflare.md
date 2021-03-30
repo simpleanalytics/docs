@@ -1,7 +1,7 @@
 ---
 title: Install Simple Analytics on Cloudflare
-category: script
-hidden: true
+menu: Cloudflare
+category: integrations
 permalink: /install-simple-analytics-on-cloudflare
 ---
 

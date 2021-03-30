@@ -119,6 +119,10 @@
                     </li>
                   {% endif %}
                 {% endfor %}
+                {% if cat.name == 'integrations' %}
+                <li><a href="/install-on-other-platforms#platform-guides">Platform guides</a></li>
+                <li><a href="/install-on-other-platforms#framework-plugins">Framework plugins</a></li>
+                {% endif %}
                 {% if cat.name == 'features' %}
                 <li><a href="/events">Events</a></li>
                 {% endif %}

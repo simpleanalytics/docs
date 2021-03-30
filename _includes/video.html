@@ -3,6 +3,12 @@
   muted
   autoplay
   crossorigin="anonymous"
+  {%
+  if
+  include.controls
+  %}controls{%
+  endif
+  %}
   class="post-video {% if include.red %}red{% endif %}"
   poster="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.png"
 >

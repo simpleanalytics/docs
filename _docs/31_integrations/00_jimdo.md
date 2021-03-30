@@ -1,7 +1,8 @@
 ---
 title: Install Simple Analytics on Jimdo Creator
-category: script
+menu: Jimdo Creator
 hidden: true
+category: integrations
 permalink: /install-simple-analytics-on-jimdo-creator
 ---
 

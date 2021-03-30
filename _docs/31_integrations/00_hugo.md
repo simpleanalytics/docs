@@ -1,7 +1,8 @@
 ---
 title: Install Simple Analytics with Hugo
-category: script
+menu: Hugo
 hidden: true
+category: integrations
 permalink: /install-simple-analytics-with-hugo
 ---
 
