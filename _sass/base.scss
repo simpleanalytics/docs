@@ -126,10 +126,19 @@ blockquote {
   }
 
   li img,
+  iframe.border,
   video.border,
   img.border {
     border: 1px solid #00c5e5;
     border-radius: 5px;
+  }
+
+  .border + .caption {
+    font-size: 14px;
+    color: #6f6f6f;
+    margin-top: 3px;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 
   li p:first-of-type {

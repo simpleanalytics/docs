@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
+    {% if page.canonical %}
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ page.canonical }}" />
+    {% endif %}
+
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://simpleanalytics.com/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://simpleanalytics.com/favicon-32x32.png">
@@ -132,7 +137,7 @@
         </div>
         <div class="content">
           <h1>{{ page.title }} <a href="https://github.com/simpleanalytics/docs/blob/master/{{ page.path }}" target="_blank"><img class="icon" src="/images/pencil.svg" alt="edit"></a></h1>
-          {{ content }}
+          {{ content | replace: '<p><img ', '<img ' | replace: '" /></p>', '" />' | replace: '<img ', '<img loading="lazy" ' }}
         </div>
       </div>
     </main>
