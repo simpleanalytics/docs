@@ -41,7 +41,7 @@ We have a list of query parameters that you can use with this API:
   - `browser_names` a list of browser names
   - `os_names` a list of OS names
   - `device_types` a list of device types (mobile, tablet, desktop, tv)
-  - `seconds_on_page` the median of seconds a visitor spent on the page ([see more](/explained/time-on-page))
+  - `seconds_on_page` the median of seconds a visitor spent on the page ([see more](#time-on-page))
 
 For filtering you can use:
 
@@ -99,7 +99,7 @@ It returns:
 }
 ```
 
-Note the `seconds_on_page` being part of the `pages` and part of the root of the JSON response.
+Note the `seconds_on_page` being part of the `pages` and part of the root of the JSON response. We have [an explainer on time on page](/explained/time-on-page) which goes into more detail about the metric and why we did choose to make it a median instead of average.
 
 ## CORS and JSONP
 
