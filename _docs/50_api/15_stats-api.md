@@ -41,6 +41,7 @@ We have a list of query parameters that you can use with this API:
   - `browser_names` a list of browser names
   - `os_names` a list of OS names
   - `device_types` a list of device types (mobile, tablet, desktop, tv)
+  - `seconds_on_page` the median of seconds a visitor spent on the page ([see more](/explained/time-on-page))
 
 For filtering you can use:
 
@@ -66,6 +67,39 @@ You can also add the path to the URL and Simple Analytics returns the data for o
 ## Wildcards
 
 The filtering parameters support wildcard searches. It's as easy as adding an `*` at the end of your parameter value. If you want to search for pages that have a path that starts with `/web` you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you want all pages that contains a word in their path you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*)).
+
+## Time on page
+
+To get the median of time on page you can use the field `seconds_on_page`. This field is a bit more special than the rest. It also includes the `seconds_on_page` within results you select with other fields. For example, [when you select](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&info=false&pages=/,/contact) some pages with it:
+
+```
+https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&info=false&pages=/,/contact
+```
+
+It returns:
+
+```js
+{
+  ...
+  "seconds_on_page": 26,
+  "pages": [
+    {
+      "value": "/",
+      "pageviews": 100,
+      "visitors": 50,
+      "seconds_on_page": 25
+    },
+    {
+      "value": "/contact",
+      "pageviews": 60,
+      "visitors": 30,
+      "seconds_on_page": 20
+    }
+  ]
+}
+```
+
+Note the `seconds_on_page` being part of the `pages` and part of the root of the JSON response.
 
 ## CORS and JSONP
 
