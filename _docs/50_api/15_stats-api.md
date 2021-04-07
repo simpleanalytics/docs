@@ -73,7 +73,7 @@ The filtering parameters support wildcard searches. It's as easy as adding an `*
 To get the median of time on page you can use the field `seconds_on_page`. This field is a bit more special than the rest. It also includes the `seconds_on_page` within results you select with other fields. For example, [when you select](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&info=false&pages=/,/contact) some pages with it:
 
 ```
-https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&info=false&pages=/,/contact
+https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&pages=/,/contact
 ```
 
 It returns:
