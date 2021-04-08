@@ -4,6 +4,8 @@ category: general
 permalink: /what-we-collect
 ---
 
+# What we collect
+
 Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your visitors.
 
 ### Cookies
@@ -103,7 +105,7 @@ We track these UTM codes:
 - `utm_medium` (e.g.: `search`)
 - `utm_campaign` (e.g.: `get_customers_02`)
 - `utm_content` (e.g.: `sidebar`)
-- `utm_term` (e.g.: `privacy friendly analytics`)
+- ~`utm_term`~ (this is deprecated as it is intented to contain user data)
 
 Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. These are all saved as the `utm_source`. Read more on [using URL parameters](/how-to-use-url-parameters).
 
