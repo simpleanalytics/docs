@@ -2,6 +2,7 @@
 title: Introduction
 category: general
 permalink: /
+download: false
 ---
 
 Whether you’re a startup or a global enterprise, learn how to integrate with Simple Analytics for privacy friendly analytics. No consent required from your visitors!
