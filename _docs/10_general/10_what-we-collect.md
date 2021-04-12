@@ -77,6 +77,12 @@ const anonymizeAgent = (ua) =>
   <p>Update: July 1, 2020. We now store User Agents anonymized. We drop possible identifiers from the User Agents.</p>
 </blockquote>
 
+### Country
+
+> We **collect** and **store** country of visitor
+
+In contrast with most services that collect countries based on IP address, we collect them based on the visitors time zone. This way we don't have to touch their IP address and still are able to define their country. Every country has their own time zone and modern devices automatically update the time zone when the device travels. The time zone is limited to a country, so we can't get data about a city or region within a country. [Test this for yourself](https://simpleanalytics.com/timezone).
+
 ### URLs
 
 > We **partially collect** and **partially store** URLs
