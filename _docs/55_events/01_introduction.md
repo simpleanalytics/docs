@@ -13,7 +13,7 @@ To start working with events you need to have a recent version of our script. Th
 
 <!-- prettier-ignore -->
 ```html
-<script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
+<script>window.sa_event=window.sa_event||function(event){sa_event.q?sa_event.q.push(event):sa_event.q=[event]}</script>
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
@@ -22,7 +22,7 @@ Or if you use our [custom domain feature](/bypass-ad-blockers):
 
 <!-- prettier-ignore -->
 ```html
-<script>window.sa_event=window.sa_event||function(){a=[].slice.call(arguments);sa_event.q?sa_event.q.push(a):sa_event.q=[a]};</script>
+<script>window.sa_event=window.sa_event||function(event){sa_event.q?sa_event.q.push(event):sa_event.q=[event]}</script>
 <script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/latest.js"></script>
 <noscript><img src="https://[YOUR SUBDOMAIN LINKING TO US]/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
@@ -90,6 +90,6 @@ If the `sa_event` variable is already in use you can change it with the `data-sa
 
 <!-- prettier-ignore -->
 ```html
-<script>window.ba=window.ba||function(){a=[].slice.call(arguments);ba.q?ba.q.push(a):ba.q=[a]};</script>
+<script>window.sa_event=window.sa_event||function(event){sa_event.q?sa_event.q.push(event):sa_event.q=[event]}</script>
 <script async defer data-sa-global="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
