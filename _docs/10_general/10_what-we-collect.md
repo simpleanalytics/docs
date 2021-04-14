@@ -6,11 +6,13 @@ permalink: /what-we-collect
 
 Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your visitors.
 
+> [Visit our table overview](/data-points) for a detailed list of data points we collect
+
 ### Cookies
 
 > We **do NOT set** any cookies (or use similar technologies)
 
-We care a great deal about the privacy of your visitors. Cookies are something that can track visitors across multiple pages or even multiple websites. For us this is a hard no. This goes for all similar technologies like (but not limited to) [local storage](https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage), [session cookies](https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie), [fingerprinting](https://en.wikipedia.org/wiki/Fingerprint_(computing)), and IP address hashing.
+We care a great deal about the privacy of your visitors. Cookies are something that can track visitors across multiple pages or even multiple websites. For us this is a hard no. This goes for all similar technologies like (but not limited to) [local storage](https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage), [session cookies](https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie), [fingerprinting](<https://en.wikipedia.org/wiki/Fingerprint_(computing)>), and IP address hashing.
 
 ### IP addresses
 
