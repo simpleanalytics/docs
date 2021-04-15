@@ -7,6 +7,8 @@ permalink: /referral-program/terms-of-service
 
 We have a few rules that apply to our referral program. We love our customers sharing our product and we believe it should only done by our customers. They know the product so a recommendation from them has way more value than from anybody else.
 
+> Read our [General Terms and Conditions here](https://simpleanalytics.com/general-terms-and-conditions).
+
 ## Rules for promoters
 
 Promoters are the customers of Simple Analytics who refer our product to others.

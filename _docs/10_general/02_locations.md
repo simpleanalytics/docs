@@ -33,4 +33,4 @@ What do we do to protect your privacy and that of your visitors?
 1. **The drives storing your data are fully encrypted.** If anybody did manage to steal them, they'd be useless.
 1. **We will never sell your data.** Because, once again, it's yours!
 
-<img class="undraw-svg" src="/images/undraw_around_the_world.svg" alt="">
+<img class="drawing" src="https://assets.simpleanalytics.com/images/drawings/magnifying-glass.png" alt="">

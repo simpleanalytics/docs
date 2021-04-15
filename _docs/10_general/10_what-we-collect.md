@@ -12,6 +12,8 @@ Not collecting any information would be silly and unrealistic for an analytics t
 
 > We **do NOT set** any cookies (or use similar technologies)
 
+<img loading="lazy" src="https://assets.simpleanalytics.com/images/drawings/cookie.png" style="float: right; margin-left: 1rem; transform: rotate(260deg); width: 150px;">
+
 We care a great deal about the privacy of your visitors. Cookies are something that can track visitors across multiple pages or even multiple websites. For us this is a hard no. This goes for all similar technologies like (but not limited to) [local storage](https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage), [session cookies](https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie), [fingerprinting](<https://en.wikipedia.org/wiki/Fingerprint_(computing)>), and IP address hashing.
 
 ### IP addresses
@@ -27,6 +29,8 @@ We drop the IP address from every single request. Period. We don't save or colle
 ### Unique views
 
 > We **do collect and store** whether visits are unique
+
+<img loading="lazy" src="https://assets.simpleanalytics.com/images/drawings/chart.png" style="float: right; margin-left: 1rem; width: 150px;">
 
 Our unique detection of visits is quite unique itself. Most services use cookies or IP addresses to see if a visitor has visited the website in the past, except we don't use cookies or IP addresses at all. In the UK, for example, websites can't use IP addresses (even hashed) without an active opt-in from each user. This is why Simple Analytics is compatible with all existing privacy laws, including GDPR. You don't need an opt-in for our service.
 
@@ -139,6 +143,8 @@ Collecting the dimensions of a user's browser window (`innerWidth` and `innerHei
 
 > We **do collect and store** how long a page is being viewed
 
+<img loading="lazy" src="https://assets.simpleanalytics.com/images/drawings/magnifying-glass.png" style="float: right; margin-left: 1rem; width: 150px;">
+
 When a visitor is on a page we collect the amount of seconds a page is viewed. If the page is hidden, we don't count those seconds. [Read this page](/explained/time-on-page) to learn more about how we measure time on page.
 
 ### Scrolled percentage
@@ -150,5 +156,7 @@ When a visitor scrolls on a page we record how far they scrolled. We do store th
 ### Do Not Track
 
 > By default we **do NOT collect or store** any data **if a visitor has Do Not Track** enabled
+
+<img loading="lazy" src="https://assets.simpleanalytics.com/images/drawings/cctv.png" style="float: right; margin-left: 2rem; width: 150px;">
 
 The <a href="https://en.wikipedia.org/wiki/Do_Not_Track">Do Not Track</a> browser setting asks a web application to disable either its own tracking or third-party tracking of an individual user. <a href="https://simpleanalytics.com/no-tracking">We never track</a> your users anyway, but by default we also ignore visits with Do Not Track enabled and do not add them to your dashboard. Read more on [how to disable](/dnt) this behavior.

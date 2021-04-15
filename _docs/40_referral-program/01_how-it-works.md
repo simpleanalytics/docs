@@ -14,8 +14,6 @@ When people signup via your link:
 
 > Go to [your referrals page](https://simpleanalytics.com/account/referrals) to create your personal referral link
 
-<img class="undraw-svg" src="/images/undraw-hang-out.svg" alt="">
-
 ## How it works for the referrer
 
 Each referral will only be equivalent to one month's of their chosen plan.

@@ -11,4 +11,4 @@ Whether you’re a startup or a global enterprise, learn how to integrate with S
 
 > Are you looking for our embed script? Go to [how to add our script](/script).
 
-<img class="undraw-svg" src="/images/undraw-filing-system.svg" alt="">
+<img class="drawing" src="https://assets.simpleanalytics.com/images/drawings/cookie-jar.png" alt="">
