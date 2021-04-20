@@ -14,8 +14,26 @@ If the current URL on your site includes a parameter named `ref` or `utm_source`
 For example, if you were to include this link in an email newsletter, Simple Analytics records the referrer as `email` in your dashboard, no matter where user actually comes from:
 
 ```
-https://example.com/path?ref=email
+https://example.com/landing-page?ref=email
 ```
+
+### UTM codes
+
+UTM codes are bits of text you can add to a link that tell Simple Analytics (as well as other analytics tools) a little bit more information about each link. Here's a sample of what one looks like:
+
+```
+https://example.com/landing-page?utm_source=company-x&utm_medium=newsletter&utm_campaign=march_01
+```
+
+We support the following codes:
+
+- UTM source (e.g.: `utm_source=company-x`)
+- UTM medium (e.g.: `utm_medium=newsletter`)
+- UTM campaign (e.g.: `utm_campaign=march_01`)
+- UTM content (e.g.: `utm_content=button_red`)
+- UTM term (e.g.: `utm_term=shoes`, this param is deprecated as it is intended to contain user generated content) 
+
+The UTM codes will show up on the dashboard in the "Referrals" dropdown menu. [Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer to learn more about UTM codes.
 
 ### Forbidden characters
 
