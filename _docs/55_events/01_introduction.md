@@ -13,7 +13,7 @@ To start working with events you need to have a recent version of our script. Th
 
 <!-- prettier-ignore -->
 ```html
-<script>window.sa_event=window.sa_event||function(event){sa_event.q?sa_event.q.push(event):sa_event.q=[event]}</script>
+<script>window.sa_event=window.sa_event||function(event,cb){sa_event.q?sa_event.q.push([event,cb]):sa_event.q=[[event,cb]]}</script>
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
@@ -22,7 +22,7 @@ Or if you use our [custom domain feature](/bypass-ad-blockers):
 
 <!-- prettier-ignore -->
 ```html
-<script>window.sa_event=window.sa_event||function(event){sa_event.q?sa_event.q.push(event):sa_event.q=[event]}</script>
+<script>window.sa_event=window.sa_event||function(event,cb){sa_event.q?sa_event.q.push([event,cb]):sa_event.q=[[event,cb]]}</script>
 <script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/latest.js"></script>
 <noscript><img src="https://[YOUR SUBDOMAIN LINKING TO US]/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
