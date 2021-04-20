@@ -41,6 +41,7 @@ These are the values we can't get with the pixel alone:
 - timezone ([a valid JS time zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))
 - referrer (the [document.referrer](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer) of the page)
 - unique (if a visit is unique; true or false)
+- collect-dnt (boolean to tell if it should collect [DNT visits](/dnt#enable-collecting-dnt-visits-for-noscriptgif-pixel))
 
 > \* We advice to always include the `hostname` and `path` parameters if possible. Some times the browser does not send a referrer with the image and then we can't store a page view.
 
