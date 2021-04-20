@@ -28,4 +28,4 @@ If you encounter issues, don't hesitate to contact us via [our support channels]
 
 ## Legacy
 
-Before this setting was called `data-skip-dnt`. We advise you to only use `data-collect-dnt`.
+Before this setting was called `data-skip-dnt`. Although both version will work, we advise you to only use `data-collect-dnt`.
