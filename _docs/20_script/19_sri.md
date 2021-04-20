@@ -2,8 +2,8 @@
 title: SRI version
 category: script
 permalink: /sri
-sriVersion: 6
-sriHash: sha256-SsAnjogPdVtk4SMT17C1H4hnlmdROlA+F8e6HWisc4s= sha384-LyCEiwCP+ZHrg0L2SL6oSPengdhyuzj0UVZ5vk/Nb3D8Pdz5FHc2rDk/5Kvv+TxK sha512-G62RkDPYjOD3RbUpgAHIHpZ8hDCheNWZbPx7GG5S0HCOBtaA0ZkNpYK/ioAmcS7im1KQOTXQqcGfNGDaaOg6GA==
+sriVersion: 7
+sriHash: sha256-h3cSuH9qvT4n4b2GyoWiT2JneSepI35f+ZJuh8PpzQ8= sha384-FMDsKPnkIpujeBBbBOK2v3MU7o6cGBg/dMoKxVVm9hqzhcPd19Tq6/PeM6FKw3ZI sha512-Jz0QmBIkE5jm7CHPxYqmZCv88BziX3GwL8qVYPUSMgZxTYMyi8nQcEetTkw/dt/7VdJzFRSLLWmDwRFSdBILBA==
 ---
 
 If you want to use SRI you can do this by using specific scripts. The default scripts are changing to reflect new features or code optimizations. You want to use SRI if you consider it a risk when our scripts change. You can also host our SRI script on your own server or CDN.
