@@ -7,7 +7,7 @@ redirect_from:
 version: 5
 ---
 
-To get aggregated statistics out of our API we created a Stats API. Basically it's the data your see in our dashboard. This API is useful for when you want to integrate Simple Analytics into your own systems. For example when embedding your data into a customized dashboard within your own website.
+To get aggregated statistics out of our API we created a Stats API. Basically it's the data you see in our dashboard. This API is useful for when you want to integrate Simple Analytics into your own systems. For example when embedding your data into a customized dashboard within your own website.
 
 > The data you get through this API is aggregated. If you are looking for raw data you can use our [Export page views API](/api/export-page-views).
 
