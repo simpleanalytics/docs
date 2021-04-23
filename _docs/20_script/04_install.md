@@ -28,6 +28,7 @@ For most frameworks you can just include the script. We track page views in a ma
 
 Get our official plugins for these frameworks:
 
+- [Ruby on Rails](https://rubygems.org/gems/simple_analytics_rails) <small>(source on [GitHub](https://github.com/simpleanalytics/rubyonrails-plugin#readme))</small>
 - [Gatsby](https://www.npmjs.com/package/gatsby-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/gatsby-plugin#readme))</small>
 - [Vue](https://www.npmjs.com/package/simple-analytics-vue) <small>(source on [GitHub](https://github.com/simpleanalytics/vue-plugin#readme))</small>
 - [VuePress](https://www.npmjs.com/package/vuepress-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/vuepress-plugin#readme))</small>
