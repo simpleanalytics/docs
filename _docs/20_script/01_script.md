@@ -22,7 +22,7 @@ With Simple Analytics you don't need to manually trigger page views in SPA. We a
 
 Some people like a very light script. All our scripts are heavily compressed and we have [an extra light](/light) version.
 
-If you want to run the script on localhost, please use our dev (`https://scripts.simpleanalyticscdn.com/latest.dev.js`) version. Note the `.dev` part. If you're done you can remove that part and it will stop sending data from localhost.
+If you want to run the script on localhost, please use our dev (`https://scripts.simpleanalyticscdn.com/latest.dev.js`) version. Note the `.dev` part. You might want to [overwrite your hostname](/overwrite-domain-name) from localhost to something like `dev.example.com` (where `example.com` is your domain) to receive it in your dashboard. Make sure to remove the `.dev` part from the script on production.
 
 When you are done implementing [go to your dashboard](https://simpleanalytics.com/websites).
 
