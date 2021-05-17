@@ -4,7 +4,7 @@ category: script
 permalink: /overwrite-domain-name
 ---
 
-Sometimes you want to link multiple domains into one domain in your dashboard. Or you want to use a different domain then people see in their browser address bar. You can overwrite the default domain name by specifying its hostname.
+Sometimes you want to link multiple domains into one domain in your dashboard. Or you want to use a different domain than people see in their browser address bar. You can overwrite the default domain name by specifying its hostname.
 
 Make sure to include the our <code>simpleanalytics<strong>cdn</strong>.com</code> script. Include these two lines at the end of your `<body>`:
 
