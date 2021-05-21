@@ -33,3 +33,47 @@ blockquote.note {
     font-size: 14px;
   }
 }
+
+.video-container {
+  line-height: 0;
+  font-size: 0;
+  width: 100%;
+  position: relative;
+}
+
+.video-container.paused::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
+  background-color: rgba(191, 237, 245, 0.5);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='-4 -4 32 32'%3e%3cpath fill='%2300c5e5' stroke='%23ffffff' d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z'/%3e%3c/svg%3e");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .video-container.paused::before {
+    background-size: 60px 60px;
+  }
+}
+
+.video-container.scaled {
+  height: 0px;
+}
+
+.video-container > video {
+  width: 100%;
+}
+
+.video-container.scaled > video {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

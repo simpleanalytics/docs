@@ -275,5 +275,26 @@
       })
     })()
   </script>
+  <script>
+    (function () {
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementsByTagName("video").forEach((video) => {
+          const container = video.parentElement;
+          container.classList.add("paused");
+          video.addEventListener("play", () => {
+            container.classList.remove("paused");
+          });
+          video.addEventListener("pause", () => {
+            container.classList.add("paused");
+          });
+          video.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (video.paused) video.play();
+            else video.pause();
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
