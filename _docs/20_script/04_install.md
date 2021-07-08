@@ -11,6 +11,7 @@ We try to make installing Simple Analytics as simple as possible. We want privac
 
 Read our guides on how to install Simple Analytics on:
 
+- [Google Tag Manager](/install-simple-analytics-with-google-tag-manager) <small>(source on [GitHub](https://github.com/simpleanalytics/google-tag-manager#readme))</small>
 - [Wordpress](/install-simple-analytics-on-wordpress) <small>(source on [GitHub](https://github.com/simpleanalytics/wordpress-plugin#readme))</small>
 - [Ghost](/install-simple-analytics-on-ghost)
 - [CloudFlare](/install-simple-analytics-on-cloudflare) <small>(source on [GitHub](https://github.com/simpleanalytics/cloudflare-app#readme))</small>
