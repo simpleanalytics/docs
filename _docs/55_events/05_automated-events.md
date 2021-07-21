@@ -227,6 +227,6 @@ The script is compressed with the public tool [jscompress.com](https://jscompres
 
 > When you test with this script, note that it uses the `DOMContentLoaded` event. This event only fires when the script has been added before the page has loaded. If you want to test the script in your console make sure to replace <code>window.addEventListener("DOMContentLoaded", onDOMContentLoaded);</code> with `onDOMContentLoaded()`.
 
-It takes care of sending it as an event to Simple Analytics. As events can only be letters, numbers, and underscores we already convert this name.
+It takes care of sending it as an event to Simple Analytics. Events can only be letters, numbers, and underscores. We convert the event names directly in this script.
 
 We love to improve our automated events. Please let us know if you need any help! We don't mind getting our hands dirty.
