@@ -7,7 +7,7 @@ redirect_from:
   - /uniques
 ---
 
-At Simple Analytics we do things a bit differently. We put the privacy of your visitors first. At the same time we comply with strict (and necessary) privacy laws. This has an impact on our statistics, like unique visits. We record page views (which is very easy to do without invading the privacy of your visitors). With unique visits it's slightly difficult to invade. Traditional analytics tools will show you unique visits based on a cookie they place on the visitors computer. This can be extremely invasive to privacy because a visitor can be tracked for a longer period of time.
+At Simple Analytics we do things a bit differently. We put the privacy of your visitors first. At the same time we comply with strict (and necessary) privacy laws. This has an impact on our statistics, like unique visits. We record page views (which is very easy to do without invading the privacy of your visitors). With unique visits it's easier to invade the privacy of your visitors. Traditional analytics tools will show you unique visits based on a cookie they place on the visitors computer. This can be extremely invasive to privacy because a visitor can be tracked for a longer period of time. Most privacy analytics tools use hashes from the IP address of visitors. Combined with a date this is a bit better for privacy. We do it even better.
 
 ## No cookies or fingerprinting
 
