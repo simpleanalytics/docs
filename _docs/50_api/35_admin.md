@@ -28,7 +28,7 @@ Your user ID and API key are shown in [your account settings](https://simpleanal
 > `POST` [https://simpleanalytics.com/api/websites/add](https://simpleanalytics.com/api/websites/add)
 
 <blockquote class="red">
-  <p>For this endpoint you will need a Business plan. You will be upgraded automatically when using this endpoint.</p>
+  <p>For this endpoint you need a Business plan. You will be upgraded automatically when using this endpoint.</p>
 </blockquote>
 
 You can specify a time zone via `timezone` and set the website to public or private via the `public` boolean. [See wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of valid time zones. If you don't specify a time zone we will set it to UTC.
