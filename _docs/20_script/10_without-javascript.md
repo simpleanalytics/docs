@@ -49,6 +49,20 @@ This way you are more in control what you are sending to our servers. It's also 
 
 > We don't record visitors that have DNT enabled. If you want to record those visits add `ignore-dnt=true` to the pixel parameters.
 
+## Browser extensions
+
+Browser extensions usually don't have a normal URL and no referrer information. That's why you need to specify both `hostname` and `path`.
+
+```html
+<img
+  src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=example.com&path=%2F"
+  referrerpolicy="no-referrer-when-downgrade"
+  alt=""
+/>
+```
+
+In most cases you can just make up a `hostname`, like `extension.mywebsite.com`. As long as you [add it in your dashboard](https://simpleanalytics.com/websites/add), it's fine.
+
 ## Validate your implementation
 
 If you want to validate your implementation you can test this in your browser. Open the page you implemented the pixel on.
