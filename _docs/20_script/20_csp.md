@@ -14,7 +14,7 @@ For Simple Analytics you want to add the following Content Security Policy heade
 Content-Security-Policy: script-src 'self' https://scripts.simpleanalyticscdn.com; connect-src 'self' https://queue.simpleanalyticscdn.com; img-src 'self' https://queue.simpleanalyticscdn.com;
 ```
 
-Alternatively, the <meta> element can be used to configure a policy, for example:
+Alternatively, a `<meta>` element can be used to configure a policy, for example:
 
 ```
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://scripts.simpleanalyticscdn.com; connect-src 'self' https://queue.simpleanalyticscdn.com; img-src 'self' https://queue.simpleanalyticscdn.com;">
