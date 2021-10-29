@@ -13,6 +13,8 @@ To install this extension and use it for Simple Analytics you can follow the ste
 
 You will need the script URL at some point: `https://scripts.simpleanalyticscdn.com`.
 
+> Do you have a [custom domain](/bypass-ad-blockers)? Make sure to add that to about:blank. For example: `https://simple.yourdomain.com`.
+
 <video controls class="border">
   <source src="https://assets.simpleanalytics.com/videos/docs/about-blank-mac-os-app/install-about-blank-on-mac-os.mp4" type="video/mp4">
   <source src="https://assets.simpleanalytics.com/videos/docs/about-blank-mac-os-app/install-about-blank-on-mac-os.webm" type="video/webm">
