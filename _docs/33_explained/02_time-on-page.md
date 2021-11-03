@@ -47,9 +47,9 @@ At Simple Analytics we researched what the best way would be to have an accurate
 
 When you calculate the average you sum all numbers and divide it by the amount of page views. 10 + 20 + 15 + 10 + 1000 = 1055. 1055 / 5 = 211. **The average for _time on page_ for all 5 page views is 211 seconds.**
 
-When you calculate the median you sort the numbers from low to high and pick the middle number. In this case, we sort the numbers link this: 10, 10, 15, 20, 1000. Then we pick the middle number: 15. **The median for all 5 page views is 15 seconds.**
+When you calculate the median you sort the numbers from low to high and pick the middle number. In this case, we sort the numbers like this: 10, 10, 15, 20, 1000. Then we pick the middle number: 15. **The median for all 5 page views is 15 seconds.**
 
-We believe (and our customers with us) the more accurate number for the above dataset is 15 seconds. Those 1000 seconds represent likely somebody that left their computer running while not actively using it.
+We believe (and our customers with us) the more accurate number for the above dataset is 15 seconds. Those 1000 seconds represent likely somebody that left their computer running while not actively interacting with the website.
 
 [Read the discussion](https://github.com/simpleanalytics/roadmap/issues/100) we had with our customers on GitHub.
 
