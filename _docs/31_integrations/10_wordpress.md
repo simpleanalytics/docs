@@ -22,6 +22,13 @@ There are two ways to add our WordPress plugin to your site. Via the your WordPr
 1. Click on **Install Now**
 1. After this click on **Activate** and our plugin is installed
 
+<blockquote>
+   <p>
+     Do note that your own visits are not counted in our dashboard. Log out
+     from Wordpress to see your own visits appear in the dashboard.
+   </p>
+</blockquote>
+
 <details markdown="1">
    <summary>Manual installation</summary>
 
@@ -57,6 +64,6 @@ Follow these steps to add Simple Analytics to your WordPress website:
 
    ![](/images/wordpress-installed-plugins.jpg)
 
-<details>
+</details>
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
