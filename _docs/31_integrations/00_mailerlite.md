@@ -1,6 +1,5 @@
 ---
 title: Install Simple Analytics on MailerLite
-menu: MailerLite
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-on-mailerlite

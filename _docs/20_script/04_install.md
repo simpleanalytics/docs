@@ -7,7 +7,7 @@ permalink: /install-on-other-platforms
 
 ## Platform guides
 
-We try to make installing Simple Analytics as simple as possible. We want privacy to be accessible as possible. We don't require the need of a developer if you use any of the following tools.
+We try to make installing Simple Analytics as simple as possible. We want privacy to be accessible as possible. We don't require the need for a developer if you use any of the following tools.
 
 Read our guides on how to install Simple Analytics on:
 
@@ -25,19 +25,20 @@ Read our guides on how to install Simple Analytics on:
 
 ## Framework plugins
 
-For most frameworks you can just include the script. We track page views in a magic way so you don't have to change your app code. [Read on how we do that](/trigger-custom-page-views). For some we got requests to create a plugin for them.
+For most frameworks, you can include the script. We magically track page views, so you don't have to change your app code. [Read on how we do that](/trigger-custom-page-views). For some, we got requests to create a plugin for them.
 
 Get our official plugins for these frameworks:
 
-- [Ruby on Rails](https://rubygems.org/gems/simple_analytics_rails) <small>(source on [GitHub](https://github.com/simpleanalytics/rubyonrails-plugin#readme))</small>
-- [Gatsby](https://www.npmjs.com/package/gatsby-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/gatsby-plugin#readme))</small>
-- [Vue](https://www.npmjs.com/package/simple-analytics-vue) <small>(source on [GitHub](https://github.com/simpleanalytics/vue-plugin#readme))</small>
-- [VuePress](https://www.npmjs.com/package/vuepress-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/vuepress-plugin#readme))</small>
+- [React](/install-simple-analytics-with-react) <small>(guide only)</small>
+- [Ruby on Rails](/install-simple-analytics-with-ruby-on-rails) <small>(source on [GitHub](https://github.com/simpleanalytics/rubyonrails-plugin#readme))</small>
+- [Gatsby](/install-simple-analytics-with-gatsby) <small>(source on [GitHub](https://github.com/simpleanalytics/gatsby-plugin#readme))</small>
+- [Vue](/install-simple-analytics-with-vue) <small>(source on [GitHub](https://github.com/simpleanalytics/vue-plugin#readme))</small>
+- [VuePress](/install-simple-analytics-with-vuepress) <small>(source on [GitHub](https://github.com/simpleanalytics/vuepress-plugin#readme))</small>
 - [Nuxt.js](/install-simple-analytics-with-nuxt) <small>(guide only)</small>
-- [Gridsome](https://gridsome.org/plugins/gridsome-plugin-simple-analytics) <small>(source on [GitHub](https://github.com/simpleanalytics/gridsome-plugin#readme))</small>
-- [Django](https://pypi.org/project/simpleanalytics/) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
+- [Gridsome](/install-simple-analytics-with-gridsome) <small>(source on [GitHub](https://github.com/simpleanalytics/gridsome-plugin#readme))</small>
+- [Django](/install-simple-analytics-with-django) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
 - [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
 - [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
-- [Next.js](https://github.com/simpleanalytics/next-js-app) <small>(sample app only)</small>
+- [Next.js](/install-simple-analytics-with-next) <small>(guide only)</small>
 
 > Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact) Happy to create a plugin for you.
