@@ -1,11 +1,11 @@
 ---
-title: Install Simple Analytics with Next
+title: Install Simple Analytics with Next.js
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-next
 ---
 
-Next has a lovely [Script component](https://nextjs.org/docs/basic-features/script).
+Next.js has a lovely [Script component](https://nextjs.org/docs/basic-features/script).
 
 In your app, you can add this Script component:
 
