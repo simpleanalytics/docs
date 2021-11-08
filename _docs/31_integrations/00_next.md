@@ -9,7 +9,7 @@ Next.js has a lovely [Script component](https://nextjs.org/docs/basic-features/s
 
 In your app, you can add this Script component:
 
-```js
+```jsx
 // _app.tsx
 import type { AppProps } from "next/app";
 import React from "react";
