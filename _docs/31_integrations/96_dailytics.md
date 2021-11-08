@@ -14,13 +14,13 @@ You will need to start by creating an account at [dailytics.com](https://dailyti
 
 ## Create your first report
 
-In this point you will need to have a valid `user_id` and `api_key` at Simple Analytics. You can get them at your [Account Settings](https://simpleanalytics.com/account), in the "API Access" section. It's a good practice to create a new `api_key` specially for Dailytics.
+At this point, you will need to have a valid `user_id` and `api_key` at Simple Analytics. You can get them at your [Account Settings](https://simpleanalytics.com/account#api), in the "API Access" section. It's a good practice to create a new `api_key` specially for Dailytics.
 
 In the first half of the form, you will need to set a report name (it will be used as the subject of your report), the periodicity of the email (daily, weekly or monthly), a logo url (optional, but will make your email report look nicer), and the email address(es) you want to send the report to.
 
 <img class="border" src="/images/dailytics-form-01.png" alt="Create a report at Dailytics - form, first part" />
 
-In the second part you will need to start by including your `user_id` (the one that starts with `sa_uid_...`) and your `api_key` (the one that starts with `sa_api_key_...`). Once you put them, Dailytics will load automatically the list of all the websites that they can get with those credentials. Choose the right one and the time of the day you want your report to be sent.
+In the second part, you will need to start by including your `user_id` (the one that starts with `sa_user_id_...`) and your `api_key` (the one that starts with `sa_api_key_...`). Once you put them, Dailytics will load automatically the list of all the websites that they can get with those credentials. Choose the right one and the time of the day you want your report to be sent.
 
 <img class="border" src="/images/dailytics-form-02.png" alt="Create a report at Dailytics - form, second part" />
 
@@ -40,6 +40,6 @@ The best part of the Simple Analytics integration is that we support wildcards i
 
 That's it! you can now start sending these reports to your team or clients. They are very useful to start casual conversations related to the performance of some articles or editors (dailytics will try to fetch the `author` of any article), products or any new source of traffic. They will also let you know if you broke your traffic record yesterday!
 
-You can find more details of the integration [here](https://dailytics.com/simple-analytics/)
+You can find more details of the integration at [dailytics.com/simple-analytics](https://dailytics.com/simple-analytics/).
 
 [Get started with Dailytics](https://dailytics.com).
