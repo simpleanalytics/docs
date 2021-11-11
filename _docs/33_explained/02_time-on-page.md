@@ -5,7 +5,7 @@ category: explained
 permalink: /explained/time-on-page
 ---
 
-_Time on page_ is an important metric to measure how engaged your visitors are with your content. But in most analytics tools there is something very wrong with that metric. You might think when using Simple Analytics: "These numbers are lower than I'm used to", well, that's probably right.
+_Time on page_ is an important metric to measure how engaged your visitors are with your content. But in most analytics tools, there is something very wrong with that metric. You might think when using Simple Analytics: "These numbers are lower than I'm used to", well, that's probably right.
 
 We care about numbers being close to real-world scenarios. With _time on page_ for example it makes a lot of sense to exclude the duration when visitors are not interacting with the page.
 
@@ -15,7 +15,7 @@ Take Google Analytics for example. Let's say you have Google Analytics installed
 
 ![](/images/time-on-page-ga-stop.png)
 
-In the illustration above you would expect to at least record the time for the first page (you see in browsers 1 & 3). But instead, you don't get any _time on page_ for this situation in Google Analytics. It's because by default Google Analytics does not send a request at the end of the visit but only at the beginning. They have no way of knowing how long a visitor will be on the page at the beginning. They can however calculate the time between the first page and the following page (on the same domain). In that case, their flow works like this:
+In the illustration above you would expect to at least record the time for the first page (you see in browsers 1 & 3). But instead, you don't get any _time on page_ for this situation in Google Analytics. It's because, by default Google Analytics does not send a request at the end of the visit but only at the beginning. They have no way of knowing how long a visitor will be on the page at the beginning. They can however calculate the time between the first page and the following page (on the same domain). In that case, their flow works like this:
 
 ![](/images/time-on-page-ga.png)
 
@@ -29,11 +29,18 @@ In this case, the visitor visits 2 pages (`page1` and `page2`) on `yourwebsite.c
 
 ## Simple Analytics
 
-Simple Analytics detects when a user navigates to a different website (in a new tab). We stop the timer when we detect that so the duration of your visitors don't count towards the total duration on a page. Simple Analytics records _time on page_ for every page your visitors visit.
+Simple Analytics detects when a user navigates to a different website (in a new tab). We stop the timer when we detect that, so the duration of your visitors doesn't count towards the total duration on a page. Simple Analytics records _time on page_ for every page your visitors visit.
 
 ![](/images/time-on-page-sa.png)
 
 In the above example, we get the expected result: a visitor was 15 seconds on `page1` and 5 seconds on `page2`. Nothing more, nothing less. That's what you can expect from Simple Analytics. We make sure your data is as close to real-world scenarios as possible.
+
+{%
+  include video.html
+  slug="time-on-page"
+  formats="mp4,ogg,webm,wmv"
+  poster="video.png"
+%}
 
 ## Median versus average
 
@@ -47,7 +54,7 @@ At Simple Analytics we researched what the best way would be to have an accurate
 
 When you calculate the average you sum all numbers and divide it by the amount of page views. 10 + 20 + 15 + 10 + 1000 = 1055. 1055 / 5 = 211. **The average for _time on page_ for all 5 page views is 211 seconds.**
 
-When you calculate the median you sort the numbers from low to high and pick the middle number. In this case, we sort the numbers like this: 10, 10, 15, 20, 1000. Then we pick the middle number: 15. **The median for all 5 page views is 15 seconds.**
+When calculating the median, you sort the numbers from low to high and pick the middle number. In this case, we sort the numbers like this: 10, 10, 15, 20, 1000. Then we pick the middle number: 15. **The median for all 5 page views is 15 seconds.**
 
 We believe (and our customers with us) the more accurate number for the above dataset is 15 seconds. Those 1000 seconds represent likely somebody that left their computer running while not actively interacting with the website.
 
@@ -55,6 +62,6 @@ We believe (and our customers with us) the more accurate number for the above da
 
 ### Bounce rate and bots
 
-To make the _time on page_ more accurate we exclude the page views with a _time on page_ **lower than 5 seconds**. We see those visits as bounced visits and don't include them in the _time on page_ metric. We exclude bots from all our stats (although you have the [ability to download them](/export-data)).
+To make the _time on page_ more accurate, we exclude the page views with a _time on page_ **lower than 5 seconds**. We see those visits as bounced visits and don't include them in the _time on page_ metric. We exclude bots from all our stats (although you have the [ability to download them](/export-data)).
 
 Have any questions? [Ask away!](https://simpleanalytics.com/contact)
