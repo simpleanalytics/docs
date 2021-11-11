@@ -8,8 +8,6 @@ How can we make it easy to find that data about that specific page/referrer/UTM 
 
 {%
   include video.html
-  controls="true"
-  red="true"
   slug="filters"
   formats="mp4,ogg,webm,wmv"
   poster="video.png"
