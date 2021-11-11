@@ -24,24 +24,40 @@
     endif
     %}
     class="post-video {% if include.red %}red{% endif %}"
-    poster="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.png"
+    {% if include.poster and include.poster includes '.' %}
+    poster="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.poster }}"
+    {% endif %}
   >
+    {% if !include.formats or include.formats contains 'mp4' %}
     <source
       src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.mp4"
       type="video/mp4"
     />
+    {% endif %}
+    {% if !include.formats or include.formats contains 'webm' %}
     <source
       src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.webm"
       type="video/webm"
     />
+    {% endif %}
+    {% if !include.formats or include.formats contains 'ogg' %}
     <source
       src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.ogg"
       type="video/ogg"
     />
+    {% endif %}
+    {% if !include.formats or include.formats contains 'wmv' %}
     <source
       src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.wmv"
       type="video/wmv"
     />
+    {% endif %}
+    {% if !include.formats or include.formats contains 'mov' %}
+    <source
+      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.mov"
+      type="video/mov"
+    />
+    {% endif %}
     <p>
       Your browser doesn't support HTML5 video. {% if include.noLink %} Here is
       a link instead: https://assets.simpleanalytics.com/videos/{{ include.mp4
