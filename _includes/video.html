@@ -24,7 +24,7 @@
     endif
     %}
     class="post-video {% if include.red %}red{% endif %}"
-    {% if include.poster and include.poster includes '.' %}
+    {% if include.poster and include.poster contains '.' %}
     poster="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.poster }}"
     {% endif %}
   >

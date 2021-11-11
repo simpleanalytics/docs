@@ -10,7 +10,6 @@ You can embed our script via Google Tag Manager. We have an official Community T
 {%
   include video.html
   controls="true"
-  red="true"
   slug="google-tag-manager-integration"
   formats="mov,mp4,ogg,webm,wmv"
   poster="poster.png"
