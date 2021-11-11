@@ -25,9 +25,9 @@ If you prefer text instructions, follow this guide:
 1. Click "Add to workspace"
 1. Click "Add" in the popup
 1. Change some settings if needed
-  - [Custom domain](/bypass-ad-blockers)
-  - [Collect DoNotTrack](/dnt)
-  - [Events](/events)
+   - [Custom domain](/bypass-ad-blockers)
+   - [Collect DoNotTrack](/dnt)
+   - [Events](/events)
 1. Click "Choose a traigger to make this tag fire..."
 1. Select "Initialization - All Pages"
 1. Click "Save" to save the tag
