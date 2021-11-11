@@ -6,11 +6,18 @@ permalink: /import-simple-analytics-data-in-chartbrew
 canonical: https://chartbrew.com/blog/how-to-visualize-simple-analytics-data-with-chartbrew/
 ---
 
-In this tutorial, we are going to connect Simple Analytics' API, get different datasets, and create a dashboard in Chartbrew to show all this data.
+In this tutorial, we will connect Simple Analytics' API, get different datasets, and create a dashboard in Chartbrew to show all this data.
 
-[Chartbrew](https://chartbrew.com/) allows you to connect all your databases and APIs to create beautiful live charts and visualize your data. It supports public dashboards and helps you connect multiple data sources into one dashboard.
+[Chartbrew](https://chartbrew.com/) allows you to connect all your databases and APIs to create beautiful live charts and visualize your data. It supports public dashboards and helps you combine multiple data sources into one dashboard.
 
-The part we're going to focus on here is creating a Chartbrew dashboard with data from the Simple Analytics API. In this tutorial, we are going to go through how to connect to the API, and then we are going to create a chart and a table view to display the data inside [Chartbrew](https://chartbrew.com/). For this tutorial, we are going to use the public data from the [simpleanalytics.com](https://simpleanalytics.com/simpleanalytics.com) site itself, but you can use your own website if you wish.
+{%
+  include video.html
+  slug="chartbrew"
+  formats="mp4,ogg,webm,wmv"
+  poster="video.png"
+%}
+
+The part we're going to focus on here is creating a Chartbrew dashboard with data from the Simple Analytics API. In this tutorial, we will go through how to connect to the API, and then we will create a chart and a table view to display the data inside [Chartbrew](https://chartbrew.com/). For this tutorial, we will use the public data from the [simpleanalytics.com](https://simpleanalytics.com/simpleanalytics.com) site itself, but you can use your own website if you wish.
 
 Grab your favorite brew, create a new project in Chartbrew and let's get started!
 
@@ -18,7 +25,7 @@ Grab your favorite brew, create a new project in Chartbrew and let's get started
 
 ## Connect to the Simple Analytics API
 
-We are going to follow the [Stats API](https://docs.simpleanalytics.com/api/stats) documentation to fetch the data we need for the charts. The documentation gives us the main URL that we can use to fetch the data:
+We will follow the [Stats API](https://docs.simpleanalytics.com/api/stats) documentation to fetch the data we need for the charts. The documentation gives us the main URL that we can use to fetch the data:
 
 ```
 https://simpleanalytics.com/simpleanalytics.com.json?version=4&fields=histogram
@@ -31,13 +38,13 @@ Head over to the connections menu in your new project in Chartbrew and create a 
 
 <img class="border" src="/images/chartbrew-create-connection.png" alt="Create connection in Chartbrew" />
 
-Note that for the hostname we only need to use https://simpleanalytics.com and you'll see why later. You can ignore the **Header** part if your data is public. In case you are using your own website and its data is private in Simple Analytics, you will have to add an authentication header. [Follow the documentation](https://docs.simpleanalytics.com/api/authenticate) to generate an API key if you don't already have one and then add a header to the Chartbrew connection like above.
+Note that for the hostname, we only need to use https://simpleanalytics.com, and you'll see why later. You can ignore the **Header** part if your data is public. If you are using your own website and its data is private in Simple Analytics, you will have to add an authentication header. [Follow the documentation](https://docs.simpleanalytics.com/api/authenticate) to generate an API key if you don't already have one and then add a header to the Chartbrew connection like above.
 
 Now that we have a connection, it's time to brew some charts!
 
 ## Create a time-series chart
 
-Next, we are going to create a time-series chart showing the number of visitors and page views for the website. Head over to the dashboard of the new project and add a new chart called "Site stats" and then create a dataset called "Page views".
+Next, we will create a time-series chart showing the number of visitors and page views for the website. Head over to the dashboard of the new project and add a new chart called "Site stats" and then create a dataset called "Page views".
 
 <img class="border" src="/images/chartbrew-create-data-set.png" alt="Create data set in Chartbrew" />
 
@@ -47,7 +54,7 @@ Once we have the first dataset, we can connect it to the Simple Analytics connec
 
 <p class="caption">Click on "Make request" to configure the first API call</p>
 
-In the next window, we can configure the API call we're making to the Simple Analytics connection. Copy the following in the **route** field and them press on "Make the request":
+We can configure the API call we're making to the Simple Analytics connection in the next window. Copy the following in the **route** field, and then press on "Make the request":
 
 ```
 /simpleanalytics.com.json?version=4&fields=histogram
@@ -59,7 +66,7 @@ In the next window, we can configure the API call we're making to the Simple Ana
 
 The data we get gives us a **histogram** array that contains the page views and visitors. The first dataset we created is for the Page Views so let's display this on the chart.
 
-When you press "Done", you will see a straight line on the chart. This is because Chartbrew tries to do a **count** operation by default. Change the operation on the **Y-Axis** with "No operation" and the chart will show all the page views like in the API response.
+When you press "Done", you will see a straight line on the chart. This is because Chartbrew tries to do a **count** operation by default. Change the operation on the **Y-Axis** with "No operation". The chart will show all the page views like in the API response.
 
 <img class="border" src="/images/chartbrew-y-axis.png" alt="Y-axis in Chartbrew" />
 
@@ -75,7 +82,7 @@ Here we go, a time-series chart that shows the page views and visitors. You can 
 
 ## Creating a table to show the referrals
 
-Chartbrew can also show data in table views and this is useful for things like referrals, UTM sources, browsers, and more. You'll see more examples as we progress through the tutorial.
+Chartbrew can also show data in table views, and this is useful for things like referrals, UTM sources, browsers, and more. You'll see more examples as we progress through the tutorial.
 
 For starters, let's focus on getting the referrers. Create a new chart like we did previously and name this one **Referrals** and then a dataset with the same name. You should have something like this:
 
@@ -105,7 +112,7 @@ Repeat all the steps above, but change the route to the following:
 
 ## Sharing, embedding, and auto-updating
 
-There are extra things you can do with the charts after you created them in Chartbrew. Head over to the dashboard and click on the individual chart menu to see all the options:
+There are extra things you can do with the charts after you create them in Chartbrew. Head over to the dashboard and click on the individual chart menu to see all the options:
 
 <img class="border" src="/images/chartbrew-chart-options.png" alt="Select chart options in Chartbrew" />
 

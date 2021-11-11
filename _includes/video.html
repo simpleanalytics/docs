@@ -30,31 +30,31 @@
   >
     {% if !include.formats or include.formats contains 'mp4' %}
     <source
-      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename or 'video' }}.mp4"
+      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename | default: 'video' }}.mp4"
       type="video/mp4"
     />
     {% endif %}
     {% if !include.formats or include.formats contains 'webm' %}
     <source
-      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename or 'video' }}.webm"
+      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename | default: 'video' }}.webm"
       type="video/webm"
     />
     {% endif %}
     {% if !include.formats or include.formats contains 'ogg' %}
     <source
-      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename or 'video' }}.ogg"
+      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename | default: 'video' }}.ogg"
       type="video/ogg"
     />
     {% endif %}
     {% if !include.formats or include.formats contains 'wmv' %}
     <source
-      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename or 'video' }}.wmv"
+      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename | default: 'video' }}.wmv"
       type="video/wmv"
     />
     {% endif %}
     {% if !include.formats or include.formats contains 'mov' %}
     <source
-      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename or 'video' }}.mov"
+      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename | default: 'video' }}.mov"
       type="video/mov"
     />
     {% endif %}
