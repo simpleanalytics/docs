@@ -5,7 +5,9 @@ category: integrations
 permalink: /install-simple-analytics-with-google-tag-manager
 ---
 
-You can embed our script via Google Tag Manager. We have an official Community Tag. Here is how to install this tag:
+You can embed our script via Google Tag Manager. We have an official Community Tag. Here is how to install this tag.
+
+Start at [the Google Tag Manager homepage](https://tagmanager.google.com) and follow the instructions:
 
 {%
   include video.html
