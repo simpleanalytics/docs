@@ -5,29 +5,36 @@ category: events
 permalink: /events
 ---
 
-> The event UI is not that feature rich as you would expect from other Simple Analytics features. To access this feature in your dashboard go to [your events page](https://simpleanalytics.com/select-website/events).
+With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email links. You will need to install our separate script for it, but after that you don't need to modify any code.
+
+If you want to get your hands dirty, you can collect events for all kinds of custom events. Like form submits, button clicks, and many more.
+
+> The event UI is not that feature rich as you would expect from other Simple Analytics features. To access this feature in your dashboard go to [your events page](https://simpleanalytics.com/select-website/events). We are working on a new version where the posibilities are endless. Want to join that conversation? [Join our Slack channel](https://join.slack.com/t/simple-analytics/shared_invite/zt-ppfiaq04-LNDu5Cs4EOaJD0JhIFdkcg) to discuss the new events.
 
 ## Install embed script
 
 To start working with events you need to have a recent version of our script. This script includes the normal page view functionality and the events feature.
 
+Place this `<script>`-tag in the `<head>` of the page:
+
 <!-- prettier-ignore -->
 ```html
 <script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
+```
+
+The script above is required for when events happen before our embed script is loaded. If your events only happen after the script is loaded, you don't really need it.
+
+The next part is probably already on your page for collecting page views. If not, add it in your `<body>`-tag:
+
+<!-- prettier-ignore -->
+```html
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
-Or if you use our [custom domain feature](/bypass-ad-blockers):
+If you **can't** add it to your `<body>` tag, place it in the `<head>` of the page. Don't place the `<noscript>` part in the `<head>`. If you can't add it to the body, just omit it.
 
-<!-- prettier-ignore -->
-```html
-<script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
-<script async defer src="https://[YOUR SUBDOMAIN LINKING TO US]/latest.js"></script>
-<noscript><img src="https://[YOUR SUBDOMAIN LINKING TO US]/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-```
-
-> **Developers:** place the first script (`window.sa_event=w...`) in the `<head>` or top part of your `<body>` in your HTML. The second script (`latest.js`) can be placed in the `<head>` or `<body>`. The `<noscript>` should be placed in the `<body>`.
+If you use our [custom domain feature](/bypass-ad-blockers), make sure to replace `scripts.simpleanalyticscdn.com` and `queue.simpleanalyticscdn.com` with your custom domain.
 
 ### Developers
 
