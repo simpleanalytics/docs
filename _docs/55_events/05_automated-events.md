@@ -45,8 +45,6 @@ Or if you want to change some settings (these are the defaults):
   src="https://scripts.simpleanalyticscdn.com/auto-events.js" />
 ```
 
-> When you test with this script, note that it uses the `DOMContentLoaded` event. This event only fires when the script has been added before the page has loaded. If you want to test the script in your console, add `data-domcontentloaded="false"` as an attribute to the script.
-
 It takes care of sending it as an event to Simple Analytics. Events can only be letters, numbers, and underscores. We convert the event names directly in this script.
 
 We love to improve our automated events. Please let us know if you need any help! We don't mind getting our hands dirty.
