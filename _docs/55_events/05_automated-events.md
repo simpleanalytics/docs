@@ -36,6 +36,7 @@ Or if you want to change some settings (these are the defaults):
 
 <!-- prettier-ignore -->
 ```html
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
 <script
   async
   data-collect="outbound,emails,downloads"
