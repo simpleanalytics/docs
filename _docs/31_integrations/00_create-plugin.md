@@ -11,7 +11,7 @@ To create a plugin for Simple Analytics we have a few requirements that need to 
 
 A few examples: Wordpress, Drupal, Google Tag Manager, and CloudFlare.
 
-The settings below should be changable via the UI of the plugin. All settings need to passed to the `<script>`-tag. For example:
+The settings below should be changable via the UI of the plugin. All changed settings need to be passed to the `<script>`-tag. For example:
 
 ```html
 <script data-mode="hash" data-collect-dnt="true" src="..." />
