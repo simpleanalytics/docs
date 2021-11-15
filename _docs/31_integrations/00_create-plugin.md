@@ -29,6 +29,8 @@ If possible, do not collect data from admins. Let's say, you are an admin and lo
 
 ### Scripts
 
+We have two scripts that need to be embedded into the page: Embed script (to collect data), Events script (to queue events before the Embed script is loaded).
+
 #### Embed script
 
 The following HTML should be added to the `<body>` of the page:
