@@ -25,14 +25,38 @@ Settings that require an `array` would preferably have an UI element that adds i
 
 ### Hide admins
 
-If possible, do not collect data from admins. Let's say, you are an admin and logged in to Drupal. If the plugin can detect it's an admin to the current site, do not collect data for that user. Make this optional in the UI.
+If possible, do not collect data from admins. Let's say, you are an admin and logged in to Drupal. If the plugin can detect it's an admin to the current site, do not collect data for that user . Make this optional in the UI.
 
-### Checklist
+### Scripts
+
+#### Embed script
+
+The following HTML should be added to the `<body>` of the page:
+
+```html
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+````
+
+If that is not possible, add only the `<script>`-tag in the `<head>` of the page and ignore the `<noscript>` part.
+
+#### Events script
+
+Place this `<script>`-tag in the `<head>` of the page:
+
+```html
+<script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
+```
+
+### System plugin checklist
 
 - [ ] All settings below are changable via the UI of the plugin
-- [ ] Settings are hidden by default
-- [ ] Add ignore admins feature if possible
-- [ ] Auto deploy via GitHub Actions
+- [ ] Settings are hidden by default (if possible)
+- [ ] Add ignore admins feature (if possible)
+- [ ] Allow custom settings (key, value)
+- [ ] Embed script is added to the body of the page (with the changed settings)
+- [ ] Events script is added to the head of the page
+- [ ] Auto deploy via GitHub Actions (if possible/needed)
 
 ### Collapse settings
 
@@ -64,7 +88,21 @@ But end up in the HTML script like this:
 <script data-ignore-pages="/search/*,/account/*,/vouchers" src="..." />
 ```
 
-The plugin should collect page views without specifying any settings/options.
+### Custom settings
+
+Custom settings should be specified like this: `customSettings: { collectDarkMode: true, ... }` which will be send to the script as `data-collect-dark-mode="true"`.
+
+### System plugin checklist
+
+- [ ] All settings below are changable via the option object of the plugin
+- [ ] The plugin should collect page views without specifying any settings/options
+- [ ] `enabled` setting should allow async function that returns true or false
+- [ ] Allow custom settings (key, value)
+- [ ] Embed script is added to the body of the page (with the changed settings)
+- [ ] Events script is added to the head of the page
+- [ ] Expose framework event function that can be used on all pages
+- [ ] Embed script URL changes when auto collect events is turned on
+- [ ] Auto deploy via GitHub Actions (if possible/needed)
 
 ## Settings
 
@@ -97,3 +135,27 @@ For both System plugins and Framework plugins the following settings need to be 
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |ignore admins|Ignore admin|boolean|`true`|no|`false`|
+
+### Custom settings
+
+The plugin should allow custom settings as well. In the future we will add more settings to our script. To be able to use those settings we want users to be able to add such a setting. For example a new setting could be named `collect-dark-mode` with the value `true`. In the plugin it should be possible to pass this value for that so it ends up in the script like this:
+
+```html
+<script data-collect-dark-mode="true" src="..." />
+```
+
+## Scripts
+
+The scripts should be loaded into the HTML of the page.
+
+```html
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+````
+
+Or in case when a custom domain is enabled:
+
+```html
+<script async defer src="https://custom.domain/latest.js"></script>
+<noscript><img src="https://custom.domain/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+````
