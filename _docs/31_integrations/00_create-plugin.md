@@ -23,6 +23,17 @@ Settings that require an `array` would preferably have an UI element that adds i
 <script data-ignore-pages="/search/*,/account/*,/vouchers" src="..." />
 ```
 
+### Hide admins
+
+If possible, do not collect data from admins. Let's say, you are an admin and logged in to Drupal. If the plugin can detect it's an admin to the current site, do not collect data for that user. Make this optional in the UI.
+
+### Checklist
+
+- [ ] All settings below are changable via the UI of the plugin
+- [ ] Settings are hidden by default
+- [ ] Add ignore admins feature if possible
+- [ ] Auto deploy via GitHub Actions
+
 ### Collapse settings
 
 To keep the plugin simple and understandable, hide as many settings as possible.
@@ -75,7 +86,14 @@ For both System plugins and Framework plugins the following settings need to be 
 ### Event settings
 
 |Setting|Description|Type|Default|Required|Example|
+|:---|:---|:---|:---|:---:|:---|
 |auto collect downloads|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
 |download extensions|[Download file extensions](https://docs.simpleanalytics.com/automated-events)|array|`pdf,csv,docx,xlsx,zip`|if "auto collect downloads" is `true`|`pdf,txt`|
 |auto collect links|[Auto collect outbound links](https://docs.simpleanalytics.com/automated-events)|boolean|undefined|no|`true`|
 |sa global|[Override event global](https://docs.simpleanalytics.com/events#the-variable-sa_event-is-already-used)|string|`sa_event`|no|`ba_event`|
+
+### System plugins specific settings
+
+|Setting|Description|Type|Default|Required|Example|
+|:---|:---|:---|:---|:---:|:---|
+|ignore admins|Ignore admin|boolean|`true`|no|`false`|
