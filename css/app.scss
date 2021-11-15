@@ -85,3 +85,12 @@ li p + ul {
 li ul li {
   margin: 0.5rem 0;
 }
+
+.task-list {
+  list-style-type: none;
+  padding-left: 0.5rem;
+
+  .task-list-item-checkbox {
+    margin-right: 0.5rem;
+  }
+}
