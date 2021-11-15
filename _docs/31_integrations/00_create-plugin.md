@@ -52,13 +52,14 @@ Place this `<script>`-tag in the `<head>` of the page:
 
 ### System plugin checklist
 
-- [ ] All settings below are changable via the UI of the plugin
+- [ ] [All settings](#settings) below are changable via the UI of the plugin
 - [ ] Settings are hidden by default (if possible)
 - [ ] Add ignore admins feature (if possible)
 - [ ] Allow custom settings (key, value)
 - [ ] Embed script is added to the body of the page (with the changed settings)
 - [ ] Events script is added to the head of the page
 - [ ] Auto deploy via GitHub Actions (if possible/needed)
+- [ ] Change filename from `latest.js` to `plus.js` when automated events are enabled
 
 ### Collapse settings
 
@@ -96,7 +97,7 @@ Custom settings should be specified like this: `customSettings: { collectDarkMod
 
 ### System plugin checklist
 
-- [ ] All settings below are changable via the option object of the plugin
+- [ ] [All settings](#settings) below are changable via the option object of the plugin
 - [ ] The plugin should collect page views without specifying any settings/options
 - [ ] `enabled` setting should allow async function that returns true or false
 - [ ] Allow custom settings (key, value)
@@ -105,6 +106,7 @@ Custom settings should be specified like this: `customSettings: { collectDarkMod
 - [ ] Expose framework event function that can be used on all pages
 - [ ] Embed script URL changes when auto collect events is turned on
 - [ ] Auto deploy via GitHub Actions (if possible/needed)
+- [ ] Change filename from `latest.js` to `plus.js` when automated events are enabled
 
 ## Settings
 
@@ -161,3 +163,5 @@ Or in case when a custom domain is enabled:
 <script async defer src="https://custom.domain/latest.js"></script>
 <noscript><img src="https://custom.domain/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ````
+
+When automated events are enabled the filename of the script changes from `latest.js` to `plus.js`.
