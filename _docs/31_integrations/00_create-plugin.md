@@ -5,27 +5,29 @@ category: integrations
 permalink: /create-plugin
 ---
 
-To create a plugin for Simple Analytics we have a few requirements that need to work within that plugin. The goal of the plugin is to make is as easy as possible to implement Simple Analytics. There are two types of plugins: System plugins and Framework plugins.
+To create a plugin for Simple Analytics, we have a few requirements that need to work within that plugin. The goal of the plugin is to make it as easy as possible to implement Simple Analytics. There are two types of plugins: System plugins and Framework plugins.
 
 ## System plugins
 
-A few examples: Wordpress, Drupal, Google Tag Manager, and CloudFlare.
+A few examples: WordPress, Drupal, Google Tag Manager, and Cloudflare.
 
 The settings below should be changable via the UI of the plugin. All changed settings need to be passed to the `<script>`-tag. For example:
 
+<!-- prettier-ignore -->
 ```html
 <script data-mode="hash" data-collect-dnt="true" src="..." />
 ```
 
 Settings that require an `array` would preferably have an UI element that adds items to a list. But in the script will be passed like this:
 
+<!-- prettier-ignore -->
 ```html
 <script data-ignore-pages="/search/*,/account/*,/vouchers" src="..." />
 ```
 
 ### Hide admins
 
-If possible, do not collect data from admins. Let's say, you are an admin and logged in to Drupal. If the plugin can detect it's an admin to the current site, do not collect data for that user . Make this optional in the UI.
+If possible, do not collect data from admins. Let's say you are an admin and logged in to Drupal. If the plugin can detect it's an admin to the current site, do not collect data for that user. Make this optional in the UI.
 
 ### Scripts
 
@@ -35,6 +37,7 @@ We have two scripts that need to be embedded into the page: Embed script (to col
 
 The following HTML should be added to the `<body>` of the page:
 
+<!-- prettier-ignore -->
 ```html
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
@@ -46,9 +49,19 @@ If that is not possible, add only the `<script>`-tag in the `<head>` of the page
 
 Place this `<script>`-tag in the `<head>` of the page:
 
+<!-- prettier-ignore -->
 ```html
 <script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
 ```
+
+## UI
+
+In the UI of the System plugin, we need to be able to change all settings. See here an example for the Drupal module:
+
+| Settings                                                                               | Advanced settings                                                                               | Events                                                                               |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [full size](https://assets.simpleanalytics.com/docs/system-plugin/drupal-settings.png) | [full size](https://assets.simpleanalytics.com/docs/system-plugin/drupal-advanced-settings.png) | [full size](https://assets.simpleanalytics.com/docs/system-plugin/drupal-events.png) |
+| ![](https://assets.simpleanalytics.com/docs/system-plugin/drupal-settings.png)         | ![](https://assets.simpleanalytics.com/docs/system-plugin/drupal-advanced-settings.png)         | ![](https://assets.simpleanalytics.com/docs/system-plugin/drupal-events.png)         |
 
 ### System plugin checklist
 
@@ -63,15 +76,15 @@ Place this `<script>`-tag in the `<head>` of the page:
 
 ### Collapse settings
 
-To keep the plugin simple and understandable, hide as many settings as possible.
+To keep the plugin understandable and straightforward, hide as many settings as possible.
 
-For example, collapse an advanced settings block and let users click on it to unfold. Or add a checkbox with advanced settings, which is off by default, and when a users clicks on it, open advanced settings. The same goes for events. There are quite some settings related to events. Just hide them behind a toggle (checkbox or `<details>`-tag).
+For example, collapse an advanced settings block and let users click on it to unfold. Or add a checkbox with advanced settings, which is off by default, and when a user clicks on it, open advanced settings. The same goes for events. There are quite some settings related to events. Just hide them behind a toggle (checkbox or `<details>`-tag).
 
 ## Framework plugins
 
 A few examples: React, Vue, Gridsome, and Gatsby.
 
-The settings below should be changable via the plugin settings. Usually as a settings object passed to the plugin. There settings will be passed to the `<script>`-tag. For example:
+The settings below should be changeable via the plugin settings. Usually, as a settings object passed to the plugin. These settings will be passed to the `<script>`-tag. For example:
 
 ```html
 <script data-mode="hash" data-collect-dnt="true" src="..." />
@@ -81,7 +94,7 @@ Settings that require an `array` will be passed like this in the plugin settings
 
 ```js
 {
-  ignorePages: ["/search/*", "/account/*", "/vouchers"]
+  ignorePages: ["/search/*", "/account/*", "/vouchers"];
 }
 ```
 
@@ -97,7 +110,7 @@ Custom settings should be specified like this: `customSettings: { collectDarkMod
 
 ### System plugin checklist
 
-- [ ] [All settings](#settings) below are changable via the option object of the plugin
+- [ ] [All settings](#settings) below are changeable via the options object of the plugin
 - [ ] The plugin should collect page views without specifying any settings/options
 - [ ] `enabled` setting should allow async function that returns true or false
 - [ ] Allow custom settings (key, value)
@@ -110,10 +123,11 @@ Custom settings should be specified like this: `customSettings: { collectDarkMod
 
 ## Settings
 
-For both System plugins and Framework plugins the following settings need to be changable:
+For both System plugins and Framework plugins, the following settings need to be changeable:
 
 ### Advanced settings
 
+<!-- prettier-ignore -->
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |custom domain|[Custom domain](https://docs.simpleanalytics.com/bypass-ad-blockers)|string|undefined|no|`simple.example.com`|
@@ -127,6 +141,7 @@ For both System plugins and Framework plugins the following settings need to be 
 
 ### Event settings
 
+<!-- prettier-ignore -->
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |auto collect downloads|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
@@ -136,6 +151,7 @@ For both System plugins and Framework plugins the following settings need to be 
 
 ### System plugins specific settings
 
+<!-- prettier-ignore -->
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |ignore admins|Ignore admin|boolean|`true`|no|`false`|
@@ -152,6 +168,7 @@ The plugin should allow custom settings as well. In the future we will add more 
 
 The scripts should be loaded into the HTML of the page.
 
+<!-- prettier-ignore -->
 ```html
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
@@ -159,6 +176,7 @@ The scripts should be loaded into the HTML of the page.
 
 Or in case when a custom domain is enabled:
 
+<!-- prettier-ignore -->
 ```html
 <script async defer src="https://custom.domain/latest.js"></script>
 <noscript><img src="https://custom.domain/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
