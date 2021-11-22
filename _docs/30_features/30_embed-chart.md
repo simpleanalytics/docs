@@ -5,6 +5,7 @@ skip_pjax: true
 permalink: /embed-chart-on-your-site
 redirect_from:
   - /embed-graph-on-your-site
+  - /embed
 ---
 
 Simple Analytics has a script which you can use to embed public website statistics.
