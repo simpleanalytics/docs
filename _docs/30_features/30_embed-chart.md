@@ -20,6 +20,7 @@ Simple Analytics allows you to embed a chart of your public website statistics o
   <p style="margin: 0;">Chart is not loading. It might be blocked by an ad-blocker.</p>
 </div>
 <script
+  async
   src="https://scripts.simpleanalyticscdn.com/embed.js"
   data-chart-selectors="#chart-id,#chart-colors"
 ></script>
@@ -37,6 +38,7 @@ To include this chart, you'll need to add a script and some HTML to your website
   <p style="margin: 0">Loading chart...</p>
 </div>
 <script
+  async
   data-chart-selectors="#chart"
   src="https://scripts.simpleanalyticscdn.com/embed.js"
 ></script>
@@ -124,6 +126,7 @@ You can hide the logo by adding `data-show-logo="false"`.
 
 <!-- One script tag for multiple charts -->
 <script
+  async
   data-chart-selectors="#chart-id-1,#chart-id-2"
   src="https://scripts.simpleanalyticscdn.com/embed.js"
 ></script>
@@ -151,6 +154,7 @@ It happens that some data has huge spikes. This is great traffic-wise, but you m
 </script>
 <div id="chart" style="aspect-ratio: 2/1" data-hostname="example.com"></div>
 <script
+  async
   src="https://scripts.simpleanalyticscdn.com/embed.js"
   data-chart-selectors="#chart"
   data-onload="onLoad"
