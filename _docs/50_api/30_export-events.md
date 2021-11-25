@@ -8,6 +8,8 @@ redirect_from:
 
 If you want to export raw events you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
 
+> Want to use a simple interface to export your data? [See our video on how to export data](https://docs.simpleanalytics.com/export-data).
+
 For this API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...` and with a `User-Id` header starting with `sa_user_id_...`. You can create them in [your account settings](https://simpleanalytics.com/account).
 
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
