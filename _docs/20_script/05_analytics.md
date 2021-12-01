@@ -10,7 +10,7 @@ You can install Simple Analytics using the open-source Analytics library ([websi
 ## Install via npm
 
 ```bash
-npm install analytics analytics-plugin-simple-analytics
+npm install analytics @analytics/simple-analytics
 ```
 
 ## Using the Analytics library
@@ -19,7 +19,7 @@ The Analytics library works with any frontend framework, including `react`, `vue
 
 To use it:
 
-1. Import the `analytics` library and `analytics-plugin-simple-analytics`
+1. Import the `analytics` library and `@analytics/simple-analytics`
 2. Initialize the `analytics` library
 3. Page views get tracked automatically
 4. Include the non-javascript fallback in your `html`
