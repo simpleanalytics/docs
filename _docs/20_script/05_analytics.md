@@ -29,7 +29,7 @@ Example code:
 ```js
 /* src/analytics.js */
 import Analytics from "analytics";
-import simpleAnalyticsPlugin from "analytics-plugin-simple-analytics";
+import simpleAnalyticsPlugin from "@analytics/simple-analytics";
 
 const analytics = Analytics({
   app: "awesome-app",
