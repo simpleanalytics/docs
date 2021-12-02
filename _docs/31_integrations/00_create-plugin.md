@@ -132,12 +132,13 @@ For both System plugins and Framework plugins, the following settings need to be
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |custom domain|[Custom domain](https://docs.simpleanalytics.com/bypass-ad-blockers)|string|undefined|no|`simple.example.com`|
-|mode|[Change mode](https://docs.simpleanalytics.com/hash-mode)|string|undefined|no|`hash`|
-|collect dnt|[Collect DoNotTrack visits](https://docs.simpleanalytics.com/dnt)|boolean|`false`|no|`true`|
-|ignore pages|[Ignore pages](https://docs.simpleanalytics.com/ignore-pages)|array|undefined|no|`/search/*,/account/*,/vouchers`|
-|auto collect page views|[Auto collect](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway)|boolean|`true`|no|`false`|
-|onload callback|[Onload function](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway)|string|undefined|no|`onloadCallback()`|
-|hostname|[Overwrite hostname](https://docs.simpleanalytics.com/overwrite-domain-name)|string|undefined|no|`otherdomain.com`|
+|`data-mode`|[Change mode](https://docs.simpleanalytics.com/hash-mode)|string|undefined|no|`hash`|
+|`data-collect-dnt`|[Collect DoNotTrack visits](https://docs.simpleanalytics.com/dnt)|boolean|`false`|no|`true`|
+|`data-ignore-pages`|[Ignore pages](https://docs.simpleanalytics.com/ignore-pages)|array|undefined|no|`/search/*,/account/*,/vouchers`|
+|`data-auto-collect` page views|[Auto collect](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway)|boolean|`true`|no|`false`|
+|`data-onload` callback|[Onload function](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway)|string|undefined|no|`onloadCallback()`|
+|`data-hostname`|[Overwrite hostname](https://docs.simpleanalytics.com/overwrite-domain-name)|string|undefined|no|`otherdomain.com`|
+|`data-sa-global`|[Override global](https://docs.simpleanalytics.com/events#the-variable-sa_event-is-already-used)|string|`sa_event`|no|`ba_event`|
 |enabled|Enable the script|boolean|`true`|no|`false`|
 
 ### Event settings
@@ -146,10 +147,11 @@ For both System plugins and Framework plugins, the following settings need to be
 
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
-|auto collect downloads|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
-|download extensions|[Download file extensions](https://docs.simpleanalytics.com/automated-events)|array|`pdf,csv,docx,xlsx,zip`|if "auto collect downloads" is `true`|`pdf,txt`|
-|auto collect links|[Auto collect outbound links](https://docs.simpleanalytics.com/automated-events)|boolean|undefined|no|`true`|
-|sa global|[Override event global](https://docs.simpleanalytics.com/events#the-variable-sa_event-is-already-used)|string|`sa_event`|no|`ba_event`|
+|`data-collect`|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|array|undefined|no|`outbound,emails,downloads`|
+|`data-extensions`|[Download file extensions](https://docs.simpleanalytics.com/automated-events)|array|`pdf,csv,docx,xlsx,zip`|if "auto collect downloads" is `true`|`pdf,txt`|
+|`data-use-title`|[Use titles of page](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
+|`data-full-urls`|[Use full URLs](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
+|`data-sa-global`|[Override global](https://docs.simpleanalytics.com/events#the-variable-sa_event-is-already-used)|string|`sa_event`|no|`ba_event`|
 
 ### System plugins specific settings
 
