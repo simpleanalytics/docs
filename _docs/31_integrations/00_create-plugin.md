@@ -128,6 +128,7 @@ For both System plugins and Framework plugins, the following settings need to be
 ### Advanced settings
 
 <!-- prettier-ignore -->
+
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |custom domain|[Custom domain](https://docs.simpleanalytics.com/bypass-ad-blockers)|string|undefined|no|`simple.example.com`|
@@ -142,6 +143,7 @@ For both System plugins and Framework plugins, the following settings need to be
 ### Event settings
 
 <!-- prettier-ignore -->
+
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |auto collect downloads|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
@@ -152,6 +154,7 @@ For both System plugins and Framework plugins, the following settings need to be
 ### System plugins specific settings
 
 <!-- prettier-ignore -->
+
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |ignore admins|Ignore admin|boolean|`true`|no|`false`|
