@@ -9,7 +9,7 @@ We have a few bots that work for us :)
 
 A few use-cases where we use our bots:
 - When a customer adds a website we check if the script is installed correctly
-- If a website doesn't have traffic anymore, we send a fake page view to detect a missing script<br />_(it's blocked by most analytics tools because we add `bot` in the User-Agent string)_
+- If a website doesn't have traffic anymore, we send a fake page view to detect our (missing) script<br />_(it's blocked by most analytics tools because we add `bot` in the User-Agent string)_
 - We also check which technologies are used on their website so we can show the best plugin for their needs
 - We generate screenshots of public referral pages
 
