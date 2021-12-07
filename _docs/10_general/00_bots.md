@@ -13,6 +13,8 @@ A few use-cases where we use our bots:
 - We also check which technologies are used on their website so we can show the best plugin for their needs
 - We generate screenshots of public referral pages
 
+> You can to disable alerts for your missing script in [your website settings](https://simpleanalytics.com/select-website/settings#alerts).
+
 The bots are usually identified with this User-Agent string:
 
 ```
