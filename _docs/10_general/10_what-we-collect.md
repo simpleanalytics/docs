@@ -93,7 +93,7 @@ In contrast with most services that collect countries based on IP address, we co
 
 > We **collect** and **store** the language of the visitor
 
-Devices are set to a certain language. We collect the language of the device being used by a visitor. We don't show this in our dasbhoard, but advanced users can get this data out of our [APIs](/api). Some language have a different region. For example English is used in the US and in the UK. We also store the region of the language.
+Devices are set to a certain language. We collect the language of the device being used by a visitor. We don't show this in our dashboard, but advanced users can get this data out of our [APIs](/api). Some language have a different region. For example English is used in the US and in the UK. We also store the region of the language.
 
 ### URLs
 
