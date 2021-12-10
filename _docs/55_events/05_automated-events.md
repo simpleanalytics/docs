@@ -50,6 +50,6 @@ It takes care of sending it as an event to Simple Analytics. Events can only be 
 
 ## Demo of the script
 
-To see a live demo of the script implementation, go to autoevents.simpleanalytics.com](https://autoevents.simpleanalytics.com/). It shows an example of the automated events script with a few links you can click.
+To see a live demo of the script implementation, go to [autoevents.simpleanalytics.com](https://autoevents.simpleanalytics.com/). It shows an example of the automated events script with a few links you can click.
 
 We love to improve our automated events. Please let us know if you need any help! We don't mind getting our hands dirty.
