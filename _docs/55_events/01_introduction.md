@@ -71,6 +71,8 @@ To export events you can use [our API](/api/export-events).
 
 ## Event callbacks
 
+> Do not track does not play nice with callbacks, please skip callbacks for Do Not Track visitors. Either [enable collecting DNT visitors](/dnt) or check for them in your code. See below.
+
 In some cases you want to send an event before the visitor navigates away. For example to [capture outbound links](/capture-outbound-links). You can add a callback function as the second parameter of the `sa_event`-function:
 
 ```js
@@ -87,7 +89,12 @@ It's always smart to check if `sa_event_loaded` is available before using it:
 function callback() {
   window.location.href = "https://example.com/?affiliate=...";
 }
-if (window.sa_event_loaded) sa_event("outbound_link_to_affiliate", callback);
+
+/* Check for DoNotTrack visitors */
+var dntActive = parseInt(navigator.msDoNotTrack || window.doNotTrack || navigator.doNotTrack, 10) === 1;
+
+/* Check for sa_event_loaded boolean */
+if (window.sa_event_loaded && !dntActive) sa_event("outbound_link_to_affiliate", callback);
 else callback();
 ```
 
