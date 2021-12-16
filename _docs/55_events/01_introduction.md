@@ -87,7 +87,7 @@ It's always smart to check if `sa_event` is available before using it:
 function callback() {
   window.location.href = "https://example.com/?affiliate=...";
 }
-if (sa_event) sa_event("outbound_link_to_affiliate", callback);
+if (window.sa_event_loaded) sa_event("outbound_link_to_affiliate", callback);
 else callback();
 ```
 
