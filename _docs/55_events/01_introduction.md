@@ -81,7 +81,7 @@ sa_event("outbound_link_to_affiliate", function () {
 
 The above example will capture the event before sending the visitor to `https://example.com/?affiliate=...`.
 
-It's always smart to check if `sa_event` is available before using it:
+It's always smart to check if `sa_event_loaded` is available before using it:
 
 ```js
 function callback() {
