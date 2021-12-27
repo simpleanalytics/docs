@@ -9,6 +9,8 @@ permalink: /wordpress-plugin-by-refined-practice
 
 > The [source code is public](https://github.com/Refined-Practice/rp-simple-analytics) but the plugin is not official so use it at your own risk.
 
+> See the plugin in action by [creating a temporary Wordpress website on tastewp.com in one click](https://tastewp.com/new?pre-installed-plugin-slug=rp-simple-analytics&redirect=plugins.php&ni=true).
+
 This is how the dashboard looks:
 
 ![](/images/wordpress-refined-practice-screenshot-dashboard.png)
