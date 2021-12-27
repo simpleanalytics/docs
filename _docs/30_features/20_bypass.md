@@ -8,7 +8,7 @@ Simple Analytics never collects any personal identifiable information. Ad-blocke
 
 ## Setup a custom subdomain
 
-You only need access to your DNS to set this up. Add a CNAME record to your DNS pointing to `external.simpleanalytics.com` and fill in your full domain in [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers). We advise to choose a domain like `api.example.com` instead of `track.example.com` _(tracking, analytics, collect, and similar keywords are usually blocked)_.
+You only need access to your DNS to set this up. Add a CNAME record to your DNS pointing to `simpleanalyticsexternal.com` and fill in your full domain in [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers). We advise to choose a domain like `api.example.com` instead of `track.example.com` _(tracking, analytics, collect, and similar keywords are usually blocked)_.
 
 You will need to enable the record in [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers) on Simple Analytics. We need to know this to request a certificate with <a href="https://letsencrypt.org/" target="_blank">Let's Encrypt</a>. This means your analytics will travel safe via HTTPS to our servers.
 
