@@ -47,7 +47,7 @@ These are the values we can't get with the pixel alone:
 
 This way you are more in control what you are sending to our servers. It's also a great way if you need to avoid JavaScript for example within Google AMP environments.
 
-> We don't record visitors that have DNT enabled. If you want to record those visits add `ignore-dnt=true` to the pixel parameters.
+> We don't record visitors that have DNT enabled. If you want to record those visits add `collect-dnt=true` to the pixel parameters.
 
 ## Browser extensions
 
