@@ -75,7 +75,7 @@ You can specify all fields you like to export. Add them as a comma seperated lis
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
 ```bash
-curl "https://simpleanalytics.com/api/export/visits?version=2&fields=added_iso,hostname,path&hostname=example.com&start=2020-12-01&end=2021-01-01" \
+curl "https://simpleanalytics.com/api/export/visits?version=5&fields=added_iso,hostname,path&hostname=example.com&start=2020-12-01&end=2021-01-01" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'
