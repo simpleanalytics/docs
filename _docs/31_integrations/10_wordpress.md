@@ -11,6 +11,8 @@ There are two ways to add our WordPress plugin to your site. Via the your WordPr
 
 > There is a non-official plugin made by Refined Practice. It has more features then the official plugin. [Learn more](/wordpress-plugin-by-refined-practice) about this plugin.
 
+> See our plugin in action by [creating a temporary Wordpress website on tastewp.com in one click](https://tastewp.com/new?pre-installed-plugin-slug=simpleanalytics&redirect=plugins.php&ni=true). Do note that by default we don't collect from logged in admins, log out to see the requests to Simple Analytics.
+
 ## Install official plugin via WordPress dashboard
 
 1. Go to your WordPress admin (likely on /wp-admin or [wordpress.com/log-in](https://wordpress.com/log-in))
