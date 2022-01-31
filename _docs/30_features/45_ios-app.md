@@ -13,3 +13,9 @@ We love to make analytics fun for our customers. That's why we created an iOS ap
 Go to [your account settings](https://simpleanalytics.com/account) (scroll to the bottom) to find ways to login into the iOS app.
 
 The iOS app is built by [Onur Genes](https://onurgenes.com/?utm_source=simpleanalytics.com) and the content blocking by [Frederik Dudzik](https://dudzik.co/?utm_source=simpleanalytics.com).
+
+### Desktop version
+
+We also have a desktop version available which looks like this:
+
+<img class="border" alt="Desktop version of the Simple Analytics app" src="https://user-images.githubusercontent.com/1079135/151759296-c8d5a394-9b47-42db-894c-c6dc53a13b44.png">
