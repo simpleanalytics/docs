@@ -13,6 +13,8 @@ If you want to get your hands dirty, you can collect events for all kinds of cus
 
 ## Sequential by session
 
+> This is a feature in our next version
+
 In the dashboard you will see "Sequential by session" below the events funnel. When enabled the events happened in the same session. A session within Simple Analytics is usually one page view. If you have a SPA (Single Page Application) the session takes as long as the website is open. Then it includes multiple pages. Most people want to keep the settings "Sequential by session" disabled.
 
 ## Install embed script
