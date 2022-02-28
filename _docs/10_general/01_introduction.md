@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Simple Analytics documentation
 category: general
 permalink: /
 download: false
