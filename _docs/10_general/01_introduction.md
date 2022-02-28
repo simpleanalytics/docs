@@ -1,6 +1,7 @@
 ---
 title: Simple Analytics documentation
 category: general
+menu: Introduction
 permalink: /
 download: false
 ---
