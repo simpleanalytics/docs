@@ -4,25 +4,21 @@ category: general
 permalink: /locations
 ---
 
-We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a full picture of your website's visitors, and even go a few steps further.
+We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website's visitors and even go a few steps further.
 
-## Moving from Iceland to The Netherlands
+## Data location
 
-<blockquote class="red">
-  <p>We moved our servers from Iceland to The Netherlands.</p>
-</blockquote>
+Simple Analytics hosts your data in the EU, specifically the Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). Dutch companies own the servers and must comply with European and Dutch laws and regulations. [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) are our hosting providers.
 
-A year ago we wrote [a blog post](https://blog.simpleanalytics.com/why-we-moved-our-servers-to-iceland) about why we moved to Iceland. In hindsight, this was not a great move. Here is why:
+We use a CDN for most of our customers. The CDN is called Bunny CDN and part of a company called [BunnyWay](https://bunny.net/cdn/), located in Slovenia, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/slovenia_en).
 
-1. The Icelandic Modern Media Initiative was adopted by parliament but didn’t make it into law (so it’s not the internet freedom haven we thought it was).
-1. Our provider claimed to be the largest in Iceland but it was not as mature as bigger providers in Europe, which risked the security of our servers and infrastructure.
-1. They had downtime twice this year.
-1. The internet cables to Iceland are rather slow. Although it’s geographically ideal — located between North America and Europe — in practice, The Netherlands is a faster location.
-1. We don't want to move to Switzerland because it would be a marketing move only. The EU provides better privacy laws than Switzerland.
-1. We need to move anyway because our current provider does not offer the powerful servers we need.
-1. The second-biggest provider in Iceland is legally headquartered in Hong Kong, which is not a location we want to store our data in.
+## No data transfer to the US
 
-We asked our customers if they would be okay with the move and everybody who voted agreed with our decision.
+We don't transfer your visitors' data outside of the EU. This includes no data transfer to the United States of America. 
+
+The EU-U.S. Privacy Shield Framework was invalidated by the Court of Justice of the European Union. Called the ["Schrems II"](https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/) decision, which refers to the ruling that transferring data to US providers violates GDPR regulation. This has been the ruling since July 2020. We have been compliant since the start of our business in 2018.
+
+Are you coming from Google Analytics? Please read our blog post on the [differences between Google Analytics and Simple Analytics](https://blog.simpleanalytics.com/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Anlaytics data into Simple Analytics.
 
 ## Protecting your privacy
 
