@@ -11,6 +11,8 @@ If you want to get your hands dirty, you can collect events for all kinds of cus
 
 > The event UI is not that feature rich as you would expect from other Simple Analytics features. To access this feature in your dashboard go to [your events page](https://simpleanalytics.com/select-website/events). We are working on a new version where the posibilities are endless. Want to join that conversation? [Join our Slack channel](https://join.slack.com/t/simple-analytics/shared_invite/zt-ppfiaq04-LNDu5Cs4EOaJD0JhIFdkcg) to discuss the new events.
 
+<img loading="lazy" class="border" style="width: 100%;" src="https://assets.simpleanalytics.com/docs/events/event-dashboard.png" alt="Events dashboard of Simple Analytics">
+
 ## Sequential by session
 
 In the dashboard you will see "Sequential by session" below the events funnel. When enabled the events happened in the same session. A session within Simple Analytics is usually one page view. If you have a SPA (Single Page Application) the session takes as long as the website is open. Then it includes multiple pages. Most people want to keep the settings "Sequential by session" disabled.
