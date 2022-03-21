@@ -3,6 +3,7 @@ title: API helpers
 menu: Helpers
 category: api
 permalink: /api/helpers
+version: 5
 ---
 
 We added a few helpers to make it easier to work with our API.
@@ -22,3 +23,16 @@ To specify the date as today, use `today`. You can also use `yesterday` or `toda
 ```
 https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&start=yesterday&end=today&timezone=UTC
 ```
+
+## Generate export URL
+
+We created a simple interface where you can generate the export URL for events (and page views).
+
+{%
+  include video.html
+  slug="get-event-api-url"
+  formats="mp4,ogg,webm,wmv,mov"
+  poster="video.png"
+%}
+
+If you need any help(er), [just shoot us a message](https://simpleanalytics.com/contact).

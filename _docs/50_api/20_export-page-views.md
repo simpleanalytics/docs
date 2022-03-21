@@ -79,11 +79,13 @@ You can specify all fields you like to export. Add them as a comma seperated lis
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
 ```bash
-curl "https://simpleanalytics.com/api/export/visits?version=5&fields=added_iso,hostname,path&hostname=example.com&start=2020-12-01&end=2021-01-01" \
+curl "https://simpleanalytics.com/api/export/datapoints?version=5&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=added_iso,path&type=pageviews" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'
 ```
+
+You can use our UI to generate this URL for you. [See helpers](/api/helpers#generate-export-url).
 
 <details>
 <summary>Deprecated API</summary>
@@ -92,7 +94,7 @@ curl "https://simpleanalytics.com/api/export/visits?version=5&fields=added_iso,h
 If you don't specify any `fields` we return all the basic fields.
 
 ```bash
-curl "https://simpleanalytics.com/api/export/visits?version=1&hostname=example.com&start=2020-12-01&end=2021-01-01&timezone=Europe/Amsterdam" \
+curl "https://simpleanalytics.com/api/export/visits?version=1&hostname=example.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&timezone=Europe/Amsterdam" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'

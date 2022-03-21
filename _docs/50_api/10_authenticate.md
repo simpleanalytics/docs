@@ -3,6 +3,7 @@ title: API Authenticate
 menu: Authenticate
 category: api
 permalink: /api/authenticate
+version: 5
 ---
 
 For some API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...`.
@@ -12,7 +13,7 @@ In your [account settings](https://simpleanalytics.com/account) you can create t
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
 ```bash
-curl "https://simpleanalytics.com/private.example.com.json" \
+curl "https://simpleanalytics.com/example.com.json?version={{ page.version }}&fields=histogram" \
      -H 'Content-Type: application/json' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 ```

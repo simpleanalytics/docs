@@ -13,6 +13,8 @@ As a privacy-friendly business, we care a lot about who owns the data. We are ve
   formats="mp4,ogg,webm,wmv"
 %}
 
-Go to [the export your data](https://simpleanalytics.com/select-website/export) in our dashboard to download your data as a CSV.
+> The video above is slightly out-dated, for a more recent version, check the [Generate export URL](/api/helpers#generate-export-url) in the API helpers or [the live version](https://simpleanalytics.com/select-website/export).
+
+Go to [the export your data](https://simpleanalytics.com/select-website/export) in your dashboard to download your data as a CSV.
 
 If you want to get aggregated data, you'll have to use [our Stats API](/api/stats) for that.
