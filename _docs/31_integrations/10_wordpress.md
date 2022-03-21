@@ -31,8 +31,9 @@ There are two ways to add our WordPress plugin to your site. Via the your WordPr
    </p>
 </blockquote>
 
-<details markdown="1">
+<details>
    <summary>Manual installation</summary>
+   <div markdown="1">
 
 Follow these steps to add Simple Analytics to your WordPress website:
 
@@ -66,6 +67,7 @@ Follow these steps to add Simple Analytics to your WordPress website:
 
    ![](/images/wordpress-installed-plugins.jpg)
 
+</div>
 </details>
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

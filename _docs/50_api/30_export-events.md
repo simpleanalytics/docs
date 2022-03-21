@@ -12,6 +12,16 @@ If you want to export raw events you can do so via our CSV export. You can defin
 
 For this API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...` and with a `User-Id` header starting with `sa_user_id_...`. You can create them in [your account settings](https://simpleanalytics.com/account).
 
+## Event counts
+
+If you are only interested in how many certain events happened, you can use our [Stats API](/api/stats#events). It has a simple request and response with event totals.
+
+## Export raw events
+
+<details>
+<summary>Legacy events endpoint</summary>
+<div markdown="1">
+
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
 ```bash
@@ -35,5 +45,9 @@ date,events,referrer
 > Do note that the events are exported per session. If two events happen in the same session (the same page or the session in a single page application) they are stored in one row. This way you can calculate conversions between events. We separate them with a dot (e.g.: `visit_homepage.open_signup_modal`).
 
 For privacy reasons we hide events when they only happen once per day. To get all events in your export, [ask us](https://simpleanalytics.com/contact) to whitelist your events. We manually make sure personal identifiers in events are excluded.
+
+</div>
+
+</details>
 
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact).

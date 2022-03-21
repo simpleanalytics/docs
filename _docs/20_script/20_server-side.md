@@ -45,16 +45,16 @@ The request should be a POST with JSON like this:
 }
 ```
 
-<details markdown="1">
+<details>
   <summary>Send request in Node.js</summary>
+  <div markdown="1">
 
 ```js
 const https = require("https");
 
 const data = JSON.stringify({
   url: "https://example.com/",
-  ua:
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0",
+  ua: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:70.0) Gecko/20100101 Firefox/70.0",
   width: 1440,
   unique: true,
   timezone: "Europe/Amsterdam",
@@ -92,6 +92,7 @@ req.write(data);
 req.end();
 ```
 
+</div>
 </details>
 
 The response for this request will look like this:

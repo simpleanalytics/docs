@@ -50,9 +50,10 @@ We use timestamps to generate the graphs you see on your dashboard, which allows
 
 We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device types, and browsers** in your dashboard. We allow customers to download these counts alongside the User Agent string itself. We do anonymize the User Agent string. For example, when it has a very detailed version number we truncate it from `Chrome/78.0.3904.108` into `Chrome/78.0.0.0`.
 
-<details markdown="1">
+<details>
   <summary>Technical explanation of anonymize function</summary>
-  
+  <div markdown="1">
+
 We drop certain information from the User Agent. Below it the function we use to anonymize the User Agent. Facebook for example sends way more information then just the normal User Agent. We drop all FB related information information from the string. The same goes for `V1_AND_...`.
 
 ```js
@@ -73,6 +74,7 @@ const anonymizeAgent = (ua) =>
     });
 ```
 
+</div>
 </details>
 
 <blockquote class="note">

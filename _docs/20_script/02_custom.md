@@ -10,7 +10,7 @@ For some analytics tools like Google Analytics you need to trigger a page view v
 
 > With Simple Analytics there is **no** need to implement anything to detect page views in SPA's. It all works out of the box.
 
-<details markdown="1">
+<details>
 <summary>Technical explanation</summary>
 <div markdown="1">
 
@@ -59,8 +59,19 @@ There might be situation where you don't want to auto collect page views. When y
   }
 </script>
 
-<script async defer data-auto-collect="false" onload="saLoaded()" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+<script
+  async
+  defer
+  data-auto-collect="false"
+  onload="saLoaded()"
+  src="https://scripts.simpleanalyticscdn.com/latest.js"
+></script>
+<noscript
+  ><img
+    src="https://queue.simpleanalyticscdn.com/noscript.gif"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+/></noscript>
 ```
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

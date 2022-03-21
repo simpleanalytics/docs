@@ -7,17 +7,29 @@ redirect_from:
 version: 5
 ---
 
-To get aggregated statistics out of our API we created a Stats API. Basically it's the data you see in our dashboard. This API is useful for when you want to integrate Simple Analytics into your own systems. For example when embedding your data into a customized dashboard within your own website.
+To get the aggregated statistics you see in our dashboard, use this Stats API. This API helps integrate Simple Analytics into your systems. For example, you can get KPIs out of your data or embed your data into a customized dashboard.
 
-> The data you get through this API is aggregated. If you are looking for raw data you can use our [Export page views API](/api/export-page-views).
+> If you are looking for raw data, you can use our export [page views](/api/export-page-views) or [events](/api/export-events) API.
 
-For this API you need to be [autenticated with an API key](/api/authenticate). If your website is set to public you can get the JSON data without any credentials.
+For this API, you need to be [authenticated with an API key](/api/authenticate). If your website is public, you can get the JSON data without credentials.
 
-You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example for our website it will be [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram).
+You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example, for our website, it is:
+
+```
+https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&start=yesterday&end=today
+```
+
+[See the live response](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&start=yesterday&end=today) to the above request.
 
 ## Query parameters
 
-We have a list of query parameters that you can use with this API:
+We have a list of query parameters that you can use with this API.
+
+<details>
+<summary>All query parameters</summary>
+<div markdown="1">
+
+The complete list of all query params you can use with the latest Stats API.
 
 - `version` the version of the API (the latest version is `{{ page.version }}`)
 - `start` the start date with this format `YYYY-MM-DD` (defaults to 1 month ago)
@@ -26,6 +38,7 @@ We have a list of query parameters that you can use with this API:
 - `timezone` a valid time zone like `Europe/Amsterdam` (with capitals)
 - `info` shows more information about fields in the response (defaults to true)
 - `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
+- [`events` a list of specified events and how much they occurred](#events)
 - `fields` a comma seperated list of fields you want to get returned:
   - `pageviews` the total amount of page views in the specified period
   - `visitors` the total amount of visitors (unique page views) in the specified period
@@ -43,7 +56,14 @@ We have a list of query parameters that you can use with this API:
   - `device_types` a list of device types (mobile, tablet, desktop, tv)
   - `seconds_on_page` the median of seconds a visitor spent on the page ([see more](#time-on-page))
 
-For filtering you can use:
+</div>
+</details>
+
+<details>
+<summary>All filters</summary>
+<div markdown="1">
+
+You can filter the returned data. Here is the list of filters you can use.
 
 - `page` filter by a page
 - `pages` filter by a comma separated list of pages (`/contact,/product/*`)
@@ -58,25 +78,30 @@ For filtering you can use:
 - `os_name` filter by a OS name
 - `device_type` filter by a device type (mobile, tablet, desktop, tv)
 
+These filters don't have effect on the `events` query parameter.
+
+</div>
+</details>
+
 ## Get data for specific pages
 
-With the Stats API you can also retrieve data for a specific page of your website. You can specify this via the `pages` parameter: [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact)).
+With the Stats API, you can also retrieve data for a specific page of your website. You can specify this via the `pages` parameter: [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&pages=/contact)).
 
-You can also add the path to the URL and Simple Analytics returns the data for only that path. For example if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram)).
+You can also add the path to the URL, and Simple Analytics returns the data for only that path. For example, if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ page.version }}&fields=histogram)).
 
 ## Wildcards
 
-The filtering parameters support wildcard searches. It's as easy as adding an `*` at the end of your parameter value. If you want to search for pages that have a path that starts with `/web` you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you want all pages that contains a word in their path you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*)).
+The filtering parameters support wildcard searches. It's as easy as adding an `*` at the end of your parameter value. If you want to search for pages with a path that starts with `/web`, you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=/web*)). If you wish to get all pages that contain a word in its path, you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages&pages=*terms\*)).
 
 ## Time on page
 
-To get the median of time on page you can use the field `seconds_on_page`. This field is a bit more special than the rest. It also includes the `seconds_on_page` within results you select with other fields. For example, [when you select](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&info=false&pages=/,/contact) some pages with it:
+To get the median of time on page you can use the field `seconds_on_page`. This field is a bit more special than the rest. It also includes the `seconds_on_page` within the results you select with other fields. For example, [when you choose](https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&info=false&pages=/,/contact) some pages with the request:
 
 ```
 https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=pages,seconds_on_page&pages=/,/contact
 ```
 
-It returns:
+it embeds the time on page in those pages:
 
 ```js
 {
@@ -99,8 +124,41 @@ It returns:
 }
 ```
 
-Note the `seconds_on_page` being part of the `pages` and part of the root of the JSON response. We have [an explainer on time on page](/explained/time-on-page) which goes into more detail about the metric and why we did choose to make it a median instead of average.
+Note the `seconds_on_page` being part of the `pages` ánd part of the root of the JSON response. We have [an explainer on time on page](/explained/time-on-page), which goes into more detail about the metric and why we did choose to make it a median instead of average.
+
+## Date placeholders
+
+See [helpers](/api/helpers#date-placeholders) to learn how to use `&start=today-30d&end=yesterday`.
+
+## Events
+
+Get event counts by adding the `events=...`-param to your request. To get the counts of the events (`visit_homepage`, `popup_replace_show`, `popup_replace_close`), you can run this request:
+
+```
+https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_homepage,popup_replace_show,popup_replace_close
+```
+
+```json
+{
+  "events": [
+    {
+      "name": "visit_homepage",
+      "total": 233
+    },
+    {
+      "name": "popup_replace_show",
+      "total": 117
+    },
+    {
+      "name": "popup_replace_close",
+      "total": 61
+    }
+  ]
+}
+```
+
+If you use `events=*`, all events are returned (limited to 1000 events).
 
 ## CORS and JSONP
 
-By default we allow requests from any website. Some customers want to use JSONP for their requests. Learn more about how to use [JSONP with Simple Analytics](/api/cors-jsonp).
+By default, we allow requests from any website. Some customers want to use JSONP for their requests. Learn more about how to use [JSONP with Simple Analytics](/api/cors-jsonp).

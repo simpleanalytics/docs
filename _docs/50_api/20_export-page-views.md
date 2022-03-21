@@ -11,8 +11,9 @@ With this API you can export raw page views (without sampling). Define a date ra
 
 > Want to use a simple interface to export your data? [See our video on how to export data](/export-data).
 
-<details markdown="1">
+<details>
 <summary>Available fields in export</summary>
+<div markdown="1">
 
 | Field               | Type    | Description                                                                                                                                                |
 | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,10 +49,12 @@ With this API you can export raw page views (without sampling). Define a date ra
 
 Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the visitor.
 
+</div>
 </details>
 
-<details markdown="1">
+<details>
 <summary>Deprecated fields</summary>
+<div markdown="1">
 
 These fields are deprecated but we keep them for backward compatibility. It's recommended to not use it for new projects.
 
@@ -64,6 +67,7 @@ These fields are deprecated but we keep them for backward compatibility. It's re
 | device_width        | We replaced this with viewport_width                                  |
 | source              | What is the source of this page view, mostly `js` from our JavaScript |
 
+</div>
 </details>
 
 ## API
@@ -81,8 +85,9 @@ curl "https://simpleanalytics.com/api/export/visits?version=5&fields=added_iso,h
      -H 'Content-Type: text/csv'
 ```
 
-<details markdown="1">
+<details>
 <summary>Deprecated API</summary>
+<div markdown="1">
 
 If you don't specify any `fields` we return all the basic fields.
 
@@ -104,6 +109,7 @@ added_unix,added_iso,url,referrer_raw,referrer,hostname,source,is_unique,utm_sou
 
 This functionality is deprecated but we keep it for backward compatibility. It's recommended to not use it for new projects.
 
+</div>
 </details>
 
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact).
