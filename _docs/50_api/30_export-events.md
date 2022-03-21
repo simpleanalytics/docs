@@ -4,7 +4,6 @@ category: api
 permalink: /api/export-events
 redirect_from:
   - /api/csv-export-events
-version: 5
 ---
 
 If you want to export raw events you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
@@ -18,7 +17,7 @@ For this API features you'll need to authenticate. You can do this with an `Api-
 If you are only interested in how many certain events happened, you can use our [Stats API](/api/stats#events). It has a simple request and response with event totals.
 
 ```
-https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_homepage
+https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_homepage
 ```
 
 ## Export raw events
@@ -26,7 +25,7 @@ https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&
 To export your events you can use this URL format:
 
 ```
-https://simpleanalytics.com/api/export/datapoints?version=5&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=...&type=events
+https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=...&type=events
 ```
 
 You can use our UI to generate this URL for you. [See helpers](/api/helpers#generate-export-url).
@@ -34,7 +33,7 @@ You can use our UI to generate this URL for you. [See helpers](/api/helpers#gene
 To test if your request is correct, you can replace the example values of this cURL example with your own:
 
 ```bash
-curl "https://simpleanalytics.com/api/export/datapoints?version=5&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=added_iso,datapoint&type=events" \
+curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=added_iso,datapoint&type=events" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'

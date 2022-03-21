@@ -79,7 +79,7 @@ You can specify all fields you like to export. Add them as a comma seperated lis
 To test if your API key works correctly you can replace the example values of this cURL example with your own:
 
 ```bash
-curl "https://simpleanalytics.com/api/export/datapoints?version=5&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=added_iso,path&type=pageviews" \
+curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=added_iso,path&type=pageviews" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'

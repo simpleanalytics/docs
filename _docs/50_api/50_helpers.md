@@ -3,7 +3,6 @@ title: API helpers
 menu: Helpers
 category: api
 permalink: /api/helpers
-version: 5
 ---
 
 We added a few helpers to make it easier to work with our API.
@@ -21,7 +20,7 @@ When working with time series data you need to specify a time period. You specif
 To specify the date as today, use `today`. You can also use `yesterday` or `today-1d` to specify yesterday. To get the data from the last 30 days, use `&start=today-30d&end=yesterday` in your API requests. To get data for only today, use `&start=today&end=today`.
 
 ```
-https://simpleanalytics.com/simpleanalytics.com.json?version={{ page.version }}&fields=histogram&start=yesterday&end=today&timezone=UTC
+https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=histogram&start=yesterday&end=today&timezone=UTC
 ```
 
 ## Generate export URL
