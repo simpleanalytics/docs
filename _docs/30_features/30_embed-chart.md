@@ -60,6 +60,7 @@ The following parameters are customizable:
   data-types="visitors"
   data-page-views-selector="#pageviews"
   data-visitors-selector="#visitors"
+  data-pages="/,/contact"
   data-y-max="60000"
   data-timezone="Europe/Amsterdam"
   data-border-width="1"
@@ -139,6 +140,10 @@ You can apply the `data-` settings from [customize](#customize) on the `<script>
 ## Spikes
 
 It happens that some data has huge spikes. This is great traffic-wise, but you might want to cut off the spike in the chart to make more sense out of your data before and after the spikes. You can change this with the `y-limit` parameter. To limit your chart to – let's say 50,000 page views – you can add it like this to your `<div>`-tag: `data-y-max="50000"`.
+
+## Pages specific
+
+By adding `data-pages="/"` you get only data for the home page of your website. Use `data-pages="/,/contact"` to get data for only your home page (`/`) and your contact page (`/contact`). See [get data for specific pages](https://docs.simpleanalytics.com/api/stats#get-data-for-specific-pages) in our API docs.
 
 ## Onload callback
 
