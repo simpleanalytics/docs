@@ -143,7 +143,7 @@ It happens that some data has huge spikes. This is great traffic-wise, but you m
 
 ## Pages specific
 
-By adding `data-pages="/"` you get only data for the home page of your website. Use `data-pages="/,/contact"` to get data for only your home page (`/`) and your contact page (`/contact`). See [get data for specific pages](https://docs.simpleanalytics.com/api/stats#get-data-for-specific-pages) in our API docs.
+By adding `data-pages="/"` you get only data for the home page of your website. Use `data-pages="/,/contact"` to get data for only your home page (`/`) and your contact page (`/contact`). See ["get data for specific pages"](https://docs.simpleanalytics.com/api/stats#get-data-for-specific-pages) in our API docs to learn what is possible.
 
 ## Onload callback
 
