@@ -139,7 +139,7 @@ You can apply the `data-` settings from [customize](#customize) on the `<script>
 
 ## Spikes
 
-It happens that some data has huge spikes. This is great traffic-wise, but you might want to cut off the spike in the chart to make more sense out of your data before and after the spikes. You can change this with the `y-limit` parameter. To limit your chart to – let's say 50,000 page views – you can add it like this to your `<div>`-tag: `data-y-max="50000"`.
+It happens that some data has huge spikes. This is great traffic-wise, but you might want to cut off the spike in the chart to make more sense out of your data before and after the spikes. You can change this with the `y-max` parameter. To limit your chart to – let's say 50,000 page views – you can add it like this to your `<div>`-tag: `data-y-max="50000"`.
 
 ## Pages specific
 
