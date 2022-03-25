@@ -20,6 +20,8 @@ If you are only interested in how many certain events happened, you can use our 
 https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_homepage
 ```
 
+[See live example](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_homepage) of output.
+
 ## Export raw events
 
 To export your events you can use this URL format:
