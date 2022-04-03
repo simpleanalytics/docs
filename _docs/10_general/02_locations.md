@@ -2,6 +2,7 @@
 title: Locations of servers
 category: general
 permalink: /locations
+excerpt: "We do everything to keep your data safe. Our servers are located in The Netherlands, and we don’t transfer data overseas."
 ---
 
 We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website's visitors and even go a few steps further.
@@ -14,7 +15,7 @@ We use a CDN for most of our customers. The CDN is called Bunny CDN and part of 
 
 ## No data transfer to the US
 
-We don't transfer your visitors' data outside of the EU. This includes no data transfer to the United States of America. 
+We don't transfer your visitors' data outside of the EU. This includes no data transfer to the United States of America.
 
 The EU-US Privacy Shield Framework was invalidated by the Court of Justice of the European Union. Called the ["Schrems II"](https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/) decision, which refers to the ruling that transferring data to US providers violates GDPR regulation. This has been the ruling since July 2020. We have been compliant since the start of our business in 2018.
 
