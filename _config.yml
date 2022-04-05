@@ -21,7 +21,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   On this website you'll find all the ways and possibilities how to use Simple Analytics.
   Installing the script, how to use features, and how we handle things, to name a few.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://docs.simpleanalytics.com
 twitter_username: simpleanalytic
 github_username: simpleanalytics
 
