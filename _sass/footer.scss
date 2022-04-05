@@ -1,5 +1,5 @@
 footer.general {
-  background-color: #EEF9FF;
+  background-color: #eef9ff;
   display: flex;
   justify-content: space-between;
   padding: 2rem 3rem 2rem;
@@ -32,7 +32,7 @@ footer.general {
     }
   }
 
-  h1 {
+  .intro h3 {
     margin-top: 0;
     font-size: unset;
     margin-bottom: 1rem;
@@ -43,10 +43,10 @@ footer.general {
   }
 
   @media (hover: hover) {
-    &:hover h1 {
+    &:hover .intro h3 {
       opacity: 1;
     }
-    h1 {
+    .intro h3 {
       opacity: 0.6;
       transition: opacity 250ms linear;
     }
@@ -73,7 +73,7 @@ footer.general {
     flex-wrap: wrap;
 
     > div {
-      padding: .5rem;
+      padding: 0.5rem;
 
       @media (max-width: $breakpoint-small) {
         padding: 0;
@@ -147,21 +147,20 @@ footer.general {
   h2 {
     margin-top: 0;
     font-size: 18px;
-    color: #7D9598;
+    color: #7d9598;
   }
 
   h3 {
     margin-top: 0;
     font-size: 16px;
     font-weight: 500;
-    color: #8AA3A6;
+    color: #8aa3a6;
     margin-bottom: 0.5rem;
   }
 
   p {
-
     font-size: 13px;
-    color: #7D9598;
+    color: #7d9598;
     transition: color 250ms linear;
 
     &:hover {
