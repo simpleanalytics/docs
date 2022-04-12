@@ -7,19 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    {% if page.canonical -%}
-    <!-- Canonical URL -->
-    <link
-      rel="canonical"
-      href="{% if page.canonical contains '://' %}{{ page.canonical }}{% else %}{{ site.url }}{{ page.canonical }}{% endif %}"
-    />
-    {%- elsif page.url != '/404.html' -%}
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    {%- else -%}
-    <!-- No canonical URL -->
-    {%- endif %}
-
     <!-- Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://simpleanalytics.com/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://simpleanalytics.com/favicon-32x32.png">
@@ -41,7 +28,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-{% seo %}
+    {%- if page.url != '/404.html' -%}{% seo %}{%- endif %}
 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="/css/app.css">
@@ -274,6 +261,18 @@
       selectors: [
         "title",
         "meta[name=description]",
+        "link[rel=canonical]",
+        'script[type="application/ld+json"]',
+        'meta[property="og:title"]',
+        'meta[property="og:locale"]',
+        'meta[name="description"]',
+        'meta[property="og:description"]',
+        'meta[property="og:url"]',
+        'meta[property="og:site_name"]',
+        'meta[property="og:type"]',
+        'meta[property="article:published_time"]',
+        'meta[name="twitter:card"]',
+        'meta[property="twitter:title"]',
         "main",
       ]
     })

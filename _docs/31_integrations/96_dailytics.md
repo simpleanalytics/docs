@@ -3,7 +3,7 @@ title: How to use Dailytics with your Simple Analytics account
 menu: Dailytics
 category: integrations
 permalink: /get-powerful-email-reports-with-dailytics
-canonical: https://dailytics.com/simple-analytics/
+canonical_url: https://dailytics.com/simple-analytics/
 ---
 
 In this tutorial, we are going to generate an email report to share with your team or clients using Dailytics.com.
