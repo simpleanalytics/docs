@@ -3,6 +3,7 @@ title: Hash mode
 menu: Hash mode &#35;
 category: script
 permalink: /hash-mode
+last_modified_at: 2022-04-14
 ---
 
 Some websites don't really navigate to other pages but us the hash (`#`) in the URL. Normally Simple Analytics removes everything from the URLs after a `?` or a `#`. We don't want to collect this information because it could contain private information like search keywords.

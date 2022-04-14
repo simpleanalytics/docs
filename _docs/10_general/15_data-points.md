@@ -3,6 +3,7 @@ title: Data points
 category: general
 permalink: /data-points
 excerpt: "We never track visitors so the data below is never linked to one specific visitor. Here is a list of data points we collect."
+last_modified_at: 2022-04-14
 ---
 
 Here is a list of data points we collect.

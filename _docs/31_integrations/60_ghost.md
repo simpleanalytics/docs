@@ -3,6 +3,7 @@ title: Install Simple Analytics on Ghost
 menu: Ghost
 category: integrations
 permalink: /install-simple-analytics-on-ghost
+last_modified_at: 2022-04-14
 ---
 
 You can embed our script in Ghost using their feature called "Code Injection". On this page we will explain how to use this feature and help you installing the Simple Analytics script on Ghost.

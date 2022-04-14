@@ -2,6 +2,7 @@
 title: Email reports
 category: features
 permalink: /email-reports
+last_modified_at: 2022-04-14
 ---
 
 Want to start your Monday morning by checking how your website is doing? Want to send updates to others? Use our weekly or monthly email reports so you don't have to check the dashboard all the time. Never miss that spike of traffic.

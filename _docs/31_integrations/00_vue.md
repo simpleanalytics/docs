@@ -3,6 +3,7 @@ title: Install Simple Analytics with Vue
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-vue
+last_modified_at: 2022-04-14
 ---
 
 Run this command to install Simple Analytics for Vue:

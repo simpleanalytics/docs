@@ -3,6 +3,7 @@ title: How our referral program works
 menu: How it works
 category: referral program
 permalink: /referral-program/how-it-works
+last_modified_at: 2022-04-14
 ---
 
 On [your referrals page](https://simpleanalytics.com/account/referrals) you can create a personal referral link which you can share with others.

@@ -6,6 +6,7 @@ permalink: /embed-chart-on-your-site
 redirect_from:
   - /embed-graph-on-your-site
   - /embed
+last_modified_at: 2022-04-14
 ---
 
 Simple Analytics allows you to embed a chart of your public website statistics on your website. In this chart we show you the visitors (<span id="visitors">...</span>) and page views (<span id="pageviews">...</span>) of simpleanalytics.com:

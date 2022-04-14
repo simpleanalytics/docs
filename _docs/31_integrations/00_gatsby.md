@@ -3,6 +3,7 @@ title: Install Simple Analytics with Gatsby
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-gatsby
+last_modified_at: 2022-04-14
 ---
 
 Run the following command:

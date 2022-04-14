@@ -3,6 +3,7 @@ title: Block your visits on all websites
 category: features
 hidden: true
 permalink: /block-your-visits-on-all-websites
+last_modified_at: 2022-04-14
 ---
 
 If you want to block all your visits on all the websites that have Simple Analytics installed. Our own extension does not allow this we don't want access to all your websites that you browse. But if you want to block your visits on all, there is a way.

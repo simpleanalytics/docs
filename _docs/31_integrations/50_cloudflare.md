@@ -3,6 +3,7 @@ title: Install Simple Analytics on Cloudflare
 menu: Cloudflare
 category: integrations
 permalink: /install-simple-analytics-on-cloudflare
+last_modified_at: 2022-04-14
 ---
 
 You can embed our script in Cloudflare using [Cloudflare Apps](https://www.cloudflare.com/apps/simpleanalytics). On this page we will explain how to use this feature and help you installing the Simple Analytics app on Cloudflare.

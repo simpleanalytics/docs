@@ -3,6 +3,7 @@ title: Collect events on iOS with Swift
 menu: Collect events on iOS
 category: events
 permalink: /events/ios
+last_modified_at: 2022-04-14
 ---
 
 This is a draft of how to track events with iOS. If you know how to improve it, please let us know.

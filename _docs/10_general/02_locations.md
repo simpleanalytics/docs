@@ -3,6 +3,7 @@ title: Locations of servers
 category: general
 permalink: /locations
 excerpt: "We do everything to keep your data safe. Our servers are located in The Netherlands, and we don’t transfer data overseas."
+last_modified_at: 2022-04-14
 ---
 
 We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website's visitors and even go a few steps further.

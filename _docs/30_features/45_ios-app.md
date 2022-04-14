@@ -2,6 +2,7 @@
 title: iOS app
 category: features
 permalink: /ios-app
+last_modified_at: 2022-04-14
 ---
 
 We love to make analytics fun for our customers. That's why we created an iOS app that includes nice looking widgets.

@@ -3,6 +3,7 @@ title: Install Simple Analytics on MailerLite
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-on-mailerlite
+last_modified_at: 2022-04-14
 ---
 
 You can embed our script in MailerLite using their feature called "Page code injection". On this page we will explain how to use this feature and help you installing the Simple Analytics script on MailerLite.

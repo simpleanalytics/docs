@@ -3,6 +3,7 @@ title: Install Simple Analytics on other platforms
 menu: Install on other platforms
 category: script
 permalink: /install-on-other-platforms
+last_modified_at: 2022-04-14
 ---
 
 ## Platform guides

@@ -2,6 +2,7 @@
 title: Trigger custom page views
 category: script
 permalink: /trigger-custom-page-views
+last_modified_at: 2022-04-14
 ---
 
 Normally you want to trigger a custom page view for _Single Page Apps_ (SPA's) like React, Vue, and Angular. Because pages are not completely reloaded on navigation we need a way to track those navigations as page views.

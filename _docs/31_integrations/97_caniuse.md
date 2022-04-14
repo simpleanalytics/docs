@@ -3,6 +3,7 @@ title: Use website data in Can I Use
 menu: Can I use...
 category: integrations
 permalink: /use-website-data-in-caniuse
+last_modified_at: 2022-04-14
 ---
 
 If you ware a developer you know the website caniuse.com. Can I use provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers. It's super useful when you develop features for your visitors.

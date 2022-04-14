@@ -2,6 +2,7 @@
 title: Proxy all requests
 category: script
 permalink: /proxy
+last_modified_at: 2022-04-14
 ---
 
 If you really want to prevent any IPs of your visitors to end up on our servers you can setup a simple proxy. We are a huge fan of NGINX. If you have a domain, let's say `example.com` and you want to have setup a proxy you would add this to your server directive in NGINX:

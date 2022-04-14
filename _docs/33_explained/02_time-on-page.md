@@ -3,6 +3,7 @@ title: Time on page explained
 menu: Time on page
 category: explained
 permalink: /explained/time-on-page
+last_modified_at: 2022-04-14
 ---
 
 _Time on page_ is an important metric to measure how engaged your visitors are with your content. But in most analytics tools, there is something very wrong with that metric. You might think when using Simple Analytics: "These numbers are lower than I'm used to", well, that's probably right.

@@ -3,6 +3,7 @@ title: Install Simple Analytics with Next.js
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-next
+last_modified_at: 2022-04-14
 ---
 
 Next.js has a lovely [Script component](https://nextjs.org/docs/basic-features/script).

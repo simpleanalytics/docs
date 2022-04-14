@@ -3,6 +3,7 @@ title: Install Simple Analytics with the Analytics library
 category: script
 hidden: true
 permalink: /install-simple-analytics-via-analytics-package
+last_modified_at: 2022-04-14
 ---
 
 You can install Simple Analytics using the open-source Analytics library ([website](https://getanalytics.io), [npm](https://www.npmjs.com/package/analytics)). It's a pluggable library designed as an abstraction layer to customize your app's analytics requirements easily.

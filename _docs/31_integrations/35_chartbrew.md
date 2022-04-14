@@ -4,6 +4,7 @@ menu: Chartbrew
 category: integrations
 permalink: /import-simple-analytics-data-in-chartbrew
 canonical_url: https://chartbrew.com/blog/how-to-visualize-simple-analytics-data-with-chartbrew/
+last_modified_at: 2022-04-14
 ---
 
 In this tutorial, we will connect Simple Analytics' API, get different datasets, and create a dashboard in Chartbrew to show all this data.

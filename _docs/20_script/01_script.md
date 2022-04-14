@@ -2,6 +2,7 @@
 title: How to add our script
 category: script
 permalink: /script
+last_modified_at: 2022-04-14
 ---
 
 Include these two lines at the end of your `<body>` (or anywhere else):
@@ -12,7 +13,7 @@ Include these two lines at the end of your `<body>` (or anywhere else):
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
-> To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, Ruby, and others, go to [Install on other platforms](/install-on-other-platforms). 
+> To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, Ruby, and others, go to [Install on other platforms](/install-on-other-platforms).
 
 We have a website setup wizard to test if you installed your script correctly. If you still have problems installing it, please let us know! We helped a lot of people with setting up their script and we love to help you as well. Just [contact](https://simpleanalytics.com/contact) us.
 

@@ -3,6 +3,7 @@ title: Microsoft Power BI
 menu: Power BI
 category: integrations
 permalink: /microsoft-power-bi
+last_modified_at: 2022-04-14
 ---
 
 Some customers use [Microsoft Power BI](https://powerbi.microsoft.com/) for building reports. Because we care about privacy, we don't store any personal data. No personal data from your visitors will end up on the servers of Microsoft.

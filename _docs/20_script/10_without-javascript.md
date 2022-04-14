@@ -2,6 +2,7 @@
 title: Collect without JavaScript
 category: script
 permalink: /without-javascript
+last_modified_at: 2022-04-14
 ---
 
 Normally you would collect page view via our [open source JavaScript](/script). But there are other way to collect those. You can either send data via [your own server](/server-side-tracking) or send it through a pixel (a small GIF image).

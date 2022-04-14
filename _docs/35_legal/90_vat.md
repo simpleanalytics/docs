@@ -2,6 +2,7 @@
 title: VAT
 category: legal
 permalink: /vat
+last_modified_at: 2022-04-14
 ---
 
 By European law we are required to charge [Value Added Tax](https://ec.europa.eu/taxation_customs/business/vat/what-is-vat_en) (VAT) for our European customers. It applies to all goods and services that are bought and sold in the European Union (EU), but there is an exeption.

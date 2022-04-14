@@ -3,6 +3,7 @@ title: Install Simple Analytics with Hugo
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-hugo
+last_modified_at: 2022-04-14
 ---
 
 <img src="/images/hugo-logo.svg" width="200px">

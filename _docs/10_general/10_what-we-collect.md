@@ -3,6 +3,7 @@ title: What we collect
 category: general
 permalink: /what-we-collect
 excerpt: "Simple Analytics only collects privacy-insensitive data. Here is a list of what we do and don’t collect from your visitors."
+last_modified_at: 2022-04-14
 ---
 
 Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your visitors.

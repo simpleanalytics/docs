@@ -4,6 +4,7 @@ menu: How to use URL params
 category: general
 permalink: /how-to-use-url-parameters
 excerpt: "You can add URL parameters to see where your customers are coming from."
+last_modified_at: 2022-04-14
 ---
 
 There are a few ways we determine where a visitor comes from. We automatically detect the previous page (referrer) from the visitor's browser, but you can also add a URL parameter to override this and set a custom referrer.

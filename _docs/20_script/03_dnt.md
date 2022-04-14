@@ -2,6 +2,7 @@
 title: Do Not Track
 category: script
 permalink: /dnt
+last_modified_at: 2022-04-14
 ---
 
 > This page is about the DNT setting in browsers. We don't track your visitors, [read more on what we collect](/what-we-collect).

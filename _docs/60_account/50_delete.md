@@ -2,6 +2,7 @@
 title: How to delete my account
 category: account
 permalink: /delete-account
+last_modified_at: 2022-04-14
 ---
 
 It's very easy to delete your account. Go to your [account settings](https://simpleanalytics.com/account) and click the button "Delete your account".

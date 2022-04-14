@@ -4,6 +4,7 @@ category: api
 permalink: /api/stats
 redirect_from:
   - /api/json-api
+last_modified_at: 2022-04-14
 ---
 
 To get the aggregated statistics you see in our dashboard, use this Stats API. This API helps integrate Simple Analytics into your systems. For example, you can get KPIs out of your data or embed your data into a customized dashboard.

@@ -3,6 +3,7 @@ title: Terms of service of our referral program
 menu: Terms of service
 category: referral program
 permalink: /referral-program/terms-of-service
+last_modified_at: 2022-04-14
 ---
 
 We have a few rules that apply to our referral program. We love our customers sharing our product and we believe it should only done by our customers. They know the product so a recommendation from them has way more value than from anybody else.

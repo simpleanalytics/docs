@@ -3,6 +3,7 @@ title: Bots
 hidden: true
 category: general
 permalink: /bots
+last_modified_at: 2022-04-14
 ---
 
 We have a few bots that work for us :)

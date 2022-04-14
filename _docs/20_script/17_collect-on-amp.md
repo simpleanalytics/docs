@@ -2,6 +2,7 @@
 title: Collect in AMP
 category: script
 permalink: /collect-in-amp
+last_modified_at: 2022-04-14
 ---
 
 AMP is a web component framework by Google that you can use to create websites. It's loading last because it's cached on the servers of Google. Learn more about [how it works](https://amp.dev/about/how-amp-works/). To collect page views via AMP you can use [our collect pixel without JavaScript](/without-javascript).

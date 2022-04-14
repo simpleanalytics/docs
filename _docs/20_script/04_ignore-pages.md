@@ -3,6 +3,7 @@ title: Ignore pages
 menu: Ignore pages
 category: script
 permalink: /ignore-pages
+last_modified_at: 2022-04-14
 ---
 
 Normally you install the script on all pages of your website. You add your script in the header or footer so you don't have to copy it to every page. But sometimes you don't want to record all pages on your website. That's why we have a feature where you can ignore pages easily.

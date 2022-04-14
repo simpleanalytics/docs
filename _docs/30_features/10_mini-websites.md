@@ -2,6 +2,7 @@
 title: Mini websites
 category: features
 permalink: /mini-websites
+last_modified_at: 2022-04-14
 ---
 
 Referral links are so boring. Why not make them beautiful? That's why we created mini websites. Screenshots of the websites but then very mini!

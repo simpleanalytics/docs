@@ -2,6 +2,7 @@
 title: Server side tracking
 category: script
 permalink: /server-side-tracking
+last_modified_at: 2022-04-14
 ---
 
 When you send data from your server to Simple Analytics you need to provide a few fields:

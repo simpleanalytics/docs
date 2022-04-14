@@ -2,6 +2,7 @@
 title: Block your visits extension
 category: features
 permalink: /extension
+last_modified_at: 2022-04-14
 ---
 
 If you are a customer of Simple Analytics and you want to block your own visits this extension is for you. With it enabled your stats will not include your visits.

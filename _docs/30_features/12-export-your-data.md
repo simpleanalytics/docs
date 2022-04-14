@@ -2,6 +2,7 @@
 title: Export your data
 category: features
 permalink: /export-data
+last_modified_at: 2022-04-14
 ---
 
 As a privacy-friendly business, we care a lot about who owns the data. We are very clear in our terms of service ([section 10](https://simpleanalytics.com/general-terms-and-conditions#intellectual-property)) that you (our customer) own the analytics data. We don't. To not just have that in words in our terms, we care about making it easy for you to export your data. You can export your data through [our APIs](/api) or use [our user interface](https://simpleanalytics.com/select-website/export) to export the raw data.

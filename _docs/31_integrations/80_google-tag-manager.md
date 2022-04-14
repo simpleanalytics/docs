@@ -3,6 +3,7 @@ title: Install Simple Analytics via Google Tag Manager
 menu: Google Tag Manager
 category: integrations
 permalink: /install-simple-analytics-with-google-tag-manager
+last_modified_at: 2022-04-14
 ---
 
 You can embed our script via Google Tag Manager. We have an official Community Tag. Here is how to install this tag.

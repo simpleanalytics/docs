@@ -2,6 +2,7 @@
 title: Overwrite domain name
 category: script
 permalink: /overwrite-domain-name
+last_modified_at: 2022-04-14
 ---
 
 Sometimes you want to link multiple domains into one domain in your dashboard. Or you want to use a different domain than people see in their browser address bar. You can overwrite the default domain name by specifying its hostname.

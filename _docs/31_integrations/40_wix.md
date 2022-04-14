@@ -3,6 +3,7 @@ title: Install Simple Analytics on WIX
 menu: WIX
 category: integrations
 permalink: /install-simple-analytics-on-wix
+last_modified_at: 2022-04-14
 ---
 
 You can embed our script in WIX by adding a **New Tool**. On this page we will explain how to use this feature and help you installing the Simple Analytics script on WIX.

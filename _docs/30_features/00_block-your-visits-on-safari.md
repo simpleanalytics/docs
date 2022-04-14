@@ -3,6 +3,7 @@ title: Block your visits on Safari
 category: features
 hidden: true
 permalink: /block-your-visits-on-safari
+last_modified_at: 2022-04-14
 ---
 
 To block your own visits on your website on Safari, you can use the about:blank extension. You can [download about:blank](https://apps.apple.com/us/app/about-blank/id1239207203) via the Mac App Store.

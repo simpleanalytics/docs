@@ -3,6 +3,7 @@ title: Content Security Policy version
 menu: CSP version
 category: script
 permalink: /csp
+last_modified_at: 2022-04-14
 ---
 
 Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware. [Read more on CSP at MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).

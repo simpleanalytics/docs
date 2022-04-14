@@ -3,6 +3,7 @@ title: Install Simple Analytics with Ruby on Rails
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-ruby-on-rails
+last_modified_at: 2022-04-14
 ---
 
 This gem adds the [JavaScript Tracking Script](https://docs.simpleanalytics.com/script) to the `<head>` & `<body>` tag of your Ruby on Rails applications.

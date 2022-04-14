@@ -5,6 +5,7 @@ permalink: /api/export-page-views
 redirect_from:
   - /api/csv-export-visits
   - /api/export-pageviews
+last_modified_at: 2022-04-14
 ---
 
 With this API you can export raw page views (without sampling). Define a date range and it pull out the data via streaming. For us it does not matter how much data you export. We stream the data directly out of our database to your server or computer. No heavy load required. To make the export size smaller you can select the fields you want. The response will only include the fields you selected in the order you provided.

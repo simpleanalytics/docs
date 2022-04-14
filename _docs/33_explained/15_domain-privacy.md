@@ -2,6 +2,7 @@
 title: Domain privacy
 category: explained
 permalink: /explained/domain-privacy
+last_modified_at: 2022-04-14
 ---
 
 We believe adding a website to Simple Analytics should be a painless process.

@@ -3,6 +3,7 @@ title: Install Simple Analytics with Django
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-django
+last_modified_at: 2022-04-14
 ---
 
 Install the plugin:

@@ -3,6 +3,7 @@ title: Google Data Studio connector
 menu: Google Data Studio
 category: integrations
 permalink: /google-data-studio
+last_modified_at: 2022-04-14
 ---
 
 Some customers use [Google Data Studio](https://datastudio.google.com/) for building reports. Because we care about privacy, we don't store any personal data. That's why we are comfortable enough to let customers choose to connect with Data Studio while Google can't abuse our customers' data or their visitors.

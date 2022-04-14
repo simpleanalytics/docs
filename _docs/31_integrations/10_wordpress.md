@@ -3,6 +3,7 @@ title: Install Simple Analytics on WordPress
 menu: WordPress
 category: integrations
 permalink: /install-simple-analytics-on-wordpress
+last_modified_at: 2022-04-14
 ---
 
 You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress.

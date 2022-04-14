@@ -2,6 +2,7 @@
 title: Passwords
 category: account
 permalink: /passwords
+last_modified_at: 2022-04-14
 ---
 
 You can always login with just your email. Some users like to login with a password. This can be faster than with email only.

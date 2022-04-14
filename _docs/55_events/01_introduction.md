@@ -3,6 +3,7 @@ title: Introduction to events
 menu: Introduction
 category: events
 permalink: /events
+last_modified_at: 2022-04-14
 ---
 
 With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email links. You will need to install our separate script for it, but after that you don't need to modify any code.

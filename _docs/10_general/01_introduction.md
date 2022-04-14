@@ -4,6 +4,7 @@ category: general
 menu: Introduction
 permalink: /
 download: false
+last_modified_at: 2022-04-14
 ---
 
 Whether you’re a startup or a global enterprise, learn how to integrate with Simple Analytics for privacy friendly analytics. No consent required from your visitors!

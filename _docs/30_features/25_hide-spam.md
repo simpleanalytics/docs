@@ -5,6 +5,7 @@ permalink: /hide-referral-spam
 redirect_from:
   - /delete-spam-from-your-analytics
   - /remove-referral-spam
+last_modified_at: 2022-04-14
 ---
 
 Simple Analytics has a feature where you can hide referral spam. Not by setting up complex filters, but just with a click on a button.

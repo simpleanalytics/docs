@@ -3,6 +3,7 @@ title: Install Simple Analytics with React
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-react
+last_modified_at: 2022-04-14
 ---
 
 Most projects have the structure of `npx create-react-app my-app`. Let's follow that structure.

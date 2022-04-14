@@ -3,6 +3,7 @@ title: Install Simple Analytics with Gridsome
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-gridsome
+last_modified_at: 2022-04-14
 ---
 
 Install our Gridsome package:

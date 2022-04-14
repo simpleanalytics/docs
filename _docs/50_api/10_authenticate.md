@@ -3,6 +3,7 @@ title: API Authenticate
 menu: Authenticate
 category: api
 permalink: /api/authenticate
+last_modified_at: 2022-04-14
 ---
 
 For some API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...`.

@@ -2,6 +2,7 @@
 title: Bypass ad-blockers
 category: features
 permalink: /bypass-ad-blockers
+last_modified_at: 2022-04-14
 ---
 
 Simple Analytics never collects any personal identifiable information. Ad-blockers see us just any other analytics company and some of the ad-blockers are blocking our domain as a result. To prevent your stats being blocked as a result we allow you to setup a bypass. This basically hides Simple Analytics' server name from the browser by redirecting a subdomain to our domain.

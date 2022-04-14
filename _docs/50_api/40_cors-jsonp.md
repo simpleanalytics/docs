@@ -3,6 +3,7 @@ title: CORS and JSONP
 category: api
 hidden: true
 permalink: /api/cors-jsonp
+last_modified_at: 2022-04-14
 ---
 
 We have support for JSONP and CORS. Here are two examples with jQuery:

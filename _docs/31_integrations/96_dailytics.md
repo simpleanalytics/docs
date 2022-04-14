@@ -4,6 +4,7 @@ menu: Dailytics
 category: integrations
 permalink: /get-powerful-email-reports-with-dailytics
 canonical_url: https://dailytics.com/simple-analytics/
+last_modified_at: 2022-04-14
 ---
 
 In this tutorial, we are going to generate an email report to share with your team or clients using Dailytics.com.
