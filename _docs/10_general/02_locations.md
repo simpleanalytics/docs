@@ -1,5 +1,5 @@
 ---
-title: How we protecting your data
+title: How we protect your data
 menu: Protecting your data
 category: general
 permalink: /protecting-your-data
