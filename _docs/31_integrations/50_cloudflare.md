@@ -8,6 +8,8 @@ last_modified_at: 2022-04-14
 
 You can embed our script in Cloudflare using [Cloudflare Apps](https://www.cloudflare.com/apps/simpleanalytics). On this page we will explain how to use this feature and help you installing the Simple Analytics app on Cloudflare.
 
+> This CloudFlare app does not install [the custom domain](/bypass-ad-blockers) for you. You need to add it yourself if you want to use it.
+
 Follow these steps to add Simple Analytics to your website:
 
 1. Go to the <a href="https://www.cloudflare.com/apps/simpleanalytics" target="_blank">Simple Analytics app on Cloudflare</a>
