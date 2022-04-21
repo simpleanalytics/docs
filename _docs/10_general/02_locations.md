@@ -3,6 +3,8 @@ title: Protecting your data
 category: general
 permalink: /what-we-do-to-protect-your-data
 excerpt: "We do everything to keep your data safe. Our servers are located in The Netherlands, and we don’t transfer data overseas."
+redirect_from:
+  - /locations
 last_modified_at: 2022-04-21
 ---
 
