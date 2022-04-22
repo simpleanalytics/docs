@@ -5,6 +5,7 @@ permalink: /api/export-events
 redirect_from:
   - /api/csv-export-events
 last_modified_at: 2022-04-14
+fields: added_iso,country_code,datapoint,device_type,path,session_id,utm_campaign,utm_content,utm_medium,utm_source,utm_term
 ---
 
 If you want to export raw events you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
@@ -28,18 +29,30 @@ https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version
 To export your events you can use this URL format:
 
 ```
-https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=...&type=events
+https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields={{ fields }}&type=events
 ```
 
-You can use our UI to generate this URL for you. [See helpers](/api/helpers#generate-export-url).
+> The `fields` parameter can contain all fields listed here: `{{ fields }}` and the onces you find in [our UI](https://simpleanalytics.com/select-website/export). You can [use our UI](https://simpleanalytics.com/select-website/export) to generate this URL for you. [See API helpers](/api/helpers#generate-export-url) on how this works.
 
 To test if your request is correct, you can replace the example values of this cURL example with your own:
 
 ```bash
-curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=added_iso,datapoint&type=events" \
+curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields={{ fields }}&type=events" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
      -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
      -H 'Content-Type: text/csv'
+```
+
+It will export something like this:
+
+```csv
+added_iso,country_code,datapoint,device_type,path,session_id,utm_campaign,utm_content,utm_medium,utm_source,utm_term
+{{ "now" | date: '%s' | minus: 86400 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},US,visit_homepage,desktop,/,1e5aad53-c734-40ac-b060-426a70d1c104,,,,,
+{{ "now" | date: '%s' | minus: 3530 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},UK,visit_homepage,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,,,
+{{ "now" | date: '%s' | minus: 3600 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},UK,popup_show,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,,,
+{{ "now" | date: '%s' | minus: 60 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},NL,visit_homepage,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,,
+{{ "now" | date: '%s' | minus: 30 | date: '%Y-%m-%dT%H:%M:%S.200Z' }},NL,popup_show,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,,
+{{ "now" | date: '%s' | minus: 1 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},NL,popup_close,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,,
 ```
 
 <details>
