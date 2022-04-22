@@ -5,7 +5,7 @@ permalink: /api/export-events
 redirect_from:
   - /api/csv-export-events
 last_modified_at: 2022-04-14
-fields: added_iso,country_code,datapoint,device_type,path,session_id,utm_campaign,utm_content,utm_medium,utm_source,utm_term
+fields: added_iso,country_code,datapoint,device_type,path,session_id,utm_source,utm_campaign,utm_content,utm_medium
 ---
 
 If you want to export raw events you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
@@ -43,17 +43,45 @@ curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_vers
      -H 'Content-Type: text/csv'
 ```
 
-It will export something like this:
+It will export something like this (in CSV format):
+
+| added_iso | country_code | datapoint    | device_type                       | path | session_id     | utm_campaign | utm_content | utm_medium                           | utm_source |
+| --------- | ------------ | ------------ | --------------------------------- | ---- | -------------- | ------------ | ----------- | ------------------------------------ | ---------- | --- | ---------- | ---------- |
+| {{ "now"  | date: '%s'   | minus: 83325 | date: '%Y-%m-%dT%H:%M:%S.100Z' }} | US   | visit_homepage | desktop      | /           | 1e5aad53-c734-40ac-b060-426a70d1c104 | ads1       |     |            | duckduckgo |
+| {{ "now"  | date: '%s'   | minus: 2580  | date: '%Y-%m-%dT%H:%M:%S.100Z' }} | UK   | visit_homepage | desktop      | /           | 7b03aa29-612d-4aa8-b147-72c13986c4ae |            |     | newsletter |            |
+| {{ "now"  | date: '%s'   | minus: 2340  | date: '%Y-%m-%dT%H:%M:%S.200Z' }} | UK   | popup_show     | desktop      | /           | 7b03aa29-612d-4aa8-b147-72c13986c4ae |            |     |            |            |
+| {{ "now"  | date: '%s'   | minus: 55    | date: '%Y-%m-%dT%H:%M:%S.100Z' }} | NL   | visit_homepage | desktop      | /           | 928e4f2f-1f16-4900-9ad8-0a1965e689a3 |            |     |            | google     |
+| {{ "now"  | date: '%s'   | minus: 35    | date: '%Y-%m-%dT%H:%M:%S.200Z' }} | NL   | popup_show     | desktop      | /           | 928e4f2f-1f16-4900-9ad8-0a1965e689a3 |            |     |            |            |
+| {{ "now"  | date: '%s'   | minus: 5     | date: '%Y-%m-%dT%H:%M:%S.300Z' }} | NL   | popup_close    | desktop      | /           | 928e4f2f-1f16-4900-9ad8-0a1965e689a3 |            |     |            |            |
+
+<details class="csv">
+<summary>The above export in CSV format</summary>
+<div markdown="1">
 
 ```
-added_iso,country_code,datapoint,device_type,path,session_id,utm_campaign,utm_content,utm_medium,utm_source,utm_term
-{{ "now" | date: '%s' | minus: 86400 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},US,visit_homepage,desktop,/,1e5aad53-c734-40ac-b060-426a70d1c104,,,,,
-{{ "now" | date: '%s' | minus: 3530 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},UK,visit_homepage,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,,,
-{{ "now" | date: '%s' | minus: 3600 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},UK,popup_show,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,,,
-{{ "now" | date: '%s' | minus: 60 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},NL,visit_homepage,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,,
-{{ "now" | date: '%s' | minus: 30 | date: '%Y-%m-%dT%H:%M:%S.200Z' }},NL,popup_show,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,,
-{{ "now" | date: '%s' | minus: 1 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},NL,popup_close,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,,
+added_iso,country_code,datapoint,device_type,path,session_id,utm_campaign,utm_content,utm_medium,utm_source
+{{ "now" | date: '%s' | minus: 83325 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},US,visit_homepage,desktop,/,1e5aad53-c734-40ac-b060-426a70d1c104,ads1,,,duckduckgo
+{{ "now" | date: '%s' | minus: 2580 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},UK,visit_homepage,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,newsletter,
+{{ "now" | date: '%s' | minus: 2340 | date: '%Y-%m-%dT%H:%M:%S.200Z' }},UK,popup_show,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,,
+{{ "now" | date: '%s' | minus: 55 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},NL,visit_homepage,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,google
+{{ "now" | date: '%s' | minus: 35 | date: '%Y-%m-%dT%H:%M:%S.200Z' }},NL,popup_show,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,
+{{ "now" | date: '%s' | minus: 5 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},NL,popup_close,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,
 ```
+
+</div>
+</details>
+
+<style>
+  table td, table th {
+    white-space: nowrap;
+  }
+  table tr td:first-of-type, table tr th:first-of-type {
+    font-variant-numeric: tabular-nums;
+  }
+  details.csv pre.highlight {
+    white-space: pre;
+  }
+</style>
 
 <details>
 <summary>Legacy events endpoint</summary>
