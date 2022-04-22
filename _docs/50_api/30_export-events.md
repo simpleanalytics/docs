@@ -32,7 +32,7 @@ To export your events you can use this URL format:
 https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields={{ page.fields }}&type=events
 ```
 
-> The `fields` parameter can contain all fields listed here: `{{ page.fields }}` and the onces you find in [our UI](https://simpleanalytics.com/select-website/export). You can [use our UI](https://simpleanalytics.com/select-website/export) to generate this URL for you. [See API helpers](/api/helpers#generate-export-url) on how this works.
+> The `fields` parameter can contain all fields listed here: `{{ page.fields }}` and the ones you find in [our UI](https://simpleanalytics.com/select-website/export). You can [use our UI](https://simpleanalytics.com/select-website/export) to generate this URL for you. [See API helpers](/api/helpers#generate-export-url) on how this works.
 
 To test if your request is correct, you can replace the example values of this cURL example with your own:
 
@@ -45,7 +45,7 @@ curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_vers
 
 It will export something like this:
 
-```csv
+```
 added_iso,country_code,datapoint,device_type,path,session_id,utm_campaign,utm_content,utm_medium,utm_source,utm_term
 {{ "now" | date: '%s' | minus: 86400 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},US,visit_homepage,desktop,/,1e5aad53-c734-40ac-b060-426a70d1c104,,,,,
 {{ "now" | date: '%s' | minus: 3530 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},UK,visit_homepage,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,,,
