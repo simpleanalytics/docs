@@ -60,8 +60,8 @@
     {% endif %}
     <p>
       Your browser doesn't support HTML5 video. {% if include.noLink %} Here is
-      a link instead: https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.mp4 {% else %} Here is a
-      <a href="https://assets.simpleanalytics.com/videos/{{ include.slug }}/video.mp4"
+      a link instead: https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename | default: 'video' }}.mp4 {% else %} Here is a
+      <a href="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.filename | default: 'video' }}.mp4"
         >link to the video</a
       >
       instead. {% endif %}
