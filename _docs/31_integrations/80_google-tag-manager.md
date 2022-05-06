@@ -27,7 +27,7 @@ If you prefer text instructions, follow this guide:
 1. Click "Add to workspace"
 1. Click "Add" in the popup
 1. Change some settings if needed
-   - [Custom domain](/bypass-ad-blockers)
+   - [Custom domain](/bypass-ad-blockers) ([see extra instructions below](#custom-domain))
    - [Collect DoNotTrack](/dnt)
    - [Events](/events)
 1. Click "Choose a traigger to make this tag fire..."
@@ -35,5 +35,17 @@ If you prefer text instructions, follow this guide:
 1. Click "Save" to save the tag
 
 Now you added the Simple Analytics Tag with a trigger. Next, you can preview or submit the changes and your page views will be collected in Simple Analytics. Make sure to have a website set up in Simple Analytics to collect the data.
+
+## Custom domain
+
+To set up our tag with a custom domain, you will need to add your custom domain to your permissions. In this video we explain how to do this:
+
+{%
+  include video.html
+  controls="true"
+  slug="google-tag-manager-custom-domain"
+  formats="mov,mp4,ogg,webm,wmv"
+  poster="poster.png"
+%}
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
