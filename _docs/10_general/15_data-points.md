@@ -34,13 +34,13 @@ To know where customers come from, we store the page's referrer. This means that
 
 For example `https://simpleanalytics.com/?utm_source=newsletter`
 
-The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes and drop all other URL parameters. The UTM codes are something that the customer adds themselves to the URLs. For example, to know how many visitors came via the newsletter. [See below][5].
+The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes and drop all other URL parameters. The UTM codes are something that the customer adds to the URLs. For example, to know how many visitors came via the newsletter. [See below][5].
 
 ### Unique
 
 <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> Very important</p>
 
-If a page view is unique or not.
+If a page view is unique or not. A simple yes or no.
 
 ### Country / time zone
 
@@ -50,13 +50,11 @@ We collect the time zone of the browser. For example, `Europe/Amsterdam`. From t
 
 ### IDs
 
-<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
-
 We collect three IDs:
 
-1.  The ID of the page view,
-1.  the ID of the page (if multiple events happen on the same page),
-1.  and the ID of the session.
+1. ID of the page view <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</span>
+1. ID of the page <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
+1. ID of the session <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
 
 At Simple Analytics, we don't really have sessions. They only live for as long as the website is open. When a customer has a SPA (Single Page Application), the session ends when the website is closed. If the customer doesn't have a SPA, the session ends with every navigation.
 
@@ -106,7 +104,7 @@ https://example.com/landing-page?utm_source=company-x&utm_medium=newsletter&utm_
 
 [Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer.
 
-## User agents strings
+## User-agent strings
 
 Browsers or devices identify themselves to websites. They give themselves some kind of name. For example, a user agent can look like this ([wiki][1]):
 
@@ -139,5 +137,11 @@ In some browsers we collect browser name and operating system name without the u
   }
   .rating svg {
     margin-right: 5px;
+  }
+  .rating.scaled {
+    transform: scale(0.7) translateY(5px);
+    transform-origin: bottom left;
+    margin-bottom: -5px;
+    margin-top: -12px;
   }
 </style>
