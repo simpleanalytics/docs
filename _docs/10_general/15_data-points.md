@@ -8,48 +8,95 @@ last_modified_at: 2022-04-14
 
 Here is a list of data points we collect.
 
-> [Go to our general overview](/what-we-collect) of what we collect.
+> Want a more general overview? [Go to our general overview](/what-we-collect) of what we collect.
 
-With every page view we collect some data points. We never track visitors so the data below is never linked to one specific visitor.
+With every page view, we collect some data points. We never track visitors, so the data below is never linked to one specific visitor.
 
-Everything is collected within the browser except for the data points with an \*
+<hr style="border: none; background-color: #eef9ff; height: 5px; margin-top: 2rem;" />
 
-| Data point       | What is it?                                                                | Example               |
-| :--------------- | :------------------------------------------------------------------------- | :-------------------- |
-| Timestamp        | Time and date of the visit                                                 | 2021-04-14 12:31:00   |
-| Referrer         | The URL of the previous page linked to the page view [wiki][3]             | https://google.com/   |
-| Website          | The website of the visit                                                   | example.com           |
-| Path             | Path of the page view                                                      | /contact              |
-| Original website | In case the website [is overwritten by a customer][4] we save the original | orginal-example.com   |
-| Country          | Country collected via the time zone of the visitor                         | The Netherlands       |
-| Language         | Language of the browser                                                    | en_US                 |
-| Unique page view | True of false for if [visit is unique][2]                                  | true                  |
-| Robot            | True of false for if the visitor is a robot                                | false                 |
-| Time on page     | How long is the visitor on a page                                          | 2 minutes 5 seconds   |
-| How far scrolled | Scrolled percentage on the page by the visitor                             | 60%                   |
-| Browser name     | Browser of the visitor                                                     | Safari                |
-| Browser version  | Browser of the visitor                                                     | 14.4.1                |
-| OS name          | Operating system of the visitor                                            | Mac OS X              |
-| OS version       | Operating system version of the visitor                                    | 13.2                  |
-| Device type      | Device type of visitor                                                     | desktop/tablet/mobile |
-| Screen height    | Full-screen height of visitor's device in pixels                           | 1440px                |
-| Screen width     | Full-screen width of visitor's device in pixels                            | 900px                 |
-| Viewport height  | Window height of visitor's browser in pixels                               | 720px                 |
-| Viewport width   | Window width of visitor's browser in pixels                                | 1200px                |
-| User agent       | User-agent string of the browser                                           | [see below][6]        |
-| UTM source       | URL utm_source parameter of the page view [see below][5]                   | company-x             |
-| UTM medium       | URL utm_medium parameter of the page view                                  | newsletter            |
-| UTM campaign     | URL utm_campaign parameter of the page view                                | march_01              |
-| UTM content      | URL utm_content parameter of the page view                                 | button_red            |
-| UTM term         | URL utm_term parameter of the page view                                    | shoes                 |
-| Page view id     | Identifier of the page view                                                | 918291910             |
-| Script id        | Identifier of the embed script                                             | script_1              |
-| Server id \*     | Identifier of our server                                                   | server_1              |
-| Ingest time \*   | Time and date when the visit is saved on our server                        | 2021-04-14 12:31:01   |
+### URL of the page
 
-\* Not collected in the browser but on our server
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> Very important</p>
 
-## UTM codes
+For example `https://simpleanalytics.com/contact`
+
+We store this URL in parts in our database.
+
+### Referrer
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> Very important</p>
+
+To know where customers come from, we store the page's referrer. This means that a customer can see where a visitor is coming from—for example, `duckduckgo.com`.
+
+### UTM codes
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
+
+For example `https://simpleanalytics.com/?utm_source=newsletter`
+
+The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes and drop all other URL parameters. The UTM codes are something that the customer adds themselves to the URLs. For example, to know how many visitors came via the newsletter. [See below][5].
+
+### Unique
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> Very important</p>
+
+If a page view is unique or not.
+
+### Country / time zone
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
+
+We collect the time zone of the browser. For example, `Europe/Amsterdam`. From this time zone, we derive the country. Every country has at least one time zone, and devices automatically update to the local time zone.
+
+### IDs
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
+
+We collect three IDs:
+
+1.  The ID of the page view,
+1.  the ID of the page (if multiple events happen on the same page),
+1.  and the ID of the session.
+
+At Simple Analytics, we don't really have sessions. They only live for as long as the website is open. When a customer has a SPA (Single Page Application), the session ends when the website is closed. If the customer doesn't have a SPA, the session ends with every navigation.
+
+### Scrolled percentage & time on page
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
+
+We collect those numbers to know how far visitors scrolled (for example, 80%) and how long they were on the page (for example, 45 seconds). The "The ID of the page view" is required.
+
+### User-agent
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
+
+To know which type of device the visitor used, we store the user agent. This is a data point that is the same for many visitors. It shows the browser used, the operating system, and the type of device. [See below][6].
+
+### Script settings
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
+
+We send some script settings along with the page view. To identify the embed script and check if the page view comes from a robot.
+
+### Dimensions
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</p>
+
+We collect the dimensions of the screen of the device. There are two dimensions: the viewport and the screen. The viewport is the part where the website runs in; the screen is the dimensions of the complete screen of the device.
+
+> The page view ID is required for time on page.
+
+### Language
+
+<p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</p>
+
+The language of the browser, for example, `en-US`.
+
+<p style="text-align: center; margin-top: 4rem;">That's it!</p>
+
+<hr style="border: none; background-color: #eef9ff; height: 5px;" />
+
+## UTM codes explained
 
 UTM codes are bits of text you can add to a link that tell Simple Analytics (as well as other analytics tools) a little bit more information about each link. Here's a sample of what one looks like:
 
@@ -67,9 +114,7 @@ Browsers or devices identify themselves to websites. They give themselves some k
 Mozilla/5.0 (iPad; U; CPU OS 3_2_1) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B40598
 ```
 
-This could potentially have user specific information in them so we annonymise these user-agent strings. We replace long numbers with zeros.
-
-After cleanup, it looks like this:
+It's not needed, privacy-wise, but we replace long numbers with zeros. After cleanup, it looks like this:
 
 ```
 Mozilla/5.0 (iPad; U; CPU OS 3_2_0) AppleWebKit/531.21.0 (KHTML, like Gecko) Mobile/7B40000
@@ -81,5 +126,18 @@ In some browsers we collect browser name and operating system name without the u
 [2]: /explained/unique-visits
 [3]: https://en.wikipedia.org/wiki/HTTP_referer
 [4]: /overwrite-domain-name
-[5]: #utm-codes
+[5]: #utm-codes-explained
 [6]: #user-agents-strings
+
+<style>
+  .rating {
+    display: inline-flex;
+    margin: 0;
+    background-color: #eef9ff;
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+  .rating svg {
+    margin-right: 5px;
+  }
+</style>
