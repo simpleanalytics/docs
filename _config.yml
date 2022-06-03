@@ -27,6 +27,7 @@ github_username: simpleanalytics
 
 # Variables
 api_version: 5
+url: https://docs.simpleanalytics.com
 
 # Build settings
 markdown: kramdown
