@@ -34,7 +34,7 @@ To know where customers come from, we store the page's referrer. This means that
 
 For example `https://simpleanalytics.com/?utm_source=newsletter`
 
-The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes and drop all other URL parameters. The UTM codes are something that the customer adds to the URLs. For example, to know how many visitors came via the newsletter. [See below][5].
+The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes and drop all other URL parameters. The UTM codes are something that the customer adds to the URLs. By nature these UTM codes don't include personal data. They are generic terms like "newsletter_may" or "twitter_campaign_2". [See below][5].
 
 ### Unique
 
