@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    {%- if page.no_index = true -%}
+    {%- if page.no_index = true or page.sitemap = false -%}
     <!-- Hide this page for robots -->
     <meta name="robots" content="noindex, nofollow" />
     {%- endif %}
