@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
+    {%- if page.no_index = true -%}
+    <!-- Hide this page for robots -->
+    <meta name="robots" content="noindex, nofollow" />
+    {%- endif %}
+    
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.url }}/sitemap.xml" />
 
