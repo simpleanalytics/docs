@@ -39,3 +39,21 @@ export default MyApp;
 It will use the `afterInteractive` strategy to load the script. From the docs:
 
 > For scripts that can fetch and execute after the page is interactive, such as tag managers and analytics. These scripts are injected on the client-side and will run after hydration.
+
+## Send events with JavaSript
+
+```ts
+export const saEvent = (eventName) => {
+  if (window && window.sa_event) return window.sa_event(eventName);
+};
+```
+
+## Send events with TypeScript
+
+```ts
+declare function sa_event(eventName: string);
+
+export const saEvent = (eventName: string) => {
+  if (window && window.sa_event) return window.sa_event(eventName);
+};
+```
