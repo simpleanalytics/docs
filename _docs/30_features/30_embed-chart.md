@@ -167,4 +167,8 @@ By adding `data-pages="/"` you get only data for the home page of your website. 
 ></script>
 ```
 
+## Open-source
+
+Our public scripts are always open-source, so feel free to look at the embed script code in more detail [on GitHub](https://github.com/simpleanalytics/embed).
+
 If you have other issues, <a href="https://simpleanalytics.com/contact">please let us know</a> because we love to help you! Do you want to access your stats with even more freedom? Use our [API](/api) for that.
