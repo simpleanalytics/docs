@@ -3,7 +3,7 @@ title: Install Simple Analytics via Google Tag Manager
 menu: Google Tag Manager
 category: integrations
 permalink: /install-simple-analytics-with-google-tag-manager
-last_modified_at: 2022-04-14
+last_modified_at: 2022-06-22
 ---
 
 You can embed our script via Google Tag Manager. We have an official Community Tag. Here is how to install this tag.
@@ -30,7 +30,7 @@ If you prefer text instructions, follow this guide:
    - [Custom domain](/bypass-ad-blockers) ([see extra instructions below](#custom-domain))
    - [Collect DoNotTrack](/dnt)
    - [Events](/events)
-1. Click "Choose a traigger to make this tag fire..."
+1. Click "Choose a trigger to make this tag fire..."
 1. Select "Initialization - All Pages"
 1. Click "Save" to save the tag
 
