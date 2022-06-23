@@ -125,7 +125,7 @@ That's it for this tutorial! You can go ahead and create more charts using Simpl
 
 > [I created more charts and you can see them in the public dashboard here.](https://app.chartbrew.com/b/simpleanalytics-demo)
 
-<img class="border" src="/images/chartbrew-dashboard.png" alt="Dashboard with Simple Analytics data in Chartbrew" />
+<img class="border-radius" src="/images/chartbrew-dashboard-simple-analytics-themed.png" alt="Dashboard with Simple Analytics data in Chartbrew" />
 
 ## Next steps
 
