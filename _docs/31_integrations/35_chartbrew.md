@@ -123,7 +123,7 @@ For example, you can embed charts on other websites. Here's a demo that you can 
 
 That's it for this tutorial! You can go ahead and create more charts using Simple Analytics's [API documentation](https://docs.simpleanalytics.com/api/stats). Check which fields you can query for and put the data in other charts.
 
-> [I created more charts and you can see them in the public dashboard here.](https://app.chartbrew.com/b/Simple_Analytics_305)
+> [I created more charts and you can see them in the public dashboard here.](https://app.chartbrew.com/b/simpleanalytics-demo)
 
 <img class="border" src="/images/chartbrew-dashboard.png" alt="Dashboard with Simple Analytics data in Chartbrew" />
 
