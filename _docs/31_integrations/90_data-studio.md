@@ -10,7 +10,7 @@ Some customers use [Google Data Studio](https://datastudio.google.com/) for buil
 
 <blockquote class="red" markdown="1">
 
-Our official tag connector ID changed. We are still waiting for Google to review our Google Data Studio community connector. Untill then you can use the URL below directly.
+Our official tag connector ID changed. We are still waiting for Google to review our Google Data Studio community connector. Until then you can use the URL below directly.
 
 </blockquote>
 
