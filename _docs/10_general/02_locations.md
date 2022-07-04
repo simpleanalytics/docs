@@ -21,7 +21,7 @@ The data we collect belongs to you. We only collect non-personal data and don't 
 
 The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both dutch companies that adhere to EU law and GDPR policy. 
 
-We use a CDN for most of our customers. The CDN is called Bunny CDN and is part of a company called [BunnyWay](https://bunny.net/cdn/), located in Slovenia, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/slovenia_en). 
+We use a CDN for most of our customers. The CDN is called Bunny CDN and is part of a company called [BunnyWay](https://bunny.net/cdn/), located in Slovenia, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/slovenia_en). Simple Analytics and Bunny CDN have signed a written agreement protecting data exits. 
 
 ## Data Security
 
