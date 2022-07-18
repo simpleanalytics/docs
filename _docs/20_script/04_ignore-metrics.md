@@ -2,7 +2,7 @@
 title: Ignore metrics
 category: script
 permalink: /ignore-metrics
-hidden: false
+hidden: true
 last_modified_at: 2022-07-18
 ---
 
