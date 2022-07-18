@@ -2,8 +2,8 @@
 title: Collect events with Ruby
 category: events
 permalink: /events/ruby
+hidden: true
 last_modified_at: 2022-05-17
-menu: false
 ---
 
 This is a draft of how to collect events with [Ruby](https://www.ruby-lang.org/en/). If you know how to improve it, please let us know.
