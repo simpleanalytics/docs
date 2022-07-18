@@ -1,16 +1,18 @@
 ---
-title: Data points
+title: Metrics
 category: general
-permalink: /data-points
-excerpt: "We never track visitors so the data below is never linked to one specific visitor. Here is a list of data points we collect."
-last_modified_at: 2022-04-14
+permalink: /metrics
+excerpt: "We never track visitors so the data below is never linked to one specific visitor. Here is a list of metrics we collect."
+last_modified_at: 2022-07-18
+redirect_from:
+  - /data-points
 ---
 
-Here is a list of data points we collect.
+Here is a list of metrics we collect.
 
 > Want a more general overview? [Go to our general overview](/what-we-collect) of what we collect.
 
-With every page view, we collect some data points. We never track visitors, so the data below is never linked to one specific visitor.
+With every page view, we collect some metrics. We never track visitors, so the data below is never linked to one specific visitor.
 
 <hr style="border: none; background-color: #eef9ff; height: 5px; margin-top: 2rem;" />
 
@@ -40,7 +42,7 @@ The part after the `?` is called [URL parameters](/how-to-use-url-parameters). W
 
 <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> Very important</p>
 
-If a page view is unique or not. A simple yes or no.
+If a page view is unique or not. A simple yes or no. No data from the browser, cookies, or IP-addresses are used to determine this. [Read more on how we collect this metric](/explained/unique-visits).
 
 ### Country / time zone
 
@@ -52,11 +54,11 @@ We collect the time zone of the browser. For example, `Europe/Amsterdam`. From t
 
 We collect three IDs:
 
-1. ID of the page view <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</span>
+1. ID of the data point <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</span>
 1. ID of the page <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
 1. ID of the session <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
 
-The first ID, page view ID, is a technical ID. When a visitor lands on a page, we send a request to our server. When we measure [time on page](/explained/time-on-page) we need to send a request at the end of a page view. To link those two requests together we match them with an ID. The page view ID. If time on page is not relevant, we can drop this ID.
+The first ID, data point ID, is a technical ID. When a visitor lands on a page, we send a request to our server. When we measure [time on page](/explained/time-on-page) we need to send a request at the end of a page view. To link those two requests together we match them with an ID. The data point ID. If time on page is not relevant, we can drop this ID.
 
 The second ID, page ID, is used to link multiple events (if a customer collects them) together. Let's say you have 2 events on the same page, you can then combine them together. This is not used by most customers. This page ID will be reset after every page.
 
@@ -70,13 +72,13 @@ It's important to note, that all these IDs are not linked to a person or persona
 
 We collect those numbers to know how far visitors scrolled (for example, 80%) and how long they were on the page (for example, 45 seconds). The "The ID of the page view" is required.
 
-> The page view ID is required for time on page.
+> The data point ID is required for time on page.
 
 ### User-agent
 
 <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
 
-To know which type of device the visitor used, we store the user agent. This is a data point that is the same for many visitors. It shows the browser used, the operating system, and the type of device. [See below][6].
+To know which type of device the visitor used, we store the user agent. This is a metric that is the same for many visitors. It shows the browser used, the operating system, and the type of device. [See below][6].
 
 ### Script settings
 

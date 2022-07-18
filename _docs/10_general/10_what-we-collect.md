@@ -8,7 +8,7 @@ last_modified_at: 2022-04-14
 
 Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your visitors.
 
-> [Visit our table overview](/data-points) for a detailed list of data points we collect
+> [Visit our importance overview](/data-points) for a detailed list of metrics we collect
 
 ### Cookies
 
