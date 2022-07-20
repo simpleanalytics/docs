@@ -63,7 +63,7 @@ We believe (and our customers with us) the more accurate number for the above da
 
 ### Bounce rate and bots
 
-To make the _time on page_ more accurate, we exclude the page views with a _time on page_ **lower than 5 seconds**. We see those visits as bounced visits and don't include them in the _time on page_ metric. Page views that have a _time on page_ lower than 5 seconds will be visible all other metrics and charts. Just not included in the _time on page_ metric.
+To make the _time on page_ more accurate, we exclude the page views with a _time on page_ **lower than 5 seconds**. We see those visits as bounced visits and don't include them in the _time on page_ metric. Page views that have a _time on page_ lower than 5 seconds will be visible in all other metrics and the charts. Just not included in the _time on page_ metric.
 
 We exclude bots from all our stats (although you have the [ability to download them](/export-data)).
 
