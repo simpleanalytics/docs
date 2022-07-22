@@ -35,7 +35,11 @@ We support the following codes:
 - UTM content (e.g.: `utm_content=button_red`)
 - UTM term (e.g.: `utm_term=shoes`, this param is deprecated as it is intended to contain user generated content)
 
-The UTM codes will show up on the dashboard in the "Referrals" dropdown menu. [Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer to learn more about UTM codes.
+The UTM codes will show up on the dashboard in the "Referrals" dropdown menu:
+
+<img class="border" style="width: 583px" src="https://assets.simpleanalytics.com/docs/dashboard/utm-dropdown.png" />
+
+[Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer to learn more about UTM codes.
 
 ### Forbidden characters
 
