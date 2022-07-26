@@ -3,7 +3,7 @@ title: Light version script
 category: script
 hidden: true
 permalink: /light
-last_modified_at: 2022-04-14
+last_modified_at: 2022-07-26
 ---
 
 Our script is already very light, but some customers love it even lighter. That's why we always create two versions of our script: normal and light.
