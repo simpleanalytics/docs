@@ -1,6 +1,6 @@
 ---
 title: Do Not Track
-category: script
+category: script-settings
 permalink: /dnt
 last_modified_at: 2022-04-14
 ---

@@ -1,7 +1,7 @@
 ---
 title: Hash mode
 menu: Hash mode &#35;
-category: script
+category: script-settings
 permalink: /hash-mode
 last_modified_at: 2022-04-14
 ---

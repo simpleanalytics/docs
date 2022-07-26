@@ -3,7 +3,7 @@ title: Introduction to events
 menu: Introduction
 category: events
 permalink: /events
-last_modified_at: 2022-04-14
+last_modified_at: 2022-07-26
 ---
 
 With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email links. You will need to install our separate script for it, but after that you don't need to modify any code.
@@ -18,18 +18,22 @@ If you want to get your hands dirty, you can collect events for all kinds of cus
 
 In the dashboard you will see "Sequential by session" below the events funnel. When enabled the events happened in the same session. A session within Simple Analytics is usually one page view. If you have a SPA (Single Page Application) the session takes as long as the website is open. Then it includes multiple pages. Most people want to keep the setting "Sequential by session" disabled.
 
-## Install embed script
+## Placeholder event function
 
-To start working with events you need to have a recent version of our script. This script includes the normal page view functionality and the events feature.
+> If your events only happen after the script is loaded, you don't really need the placeholder events function. For example, when using automated events. Those events will happen way after the page (including the embed script) has finished loading. That script includes the final event function.
 
-Place this `<script>`-tag in the `<head>` of the page:
+Events that can happen within seconds from page load should be queued when the embed script hasn't loaded yet.
+
+To allow this, place this `<script>`-tag in the `<head>` of the page (best before other scripts):
 
 <!-- prettier-ignore -->
 ```html
 <script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
 ```
 
-The script above is required for when events happen before our embed script is loaded. If your events only happen after the script is loaded, you don't really need it.
+This little snippet creates a simple function called `sa_event`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
+
+## Install script
 
 The next part is probably already on your page for collecting page views. If not, add it in your `<body>`-tag:
 
@@ -43,12 +47,6 @@ If you **can't** add it to your `<body>` tag, place it in the `<head>` of the pa
 
 If you use our [custom domain feature](/bypass-ad-blockers), make sure to replace `scripts.simpleanalyticscdn.com` and `queue.simpleanalyticscdn.com` with your custom domain.
 
-### Developers
-
-This little snippet creates a simple function called `sa_event`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
-
-> Our scripts **do not send** data from localhost. We do this to prevent your localhost data to end up on our servers.
-
 ## `sa_event`-function
 
 The `sa_event`-function is the function you'll need to use to create events. To track an event it's as simple as this:
@@ -57,12 +55,9 @@ The `sa_event`-function is the function you'll need to use to create events. To 
 sa_event("click_signup");
 ```
 
-> In previous versions we used `sa` instead of `sa_event`, but it caused too many issues because minifiers would use this variable name as well.
-> If you use that old script (ending with `/e.js`) and you are updating to `/latest.js`, make sure to rename those functions or overwrite with `sa-global` (see below).
+To send metadata with your event, [check our metadata page](/metadata).
 
-In the background we add the events to the current page view. With the page view is a referrer saved, this referrer is also saved with the event.
-
-### Valid event names
+## Valid event names
 
 We want to keep events very simple. That's why we only allow alphanumeric characters and underscores (`_`). We convert events to lower case and invalid names to a version which is valid. This way your events are always saved. If you return a function for an event we run this function and if the result is a string we will store the event. For example: `sa_event(function() { return "clicked_signup_on_" + window.document.location.pathname })`.
 
@@ -90,8 +85,9 @@ sa_event("outbound_link_to_affiliate", function () {
 
 The above example will capture the event before sending the visitor to `https://example.com/?affiliate=...`.
 
-It's always smart to check if `sa_event_loaded` is available before using it:
+It's always smart to check if `sa_loaded` is available before using it:
 
+<!-- prettier-ignore -->
 ```js
 function callback() {
   window.location.href = "https://example.com/?affiliate=...";
@@ -100,17 +96,19 @@ function callback() {
 /* Check for DoNotTrack visitors */
 var dntActive = parseInt(navigator.msDoNotTrack || window.doNotTrack || navigator.doNotTrack, 10) === 1;
 
-/* Check for sa_event_loaded boolean */
-if (window.sa_event_loaded && !dntActive) sa_event("outbound_link_to_affiliate", callback);
+/* Check for sa_loaded boolean */
+if (window.sa_loaded && !dntActive) sa_event("outbound_link_to_affiliate", callback);
 else callback();
 ```
 
 ## The variable `sa_event` is already used
 
-If the `sa_event` variable is already in use you can change it with the `data-sa-global` attribute:
+If the `sa_event` variable is already in use you can change it with the `data-namespace` attribute:
 
 <!-- prettier-ignore -->
 ```html
-<script>window.ba=window.ba||function(){var a=[].slice.call(arguments);window.ba.q?window.ba.q.push(a):window.ba.q=[a]};</script>
-<script async defer data-sa-global="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script>window.ba_event=window.ba_event||function(){var a=[].slice.call(arguments);window.ba_event.q?window.ba_event.q.push(a):window.ba_event.q=[a]};</script>
+<script async defer data-namespace="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
+
+Do note that the namespace will also change other functions as well. For example, `sa_metadata` becomes `ba_metadata`, `sa_loaded` becomes `ba_loaded`, and `sa_pageview` becomes `ba_pageview`.

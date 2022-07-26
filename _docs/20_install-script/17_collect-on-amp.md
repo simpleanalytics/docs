@@ -1,6 +1,6 @@
 ---
 title: Collect in AMP
-category: script
+category: install-script
 permalink: /collect-in-amp
 last_modified_at: 2022-04-14
 ---

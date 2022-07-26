@@ -1,6 +1,6 @@
 ---
 title: Collect without JavaScript
-category: script
+category: install-script
 permalink: /without-javascript
 last_modified_at: 2022-04-14
 ---

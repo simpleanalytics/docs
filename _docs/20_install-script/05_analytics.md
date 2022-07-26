@@ -1,6 +1,6 @@
 ---
 title: Install Simple Analytics with the Analytics library
-category: script
+category: install-script
 hidden: true
 permalink: /install-simple-analytics-via-analytics-package
 last_modified_at: 2022-04-14

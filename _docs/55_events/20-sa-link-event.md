@@ -1,8 +1,8 @@
 ---
-title: Collect event for link clicks
+title: Collect events for link clicks
 category: events
-permalink: /events/sa-link-event
-menu: sa-link-event
+permalink: /events/custom-link-clicks
+menu: Custom link clicks
 last_modified_at: 2022-07-18
 ---
 
@@ -25,7 +25,7 @@ Then you can use this code to add a `data-sa-link-event`-helper that will collec
         .forEach(function (element) {
           var href = element.getAttribute("href");
           var eventName = element.getAttribute("data-sa-link-event");
-          if (!href || !window.sa_event || !window.sa_event_loaded) return;
+          if (!href || !window.sa_event || !window.sa_loaded) return;
 
           element.addEventListener("click", function (event) {
             var target = element.getAttribute("target");

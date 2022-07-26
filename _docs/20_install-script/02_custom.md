@@ -1,6 +1,6 @@
 ---
 title: Trigger custom page views
-category: script
+category: install-script
 permalink: /trigger-custom-page-views
 last_modified_at: 2022-04-14
 ---

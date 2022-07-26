@@ -108,11 +108,18 @@
               {% endif %}
             {% endfor %}
 
+            <!-- 2629800 seconds is one month -->
+            {% capture new %}{{ 'now' | date: '%s' | minus: 2629800 }}{% endcapture %}
+
             {% if cat.name != 'releases' %}
               <details {% if isOpen %}open{% endif %}>
                 <summary>
                   {% if cat.name == 'api' %}
                     API
+                  {% elsif cat.name == 'install-script' %}
+                    Install script
+                  {% elsif cat.name == 'script-settings' %}
+                    Script settings
                   {% else %}
                     {{ cat.name | capitalize }}
                   {% endif %}
@@ -127,6 +134,10 @@
                             {{ item.menu }}
                           {% else %}
                             {{ item.title }}
+                          {% endif %}
+                          {% capture date %}{{ item.created_at | date: '%s' | plus: 0 }}{% endcapture %}
+                          {% if date > new %}
+                            <span class="new-label">new</span>
                           {% endif %}
                         </a>
                       </li>
@@ -150,7 +161,7 @@
           {% if page.download != false %}
             <p style="margin-top: 0.5rem;">
               <a rel="nofollow" style="font-size: 12px; border-radius: 4px; background-color: #eef9ff; padding: 5px 10px; text-decoration: none;" href="https://simpleanalytics.com/docs-to-pdf?path={{ page.path }}">
-                <svg style="vertical-align: text-bottom; fill: #00c5e5; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M15.003 3h2.997v5h-2.997v-5zm8.997 1v20h-24v-24h20l4 4zm-19 5h14v-7h-14v7zm16 4h-18v9h18v-9z"/></svg>
+                <svg style="vertical-align: text-bottom; fill: #098195; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M15.003 3h2.997v5h-2.997v-5zm8.997 1v20h-24v-24h20l4 4zm-19 5h14v-7h-14v7zm16 4h-18v9h18v-9z"/></svg>
                 Download PDF
               </a>
             </p>

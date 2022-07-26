@@ -1,9 +1,9 @@
 ---
 title: SRI version
-category: script
+category: install-script
 permalink: /sri
-sriVersion: 8
-sriHash: sha256-cT9x5SqW9l5tHekepcFmRA/OGD9BqpNjFfUbQN5/xhU= sha384-Ctlr4fGZ2vC/YG88I+6MX6HY7TSS4RS0sDUpAwJm5qytQPEAvEA1Tl+GvJ9hL4Kw sha512-y3S+Gb/NJYXLQEiLuQ+gCpID6yDrSsplgubNIqtvm9BcmNOkMvym1CyYa82WcS5rNKLn0pTUu3eXQ+tgCGXQrA==
+sriVersion: 9
+sriHash: sha256-wrULalJT03I+s3JjnJ72rhJk4YjDxqbtwMMyLc7uowY= sha384-2UfNPQId6M49occlZMgVy2iaMMC9rAE0KCqnhEBxLmlBu4o3gVwjcA8AKIgb/qMQ sha512-UqBsXbIOByTjAsluV2ruHqjoobyM0Md03uGeJVMMEpZHXV2UpmE0evS6sC4/wyrCb4DaLzcwFvwTU0GPVA1hTA==
 last_modified_at: 2022-04-14
 ---
 

@@ -31,7 +31,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #00c5e5;
+  border-color: #098195;
   outline: none;
 }
 input:-webkit-autofill {
@@ -101,7 +101,7 @@ button.button--large,
 }
 button.button--secondary,
 .button.button--secondary {
-  background-color: #00c5e5;
+  background-color: #098195;
 }
 a.button {
   vertical-align: top;
@@ -330,14 +330,14 @@ small {
   margin: 0;
 }
 .tag {
-  background-color: #00c5e5;
+  background-color: #098195;
   border-radius: 3px;
   color: white;
   padding: 2px 4px;
   font-size: 90%;
 }
 .tag {
-  background-color: #00c5e5;
+  background-color: #098195;
   border-radius: 3px;
   color: white;
   padding: 2px 4px;
@@ -444,7 +444,7 @@ summary {
 }
 a {
   cursor: pointer;
-  color: #00c5e5;
+  color: #098195;
 }
 @media (hover: hover) {
   a:hover {
@@ -523,10 +523,22 @@ a {
 .post-video {
   border-radius: 10px;
   max-width: 100%;
-  border: 1px solid #00c5e5;
+  border: 1px solid #098195;
   background-color: #eef9ff;
 
   &.red {
     border-color: $primary-color;
   }
+}
+
+.new-label {
+  display: inline-block;
+  line-height: 1;
+  padding: 4px 5px;
+  font-size: 80%;
+  border-radius: 16px;
+  background-color: #ff8997;
+  color: white;
+  margin-left: 2px;
+  transform: translateY(-1px);
 }

@@ -1,8 +1,8 @@
 ---
 title: Overwrite domain name
-category: script
+category: script-settings
 permalink: /overwrite-domain-name
-last_modified_at: 2022-04-14
+last_modified_at: 2022-07-26
 ---
 
 Sometimes you want to link multiple domains into one domain in your dashboard. Or you want to use a different domain than people see in their browser address bar. You can overwrite the default domain name by specifying its hostname.
@@ -23,6 +23,6 @@ You see that we added an attribute (`data-hostname=""`) to the script tag and `h
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=example.com" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
-## Add used domain to your dashboard
+## Add overwriting domain to your dashboard
 
 Now all the visits you collect with this script are collected under the name `example.com`. Make sure you [add the new used domain name](https://simpleanalytics.com/websites/add) (`example.com`) to your dashboard.

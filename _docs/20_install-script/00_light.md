@@ -1,6 +1,6 @@
 ---
 title: Light version script
-category: script
+category: install-script
 hidden: true
 permalink: /light
 last_modified_at: 2022-07-26

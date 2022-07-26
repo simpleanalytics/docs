@@ -1,6 +1,6 @@
 ---
 title: How to add our script
-category: script
+category: install-script
 permalink: /script
 last_modified_at: 2022-04-14
 ---

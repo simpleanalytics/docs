@@ -1,6 +1,6 @@
 ---
 title: Server side tracking
-category: script
+category: install-script
 permalink: /server-side-tracking
 last_modified_at: 2022-04-14
 ---

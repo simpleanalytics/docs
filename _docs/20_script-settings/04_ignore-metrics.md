@@ -1,12 +1,12 @@
 ---
 title: Ignore metrics
-category: script
+category: script-settings
 permalink: /ignore-metrics
-hidden: true
-last_modified_at: 2022-07-18
+last_modified_at: 2022-07-26
+created_at: 2022-07-26
 ---
 
-Our script does only collect non-personal data. But some customers might want to limit [what we collect](/what-we-collect) even more. That's why we created the ignore metrics feature.
+Our script does only collect non-personal data. But some customers might want to limit [our metrics](/metrics) even more. That's why we created the ignore metrics feature.
 
 | Metric              | Slug           | Inferrered metric      |
 | ------------------- | -------------- | ---------------------- |

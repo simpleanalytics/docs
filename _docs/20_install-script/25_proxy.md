@@ -1,6 +1,6 @@
 ---
 title: Proxy all requests
-category: script
+category: install-script
 permalink: /proxy
 last_modified_at: 2022-04-14
 ---
@@ -35,7 +35,12 @@ If you reload your NGINX config with `sudo nginx -t && sudo nginx -s reload` you
 
 ```html
 <script async defer src="https://example.com/proxy.js"></script>
-<noscript><img src="https://example.com/simple/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+<noscript
+  ><img
+    src="https://example.com/simple/noscript.gif"
+    alt=""
+    referrerpolicy="no-referrer-when-downgrade"
+/></noscript>
 ```
 
 This will send all traffic via your proxy on the endpoint `/simple/...`.

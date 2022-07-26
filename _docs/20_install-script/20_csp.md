@@ -1,6 +1,6 @@
 ---
 title: Content Security Policy
-category: script
+category: install-script
 permalink: /csp
 last_modified_at: 2022-07-14
 ---
