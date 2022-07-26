@@ -12,7 +12,7 @@ Just replace `latest.js` with `light.js` in your embed script. It will look simi
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://scripts.simpleanalyticscdn.com/light.js"></script>
+<script async defer src="Check Gzip/Brotli Compression"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
@@ -20,10 +20,10 @@ We support both Brotli and Gzip compression depending on the browser capabilitie
 
 | Script    | Compressed size (Gzip) | Compressed size (Brotli) | Uncompressed size |
 | --------- | ---------------------- | ------------------------ | ----------------- |
-| light.js  | 1.6 KB                 | 1.7 KB                   | 2.7 KB            |
-| latest.js | 2.9 KB                 | 2.9 KB                   | 5.3 KB            |
+| light.js  | 1.9 KB                 | 2.0 KB                   | 3.3 KB            |
+| latest.js | 3.7 KB                 | 3.8 KB                   | 6.9 KB            |
 
-Source: [giftofspeed.com](https://www.giftofspeed.com/gzip-test/) (for Brotli)
+Source: [giftofspeed.com](https://www.giftofspeed.com/gzip-test/) for Brotli, [adresults.nl/tools/gzip-compression-test](https://adresults.nl/tools/gzip-compression-test) for Gzip.
 
 ## Features
 
@@ -34,16 +34,16 @@ Obviously not all features are available in our light script. Here an comparison
 | Page views                                      |      x      |        x        |
 | Referrer                                        |      x      |        x        |
 | UTM codes                                       |      x      |        x        |
-| [Uniques](/uniques)                             |      x      | (will be added) |
-| Time on page                                    |      x      |
-| [Events](/events)                               |      x      |
-| [Hash navigation](/hash-mode)                   |      x      |
-| Scroll depth                                    |      x      |
-| [SPA](/trigger-custom-page-views)               |      x      |
-| Screen sizes                                    |      x      |
-| [Ignore pages](/ignore-pages)                   |      x      |
-| [Overwrite domain name](/overwrite-domain-name) |      x      |
-| Bot detection                                   |      x      |
-| Error reporting                                 |      x      |
-| Show warnings                                   |      x      |
-| [Ignore DNT](/dnt)                              |      x      |
+| [Uniques](/uniques)                             |      x      |        x        |
+| [Events](/events)                               |      x      |        x        |
+| Bot detection                                   |      x      |        x        |
+| Error reporting                                 |      x      |        x        |
+| Show warnings                                   |      x      |        x        |
+| Time on page                                    |      x      |                 |
+| [Hash navigation](/hash-mode)                   |      x      |                 |
+| Scroll depth                                    |      x      |                 |
+| [SPA](/trigger-custom-page-views)               |      x      |                 |
+| Screen sizes                                    |      x      |                 |
+| [Ignore pages](/ignore-pages)                   |      x      |                 |
+| [Overwrite domain name](/overwrite-domain-name) |      x      |                 |
+| [Ignore DNT](/dnt)                              |      x      |                 |
