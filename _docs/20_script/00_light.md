@@ -12,7 +12,7 @@ Just replace `latest.js` with `light.js` in your embed script. It will look simi
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="Check Gzip/Brotli Compression"></script>
+<script async defer src="https://scripts.simpleanalyticscdn.com/light.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
