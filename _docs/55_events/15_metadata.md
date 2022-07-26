@@ -18,7 +18,7 @@ This feature works for all datapoints; events and page views. To make it easy fo
 
 When using multiple ways to add metadata, the objects will be merged into one. First we grab the metadata from the event function, then we merge it with the metadata in the `window` object, finally we merge the data from the callback function into the metadata. If values have the same keys, they will be overwritten by the latest collect method.
 
-> You might want to add the [event placeholder function](/events/#placeholder-event-function) on top of your HTML.
+> You might want to add the [event placeholder function](/events#placeholder-event-function) on top of your HTML.
 
 ## 1. Send metadata along with the `sa_event`-function
 
