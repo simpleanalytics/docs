@@ -23,6 +23,7 @@ With this API you can export raw page views (without sampling). Define a date ra
 | hostname            | string  | The hostname of the website                                                                                                                                |
 | hostname_original   | string  | When the hostname is overwritten, we store the original hostname                                                                                           |
 | path                | string  | The path of the page view                                                                                                                                  |
+| query               | string  | The query parameters of the URL                                                                                                                            |
 | is_unique           | boolean | Is this page view unique                                                                                                                                   |
 | is_robot            | boolean | Is page view visited by a robot or crawler                                                                                                                 |
 | document_referrer   | string  | The [JavaScript `document.referrer`](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer) of the page                                       |
