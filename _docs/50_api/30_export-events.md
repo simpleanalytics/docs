@@ -5,7 +5,7 @@ permalink: /api/export-events
 redirect_from:
   - /api/csv-export-events
 last_modified_at: 2022-04-14
-fields: added_iso,country_code,datapoint,device_type,path,session_id,utm_source,utm_campaign,utm_content,utm_medium
+fields: added_iso,country_code,datapoint,device_type,path,query,query_and_path,session_id,utm_source,utm_campaign,utm_content,utm_medium
 ---
 
 If you want to export raw events you can do so via our CSV export. You can define a date range and it pull out the data via streaming (very fast).
