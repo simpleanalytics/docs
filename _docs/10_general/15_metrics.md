@@ -14,6 +14,8 @@ Here is a list of metrics we collect.
 
 With every page view, we collect some metrics. We never track visitors, so the data below is never linked to one specific visitor.
 
+You can limit the metrics we collect via our [ignore metrics](/ignore-metrics)-feature.
+
 <hr style="border: none; background-color: #eef9ff; height: 5px; margin-top: 2rem;" />
 
 ### URL of the page
