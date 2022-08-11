@@ -29,22 +29,22 @@ If you are a developer or you know your way around HTML it's easy to embed this 
 
 <!-- prettier-ignore -->
 ```html
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
-<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js" />
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 ```
 
 Or if you want to change some settings (these are the defaults):
 
 <!-- prettier-ignore -->
 ```html
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js" />
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <script
   async
   data-collect="outbound,emails,downloads"
   data-extensions="pdf,csv,docx,xlsx,zip,doc,xls"
   data-use-title="true"
   data-full-urls="false"
-  src="https://scripts.simpleanalyticscdn.com/auto-events.js" />
+  src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 ```
 
 It takes care of sending it as an event to Simple Analytics. Events can only be letters, numbers, and underscores. We convert the event names directly in this script.
