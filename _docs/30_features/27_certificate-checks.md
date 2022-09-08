@@ -9,6 +9,8 @@ Secure Sockets Layer (SSL) are cryptographic protocols that provide security and
 
 To prevent this from happening, Simple Analytics developed a feature where you get alerts via email when an SSL certificate is about to expire. We usually send out two emails, one four days before the expiry date and another one day before the expiry date. That gives you and your team some time to renew the certificate before it's too late.
 
+You can always check the SSL expiry date for your websites yourself via [our free SSL check tool](https://simpleanalytics.com/check-ssl).
+
 Here is an example email for such an alert:
 
 <img src="https://assets.simpleanalytics.com/docs/ssl-expiry-alerts/ssl-expiry-email.png" alt="SSL expiry alert email" class="border" />
