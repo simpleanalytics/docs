@@ -15,14 +15,14 @@ npm install simple-analytics-vue
 ## Nuxt 3
 
 ```js
-import SimpleAnalytics from 'simple-analytics-vue'
+import SimpleAnalytics from "simple-analytics-vue";
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(SimpleAnalytics, {
     skip: process.env.NODE_ENV !== "production",
     domain: "api.example.com"
-  })
-})
+  });
+});
 ```
 
 ## Nuxt 2
