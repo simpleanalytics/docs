@@ -14,6 +14,8 @@ npm install simple-analytics-vue
 
 ## Nuxt 3
 
+Create a file called `plugins/simpleanalytics.client.js`:
+
 ```js
 import SimpleAnalytics from "simple-analytics-vue";
 
