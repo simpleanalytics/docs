@@ -1,9 +1,9 @@
 ---
-title: Install Simple Analytics with Nuxt
+title: Install Simple Analytics with Nuxt 3
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-nuxt
-last_modified_at: 2022-04-14
+last_modified_at: 2022-09-09
 ---
 
 Run this command to install Simple Analytics for Vue:
@@ -12,7 +12,20 @@ Run this command to install Simple Analytics for Vue:
 npm install simple-analytics-vue
 ```
 
-## Import Vue in your app
+## Nuxt 3
+
+```js
+import SimpleAnalytics from 'simple-analytics-vue'
+
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.use(SimpleAnalytics, {
+    skip: process.env.NODE_ENV !== "production",
+    domain: "api.example.com"
+  })
+})
+```
+
+## Nuxt 2
 
 Create a file in your plugin folder with the name `simple-analytics.js`:
 
