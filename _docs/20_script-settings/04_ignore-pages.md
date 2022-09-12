@@ -13,7 +13,7 @@ Normally you install the script on all pages of your website. You add your scrip
 Let's say you have pages that you want to ignore:
 
 - `https://example.com/search/keyword` (where `keyword` kan be any keyword)
-- `https://example.com/account/@profilename` (where `profilename` kan be any name)
+- `https://example.com/account/@profilename` (where `profilename` can be any name)
 - `https://example.com/vouchers` (only one page)
 
 Then you can define these with the `ignore-pages` attribute in your embed script. Every page you want to ignore starts with a slash (`/`) and is only the path after the domain name, not the full link. For `https://example.com/vouchers` it would be `/vouchers`:
