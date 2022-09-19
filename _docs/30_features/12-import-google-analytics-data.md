@@ -65,7 +65,7 @@ Google Universal Analytics uses data sampling. [They explain it like this](https
 
 It happens for high-traffic websites or data older than one year. At Simple Analytics, we don't sample your data. You always get accurate metrics from our systems. But when you import from Google Analytics, Google might sample your data. We tell you in the confirmation email after your import is finished if Google has sampled data:
 
-> **Important!** Google applied data sampling and calculated the imported results from 2,987,390 samples of a sampling space size of approximately 56,182,369 sessions. Sampling results in your data looking incomplete in a day-to-day view, but when viewed by month, the numbers do add up. We can't do anything about this.
+> **Important!** Google applied data sampling and calculated the imported results from 2,987,390 samples of a sampling space size of approximately 56,182,369 sessions. Sampling results in your data looks incomplete in a day-to-day view, but when viewed by month, the numbers do add up. We can't do anything about this.
 
 Your dashboard can show spikes every x days while other days are empty. Sometimes it might be best to view the chart with page views instead of sessions for the periods of imported data. We recommend viewing this data on a multi-month basis. Daily and weekly can cause those spikes. Those spikes don't mean the totals aren't correct; it is just sampled.
 
