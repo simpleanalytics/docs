@@ -48,7 +48,7 @@ You can enable this feature by adding `data-ignore-metrics=...` to our script em
 <script
   data-ignore-metrics="session"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
-/>
+></script>
 ```
 
 In this case, it will not collect [a Session ID](/metrics#ids).
@@ -61,7 +61,7 @@ If you have multiple metrics you want to ignore you can separate them with a com
 <script
   data-ignore-metrics="timeonpage,scrolled"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
-/>
+></script>
 ```
 
 ## Ignore all metrics
@@ -72,7 +72,7 @@ To ignore all metrics that you can ignore, you can use this embed script:
 <script
   data-ignore-metrics="referrer,utm,country,session,timeonpage,scrolled,useragent,screensize,viewportsize,language"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
-/>
+></script>
 ```
 
 Need any help? We love to help you set up your script. Don't hesitate to [contact us](https://simpleanalytics.com/contact). Silly questions don't exist.
