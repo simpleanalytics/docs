@@ -22,7 +22,7 @@ Then you can define these with the `ignore-pages` attribute in your embed script
 <script
   data-ignore-pages="/vouchers"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
-/>
+></script>
 ```
 
 ## Comma separated
@@ -33,7 +33,7 @@ If you have multiple pages you want to block you can separate them with a comma.
 <script
   data-ignore-pages="/search/keyword,/account/@profilename,/vouchers"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
-/>
+></script>
 ```
 
 ## Wildcards
@@ -46,7 +46,7 @@ To block all above pages you can use the following code:
 <script
   data-ignore-pages="/search/*,/account/*,/vouchers"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
-/>
+></script>
 ```
 
 Need any help? We love to help you set up your script. Don't hesitate to [contact us](https://simpleanalytics.com/contact). Silly questions don't exist.
