@@ -8,7 +8,7 @@ created_at: 2022-07-26
 
 To collect additional data on top of [our collected metrics](/metrics), you can append metadata. With this feature you can specify specific parameters and it will be included in our database with your datapoints (events or page views).
 
-> While you can send metadata, you can't download it or see it in our dashboard at the moment, yet. We are implementing those features currently.
+> While you can send and export metadata, you can't see it in our dashboard at the moment, yet. We are implementing those features currently.
 
 This feature works for all datapoints; events and page views. To make it easy for you we created 3 ways to collect metadata:
 
