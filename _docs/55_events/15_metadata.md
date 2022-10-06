@@ -127,3 +127,12 @@ When sending dates in JavaScript they will be converted to a string. For example
 ```js
 sa_event("click_signup", { created_at: new Date() });
 ```
+
+## Export metadata
+
+In our [export UI](https://simpleanalytics.com/select-website/export), you can download your metadata.
+
+<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-export-ui.png" alt="Export metadata the UI of Simple Analytics" />
+<p class="caption">Export metadata the UI of Simple Analytics</p>
+
+
