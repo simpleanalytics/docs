@@ -23,6 +23,6 @@ This is how you set up a `myPathOverwriter`-function for that usecase:
 ></script>
 ```
 
-You can specify the path callback function via `data-path-overwriter`, in the example above, you specify the `myPathOverwriter`-function. The function gets an object as argument in which you find the `path` key. If the function errors, returns or falsy value, we keep the original path.
+You can specify the path callback function via `data-path-overwriter`, in the example above, you specify the `myPathOverwriter`-function. The function gets an object as argument in which you find the `path` key. If the function errors or it returns a falsy value, we keep the original path.
 
 If you want to omit those page views completely, you can use our [ignore pages](/ignore-pages) feature.
