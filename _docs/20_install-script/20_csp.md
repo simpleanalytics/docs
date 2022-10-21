@@ -13,7 +13,7 @@ For Simple Analytics you want to add the following Content Security Policy heade
 
 <!-- prettier-ignore -->
 ```
-Content-Security-Policy: script-src 'self' 'unsafe-inline' https://scripts.simpleanalyticscdn.com; connect-src 'self' https://queue.simpleanalyticscdn.com; img-src 'self' https://queue.simpleanalyticscdn.com;
+Content-Security-Policy: script-src 'self' 'unsafe-inline' https://scripts.simpleanalyticscdn.com; connect-src 'self' https://queue.simpleanalyticscdn.com; img-src 'self' https://queue.simpleanalyticscdn.com https://simpleanalyticsbadges.com;
 ```
 
 ## Content-Security-Policy meta tag
@@ -21,10 +21,10 @@ Content-Security-Policy: script-src 'self' 'unsafe-inline' https://scripts.simpl
 Alternatively, a `<meta>` element can be used to configure a policy, for example:
 
 ```
-<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://scripts.simpleanalyticscdn.com; connect-src 'self' https://queue.simpleanalyticscdn.com; img-src 'self' https://queue.simpleanalyticscdn.com;">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://scripts.simpleanalyticscdn.com; connect-src 'self' https://queue.simpleanalyticscdn.com; img-src 'self' https://queue.simpleanalyticscdn.com https://simpleanalyticsbadges.com;">
 ```
 
-Basically we use `https://scripts.simpleanalyticscdn.com` for our public script, `https://queue.simpleanalyticscdn.com` to send Beacon API data and error requests, and we use `https://queue.simpleanalyticscdn.com` also for sending data through our "pixel".
+Basically we use `https://scripts.simpleanalyticscdn.com` for our public script, `https://queue.simpleanalyticscdn.com` to send Beacon API data and error requests, and we use `https://queue.simpleanalyticscdn.com` also for sending data through our "pixel". If you show our badge, you need to have `https://simpleanalyticsbadges.com`.
 
 ## Why `script-src 'unsafe-inline'`?
 
