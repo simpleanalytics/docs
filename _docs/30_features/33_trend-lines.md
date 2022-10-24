@@ -15,7 +15,7 @@ The default in Simple Analytics is to show these curved trend lines, excluding o
 
 <img src="https://assets.simpleanalytics.com/docs/trend-lines/curved-excluding-outliers.png" alt="Curved trend lines with outliers excluded" class="border">
 
-The dashed line shows which outliers are excluded.
+The dashed line shows which data is excluded. At the start and the end, the data is incomplete. We never include that data for the trend line. In the chart above, you see another dashed line; the month of July. That's an excluded outlier. It will not be included in the trend line (unless you change this [in your account settings](https://simpleanalytics.com/account#trendlines)).
 
 ### Curved trend lines with outliers included
 
