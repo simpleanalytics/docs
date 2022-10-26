@@ -1,18 +1,21 @@
+---
 title: Compliance with Privacy Regulation
-menu: Your privacy policy
+menu: Compliance
 category: legal
 permalink: /compliance-with-privacy-regulation
-draft: true
+---
+
+> This page is meant for people with some background in legal.
 
 In this page, we explain in-depth why Simple Analytics is fully compliant with Regulation (EU) 2016/679 (the GDPR), the Privacy and Electronic Communications Directive 2002/58/EC (ePrivacy Directive), and The Privacy and Electronic Communications (EC Directive) Regulations 2003 (PECR).
 
 ## Simple Analytics does not collect any personal data
 
-The [what we collect](https://docs.simpleanalytics.com/what-we-collect) page on our website lists all the data we collect and process to provide analytics. None of these data qualify as personal data under Art. 4(1) GDPR in and of themselves. Additionally, these data do not allow to "single out" a user (Recital 26) when combined. Tracking or fingerprinting users through Simple Analytics is not possible.
+The [what we collect](/what-we-collect) page on our website lists all the data we collect and process to provide analytics. None of these data qualify as personal data under Art. 4(1) GDPR in and of themselves. Additionally, these data do not allow to "single out" a user (Recital 26) when combined. Tracking or fingerprinting users through Simple Analytics is not possible.
 
 Most of the data listed on the page are also optional to collect: the customer can tweak Simple Analytics' settings to exclude certain categories of data, should they want to.
 
-Even under default settings, Simple Analytics does not collect personal data, making tracking possible. Simple Analytics is, therefore, perfectly compliant with the *data protection by default principle* under Art. 25 GDPR.
+Even under default settings, Simple Analytics does not collect personal data, making tracking possible. Simple Analytics is, therefore, perfectly compliant with the _data protection by default principle_ under Art. 25 GDPR.
 
 ## Simple Analytics processes IP addresses but doesn't collect it
 
@@ -20,7 +23,7 @@ IP addresses are personal data under the GDPR. Simple Analytics processes IP add
 
 For this reason, our processing of IP addresses falls under the notion of "data usage" under Art. 4(2), which is distinct from both "storage" and "collection" under the same comma.
 
-Simple Analytics does not process any other personal data. 
+Simple Analytics does not process any other personal data.
 
 ## Simple Analytics does not require a cookie banner or any consent pop-up
 
@@ -40,5 +43,6 @@ We still encourage our customers to be transparent and provide information on th
 
 Simple Analytics relies on two trusted and GDPR-compliant Dutch companies (Worldstream and Leaseweb) to process data. The data we collect doesn't qualify as personal data under the GDPR and could lawfully be transferred outside the EU in compliance with Chapter V. However; we keep the processing and storage within the EU to further ensure compliance with European data protection law.
 
-> [^1]: See e.g. CJEU cases 582/14 (the well known Breyer case) or 597/19.
+#### Footnotes
 
+[^1]: See e.g. CJEU cases 582/14 (the well known Breyer case) or 597/19.
