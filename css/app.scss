@@ -99,3 +99,11 @@ li ul li {
     margin-right: 0.5rem;
   }
 }
+
+sup[role="doc-noteref"]::before {
+  display: inline;
+}
+
+sup[role="doc-noteref"] a {
+  text-decoration: none;
+}
