@@ -31,7 +31,7 @@ Art. 5(3) of the ePrivacy Directive (as implemented in Member State legislation)
 
 Simple Analytics does not process any data falling under Art. 5(3) ePD or 6 PECR because it doesn't read, write, or otherwise process cookies or any other data stored in a user's terminal. For this reason, websites using Simple Analytics do not need a cookie banner, nor are they required to collect consent in any way when collecting data through Simple Analytics.
 
-We process data forwarded by the user's browser, but this data is not stored on the user's terminal and doesn't fall under the strict regimes of Art. 5(3) and Art. 6 PECR. For example, IP addresses are forwarded from browsers but do not fall under the aforementioned Articles. This is confirmed by EU case law[^1] and entirely uncontested in practice.
+We process data forwarded by the user's browser, but this data is not stored on the user's terminal and doesn't fall under the strict regimes of Art. 5(3) ePD and Art. 6 PECR. For example, IP addresses are forwarded from browsers but do not fall under the aforementioned Articles. This is confirmed by EU case law[^1] and entirely uncontested in practice.
 
 ## Simple Analytics does not require pop-ups of any kind
 
