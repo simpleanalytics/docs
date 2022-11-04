@@ -49,3 +49,7 @@ The plugin has no effect in development.
 ## Special thanks
 
 Developed by [Frédéric Massart](https://github.com/FMCorz) from [branchup.tech](https://www.branchup.tech/?utm_source=docs.simpleanalytics.com%2Finstall-simple-analytics-with-docusaurus) ([@branchup](https://github.com/branchup)).
+
+## Source code
+
+The source code for this plugin is public [at GitHub](https://github.com/simpleanalytics/docusaurus-plugin).
