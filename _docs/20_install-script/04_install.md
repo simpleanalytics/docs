@@ -3,7 +3,7 @@ title: Install Simple Analytics on other platforms
 menu: Install on other platforms
 category: install-script
 permalink: /install-on-other-platforms
-last_modified_at: 2022-04-14
+last_modified_at: 2022-11-04
 ---
 
 ## Platform guides
@@ -41,5 +41,6 @@ Get our official plugins for these frameworks:
 - [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
 - [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
 - [Next.js](/install-simple-analytics-with-next) <small>(guide only)</small>
+- [Docusaurus](/install-simple-analytics-with-docusaurus) <small>(source on [GitHub](https://github.com/simpleanalytics/docusaurus-plugin#readme))</small>
 
 > Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact) Happy to create a plugin for you.
