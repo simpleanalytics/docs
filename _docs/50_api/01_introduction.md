@@ -6,7 +6,7 @@ permalink: /api
 last_modified_at: 2022-04-14
 ---
 
-Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. Our APIs are a good example of that. Most analytics companies do not give you access to your raw data. We believe it should be easy for our customers to get their raw data our of our database. You should decide what you want to do with your data.
+Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. Our APIs are a good example of that. Most analytics companies do not give you access to your raw data. We believe it should be easy for our customers to get your data our of our database. You should decide what you want to do with your data.
 
 There are a few ways to interact with our API. We have the Stats API for aggregated data, Export API for raw level data, and the Admin API for changing users, websites and other settings.
 
@@ -17,10 +17,10 @@ There are a few ways to interact with our API. We have the Stats API for aggrega
           <p class="text">Aggregated data</p>
           <p>View docs</p>
      </a>
-     <a class="api" href="/api/export-page-views">
+     <a class="api" href="/api/export-data-points">
           <h2>Export API</h2>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#098195" d="M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z"/></svg>
-          <p class="text">Raw page view data</p>
+          <p class="text">Raw data points data</p>
           <p>View docs</p>
      </a>
      <a class="api" href="/api/admin">

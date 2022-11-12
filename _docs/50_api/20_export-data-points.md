@@ -1,16 +1,21 @@
 ---
-title: Export page views API
+title: Export data points API
 category: api
-permalink: /api/export-page-views
+permalink: /api/export-data-points
 redirect_from:
   - /api/csv-export-visits
   - /api/export-pageviews
-last_modified_at: 2022-04-14
+  - /api/export-page-views
+  - /api/export-events
+last_modified_at: 2022-11-12
+fields: added_iso,country_code,datapoint,device_type,path,query,query_and_path,session_id,utm_source,utm_campaign,utm_content,utm_medium
 ---
 
-With this API you can export raw page views (without sampling). Define a date range and it pull out the data via streaming. For us it does not matter how much data you export. We stream the data directly out of our database to your server or computer. No heavy load required. To make the export size smaller you can select the fields you want. The response will only include the fields you selected in the order you provided.
+With this API you can export raw data points (without sampling). Data points are both page views and events combined. Define a date range and it pulls out the data. The response will only include the selected fields.
 
-> Want to use a simple interface to export your data? [See our video on how to export data](/export-data).
+> Want to use a simple interface to export your data? [See our video on exporting data](/export-data).
+
+When using the API, it's recommended [to generate the export URL](/api/helpers#generate-export-url) via [the export your data interface](/export-data). It has a simple UI where fields can be selected without any coding or technical knowledge.
 
 <details>
 <summary>Available fields in export</summary>
@@ -48,8 +53,9 @@ With this API you can export raw page views (without sampling). Define a date ra
 | lang_region         | string  | The region part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language)                                       |
 | lang_language       | string  | The language part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language)                                     |
 | uuid                | string  | A UUID v4 of the page view (this is not always unique)                                                                                                     |
+| metadata.\*\*\*     | N/A     | Metadata are your own specified fields followed by a type (e.g. `project_text`)                                                                            |
 
-Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the visitor.
+Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the visitor. [Metadata](/metadata) is found in `metadata.***` fields. They will only be exported when specified by key (e.g.: `metadata.dark_mode_bool`).
 
 </div>
 </details>
@@ -72,13 +78,21 @@ These fields are deprecated but we keep them for backward compatibility. It's re
 </div>
 </details>
 
-## API
+## Authenticate
 
-For this API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...` and with a `User-Id` header starting with `sa_user_id_...`. You can create them in [your account settings](https://simpleanalytics.com/account).
+For this API features you'll need to authenticate. See the [authenticate page](/api/authenticate) on how to authenticate.
+
+In short: apply an `Api-Key`-header where the key starts with `sa_api_key_...` and a `User-Id` header starting with `sa_user_id_...`.
+
+## Selecting fields
 
 You can specify all fields you like to export. Add them as a comma seperated list (e.g.: `&fields=added_iso,hostname,path`).
 
-To test if your API key works correctly you can replace the example values of this cURL example with your own:
+<details>
+<summary>Request example (for developers)</summary>
+<div markdown="1">
+
+To test if your API key works correctly you can replace the example values of this cURL example with your own.
 
 ```bash
 curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=simpleanalytics.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&robots=false&timezone=Europe%2FAmsterdam&fields=added_iso,path&type=pageviews" \
@@ -87,51 +101,81 @@ curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_vers
      -H 'Content-Type: text/csv'
 ```
 
-You can use our UI to generate this URL for you. [See helpers](/api/helpers#generate-export-url).
+</div>
+</details>
 
-<details>
-<summary>Deprecated API</summary>
+If you choose to export in the CSV format, it will export something like this:
+
+| added_iso | country_code | datapoint    | device_type                       | path | session_id     | utm_campaign | utm_content | utm_medium                           | utm_source |
+| --------- | ------------ | ------------ | --------------------------------- | ---- | -------------- | ------------ | ----------- | ------------------------------------ | ---------- | --- | ---------- | ---------- |
+| {{ "now"  | date: '%s'   | minus: 83325 | date: '%Y-%m-%dT%H:%M:%S.100Z' }} | US   | visit_homepage | desktop      | /           | 1e5aad53-c734-40ac-b060-426a70d1c104 | ads1       |     |            | duckduckgo |
+| {{ "now"  | date: '%s'   | minus: 2580  | date: '%Y-%m-%dT%H:%M:%S.100Z' }} | UK   | visit_homepage | desktop      | /           | 7b03aa29-612d-4aa8-b147-72c13986c4ae |            |     | newsletter |            |
+| {{ "now"  | date: '%s'   | minus: 2340  | date: '%Y-%m-%dT%H:%M:%S.200Z' }} | UK   | popup_show     | desktop      | /           | 7b03aa29-612d-4aa8-b147-72c13986c4ae |            |     |            |            |
+| {{ "now"  | date: '%s'   | minus: 55    | date: '%Y-%m-%dT%H:%M:%S.100Z' }} | NL   | visit_homepage | desktop      | /           | 928e4f2f-1f16-4900-9ad8-0a1965e689a3 |            |     |            | google     |
+| {{ "now"  | date: '%s'   | minus: 35    | date: '%Y-%m-%dT%H:%M:%S.200Z' }} | NL   | popup_show     | desktop      | /           | 928e4f2f-1f16-4900-9ad8-0a1965e689a3 |            |     |            |            |
+| {{ "now"  | date: '%s'   | minus: 5     | date: '%Y-%m-%dT%H:%M:%S.300Z' }} | NL   | popup_close    | desktop      | /           | 928e4f2f-1f16-4900-9ad8-0a1965e689a3 |            |     |            |            |
+
+<details class="csv">
+<summary>The above export in CSV format</summary>
 <div markdown="1">
 
-If you don't specify any `fields` we return all the basic fields.
-
-```bash
-curl "https://simpleanalytics.com/api/export/visits?version=1&hostname=example.com&start={{ "now" | date: '%s' | minus: 2592000 | date: '%Y-%m-%d' }}&end={{ "now" | date: '%Y-%m-%d' }}&timezone=Europe/Amsterdam" \
-     -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000' \
-     -H 'Api-Key: sa_api_key_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
-     -H 'Content-Type: text/csv'
 ```
-
-This is how the API worked before and we don't want to add breaking changes to our APIs. A response when you don't specify any `fields` looks like this:
-
-```bash
-added_unix,added_iso,url,referrer_raw,referrer,hostname,source,is_unique,utm_source,utm_medium,utm_campaign,utm_content,utm_term,scrolled_percentage,duration_seconds,device_width_pixels,device_width,viewport_width,viewport_height,screen_width,screen_height,uuid
-1598927168,2020-09-01T02:26:08.000Z,https://blog.simpleanalytics.com/,simpleanalytics.com,simpleanalytics.com,blog.simpleanalytics.com,js,true,simpleanalytics.com,,,,,,,1461,1461,1461,849,1920,1080,f2dbec14-c8c1-4191-92da-d408fc7b7e1c
-1598959428,2020-09-01T11:23:48.000Z,https://blog.simpleanalytics.com/practical-privacy-tips-for-your-business,hackernewsletter,,blog.simpleanalytics.com,js,true,hackernewsletter,email,,,fav,,,396,396,396,685,396,814,23f52505-9c1e-449e-bc84-97650f03c4df
-1598968423,2020-09-01T13:53:43.000Z,https://blog.simpleanalytics.com/,simpleanalytics.com,simpleanalytics.com,blog.simpleanalytics.com,js,true,simpleanalytics.com,,,,,,,1366,1366,1366,616,1366,768,1b69a6fb-dbbf-4871-a4f6-6b81edf753cb
+added_iso,country_code,datapoint,device_type,path,session_id,utm_campaign,utm_content,utm_medium,utm_source
+{{ "now" | date: '%s' | minus: 83325 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},US,visit_homepage,desktop,/,1e5aad53-c734-40ac-b060-426a70d1c104,ads1,,,duckduckgo
+{{ "now" | date: '%s' | minus: 2580 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},UK,visit_homepage,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,newsletter,
+{{ "now" | date: '%s' | minus: 2340 | date: '%Y-%m-%dT%H:%M:%S.200Z' }},UK,popup_show,desktop,/,7b03aa29-612d-4aa8-b147-72c13986c4ae,,,,
+{{ "now" | date: '%s' | minus: 55 | date: '%Y-%m-%dT%H:%M:%S.100Z' }},NL,visit_homepage,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,google
+{{ "now" | date: '%s' | minus: 35 | date: '%Y-%m-%dT%H:%M:%S.200Z' }},NL,popup_show,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,
+{{ "now" | date: '%s' | minus: 5 | date: '%Y-%m-%dT%H:%M:%S.300Z' }},NL,popup_close,desktop,/,928e4f2f-1f16-4900-9ad8-0a1965e689a3,,,,
 ```
-
-This functionality is deprecated but we keep it for backward compatibility. It's recommended to not use it for new projects.
 
 </div>
 </details>
 
+### Metadata fields
+
+Because metadata fields are defined by the user, we don't know the fields upfront. The [export UI](/api/helpers#generate-export-url) gives a good overview of all metadata fields available for a certain period. Use those fields in the export API.
+
+Fields in the API and exporter have a type appended to them. You can see fields like `metadata.fieldname_text`, `metadata.fieldname_date`, `metadata.fieldname_bool`, or `metadata.fieldname_int` (where fieldname is a user-defined name). Some metadata fields can have both, for example, `metadata.projectID_text` and `metadata.projectID_int`. If a text looks like a number, we convert it to an integer and we keep the text version.
+
+When you see something prefixed with `metadata.sa_urlparam_`, it's a paramter from the [allowed URL parameters feature](/allow-params).
+
+## Event counts
+
+If you are only interested in how many certain events happened, you can use our [Stats API](/api/stats#events). It has a simple request and response with event totals.
+
+```
+https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_pricing
+```
+
+[See live example](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_pricing) of output.
+
+## Performance
+
+For us it does not matter how much data you export. We stream the data directly out of our database to your server or computer. No heavy load required.
+
+To make the export size smaller only select the fields you need.
+
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact).
 
 <style>
-     /* Apply styling to first table */
-     .content div.table-wrapper:nth-of-type(1) td:nth-of-type(1),
-     .content div.table-wrapper:nth-of-type(1) td:nth-of-type(2) {
-         white-space: nowrap;
-     }
+  .content div.table-wrapper td {
+    white-space: nowrap;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
 
-     /* Apply styling to second table */
-     .content div.table-wrapper:nth-of-type(2) td:nth-of-type(1) {
-         white-space: nowrap;
-     }
+  /* Apply styling to first table */
+  .content details div.table-wrapper:nth-of-type(1) td:nth-of-type(3) {
+    white-space: inherit;
+  }
 
-     .content table td,
-     .content table th {
-          font-size: 14px;
-     }
+  .content table td,
+  .content table th {
+    font-size: 14px;
+  }
+
+  details.csv pre.highlight {
+    white-space: pre;
+  }
 </style>

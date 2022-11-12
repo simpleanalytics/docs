@@ -130,9 +130,7 @@ sa_event("click_signup", { created_at: new Date() });
 
 ## Export metadata
 
-In our [export UI](https://simpleanalytics.com/select-website/export), you can download your metadata.
+In our [export UI](https://simpleanalytics.com/select-website/export), you can download your metadata. Metadata fields will only show when they are included in the selected period.
 
 <img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-export-ui.png" alt="Export metadata the UI of Simple Analytics" />
 <p class="caption">Export metadata the UI of Simple Analytics</p>
-
-

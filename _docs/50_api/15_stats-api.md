@@ -9,7 +9,7 @@ last_modified_at: 2022-04-14
 
 To get the aggregated statistics you see in our dashboard, use this Stats API. This API helps integrate Simple Analytics into your systems. For example, you can get KPIs out of your data or embed your data into a customized dashboard.
 
-> If you are looking for raw data, you can use our export [page views](/api/export-page-views) or [events](/api/export-events) API.
+> If you are looking for raw data, you can use our [Export API](/api/export-data-points).
 
 For this API, you need to be [authenticated with an API key](/api/authenticate). If your website is public, you can get the JSON data without credentials.
 

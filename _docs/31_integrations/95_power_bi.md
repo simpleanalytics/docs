@@ -8,7 +8,7 @@ last_modified_at: 2022-04-14
 
 Some customers use [Microsoft Power BI](https://powerbi.microsoft.com/) for building reports. Because we care about privacy, we don't store any personal data. No personal data from your visitors will end up on the servers of Microsoft.
 
-This connector lets customers query data from the [API](/api/export-page-views) of [Simple Analytics](https://simpleanalytics.com/).
+This connector lets customers query data from the [API](/api/export-data-points) of [Simple Analytics](https://simpleanalytics.com/).
 
 1. Before you start, you will need the export URL [from your Simple Analytics dashboard](https://simpleanalytics.com/select-website/export). Select the fields you want in the export and select "CSV":
 
