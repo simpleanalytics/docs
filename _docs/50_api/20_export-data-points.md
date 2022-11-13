@@ -1,5 +1,5 @@
 ---
-title: Export data points API
+title: Export API
 category: api
 permalink: /api/export-data-points
 redirect_from:
