@@ -50,7 +50,7 @@ If you want to keep track of your websites in a different way. A label could hel
 
 <img loading="lazy" src="https://assets.simpleanalytics.com/docs/dashboard/labels-in-website-overview.png" alt="Simple Analytics websites overview with custom labels" class="border">
 
-Add `"label": "my label ..."` to your request body to set a label. Only strings are allowed.
+Add `"label": "customer note"` to your request body to set a label. Only strings are allowed.
 
 ### Custom endpoints
 
