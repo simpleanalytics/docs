@@ -9,7 +9,7 @@ Use this if you want to administer your account.
 
 With this API you can do a few things, for example add websites to your dashboard. This API is only available on request because we want to know what the use case for the API will be. Just drop us a line via [our contact page](https://simpleanalytics.com/contact).
 
-### List websites
+## List websites
 
 > `GET` [https://simpleanalytics.com/api/websites](https://simpleanalytics.com/api/websites)
 
@@ -24,7 +24,7 @@ curl "https://simpleanalytics.com/api/websites" \
 
 Your user ID and API key are shown in [your account settings](https://simpleanalytics.com/account).
 
-### Add a website
+## Add a website
 
 > `POST` [https://simpleanalytics.com/api/websites/add](https://simpleanalytics.com/api/websites/add)
 
@@ -46,12 +46,14 @@ curl -X "POST" "http://localhost:3000/api/websites/add" \
 }'
 ```
 
+### Labels
+
 If you want to keep track of your websites in a different way. A label could help. This is how that looks at the websites overview page:
 
 <img loading="lazy" src="https://assets.simpleanalytics.com/docs/dashboard/labels-in-website-overview.png" alt="Simple Analytics websites overview with custom labels" class="border">
 
 Add `"label": "customer note"` to your request body to set a label. Only strings are allowed.
 
-### Custom endpoints
+## Custom endpoints
 
 For bigger customers we make custom endpoints. If you are in the need of a custom endpoint, [let us know](https://simpleanalytics.com/contact).
