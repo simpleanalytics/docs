@@ -12,7 +12,7 @@ To collect additional data on top of [our collected metrics](/metrics), you can 
 
 <blockquote class="red" markdown="1">
 
-We don't allow personal data to end up in our data points. Make sure to not include personal data in your metadata like email addresses, identifiers, or any other type of personal data. 
+Do **not** include personal data in your metadata like email addresses, identifiers, or any other type of personal data. We don't allow it and your account might be suspended.
 
 </blockquote>
 
