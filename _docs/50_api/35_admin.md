@@ -5,9 +5,7 @@ permalink: /api/admin
 last_modified_at: 2022-04-14
 ---
 
-Use this if you want to administer your account.
-
-With this API you can do a few things, for example add websites to your dashboard. This API is only available on request because we want to know what the use case for the API will be. Just drop us a line via [our contact page](https://simpleanalytics.com/contact).
+Use this if you want to administer your account. With this API you can do a few things, for example, list all websites and add websites to your dashboard.
 
 ## List websites
 
