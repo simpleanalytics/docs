@@ -17,6 +17,16 @@ You will need to enable the record in [your website settings](https://simpleanal
 
 > If you are using <img src="https://cdn.simpleanalytics.com/images/cloudflare-icon.png" style="height: 10px; margin: 0 3px;" alt=""> CloudFlare, make sure to disable the orange cloud.
 
+## Check if SSL works
+
+Check if your custom domain page shows at `https://custom.domain.com`. It should show something like this:
+
+<img class="border" src="https://assets.simpleanalytics.com/docs/custom-domain/custom-domain-page.png" alt="Placeholder page for custom domain">
+
+If you get an SSL error, please hit refresh in your [website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers):
+
+<img class="border" src="https://assets.simpleanalytics.com/docs/custom-domain/check-ssl-certificate.png" alt="Check SSL certificate in website settings">
+
 ## Update your script
 
 Include these two lines at the end of your `<body>` (or anywhere else):
