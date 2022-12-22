@@ -14,15 +14,14 @@
 >
   <video
     loop
-    muted
-    autoplay
+    {% if includes.autoplay == 'false' %}
+      muted
+      autoplay
+    {% else %}
+      preload="metadata"
+    {% endif %}
     crossorigin="anonymous"
-    {%
-    if
-    include.controls
-    %}controls{%
-    endif
-    %}
+    {% if include.controls %}controls{% endif %}
     class="post-video {% if include.red %}red{% endif %}"
     {% if include.poster and include.poster contains '.' %}
     poster="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{ include.poster }}"
@@ -66,5 +65,14 @@
       >
       instead. {% endif %}
     </p>
+    {% if include.subtitles %}
+    <track
+      default
+      label="English"
+      kind="subtitles"
+      srclang="en"
+      src="https://assets.simpleanalytics.com/videos/{{ include.slug }}/{{include.subtitles}}"
+    />
+    {% endif %}
   </video>
 </div>
