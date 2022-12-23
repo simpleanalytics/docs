@@ -1,12 +1,15 @@
 ---
 title: Use website data in Can I Use
 menu: Can I use...
+hidden: true
 category: integrations
 permalink: /use-website-data-in-caniuse
-last_modified_at: 2022-04-14
+last_modified_at: 2022-12-23
 ---
 
 If you ware a developer you know the website caniuse.com. Can I use provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers. It's super useful when you develop features for your visitors.
+
+> We don't support the export format required by Can I Use anymore.
 
 Can I use shows percentages of support of features you can use in the browser. Let's say you develop a new feature and you want to know how many of your visitors support Flexbox. You would [search for Flexbox](https://caniuse.com/?search=Flexbox) and find out the percentage of visitors around the world who support Flexbox. But, this does not say much about **your** visitors.
 
