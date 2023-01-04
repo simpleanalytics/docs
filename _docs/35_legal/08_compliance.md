@@ -2,6 +2,7 @@
 title: Compliance with Privacy Regulation
 menu: Compliance
 category: legal
+hidden: true
 permalink: /compliance-with-privacy-regulation
 ---
 
