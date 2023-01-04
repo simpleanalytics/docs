@@ -2,7 +2,7 @@
 title: PECR
 category: legal
 permalink: /pecr
-last_modified_at: 2022-04-14
+last_modified_at: 2023-01-04
 ---
 
 [ICO](https://ico.org.uk/), UK's independent body set up to uphold information rights, has updated its laws. They published a [blog](https://ico.org.uk/about-the-ico/news-and-events/news-and-blogs/2019/07/blog-cookies-what-does-good-look-like/) with the most common myths about cookies and [complete guidance](https://ico.org.uk/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies/) on the use of cookies and similar technologies ([pdf](https://ico.org.uk/media/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies-1-0.pdf)).
