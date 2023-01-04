@@ -3,6 +3,7 @@ title: How we protect your data
 menu: Protecting your data
 category: general
 permalink: /protecting-your-data
+hidden: true
 excerpt: "We do everything to keep your data safe. Our servers are located in The Netherlands, and we don’t transfer data overseas."
 redirect_from:
   - /locations
