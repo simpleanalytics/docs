@@ -3,7 +3,7 @@ title: Your privacy policy using Simple Analytics
 menu: Your privacy policy
 category: legal
 permalink: /your-privacy-policy
-last_modified_at: 2022-04-14
+last_modified_at: 2022-01-03
 ---
 
 Using any external service may require updating your privacy policy. So naturally you may ask the following question:
