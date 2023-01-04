@@ -3,7 +3,8 @@ title: Introduction to Legal
 menu: Introduction
 category: legal
 permalink: /introduction-to-legal
-draft: true
+last_modified_at: 2023-01-04
+---
 
 We at Simple Analytics believe in a free, user-friendly Internet. This is why we built a simple, privacy-friendly tool to provide you with valuable analytics insights without collecting personal data from your visitors. This privacy-first mindset makes our software compliant with the strictest privacy regulations, including the GDPR.
 
