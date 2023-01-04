@@ -2,6 +2,7 @@
 title: PECR
 category: legal
 permalink: /pecr
+hidden: true
 last_modified_at: 2023-01-04
 ---
 
