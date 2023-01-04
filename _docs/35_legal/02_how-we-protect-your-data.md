@@ -1,6 +1,6 @@
 ---
 title: How we protect your data
-menu: protecting your data
+menu: Protecting your data
 category: legal
 permalink: /how-we-protect-your-data
 last_modified_at: 2023-01-03
