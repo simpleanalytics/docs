@@ -6,19 +6,19 @@ permalink: /what-we-do-and-dont-collect
 last_modified_at: 2023-01-04
 ---
 
-# Metrics we collect
-
 Not collecting any information would be silly and unrealistic for an analytics tool. We collect information necessary to show you simple analytics, but unlike other analytics tools, we don’t collect more than is absolutely necessary. Here is a list of what we **do and don’t** collect from your visitors.
 
 With every page view, we collect some metrics. We never track visitors, so the data below is never linked to one specific visitor.
 
 You can limit the metrics we collect via our [ignore metrics](https://docs.simpleanalytics.com/ignore-metrics)\-feature.
 
+## Metrics we collect
+
 ### URL of the page
 
 Very important
 
-For example, https://simpleanalytics.com/contact
+For example, `https://simpleanalytics.com/contact`
 
 We store this URL in parts in our database.
 
@@ -26,7 +26,7 @@ We store this URL in parts in our database.
 
 Very important
 
-To know where customers come from, we store the page’s referrer. This means that a customer can see where a visitor is coming from—for example, duckduckgo.com.
+To know where customers come from, we store the page’s referrer. This means that a customer can see where a visitor is coming from—for example, `duckduckgo.com`.
 
 ### UTM codes
 
@@ -34,7 +34,7 @@ Somewhat important
 
 For example, https://simpleanalytics.com/?utm\_source=newsletter
 
-The part after the ? is called [URL parameters](https://docs.simpleanalytics.com/how-to-use-url-parameters). We only keep the UTM codes (utm\_source/ref, utm\_medium, utm\_content, utm\_campaign) and drop all other URL parameters. The UTM codes are something that the customer adds to the URLs. By nature, these UTM codes don’t include personal data. They are generic terms like “newsletter\_may” or “twitter\_campaign\_2”. [See below](https://docs.simpleanalytics.com/metrics#utm-codes-explained).
+The part after the `?` is called [URL parameters](https://docs.simpleanalytics.com/how-to-use-url-parameters). We only keep the UTM codes (`utm_source`/`ref`, `utm_medium`, `utm_content`, `utm_campaign`) and drop all other URL parameters. The UTM codes are something that the customer adds to the URLs. By nature, these UTM codes don’t include personal data. They are generic terms like “newsletter\_may” or “twitter\_campaign\_2”. [See below](https://docs.simpleanalytics.com/metrics#utm-codes-explained).
 
 ### Time zone
 
@@ -43,6 +43,10 @@ In contrast with most services that collect countries based on IP address, we co
 ### IDs
 
 We collect three IDs:
+
+1. ID of the data point <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</span>
+1. ID of the page <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
+1. ID of the session <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
 
 1.  ID of the data point **Somewhat important**
 2.  ID of the page **Less important**
@@ -72,10 +76,10 @@ We collect the device's screen dimensions. There are two dimensions: the viewpor
 
 Less important
 
-The language of the browser, for example, en-US.
+The language of the browser, for example, `en-US`.
 
 
-# What we don't collect
+## What we don't collect
 
 ### Cookies
 
