@@ -1,14 +1,18 @@
 ---
-title: Google Data Studio connector
-menu: Google Data Studio
+title: Google Looker Studio connector
+menu: Google Looker Studio
 category: integrations
-permalink: /google-data-studio
-last_modified_at: 2022-07-01
+permalink: /google-looker-studio
+redirect_from: 
+  - /google-data-studio
+last_modified_at: 2023-01-07
 ---
 
-Some customers use [Google Data Studio](https://datastudio.google.com/) for building reports. Because we care about privacy, we don't store any personal data. That's why we are comfortable enough to let customers choose to connect with Data Studio while Google can't abuse our customers' data or their visitors.
+> Google Data studio has been renamed to Google Looker Studio.
 
-<img class="border-radius" src="https://assets.simpleanalytics.com/docs/google-data-studio/connector.jpg" alt="Simple Analytics connector for Google Data Studio" />
+Some customers use [Google Looker Studio](https://datastudio.google.com/) for building reports. Because we care about privacy, we don't store any personal data. That's why we are comfortable enough to let customers choose to connect with Looker Studio while Google can't abuse our customers' data or their visitors.
+
+<img class="border-radius" src="https://assets.simpleanalytics.com/docs/google-data-studio/connector.jpg" alt="Simple Analytics connector for Google Looker Studio" />
 
 This connector lets customers query data from the [API](/api) of [Simple Analytics](https://simpleanalytics.com/). It does need access to your Simple Analytics data. We need the Google scope "connect to an external service" for that.
 
