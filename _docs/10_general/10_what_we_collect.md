@@ -1,5 +1,5 @@
 ---
-title: What we collect
+title: Metrics
 category: general
 permalink: /what-we-collect
 excerpt: "Simple Analytics only collects privacy-insensitive data. Here is a list of what we do and don’t collect from your visitors."
