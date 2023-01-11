@@ -52,6 +52,21 @@ We use timestamps to generate the graphs you see on your dashboard, which allows
 
 We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device types, and browsers** in your dashboard. We allow customers to download these counts alongside the User Agent string itself. We do anonymize the User Agent string. For example, when it has a very detailed version number we truncate it from `Chrome/78.0.3904.108` into `Chrome/78.0.0.0`.
 
+Browsers or devices identify themselves to websites. They give themselves some kind of name. For example, a user agent can look like this ([wiki][1]):
+
+```
+Mozilla/5.0 (iPad; U; CPU OS 3_2_1) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B40598
+```
+
+It's not needed, privacy-wise, but we replace long numbers with zeros. After cleanup, it looks like this:
+
+```
+Mozilla/5.0 (iPad; U; CPU OS 3_2_0) AppleWebKit/531.21.0 (KHTML, like Gecko) Mobile/7B40000
+```
+
+In some browsers we collect browser name and operating system name without the user agent but via the [user agent client hints](https://wicg.github.io/ua-client-hints/).
+
+
 <details>
   <summary>Technical explanation of anonymize function</summary>
   <div markdown="1">
@@ -99,6 +114,16 @@ In contrast with most services that collect countries based on IP address, we co
 
 Devices are set to a certain language. We collect the language of the device being used by a visitor. We don't show this in our dashboard, but advanced users can get this data out of our [APIs](/api). Some language have a different region. For example English is used in the US and in the UK. We also store the region of the language.
 
+### ID's
+
+The first ID, data point ID, is a technical ID. When a visitor lands on a page, we send a request to our server. When we measure [time on page](/explained/time-on-page) we need to send a request at the end of a page view. To link those two requests together we match them with an ID. The data point ID. If time on page is not relevant, we can drop this ID.
+
+The second ID, page ID, is used to link multiple events (if a customer collects them) together. Let's say you have 2 events on the same page, you can then combine them together. This is not used by most customers. This page ID will be reset after every page.
+
+The last ID, session ID, is used to link multiple events and pages into one session. It's the same as a page ID, but with multiple pages. When a customer has a SPA (Single Page Application), the session ID is reset when the website is closed. If the customer doesn't have a SPA, the session ID is reset with every navigation. The session ID is only needed when you need to use [sequential events](/events#sequential-by-session). Not so much for the amount of visitors. We measure that [with the referrer of the page](/explained/unique-visits).
+
+It's important to note, that all these IDs are not linked to a person or personal data. It's linked to only a page view, page, or session. Another point: these IDs are not stored on the device. Meaning, that if a visitor reloads the page (with F5 for example), the IDs will all be reset.
+
 ### URLs
 
 > We **partially collect** and **partially store** URLs
@@ -117,7 +142,15 @@ Secondly we check the source of the customer with the UTM-parameters.
 
 ### UTM-parameters
 
-> We **do collect** and **store** UTM-codes
+> We **do collect** and **store** UTM-codes 
+
+UTM codes are bits of text you can add to a link that tell Simple Analytics (as well as other analytics tools) a little bit more information about each link. Here's a sample of what one looks like:
+
+```
+https://example.com/landing-page?utm_source=company-x&utm_medium=newsletter&utm_campaign=march
+```
+
+[Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer.
 
 We track these UTM codes:
 
@@ -156,6 +189,10 @@ When a visitor is on a page we collect the amount of seconds a page is viewed. I
 > We **do collect and store** how far a visitor scrolls on the page
 
 When a visitor scrolls on a page we record how far they scrolled. We do store this in a percentage with increments of 5%.
+
+### Script settings
+
+We send some script settings along with the page view. To identify the embed script and check if the page view comes from a robot. The script settings include things like `version: script_version_2`, `robot: true`.
 
 ### Do Not Track
 
