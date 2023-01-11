@@ -4,6 +4,7 @@ category: general
 permalink: /metrics
 excerpt: "We never track visitors so the data below is never linked to one specific visitor. Here is a list of metrics we collect."
 last_modified_at: 2022-07-18
+hidden: true
 redirect_from:
   - /data-points
 ---
