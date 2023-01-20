@@ -29,7 +29,7 @@ You can use the metadata fields in your [Goals](/goals).
 
 When using the [Events Explorer](/events-explorer), you can select metadata to be included as columns.
 
-<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-in-events-explorer" alt="Use metadata in the Events Explorer at Simple Analytics" />
+<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-in-events-explorer.png" alt="Use metadata in the Events Explorer at Simple Analytics" />
 <p class="caption">Use metadata in the Events Explorer of Goals at Simple Analytics</p>
 
 ### Export metadata
