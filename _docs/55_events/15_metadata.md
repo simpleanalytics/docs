@@ -3,18 +3,43 @@ title: Collect metadata
 category: events
 permalink: /metadata
 last_modified_at: 2022-07-26
-created_at: 2022-07-26
+created_at: 2023-01-20
 ---
 
 To collect additional data on top of [our collected metrics](/metrics), you can append metadata. With this feature you can specify specific parameters and it will be included in our database with your datapoints (events or page views).
-
-> While you can send and [export](#export-metadata) metadata, you can download them, but you can't see it in our dashboard at the moment. We are implementing those features currently.
 
 <blockquote class="red" markdown="1">
 
 Do **not** include personal data in your metadata like email addresses, identifiers, or any other type of personal data. We don't allow it and your account might be suspended.
 
 </blockquote>
+
+## Use metadata within Simple Analytics
+
+There are a few ways to use metadata in Simple Analytics.
+
+### Goals
+
+You can use the metadata fields in your [Goals](/goals).
+
+<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-in-goals.png" alt="Use metadata in the filters of Goals at Simple Analytics" />
+<p class="caption">Use metadata in the filters of Goals at Simple Analytics</p>
+
+### Events explorer
+
+When using the [Events Explorer](/events-explorer), you can select metadata to be included as columns.
+
+<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-in-events-explorer" alt="Use metadata in the Events Explorer at Simple Analytics" />
+<p class="caption">Use metadata in the Events Explorer of Goals at Simple Analytics</p>
+
+### Export metadata
+
+In our [export UI](https://simpleanalytics.com/select-website/export), you can download your metadata. Metadata fields will only show when they are included in the selected period.
+
+<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-export-ui.png" alt="Export metadata the UI of Simple Analytics" />
+<p class="caption">Export metadata the UI of Simple Analytics</p>
+
+## Collect
 
 This feature works for all datapoints; events and page views. To make it easy for you we created 3 ways to collect metadata:
 
@@ -133,10 +158,3 @@ When sending dates in JavaScript they will be converted to a string. For example
 ```js
 sa_event("click_signup", { created_at: new Date() });
 ```
-
-## Export metadata
-
-In our [export UI](https://simpleanalytics.com/select-website/export), you can download your metadata. Metadata fields will only show when they are included in the selected period.
-
-<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-export-ui.png" alt="Export metadata the UI of Simple Analytics" />
-<p class="caption">Export metadata the UI of Simple Analytics</p>
