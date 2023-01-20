@@ -10,7 +10,7 @@ With events in Simple Analytics you can collect counts of certain events. Let's 
 
 If you want to get your hands dirty, you can collect events for all kinds of custom events. Like form submits, button clicks, and many more.
 
-Use can [download your events](/export-data), use them in the Events Explorer, and use them in Goals.
+Use can [download your events](/export-data), use them in the [Events Explorer](/events-explorer), and use them in [Goals](/goals).
 
 <img class="border" src="https://assets.simpleanalytics.com/docs/events/events-explorer.png" alt="Overview of the Events Explorer in Simple Analytics" />
 <p class="caption" markdown="1">Overview of the [Events Explorer](/events-explorer) in Simple Analytics</p>
