@@ -2,8 +2,8 @@
 title: Collect metadata
 category: events
 permalink: /metadata
-last_modified_at: 2022-07-26
-created_at: 2023-01-20
+created_at: 2022-07-26
+last_modified_at: 2023-01-20
 ---
 
 To collect additional data on top of [our collected metrics](/metrics), you can append metadata. With this feature you can specify specific parameters and it will be included in our database with your datapoints (events or page views).
@@ -51,7 +51,7 @@ When using multiple ways to add metadata, the objects will be merged into one. F
 
 > You might want to add the [event placeholder function](/events#placeholder-event-function) on top of your HTML.
 
-## 1. Send metadata along with the `sa_event`-function
+### 1. Send metadata along with the `sa_event`-function
 
 > This only works when you manually trigger an event. If you want to add metadata for page views or automated events, check the next two options.
 
@@ -63,7 +63,7 @@ sa_event("click_download", { filename: "document.pdf" });
 
 In above example you send the `filename` as metadata.
 
-## 2. Set metadata on the `window` object
+### 2. Set metadata on the `window` object
 
 An example on how to to set metadata on the `window` object:
 
@@ -75,7 +75,7 @@ An example on how to to set metadata on the `window` object:
 
 Every time an event or page view is sent, we check for the `sa_metadata` object and append this metadata to your event or page view.
 
-## 3. Add metadata via a callback function
+### 3. Add metadata via a callback function
 
 You can specify the metadata callback function via `data-metadata-collector`. Let's say you want to add some data to events and page views. This is how you set up a `myAddMetadataFunction`-function:
 
