@@ -13,10 +13,10 @@ If you want to get your hands dirty, you can collect events for all kinds of cus
 Use can [download your events](/export-data), use them in the Events Explorer, and use them in Goals.
 
 <img class="border" src="https://assets.simpleanalytics.com/docs/events/events-explorer.png" alt="Overview of the Events Explorer in Simple Analytics" />
-<p class="caption">Overview of the [Events Explorer](/events-explorer) in Simple Analytics</p>
+<p class="caption" markdown="1">Overview of the [Events Explorer](/events-explorer) in Simple Analytics</p>
 
 <img class="border" src="https://assets.simpleanalytics.com/docs/goals/goals-histogram.png" alt="A goal selected in Simple Analytics" />
-<p class="caption">The histogram view of a [goal](/goals) in Simple Analytics</p>
+<p class="caption" markdown="1">The histogram view of a [goal](/goals) in Simple Analytics</p>
 
 ## Placeholder event function
 
