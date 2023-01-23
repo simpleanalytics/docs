@@ -16,7 +16,7 @@ last_modified_at: 2023-01-04
 
 ### How does Simple Analytics comply with the UK GDPR?
 
-The EU GDPR served as a blueprint for the UK GDPR. As a result, the two are very similar. All information we provide on our GDPR compliance pages also applies to the relevant provisions of the UK GDPR and the PECR. You can click [here](https://docs.google.com/document/d/19o16ltnx_vnAdYtSv5ooBsPUypPpplxxLyxGdmaf17A/) for surface-level information and [here](https://docs.google.com/document/d/1CNlVf-Cxi5REOkszgUGWmBPaJstqG2MRfDgTr6t7SrA/edit#heading=h.g1tlv85onb87) for in-depth information meant for legal teams.
+The EU GDPR served as a blueprint for the UK GDPR. As a result, the two are very similar. All information we provide on our GDPR compliance pages also applies to the relevant provisions of the UK GDPR and the PECR. You can click [here](/compliance-faq) for surface-level information and [here](/compliance-fore-legal-teams) for in-depth information meant for legal teams.
 
 ### Can a UK customer use Simple Analytics?
 
