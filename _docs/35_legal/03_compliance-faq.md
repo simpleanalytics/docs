@@ -3,18 +3,18 @@ title: Compliance FAQ
 menu: Compliance FAQ
 category: legal
 permalink: /compliance-faq
-last_modified_at: 2023-01-04
+last_modified_at: 2023-01-23
 ---
 
 **Simple Analytics is GDPR-compliant from the installation. We update our product according to new regulations. You don’t need to worry about anything**.
 
-If you want to learn more, we answer some common questions below. You can also refer to [this page](https://docs.google.com/document/d/1CNlVf-Cxi5REOkszgUGWmBPaJstqG2MRfDgTr6t7SrA/edit#heading=h.g1tlv85onb87) for in-depth legal information.
+If you want to learn more, we answer some common questions below. You can also refer to [this page](/compliance-fore-legal-teams) for in-depth legal information.
 
 ### How is Simple Analytics GDPR compliant?
 
 Simple Analytics is GDPR-compliant out of the box because **it does not collect personal data**. We do not use cookies and carefully avoid collecting any metrics that could be used for fingerprinting. None of the data we collect fall under the GDPR.
 
-You can learn more about the data we collect [here](https://docs.google.com/document/d/17MiUjYZ-yg9Wsysu0vILXem99G6O8Od5phY6MupuSJQ/edit#).
+You can learn more about the data we collect [here](/what-we-collect).
 
 ### Does Simple Analytics require consent?
 
@@ -36,4 +36,4 @@ No data processing agreement is needed. Our customers are not controllers of per
 
 ### Do I need to mention Simple Analytics in my privacy policy?
 
-**You do not need to mention Simple Analytics in your privacy policy**, but we still encourage you to do so to be as transparent as possible with your users. You can find a template [here](https://docs.google.com/document/d/1apnyvExaewz5KjwFwGsQSuxT73miDFu_zcn2UM5-Ato/edit)
+**You do not need to mention Simple Analytics in your privacy policy**, but we still encourage you to do so to be as transparent as possible with your users. You can find a template [here](/your-privacy-policy)
