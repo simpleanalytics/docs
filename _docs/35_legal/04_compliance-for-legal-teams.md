@@ -62,4 +62,4 @@ IP addresses are never logged, stored, transferred, or processed in any other wa
 
 **Simple Analytics does not require a privacy notice**. Our customers are not controllers of personal data and are not required to provide any information under Art. 13 GDPR, as the provision only applies to the data controller.
 
-For the same reason, it is not mandatory to include Simple Analytics in a website’s privacy policy. We still encourage our customers to do so to be as transparent as possible. [This page](https://docs.google.com/document/d/1apnyvExaewz5KjwFwGsQSuxT73miDFu_zcn2UM5-Ato/edit)
+For the same reason, it is not mandatory to include Simple Analytics in a website’s privacy policy. We still encourage our customers to do so to be as transparent as possible. [This page](/your-privacy-policy)
