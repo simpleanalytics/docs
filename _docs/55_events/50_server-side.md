@@ -5,11 +5,11 @@ permalink: /events/server-side
 last_modified_at: 2023-01-26
 ---
 
-We allow data to be send server side or from mobile apps.
+We allow data to be sent server side or from mobile apps.
 
 You can send us the regular data point fields and include [metadata](/metadata).
 
-To view this data it's usually enough to use the [Events Explorer](/events-explorer), but you can also create [goals](/goals) for events you check often.
+To view this data, it's usually enough to use the [Events Explorer](/events-explorer), but you can also create [goals](/goals) for events you check often.
 
 ## Sending data
 
@@ -28,11 +28,11 @@ Example payload of the data:
 }
 ```
 
-It's advised to include the user agent of the device, because the defaults could be detected as robots.
+It's advised to include the user agent of the device because the defaults could be detected as robots.
 
 ## Example
 
-Sometimes you just want to send some test data. Here is an example with cURL to send data:
+Occasionally you just want to send some test data. Here is an example with cURL to send data:
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
@@ -46,7 +46,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 }' https://queue.simpleanalyticscdn.com/events
 ```
 
-If you want you can copy and paste the above cURL command into your terminal to test it. It shows up in your dashboard within a few minutes (usually way faster).
+If you'd like, you can copy and paste the above cURL command into your terminal to test it. It shows up in your dashboard within a few minutes (typically way faster).
 
 You can always [export the raw latest data](/export-data) from our dashboard, or use the [Events Explorer](/events-explorer) to find your events.
 
