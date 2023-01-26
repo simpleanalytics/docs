@@ -17,7 +17,7 @@ The following information is targeted at developers. Don't get scared away, they
 
 Customer can send their data to this endpoint: `https://queue.simpleanalyticscdn.com/events`. It should be JSON.
 
-Example payload of the data:
+Example payload of the data for an event:
 
 ```js
 {
@@ -29,6 +29,17 @@ Example payload of the data:
 ```
 
 It's advised to include the user agent of the device because the defaults could be detected as robots.
+
+Example payload of the data for a page view:
+
+```js
+{
+  type: "pageview",
+  hostname: "example.com",
+  event: "pageview",
+  ua: "User Agent",
+}
+```
 
 ## Example
 
