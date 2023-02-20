@@ -19,12 +19,12 @@ Customer can send their data to this endpoint: `https://queue.simpleanalyticscdn
 
 Example payload of the data for an event:
 
-```js
+```json
 {
-  type: "event",
-  hostname: "example.com",
-  event: "event-name",
-  ua: "User Agent",
+  "type": "event",
+  "hostname": "example.com",
+  "event": "event-name",
+  "ua": "User Agent"
 }
 ```
 
@@ -32,12 +32,12 @@ It's advised to include the user agent of the device because the defaults could 
 
 Example payload of the data for a page view:
 
-```js
+```json
 {
-  type: "pageview",
-  hostname: "example.com",
-  event: "pageview",
-  ua: "User Agent",
+  "type": "pageview",
+  "hostname": "example.com",
+  "event": "pageview",
+  "ua": "User Agent"
 }
 ```
 
@@ -65,23 +65,23 @@ You can always [export the raw latest data](/export-data) from our dashboard, or
 
 Here is an example with many fields added:
 
-```js
+```json
 {
-  type: "event",
-  hostname: "example.com",
-  event: "event-name",
-  path: "/",
-  viewport_width: 1440,
-  viewport_height: 310,
-  language: "en-US",
-  screen_width: 1440,
-  screen_height: 900,
-  unique: true,
-  https: true,
-  timezone: "Europe/Amsterdam",
-  metadata: {
-    button: "yes",
+  "type": "event",
+  "hostname": "example.com",
+  "event": "event-name",
+  "path": "/",
+  "viewport_width": 1440,
+  "viewport_height": 310,
+  "language": "en-US",
+  "screen_width": 1440,
+  "screen_height": 900,
+  "unique": true,
+  "https": true,
+  "timezone": "Europe/Amsterdam",
+  "metadata": {
+    "button": "yes"
   },
-  ua: "User Agent",
+  "ua": "User Agent"
 }
 ```
