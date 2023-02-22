@@ -27,7 +27,8 @@ To follow along with the examples, you will need:
   - [MacOS](https://www.cloudquery.io/docs/quickstart/macOS)
   - [Linux](https://www.cloudquery.io/docs/quickstart/linux)
   - [Windows](https://www.cloudquery.io/docs/quickstart/windows)
-    When the installation is complete, you should be able to run the `cloudquery --help` command in your terminal and see information about the available commands.
+
+When the installation is complete, you should be able to run the `cloudquery --help` command in your terminal and see information about the available commands.
 
 ## Example 1: Exporting to SQLite
 
