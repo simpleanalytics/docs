@@ -2,7 +2,7 @@
 title: Export Simple Analytics Data to a Database or Data Warehouse with CloudQuery
 menu: CloudQuery
 category: integrations
-permalink: /cloudquery
+permalink: /export-to-data-warehouse-with-cloudquery
 created_at: 2023-02-22
 last_modified_at: 2023-02-22
 ---
