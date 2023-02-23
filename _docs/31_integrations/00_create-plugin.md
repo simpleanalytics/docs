@@ -6,7 +6,48 @@ permalink: /create-plugin
 last_modified_at: 2022-04-14
 ---
 
-To create a plugin for Simple Analytics, we have a few requirements that need to work within that plugin. The goal of the plugin is to make it as easy as possible to implement Simple Analytics. There are two types of plugins: System plugins and Framework plugins.
+To create a plugin for Simple Analytics, we have a few requirements that need to work within that plugin. The goal of the plugin is to make it as easy as possible to implement Simple Analytics. There are two types of plugins: [framework plugins](#framework-plugins) and [system plugins](#system-plugins).
+
+## Framework plugins
+
+A few examples: React, Vue, Gridsome, and Gatsby.
+
+The settings below should be changeable via the plugin settings. Usually, as a settings object passed to the plugin. These settings will be passed to the `<script>`-tag. For example:
+
+```html
+<script data-mode="hash" data-collect-dnt="true" src="..." />
+```
+
+Settings that require an `array` will be passed like this in the plugin settings:
+
+```js
+{
+  ignorePages: ["/search/*", "/account/*", "/vouchers"];
+}
+```
+
+But end up in the HTML script like this:
+
+```html
+<script data-ignore-pages="/search/*,/account/*,/vouchers" src="..." />
+```
+
+### Custom settings
+
+Custom settings should be specified like this: `customSettings: { collectDarkMode: true, ... }` which will be send to the script as `data-collect-dark-mode="true"`.
+
+### Framework plugin checklist
+
+- [ ] [All settings](#settings) below are changeable via the options object of the plugin
+- [ ] The plugin should collect page views without specifying any settings/options
+- [ ] `enabled` setting should allow async function that returns true or false
+- [ ] Allow custom settings (key, value)
+- [ ] Embed script is added to the body of the page (with the changed settings)
+- [ ] Events script is added to the head of the page
+- [ ] Expose framework event function that can be used on all pages
+- [ ] Embed script URL changes when auto collect events is turned on
+- [ ] Auto deploy via GitHub Actions (if possible/needed)
+- [ ] Add [automated evens](/automated-events) script when automated events are enabled
 
 ## System plugins
 
@@ -81,47 +122,6 @@ To keep the plugin understandable and straightforward, hide as many settings as 
 
 For example, collapse an advanced settings block and let users click on it to unfold. Or add a checkbox with advanced settings, which is off by default, and when a user clicks on it, open advanced settings. The same goes for events. There are quite some settings related to events. Just hide them behind a toggle (checkbox or `<details>`-tag).
 
-## Framework plugins
-
-A few examples: React, Vue, Gridsome, and Gatsby.
-
-The settings below should be changeable via the plugin settings. Usually, as a settings object passed to the plugin. These settings will be passed to the `<script>`-tag. For example:
-
-```html
-<script data-mode="hash" data-collect-dnt="true" src="..." />
-```
-
-Settings that require an `array` will be passed like this in the plugin settings:
-
-```js
-{
-  ignorePages: ["/search/*", "/account/*", "/vouchers"];
-}
-```
-
-But end up in the HTML script like this:
-
-```html
-<script data-ignore-pages="/search/*,/account/*,/vouchers" src="..." />
-```
-
-### Custom settings
-
-Custom settings should be specified like this: `customSettings: { collectDarkMode: true, ... }` which will be send to the script as `data-collect-dark-mode="true"`.
-
-### System plugin checklist
-
-- [ ] [All settings](#settings) below are changeable via the options object of the plugin
-- [ ] The plugin should collect page views without specifying any settings/options
-- [ ] `enabled` setting should allow async function that returns true or false
-- [ ] Allow custom settings (key, value)
-- [ ] Embed script is added to the body of the page (with the changed settings)
-- [ ] Events script is added to the head of the page
-- [ ] Expose framework event function that can be used on all pages
-- [ ] Embed script URL changes when auto collect events is turned on
-- [ ] Auto deploy via GitHub Actions (if possible/needed)
-- [ ] Add [automated evens](/automated-events) script when automated events are enabled
-
 ## Settings
 
 For both System plugins and Framework plugins, the following settings need to be changeable:
@@ -188,4 +188,4 @@ Or in case when a custom domain is enabled:
 <noscript><img src="https://custom.domain/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ````
 
-When automated events are enabled the filename of the script changes from `latest.js` to `plus.js`.
+When automated events are enabled [that script](/automated-events) is included.
