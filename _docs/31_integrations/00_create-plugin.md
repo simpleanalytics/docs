@@ -73,7 +73,7 @@ In the UI of the System plugin, we need to be able to change all settings. See h
 - [ ] Embed script is added to the body of the page (with the changed settings)
 - [ ] Events script is added to the head of the page
 - [ ] Auto deploy via GitHub Actions (if possible/needed)
-- [ ] Change filename from `latest.js` to `plus.js` when automated events are enabled
+- [ ] Add [automated evens](/automated-events) script when automated events are enabled
 
 ### Collapse settings
 
@@ -120,7 +120,7 @@ Custom settings should be specified like this: `customSettings: { collectDarkMod
 - [ ] Expose framework event function that can be used on all pages
 - [ ] Embed script URL changes when auto collect events is turned on
 - [ ] Auto deploy via GitHub Actions (if possible/needed)
-- [ ] Change filename from `latest.js` to `plus.js` when automated events are enabled
+- [ ] Add [automated evens](/automated-events) script when automated events are enabled
 
 ## Settings
 
