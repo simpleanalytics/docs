@@ -6,7 +6,12 @@ permalink: /create-plugin
 last_modified_at: 2022-04-14
 ---
 
-To create a plugin for Simple Analytics, we have a few requirements that need to work within that plugin. The goal of the plugin is to make it as easy as possible to implement Simple Analytics. There are two types of plugins: [framework plugins](#framework-plugins) and [system plugins](#system-plugins).
+To create a plugin for Simple Analytics, we have a few requirements that need to work within that plugin. The goal of the plugin is to make it as easy as possible to implement Simple Analytics.
+
+There are two types of plugins:
+
+- [Framework plugins](#framework-plugins)
+- [System plugins](#system-plugins)
 
 ## Framework plugins
 
