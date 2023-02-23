@@ -8,6 +8,8 @@ created_at: 2022-07-26
 
 Let's say you want to change the path of your page views (and events). You have profiles of users on your website (`https://example.com/profiles/@adriaan`), but don't want to see the profile name in your dashboard. But you do want to record that profiles did get visits.
 
+> You can not overwrite the hash from the URL, only the path.
+
 This is how you set up a `myPathOverwriter`-function for that usecase:
 
 ```html
