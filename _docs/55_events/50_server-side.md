@@ -2,7 +2,7 @@
 title: Server side
 category: events
 permalink: /events/server-side
-last_modified_at: 2023-01-26
+last_modified_at: 2023-03-27
 ---
 
 We allow data to be sent server side or from mobile apps.
@@ -17,6 +17,10 @@ The following information is targeted at developers. Don't get scared away, they
 
 Customer can send their data to this endpoint: `https://queue.simpleanalyticscdn.com/events`. It should be JSON.
 
+It's advised to include the user agent of the device because the defaults could be detected as robots.
+
+### Events
+
 Example payload of the data for an event:
 
 ```json
@@ -28,7 +32,9 @@ Example payload of the data for an event:
 }
 ```
 
-It's advised to include the user agent of the device because the defaults could be detected as robots.
+### Page views
+
+The endpoint for the page views is the same as for events.
 
 Example payload of the data for a page view:
 
