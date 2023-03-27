@@ -2,12 +2,12 @@
 title: Server side tracking
 category: install-script
 permalink: /server-side-tracking
-last_modified_at: 2022-04-14
+last_modified_at: 2023-03-27
 ---
 
 On this page you will find how to collect page views server side.
 
-<blockquote class="red">
+<blockquote class="red" markdown="1">
   We recommend using [page view events](/events/server-side#page-views) to collect page views server side.
 </blockquote>
 
