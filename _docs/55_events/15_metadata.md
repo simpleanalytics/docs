@@ -28,25 +28,16 @@ To illustrate this, let's assume you have two signup flows - one for the Starter
   <a
 
     class="button"
-
     href="/signup?plan=starter"
-
     onclick="clickBuy()"
-
     >Buy Starter</a
-
   >
 
   <a
-
     class="button"
-
     href="/signup?plan=business"
-
     onclick="clickBuy()"
-
     >Buy Business</a
-
   >
 
 </p>
@@ -54,15 +45,10 @@ To illustrate this, let's assume you have two signup flows - one for the Starter
 <script>
 
   function clickBuy() {
-
     if (window.sa\_event) {
-
       window.sa\_event("click\_buy");
-
     }
-
   }
-
 </script>
 ```
 
@@ -76,27 +62,18 @@ To add extra information and, in this case, to distinguish between the “starte
 <p>
 
   <a
-
     class="button"
-
     href="/signup?plan=starter"
-
     onclick="clickBuy(**{plan: 'starter'}**)"
-
     >Buy Starter</a
 
   >
 
   <a
-
     class="button"
-
     href="/signup?plan=business"
-
     onclick="clickBuy(**{plan: 'business'}**)"
-
     >Buy Business</a
-
   >
 
 </p>
@@ -106,17 +83,11 @@ Also, add “metadata” to the script so that the sa\_event function sends the 
 
 ```js
 <script>
-
   function clickBuy(**metadata**) {
-
     if (window.sa\_event) {
-
       window.sa\_event("click\_buy", **metadata**);
-
     }
-
   }
-
 </script>
 ```
 
@@ -126,43 +97,27 @@ Your code will look like this:
 <p>
 
   <a
-
     class="button"
-
     href="/signup?plan=starter"
-
     onclick="clickBuy({plan: 'starter'})"
-
     >Buy Starter</a
 
   >
 
   <a
-
     class="button"
-
     href="/signup?plan=business"
-
     onclick="clickBuy({plan: 'business'})"
-
     >Buy Business</a
-
   >
 
 </p>
-
 <script>
-
   function clickBuy(metadata) {
-
     if (window.sa\_event) {
-
       window.sa\_event("click\_buy", metadata);
-
     }
-
   }
-
 </script>
 ```
 
