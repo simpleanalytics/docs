@@ -14,123 +14,9 @@ Do **not** include personal data in your metadata like email addresses, identifi
 
 </blockquote>
 
-## How to add metadata in Simple Analytics
+## How to use metadata within Simple Analytics
 
-Let's consider an example where you have a pricing page that displays monthly and yearly billing plans: Starter, Business, and Enterprise. Like ours in the image below.
-
-Let's say you want to track which plan a user selects besides the existing “click\_buy” event that you already collect. Metadata can be used to capture this additional information and make it useful when leveraging the “Goals feature” in Simple Analytics.
-
-To illustrate this, let's assume you have two signup flows - one for the Starter plan and one for the Business plan. In the image below you can see Both have the “onclick” handler pointing to the “click\_buy” function, which sends the event to Simple Analytics.
-
-```js
-<p>
-
-  <a
-
-    class="button"
-    href="/signup?plan=starter"
-    onclick="clickBuy()"
-    >Buy Starter</a
-  >
-
-  <a
-    class="button"
-    href="/signup?plan=business"
-    onclick="clickBuy()"
-    >Buy Business</a
-  >
-
-</p>
-
-<script>
-
-  function clickBuy() {
-    if (window.sa\_event) {
-      window.sa\_event("click\_buy");
-    }
-  }
-</script>
-```
-
-However, the current configuration doesn't capture whether the user clicked the “Starter” or “Business” button.
-
-To solve this, you can modify the “click\_buy” function to include extra information (metadata) for each plan. By adding a metadata attribute to the “click\_buy” button in the form of an object, you can pass this additional data to the “sa\_event” function.
-
-To add extra information and, in this case, to distinguish between the “starter” plan and the “business” plan, you should add **{plan: 'Starter'}** for the starter plan and **{plan: 'Business'}** for the business plan in the brackets after “clickBuy”.
-
-```js
-<p>
-
-  <a
-    class="button"
-    href="/signup?plan=starter"
-    onclick="clickBuy(**{plan: 'starter'}**)"
-    >Buy Starter</a
-
-  >
-
-  <a
-    class="button"
-    href="/signup?plan=business"
-    onclick="clickBuy(**{plan: 'business'}**)"
-    >Buy Business</a
-  >
-
-</p>
-```
-
-Also, add “metadata” to the script so that the sa\_event function sends the metadata to Simple Analytics.
-
-```js
-<script>
-  function clickBuy(**metadata**) {
-    if (window.sa\_event) {
-      window.sa\_event("click\_buy", **metadata**);
-    }
-  }
-</script>
-```
-
-Your code will look like this:
-
-```js
-<p>
-
-  <a
-    class="button"
-    href="/signup?plan=starter"
-    onclick="clickBuy({plan: 'starter'})"
-    >Buy Starter</a
-
-  >
-
-  <a
-    class="button"
-    href="/signup?plan=business"
-    onclick="clickBuy({plan: 'business'})"
-    >Buy Business</a
-  >
-
-</p>
-<script>
-  function clickBuy(metadata) {
-    if (window.sa\_event) {
-      window.sa\_event("click\_buy", metadata);
-    }
-  }
-</script>
-```
-
-Once the metadata is sent to Simple Analytics, it will be available in the “Event Explorer.”
-
-To summarize, here's the process for using custom events with metadata:
-
-1\. Add metadata to the “click\_buy” function for each plan (e.g., {plan: 'Starter'} and {plan: 'Business'}).
-
-2\. Modify the existing “sa\_event” function in your script to include the metadata.
-
-3\. Send the metadata to Simple Analytics using the “sa\_event” function.
-
+You cans use metadata in multiple ways in Simple Analytics
 
 ### Goals
 
@@ -169,7 +55,7 @@ When using multiple ways to add metadata, the objects will be merged into one. F
 
 > This only works when you manually trigger an event. If you want to add metadata for page views or automated events, check the next two options.
 
-The most common way to send metadata is specifying it when you create an event (like we showed in the example above):
+The most common way to send metadata is specifying it when you create an event:
 
 ```js
 sa_event("click_download", { filename: "document.pdf" });
