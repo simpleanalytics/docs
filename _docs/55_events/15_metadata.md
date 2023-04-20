@@ -22,6 +22,7 @@ Let's say you want to track which plan a user selects besides the existing “cl
 
 To illustrate this, let's assume you have two signup flows - one for the Starter plan and one for the Business plan. In the image below you can see Both have the “onclick” handler pointing to the “click\_buy” function, which sends the event to Simple Analytics.
 
+```js
 <p>
 
   <a
@@ -63,6 +64,7 @@ To illustrate this, let's assume you have two signup flows - one for the Starter
   }
 
 </script>
+```
 
 However, the current configuration doesn't capture whether the user clicked the “Starter” or “Business” button.
 
@@ -70,6 +72,7 @@ To solve this, you can modify the “click\_buy” function to include extra inf
 
 To add extra information and, in this case, to distinguish between the “starter” plan and the “business” plan, you should add **{plan: 'Starter'}** for the starter plan and **{plan: 'Business'}** for the business plan in the brackets after “clickBuy”.
 
+```js
 <p>
 
   <a
@@ -97,9 +100,11 @@ To add extra information and, in this case, to distinguish between the “starte
   >
 
 </p>
+```
 
 Also, add “metadata” to the script so that the sa\_event function sends the metadata to Simple Analytics.
 
+```js
 <script>
 
   function clickBuy(**metadata**) {
@@ -113,9 +118,11 @@ Also, add “metadata” to the script so that the sa\_event function sends the 
   }
 
 </script>
+```
 
 Your code will look like this:
 
+```js
 <p>
 
   <a
@@ -157,6 +164,7 @@ Your code will look like this:
   }
 
 </script>
+```
 
 Once the metadata is sent to Simple Analytics, it will be available in the “Event Explorer.”
 
