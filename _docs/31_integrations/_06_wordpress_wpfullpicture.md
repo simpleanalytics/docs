@@ -27,15 +27,15 @@ This is how the settings page looks:
 ## How to install Simple Analytics with the WP Full Picture plugin
 
 1. Go to your WordPress admin
-1. Go to plugins in your WordPress admin and click on **Add new**:
-1. Click on Search Plugins and type `wp full picture`
+1. Go to **Plugins** in your WordPress admin and click on **Add new**:
+1. Click on **Search Plugins** and type `wp full picture`
 1. Click on **Install Now**
 
    ![](/images/wp-full-picture-simple-analytics-installation.png)
 
 1. After this click on **Activate**
 1. On WP Full Picture page click on **Choose modules**
-1. Choose Simple Analytics and (optionally) Geolocation module and save the changes
+1. Choose **Simple Analytics** and (optionally) **Geolocation** modules and save the changes
 
    ![](/images/wp-full-picture-simple-analytics-installation-2.png)
 
