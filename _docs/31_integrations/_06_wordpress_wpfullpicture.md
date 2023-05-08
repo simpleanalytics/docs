@@ -19,24 +19,24 @@ WP Full Picture lets you:
 * Track single-page websites (clicks on navigation links that scroll to different parts of the page will be counted as different page views)
 
 > See the plugin in action on a temporary Wordpress website on tastewp.com. Simply [click this link to generate a new test site](https://tastewp.com/new?pre-installed-plugin-slug=full-picture-analytics-cookie-notice&redirect=plugins.php&ni=true).
-This is how the dashboard looks:
-
-![](/images/wordpress-refined-practice-screenshot-dashboard.png)
 
 This is how the settings page looks:
 
-![](/images/wordpress-refined-practice-screenshot-settings-page.png)
+![](/images/wp-full-picture-simple-analytics-settings.png)
 
-## Install the WP Full Picture plugin via WordPress dashboard
+## How to install Simple Analytics with the WP Full Picture plugin
 
-1. Go to your WordPress admin (likely on /wp-admin or [wordpress.com/log-in](https://wordpress.com/log-in))
+1. Go to your WordPress admin
 1. Go to plugins in your WordPress admin and click on **Add new**:
-
-   ![](/images/wordpress-click-add-new-plugin.jpg)
-
 1. Click on Search Plugins and type `wp full picture`
 1. Click on **Install Now**
+
+   ![](/images/wp-full-picture-simple-analytics-installation.png)
+
 1. After this click on **Activate**
 1. On WP Full Picture page click on **Choose modules**
 1. Choose Simple Analytics and (optionally) Geolocation module and save the changes
+
+   ![](/images/wp-full-picture-simple-analytics-installation-2.png)
+
 1. This will install Simple Analytics on your website. If you want to change other settings mentioned above click on "Configure" in the Simple Analytics block.
