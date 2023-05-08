@@ -1,5 +1,5 @@
 ---
-title: Simple Analytics integration with WP Full Picture plugin
+title: WordPress (via WP Full Picture plugin)
 category: integrations
 hidden: false
 permalink: /wp-full-picture-integration
