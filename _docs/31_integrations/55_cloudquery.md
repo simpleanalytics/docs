@@ -67,7 +67,7 @@ The inner plugin spec section defines the configuration specific to the Simple A
 - The `user_id` and `api_key` values are set to environment variables, which we will set in the next step.
 - The `period` value defines the time period for which data will be synced. We chose `7d` here to fetch only the last 7 days, but you can also choose `1m` for the last month, `1y` for the last year, and so on, or omit this setting to fetch all your historical data.
 - The `websites` section defines the websites for which data will be synced. You should replace `<your-website.com>` with the website as defined can add multiple websites to this list.
-- The `metadata_fields` is an optional list of metadata fields to sync, e.g. ["fieldname_text", "fieldname_int"]. If not specified, no metadata fields will be synced.
+- The `metadata_fields` is an optional list of metadata fields to sync, e.g. ["fieldname_text", "fieldname_int"]. If not specified, no metadata fields will be synced. To get your available metadata_fields, [check the Simple Analytics exporter](https://simpleanalytics.com/select-website/export). The fields are made of name + underscore + type (`fieldname_text`).
 
 All the available options for the Simple Analytics CloudQuery plugin are documented in the [plugin repository README](https://github.com/simpleanalytics/cq-source-simpleanalytics).
 
