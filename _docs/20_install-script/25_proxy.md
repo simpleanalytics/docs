@@ -38,7 +38,7 @@ Change `example.com` to the domain you run the proxy on. This can be the same do
 
 > You can change the path that you proxy from (`/simple/`) to something else. Make sure to also update that in the second `proxy_pass` (`&path=/simple`).
 
-If you reload your NGINX config with `sudo nginx -t && sudo nginx -s reload` you should be able to visit the script at `https://example.com/proxy.js`. 
+Reload your NGINX config with `sudo nginx -t && sudo nginx -s reload`. 
 
 </details>
 
