@@ -14,7 +14,7 @@ WP Full Picture lets you:
 * Turn off tracking for specific user roles and users who are not logged in ([more information](https://wpfullpicture.com/support/documentation/how-to-exclude-users-from-tracking/))
 * See traffic from some Android applications ([requires extra setup](https://wpfullpicture.com/support/documentation/how-to-get-better-traffic-sources-information/))
 * Use custom domain for bypassing ad-blockers (after setting it up as [described here](https://docs.simpleanalytics.com/bypass-ad-blockers))
-* Join traffic data from multiple websites under one domain without the need to [modfy the script](https://docs.simpleanalytics.com/overwrite-domain-name)
+* Join traffic data from multiple websites under one domain without the need to [modify the script](https://docs.simpleanalytics.com/overwrite-domain-name)
 * Run on localhost without having to modify the script
 * Track single-page websites (clicks on navigation links that scroll to different parts of the page will be counted as different page views)
 
