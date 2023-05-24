@@ -51,14 +51,19 @@ example.com {
     uri strip_prefix /simple
     reverse_proxy https://queue.simpleanalyticscdn.com {
       header_up X-Caddy-Proxy "true"
+      header_up -X-Forwarded-For
     }
   }
   handle /proxy.js {
     rewrite * /proxy.js?{query}&hostname=example.com&path=/simple
-    reverse_proxy https://simpleanalyticsexternal.com
+    reverse_proxy https://simpleanalyticsexternal.com {
+      header_up -X-Forwarded-For
+    }
   }
 }
 ```
+
+By default, Caddy adds the X-Forwarded-For header. We stop this behaviour by adding `header_up -X-Forwarded-For`.
 
 Change `example.com` to the domain you run the proxy on. This can be the same domain as your own website is hosted on.
 
