@@ -1,14 +1,15 @@
 ---
-title: WordPress (via WP Full Picture plugin)
+title: WP Full Picture plugin
 category: integrations
 hidden: true
-permalink: /wp-full-picture-integration
-last_modified_at: 2023-05-08
+permalink: /wordpress-full-picture-plugin
+last_modified_at: 2023-05-29
 ---
 
 If you need more features than the official Simple Analytics plugin, you can try the free version of [WP Full Picture](https://wordpress.org/plugins/full-picture-analytics-cookie-notice/).
 
 WP Full Picture lets you:
+
 * Load Simple Analytics only in specific countries. Simply enable geolocation module and choose countries that you want to use SA in
 * Do not track page views until pages are actually viewed (e.g. when they are opened in tabs). This works out-of-the-box with no extra setup.
 * Turn off tracking for specific user roles and users who are not logged in ([more information](https://wpfullpicture.com/support/documentation/how-to-exclude-users-from-tracking/))
