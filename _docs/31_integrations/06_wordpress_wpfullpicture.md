@@ -23,7 +23,7 @@ WP Full Picture lets you:
 
 This is how the settings page looks:
 
-![](/images/wp-full-picture-simple-analytics-settings.png)
+<img class="border" src="/images/wp-full-picture-simple-analytics-settings.png" alt="Simple Analytics settings menu in WordPress' WP Full Picture plugin" />
 
 ## How to install Simple Analytics with the WP Full Picture plugin
 
