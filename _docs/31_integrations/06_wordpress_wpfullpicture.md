@@ -1,7 +1,7 @@
 ---
 title: WordPress (via WP Full Picture plugin)
 category: integrations
-hidden: false
+hidden: true
 permalink: /wp-full-picture-integration
 last_modified_at: 2023-05-08
 ---
