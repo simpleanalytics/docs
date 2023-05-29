@@ -6,7 +6,7 @@ permalink: /wordpress-full-picture-plugin
 last_modified_at: 2023-05-29
 ---
 
-If you need more features than the official Simple Analytics plugin, you can try the free version of [WP Full Picture](https://wordpress.org/plugins/full-picture-analytics-cookie-notice/).
+[WP Full Picture](https://wordpress.org/plugins/full-picture-analytics-cookie-notice/) is a WordPress plugin with more features than [the official Simple Analytics plugin](/install-simple-analytics-on-wordpress).
 
 WP Full Picture lets you:
 
