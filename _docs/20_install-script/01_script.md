@@ -9,6 +9,7 @@ Include these two lines at the end of your `<body>` (or anywhere else):
 
 <!-- prettier-ignore -->
 ```html
+<!-- Simple Analytics - 100% privacy-first analytics -->
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
@@ -28,6 +29,17 @@ If you want to run the script on localhost, please use our dev (`https://scripts
 When you are done implementing [go to your dashboard](https://simpleanalytics.com/websites).
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
+
+### Javascript version
+
+If you can't embed HTML, but you can embed JavaScript, here is the code you need to install Simple Analytics with just JavaScript.
+
+```js
+// Simple Analytics - 100% privacy-first analytics
+const script = document.createElement('script');
+script.setAttribute('src', 'https://scripts.simpleanalyticscdn.com/latest.js');
+document.head.appendChild(script);
+```
 
 ## Open source
 
