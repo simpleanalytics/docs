@@ -36,8 +36,8 @@ If you can't embed HTML, but you can embed JavaScript, here is the code you need
 
 ```js
 // Simple Analytics - 100% privacy-first analytics
-const script = document.createElement('script');
-script.setAttribute('src', 'https://scripts.simpleanalyticscdn.com/latest.js');
+const script = document.createElement("script");
+script.setAttribute("src", "https://scripts.simpleanalyticscdn.com/latest.js");
 document.head.appendChild(script);
 ```
 
