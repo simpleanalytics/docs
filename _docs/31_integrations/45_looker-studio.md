@@ -12,7 +12,7 @@ last_modified_at: 2023-01-07
 
 Some customers use [Google Looker Studio](https://datastudio.google.com/) for building reports. Because we care about privacy, we don't store any personal data. That's why we are comfortable enough to let customers choose to connect with Looker Studio while Google can't abuse our customers' data or their visitors.
 
-<img class="border-radius" src="https://assets.simpleanalytics.com/docs/google-data-studio/connector.jpg" alt="Simple Analytics connector for Google Looker Studio" />
+<img class="border-radius" style="aspect-ratio: 1440/810" src="https://assets.simpleanalytics.com/docs/google-data-studio/connector.jpg" alt="Simple Analytics connector for Google Looker Studio" />
 
 This connector lets customers query data from the [API](/api) of [Simple Analytics](https://simpleanalytics.com/). It does need access to your Simple Analytics data. We need the Google scope "connect to an external service" for that.
 
@@ -39,7 +39,7 @@ To keep data consistent it's recommended to use the UTC timezone in all reports.
 
 Let's take one day from our dashboard, in our case 27th of April. It shows 1019 visitors:
 
-<img class="border-radius" src="https://assets.simpleanalytics.com/docs/google-data-studio/simple-analytics-dashboard.png" alt="Simple Analytics dashboard for comparing with Google Looker Studio" />
+<img class="border" style="aspect-ratio: 1440/1075" src="https://assets.simpleanalytics.com/docs/google-data-studio/simple-analytics-dashboard.png" alt="Simple Analytics dashboard for comparing with Google Looker Studio" />
 
 To set up your Google Looker Studio it would require these changes:
 
@@ -51,4 +51,4 @@ To set up your Google Looker Studio it would require these changes:
 
 It should show the same amount of visitors as in your Simple Analytics dashboard:
 
-<img class="border-radius" src="https://assets.simpleanalytics.com/docs/google-data-studio/instructions.png" alt="Set up dashboard in Google Looker Studio" />
+<img class="border" style="aspect-ratio: 1440/1090" src="https://assets.simpleanalytics.com/docs/google-data-studio/instructions.png" alt="Set up dashboard in Google Looker Studio" />
