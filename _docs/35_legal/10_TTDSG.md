@@ -1,5 +1,5 @@
 ---
-title: ttdsg
+title: TTDSG
 category: legal
 permalink: /ttdsg
 last_modified_at: 2023-07-11
