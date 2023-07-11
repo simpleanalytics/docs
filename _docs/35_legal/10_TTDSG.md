@@ -1,5 +1,5 @@
 ---
-title: TTDSG
+title: ttdsg
 category: legal
 permalink: /ttdsg
 hidden: true
