@@ -81,5 +81,3 @@ Data like `scrolled_percentage` and `duration_seconds` is not always added becau
 
 </div>
 </details>
-
-<details>
