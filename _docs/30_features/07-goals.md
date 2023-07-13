@@ -41,7 +41,6 @@ Go to [your dashboard](https://simpleanalytics.com/select-website/events) and st
 
 ## Filter Fields
 
-<summary>Available fields in export</summary>
 <div markdown="1">
 
 | Field               | Type    | Description                                                                                                                                                |
