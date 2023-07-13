@@ -43,13 +43,13 @@ Go to [your dashboard](https://simpleanalytics.com/select-website/events) and st
 
 <div markdown="1">
 
-| Field               | Type      | Description                                                                                                                                                
+| Field               | Type            | Description                                                                                                                                                
 |---------------------|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| added_unix          | number    | The time of the page view in unix time format                                                                                                              |
-| added_iso           | date      | The time of the page view in ISO8601 format                                                                                                                |
-| hostname            | string    | The hostname of the website                                                                                                                                |
-| hostname_original   | string    | When the hostname is overwritten, we store the original hostname                                                                                           |
-| path                | string    | The path of the page view                                                                                                                                  |
+| added_unix          | number       | The time of the page view in unix time format                                                                                                              |
+| added_iso           | date          | The time of the page view in ISO8601 format                                                                                                                |
+| hostname            | string         | The hostname of the website                                                                                                                                |
+| hostname_original   | string        | When the hostname is overwritten, we store the original hostname                                                                                           |
+| path                | string       | The path of the page view                                                                                                                                  |
 | query               | string    | The query parameters of the URL                                                                                                                            |
 | is_unique           | boolean   | Is this page view unique                                                                                                                                   |
 | is_robot            | boolean   | Is page view visited by a robot or crawler                                                                                                                 |
