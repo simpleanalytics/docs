@@ -44,7 +44,7 @@ Go to [your dashboard](https://simpleanalytics.com/select-website/events) and st
 <div markdown="1">
 
 | Field               | Type    | Description                                                                                                                                                |
-| ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | added_unix          | number  | The time of the page view in unix time format                                                                                                              |
 | added_iso           | date    | The time of the page view in ISO8601 format                                                                                                                |
 | hostname            | string  | The hostname of the website                                                                                                                                |
