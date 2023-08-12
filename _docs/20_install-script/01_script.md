@@ -5,7 +5,7 @@ permalink: /script
 last_modified_at: 2022-04-14
 ---
 
-Include these two lines at the end of your `<body>` (or anywhere else):
+Include these two lines on every page at the end of your `<body>` (or anywhere else):
 
 <!-- prettier-ignore -->
 ```html
