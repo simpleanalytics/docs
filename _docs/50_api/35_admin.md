@@ -20,7 +20,7 @@ curl "https://simpleanalytics.com/api/websites" \
      -H 'User-Id: sa_user_id_00000000-0000-0000-0000-000000000000'
 ```
 
-Your user ID and API key are shown in [your account settings](https://simpleanalytics.com/account).
+Your user ID and API key are shown in [your account settings](https://simpleanalytics.com/account). The team ID does not have any effect on this endpoint. It always returns all websites for a user.
 
 ## Add a website
 
