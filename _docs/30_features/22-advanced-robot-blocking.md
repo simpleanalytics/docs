@@ -16,4 +16,4 @@ Here is how it looks in your account settings when it's enabled:
 
 <img class="border" src="https://assets.simpleanalytics.com/docs/account/advanced-robot-blocking.png" alt="Advanced robot blocking in Simple Analytics account settings" />
 
-Go to [your account](https://simpleanalytics.com/account) to enable *Advanced robot blocking*.
+Go to [your account](https://simpleanalytics.com/account#advanced-robot-blocking) to enable *Advanced robot blocking*.
