@@ -8,7 +8,7 @@ last_modified_at: 2022-04-14
 
 You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress.
 
-There are two ways to add our WordPress plugin to your site. Via the your WordPress dashboard or by manually installing the plugin.
+There are a few ways to add our embed script to your WordPress site. We offer an official plugin that has limited options. If you want to use all script features, use the [Head & Footer Code plugin](/install-simple-analytics-in-wordpress-with-head-footer-code-plugin). If you want to enable basic tracking of page views, use [the offical plugin down below](#install-official-plugin-via-wordpress-dashboard).
 
 > There are two non-official plugins made by others. They have more features then the official plugin:
 > - [WordPress plugin by Refined Practice](/wordpress-plugin-by-refined-practice)
