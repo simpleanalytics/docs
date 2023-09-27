@@ -11,7 +11,7 @@ Should you need to get in touch with our support team, please use [our contact f
 
 Occasionally, we might request a _customer support code_ to verify your identity. This unique code is personal and should not be shared with others.
 
-### Finding Your Customer Support Code
+### Finding your customer support code
 
 1. Navigate to [your account settings](https://simpleanalytics.com/account#support).
 2. Locate your Customer Support Code as shown below:
