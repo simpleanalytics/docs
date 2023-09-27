@@ -1,5 +1,5 @@
 ---
-title: Contacting Support
+title: Support
 category: general
 permalink: /support
 last_modified_at: 2023-09-27
