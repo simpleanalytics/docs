@@ -48,6 +48,8 @@ Follow the steps below to add the Simple Analytics script to your GoDaddy websit
       </script>
       ```
 
+      Make sure to replace `yoursite.godaddysites.com` with your own website name. Omit `https://` and `www.` in the hostname variable. The path is unique to every page you have. `/` is for the homepage, `/contact` could be your "Contact us" page.
+
 7. Save and publish
     - After inserting the script, click on `Done` to exit the HTML editor.
     - Click on `Publish` in the upper right-hand corner to make the changes live.
