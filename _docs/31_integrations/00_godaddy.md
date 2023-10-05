@@ -28,12 +28,13 @@ Follow the steps below to add the Simple Analytics script to your GoDaddy websit
 6. Insert the script
     - Now, copy the script below and paste it into the HTML section:
 
-      ```javascript
+      ```html
+      <script type="text/javascript">
       // Simple Analytics script for GoDaddy Sites
       // Fill in your hostname and the path for every page on your GoDaddy site
       // If your page is https://example.com/ then the hostname is "example.com" and the path is "/"
       // If your page is https://example.com/blog then the hostname is "example.com" and the path is "/blog"
-      var hostname = "didgebridge.godaddysites.com";
+      var hostname = "yoursite.godaddysites.com";
       var path = "/";
       
       // Do not change anything below this line
