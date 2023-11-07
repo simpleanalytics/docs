@@ -29,6 +29,9 @@ Read our guides on how to install Simple Analytics on:
 
 For most frameworks, you can include the script. We magically track page views, so you don't have to change your app code. [Read on how we do that](/trigger-custom-page-views). For some, we got requests to create a plugin for them.
 
+{% assign currentDate = 'now' | date: '%s' %}
+{% assign threeMonthsLater = '2023-02-07' | date: '%s' | plus: 7884000 %}  {# 7884000 is approximately the number of seconds in 3 months #}
+
 Get our official plugins for these frameworks:
 
 - [React](/install-simple-analytics-with-react) <small>(guide only)</small>
@@ -43,5 +46,6 @@ Get our official plugins for these frameworks:
 - [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
 - [Next.js](/install-simple-analytics-with-next) <small>(guide only)</small>
 - [Docusaurus](/install-simple-analytics-with-docusaurus) <small>(source on [GitHub](https://github.com/simpleanalytics/docusaurus-plugin#readme))</small>
+- [iOS (Swift)](/install-simple-analytics-with-swift) <small>(source on [GitHub](https://github.com/simpleanalytics/swift-package#readme))</small> {% if currentDate < threeMonthsLater %}NEW{% endif %}
 
 > Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact) Happy to create a plugin for you.
