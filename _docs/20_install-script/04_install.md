@@ -29,8 +29,8 @@ Read our guides on how to install Simple Analytics on:
 
 For most frameworks, you can include the script. We magically track page views, so you don't have to change your app code. [Read on how we do that](/trigger-custom-page-views). For some, we got requests to create a plugin for them.
 
-{% assign currentDate = 'now' | date: '%s' %}
-{% assign threeMonthsLater = '2023-02-07' | date: '%s' | plus: 7884000 %}  {# 7884000 is approximately the number of seconds in 3 months #}
+{% assign currentDate = 'now' | date: '%s' | plus: 0 %}
+{% assign threeMonthsLater = '2023-02-07' | date: '%s' | plus: 7884000 %} {# 7884000 is approximately the number of seconds in 3 months #}
 
 Get our official plugins for these frameworks:
 
