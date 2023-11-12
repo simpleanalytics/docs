@@ -3,22 +3,34 @@ layout: null
 permalink: /pages.json
 ---
 {
-  "url": "{{ site.url }}",
-  "pages": [
-  {% assign counter = 0 -%}
-  {%- for post in site.docs limit:1000  -%}
-    {%- if post.draft or counter >= 1000 -%}
-      {%- assign match = false -%}
-    {%- else -%}
-      {%- assign match = true -%}
-      {%- assign counter = counter | plus:1 -%}
-    {%- endif -%}
-    {%- if match -%}
-    {%- if counter > 1 %},
-  {% endif %}{
-    "{{ post.url }}": {{ post.content | markdownify | strip_html | jsonify | remove: '\"' }}
-  }
+"url": "{{ site.url }}",
+"docs": [
+{% assign counter = 0 -%}
+{%- assign docs = site.docs | sort: 'path' -%}
+{%- for post in docs -%}
+  {%- if post.draft or counter >= 1000 -%}
+    {%- assign match = false -%}
+  {%- else -%}
+    {%- assign match = true -%}
+    {%- assign counter = counter | plus:1 -%}
   {%- endif -%}
-  {%- endfor %}
-  ]
+  {%- if match -%}
+  {%- if counter > 1 %},
+{% endif -%}
+{%- assign segments = post.path | split: '/' -%}
+{%- assign filename_with_extension = segments | last -%}
+{%- assign filename_parts = filename_with_extension | split: '_' -%}
+{%- assign order = filename_parts[0] -%}
+{%- assign name_with_extension = filename_parts[1] -%}
+{%- assign name = name_with_extension | split: '.' | first -%}
+{%- if post.hidden or order == '00' -%}
+  {%- assign hidden = true -%}
+{%- else -%}
+  {%- assign hidden = false -%}
+{%- endif -%}{
+"{{ site.url }}{{ post.url }}": {"body": {{ post.content | markdownify | strip_html | jsonify | replace: '  ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' | replace: '  ', ' ' | replace: ' \n', '\n' | replace: '\n ', '\n' | replace: '\n\n', '\n' | replace: '\n\n', '\n' | remove: '\"' | trim }},"hidden":"{{ hidden }}", "order":"{{ order }}","category":"{{ post.category }}"}
+}
+{%- endif -%}
+{%- endfor %}
+]
 }
