@@ -2,7 +2,9 @@
 layout: null
 permalink: /pages.json
 ---
-[
+{
+  "url": "{{ site.url }}",
+  "pages": [
   {% assign counter = 0 -%}
   {%- for post in site.docs limit:1000  -%}
     {%- if post.draft or counter >= 1000 -%}
@@ -14,8 +16,9 @@ permalink: /pages.json
     {%- if match -%}
     {%- if counter > 1 %},
   {% endif %}{
-    "{{ site.url }}{{ post.url }}": {{ post.content | markdownify | strip_html | jsonify | remove: '\"' }}
+    "{{ post.url }}": {{ post.content | markdownify | strip_html | jsonify | remove: '\"' }}
   }
   {%- endif -%}
   {%- endfor %}
-]
+  ]
+}
