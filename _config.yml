@@ -30,7 +30,7 @@ api_version: 5
 url: https://docs.simpleanalytics.com
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
 theme: null
 plugins:
   - jekyll-feed
@@ -64,3 +64,5 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+
+encoding: utf-8

@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /pages.json
+---
+[
+  {% assign counter = 0 -%}
+  {%- for post in site.docs limit:1000  -%}
+    {%- if post.draft or counter >= 1000 -%}
+      {%- assign match = false -%}
+    {%- else -%}
+      {%- assign match = true -%}
+      {%- assign counter = counter | plus:1 -%}
+    {%- endif -%}
+    {%- if match -%}
+    {%- if counter > 1 %},
+  {% endif %}{
+    "{{ site.url }}{{ post.url }}": {{ post.content | markdownify | strip_html | jsonify | remove: '\"' }}
+  }
+  {%- endif -%}
+  {%- endfor %}
+]
