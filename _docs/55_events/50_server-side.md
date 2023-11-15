@@ -1,27 +1,23 @@
 ---
-title: Server side
+title: Server-side
 category: events
 permalink: /events/server-side
-last_modified_at: 2023-03-27
+last_modified_at: 2023-11-15
 ---
 
-We allow data to be sent server side or from mobile apps.
+Server-side and mobile app data submissions are supported, allowing for the transmission of standard data points along with [metadata](/metadata). Access and analyze this data through the [Events Explorer](/events-explorer) or create [goals](/goals) for frequent event monitoring.
 
-You can send us the regular data point fields and include [metadata](/metadata).
+## Data submission
 
-To view this data, it's usually enough to use the [Events Explorer](/events-explorer), but you can also create [goals](/goals) for events you check often.
+Developers can submit data to `https://queue.simpleanalyticscdn.com/events` using JSON format.
 
-## Sending data
+### User agent guidelines
 
-The following information is targeted at developers. Don't get scared away, they know what this means.
+To prevent misidentification as a robot, avoid using default user agents from request libraries. These often contain terms like `bot`, `crawl`, `python-requests/...`, `curl/...`, `node-fetch/...`, or `axios/...`. Instead, use a custom user agent format, such as `ServerSide/1.0 (+https://www.yourwebsite.com/)`.
 
-Customer can send their data to this endpoint: `https://queue.simpleanalyticscdn.com/events`. It should be JSON.
+### Event data structure
 
-It's advised to include the user agent of the device because the defaults could be detected as robots.
-
-### Events
-
-Example payload of the data for an event:
+For event tracking, structure your payload as follows:
 
 ```json
 {
@@ -32,11 +28,9 @@ Example payload of the data for an event:
 }
 ```
 
-### Page views
+### Page view data structure
 
-The endpoint for the page views is the same as for events.
-
-Example payload of the data for a page view:
+Page view data uses the same endpoint, structured like this:
 
 ```json
 {
@@ -47,9 +41,9 @@ Example payload of the data for a page view:
 }
 ```
 
-## Example
+## Testing with cURL
 
-Occasionally you just want to send some test data. Here is an example with cURL to send data:
+To send test data, use the following cURL command:
 
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
@@ -63,13 +57,11 @@ curl -X POST -H "Content-Type: application/json" -d '{
 }' https://queue.simpleanalyticscdn.com/events
 ```
 
-If you'd like, you can copy and paste the above cURL command into your terminal to test it. It shows up in your dashboard within a few minutes (typically way faster).
+Data should appear on your dashboard within minutes. You can always [export the raw latest data](/export-data) from our dashboard, or use the [Events Explorer](/events-explorer) to find your events.
 
-You can always [export the raw latest data](/export-data) from our dashboard, or use the [Events Explorer](/events-explorer) to find your events.
+## Additional data fields
 
-## Fields
-
-Here is an example with many fields added:
+Expand your data submission with additional fields:
 
 ```json
 {
