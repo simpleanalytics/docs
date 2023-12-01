@@ -46,6 +46,10 @@ Page view data uses the same endpoint, structured like this:
 
 To send test data, use the following cURL command:
 
+### Testing events
+
+Data should appear on your dashboard within minutes. You can always [export the raw latest data](/export-data) from our dashboard, or use the [Events Explorer](/events-explorer) to find your events.
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
   "type": "event",
@@ -58,7 +62,16 @@ curl -X POST -H "Content-Type: application/json" -d '{
 }' https://queue.simpleanalyticscdn.com/events
 ```
 
-Data should appear on your dashboard within minutes. You can always [export the raw latest data](/export-data) from our dashboard, or use the [Events Explorer](/events-explorer) to find your events.
+### Testing page views
+
+```bashcurl -X POST -H "Content-Type: application/json" -d '{
+  "type": "pageview",
+  "hostname": "mobile-app.example.com",
+  "event": "pageview",
+  "path": "/my-page-name", 
+  "ua": "Your User Agent"
+}' https://queue.simpleanalyticscdn.com/events
+```
 
 ## Additional data fields
 
