@@ -37,6 +37,7 @@ Page view data uses the same endpoint, structured like this:
   "type": "pageview",
   "hostname": "example.com",
   "event": "pageview",
+  "path": "/page-name",
   "ua": "User Agent"
 }
 ```
