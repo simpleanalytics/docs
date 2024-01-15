@@ -3,12 +3,46 @@ title: Install Simple Analytics with Next.js
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-next
-last_modified_at: 2022-04-14
+last_modified_at: 2024-01-15
 ---
 
-Next.js has a lovely [Script component](https://nextjs.org/docs/basic-features/script).
+Next.js has a lovely [Script component](https://nextjs.org/docs/pages/building-your-application/optimizing/scripts).
 
-In your app, you can add this Script component:
+In your app, you can add this Script component. You can use the App Router, the Pages Router, or the pre Next.js 13 way.
+
+## App router
+
+```jsx
+// app/layout.js
+import Script from 'next/script'
+ 
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+    </html>
+  )
+}
+```
+
+## Pages Router
+
+```jsx
+// pages/_app.js
+import Script from 'next/script'
+ 
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+    </>
+  )
+}
+```
+
+## Before Next.js 13
 
 ```jsx
 // _app.tsx
@@ -39,6 +73,10 @@ export default MyApp;
 It will use the `afterInteractive` strategy to load the script. From the docs:
 
 > For scripts that can fetch and execute after the page is interactive, such as tag managers and analytics. These scripts are injected on the client-side and will run after hydration.
+
+## Noscript
+
+You can use the `<noscript>`-tag, but it's not really needed. Most visitors without JavaScript are bots anyway.
 
 ## Send events with JavaSript
 
