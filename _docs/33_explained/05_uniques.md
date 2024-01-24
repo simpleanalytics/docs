@@ -38,4 +38,4 @@ If you have a single-page application we automatically see all visits after the 
 
 > If you have any questions about legal aspects or anything else, please [shoot us a message](https://simpleanalytics.com/contact).
 
-[Follow Simple Analytics](https://twitter.com/SimpleAnalytic) or [the founder](https://twitter.com/adriaanvrossum) on Twitter to see how we approach our challenges.
+[Follow Simple Analytics](https://twitter.com/SimpleAnalytic) or [the founder](https://twitter.com/adriaandotcom) on Twitter to see how we approach our challenges.
