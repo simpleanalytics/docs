@@ -5,7 +5,7 @@ permalink: /proxy
 last_modified_at: 2024-02-26
 ---
 
-Worried about keeping your website visitors' privacy with Simple Analytics? We get it. We don't collect your visitors' IP addresses and you can keep them to yourself. That's why we offer an easy way to set up a proxy with Caddy, NGINX, or Netlify. This way, we don’t need to handle your visitors' IP addresses directly, giving you peace of mind.
+Concerned about your website visitors' privacy when using Simple Analytics? We understand. Let's be clear: we never collect your visitors' IP addresses. And with our proxy setup option using Caddy, NGINX, or Netlify, you have the power to ensure those IP addresses never reach us. This setup acts as a privacy shield, offering you and your visitors added peace of mind.
 
 If Caddy is your tool of choice, you can quickly set it up as a proxy with just a few lines in your Caddyfile. If you're using NGINX, you can do something similar by adding some configuration to your server directive. And if you're on Netlify, you can set up a proxy by adding redirect rules to your site’s configuration. This lets analytics traffic go through your site before reaching us.
 
