@@ -5,11 +5,11 @@ permalink: /proxy
 last_modified_at: 2023-05-08
 ---
 
-Are you concerned about your visitors' privacy when using Simple Analytics? We understand that keeping your visitors' IP addresses private is important, which is why we offer a simple proxy setup using Caddy or NGINX. We never store your visitors' IP addresses but with a proxy you don't have to trust us. The rest of this article is targeted at your development team.
+Worried about keeping your website visitors' privacy with Simple Analytics? We get it. We don't collect your visitors' IP addresses and you can keep them to yourself. That's why we offer an easy way to set up a proxy with Caddy, NGINX, or Netlify. This way, we don’t need to handle your visitors' IP addresses directly, giving you peace of mind.
 
-If you prefer to use Caddy, you can easily configure it to act as a proxy by adding a few lines to your Caddyfile. Similarly, if you're already using NGINX, you can add the necessary configuration to your server directive.
+If Caddy is your tool of choice, you can quickly set it up as a proxy with just a few lines in your Caddyfile. If you're using NGINX, you can do something similar by adding some configuration to your server directive. And if you're on Netlify, you can set up a proxy by adding redirect rules to your site’s configuration. This lets analytics traffic go through your site before reaching us.
 
-By setting up a proxy, you can prevent any IPs from your visitors from ending up on our servers. It's a quick and easy way to protect your visitors' privacy, and it's something we recommend if you have the resources.
+Setting up a proxy means no visitor IPs get to our servers. It's an easy and effective step for protecting privacy. We highly recommend it if you can do it.
 
 <details markdown="1">
   <summary>Set up proxy in NGINX</summary>
@@ -71,9 +71,36 @@ Change `example.com` to the domain you run the proxy on. This can be the same do
 
 </details>
 
-After these changes you should be able to visit the script at `https://example.com/proxy.js`.
+<details markdown="1">
+  <summary>Set up proxy in Netlify</summary>
+
+Add this to your `_redirects` config file:
+  
+```
+/proxy.js https://simpleanalyticsexternal.com/proxy.js?hostname=example.com&path=/simple 200
+/simple/* https://queue.simpleanalyticscdn.com/:splat 200
+```
+
+Change `example.com` to the domain you run the proxy on. This can be the same domain as your own website is hosted on.
+
+Feel free to change `/simple` to something else.
+
+> Thanks to Brian LaLonde [servantsystems.com](https://www.servantsystems.com/) to provide us the Netlify configuration.
+
+</details>
 
 The embed script should be changed into this:
+
+```html
+<script async defer src="https://example.com/proxy.js"></script>
+```
+
+<details markdown="1">
+  <summary>If you really need to `<noscript>`-tag (we recommend against it)</summary>
+
+We recommend against using the `<noscript>`-tag, because it's adding more bot traffic.
+
+But if you want, you can include it like this:
 
 ```html
 <script async defer src="https://example.com/proxy.js"></script>
@@ -85,8 +112,22 @@ The embed script should be changed into this:
 /></noscript>
 ```
 
-> Note the `/simple` prefix in the `noscript.gif` image and the non prefix in `proxy.js`.
+</details>
+
+> Note the `/simple` prefix in the `noscript.gif` image and **not** in `proxy.js`.
 
 This will send all traffic via your proxy on the endpoint `/simple/...`.
+
+### Validate your config
+
+After these changes you should be able to visit the script at `https://example.com/proxy.js`.
+
+It should return our embed script, starting with:
+
+```js
+/* Simple Analytics - Privacy friendly analytics ... */
+```
+
+The `simple.gif` request (in your developer tools) should come back as a GIF with HTTP status code 202. If that's the case, it works.
 
 [Let us know](https://simpleanalytics.com/contact) if we can help you with anything!
