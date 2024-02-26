@@ -2,7 +2,7 @@
 title: Proxy all requests
 category: install-script
 permalink: /proxy
-last_modified_at: 2023-05-08
+last_modified_at: 2024-02-26
 ---
 
 Worried about keeping your website visitors' privacy with Simple Analytics? We get it. We don't collect your visitors' IP addresses and you can keep them to yourself. That's why we offer an easy way to set up a proxy with Caddy, NGINX, or Netlify. This way, we don’t need to handle your visitors' IP addresses directly, giving you peace of mind.
@@ -10,6 +10,8 @@ Worried about keeping your website visitors' privacy with Simple Analytics? We g
 If Caddy is your tool of choice, you can quickly set it up as a proxy with just a few lines in your Caddyfile. If you're using NGINX, you can do something similar by adding some configuration to your server directive. And if you're on Netlify, you can set up a proxy by adding redirect rules to your site’s configuration. This lets analytics traffic go through your site before reaching us.
 
 Setting up a proxy means no visitor IPs get to our servers. It's an easy and effective step for protecting privacy. We highly recommend it if you can do it.
+
+## Server proxies
 
 <details markdown="1">
   <summary>Set up proxy in NGINX</summary>
@@ -89,6 +91,10 @@ Feel free to change `/simple` to something else.
 
 </details>
 
+You can adapt this setup for other server configurations too. If you're using a server setup we haven't mentioned, let us know so we can add it to this documentation page.
+
+## Update embed script
+
 The embed script should be changed into this:
 
 ```html
@@ -96,7 +102,7 @@ The embed script should be changed into this:
 ```
 
 <details markdown="1">
-  <summary>If you really need to `<noscript>`-tag (we recommend against it)</summary>
+  <summary>If you really need to noscript-tag (we recommend against it)</summary>
 
 We recommend against using the `<noscript>`-tag, because it's adding more bot traffic.
 
@@ -118,7 +124,7 @@ But if you want, you can include it like this:
 
 This will send all traffic via your proxy on the endpoint `/simple/...`.
 
-### Validate your config
+## Validate your config
 
 After these changes you should be able to visit the script at `https://example.com/proxy.js`.
 
