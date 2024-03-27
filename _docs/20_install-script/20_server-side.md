@@ -13,15 +13,15 @@ On this page you will find how to collect page views server side.
 
 When you send data from your server to Simple Analytics you need to provide a few fields:
 
-| Field       | Type    | Example                 | Required  | Explanation                                                                                        |
-| ----------- | ------- | ----------------------- | --------- | -------------------------------------------------------------------------------------------------- |
-| url         | string  | https://example.com/    | yes       | The current URL of the page                                                                        |
-| ua          | string  | Mozilla/5.0 ...         | sometimes | We use this if there is no User Agent present in the headers                                       |
-| width       | number  | 1440                    | no        | The viewport width of the device (not possible via server)                                         |
-| unique      | boolean | true                    | no        | This tells us if this visit is unique. Don't send this field if you don't detect unique page views |
-| timezone    | string  | Europe/Amsterdam        | no        | The time zone of the current user so we can detect the country                                     |
-| referrer    | string  | https://duckduckgo.com/ | no        | The referrer of the current page (if any)                                                          |
-| urlReferrer | string  | blog                    | no        | The value of `?ref=...` in the URL ([more info](/how-to-use-url-parameters))                       |
+| Field       | Type    | Example                 | Required | Explanation                                                                                        |
+| ----------- | ------- | ----------------------- | -------- | -------------------------------------------------------------------------------------------------- |
+| url         | string  | https://example.com/    | yes      | The current URL of the page                                                                        |
+| ua          | string  | Mozilla/5.0 ...         | no       | The user agent. If not present we fallback on the user-agent header                                |
+| width       | number  | 1440                    | no       | The viewport width of the device (not possible via server)                                         |
+| unique      | boolean | true                    | no       | This tells us if this visit is unique. Don't send this field if you don't detect unique page views |
+| timezone    | string  | Europe/Amsterdam        | no       | The time zone of the current user so we can detect the country                                     |
+| referrer    | string  | https://duckduckgo.com/ | no       | The referrer of the current page (if any)                                                          |
+| urlReferrer | string  | blog                    | no       | The value of `?ref=...` in the URL ([more info](/how-to-use-url-parameters))                       |
 
 > If we find a User Agent in the headers, we will use that.
 
