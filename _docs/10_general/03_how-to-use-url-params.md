@@ -13,7 +13,7 @@ There are a few ways we determine where a visitor comes from. We automatically d
 
 If the current URL on your site includes a parameter named `ref` or `utm_source`, we use this value instead of the browser's previous page.
 
-For example, if you were to include this link in an email newsletter, Simple Analytics records the referrer as `email` in your dashboard, no matter where user actually comes from:
+For example, if you were to include this link in an email newsletter, Simple Analytics records the referrer as `email` in your dashboard, no matter where the user actually comes from:
 
 ```
 https://example.com/landing-page?ref=email
@@ -45,7 +45,7 @@ We drop non-UTM parameters from the URLs. If you want to allow more URL paramete
 
 ### Forbidden characters
 
-Certain character are not allowed in the URL parameter. Letters and numbers are always okay, but if you want to use special characters (like spaces, `;`, `/`, `?`, `:`, `@`, `&`, `=`, `+`, `$`, or `,`) you need to escape your URL parameter. A good website that does this for you is [urlencoder.io](https://www.urlencoder.io/).
+Certain characters are not allowed in the URL parameter. Letters and numbers are always okay, but if you want to use special characters (like spaces, `;`, `/`, `?`, `:`, `@`, `&`, `=`, `+`, `$`, or `,`) you need to escape your URL parameter. A good website that does this for you is [urlencoder.io](https://www.urlencoder.io/).
 
 Valid examples of URL parameters:
 
