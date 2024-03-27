@@ -58,7 +58,7 @@ https://example.com/?ref=exister%2C%20avoir%20une%20r%C3%A9alit%C3%A9
 
 ## Using the referrer URL
 
-We always the URL of the referring page from the visitor's browser. We only save the part of the referrer before `?` or `#`, so if the referrer URL is `https://referrer.example.com/search?query=sensitive+information`, we only store `referrer.example.com/search`. Note that the protocol (`https://`) is also removed. We also ignore common subdomains like `www.`, `m.`, `l.`, and `www2.`.
+We always use the URL of the referring page from the visitor's browser. We only save the part of the referrer before `?` or `#`, so if the referrer URL is `https://referrer.example.com/search?query=sensitive+information`, we only store `referrer.example.com/search`. Note that the protocol (`https://`) is also removed. We also ignore common subdomains like `www.`, `m.`, `l.`, and `www2.`.
 
 > You don't have to do anything to make this work.
 
