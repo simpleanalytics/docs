@@ -13,7 +13,7 @@ Developers can submit data to `https://queue.simpleanalyticscdn.com/events` usin
 
 ### User agent guidelines
 
-To prevent misidentification as a robot, avoid using default user agents from request libraries. These often contain terms like `bot`, `crawl`, `python-requests/...`, `curl/...`, `node-fetch/...`, or `axios/...`. Instead, use a custom user agent format, such as `ServerSide/1.0 (+https://www.yourwebsite.com/)`.
+To prevent misidentification as a robot, avoid using default user agents from request libraries. These often contain terms like `bot`, `crawl`, `python-requests/...`, `curl/...`, `node-fetch/...`, or `axios/...`. Instead, use the real user agent of the user, or use a custom user agent format, such as `ServerSide/1.0 (+https://www.yourwebsite.com/)`.
 
 ### Event data structure
 
