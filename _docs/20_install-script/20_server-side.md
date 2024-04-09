@@ -1,5 +1,5 @@
 ---
-title: Server side tracking
+title: Server side tracking [deprecated]
 category: install-script
 permalink: /server-side-tracking
 last_modified_at: 2023-03-27
