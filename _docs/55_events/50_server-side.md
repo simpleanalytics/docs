@@ -84,17 +84,25 @@ Expand your data submission with additional fields:
   "hostname": "example.com",
   "event": "event-name",
   "path": "/",
-  "viewport_width": 1440,
-  "viewport_height": 310,
-  "language": "en-US",
-  "screen_width": 1440,
-  "screen_height": 900,
   "unique": true,
   "https": true,
+  "ua": "User Agent",
+
+  "viewport_width": 1440,
+  "viewport_height": 310,
+  "screen_width": 1440,
+  "screen_height": 900,
+
+  "language": "en-US",
   "timezone": "Europe/Amsterdam",
+
+  "source": "source",
+  "campaign": "campaign",
+  "medium": "medium",
+  "content": "content",
+
   "metadata": {
     "button": "yes"
-  },
-  "ua": "User Agent"
+  }
 }
 ```
