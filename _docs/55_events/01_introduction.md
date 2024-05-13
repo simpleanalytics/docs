@@ -57,6 +57,16 @@ sa_event("click_signup");
 
 To send metadata with your event, [check our metadata page](/metadata).
 
+## Snippets
+
+First, check if the events you need are part of our [automated events script](/automated-events). If not, these snippets might help to get you started with custom events:
+
+- [Button clicks](https://gist.github.com/adriaandotcom/aa00b4cdc85797a2f2ba715e82de85da#file-button-click-html)
+- [Form submits](https://gist.github.com/adriaandotcom/aa00b4cdc85797a2f2ba715e82de85da#file-forms-submit-html)
+- [Link clicks](https://gist.github.com/adriaandotcom/aa00b4cdc85797a2f2ba715e82de85da#file-links-click-html)
+- [Form submits in Google Tag Manager](https://www.simpleanalytics.com/blog/how-to-track-form-submissions-using-google-tag-manager)
+- [Video events in Google Tag Manager](https://www.simpleanalytics.com/blog/video-tracking)
+
 ## Valid event names
 
 We want to keep events very simple. That's why we only allow alphanumeric characters and underscores (`_`). We convert events to lower case and invalid names to a version which is valid. This way your events are always saved. If you return a function for an event we run this function and if the result is a string we will store the event. For example: `sa_event(function() { return "clicked_signup_on_" + window.document.location.pathname })`.
