@@ -111,7 +111,7 @@ You can adapt this setup for other server configurations too. If you're using a 
 The embed script should be changed into this:
 
 ```html
-<script async defer src="https://example.com/proxy.js"></script>
+<script async src="https://example.com/proxy.js"></script>
 ```
 
 <details markdown="1">
@@ -122,7 +122,7 @@ We recommend against using the `<noscript>`-tag, because it's adding more bot tr
 But if you want, you can include it like this:
 
 ```html
-<script async defer src="https://example.com/proxy.js"></script>
+<script async src="https://example.com/proxy.js"></script>
 <noscript
   ><img
     src="https://example.com/simple/noscript.gif"
@@ -131,11 +131,26 @@ But if you want, you can include it like this:
 /></noscript>
 ```
 
-</details>
-
 > Note the `/simple` prefix in the `noscript.gif` image and **not** in `proxy.js`.
 
+</details>
+
 This will send all traffic via your proxy on the endpoint `/simple/...`.
+
+## Autometed events script
+
+If you use the [automated events](/automated-events) script, make sure to update that script tag as well:
+
+```html
+<script async src="https://example.com/auto-events.js"></script>
+```
+
+The full code will then become:
+
+```html
+<script async src="https://example.com/proxy.js"></script>
+<script async src="https://example.com/auto-events.js"></script>
+```
 
 ## Validate your config
 
