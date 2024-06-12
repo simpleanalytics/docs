@@ -34,6 +34,12 @@ location = /proxy.js {
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
   proxy_pass https://simpleanalyticsexternal.com/proxy.js?hostname=example.com&path=/simple;
 }
+
+location = /auto-events.js {
+  expires 7d;
+  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+  proxy_pass https://scripts.simpleanalyticscdn.com/auto-events.js;
+}
 ```
 
 Change `example.com` to the domain you run the proxy on. This can be the same domain as your own website is hosted on.
@@ -62,6 +68,12 @@ example.com {
       header_up -X-Forwarded-For
     }
   }
+  handle /auto-events.js {
+    rewrite * /auto-events.js
+    reverse_proxy https://scripts.simpleanalyticscdn.com {
+      header_up -X-Forwarded-For
+    }
+  }
 }
 ```
 
@@ -80,6 +92,7 @@ Add this to your `_redirects` config file:
   
 ```
 /proxy.js https://simpleanalyticsexternal.com/proxy.js?hostname=example.com&path=/simple 200
+/auto-events.js https://scripts.simpleanalyticscdn.com/auto-events.js 200
 /simple/* https://queue.simpleanalyticscdn.com/:splat 200
 ```
 
