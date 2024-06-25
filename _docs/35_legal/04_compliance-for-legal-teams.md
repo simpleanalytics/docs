@@ -2,7 +2,7 @@
 title: Compliance for legal teams
 menu: Compliance for legal teams
 category: legal
-permalink: /compliance-fore-legal-teams
+permalink: /compliance-for-legal-teams
 last_modified_at: 2023-01-04
 ---
 
@@ -50,7 +50,7 @@ Using Simple Analytics does not make you a controller of personal data. **You do
 
 ### How does Simple Analytics process IP addresses?
 
-IP addresses are personal data. As much as we would like to process no personal data at all, **we need to process IP** addresses to communicate over the Internet and collect the anonymous data we need to provide our service.
+Although IP addresses are sent to us, they are immediately discarded from every request—we don’t process, log, store, or transfer IP addresses.
 
 **We are sole controllers concerning IP addresses**. We minimize the processing of IP addresses by only using them for communication. We drop IP addresses from our systems after each request, and no trace of IP addresses can be found in our system logs.
 
