@@ -6,8 +6,6 @@ permalink: /how-we-protect-your-data
 last_modified_at: 2023-01-03
 ---
 
- [Download PDF](https://simpleanalytics.com/docs-to-pdf?path=_docs/10_general/02_locations.md)
-
 We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website’s visitors and even go a few steps further.
 
 ## Data Hosting Infrastructure
