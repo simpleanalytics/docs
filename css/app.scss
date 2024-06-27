@@ -107,3 +107,12 @@ sup[role="doc-noteref"]::before {
 sup[role="doc-noteref"] a {
   text-decoration: none;
 }
+
+@media print {
+  nav, .nav, .print-button, footer.general {
+    display: none;
+  }
+  main {
+    width: 100%;
+  }
+}
