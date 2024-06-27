@@ -160,11 +160,20 @@
 
           {% if page.download != false %}
             <p style="margin-top: 0.5rem;" class="print-button">
-              <a rel="nofollow" style="font-size: 12px; border-radius: 4px; background-color: #eef9ff; padding: 5px 10px; text-decoration: none;" href="https://simpleanalytics.com/docs-to-pdf?path={{ page.path }}">
+              <a rel="nofollow" style="font-size: 12px; border-radius: 4px; background-color: #eef9ff; padding: 5px 10px; text-decoration: none;">
                 <svg style="vertical-align: text-bottom; fill: #098195; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M15.003 3h2.997v5h-2.997v-5zm8.997 1v20h-24v-24h20l4 4zm-19 5h14v-7h-14v7zm16 4h-18v9h18v-9z"/></svg>
                 Download PDF
               </a>
             </p>
+            <script>
+              var button = document.querySelector('[class="print-button"] a');
+              if (button) {
+                button.addEventListener('click', function(event) {
+                  event.preventDefault();
+                  window.print();
+                });
+              }
+            </script>
           {% endif %}
 
           {{ content | replace: '<p><img ', '<img ' | replace: '" /></p>', '" />' | replace: '<img ', '<img loading="lazy" ' }}
