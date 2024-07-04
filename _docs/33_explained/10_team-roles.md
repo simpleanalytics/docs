@@ -31,6 +31,6 @@ Finance Managers handle all financial aspects of the team. They can update billi
 
 Viewers have restricted access with read-only permissions. They can view dashboards, goals, and events, but cannot edit anything. Viewers can only change their own account settings, allowing them to customize their user experience to some extent without affecting team data or configurations.
 
-## General Permissions
+## General permissions
 
 All accounts have the ability to delete their own account, giving users control over their participation in the team.
