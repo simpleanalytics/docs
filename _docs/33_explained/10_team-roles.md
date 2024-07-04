@@ -5,6 +5,8 @@ permalink: /explained/team-roles
 last_modified_at: 2024-07-04
 ---
 
+When you have the Teams plan, you can invite users to your Simple Analytics account. Every user has their own role. You can add those users to all your websites (and custom views), or a selection of them.
+
 ## Owner
 
 An owner is the first admin of a team, and every team has one owner. The owner has full control over all settings, users, and data. They have the same permissions as an admin. When they leave the team, they need to assign their owner role to another team member.
@@ -23,7 +25,7 @@ Developers focus on the technical aspects of the analytics dashboard. They can d
 
 ## Finance Manager
 
-Finance Managers handle all financial aspects of the team. They can update billing information, manage subscriptions, and cancel them if necessary. This role is essential for maintaining the financial health of the team, ensuring that all financial transactions and subscriptions are up-to-date and properly managed.
+Finance Managers handle all financial aspects of the team. They can update billing information, manage subscriptions, and cancel them if necessary. This role is essential for maintaining the financial health of the team, ensuring that all financial transactions and subscriptions are up-to-date and properly managed. If you don't want the finance manager to see the analytics data, make sure to select "No websites" when you invite them, otherwise they will get read-only permissions to your selected websites.
 
 ## Viewer
 
