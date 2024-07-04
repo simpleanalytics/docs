@@ -15,11 +15,11 @@ Admins can manage team members, adjust settings, and oversee daily operations. T
 
 ## Analyst
 
-Analysts play a crucial role in working with the dashboards, goals, and events. They can add, change, and remove goals, update [custom views](/custom-views) (but not delete them), and modify some website settings related to dashboard viewing. Analysts have the capability to export raw data if it is included in the plan, allowing for detailed analysis and reporting. However, they do not have permission to reset website data, ensuring data integrity.
+Analysts play a crucial role in working with the dashboards, goals, and events. They can add, change, and remove goals, update [custom views](/custom-views) (but not delete them), and modify some website settings related to dashboard viewing. They can add email reports (and only remove the ones they added). Analysts have the capability to import Google Analytics data, or export raw data if it is included in the plan, allowing for detailed analysis and reporting. However, they do not have permission to reset website data, ensuring data integrity.
 
 ## Developer
 
-Developers focus on the technical aspects of the analytics dashboard. They can access dashboards, add websites to the team, and modify website settings such as visibility (public/private), custom domain, and alerts for no traffic. Additionally, developers have the authority to reset website data, which can be useful during significant updates or troubleshooting.
+Developers focus on the technical aspects of the analytics dashboard. They can do everything that an analyist can and more. They can add websites to the team, and modify website settings such as visibility (public/private), custom domain, and alerts for no traffic. Additionally, developers have the authority to reset website data, which can be useful during significant updates or troubleshooting.
 
 ## Finance Manager
 
