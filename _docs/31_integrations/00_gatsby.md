@@ -28,7 +28,7 @@ It tracks page views with support for `pushState` navigation. It sends the data 
          trackPageViews: true,
        },
      },
-   ];
+   ]
    ```
 
 1. If you want to set a custom domain, use this config:
@@ -45,7 +45,7 @@ It tracks page views with support for `pushState` navigation. It sends the data 
          ignorePages: ["pathname"],
        },
      },
-   ];
+   ]
    ```
 
    [Read our docs](https://docs.simpleanalytics.com/bypass-ad-blockers) on the custom domain feature.
@@ -64,7 +64,7 @@ plugins: [
       metomic: "POLICY-SLUG",
     },
   },
-];
+]
 ```
 
 It will result in something like this:
