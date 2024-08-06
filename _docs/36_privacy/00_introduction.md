@@ -3,7 +3,7 @@ title: Introduction to Privacy
 menu: Introduction
 category: privacy
 permalink: /introduction-to-privacy
-last_modified_at: 2024-08-24
+last_modified_at: 2024-08-06
 ---
 
 At Simple Analytics, our mission is to make web analytics **intuitive, ethical, and privacy-friendly**. 
