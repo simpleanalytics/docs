@@ -3,7 +3,7 @@ title: Our No-tracking philosophy
 menu: No-tracking philosophy
 category: privacy
 permalink: /no-tracking-philosophy
-last_modified_at: 2024-08-24
+last_modified_at: 2024-08-06
 ---
 
 **Data minimization** is the core philosophy of Simple Analytics. **We do not collect personal data** from the end user of your app and website- not a single bit.
