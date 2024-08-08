@@ -11,11 +11,9 @@ Here is a list of our frequently asked questions with respect to privacy measure
 
 **Simple Analytics does not collect personal data**. We do not use cookies or similar tracking technologies. We are also careful to avoid collecting any metrics that could be used for finger-printing and singling out a user (Recital 26 GDPR). None of the data we collect fall under the GDPR.
 
-Simple Analytics **drops IP addresses** and **never processes them**. 
-
 ### What does Simple Analytics do with IP addresses?
 
-When IP addresses are sent to us, they are immediately discarded after each request. We do not process, log, store, or transfer IP addresses at any point.
+When IP addresses are sent to us, they are immediately discarded after each request. We do not log, store, or transfer IP addresses at any point.
 
 Optionally, Simple Analytics can check IP addresses against a list of known bot addresses. This allows us to filter out the data for bots and keep your analytics accurate. Even in this scenario, IP addresses are discarded immediately after the check.
 
@@ -23,13 +21,9 @@ Optionally, Simple Analytics can check IP addresses against a list of known bot 
 
 The notions of data controller and data processor are defined concerning personal data by the GDPR (see Articles 4(7) and (8) GDPR). We only collect anonymous metrics. Therefore, **we are neither data controllers nor data processors** concerning the data we collect and process for our customers.
 
-Simple Analytics is a **sole** **data controller** concerning IP addresses.
-
 ### What are your legal bases for processing the data?
 
 The anonymized metrics collected by Simple Analytics are not personal data. They do not fall under the GDPR, and Articles 5(1)(a) and 6 do not apply to them. **No legal basis is needed to process anonymous data**.
-
-IP addresses are processed by Simple Analytics as a sole data controller based on its **legitimate interest** (Art. 6(1)(f) GDPR) to provide the service.
 
 ### What legal bases can I rely upon to process the data?
 
@@ -49,12 +43,12 @@ Worldserver, Leaseweb, and Bunnyweb are **trusted, European, and GDPR-compliant 
 
 **Simple Analytics does not require a privacy notice**. Our customers are not controllers of personal data and are not required to provide any information under Art. 13 GDPR, as the provision only applies to the data controller.
 
-For the same reason, it is not mandatory to include Simple Analytics in a website’s privacy policy. We still encourage our customers to do so to be as transparent as possible. [This page](/your-privacy-policy)
+For the same reason, it is not mandatory to include Simple Analytics in a website’s privacy policy. We still encourage our customers to do so to be as transparent as possible.
 
 ### How can I add Simple Analytics to my privacy policy?
 
 Adding us to your privacy policy is not strictly necessary, but we still encourage you to do so in order to be as transparent as possible with your visitors. This is a template you can use or take inspiration from:
 
-We use anonymous metrics to understand how you use your website and where our traffic comes from. We use this insight to improve our website and create a better experience for visitors. We do not track you, serve personalized advertising, or sell the data to anyone.
+*We use anonymous metrics to understand how you use your website and where our traffic comes from. We use this insight to improve our website and create a better experience for visitors. We do not track you, serve personalized advertising, or sell the data to anyone.*
 
-Our website is powered by Simple Analytics, a privacy-friendly web analytics provider. You can learn more about Simple Analytics on its website.
+*Our website is powered by Simple Analytics, a privacy-friendly web analytics provider. You can learn more about Simple Analytics on its website.*
