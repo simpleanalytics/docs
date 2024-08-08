@@ -8,7 +8,7 @@ last_modified_at: 2023-01-23
 
 ## Privacy
 
-We at Simple Analytics believe in a free, user-friendly Internet. This is why we built a simple, privacy-friendly tool to provide you with valuable analytics insights without collecting personal data from your visitors. This privacy-first mindset makes our software compliant with the strictest privacy regulations, including the GDPR.
+At Simple Analytics, we believe in a free and user-friendly Internet. This is why we built a privacy-friendly analytics tool that provides valuable insights without collecting personal data from your visitors. This privacy-first mindset makes our software compliant with the strictest privacy regulations, including the GDPR.
 
 What do we do to protect your privacy and that of your visitors?
 
@@ -27,9 +27,9 @@ Simple Analytics **does not require pop-ups** such as consent banners or privacy
 
 Simple Analytics **does not need to transfer data** outside the EU to provide its service but can do so in order to provide non-EU customers with the data they need.
 
-Finally, **you do not need to sign a Data Processing Agreement** to use Simple Analytics!
+Finally, **you do not need to sign a Data Processing Agreement** to use Simple Analytics! (Since we don't collect any personal data)
 
-You can find out more about our compliance [here](/compliance). We also have a separate page for more in-depth compliance information for your legal team.
+You can find out more about our compliance [here](/compliance). 
 
 ## Data collection
 
@@ -41,8 +41,8 @@ You can find more information about the data we collect [here](/data-collection)
 
 ## Data Security & Ownership
 
-Your data are **fully encrypted** on our servers. We only rely on **European, GDPR-compliant providers** for our processing to ensure that your data are handled as safely as possible.
+Your data are **fully encrypted** on our servers. We only rely on **European, GDPR-compliant providers** to ensure that your data are handled as safely as possible.
 
-We retain your data as long as your Simple Analytics account is active and never share the data with third parties. **You control your data** and can export it at any time.
+We retain your data as long as your Simple Analytics account is active (and in correspondance to your subscription plan) and never share the data with third parties. **You control your data** and can export it at any time.
 
-You can find out more about our security policies [here](/data-ownership-and-security).
+You can find out more about our security and ownership policies [here](/data-security-and-ownership).
