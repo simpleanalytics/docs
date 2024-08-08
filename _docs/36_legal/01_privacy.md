@@ -6,7 +6,7 @@ permalink: /privacy
 last_modified_at: 2024-08-08
 ---
 
-At Simple Analytics, our mission is to make web analytics **intuitive, ethical, and privacy-friendly**. We empower private and public organizations of all sizes with straightforward and actionable insights on traffic and user behavior, easing compliance burdens and helping build trust with customers and visitors.
+At Simple Analytics, our mission is to make web analytics intuitive, ethical, and privacy-friendly. We empower organizations of all sizes with straightforward and actionable insights into their website traffic while easing compliance burdens and helping build trust with customers and visitors.
 
 Privacy is not an afterthought; it is **the cornerstone of what we do**. Here are the steps we take to ensure data is treated ethically and in compliance with privacy legislation.
 
@@ -18,6 +18,8 @@ We only collect non-personal data such as UTM codes, referrer, time zone (as a p
 
 Bottom line: we do not track people, period.
 
+Read more on **what we collect** [here](/data-collection)
+
 ## No Consent Requirement
 
 By not collecting personal data, we allow customers to use Simple Analytics **without needing consent** from end users or website visitors. This builds trust with users, provides a frictionless experience without annoying pop-ups, and avoids the significant data loss caused by cookie rejection and ad blockers. Some clients even use Simple Analytics alongside traditional cookie-based solutions to mitigate data loss from opt-outs.
@@ -26,8 +28,8 @@ By not collecting personal data, we allow customers to use Simple Analytics **wi
 
 We don’t transfer your visitors’ data outside of the EU. This includes no data transfer to the United States of America.
 
-The EU-US Privacy Shield Framework was invalidated by the Court of Justice of the European Union in the 2020 [“Schrems II”](https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/) decision. The invalidation of the Privacy Shield makes data transfer to the US risky and tricky compared to other countries..
+The EU-US Privacy Shield Framework was invalidated by the Court of Justice of the European Union in the 2020 [“Schrems II”](https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/) decision. The invalidation of the Privacy Shield makes data transfer to the US risky and tricky compared to other countries.
 
-Ever since the start of our business in 2018, we have only relied on European service providers. This is a choice. The data we collect are not personal and do not fall under the GDPR. It can be transferred anywhere with no legal issues. In fact, **we can lawfully transfer data to our customers located outside the EU**.
+Ever since we started our business in 2018, we have only relied on European service providers. This is a choice. The data we collect is not personal and does not fall under the GDPR. It can be transferred anywhere with no legal issues. In fact, we can lawfully transfer data to our customers located outside the EU.
 
-Are you coming from Google Analytics? Please read our blog post on the [differences between Google Analytics and Simple Analytics](https://blog.simpleanalytics.com/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Anlaytics data into Simple Analytics.
+Are you coming from Google Analytics? Please read our blog post on the [differences between Google Analytics and Simple Analytics](https://blog.simpleanalytics.com/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Analytics data into Simple Analytics.
