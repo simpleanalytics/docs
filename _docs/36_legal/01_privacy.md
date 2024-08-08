@@ -27,18 +27,3 @@ By not collecting personal data, we allow customers to use Simple Analytics **wi
 We provide our service **without transferring data** outside the European Union. We rely on trusted, GDPR-compliant European data processors with data centers in the EU.
 
 Because we do not collect personal data, we can forward data to our customers outside the EU with no compliance burden. This allows you to use Simple Analytics anywhere in the world without worrying about data transfers.
-
-## Data Storage and Retention
-
-Your data is stored on dedicated servers provided by Worldstream and Leaseweb - our trusted, EU-based service providers. We retain your data as long as you use the service. Upon account deletion, data is erased from our systems, with backups deleted within 90 days.
-
-## You Own Your Data
-
-Simple Analytics makes no claim over your data. We do not store, sell, or use it for our purposes. **Your data belongs to you**.
-
-Your subscription pays for the service - not your data. We are an independently funded company with no ties to large corporations or the ad tech industry and do not use your data for marketing, for retargeting, for developing other services, and so on. And of course, we do not sell it.
-
-## Integrations and Portability
-
-We give customers full ownership and value from their data. Our plugins seamlessly integrate with services like Google Tag Manager, CloudQuery, and WordPress. Our raw data export feature allows former customers to retain and use their data as they see fit.
-
