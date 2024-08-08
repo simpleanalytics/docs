@@ -1,8 +1,8 @@
 ---
-title: Security
-menu: Security
+title: Data Ownership and Security
+menu: Data Ownership and Security
 category: legal
-permalink: /security
+permalink: /data-ownership-and-security
 last_modified_at: 2024-08-08
 ---
 
