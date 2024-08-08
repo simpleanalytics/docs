@@ -2,4 +2,4 @@ _site
 .sass-cache
 .jekyll-metadata
 .vscode
-/35_legal/
+_docs/35_legal
