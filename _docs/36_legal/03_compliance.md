@@ -42,13 +42,9 @@ Simple Analytics can easily comply with HIPAA because **it does not collect any 
 
 In other words, **you don’t need to worry about HIPAA**.
 
-### Why doesn’t Simple Analytics receive PHI?
+Simple Analytics doesn't receive PHI because we do not use cookies or other identifiers, fingerprint users, or track users in any way. **Simple Analytics is 100% tracking-free** and privacy-friendly.
 
-Because we do not use cookies or other identifiers, fingerprint users, or track users in any way. **Simple Analytics is 100% tracking-free** and privacy-friendly.
-
-### Does Simple Analytics need a BAA?
-
-You do not need a BAA to use Simple Analytics. You only need a BAA when an associate receives PHI from you. Since we do not receive any PHI, this is not relevant for Simple Analytics. Therefore, we do not qualify as Business Associates and do not require a BAA.
+You also do not need a BAA to use Simple Analytics. You only need a BAA when an associate receives PHI from you. Since we do not receive any PHI, this is not relevant for Simple Analytics. Therefore, we do not qualify as Business Associates and do not require a BAA.
 
 ## ePrivacy and TTDSG Compliance
 
