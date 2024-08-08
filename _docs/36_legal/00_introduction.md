@@ -8,6 +8,13 @@ last_modified_at: 2023-01-23
 
 We at Simple Analytics believe in a free, user-friendly Internet. This is why we built a simple, privacy-friendly tool to provide you with valuable analytics insights without collecting personal data from your visitors. This privacy-first mindset makes our software compliant with the strictest privacy regulations, including the GDPR.
 
+What do we do to protect your privacy and that of your visitors?
+
+1.  **We only collect what we need and nothing more.** This data probably won’t be of much interest to thieves.
+2.  **You are in control of your data, and you can download or delete it at any time.** We don’t own any of it.
+3.  **The drives storing your data are fully encrypted.** If anybody did manage to steal them, they’d be useless.
+4.  **We will never sell your data.** Because, once again, it’s yours!
+
 ## Data collection
 
 **We do not collect any personal data**. We do not use cookies and never collect information that could be used to fingerprint a user. You do not need to tweak any settings to make our software privacy-friendly: **Simple Analytics is privacy-friendly by design**.
