@@ -10,6 +10,16 @@ Simple Analytics prioritizes the integrity and confidentiality of customer data.
 
 We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website’s visitors and even go a few steps further.
 
+## You Own Your Data
+
+Simple Analytics makes no claim over your data. We do not store, sell, or use it for our purposes. **Your data belongs to you**.
+
+Your subscription pays for the service - not your data. We are an independently funded company with no ties to large corporations or the ad tech industry and do not use your data for marketing, for retargeting, for developing other services, and so on. 
+
+## We Don’t Sell Your Data
+
+Simple Analytics does not use or sell your data to third parties. Data access is limited to Simple Analytics and trusted service providers. All our providers are contractually obligated to only use the data as needed to power our service: they cannot disclose it, sell it, or use it for their own ends.
+
 ## Data Hosting Infrastructure
 
 The data we collect belongs to you. We only collect non-personal data and don’t share the data with third parties or transfer it overseas. Your website data never leaves the Netherlands and, therefore, the E.U. Also, no other third-party vendors have access to any data outside the hosting company that owns the servers on which the data is stored.
@@ -26,10 +36,6 @@ We use a CDN for most of our customers. The CDN is called Bunny CDN and is part 
 
 In order to provide our service, Simple Analytics will retain your data in line with your subscription plan and only when your account is active. We won’t store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The data will be deleted immediately when you delete your account (but will only be permanently deleted after 90 days).
 
-## We Don’t Sell Your Data
-
-Simple Analytics does not use or sell your data to third parties. Data access is limited to Simple Analytics and trusted service providers. All our providers are contractually obligated to only use the data as needed to power our service: they cannot disclose it, sell it, or use it for their own ends.
-
 ## No data transfer to the US
 
 We don’t transfer your visitors’ data outside of the EU. This includes no data transfer to the United States of America.
@@ -40,11 +46,6 @@ Ever since the start of our business in 2018, we have only relied on European se
 
 Are you coming from Google Analytics? Please read our blog post on the [differences between Google Analytics and Simple Analytics](https://blog.simpleanalytics.com/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Anlaytics data into Simple Analytics.
 
-## Protecting your privacy
+## Integrations and Portability
 
-What do we do to protect your privacy and that of your visitors?
-
-1.  **We only collect what we need and nothing more.** This data probably won’t be of much interest to thieves.
-2.  **You are in control of your data, and you can download or delete it at any time.** We don’t own any of it.
-3.  **The drives storing your data are fully encrypted.** If anybody did manage to steal them, they’d be useless.
-4.  **We will never sell your data.** Because, once again, it’s yours!
+We give customers full ownership and value from their data. Our plugins seamlessly integrate with services like Google Tag Manager, CloudQuery, and WordPress. Our raw data export feature allows former customers to retain and use their data as they see fit.
