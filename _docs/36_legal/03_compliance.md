@@ -40,9 +40,7 @@ The CCPA applies to personal information and defines “personal information” 
 
 Simple Analytics can easily comply with HIPAA because **it does not collect any personally identifiable data from your visitors**. When no personally identifiable data are collected, the data we receive are not PHI and do not fall under the HIPAA Privacy Rule’s disclosure limitations.
 
-In other words, **you don’t need to worry about HIPAA**.
-
-Simple Analytics doesn't receive PHI because we do not use cookies or other identifiers, fingerprint users, or track users in any way. **Simple Analytics is 100% tracking-free** and privacy-friendly.
+Simple Analytics doesn't receive PHI because we do not use cookies or other identifiers, fingerprint users, or track users in any way. In other words, **you don’t need to worry about HIPAA**.
 
 You also do not need a BAA to use Simple Analytics. You only need a BAA when an associate receives PHI from you. Since we do not receive any PHI, this is not relevant for Simple Analytics. Therefore, we do not qualify as Business Associates and do not require a BAA.
 
