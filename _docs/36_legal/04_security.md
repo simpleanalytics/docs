@@ -24,7 +24,7 @@ We use a CDN for most of our customers. The CDN is called Bunny CDN and is part 
 
 ## Data Retention
 
-In order to provide our service, Simple Analytics will retain your data for as long as your account is active. We won’t store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The data will be deleted immediately when you delete your account (but will only be permanently deleted after 90 days).
+In order to provide our service, Simple Analytics will retain your data in line with your subscription plan and only when your account is active. We won’t store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The data will be deleted immediately when you delete your account (but will only be permanently deleted after 90 days).
 
 ## We Don’t Sell Your Data
 
