@@ -20,8 +20,6 @@ At Simple Analytics, **when we say we do not collect personal data, we mean it**
 
 [ICO](https://ico.org.uk/), UK's independent body set up to uphold information rights, has updated its laws. They published a [blog](https://ico.org.uk/about-the-ico/news-and-events/news-and-blogs/2019/07/blog-cookies-what-does-good-look-like/) with the most common myths about cookies and [complete guidance](https://ico.org.uk/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies/) on the use of cookies and similar technologies ([pdf](https://ico.org.uk/media/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies-1-0.pdf)).
 
-### TL;DR <small>(in short)</small>
-
 Simple Analytics is PECR compliant and does not need consent. We track page views from a script in the browser where we don't use cookies or similar technologies. We don't store IPs in any way and don't use techniques that identify or track a user. [Read here](/what-we-collect) what metrics we store and or collect.
 
 ### PECR vs. GDPR
