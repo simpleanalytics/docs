@@ -10,7 +10,7 @@ At Simple Analytics, our mission is to make web analytics **intuitive, ethical, 
 
 Privacy is not an afterthought; it is **the cornerstone of what we do**. Here are the steps we take to ensure data is treated ethically and in compliance with privacy legislation.
 
-## Our No-Tracking Philosophy
+## Our No-tracking Philosophy
 
 **Data minimization** is the core philosophy of Simple Analytics. **We do not collect personal data** from the end user of your app and website- not a single bit.
 
@@ -24,6 +24,10 @@ By not collecting personal data, we allow customers to use Simple Analytics **wi
 
 ## No Data Transfers
 
-We provide our service **without transferring data** outside the European Union. We rely on trusted, GDPR-compliant European data processors with data centers in the EU.
+We don’t transfer your visitors’ data outside of the EU. This includes no data transfer to the United States of America.
 
-Because we do not collect personal data, we can forward data to our customers outside the EU with no compliance burden. This allows you to use Simple Analytics anywhere in the world without worrying about data transfers.
+The EU-US Privacy Shield Framework was invalidated by the Court of Justice of the European Union in the 2020 [“Schrems II”](https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/) decision. The invalidation of the Privacy Shield makes data transfer to the US risky and tricky compared to other countries..
+
+Ever since the start of our business in 2018, we have only relied on European service providers. This is a choice. The data we collect are not personal and do not fall under the GDPR. It can be transferred anywhere with no legal issues. In fact, **we can lawfully transfer data to our customers located outside the EU**.
+
+Are you coming from Google Analytics? Please read our blog post on the [differences between Google Analytics and Simple Analytics](https://blog.simpleanalytics.com/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Anlaytics data into Simple Analytics.
