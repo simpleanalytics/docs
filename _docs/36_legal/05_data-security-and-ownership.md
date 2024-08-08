@@ -1,24 +1,14 @@
 ---
-title: Data Ownership and Security
-menu: Data Ownership and Security
+title: Data Security and Ownership
+menu: Data Security and Ownerships
 category: legal
-permalink: /data-ownership-and-security
+permalink: /data-security-and-ownership
 last_modified_at: 2024-08-08
 ---
 
 Simple Analytics prioritizes the integrity and confidentiality of customer data. Our data governance meets the best practices in the industry: we continuously update our code to address vulnerabilities, employ firewalls, encrypt and regularly back up the data, and restrict access to customer data to our dev team.
 
 We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website’s visitors and even go a few steps further.
-
-## You Own Your Data
-
-Simple Analytics makes no claim over your data. We do not store, sell, or use it for our purposes. **Your data belongs to you**.
-
-Your subscription pays for the service - not your data. We are an independently funded company with no ties to large corporations or the ad tech industry and do not use your data for marketing, for retargeting, for developing other services, and so on. 
-
-## We Don’t Sell Your Data
-
-Simple Analytics does not use or sell your data to third parties. Data access is limited to Simple Analytics and trusted service providers. All our providers are contractually obligated to only use the data as needed to power our service: they cannot disclose it, sell it, or use it for their own ends.
 
 ## Data Hosting Infrastructure
 
@@ -45,3 +35,13 @@ Because we do not collect personal data, we can forward data to our customers ou
 ## Integrations and Portability
 
 We give customers full ownership and value from their data. Our plugins seamlessly integrate with services like Google Tag Manager, CloudQuery, and WordPress. Our raw data export feature allows former customers to retain and use their data as they see fit.
+
+## You Own Your Data
+
+Simple Analytics makes no claim over your data. We do not store, sell, or use it for our purposes. **Your data belongs to you**.
+
+Your subscription pays for the service - not your data. We are an independently funded company with no ties to large corporations or the ad tech industry and do not use your data for marketing, for retargeting, for developing other services, and so on. 
+
+## We Don’t Sell Your Data
+
+Simple Analytics does not use or sell your data to third parties. Data access is limited to Simple Analytics and trusted service providers. All our providers are contractually obligated to only use the data as needed to power our service: they cannot disclose it, sell it, or use it for their own ends.
