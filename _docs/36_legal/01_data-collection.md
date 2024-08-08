@@ -92,7 +92,7 @@ We care a great deal about the privacy of your visitors. Cookies are something t
 
 ### IP addresses
 
-> We \*\*do NOT collect or store\*\* IP addresses
+> We **do NOT collect or store** IP addresses
 
 We drop the IP address from every single request. Period. We don't save or collect them. We don't hash them with cryptography.
 
