@@ -1,6 +1,6 @@
 ---
 title: Data Security and Ownership
-menu: Data Security and Ownerships
+menu: Data Security and Ownership
 category: legal
 permalink: /data-security-and-ownership
 last_modified_at: 2024-08-08
