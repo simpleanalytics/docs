@@ -8,10 +8,6 @@ last_modified_at: 2023-01-20
 
 To collect additional data on top of [our collected metrics](/metrics), you can append metadata. With this feature you can specify specific parameters and it will be included in our database with your datapoints (events or page views).
 
-<blockquote class="red" markdown="1">
-Currently, there is an issue with storing metadata. It does not always get saved. We are working on that issue, but it's an issue deep in our systems.
-</blockquote>
-
 <blockquote markdown="1">
 
 Do **not** include personal data in your metadata like email addresses, identifiers, or any other type of personal data. We don't allow it and your account might be suspended.
