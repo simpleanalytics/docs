@@ -11,12 +11,20 @@ Include these two lines on every page at the end of your `<body>` (or anywhere e
 ```html
 <!-- Simple Analytics - 100% privacy-first analytics -->
 <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 > To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, Ruby, and others, go to [Install on other platforms](/install-on-other-platforms).
 
 We have a website setup wizard to test if you installed your script correctly. If you still have problems installing it, please let us know! We helped a lot of people with setting up their script and we love to help you as well. Just [contact](https://simpleanalytics.com/contact) us.
+
+## Non JavaScript environments
+
+Browsing the internet with JavaScript disabled does not really happen for most people. Those who do, are aware websites will mostly not work. But when you really want to collect data from those visitors, add our noscript tag. This might increase the traffic from robots, as some don't have JavaScript enabled.
+
+<!-- prettier-ignore -->
+```html
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+```
 
 ## Developers
 
