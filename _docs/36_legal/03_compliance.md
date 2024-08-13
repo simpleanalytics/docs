@@ -18,31 +18,29 @@ At Simple Analytics, **when we say we do not collect personal data, we mean it**
 
 ## PECR
 
-[ICO](https://ico.org.uk/), UK’s independent body set up to uphold information rights, has updated its laws. They published a [blog](https://ico.org.uk/about-the-ico/news-and-events/news-and-blogs/2019/07/blog-cookies-what-does-good-look-like/) with the most common myths about cookies and [complete guidance](https://ico.org.uk/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies/) on the use of cookies and similar technologies ([pdf](https://ico.org.uk/media/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies-1-0.pdf)).
+Simple Analytics is PECR compliant and does not need consent. We track page views from a script in the website where we don’t use cookies or similar technologies. We don’t store IPs in any way and don’t use techniques that identify or track a user. [Read here](https://docs.simpleanalytics.com/what-we-collect) what metrics we store and or collect.
 
-Simple Analytics is PECR compliant and does not need consent. We track page views from a script in the browser where we don’t use cookies or similar technologies. We don’t store IPs in any way and don’t use techniques that identify or track a user. [Read here](https://docs.simpleanalytics.com/what-we-collect) what metrics we store and or collect.
-
-We had a chance to ask the ICO directly about this. After contacting Daniel Morgan from ICO about the need for consent with Simple Analytics he replied:
+We had a chance to ask the ICO directly about this. After contacting Daniel Morgan from ICO about the need for consent with Simple Analytics, he replied:
 
 > [Regulation 6](https://ico.org.uk/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies/what-are-the-rules-on-cookies-and-similar-technologies/#rules1) of the PECR requires you to obtain consent from the user wherever you wish to store or gain access to information stored within their terminal equipment (a computer or device). This is applicable to the use of cookies and all [similar technologies](https://ico.org.uk/for-organisations/guide-to-pecr/guidance-on-the-use-of-cookies-and-similar-technologies/what-are-cookies-and-similar-technologies/#cookies5) and techniques, such as device fingerprinting.
 >
 > If you do not rely on techniques which involve storing or gaining access to information within users' devices in order to produce analytics data for your clients, then this will not fall under Regulation 6 and you will not need to obtain consent.
 
-We do not rely on techniques to store or gain access to information within users’ devices. We do collect information about the devices (like screen size), but that is not applicable to the use of cookies and similar technologies.
+We do not rely on techniques to store or gain access to information within users’ devices.
 
 ## CCPA compliance
 
 Simple Analytics is **CCPA compliant out of the box** because it avoids collecting any information that falls under the CCPA.
 
-The CCPA applies to personal information and defines “personal information” as “information that identifies relates to, or could reasonably be linked with a user or their household.” Simple Analytics collects no such information from the end user.
+The CCPA applies to personal information and defines “personal information” as “information that identifies, relates to, or could reasonably be linked with a user or their household.” Simple Analytics collects no such information from the end user.
 
 ## HIPAA Compliance
 
-Simple Analytics can easily comply with HIPAA because **it does not collect any personally identifiable data from your visitors**. When no personally identifiable data are collected, the data we receive are not PHI and do not fall under the HIPAA Privacy Rule’s disclosure limitations.
+Simple Analytics can easily comply with HIPAA because **it does not collect any personally identifiable data from your visitors**. When no personally identifiable data are collected, the data we receive are not protected health information (PHI) and do not fall under the HIPAA Privacy Rule’s disclosure limitations.
 
 Simple Analytics doesn't receive PHI because we do not use cookies or other identifiers, fingerprint users, or track users in any way. In other words, **you don’t need to worry about HIPAA**.
 
-You also do not need a BAA to use Simple Analytics. You only need a BAA when an associate receives PHI from you. Since we do not receive any PHI, this is not relevant for Simple Analytics. Therefore, we do not qualify as Business Associates and do not require a BAA.
+You also do not need a BAA to use Simple Analytics. You only need a BAA when an associate receives PHI from you. This is not the case with Simple Analytics: we do not receive any PHI, do not qualify as a business associate, and do not require a business associate agreement.
 
 ## ePrivacy and TTDSG Compliance
 
