@@ -53,6 +53,8 @@ We collect three IDs:
 
 These IDs are not linked to a person or personal data. It’s linked to only a page view, page, or session. IDs are also not stored on the device. Meaning, that if a visitor reloads the page (with F5, for example), the IDs will all be reset.
 
+We never, ever collect or create an ID for a user, browser, or device. 
+
 ### Scrolled percentage
 
 <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
@@ -88,7 +90,7 @@ Here is a list of metrics that we **don't** collect:
 
 <img loading="lazy" src="https://assets.simpleanalytics.com/images/drawings/cookie.png" style="float: right; margin-left: 1rem; transform: rotate(260deg); width: 150px;">
 
-We care a great deal about the privacy of your visitors. Cookies are something that can track visitors across multiple pages or even multiple websites. For us this is a hard no. This goes for all similar technologies like (but not limited to) [local storage](https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage), [session cookies](https://en.wikipedia.org/wiki/HTTP_cookie#Session_cookie), [fingerprinting](<https://en.wikipedia.org/wiki/Fingerprint_(computing)>), and IP address hashing.
+We care a great deal about the privacy of your visitors. Cookies can track visitors across websites or even devices, and that’s a hard no for us. The same goes for any tracking technology, including local storage, session cookies, fingerprinting, and IP address hashing.
 
 ### IP addresses
 
