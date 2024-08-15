@@ -7,7 +7,7 @@ download: false
 last_modified_at: 2022-04-14
 ---
 
-Simple Analytics is a privacy-friendly and simple alternative to Google Analytics. No cookies. No trackers. No consent required from your visitors. Just straightforward analytics. 
+Simple Analytics is a privacy-friendly and simple alternative to Google Analytics. No cookies. No trackers. **No consent required from your visitors**. Just straightforward analytics. 
 
 [Check our live demo](https://dashboard.simpleanalytics.com/simpleanalytics.com) to see what that looks like! 
 
