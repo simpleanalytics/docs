@@ -7,10 +7,16 @@ download: false
 last_modified_at: 2022-04-14
 ---
 
-Whether you’re a startup or a global enterprise, learn how to integrate with Simple Analytics for privacy friendly analytics. No consent required from your visitors!
+Simple Analytics is a privacy-friendly and simple alternative to Google Analytics. No cookies. No trackers. No consent required from your visitors. Just straightforward analytics. [Check our demo](https://dashboard.simpleanalytics.com/simpleanalytics.com) to see what that looks like! 
 
-[Please let us know](https://simpleanalytics.com/feedback) if you think we're missing something. If you're curious about our upcoming features, you should check out our [roadmap](https://simpleanalytics.com/roadmap).
+Built and hosted in the EU 🇪🇺, we believe in an internet that is friendly to website visitors. If this resonates, we'd love to have you onboard!
 
-> Are you looking for our embed script? Go to [how to add our script](/script).
+To get started quickly:
+
+- [Add Simple Analytics to your website](https://docs.simpleanalytics.com/script)
+- [Import your Google Analytics data](https://docs.simpleanalytics.com/import-google-analytics-data)
+- [Set up your events](https://docs.simpleanalytics.com/events)
+
+Let us know if you have any questions [here](https://dashboard.simpleanalytics.com/contact). Happy to help!
 
 <img class="drawing" src="https://assets.simpleanalytics.com/images/drawings/cookie-jar.png" alt="">
