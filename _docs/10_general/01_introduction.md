@@ -20,6 +20,7 @@ To get started quickly:
 - [Add Simple Analytics to your website](https://docs.simpleanalytics.com/script)
 - [Import your Google Analytics data](https://docs.simpleanalytics.com/import-google-analytics-data)
 - [Set up your events](https://docs.simpleanalytics.com/events)
+- [Read more about compliance and the datapoints that we collect](https://docs.simpleanalytics.com/introduction-to-legal)
 
 Let us know if you have any questions [here](https://dashboard.simpleanalytics.com/contact). Happy to help!
 
