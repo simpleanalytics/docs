@@ -2,6 +2,7 @@
 title: Metrics
 category: general
 permalink: /what-we-collect
+hidden: true
 excerpt: "Simple Analytics only collects privacy-insensitive data. Here is a list of what we do and don’t collect from your visitors."
 last_modified_at: 2023-01-11
 ---
