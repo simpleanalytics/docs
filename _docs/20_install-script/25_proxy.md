@@ -137,7 +137,7 @@ But if you want, you can include it like this:
 
 This will send all traffic via your proxy on the endpoint `/simple/...`.
 
-## Autometed events script
+## Automated events script
 
 If you use the [automated events](/automated-events) script, make sure to update that script tag as well:
 
