@@ -3,18 +3,14 @@ title: Install Simple Analytics on WordPress
 menu: WordPress
 category: integrations
 permalink: /install-simple-analytics-on-wordpress
-last_modified_at: 2022-04-14
+last_modified_at: 2024-10-25
 ---
 
-You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress.
+You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress. The settings pages look like this:
 
-There are a few ways to add our embed script to your WordPress site. We offer an official plugin that has limited options. If you want to use all script features, use the [Head & Footer Code plugin](/install-simple-analytics-in-wordpress-with-head-footer-code-plugin). If you want to enable basic tracking of page views, use [the offical plugin down below](#install-official-plugin-via-wordpress-dashboard).
-
-> There are two non-official plugins made by others. They have more features then the official plugin:
-> - [WordPress plugin by Refined Practice](/wordpress-plugin-by-refined-practice)
-> - [WP Full Picture plugin](/wordpress-full-picture-plugin)
-
-> See our plugin in action by [creating a temporary Wordpress website on tastewp.com in one click](https://tastewp.com/new?pre-installed-plugin-slug=simpleanalytics&redirect=plugins.php&ni=true). Do note that by default we don't collect from logged in admins, log out to see the requests to Simple Analytics.
+| General | Ignore Rules | Advanced | Events |
+|:-------:|:------------:|:--------:|:------:|
+| ![](https://assets.simpleanalytics.com/docs/wordpress/01-general.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/02-ignore-rules.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/03-advanced.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/04-events.png) |
 
 ## Install official plugin via WordPress dashboard
 
@@ -26,13 +22,6 @@ There are a few ways to add our embed script to your WordPress site. We offer an
 1. Click on Search Plugins and type `simpleanalytics` _(do not use a space)_
 1. Click on **Install Now**
 1. After this click on **Activate** and our plugin is installed
-
-<blockquote>
-   <p>
-     Do note that your own visits are not counted in our dashboard. Log out
-     from Wordpress to see your own visits appear in the dashboard.
-   </p>
-</blockquote>
 
 <details>
    <summary>Manual installation</summary>
@@ -71,6 +60,20 @@ Follow these steps to add Simple Analytics to your WordPress website:
    ![](/images/wordpress-installed-plugins.jpg)
 
 </div>
+</details>
+
+## Others
+
+> See our plugin in action by [creating a temporary Wordpress website on tastewp.com in one click](https://tastewp.com/new?pre-installed-plugin-slug=simpleanalytics&redirect=plugins.php&ni=true). Do note that by default we don't collect from logged in admins, log out to see the requests to Simple Analytics.
+
+<details>
+   <summary>Non-official plugins</summary>
+   <div markdown="1">
+
+There are two non-official plugins made by others. They have more features then the official plugin:
+ - [WordPress plugin by Refined Practice](/wordpress-plugin-by-refined-practice)
+ - [WP Full Picture plugin](/wordpress-full-picture-plugin)
+
 </details>
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
