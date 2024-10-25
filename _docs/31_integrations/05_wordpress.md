@@ -6,11 +6,22 @@ permalink: /install-simple-analytics-on-wordpress
 last_modified_at: 2024-10-25
 ---
 
-You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress. The settings pages look like this:
+You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress.
 
-| General | Ignore Rules | Advanced | Events |
-|:-------:|:------------:|:--------:|:------:|
-| ![](https://assets.simpleanalytics.com/docs/wordpress/01-general.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/02-ignore-rules.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/03-advanced.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/04-events.png) |
+The WordPress plugin is ready to roll right from install—no setup needed. But for the adventurers out there:
+
+<details markdown="1">
+   <summary>Explore and customize every setting to make it yours!</summary>
+
+| General | Ignore Rules |
+|:-------:|:------------:|
+| ![](https://assets.simpleanalytics.com/docs/wordpress/01-general.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/02-ignore-rules.png) |
+
+| Advanced | Events |
+|:--------:|:------:|
+| ![](https://assets.simpleanalytics.com/docs/wordpress/03-advanced.png) | ![](https://assets.simpleanalytics.com/docs/wordpress/04-events.png) |
+
+</details>
 
 ## Install official plugin via WordPress dashboard
 
