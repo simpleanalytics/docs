@@ -70,7 +70,7 @@ Follow these steps to add Simple Analytics to your WordPress website:
    <summary>Non-official plugins</summary>
    <div markdown="1">
 
-There are two non-official plugins made by others. They have more features then the official plugin:
+There are two non-official plugins made by others:
  - [WordPress plugin by Refined Practice](/wordpress-plugin-by-refined-practice)
  - [WP Full Picture plugin](/wordpress-full-picture-plugin)
 
