@@ -1,22 +1,22 @@
 ---
-title: Proxy all requests
+title: Proxy
 category: install-script
 permalink: /proxy
-last_modified_at: 2024-02-26
+last_modified_at: 2024-11-05
 ---
 
-Concerned about your website visitors' privacy when using Simple Analytics? We understand. Let's be clear: we never collect your visitors' IP addresses. And with our proxy setup option using Caddy, NGINX, or Netlify, you have the power to ensure those IP addresses never reach us. This setup acts as a privacy shield, offering you and your visitors added peace of mind.
+Concerned about your website visitors’ privacy when using Simple Analytics? We understand. Let’s be clear: we never collect your visitors’ IP addresses. And with our proxy setup option using Caddy, NGINX, Netlify, or Vercel, you have the power to ensure those IP addresses never reach us. This setup acts as a privacy shield, offering you and your visitors added peace of mind.
 
-If Caddy is your tool of choice, you can quickly set it up as a proxy with just a few lines in your Caddyfile. If you're using NGINX, you can do something similar by adding some configuration to your server directive. And if you're on Netlify, you can set up a proxy by adding redirect rules to your site’s configuration. This lets analytics traffic go through your site before reaching us.
+If Caddy is your tool of choice, you can quickly set it up as a proxy with just a few lines in your Caddyfile. If you’re using NGINX, you can do something similar by adding some configuration to your server directive. And if you’re on Netlify or Vercel, you can set up a proxy by adding redirect rules to your site’s configuration. This lets analytics traffic go through your site before reaching us.
 
-Setting up a proxy means no visitor IPs get to our servers. It's an easy and effective step for protecting privacy. We highly recommend it if you can do it.
+Setting up a proxy means no visitor IPs get to our servers. It’s an easy and effective step for protecting privacy. We highly recommend it if you can do it.
 
 ## Server proxies
 
 <details markdown="1">
   <summary>Set up proxy in NGINX</summary>
 
-> Trailing slashed are very important here. Keep them as they are in this example.
+> Trailing slashes are very important here. Keep them as they are in this example.
 
 ```
 location /simple/ {
@@ -101,6 +101,42 @@ Change `example.com` to the domain you run the proxy on. This can be the same do
 Feel free to change `/simple` to something else.
 
 > Thanks to Brian LaLonde [servantsystems.com](https://www.servantsystems.com/) to provide us the Netlify configuration.
+
+</details>
+
+<details markdown="1">
+  <summary>Set up proxy in Vercel</summary>
+
+Step 1: Add configuration file
+
+Create a vercel.json file in the root of your project.
+
+Step 2: Configure rewrites
+
+Add the following JSON to vercel.json to rewrite calls within your application to Simple Analytics’ resources:
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/proxy.js",
+      "destination": "https://simpleanalyticsexternal.com/proxy.js?hostname=example.com&path=/simple"
+    },
+    {
+      "source": "/auto-events.js",
+      "destination": "https://scripts.simpleanalyticscdn.com/auto-events.js"
+    },
+    {
+      "source": "/simple/:match*",
+      "destination": "https://queue.simpleanalyticscdn.com/:match*"
+    }
+  ]
+}
+```
+
+Change `example.com` to the domain you run the proxy on. This can be the same domain as your own website is hosted on.
+
+Feel free to change `/simple` to something else. If you do, make sure to update it in both the destination URL and the path query parameter.
 
 </details>
 
