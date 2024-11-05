@@ -107,11 +107,11 @@ Feel free to change `/simple` to something else.
 <details markdown="1">
   <summary>Set up proxy in Vercel</summary>
 
-Step 1: Add configuration file
+### Add configuration file
 
-Create a vercel.json file in the root of your project.
+Create a `vercel.json` file in the root of your project.
 
-Step 2: Configure rewrites
+### Configure rewrites
 
 Add the following JSON to vercel.json to rewrite calls within your application to Simple Analytics’ resources:
 
