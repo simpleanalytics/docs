@@ -11,7 +11,7 @@ If Caddy is your tool of choice, you can quickly set it up as a proxy with just 
 
 Setting up a proxy means no visitor IPs get to our servers. It’s an easy and effective step for protecting privacy. We highly recommend it if you can do it.
 
-## Server proxies
+## Step 1: Set up proxy
 
 <details markdown="1">
   <summary>Set up proxy in NGINX</summary>
@@ -142,7 +142,7 @@ Feel free to change `/simple` to something else. If you do, make sure to update 
 
 You can adapt this setup for other server configurations too. If you're using a server setup we haven't mentioned, let us know so we can add it to this documentation page.
 
-## Update embed script
+## Step 2: Update embed script
 
 The embed script should be changed into this:
 
@@ -173,7 +173,7 @@ But if you want, you can include it like this:
 
 This will send all traffic via your proxy on the endpoint `/simple/...`.
 
-## Automated events script
+## Step 3: Automated events script (optional)
 
 If you use the [automated events](/automated-events) script, make sure to update that script tag as well:
 
@@ -188,7 +188,7 @@ The full code will then become:
 <script async src="https://example.com/auto-events.js"></script>
 ```
 
-## Validate your config
+## Step 4: Validate your config
 
 After these changes you should be able to visit the script at `https://example.com/proxy.js`.
 
