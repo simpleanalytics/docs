@@ -26,7 +26,7 @@ It's a good but simple introduction, but if you want to make the most of your go
 
 ## Funnel
 
-In our next video, we'll show you how to set up a new goal with a filter that targets page views from the home page. We'll also demonstrate how to add an additional step to the goal by filtering page views from the pricing page. This will give you a more comprehensive view of how your pircing page is performing.
+In our next video, we'll show you how to set up a new goal with a filter that targets page views from the home page. We'll also demonstrate how to add an additional step to the goal by filtering page views from the pricing page. This will give you a more comprehensive view of how your pricing page is performing.
 
 {%
   include video.html
