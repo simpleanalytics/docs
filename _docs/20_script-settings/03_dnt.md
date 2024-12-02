@@ -2,7 +2,7 @@
 title: Do Not Track
 category: script-settings
 permalink: /dnt
-last_modified_at: 2023-10-31
+last_modified_at: 2024-12-02
 ---
 
 > This page is about the DNT setting in browsers. We don't track your visitors, [read more on what we collect](/what-we-collect).
@@ -16,7 +16,6 @@ To also record DNT visitors you can add `data-collect-dnt="true"` to the script 
 <!-- prettier-ignore -->
 ```html
 <script data-collect-dnt="true" async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/hello.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 If you don't add the `data-collect-dnt` attribute we will not record visits from users who have DNT enabled.
