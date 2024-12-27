@@ -5,28 +5,24 @@ permalink: /explained/domain-privacy
 last_modified_at: 2022-04-14
 ---
 
-We believe adding a website to Simple Analytics should be a painless process.
+We believe adding a website should be simple and stress-free:
 
 ## Painless process
 
-We have many ways to make this process easier:
+-	Great onboarding flow:
+    - Suggests plugins that match your site.
+    - Shows each step in a clean, visual way.
+    - Easy to share with your tech team.
+-	No extra steps required:
+    - You don’t need to create a website in the dashboard before adding the embed script.
+    - Domain verification is unnecessary.
+    - Forget about creating website IDs—just copy and paste the script!
 
-- Our onboarding flow is fantastic:
-  - it recommends plugins that a specifically relevant for the just added website,
-  - it shows the required steps in a beautiful format,
-  - and customers can forward it to their tech team.
-- When adding our embed script is that you don't have to create a website in our dashboard first.
-- Customers also don't need to verify their domain.
-- Customers don't need to create a website ID every time they add a website.
-
-We think it should be as painless as possible to add our embed script, without thinking.
+It’s as easy as it gets.
 
 ## Privacy
 
-Our embed script works by grabbing the website name from the URL _(you [can overwrite](/overwrite-domain-name) this)_ so our customers don't have to. When a customer leaves Simple Analytics we don't want other customers to be able to collect data for an embed script that might still be installed. That's why we store a website hash of every website that is deleted. When another customer tries to add a website we compare this with a list of website hashes that are deleted. If there is a match, we require to verify that domain.
-
-This way it's super easy to add our script, and your data will never fall in the wrong hands.
+Our embed script automatically detects the website name from the URL ([you can overwrite it](/overwrite-domain-name) if needed), so there’s no manual input required. If a customer decides to leave Simple Analytics, we take steps to ensure data security. We store a hash of any deleted website and check new additions against this list. If there’s a match, we’ll require domain verification.
 
 ## Transfer websites
-
-[Learn more on how to transfer a website](/transfer-websites) to another Simple Analytics' customer.
+[Learn how to transfer websites](/transfer-websites) between Simple Analytics customers.
