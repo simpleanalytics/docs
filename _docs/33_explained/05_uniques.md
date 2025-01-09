@@ -40,7 +40,7 @@ A direct visit occurs when a user lands on your website by typing the URL into t
 
 ## Some pages have pageviews but (almost) no visitors
 
-This happens when users navigate within your website. After the first visitor is recorded, any additional pageviews during the session are counted as pageviews, not visitors. For example, if someone clicks through multiple pages on your site, those are additional pageviews but not visitors.
+This happens when users navigate within your website. Once the first visitor is recorded, any additional pageviews during the session are counted as pageviews, not visitors. As a result, only pages with no referrer or a referrer from another website can be counted as visitors.
 
 ## SPAs
 
