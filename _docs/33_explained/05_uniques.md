@@ -8,27 +8,33 @@ redirect_from:
 last_modified_at: 2022-04-14
 ---
 
-At Simple Analytics we do things a bit differently. We put the privacy of your visitors first. At the same time we comply with strict (and necessary) privacy laws. This has an impact on our statistics, like unique visits. We record page views (which is very easy to do without invading the privacy of your visitors). With unique visits it's easier to invade the privacy of your visitors. Traditional analytics tools will show you unique visits based on a cookie they place on the visitors computer. This can be extremely invasive to privacy because a visitor can be tracked for a longer period of time. Most privacy analytics tools use hashes from the IP address of visitors. Combined with a date this is a bit better for privacy. We do it even better.
+At Simple Analytics, we approach things differently. Our priority is to protect the privacy of your visitors while staying compliant with strict (and necessary) privacy laws. This means some of our statistics, like unique visits, work differently.
+
+We record page views because it’s easy to do without compromising privacy. Tracking unique visits, however, can be more invasive. Traditional analytics tools use cookies to identify unique visits, storing them on a visitor’s computer. This allows tracking over long periods, which is highly intrusive.
+
+Some privacy-focused tools improve this slightly by using hashes of a visitor’s IP address combined with a date. While better for privacy, it’s still not ideal. At Simple Analytics, we take it a step further.
 
 ## No cookies or fingerprinting
 
 > We **do not** use cookies (or any kind of storage), fingerprinting, or PII data.
 
-With the new ruling of the European court it's forbidden to have pre-ticked cookie consent forms under GDPR. In the UK it's already clear in PECR (the UK's privacy directive). In these directives it's also forbidden to fingerprint a visitor. Other analytics businesses use this technique (for example based on IP address). This seems privacy friendly but is considered fingerprinting. For which, you need consent.
+Under a European court ruling, pre-ticked cookie consent forms are no longer allowed under GDPR. In the UK, PECR (the privacy directive) already made this clear. Both laws also explicitly forbid visitor fingerprinting.
+
+Many analytics providers rely on fingerprinting techniques, like using IP addresses, to track users. Although this may appear privacy-friendly, it’s considered fingerprinting and requires consent.
 
 ## No consent needed
 
 > With Simple Analytics you don't need consent. It's one of our core values.
 
-We don't want you to ask for consent ever. Our service is targeted at companies that want to get the big picture. Tracking customers is not part of that. That's why we came up with our unique way of tracking unique visits.
+We don’t think you should ever have to ask for consent. Our service is designed for companies that care about the big picture, not tracking individual customers. That’s why we developed our own unique way of tracking unique visits.
 
 ## How it works
 
-When a visitor navigates from website to website the browser sends a [referrer](https://en.wikipedia.org/wiki/HTTP_referer) along. If you for example visit website `randomwebsite.com` and navigate to `yourwebsite.com` it sends the referrer `randomwebsite.com` to `yourwebsite.com`. This referrer is very useful to figure out where traffic is coming from. We use the referrer to calculate if a visit is unique.
+When a visitor moves from one website to another, their browser sends a [referrer](https://en.wikipedia.org/wiki/HTTP_referer). For example, if someone visits `randomwebsite.com` and then navigates to `yourwebsite.com`, the browser sends `randomwebsite.com` as the referrer to `yourwebsite.com`. This information helps identify where traffic is coming from, and we use it to determine if a visit is unique. When the referrer doesn't match your website, we count the first pageview as a new visitor.
 
 ![](/images/referrer-visit.jpg)
 
-When a user lands on your website without visiting another website (direct visit) we record it as a unique visit:
+A direct visit occurs when a user lands on your website by typing the URL into their browser or when the previous page does not send a referrer. In that case, we also count the first pageview as a visitor.
 
 ![](/images/direct-visit.jpg)
 
