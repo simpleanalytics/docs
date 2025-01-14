@@ -15,7 +15,7 @@ To also record DNT visitors you can add `data-collect-dnt="true"` to the script 
 
 <!-- prettier-ignore -->
 ```html
-<script data-collect-dnt="true" async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
 If you don't add the `data-collect-dnt` attribute we will not record visits from users who have DNT enabled.
