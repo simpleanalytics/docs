@@ -10,7 +10,7 @@ Include these two lines on every page at the end of your `<body>` (or anywhere e
 <!-- prettier-ignore -->
 ```html
 <!-- Simple Analytics - 100% privacy-first analytics -->
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
 > To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, Ruby, and others, go to [Install on other platforms](/install-on-other-platforms).
