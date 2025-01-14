@@ -13,7 +13,7 @@ Make sure to include the our `simpleanalyticscdn.com` script (note the **cdn** p
 
 <!-- prettier-ignore -->
 ```html
-<script async defer data-hostname="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async data-hostname="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
@@ -21,7 +21,7 @@ You see that we added an attribute (`data-hostname=""`) to the script tag and `h
 
 <!-- prettier-ignore -->
 ```html
-<script async defer data-hostname="example.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async data-hostname="example.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=example.com" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 

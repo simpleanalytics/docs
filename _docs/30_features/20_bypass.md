@@ -33,8 +33,7 @@ Include these two lines at the end of your `<body>` (or anywhere else):
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://custom.domain.com/latest.js"></script>
-<noscript><img src="https://custom.domain.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+<script async src="https://custom.domain.com/latest.js"></script>
 ```
 
 Make sure to replace `custom.domain.com` with your own custom domain.

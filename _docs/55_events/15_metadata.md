@@ -92,7 +92,6 @@ You can specify the metadata callback function via `data-metadata-collector`. Le
 </script>
 <script
   async
-  defer
   data-metadata-collector="myAddMetadataFunction"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
 ></script>

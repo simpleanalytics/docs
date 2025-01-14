@@ -12,7 +12,7 @@ Just replace `latest.js` with `light.js` in your embed script. It will look simi
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://scripts.simpleanalyticscdn.com/light.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/light.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
@@ -29,21 +29,21 @@ Source: [giftofspeed.com](https://www.giftofspeed.com/gzip-test/) for Brotli, [a
 
 Obviously not all features are available in our light script. Here an comparison of both versions:
 
-| Feature                                         | `latest.js` |   `light.js`    |
-| :---------------------------------------------- | :---------: | :-------------: |
-| Page views                                      |      x      |        x        |
-| Referrer                                        |      x      |        x        |
-| UTM codes                                       |      x      |        x        |
-| [Uniques](/uniques)                             |      x      |        x        |
-| [Events](/events)                               |      x      |        x        |
-| Bot detection                                   |      x      |        x        |
-| Error reporting                                 |      x      |        x        |
-| Show warnings                                   |      x      |        x        |
-| Time on page                                    |      x      |                 |
-| [Hash navigation](/hash-mode)                   |      x      |                 |
-| Scroll depth                                    |      x      |                 |
-| [SPA](/trigger-custom-page-views)               |      x      |                 |
-| Screen sizes                                    |      x      |                 |
-| [Ignore pages](/ignore-pages)                   |      x      |                 |
-| [Overwrite domain name](/overwrite-domain-name) |      x      |                 |
-| [Ignore DNT](/dnt)                              |      x      |                 |
+| Feature                                         | `latest.js` | `light.js` |
+| :---------------------------------------------- | :---------: | :--------: |
+| Page views                                      |      x      |     x      |
+| Referrer                                        |      x      |     x      |
+| UTM codes                                       |      x      |     x      |
+| [Uniques](/uniques)                             |      x      |     x      |
+| [Events](/events)                               |      x      |     x      |
+| Bot detection                                   |      x      |     x      |
+| Error reporting                                 |      x      |     x      |
+| Show warnings                                   |      x      |     x      |
+| Time on page                                    |      x      |            |
+| [Hash navigation](/hash-mode)                   |      x      |            |
+| Scroll depth                                    |      x      |            |
+| [SPA](/trigger-custom-page-views)               |      x      |            |
+| Screen sizes                                    |      x      |            |
+| [Ignore pages](/ignore-pages)                   |      x      |            |
+| [Overwrite domain name](/overwrite-domain-name) |      x      |            |
+| [Ignore DNT](/dnt)                              |      x      |            |

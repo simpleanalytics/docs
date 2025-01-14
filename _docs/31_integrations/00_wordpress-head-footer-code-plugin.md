@@ -6,7 +6,7 @@ permalink: /install-simple-analytics-in-wordpress-with-head-footer-code-plugin
 last_modified_at: 2023-09-27
 ---
 
-Sometimes you want to use more script features then our official WordPress plugin offers. 
+Sometimes you want to use more script features then our official WordPress plugin offers.
 
 You can easily embed Simple Analytics script into your WordPress website using the "Head & Footer Code" plugin. Follow the steps below to get started:
 
@@ -24,7 +24,11 @@ You can easily embed Simple Analytics script into your WordPress website using t
 2. In the “Site-wide Head Code” section, paste the Simple Analytics embed script.
    - Example script that uses the [ignore pages](/ignore-pages) feature:
    ```html
-   <script data-ignore-pages="/a-page-to-ignore,/another-page" async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+   <script
+     data-ignore-pages="/a-page-to-ignore,/another-page"
+     async
+     src="https://scripts.simpleanalyticscdn.com/latest.js"
+   ></script>
    ```
 3. Click "Save Settings" to apply the changes.
 

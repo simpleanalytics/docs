@@ -39,8 +39,7 @@ The next part is probably already on your page for collecting page views. If not
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
 If you **can't** add it to your `<body>` tag, place it in the `<head>` of the page. Don't place the `<noscript>` part in the `<head>`. If you can't add it to the body, just omit it.
@@ -118,7 +117,7 @@ If the `sa_event` variable is already in use you can change it with the `data-na
 <!-- prettier-ignore -->
 ```html
 <script>window.ba_event=window.ba_event||function(){var a=[].slice.call(arguments);window.ba_event.q?window.ba_event.q.push(a):window.ba_event.q=[a]};</script>
-<script async defer data-namespace="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async data-namespace="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
 Do note that the namespace will also change other functions as well. For example, `sa_metadata` becomes `ba_metadata`, `sa_loaded` becomes `ba_loaded`, and `sa_pageview` becomes `ba_pageview`.

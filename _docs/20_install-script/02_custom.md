@@ -62,7 +62,6 @@ There might be situation where you don't want to auto collect page views. When y
 
 <script
   async
-  defer
   data-auto-collect="false"
   onload="saLoaded()"
   src="https://scripts.simpleanalyticscdn.com/latest.js"

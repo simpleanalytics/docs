@@ -86,7 +86,7 @@ The following HTML should be added to the `<body>` of the page:
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ````
 
@@ -134,7 +134,6 @@ For both System plugins and Framework plugins, the following settings need to be
 ### Advanced settings
 
 <!-- prettier-ignore -->
-
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |custom domain|[Custom domain](https://docs.simpleanalytics.com/bypass-ad-blockers)|string|undefined|no|`simple.example.com`|
@@ -150,7 +149,6 @@ For both System plugins and Framework plugins, the following settings need to be
 ### Event settings
 
 <!-- prettier-ignore -->
-
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |`data-collect`|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|array|undefined|no|`outbound,emails,downloads`|
@@ -162,7 +160,6 @@ For both System plugins and Framework plugins, the following settings need to be
 ### System plugins specific settings
 
 <!-- prettier-ignore -->
-
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |ignore admins|Ignore admin|boolean|`true`|no|`false`|
@@ -181,7 +178,23 @@ The scripts should be loaded into the HTML of the page.
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+````
+
+Or in case when a custom domain is enabled:
+
+<!-- prettier-ignore -->
+```html
+<script async src="https://custom.domain/latest.js"></script>
+```
+
+## Noscript tag
+
+If users enable the noscript tag (which is disabled by default), we need to add the noscript tag to the script.
+
+<!-- prettier-ignore -->
+```html
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ````
 
@@ -189,8 +202,8 @@ Or in case when a custom domain is enabled:
 
 <!-- prettier-ignore -->
 ```html
-<script async defer src="https://custom.domain/latest.js"></script>
+<script async src="https://custom.domain/latest.js"></script>
 <noscript><img src="https://custom.domain/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
-````
+```
 
 When automated events are enabled [that script](/automated-events) is included.
