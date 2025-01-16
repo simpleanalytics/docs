@@ -31,20 +31,20 @@ You can prevent Simple Analytics from collecting your visits by modifying your c
 1. Launch the Terminal app. You can find it by searching for “Terminal” in Spotlight.
 2. Run the following command to open the hosts file in a text editor:
 
-        sudo nano /etc/hosts
+       sudo nano /etc/hosts
 
     Enter your password when prompted.
 
-3.	Scroll to the bottom of the file and add the following line:
+3. Scroll to the bottom of the file and add the following line:
 
-        0.0.0.0 scripts.simpleanalyticscdn.com
+       0.0.0.0 scripts.simpleanalyticscdn.com
 
-4.	Press Control + O to save the changes.
-5.	Press Enter to confirm the filename.
-6.	Press Control + X to exit the editor.
-7.	Run the following command to apply the changes:
+4. Press Control + O to save the changes.
+5. Press Enter to confirm the filename.
+6. Press Control + X to exit the editor.
+7. Run the following command to apply the changes:
 
-        sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
+       sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 
 Your computer will now block requests to Simple Analytics from your browser.
 
@@ -53,18 +53,18 @@ Your computer will now block requests to Simple Analytics from your browser.
 2. Right-click and select Run as administrator.
 3. In Notepad, open the file located at:
 
-        C:\Windows\System32\drivers\etc\hosts
+       C:\Windows\System32\drivers\etc\hosts
 
     If you don’t see the file, change the file type dropdown to All Files.
 
 4. Add the following line at the end of the file:
 
-        0.0.0.0 scripts.simpleanalyticscdn.com
+       0.0.0.0 scripts.simpleanalyticscdn.com
 
 5. Save the file by clicking File > Save or pressing Control + S.
 6. Open Command Prompt as administrator and run:
 
-        ipconfig /flushdns
+       ipconfig /flushdns
 
 Your computer will now block requests to Simple Analytics from your browser.
 
