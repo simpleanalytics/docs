@@ -4,6 +4,8 @@ menu: Compliance
 category: legal
 permalink: /compliance
 last_modified_at: 2024-08-08
+redirect_from:
+  - /gdpr
 ---
 
 ## GDPR and UK GDPR Compliance
