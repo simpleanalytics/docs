@@ -4,6 +4,8 @@ menu: Data Security and Ownership
 category: legal
 permalink: /data-security-and-ownership
 last_modified_at: 2024-08-08
+redirect_from:
+  - /how-we-protect-your-data
 ---
 
 Simple Analytics prioritizes the integrity and confidentiality of customer data. Our data governance meets the best practices in the industry: we continuously update our code to address vulnerabilities, employ firewalls, encrypt and regularly back up the data, and restrict access to customer data to our dev team.
