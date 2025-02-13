@@ -4,6 +4,8 @@ menu: Data Collection
 category: legal
 permalink: /data-collection
 last_modified_at: 2024-08-08
+redirect_from:
+  - /what-we-do-and-dont-collect
 ---
 
 Not collecting any information would be silly and unrealistic for an analytics tool. We collect information necessary to show you simple analytics, but unlike other analytics tools, we don’t collect more than is absolutely necessary. Here is a list of what we **do and don’t** collect from your visitors.
