@@ -24,8 +24,6 @@ When a visits is blocked it shows as a counter on the icon. The counter does res
 
 On the options page you will find all websites being blocked and you can change what the extension should block.
 
-> Do you want to block your visits on all your websites without enableing them for every website? [Check our tutorial](/block-your-visits-on-all-websites) on how to do this in Google Chrome.
-
 Enjoy and if you have any feedback, go to our website and let us know!
 
 > For now the extension is only available in Chrome and Firefox. Opera and Edge are coming.
