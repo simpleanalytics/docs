@@ -134,6 +134,7 @@ For both System plugins and Framework plugins, the following settings need to be
 ### Advanced settings
 
 <!-- prettier-ignore -->
+
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |custom domain|[Custom domain](https://docs.simpleanalytics.com/bypass-ad-blockers)|string|undefined|no|`simple.example.com`|
@@ -144,11 +145,11 @@ For both System plugins and Framework plugins, the following settings need to be
 |`data-onload` callback|[Onload function](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway)|string|undefined|no|`onloadCallback()`|
 |`data-hostname`|[Overwrite hostname](https://docs.simpleanalytics.com/overwrite-domain-name)|string|undefined|no|`otherdomain.com`|
 |`data-sa-global`|[Override global](https://docs.simpleanalytics.com/events#the-variable-sa_event-is-already-used)|string|`sa_event`|no|`ba_event`|
-|enabled|Enable the script|boolean|`true`|no|`false`|
 
 ### Event settings
 
 <!-- prettier-ignore -->
+
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |`data-collect`|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|array|undefined|no|`outbound,emails,downloads`|
@@ -160,6 +161,7 @@ For both System plugins and Framework plugins, the following settings need to be
 ### System plugins specific settings
 
 <!-- prettier-ignore -->
+
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
 |ignore admins|Ignore admin|boolean|`true`|no|`false`|
