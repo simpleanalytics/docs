@@ -5,7 +5,7 @@ permalink: /import-google-analytics-data
 last_modified_at: 2022-07-08
 ---
 
-[Google Analytics has shut down](https://blog.simpleanalytics.com/google-to-sunset-universal-analytics-in-2023) its Universal Analytics properties. To keep this data you can choose to import it into Simple Analytics. We built a simple import tool where you can import your data in just a few clicks.
+[Google Analytics has shut down](https://www.simpleanalytics.com/blog/google-to-sunset-universal-analytics-in-2023) its Universal Analytics properties. To keep this data you can choose to import it into Simple Analytics. We built a simple import tool where you can import your data in just a few clicks.
 
 With Simple Analytics you can import Universal Analytics properties and Google Analytics 4 properties.
 
