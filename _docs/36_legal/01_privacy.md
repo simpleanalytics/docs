@@ -30,5 +30,5 @@ We don’t transfer your visitors’ data outside of the EU. Our customers can m
 
 Ever since we started our business in 2018, we have only relied on European service providers. This is a choice. The data we collect is not personal and does not fall under the GDPR. It can be transferred anywhere with no legal issues and can be lawfully sent to our customers located outside the EU, including non-Privacy Shield-certified US customers.
 
-Are you coming from Google Analytics? Please read our blog post on [the differences between Google Analytics and Simple Analytics](https://blog.simpleanalytics.com/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Analytics data into Simple Analytics.
+Are you coming from Google Analytics? Please read our blog post on [the differences between Google Analytics and Simple Analytics](https://www.simpleanalytics.com/blog/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Analytics data into Simple Analytics.
 
