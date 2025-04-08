@@ -38,7 +38,7 @@ We don't transfer your visitors' data outside of the EU. This includes no data t
 
 The EU-US Privacy Shield Framework was invalidated by the Court of Justice of the European Union. Called the ["Schrems II"](https://iapp.org/news/a/the-schrems-ii-decision-eu-us-data-transfers-in-question/) decision, which refers to the ruling that transferring data to US providers violates GDPR regulation. This has been the ruling since July 2020. We have been compliant since the start of our business in 2018.
 
-Are you coming from Google Analytics? Please read our blog post on the [differences between Google Analytics and Simple Analytics](https://blog.simpleanalytics.com/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Anlaytics data into Simple Analytics.
+Are you coming from Google Analytics? Please read our blog post on the [differences between Google Analytics and Simple Analytics](https://www.simpleanalytics.com/blog/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Anlaytics data into Simple Analytics.
 
 ## Protecting your privacy
 
