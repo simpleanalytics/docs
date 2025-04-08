@@ -115,10 +115,10 @@ You can hide the logo by adding `data-show-logo="false"`.
   </p>
 </div>
 
-<!-- Chart 2 with data from blog.simpleanalytics.com -->
+<!-- Chart 2 with data from dashboard.simpleanalytics.com -->
 <div
   id="chart-id-2"
-  data-hostname="blog.simpleanalytics.com"
+  data-hostname="dashboard.simpleanalytics.com"
   style="aspect-ratio: 2/1"
 >
   <p style="margin: 0;">
