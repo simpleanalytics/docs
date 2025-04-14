@@ -7,6 +7,8 @@ last_modified_at: 2023-11-15
 
 Server-side and mobile app data submissions are supported, allowing for the transmission of standard data points along with [metadata](/metadata). Access and analyze this data through the [Events Explorer](/events-explorer) or create [goals](/goals) for frequent event monitoring.
 
+We created a video explaining how server side tracking works with Simple Analytics. [Here you go](https://www.youtube.com/watch?v=kKqwnsmR-RE)
+
 ## Data submission
 
 Developers can submit data to `https://queue.simpleanalyticscdn.com/events` using JSON format.
