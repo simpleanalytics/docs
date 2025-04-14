@@ -8,6 +8,8 @@ last_modified_at: 2022-04-14
 
 You can embed our script in WIX by adding a **New Tool**. On this page we will explain how to use this feature and help you installing the Simple Analytics script on WIX.
 
+Don't want to read a manual? We also created a video sharing how to install Simple Analytics on Wix. [Here you go](https://www.youtube.com/watch?v=95EZHMFMfKU)
+
 > It's only possible for WIX sites with a connected domain a.k.a. paid plan
 
 Follow these steps to add Simple Analytics to your website:
