@@ -8,7 +8,7 @@ last_modified_at: 2023-01-20
 
 With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email links. You will need to install our separate script for it, but after that you don't need to modify any code.
 
-If you want to get your hands dirty, you can collect events for all kinds of custom events. Like form submits, button clicks, and many more.
+If you want to get your hands dirty, you can collect events for all kinds of custom events. Like form submits, button clicks, and many more. We created a simple video showing how to collect events in Simple Analytics. [Here you go](https://www.youtube.com/watch?v=CCvdgTReqms)
 
 You can [download your events](/export-data), use them in the [Events Explorer](/events-explorer), and use them in [Goals](/goals).
 
