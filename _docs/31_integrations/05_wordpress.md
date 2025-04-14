@@ -8,6 +8,8 @@ last_modified_at: 2024-10-25
 
 You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress.
 
+We created a video showing how to install Simple Analytics on a WordPress website. [Here you go](https://www.youtube.com/watch?v=x_w0uiWlNwM)
+
 The WordPress plugin is ready to roll right from install—no setup needed. But for the adventurers out there:
 
 <details markdown="1">
