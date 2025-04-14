@@ -22,6 +22,6 @@ To get started quickly:
 - [Set up your events](https://docs.simpleanalytics.com/events)
 - [Read more about compliance and the datapoints that we collect](https://docs.simpleanalytics.com/introduction-to-legal)
 
-Let us know if you have any questions [here](https://dashboard.simpleanalytics.com/contact). Happy to help!
+Looking for a troubleshooting guide? [Here you go](https://www.simpleanalytics.com/blog/debug-simple-analytics-script). If you have any other questions, just let us know [here](https://dashboard.simpleanalytics.com/contact).
 
 <img class="drawing" src="https://assets.simpleanalytics.com/images/drawings/cookie-jar.png" alt="">
