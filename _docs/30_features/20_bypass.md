@@ -7,6 +7,8 @@ last_modified_at: 2022-04-14
 
 Simple Analytics never collects any personal identifiable information. Ad-blockers see us just any other analytics company and some of the ad-blockers are blocking our domain as a result. To prevent your stats being blocked as a result we allow you to setup a bypass. This basically hides Simple Analytics' server name from the browser by redirecting a subdomain to our domain.
 
+We created a video showing how to bypass adblockers in Simple Analytics. [Here you go](https://www.youtube.com/watch?v=C8pVceioNi0)
+
 ## Setup a custom subdomain
 
 You only need access to your DNS to set this up. Add a CNAME record to your DNS pointing to `simpleanalyticsexternal.com` and fill in your full domain in [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers). We advise to choose a domain like `api.example.com` instead of `track.example.com` _(tracking, analytics, collect, and similar keywords are usually blocked)_.
