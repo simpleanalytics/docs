@@ -9,6 +9,8 @@ last_modified_at: 2022-04-14
 
 [Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, and amount of downloads for common files (pdf, csv, docx, xlsx). Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
 
+We created a simple video showing how to add automated events in Simple Analytics. [Here you go](https://www.youtube.com/watch?v=CCvdgTReqms)
+
 ## Outbound
 
 Outbound links are basically just links that go to a different website. For example you have a website with a few products listed on them. People pay you for listing those products on your website. Now you want to find a way to track the amount of visitors that go to that website. For this you'll need outbound events!
