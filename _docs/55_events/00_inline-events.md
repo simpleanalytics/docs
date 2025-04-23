@@ -6,7 +6,7 @@ hidden: true
 last_modified_at: 2025-04-22
 ---
 
-This small script watches your page for any element with a data-simple-event attribute and automatically sends events to Simple Analytics when the user interacts. You don’t need to write any extra JavaScript calls—just add the right attributes to your HTML.
+This small script watches your page for any element with a `data-simple-event`-attribute and automatically sends events to Simple Analytics when the user interacts. You don’t need to write any extra JavaScript calls—just add the right attributes to your HTML.
 
 <blockquote class="red">
   <p>Warning, this script is in beta and can change any time.</p>
