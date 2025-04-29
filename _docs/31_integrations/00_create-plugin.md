@@ -87,10 +87,9 @@ The following HTML should be added to the `<body>` of the page:
 <!-- prettier-ignore -->
 ```html
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ````
 
-If that is not possible, add only the `<script>`-tag in the `<head>` of the page and ignore the `<noscript>` part.
+If that is not possible, add the `<script>`-tag in the `<head>`.
 
 #### Events script
 
