@@ -89,6 +89,7 @@ Expand your data submission with additional fields:
   "unique": true,
   "https": true,
   "ua": "User Agent",
+  "referrer": "https://www.anotherexample.com/page-1",
 
   "viewport_width": 1440,
   "viewport_height": 310,
