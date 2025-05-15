@@ -17,6 +17,10 @@ Include these two lines on every page at the end of your `<body>` (or anywhere e
 
 We have a website setup wizard to test if you installed your script correctly. If you still have problems installing it, please let us know! We helped a lot of people with setting up their script and we love to help you as well. Just [contact](https://simpleanalytics.com/contact) us.
 
+## Server-side tracking
+
+We support server-side tracking, [read more about it here](https://docs.simpleanalytics.com/events/server-side#page-views).
+
 ## Non-JavaScript environments
 
 While most people browse the internet with JavaScript enabled, there are still some users who disable it, fully aware that many websites may not function as intended. If you want to capture data from these visitors, consider adding our `noscript` tag. Be aware that this may also increase traffic from bots, as some don’t have JavaScript enabled.
