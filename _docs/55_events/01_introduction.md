@@ -56,6 +56,16 @@ sa_event("click_signup");
 
 To send metadata with your event, [check our metadata page](/metadata).
 
+## Inline events helper
+
+We created a simple helper script that allows you to use data attributes for events:
+
+```html
+<a href="/pricing" data-simple-event="click_pricing_page">See pricing</a>
+```
+
+[Read more about it here](/events/inline).
+
 ## Snippets
 
 First, check if the events you need are part of our [automated events script](/automated-events). If not, these snippets might help to get you started with custom events:
