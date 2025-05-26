@@ -22,6 +22,7 @@ Read our guides on how to install Simple Analytics on:
 - [Jimdo Creator](/install-simple-analytics-on-jimdo-creator)
 - [MailerLite](/install-simple-analytics-on-mailerlite)
 - [GoDaddy](/install-simple-analytics-on-godaddy)
+- [Netlify](https://app.netlify.com/extensions/simpleanalytics)
 
 > Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact) Happy to create a guide or plugin for you.
 
