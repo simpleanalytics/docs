@@ -47,6 +47,6 @@ Get our official plugins for these frameworks:
 - [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
 - [Next.js](/install-simple-analytics-with-next) <small>(guide only)</small>
 - [Docusaurus](/install-simple-analytics-with-docusaurus) <small>(source on [GitHub](https://github.com/simpleanalytics/docusaurus-plugin#readme))</small>
-- [iOS (Swift)](/install-simple-analytics-with-swift) <small>(source on [GitHub](https://github.com/simpleanalytics/swift-package#readme))</small> {% if currentDate < threeMonthsLater %}NEW{% endif %}
+- [Astro](https://github.com/simpleanalytics/astro-plugin) <small>(guide on GitHub)</small>
 
 > Are you missing your favorite framework? [Let us know!](https://simpleanalytics.com/contact) Happy to create a plugin for you.
