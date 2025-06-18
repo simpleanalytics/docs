@@ -2,7 +2,7 @@
 title: Proxy
 category: install-script
 permalink: /proxy
-last_modified_at: 2024-11-05
+last_modified_at: 2025-06-18
 ---
 
 Concerned about your website visitors’ privacy when using Simple Analytics? We understand. Let’s be clear: we never collect your visitors’ IP addresses. And with our proxy setup option using Caddy, NGINX, Netlify, or Vercel, you have the power to ensure those IP addresses never reach us. This setup acts as a privacy shield, keeping your visitors' IP addresses from reaching external services.
@@ -19,7 +19,7 @@ Setting up a proxy means no visitor IPs get to our servers. It’s an easy and e
 > Trailing slashes are very important here. Keep them as they are in this example.
 
 ```
-location /simple/ {
+location ^~ /simple/ {
   proxy_set_header  X-Forwarded-Proto $scheme;
   proxy_set_header  X-Forwarded-Proto-Version $http2;
   proxy_set_header  Host $http_host;
