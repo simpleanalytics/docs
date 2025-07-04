@@ -58,7 +58,7 @@ sa_event("click_signup");
 
 <details markdown="1">
 
-<summary>How to implement thisServer side</summary>
+<summary>How to implement it server side</summary>
 
 ```bash
 curl -X POST https://queue.simpleanalyticscdn.com/events \
