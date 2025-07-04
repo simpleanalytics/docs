@@ -1,6 +1,6 @@
 ---
 title: Inline events helper
-category: inline-events
+category: events
 permalink: /events/inline
 hidden: true
 last_modified_at: 2025-04-22
