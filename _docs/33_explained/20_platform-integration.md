@@ -5,6 +5,14 @@ permalink: /explained/platform-integration
 last_modified_at: 2025-07-04
 ---
 
+This short guide is for product and engineering teams that run a multi-tenant SaaS or website builder and want to offer privacy-first analytics without extra setup screens. Your users will see a single Enable Simple Analytics checkbox in their account settings, and once they tick it the platform does the heavy lifting.
+
+Under the hood you inject one lightweight script into each customer site, using the site’s hostname as the identifier. There is no need for a separate Simple Analytics account or manual site ID, which keeps onboarding fast. If a user later unticks the box, you simply stop embedding the script so tracking halts immediately.
+
+Optionally you can include a small helper that buffers event calls. It sits harmlessly in every page, and when the main script is active it ships events like click_signup to Simple Analytics for richer insights and affiliate credit.
+
+## UI integration
+
 Add an **Enable Simple Analytics** checkbox in your settings page.
 
 - When the user checks the box, inject the embed script below into their pages.
