@@ -17,27 +17,6 @@ With this API you can export raw data points (without sampling). Data points are
 
 When using the API, it's recommended [to generate the export URL](/api/helpers#generate-export-url) via [the export your data interface](/export-data). It has a simple UI where fields can be selected without any coding or technical knowledge.
 
-## Hourly data export
-
-You can now export data for specific hours of a day. This allows for more granular data analysis when you need to understand traffic patterns within a single day.
-
-To export hourly data, append the hour to your date in the format `YYYY-MM-DDTHH` where `HH` is the hour in 24-hour format (00-23).
-
-**Important constraints for hourly exports:**
-
-- Both `start` and `end` parameters must include the hour
-- The start and end dates must be the same (you can only export hourly data for a single day at a time)
-- Hours must be between 00 and 23
-
-**Example:**
-
-```bash
-# Export data for 2PM on July 4th, 2025
-curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=example.com&start=2025-07-04T14&end=2025-07-04T14&fields=added_iso,path" \
-     -H 'User-Id: sa_user_id_...' \
-     -H 'Api-Key: sa_api_key_...'
-```
-
 <details>
 <summary>Available fields in export</summary>
 <div markdown="1">
@@ -177,6 +156,27 @@ https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version
 ```
 
 [See live example](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&start=yesterday&end=today&timezone=Europe/Amsterdam&events=visit_pricing) of output.
+
+## Hourly data export
+
+You can now export data for specific hours of a day. This allows for more granular data analysis when you need to understand traffic patterns within a single day.
+
+To export hourly data, append the hour to your date in the format `YYYY-MM-DDTHH` where `HH` is the hour in 24-hour format (00-23).
+
+**Important constraints for hourly exports:**
+
+- Both `start` and `end` parameters must include the hour
+- The start and end dates must be the same (you can only export hourly data for a single day at a time)
+- Hours must be between 00 and 23
+
+**Example:**
+
+```bash
+# Export data for 2PM on July 4th, 2025
+curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_version }}&format=csv&hostname=example.com&start=2025-07-04T14&end=2025-07-04T14&fields=added_iso,path" \
+     -H 'User-Id: sa_user_id_...' \
+     -H 'Api-Key: sa_api_key_...'
+```
 
 ## Performance
 
