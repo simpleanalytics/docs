@@ -168,6 +168,7 @@ To export hourly data, append the hour to your date in the format `YYYY-MM-DDTHH
 - Both `start` and `end` parameters must include the hour
 - The start and end dates must be the same (you can only export hourly data for a single day at a time)
 - Hours must be between 00 and 23
+- The hours are in the timezone you specify in the `timezone` parameter
 
 **Example:**
 
