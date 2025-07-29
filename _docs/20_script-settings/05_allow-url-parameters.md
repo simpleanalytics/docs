@@ -27,4 +27,6 @@ If you want to capture `product-id` and `article-slug` from your website's URLs,
 ></script>
 ```
 
+> **Warning:** Defined parameters in `data-allow-params` are case-sensitive.
+
 Read more on [how to use URL parameters](/how-to-use-url-parameters) on your website.
