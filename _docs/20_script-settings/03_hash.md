@@ -6,7 +6,7 @@ permalink: /hash-mode
 last_modified_at: 2022-04-14
 ---
 
-Some websites don't really navigate to other pages but us the hash (`#`) in the URL. Normally Simple Analytics removes everything from the URLs after a `?` or a `#`. We don't want to collect this information because it could contain private information like search keywords.
+Some websites don't really navigate to other pages but use the hash (`#`) in the URL. Normally Simple Analytics removes everything from the URLs after a `?` or a `#`. We don't want to collect this information because it could contain private information like search keywords.
 
 To allow the script to detect those hash changes you can add `data-mode="hash"` to the script tag:
 

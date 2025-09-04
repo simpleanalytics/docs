@@ -46,7 +46,7 @@ Let's say you have these pages:
 - `https://example.com/accounts/@profilename` (where `profilename` can be any name)
 - `https://example.com/vouchers` (only one page)
 
-To match `/search/1` and `/search/2` you can use `/search/*`. If you use `/search/` it will only ignore that page and still collects `/search/1` and `/search/2`.
+To match `/search/1` and `/search/2` you can use `/search/*`. If you use `/search/` it will only ignore that page and still collect `/search/1` and `/search/2`.
 
 To block all above pages you can use the following code:
 
