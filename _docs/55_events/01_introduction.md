@@ -44,7 +44,9 @@ The next part is probably already on your page for collecting page views. If not
 
 If you **can't** add it to your `<body>` tag, place it in the `<head>` of the page.
 
-Don't place the `<noscript>` part in the `<head>`. If you can't add it to the body, just omit it.
+Don't place the `<noscript>` part in the `<head>`.
+If you can't add it to the body, just omit it.
+We don't recommend adding a noscript tag, because it's mostly collecting data from robots.
 
 If you use our [custom domain feature](/bypass-ad-blockers), make sure to replace `scripts.simpleanalyticscdn.com` and `queue.simpleanalyticscdn.com` with your custom domain.
 
