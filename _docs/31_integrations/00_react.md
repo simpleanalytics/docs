@@ -3,15 +3,58 @@ title: Install Simple Analytics with React
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-react
-last_modified_at: 2022-04-14
+last_modified_at: 2025-10-22
 ---
 
-Most projects have the structure of `npx create-react-app my-app`. Let's follow that structure.
+Add Simple Analytics to React apps with our official React package.
 
-You don't need any dependency to install Simple Analytics.
+## Install
 
-1. Go to your HTML file: usually in `public/index.html`
-2. Paste the embed code from [how to add our script](/script) at the end of body of that file.
-3. Save this file and you're done!
+Run this command to install Simple Analytics for React:
+
+```bash
+npm i @simpleanalytics/react
+```
+
+## Usage
+
+Import the `<SimpleAnalytics />` to start tracking pageviews
+
+```tsx
+import { SimpleAnalytics } from "@simpleanalytics/react";
+
+export function App() {
+  return (
+    <>
+      {/* your app */}
+      <SimpleAnalytics />
+    </>
+  );
+}
+```
+
+## Options
+
+- **Custom domain**: see [/bypass-ad-blockers](/bypass-ad-blockers)
+
+```tsx
+<SimpleAnalytics domain="custom.domain.com" />
+```
+
+## Send events
+
+```tsx
+import { trackEvent } from "@simpleanalytics/react";
+
+function Button() {
+  return (
+    <button onClick={() => trackEvent("clicked")}>
+      Track event
+    </button>
+  );
+}
+```
+
+Note: `trackEvent` requires `<SimpleAnalytics />` to be present in your app.
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
