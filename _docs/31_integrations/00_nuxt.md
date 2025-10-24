@@ -34,7 +34,8 @@ export default defineNuxtConfig({
   // ...
   modules: ["@simpleanalytics/nuxt"],
   simpleAnalytics: {
-    // hostname: "example.com", // optional, uses SIMPLE_ANALYTICS_HOSTNAME if not set
+    // optional, uses SIMPLE_ANALYTICS_HOSTNAME if not set
+    // hostname: "example.com",
   },
 });
 ```
@@ -103,7 +104,7 @@ export default defineEventHandler(async (event) => {
 
 Tracks a pageview on the server.
 
-**Parameters:**
+#### Parameters
 
 - `options` (object):
   - `hostname` (string): Your Simple Analytics hostname
@@ -116,7 +117,7 @@ Tracks a pageview on the server.
 
 Tracks a custom event on the server.
 
-**Parameters:**
+#### Parameters
 
 - `eventName` (string): Name of the event to track
 - `options` (object):
