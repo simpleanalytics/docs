@@ -6,7 +6,7 @@ permalink: /install-simple-analytics-with-nuxt
 last_modified_at: 2025-10-24
 ---
 
-This Nuxt module provides a simple way to add privacy-friendly pageview and event tracking using Simple Analytics to your Nuxt 3 or 4 application.
+Easily add privacy-friendly pageview and event tracking to your Nuxt 3 or 4 app with the Simple Analytics Nuxt module.
 
 ## Installation
 
@@ -16,17 +16,17 @@ npm i @simpleanalytics/nuxt
 
 ## Environment Variables
 
-Set your website domain (as added in your [Simple Analytics dashboard](https://dashboard.simpleanalytics.com/)):
+Set your website domain (the same as in your [Simple Analytics dashboard](https://dashboard.simpleanalytics.com/)):
 
 ```bash
 SIMPLE_ANALYTICS_HOSTNAME=example.com
 ```
 
-> Omit `www.`, just the root domain or if you use a subdomain, include that. Like `sub.example.com`.
+> Omit `www.` Use only the root domain, or include the subdomain if applicable, like `sub.example.com`.
 
 ## Configuration
 
-Add the module to your `nuxt.config.ts` and optionally set your hostname:
+Add the module to your `nuxt.config.ts` and optionally define your hostname:
 
 ```ts
 // nuxt.config.ts
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   // ...
   modules: ["@simpleanalytics/nuxt"],
   simpleAnalytics: {
-    // hostname: "example.com", // optional, if you don't use SIMPLE_ANALYTICS_HOSTNAME
+    // hostname: "example.com", // optional, uses SIMPLE_ANALYTICS_HOSTNAME if not set
   },
 });
 ```
@@ -43,11 +43,11 @@ export default defineNuxtConfig({
 
 ### Client-side analytics
 
-The module uses the `simple-analytics-vue` plugin to auto-inject the Simple Analytics script.
+The module automatically injects the Simple Analytics script through the `simple-analytics-vue` plugin.
 
 ### Tracking events in client components
 
-To track events programmatically, inject the `saEvent` function.
+To track custom events, use the injected `saEvent` function:
 
 ```vue
 <script setup>
@@ -64,7 +64,7 @@ const likeComment = (comment) => {
 
 ### Server-side tracking (SSR & API)
 
-Track page views or events during server side rendering or in API routes:
+You can track pageviews and events from the server during SSR or within Nitro API routes.
 
 #### In server-rendered pages
 
@@ -101,7 +101,7 @@ export default defineEventHandler(async (event) => {
 
 ### `trackPageview(options)`
 
-Track a pageview on the server.
+Tracks a pageview on the server.
 
 **Parameters:**
 
@@ -114,7 +114,7 @@ Track a pageview on the server.
 
 ### `trackEvent(eventName, options)`
 
-Track a custom event on the server.
+Tracks a custom event on the server.
 
 **Parameters:**
 
