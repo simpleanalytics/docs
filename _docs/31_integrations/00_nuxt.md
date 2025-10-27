@@ -73,9 +73,7 @@ You can track pageviews and events from the server during SSR or within Nitro AP
 <script setup lang="ts">
 if (import.meta.server) {
   await trackPageview({
-    metadata: {
-      source: "some extra context",
-    },
+    some_extra_metadata: "homepage"
   });
 }
 </script>
@@ -86,19 +84,16 @@ if (import.meta.server) {
 ```ts
 // server/api/signup.post.ts
 export default defineEventHandler(async (event) => {
-  await trackEvent("user_signup", {
-    event,
-    metadata: {
-      source: "registration_form",
-      user_type: "new",
-    },
+  await trackEvent(event, "user_signup", {
+    source: "registration_form",
+    user_type: "new",
   });
 
   // ...
 });
 ```
 
-## API Reference
+## API Reference (Nuxt)
 
 ### `trackPageview(options)`
 
@@ -106,12 +101,7 @@ Tracks a pageview on the server.
 
 #### Parameters
 
-- `options` (object):
-  - `hostname` (string): Your Simple Analytics hostname
-  - `metadata` (object): Additional metadata to track
-  - `ignoreMetrics` (object): Metrics to ignore for this pageview
-  - `collectDnt` (boolean): Whether to collect data when DNT is enabled
-  - `strictUtm` (boolean): Whether to use strict UTM parameter parsing
+- `metadata` (object): Additional metadata to track (optional)
 
 ### `trackEvent(eventName, options)`
 
@@ -120,9 +110,16 @@ Tracks a custom event on the server.
 #### Parameters
 
 - `eventName` (string): Name of the event to track
-- `options` (object):
-  - `headers` (Headers): Request headers
-  - `hostname` (string): Your Simple Analytics hostname
-  - `metadata` (object): Additional metadata to track
-  - `ignoreMetrics` (object): Metrics to ignore for this event
-  - `collectDnt` (boolean): Whether to collect data when DNT is enabled
+- `metadata` (object): Additional metadata to track (optional)
+
+## API Reference (Nitro)
+
+### `trackEvent(event, eventName, options)`
+
+Tracks a custom event in a Nitro API route.
+
+#### Parameters
+
+- `event` (H3Event): Nitro request event
+- `eventName` (string): Name of the event to track
+- `metadata` (object): Additional metadata to track (optional)
