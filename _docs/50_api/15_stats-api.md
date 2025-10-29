@@ -39,7 +39,7 @@ The complete list of all query params you can use with the latest Stats API.
 - `info` shows more information about fields in the response (defaults to true)
 - `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
 - [`events` a list of specified events and how much they occurred](#events)
-- `interval` either `hour`, `day`, `week`, `month`, or `year` (`hour` added in version 6)
+- `interval` for histogram field: `hour`, `day`, `week`, `month`, or `year` (`hour` added in version 6)
 - `fields` a comma seperated list of fields you want to get returned:
   - `pageviews` the total amount of page views in the specified period
   - `visitors` the total amount of visitors (unique page views) in the specified period
