@@ -113,6 +113,8 @@ UTM codes are bits of text you can add to a link that tell Simple Analytics (as 
 https://example.com/landing-page?utm_source=company-x&utm_medium=newsletter&utm_campaign=march
 ```
 
+We don't support `utm_term` as it is intended to contain user generated content.
+
 [Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer.
 
 ## User-agent strings
