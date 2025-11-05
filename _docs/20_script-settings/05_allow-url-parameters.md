@@ -12,7 +12,7 @@ By default, we collect all UTM parameters (with and without the `utm_` prefix) a
 - `utm_medium` / `medium`
 - `utm_campaign` / `campaign`
 - `utm_content` / `content`
-- `utm_term` / `term`
+- ~~`utm_term` / `term`~~ (this param is deprecated as it is intended to contain user generated content)
 
 > If your use [strict UTMs](/strict-utms), you can only use the query parameters that start with `utm_`.
 
