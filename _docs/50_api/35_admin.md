@@ -46,7 +46,7 @@ curl -X "POST" "http://localhost:3000/api/websites/add" \
 
 ### Labels
 
-If you want to keep track of your websites in a different way. A label could help. This is how that looks at the websites overview page:
+If you want to keep track of your websites in a different way, a label could help. This is how a labels looks on the websites overview page:
 
 <img loading="lazy" src="https://assets.simpleanalytics.com/docs/dashboard/labels-in-website-overview.png" alt="Simple Analytics websites overview with custom labels" class="border">
 

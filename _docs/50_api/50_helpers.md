@@ -10,7 +10,7 @@ We added a few helpers to make it easier to work with our API.
 
 ## Time zones
 
-In all requests you can specify your time zone. In the Stats API we default to your website setting, in the Export APIs we default to UTC. Speficy your time zone to always get the same results.
+In all requests you can specify your time zone. In the Stats API we default to your website setting, in the Export APIs we default to UTC. Specify your time zone to always get the same results.
 
 A list of valid time zones can be found at the Wikipedia page ["List of tz database time zones"](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). For example, `Europe/Amsterdam` is a valid time zone. You should specify the time zone like this in your requests: `timezone=UTC`.
 

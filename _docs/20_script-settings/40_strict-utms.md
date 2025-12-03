@@ -6,7 +6,7 @@ created_at: 2022-07-26
 last_modified_at: 2022-07-26
 ---
 
-When collecting UTM codes, we allow to skip the `utm_` part:
+When collecting UTM codes, we allow you to skip the `utm_` part:
 
 - `utm_source` / `source` / `ref`
 - `utm_medium` / `medium`

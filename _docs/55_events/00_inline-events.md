@@ -31,7 +31,7 @@ To track a click, add `data-simple-event="event_name"` to any clickable elemen
 
 Tracking form submissions
 
-Simply put `data-simple-event="form_name"` on your form tag. When the user submits, the script send an event with the name of the form and the text of the submit button, then submits the form.
+Simply put `data-simple-event="form_name"` on your form tag. When the user submits, the script sends an event with the name of the form and the text of the submit button, then submits the form.
 
 ```html
 <form action="/signup" data-simple-event="signup_form">

@@ -56,7 +56,7 @@ SimpleAnalytics.shared.track(path: ["detailview", "item1", "edit"])
 This will be converted to a pageview on `/detailview/item1/edit` on Simple Analytics.
 
 ### Tracking Events
-Use events to track interactions or noticable events like errors or success on a page.
+Use events to track interactions or noticeable events like errors or success on a page.
 ```swift
 SimpleAnalytics.shared.track(event: "logged in")
 ```

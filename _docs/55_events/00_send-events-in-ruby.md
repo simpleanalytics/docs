@@ -24,7 +24,7 @@ def self.trigger(event_name)
   new.trigger(event_name)
 end
 
-# EventData makes sure the data is corrent when sending to
+# EventData makes sure the data is correct when sending to
 # API endpoint
 class EventData
   attr_reader: version,: ua,: platform,: hostname,: date,: events
