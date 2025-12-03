@@ -23,7 +23,7 @@ When using the API, it's recommended [to generate the export URL](/api/helpers#g
 
 | Field               | Type    | Description                                                                                                                                                |
 | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| added_unix          | number  | The time of the page view in unix time format                                                                                                              |
+| added_unix          | number  | The time of the page view in UNIX time format                                                                                                              |
 | added_iso           | date    | The time of the page view in ISO8601 format                                                                                                                |
 | hostname            | string  | The hostname of the website                                                                                                                                |
 | hostname_original   | string  | When the hostname is overwritten, we store the original hostname                                                                                           |
@@ -86,7 +86,7 @@ In short: apply an `Api-Key`-header where the key starts with `sa_api_key_...` a
 
 ## Selecting fields
 
-You can specify all fields you like to export. Add them as a comma seperated list (e.g.: `&fields=added_iso,hostname,path`).
+You can specify all fields you like to export. Add them as a comma separated list (e.g.: `&fields=added_iso,hostname,path`).
 
 <details>
 <summary>Request example (for developers)</summary>
@@ -145,7 +145,7 @@ Because metadata fields are defined by the user, we don't know the fields upfron
 
 Fields in the API and exporter have a type appended to them. You can see fields like `metadata.fieldname_text`, `metadata.fieldname_date`, `metadata.fieldname_bool`, or `metadata.fieldname_int` (where fieldname is a user-defined name). Some metadata fields can have both, for example, `metadata.projectID_text` and `metadata.projectID_int`. If a text looks like a number, we convert it to an integer and we keep the text version.
 
-When you see something prefixed with `metadata.sa_urlparam_`, it's a paramter from the [allowed URL parameters feature](/allow-params).
+When you see something prefixed with `metadata.sa_urlparam_`, it's a parameter from the [allowed URL parameters feature](/allow-params).
 
 ## Event counts
 

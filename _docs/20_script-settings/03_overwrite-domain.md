@@ -16,7 +16,7 @@ Make sure to include the our `simpleanalyticscdn.com` script (note the **cdn** p
 <script async data-hostname="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
-You see that we added an attribute (`data-hostname=""`) to the script tag and `hostname` param to the `img` tag. If you add your domain to it (eg `example.com`) it will look like this:
+You see that we added an attribute (`data-hostname=""`) to the script tag and `hostname` param to the `img` tag. If you add your domain to it (e.g. `example.com`) it will look like this:
 
 <!-- prettier-ignore -->
 ```html

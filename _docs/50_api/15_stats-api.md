@@ -33,18 +33,18 @@ The complete list of all query params you can use with the latest Stats API.
 
 - `version` the version of the API (the latest version is `{{ site.api_version }}`)
 - `start` the start date with this format `YYYY-MM-DD` (defaults to 1 month ago)
-- `end` the end data with above format (defaults to today)
+- `end` the end date with the above format (defaults to today)
 - `limit` a limit for the fields (1-1000)
 - `timezone` a valid time zone like `Europe/Amsterdam` (with capitals)
 - `info` shows more information about fields in the response (defaults to true)
 - `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
 - [`events` a list of specified events and how much they occurred](#events)
 - `interval` for histogram field: `hour`, `day`, `week`, `month`, or `year` (`hour` added in version 6)
-- `fields` a comma seperated list of fields you want to get returned:
+- `fields` a comma separated list of fields you want to get returned:
   - `pageviews` the total amount of page views in the specified period
   - `visitors` the total amount of visitors (unique page views) in the specified period
   - `histogram` an array with page views and visitors per day
-  - `pages` a comma seperated list of pages you want to get stats for
+  - `pages` a comma separated list of pages you want to get stats for
   - `countries` a list of country codes
   - `referrers` a list of referrers (normalized)
   - `utm_sources` a list of UTM sources
@@ -76,7 +76,7 @@ You can filter the returned data. Here is the list of filters you can use.
 - `utm_content` filter by a UTM content
 - `utm_term` filter by a UTM term
 - `browser_name` filter by a browser name
-- `os_name` filter by a OS name
+- `os_name` filter by an OS name
 - `device_type` filter by a device type (mobile, tablet, desktop, tv)
 
 These filters don't have effect on the `events` query parameter.

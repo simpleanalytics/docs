@@ -43,6 +43,6 @@ You can find more information about the data we collect [here](/data-collection)
 
 Your data are **fully encrypted** on our dedicated servers. We only rely on **European, GDPR-compliant providers** to ensure that your data are handled as safely as possible.
 
-We retain your data as long as your Simple Analytics account is active (and in correspondance to your subscription plan) and never share the data with third parties. **You control your data** and can export it at any time.
+We retain your data as long as your Simple Analytics account is active (and in correspondence to your subscription plan) and never share the data with third parties. **You control your data** and can export it at any time.
 
 You can find out more about our security and ownership policies [here](/data-security-and-ownership).
