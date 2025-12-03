@@ -38,7 +38,7 @@ If you want to block all these pages you can separate them with a comma:
 
 ## Wildcards
 
-If you need to match a part of a string you need to add an wildcard asterisk (`*`).
+If you need to match a part of a string you need to add a wildcard asterisk (`*`).
 
 Let's say you have these pages:
 

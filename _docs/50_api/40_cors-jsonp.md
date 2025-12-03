@@ -25,4 +25,4 @@ $.ajax({
 });
 ```
 
-We append the `Access-Control-Allow-Origin`-header with the `*`-value , so any modern browser should accept the request without any effort.
+We append the `Access-Control-Allow-Origin`-header with the `*`-value, so any modern browser should accept the request without any effort.

@@ -5,11 +5,11 @@ permalink: /trigger-custom-page-views
 last_modified_at: 2022-04-14
 ---
 
-Normally you want to trigger a custom page view for _Single Page Apps_ (SPA's) like React, Vue, and Angular. Because pages are not completely reloaded on navigation we need a way to track those navigations as page views.
+Normally you want to trigger a custom page view for _Single Page Apps_ (SPAs) like React, Vue, and Angular. Because pages are not completely reloaded on navigation we need a way to track those navigations as page views.
 
 For some analytics tools like Google Analytics you need to trigger a page view via their script. For Simple Analytics this is different.
 
-> With Simple Analytics there is **no** need to implement anything to detect page views in SPA's. It all works out of the box.
+> With Simple Analytics there is **no** need to implement anything to detect page views in SPAs. It all works out of the box.
 
 <details>
 <summary>Technical explanation</summary>

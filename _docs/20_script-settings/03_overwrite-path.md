@@ -10,7 +10,7 @@ Let's say you want to change the path of your page views (and events). You have 
 
 > You can not overwrite the hash from the URL, only the path.
 
-This is how you set up a `myPathOverwriter`-function for that usecase:
+This is how you set up a `myPathOverwriter`-function for that use case:
 
 ```html
 <script>
