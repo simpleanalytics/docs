@@ -35,9 +35,13 @@ You do not need to sign a data processing agreement with Simple Analytics, as we
 
 ### Does Simple Analytics use third-party providers?
 
-We rely on Dutch companies Worldserver and Leaseweb to store data. We also rely on BunnyCDN to deliver content. BunnyCDN is part of Slovenian company BunnyWay.
+We rely on Dutch companies Worldserver and Leaseweb to store data. We also rely on bunny.net to deliver content. bunny.net is part of Slovenian company BunnyWay d.o.o.
 
-Worldserver, Leaseweb, and Bunnyweb are **trusted, European, and GDPR-compliant providers with infrastructure located in the EU**. We don’t need to use European providers, as non-personal data can be transferred without limitations under the GDPR. We still choose to do so to ensure that the processing is as transparent and confidential as possible.
+We disabled logging for our CDN in bunny.net and they replace IP-addresses with 0.0.0.0:
+
+![Bunny.net logging settings](https://assets.simpleanalytics.com/docs/compliance/bunny-logging.png)
+
+Worldserver, Leaseweb, and bunny.net are **trusted, European, and GDPR-compliant providers with infrastructure located in the EU**. We don’t need to use European providers, as non-personal data can be transferred without limitations under the GDPR. We still choose to do so to ensure that the processing is as transparent and confidential as possible.
 
 ### Does Simple Analytics require a privacy notice or a privacy policy?
 
