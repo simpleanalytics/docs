@@ -5,47 +5,66 @@ category: explained
 permalink: /explained/unique-visits
 redirect_from:
   - /uniques
-last_modified_at: 2022-04-14
+last_modified_at: 2024-12-19
 ---
 
-At Simple Analytics, we approach things differently. Our priority is to protect the privacy of your visitors while staying compliant with strict (and necessary) privacy laws. This means some of our statistics, like unique visits, work differently.
+At Simple Analytics, we approach things differently. Our priority is protecting your visitors' privacy while staying compliant with strict privacy laws. This means some of our statistics work differently than traditional analytics tools.
 
-We record page views because it’s easy to do without compromising privacy. Tracking unique visits, however, can be more invasive. Traditional analytics tools use cookies to identify unique visits, storing them on a visitor’s computer. This allows tracking over long periods, which is highly intrusive.
+## What we actually measure
 
-Some privacy-focused tools improve this slightly by using hashes of a visitor’s IP address combined with a date. While better for privacy, it’s still not ideal. At Simple Analytics, we take it a step further.
+Strictly speaking, Simple Analytics doesn't track "unique visitors" in the traditional sense. Instead, we track **unique pageviews**, which we call "visitors" in our dashboard. We chose this terminology because showing both "unique pageviews" and "pageviews" can be confusing for most users.
+
+So when you see "visitors" in Simple Analytics, you're looking at unique pageviews, not individual people tracked across sessions.
+
+## How we detect unique pageviews
+
+We use the [referrer](https://en.wikipedia.org/wiki/HTTP_referer) to determine whether a pageview should be counted as unique. Here's how it works:
+
+**A pageview is counted as unique (visitor) when:**
+
+- There is no referrer (direct traffic)
+- The referrer's hostname is different from your website's hostname (traffic from external sources)
+
+**A pageview is NOT counted as unique when:**
+
+- The referrer's hostname matches your website's hostname (internal navigation)
+- The user navigates using browser history (back/forward buttons)
+- The user reloads the page
+
+For example, if someone visits `randomwebsite.com` and clicks a link to `yourwebsite.com`, the referrer (`randomwebsite.com`) is different from your site, so we count this as a unique pageview (visitor).
+
+If that same person then clicks a link to `yourwebsite.com/page`, the referrer is now `yourwebsite.com` (which matches), so this second pageview is not counted as unique.
+
+![](/images/referrer-visit.jpg)
+
+The same logic applies to direct visits. When someone types `yourwebsite.com` directly into their browser or clicks a link that doesn't send a referrer, there's no referrer available, so we count this as a unique pageview (visitor).
+
+If they then navigate to `yourwebsite.com/page`, the referrer is now `yourwebsite.com`, so this second pageview is not counted as unique.
+
+![](/images/direct-visit.jpg)
+
+## Why some pages have pageviews but (almost) no visitors
+
+This happens naturally with internal navigation. Once someone enters your site (counted as a visitor on their entry page), any subsequent pages they visit during that session only add to pageviews, not visitors. Only pages that users land on directly (with no referrer or a referrer from an external site) can be counted as visitors.
+
+## Single-page applications (SPAs)
+
+For single-page applications, we automatically detect all navigation after the initial page load as non-unique. Only the first pageview uses the referrer-based detection described above.
 
 ## No cookies or fingerprinting
 
 > We **do not** use cookies (or any kind of storage), fingerprinting, or PII data.
 
-Under a European court ruling, pre-ticked cookie consent forms are no longer allowed under GDPR. In the UK, PECR (the privacy directive) already made this clear. Both laws also explicitly forbid visitor fingerprinting.
+Traditional analytics tools use cookies to identify unique visitors, storing them on a visitor's computer to track them over long periods. Some privacy-focused tools use hashes of IP addresses combined with dates, but this is still considered fingerprinting and requires consent under GDPR and PECR.
 
-Many analytics providers rely on fingerprinting techniques, like using IP addresses, to track users. Although this may appear privacy-friendly, it’s considered fingerprinting and requires consent.
+We don't do any of this. Our referrer-based approach requires no storage on the visitor's device and doesn't identify or track individuals.
 
 ## No consent needed
 
 > With Simple Analytics you don't need consent. It's one of our core values.
 
-We don’t think you should ever have to ask for consent. Our service is designed for companies that care about the big picture, not tracking individual customers. That’s why we developed our own unique way of tracking unique visits.
+Because we don't use cookies, fingerprinting, or any form of visitor identification, you don't need to ask for consent to use Simple Analytics. Our service is designed for companies that care about aggregate insights, not tracking individual users.
 
-## How it works
-
-When a visitor moves from one website to another, their browser sends a [referrer](https://en.wikipedia.org/wiki/HTTP_referer). For example, if someone visits `randomwebsite.com` and then navigates to `yourwebsite.com`, the browser sends `randomwebsite.com` as the referrer to `yourwebsite.com`. This information helps identify where traffic is coming from, and we use it to determine if a visit is unique. When the referrer doesn't match your website, we count the first pageview as a new visitor.
-
-![](/images/referrer-visit.jpg)
-
-A direct visit occurs when a user lands on your website by typing the URL into their browser or when the previous page does not send a referrer. In that case, we also count the first pageview as a visitor.
-
-![](/images/direct-visit.jpg)
-
-## Some pages have pageviews but (almost) no visitors
-
-This happens when users navigate within your website. Once the first visitor is recorded, any additional pageviews during the session are counted as pageviews, not visitors. As a result, only pages with no referrer or a referrer from another website can be counted as visitors.
-
-## SPAs
-
-If you have a single-page application we automatically see all visits after the first visit as a non unique visit. For the first visit we use above functionality to detect if a visit is unique.
-
-> If you have any questions about legal aspects or anything else, please [shoot us a message](https://dashboard.simpleanalytics.com/contact).
+> If you have any questions about how we count visitors or anything else, please [shoot us a message](https://dashboard.simpleanalytics.com/contact).
 
 [Follow Simple Analytics](https://x.com/SimpleAnalytic) or [the founder](https://x.com/adriaandotcom) on X to see how we approach our challenges.
