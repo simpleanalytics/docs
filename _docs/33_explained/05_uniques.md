@@ -46,6 +46,6 @@ This happens when users navigate within your website. Once the first visitor is 
 
 If you have a single-page application we automatically see all visits after the first visit as a non unique visit. For the first visit we use above functionality to detect if a visit is unique.
 
-> If you have any questions about legal aspects or anything else, please [shoot us a message](https://simpleanalytics.com/contact).
+> If you have any questions about legal aspects or anything else, please [shoot us a message](https://dashboard.simpleanalytics.com/contact).
 
-[Follow Simple Analytics](https://twitter.com/SimpleAnalytic) or [the founder](https://twitter.com/adriaandotcom) on Twitter to see how we approach our challenges.
+[Follow Simple Analytics](https://x.com/SimpleAnalytic) or [the founder](https://x.com/adriaandotcom) on X to see how we approach our challenges.
