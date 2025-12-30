@@ -97,11 +97,11 @@ You can specify the metadata callback function via `data-metadata-collector`. Le
 ></script>
 ```
 
-The function you specify in `data-metadata-collector` recieves an object with 2 values: `type` and `path`. Value `type` is either `pageview` or `event`. The `path` is a the path of the page. For example, `/contact`. Make sure to always return an object.
+The function you specify in `data-metadata-collector` receives an object with 2 values: `type` and `path`. Value `type` is either `pageview` or `event`. The `path` is the path of the page. For example, `/contact`. Make sure to always return an object.
 
 ## Metadata keys
 
-We replace non-alphanummeric characters with an underscore. We also trim underscores from the front and end of the key.
+We replace non-alphanumeric characters with an underscore. We also trim underscores from the front and end of the key.
 
 ```js
 sa_event("click_signup", { "$%!k_e___y__": "value" });
@@ -152,7 +152,7 @@ There are some limitations to numbers within metadata objects:
 
 ### Date
 
-When sending dates in JavaScript they will be converted to a string. For example, `new Date()` becomes <code>{{ "now"  | date: '%s' | date: '%Y-%m-%dT%H:%M:%S.123Z' }}</code>. We recommend wrapping your datas in a [`new Date()` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) or converting to text via [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). That way you're always sure you're sending dates in the right format.
+When sending dates in JavaScript they will be converted to a string. For example, `new Date()` becomes <code>{{ "now"  | date: '%s' | date: '%Y-%m-%dT%H:%M:%S.123Z' }}</code>. We recommend wrapping your dates in a [`new Date()` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) or converting to text via [toISOString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString). That way you're always sure you're sending dates in the right format.
 
 ```js
 sa_event("click_signup", { created_at: new Date() });

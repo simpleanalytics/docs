@@ -27,7 +27,7 @@ Source: [giftofspeed.com](https://www.giftofspeed.com/gzip-test/) for Brotli, [a
 
 ## Features
 
-Obviously not all features are available in our light script. Here an comparison of both versions:
+Obviously not all features are available in our light script. Here is a comparison of both versions:
 
 | Feature                                         | `latest.js` | `light.js` |
 | :---------------------------------------------- | :---------: | :--------: |
