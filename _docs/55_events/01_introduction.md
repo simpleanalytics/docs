@@ -10,6 +10,8 @@ With events in Simple Analytics you can collect counts of certain events. Let's 
 
 If you want to get your hands dirty, you can collect events for all kinds of custom events. Like form submits, button clicks, and many more. We created a simple video showing how to collect events in Simple Analytics. [Here you go](https://www.youtube.com/watch?v=CCvdgTReqms)
 
+For specific platforms, we have integration guides. For example, if you're using [Circle paywalls](/install-simple-analytics-on-circle), you can track successful payments as conversion events.
+
 You can [download your events](/export-data), use them in the [Events Explorer](/events-explorer), and use them in [Goals](/goals).
 
 <img class="border" src="https://assets.simpleanalytics.com/docs/events/events-explorer.png" alt="Overview of the Events Explorer in Simple Analytics" />
@@ -79,6 +81,7 @@ First, check if the events you need are part of our [automated events script](/a
 - [Link clicks](https://gist.github.com/adriaandotcom/aa00b4cdc85797a2f2ba715e82de85da#file-links-click-html)
 - [Form submits in Google Tag Manager](https://www.simpleanalytics.com/blog/how-to-track-form-submissions-using-google-tag-manager)
 - [Video events in Google Tag Manager](https://www.simpleanalytics.com/blog/video-tracking)
+- [Circle paywall conversions](/install-simple-analytics-on-circle) - Track successful payments
 
 ## Valid event names
 
