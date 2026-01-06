@@ -1,6 +1,6 @@
 ---
 title: Install Simple Analytics on Circle
-menu: Circle
+hidden: true
 category: integrations
 permalink: /install-simple-analytics-on-circle
 last_modified_at: 2025-01-01
