@@ -8,7 +8,7 @@ last_modified_at: 2025-01-01
 
 You can track conversions and successful payments in Simple Analytics when using Circle paywalls. Circle allows you to add custom JavaScript code to your paywall thank you page, which is perfect for tracking conversion events.
 
-> 🚨 **Warning:** This is an advanced feature, and we recommend working with your developer to ensure the correct setup.
+> **Warning:** This is an advanced feature, and we recommend working with your developer to ensure the correct setup.
 
 ## Add conversion tracking code
 
