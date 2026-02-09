@@ -31,7 +31,7 @@ There are a few ways to interact with our API. We have the Stats API for aggrega
      </a>
 </div>
 
-Depending on the public settings of a website you'll need to autenticate. Learn [how to authenticate with Simple Analytics APIs](/api/authenticate).
+Depending on the public settings of a website you'll need to authenticate. Learn [how to authenticate with Simple Analytics APIs](/api/authenticate).
 
 <style>
      .apis {

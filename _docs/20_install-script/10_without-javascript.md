@@ -7,7 +7,7 @@ last_modified_at: 2022-04-14
 
 Normally you would collect page view via our [open source JavaScript](/script). But there are other way to collect those. You can either send data via [your own server](/server-side-tracking) or send it through a pixel (a small GIF image).
 
-> By default we already include a pixel (image) with our `<noscript>` tag. This tag gets executed when a visitor disabled JavaScript in their browser. The pixel inside the tag will still record that page view. The data connected to that page view is limited, but still useful for the overal picture.
+> By default we already include a pixel (image) with our `<noscript>` tag. This tag gets executed when a visitor disabled JavaScript in their browser. The pixel inside the tag will still record that page view. The data connected to that page view is limited, but still useful for the overall picture.
 
 To collect page views with our pixel you can add parameters to the URL of the image:
 

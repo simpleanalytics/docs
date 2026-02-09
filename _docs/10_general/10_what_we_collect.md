@@ -159,7 +159,7 @@ We track these UTM codes:
 - `utm_medium` (e.g.: `search`)
 - `utm_campaign` (e.g.: `get_customers_02`)
 - `utm_content` (e.g.: `sidebar`)
-- _`utm_term` (this is deprecated as it is intented to contain user data)_
+- _`utm_term` (this is deprecated as it is intended to contain user data)_
 
 Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. These are all saved as the `utm_source`. Read more on [using URL parameters](/how-to-use-url-parameters).
 

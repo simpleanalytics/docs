@@ -14,7 +14,7 @@ We do everything in our power to keep your data safe. We collect the bare minimu
 
 ## Data Hosting Infrastructure
 
-The data we collect belongs to you. We only collect non-personal data and don’t share the data with third parties or transfer it overseas. Your website data never leaves the Netherlands and, therefore, the E.U. Also, no service providers receive any data except for our hosting provider- who is under binding obligations of confidentiality.
+The data we collect belongs to you. We only collect non-personal data and don’t share the data with third parties or transfer it overseas. Your website data never leaves the Netherlands and, therefore, the EU. Also, no service providers receive any data except for our hosting provider- who is under binding obligations of confidentiality.
 
 The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both Dutch companies that adhere to EU law and GDPR policy.
 
@@ -22,7 +22,7 @@ We use a CDN for most of our customers. The CDN is called Bunny CDN and is part 
 
 ## Data Security
 
-[Simple Analytics](https://simpleanalytics.com/) (and our hosting parties) possess organizational and technical measures to protect the data. Customer data is encrypted both at rest and in transit. Only Simple Analytics holds the decryption keys, ensuring data confidentiality. Even our hosting providers cannot access the data in the clear. Any questions related to our security policy and measures can be sent to info@simpleanalytics.com
+[Simple Analytics](https://simpleanalytics.com/) (and our hosting parties) possess organizational and technical measures to protect the data. Customer data is encrypted both at rest and in transit. Only Simple Analytics holds the decryption keys, ensuring data confidentiality. Even our hosting providers cannot access the data in the clear. Any questions related to our security policy and measures can be sent to <info@simpleanalytics.com>
 
 ## Data Retention
 
@@ -42,7 +42,7 @@ We give customers full ownership and value from their data. Our plugins seamless
 
 Simple Analytics makes no claim over your data. We do not store, sell, or use it for our purposes. **Your data belongs to you**.
 
-Your subscription pays for the service - not your data. We are an independently funded company with no ties to large corporations or the ad tech industry and do not use your data for marketing, for retargeting, for developing other services, and so on. 
+Your subscription pays for the service - not your data. We are an independently funded company with no ties to large corporations or the ad tech industry and do not use your data for marketing, for retargeting, for developing other services, and so on.
 
 ## We Don’t Sell Your Data
 

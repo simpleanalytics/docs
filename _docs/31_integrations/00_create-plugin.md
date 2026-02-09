@@ -58,7 +58,7 @@ Custom settings should be specified like this: `customSettings: { collectDarkMod
 
 A few examples: WordPress, Drupal, Google Tag Manager, and Cloudflare.
 
-The settings below should be changable via the UI of the plugin. All changed settings need to be passed to the `<script>`-tag. For example:
+The settings below should be changeable via the UI of the plugin. All changed settings need to be passed to the `<script>`-tag. For example:
 
 <!-- prettier-ignore -->
 ```html
@@ -111,7 +111,7 @@ In the UI of the System plugin, we need to be able to change all settings. See h
 
 ### System plugin checklist
 
-- [ ] [All settings](#settings) below are changable via the UI of the plugin
+- [ ] [All settings](#settings) below are changeable via the UI of the plugin
 - [ ] Settings are hidden by default (if possible)
 - [ ] Add ignore admins feature (if possible)
 - [ ] Allow custom settings (key, value)
