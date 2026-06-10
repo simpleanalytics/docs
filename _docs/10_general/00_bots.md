@@ -3,7 +3,9 @@ title: Bots
 hidden: true
 category: general
 permalink: /bots
-last_modified_at: 2022-04-14
+last_modified_at: 2026-06-10
+redirect_from:
+  - /b
 ---
 
 We have a few bots that work for us :)
@@ -19,6 +21,7 @@ A few use-cases where we use our bots:
 The bots are usually identified with this User-Agent string:
 
 ```
+Mozilla/5.0 (compatible; SimpleAnalytics/1.0; +https://docs.simpleanalytics.com/b)
 Mozilla/5.0 (compatible; SimpleAnalyticsBot/1.0; +https://docs.simpleanalytics.com/bots)
 ```
 
