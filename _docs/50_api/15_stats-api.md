@@ -4,7 +4,7 @@ category: api
 permalink: /api/stats
 redirect_from:
   - /api/json-api
-last_modified_at: 2022-04-14
+last_modified_at: 2026-07-28
 ---
 
 To get the aggregated statistics you see in our dashboard, use this Stats API. This API helps integrate Simple Analytics into your systems. For example, you can get KPIs out of your data or embed your data into a customized dashboard.
@@ -92,7 +92,25 @@ You can also add the path to the URL, and Simple Analytics returns the data for 
 
 ## Wildcards
 
-The filtering parameters support wildcard searches. It's as easy as adding an `*` at the end of your parameter value. If you want to search for pages with a path that starts with `/web`, you can get it via [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=pages&pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=pages&pages=/web*)). If you wish to get all pages that contain a word in its path, you should use [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=pages&pages=*terms*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=pages&pages=*terms\*)).
+The filtering parameters support trailing wildcards. Add an `*` to the end of a value to match everything that starts with it. For example, use [`pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=pages&pages=/web*) to return pages whose paths start with `/web`.
+
+Page filters also support a single leading-and-trailing wildcard pattern to match paths that contain a specific value. These searches are more resource intensive and therefore have the following requirements:
+
+- Authenticate the request with an API key, including for public websites.
+- Specify exactly one path pattern with `page` or `pages`.
+- Start and end the pattern with `*`, with no additional wildcards in between.
+- Include at least 12 non-slash characters between the wildcards.
+- Only request the `pageviews`, `visitors`, and/or `histogram` fields.
+- Do not request events.
+
+For example, this request matches paths containing `/app/example-name/`:
+
+```sh
+curl "https://simpleanalytics.com/example.com.json?version={{ site.api_version }}&fields=pageviews,visitors,histogram&pages=*/app/example-name/*" \
+  -H "Api-Key: sa_api_key_..."
+```
+
+Contains searches are rate limited. If a request returns HTTP `429`, wait for the number of seconds in the `Retry-After` response header before retrying.
 
 ## Time on page
 
