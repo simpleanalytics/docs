@@ -28,12 +28,11 @@ The only thing that's required, is enabling this script somewhere in the `<body>
 
 ```html
 <!-- Simple Analytics platform integration -->
-<script async data-hostname="<customer_domain>" data-platform="<your-platform-name>" data-affiliate="<affiliate-code>" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async data-hostname="<customer_domain>" data-platform="<your-platform-name>" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
 - *`<customer_domain>`* (required) is the stable identifier you create for that site on day one. Usually this is `customerxxx.yourplatform.com`, or `customerdomain.com`. Keep it even if the user changes domains later. It's also the hostname the Simple Analytics users will see in their dashboard.
 - *`<your-platform-name>`* (required) is a unique name of your platform (e.g.: `netlify`, `partner.com`, `kennis.shop`). This helps us linking all domains to your platform. Allowing us to give your users tailored instructions.
-- *`<affiliate-code>`* (optional) is a unique code you can get from us which we use to attach it to every hit so new sign ups are credited to your account. This is optional.
 
 ## Optional event tracking
 
@@ -66,7 +65,6 @@ curl -X POST https://queue.simpleanalyticscdn.com/events \
 -d '{
   "type": "event",
   "hostname": "<customer_subdomain>.example.com",
-  "affiliate": "affiliate-code",
   "event": "click_signup",
   "ua": "<user_agent>"
 }'
