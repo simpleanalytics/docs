@@ -4,7 +4,7 @@ category: api
 permalink: /api/stats
 redirect_from:
   - /api/json-api
-last_modified_at: 2026-07-28
+last_modified_at: 2026-08-11
 ---
 
 To get the aggregated statistics you see in our dashboard, use this Stats API. This API helps integrate Simple Analytics into your systems. For example, you can get KPIs out of your data or embed your data into a customized dashboard.
@@ -83,6 +83,18 @@ These filters don't have effect on the `events` query parameter.
 
 </div>
 </details>
+
+### Filter by metadata
+
+Starting with version 6, you can filter Stats API results by [metadata](/metadata) with a `metadata.<key>` query parameter. Use the normalized metadata key without its storage type suffix, such as `_text`, `_int`, `_bool`, or `_date`.
+
+For example, this request only returns page views where the `app_id` metadata value is `nl-123`:
+
+```
+https://simpleanalytics.com/example.com.json?version=6&fields=histogram&metadata.app_id=nl-123
+```
+
+The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata, while boolean and date values also fall back to their exact text value. When you specify multiple metadata filters, all of them must match.
 
 ## Get data for specific pages
 
