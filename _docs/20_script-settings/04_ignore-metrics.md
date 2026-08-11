@@ -3,7 +3,7 @@ title: Ignore metrics
 category: script-settings
 permalink: /ignore-metrics
 created_at: 2022-07-26
-last_modified_at: 2022-10-07
+last_modified_at: 2026-08-12
 ---
 
 Our script only collects non-personal data. Some customers might want to limit our metrics even more. That's why we created the ignore metrics feature.
@@ -13,7 +13,7 @@ Our script only collects non-personal data. Some customers might want to limit o
 | Referrer            | `referrer`     |                        |
 | UTM codes           | `utm`          | [`ref` param][0]       |
 | Country / time zone | `country`      |                        |
-| Session IDs         | `session`      |                        |
+| Page-load IDs       | `session`      |                        |
 | Time on page        | `timeonpage`   | Data point ID, Page ID |
 | Scrolled            | `scrolled`     | Data point ID, Page ID |
 | User Agent          | `useragent`    |                        |
@@ -51,7 +51,7 @@ You can enable this feature by adding `data-ignore-metrics=...` to our script em
 ></script>
 ```
 
-In this case, it will not collect [a Session ID](/metrics#ids).
+In this case, it will not collect [a page-load ID](/metrics#ids). The `session` setting is the legacy name and remains supported so existing embed code does not break.
 
 ## Comma separated
 

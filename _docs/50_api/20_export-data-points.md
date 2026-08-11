@@ -7,11 +7,13 @@ redirect_from:
   - /api/export-pageviews
   - /api/export-page-views
   - /api/export-events
-last_modified_at: 2025-07-04
+last_modified_at: 2026-08-12
 fields: added_iso,country_code,datapoint,device_type,path,query,query_and_path,session_id,utm_source,utm_campaign,utm_content,utm_medium
 ---
 
 With this API you can export raw data points (without sampling). Data points are both page views and events combined. Define a date range and it pulls out the data. The response will only include the selected fields.
+
+> We now call the short-lived value formerly known as a session ID a **page-load ID** and are replacing `session_id` with `page_load_id` in our terminology. The export field remains available as `session_id` for backward compatibility, so existing exports, queries, and integrations do not break. It groups data only within one actual page load; it is not stored on the visitor's device and does not continue across reloads or full navigations.
 
 > Want to use a simple interface to export your data? [See our video on exporting data](/export-data).
 
@@ -53,6 +55,7 @@ When using the API, it's recommended [to generate the export URL](/api/helpers#g
 | lang_region         | string  | The region part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language)                                       |
 | lang_language       | string  | The language part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language)                                     |
 | uuid                | string  | A UUID v4 of the page view (this is not always unique)                                                                                                     |
+| session_id          | string  | Legacy field name for the page-load ID; retained for backward compatibility                                                                                |
 | metadata.\*\*\*     | N/A     | Metadata are your own specified fields followed by a type (e.g. `project_text`)                                                                            |
 
 Data like `scrolled_percentage` and `duration_seconds` is not always added because it depends on the browser features of the visitor. [Metadata](/metadata) is found in `metadata.***` fields. They will only be exported when specified by key (e.g.: `metadata.dark_mode_bool`).
