@@ -3,7 +3,7 @@ title: Introduction to events
 menu: Introduction
 category: events
 permalink: /events
-last_modified_at: 2023-01-20
+last_modified_at: 2026-08-12
 ---
 
 With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email links. You will need to install our separate script for it, but after that you don't need to modify any code.
@@ -91,7 +91,9 @@ Event names are limited to 200 characters. If this exceeds we truncate the name 
 
 ## Tracking over multiple pages
 
-We don't store anything on the computer of your visits so naturally events will not be linked when a visitor navigates between page. Unless it's a SPA (Single Page App) which does not reload the whole page but only a part of the page. If you don't have a SPA you can use [Pjax](https://github.com/MoOx/pjax/) to convert your website to a SPA website.
+Events and page views sent during one actual page load can be grouped with a page-load ID. On a SPA (Single Page Application), History API route changes do not reload the document, so consecutive virtual pages share the same page-load ID. On a website without SPA or History API navigation, a full navigation loads a new document and creates a new page-load ID. Nothing is stored on the visitor's device to continue the ID across page loads.
+
+The page-load ID was previously called a session ID and exposed as `session_id`. We are replacing that name with `page_load_id` because it describes the short-lived scope more accurately. The legacy `session_id` field remains available so existing code and integrations do not break.
 
 ## Export events
 

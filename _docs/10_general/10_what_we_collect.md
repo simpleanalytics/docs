@@ -4,7 +4,7 @@ category: general
 permalink: /what-we-collect
 hidden: true
 excerpt: "Simple Analytics only collects privacy-insensitive data. Here is a list of what we do and don’t collect from your visitors."
-last_modified_at: 2023-01-11
+last_modified_at: 2026-08-12
 ---
 
 Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your visitors.
@@ -121,9 +121,11 @@ The first ID, data point ID, is a technical ID. When a visitor lands on a page, 
 
 The second ID, page ID, is used to link multiple events (if a customer collects them) together. Let's say you have 2 events on the same page, you can then combine them together. This is not used by most customers. This page ID will be reset after every page.
 
-The last ID, session ID, is used to link multiple events and pages into one session. It's the same as a page ID, but with multiple pages. When a customer has a SPA (Single Page Application), the session ID is reset when the website is closed. If the customer doesn't have a SPA, the session ID is reset with every navigation.
+The third ID, page-load ID, is a random in-memory ID used to link events and page views sent during one actual page load. On a SPA (Single Page Application), History API route changes do not reload the document, so consecutive virtual pages share the same page-load ID. Reloading, navigating to a new document, or closing the page ends the page load. On a website without SPA or History API navigation, every page gets a new page-load ID.
 
-It's important to note, that all these IDs are not linked to a person or personal data. It's linked to only a page view, page, or session. Another point: these IDs are not stored on the device. Meaning, that if a visitor reloads the page (with F5 for example), the IDs will all be reset.
+We previously called this value a session ID and exposed it as `session_id`. That name can suggest a conventional analytics session that continues across page loads, while this ID does not. We are replacing the name with `page_load_id` to describe its scope more accurately. We will keep `session_id` as a backward-compatible legacy field so existing exports, queries, and integrations do not break.
+
+None of these IDs are linked to a person or personal data, and none are stored on the device. Reloading the page resets all of them.
 
 ### URLs
 
