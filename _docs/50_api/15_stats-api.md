@@ -11,7 +11,7 @@ To get the aggregated statistics you see in our dashboard, use this Stats API. T
 
 > If you are looking for raw data, you can use our [Export API](/api/export-data-points).
 
-For this API, you need to be [authenticated with an API key](/api/authenticate). If your website is public, you can usually get the JSON data without credentials. Metadata filters still require an API key unless you are signed in as a member with access to the view. Leading-and-trailing wildcard page filters always require an API key.
+For this API, you need to be [authenticated with an API key](/api/authenticate). If your website is public, you can get the JSON data without credentials.
 
 You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example, for our website, it is:
 
@@ -92,12 +92,11 @@ Starting with version 6, you can filter Stats API results by [metadata](/metadat
 
 For example, this request only returns page views where the `app_id` metadata value is `nl-123`:
 
-```sh
-curl "https://simpleanalytics.com/example.com.json?version=6&fields=histogram&metadata.app_id=nl-123" \
-  -H "Api-Key: sa_api_key_..."
+```
+https://simpleanalytics.com/example.com.json?version=6&fields=histogram&metadata.app_id=nl-123
 ```
 
-Metadata filters require an API key, including for public websites, unless you are signed in as a member with access to the view. The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata, while boolean and date values also fall back to their exact text value. Matches are exact and wildcards are not supported. When you specify multiple metadata filters, all of them must match (AND).
+The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata, while boolean and date values also fall back to their exact text value. Matches are exact and wildcards are not supported. When you specify multiple metadata filters, all of them must match (AND).
 
 ## Get data for specific pages
 
