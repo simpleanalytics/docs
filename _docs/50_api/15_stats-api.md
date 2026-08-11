@@ -11,7 +11,7 @@ To get the aggregated statistics you see in our dashboard, use this Stats API. T
 
 > If you are looking for raw data, you can use our [Export API](/api/export-data-points).
 
-For this API, you need to be [authenticated with an API key](/api/authenticate). If your website is public, you can get the JSON data without credentials.
+For this API, you need to be [authenticated with an API key](/api/authenticate). If your website is public, you can usually get the JSON data without credentials. Metadata filters still require an API key unless you are signed in as a member with access to the view. Leading-and-trailing wildcard page filters always require an API key.
 
 You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example, for our website, it is:
 
@@ -39,6 +39,7 @@ The complete list of all query params you can use with the latest Stats API.
 - `info` shows more information about fields in the response (defaults to true)
 - `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
 - [`events` a list of specified events and how much they occurred](#events)
+- `metadata.<key>` filters by an exact metadata value (version 6 and later)
 - `interval` for histogram field: `hour`, `day`, `week`, `month`, or `year` (`hour` added in version 6)
 - `fields` a comma separated list of fields you want to get returned:
   - `pageviews` the total amount of page views in the specified period
@@ -78,23 +79,25 @@ You can filter the returned data. Here is the list of filters you can use.
 - `browser_name` filter by a browser name
 - `os_name` filter by an OS name
 - `device_type` filter by a device type (mobile, tablet, desktop, tv)
+- `metadata.<key>` filter by an exact metadata value (version 6 and later)
 
-These filters don't have effect on the `events` query parameter.
+These filters also apply to results selected with the `events` query parameter.
 
 </div>
 </details>
 
 ### Filter by metadata
 
-Starting with version 6, you can filter Stats API results by [metadata](/metadata) with a `metadata.<key>` query parameter. Use the normalized metadata key without its storage type suffix, such as `_text`, `_int`, `_bool`, or `_date`.
+Starting with version 6, you can filter Stats API results by [metadata](/metadata) with a `metadata.<key>` query parameter. The key can contain only letters, numbers, and underscores (`[a-zA-Z0-9_]+`). Use the normalized metadata key without its storage type suffix, such as `_text`, `_int`, `_bool`, or `_date`.
 
 For example, this request only returns page views where the `app_id` metadata value is `nl-123`:
 
-```
-https://simpleanalytics.com/example.com.json?version=6&fields=histogram&metadata.app_id=nl-123
+```sh
+curl "https://simpleanalytics.com/example.com.json?version=6&fields=histogram&metadata.app_id=nl-123" \
+  -H "Api-Key: sa_api_key_..."
 ```
 
-The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata, while boolean and date values also fall back to their exact text value. When you specify multiple metadata filters, all of them must match.
+Metadata filters require an API key, including for public websites, unless you are signed in as a member with access to the view. The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata, while boolean and date values also fall back to their exact text value. Matches are exact and wildcards are not supported. When you specify multiple metadata filters, all of them must match (AND).
 
 ## Get data for specific pages
 
