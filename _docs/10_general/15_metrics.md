@@ -3,7 +3,7 @@ title: Metrics
 category: general
 permalink: /metrics
 excerpt: "We never track visitors so the data below is never linked to one specific visitor. Here is a list of metrics we collect."
-last_modified_at: 2022-07-18
+last_modified_at: 2026-08-12
 hidden: true
 redirect_from:
   - /data-points
@@ -59,15 +59,17 @@ We collect three IDs:
 
 1. ID of the data point <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</span>
 1. ID of the page <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
-1. ID of the session <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
+1. ID of the page load <span class="rating scaled"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Less important</span>
 
 The first ID, data point ID, is a technical ID. When a visitor lands on a page, we send a request to our server. When we measure [time on page](/explained/time-on-page) we need to send a request at the end of a page view. To link those two requests together we match them with an ID. The data point ID. If time on page is not relevant, we can drop this ID.
 
 The second ID, page ID, is used to link multiple events (if a customer collects them) together. Let's say you have 2 events on the same page, you can then combine them together. This is not used by most customers. This page ID will be reset after every page.
 
-The last ID, session ID, is used to link multiple events and pages into one session. It's the same as a page ID, but with multiple pages. When a customer has a SPA (Single Page Application), the session ID is reset when the website is closed. If the customer doesn't have a SPA, the session ID is reset with every navigation. The session ID is only needed when you need to use [sequential events](/events#sequential-by-session). Not so much for the amount of visitors. We measure that [with the referrer of the page](/explained/unique-visits).
+The third ID, page-load ID, is a random in-memory ID used to link events and page views sent during one actual page load. On a SPA (Single Page Application), History API route changes do not reload the document, so consecutive virtual pages share the same page-load ID. Reloading, navigating to a new document, or closing the page ends the page load. On a website without SPA or History API navigation, every page gets a new page-load ID. The page-load ID is only needed for [sequential events](/events#tracking-over-multiple-pages), not for counting visitors. We measure visitors [with the referrer of the page](/explained/unique-visits).
 
-It's important to note, that all these IDs are not linked to a person or personal data. It's linked to only a page view, page, or session. Another point: these IDs are not stored on the device. Meaning, that if a visitor reloads the page (with F5 for example), the IDs will all be reset.
+We previously called this value a session ID and exposed it as `session_id`. That name can suggest a conventional analytics session that continues across page loads, while this ID does not. We are replacing the name with `page_load_id` to describe its scope more accurately. We will keep `session_id` as a backward-compatible legacy field so existing exports, queries, and integrations do not break.
+
+None of these IDs are linked to a person or personal data, and none are stored on the device. Reloading the page resets all of them.
 
 ### Scrolled percentage & time on page
 

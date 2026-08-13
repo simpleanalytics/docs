@@ -2,14 +2,16 @@
 title: Team roles
 category: explained
 permalink: /explained/team-roles
-last_modified_at: 2024-07-04
+last_modified_at: 2026-08-11
 ---
 
 When you have the Teams plan, you can invite users to your Simple Analytics account. Every user has their own role. You can add those users to all your websites (and custom views), or a selection of them.
 
 ## Owner
 
-An owner is the first admin of a team, and every team has one owner. The owner has full control over all settings, users, and data. They have the same permissions as an admin. When they leave the team, they need to assign their owner role to another team member.
+An owner is the first admin of a team, and every team has one owner. The owner has full control over all settings, users, and data. They have the same permissions as an admin.
+
+When an owner deletes their account but keeps the team, ownership moves to another active owner or admin. If there is no eligible successor, the team is deleted together with its websites and analytics data. See [how account deletion affects teams](/delete-account).
 
 ## Admin
 
@@ -33,4 +35,4 @@ Viewers have restricted access with read-only permissions. They can view dashboa
 
 ## General permissions
 
-All accounts have the ability to delete their own account, giving users control over their participation in the team.
+All accounts have the ability to delete their own account, giving users control over their participation in the team. Depending on their role and the other active members, deleting an account can transfer team ownership or delete the team. See [how to delete your account](/delete-account) for details.

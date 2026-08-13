@@ -20,7 +20,7 @@ Or when working with a package manifest use:
 ```
 
 ## Usage
-You'll need a Simple Analytics account to be able to use this package. See [Simple Analytics](https://www.simpleanalytics.com/?referral=roel-van-der-kraan) for more info.
+You'll need a Simple Analytics account to be able to use this package. See [Simple Analytics](https://www.simpleanalytics.com/) for more info.
 
 Import the library:
 ```swift

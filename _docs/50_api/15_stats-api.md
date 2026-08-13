@@ -4,7 +4,7 @@ category: api
 permalink: /api/stats
 redirect_from:
   - /api/json-api
-last_modified_at: 2026-07-28
+last_modified_at: 2026-08-11
 ---
 
 To get the aggregated statistics you see in our dashboard, use this Stats API. This API helps integrate Simple Analytics into your systems. For example, you can get KPIs out of your data or embed your data into a customized dashboard.
@@ -39,6 +39,7 @@ The complete list of all query params you can use with the latest Stats API.
 - `info` shows more information about fields in the response (defaults to true)
 - `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
 - [`events` a list of specified events and how much they occurred](#events)
+- `metadata.<key>` filters by an exact metadata value (version 6 and later)
 - `interval` for histogram field: `hour`, `day`, `week`, `month`, or `year` (`hour` added in version 6)
 - `fields` a comma separated list of fields you want to get returned:
   - `pageviews` the total amount of page views in the specified period
@@ -78,11 +79,24 @@ You can filter the returned data. Here is the list of filters you can use.
 - `browser_name` filter by a browser name
 - `os_name` filter by an OS name
 - `device_type` filter by a device type (mobile, tablet, desktop, tv)
+- `metadata.<key>` filter by an exact metadata value (version 6 and later)
 
-These filters don't have effect on the `events` query parameter.
+These filters also apply to results selected with the `events` query parameter.
 
 </div>
 </details>
+
+### Filter by metadata
+
+Starting with version 6, you can filter Stats API results by [metadata](/metadata) with a `metadata.<key>` query parameter. The key can contain only letters, numbers, and underscores (`[a-zA-Z0-9_]+`). Use the normalized metadata key without its storage type suffix, such as `_text`, `_int`, `_bool`, or `_date`.
+
+For example, this request only returns page views where the `app_id` metadata value is `nl-123`:
+
+```
+https://simpleanalytics.com/example.com.json?version=6&fields=histogram&metadata.app_id=nl-123
+```
+
+The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata, while boolean and date values also fall back to their exact text value. Matches are exact and wildcards are not supported. When you specify multiple metadata filters, all of them must match (AND).
 
 ## Get data for specific pages
 
@@ -92,7 +106,7 @@ You can also add the path to the URL, and Simple Analytics returns the data for 
 
 ## Wildcards
 
-The filtering parameters support trailing wildcards. Add an `*` to the end of a value to match everything that starts with it. For example, use [`pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=pages&pages=/web*) to return pages whose paths start with `/web`.
+The filtering parameters support trailing wildcards. Add an `*` to the end of a value to match everything that starts with it. For example, use [`pages=/web*`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=pages&pages=/web\*) to return pages whose paths start with `/web`.
 
 Page filters also support a single leading-and-trailing wildcard pattern to match paths that contain a specific value. These searches are more resource intensive and therefore have the following requirements:
 
