@@ -3,7 +3,7 @@ title: Install Simple Analytics with React
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-react
-last_modified_at: 2026-06-24
+last_modified_at: 2026-09-10
 ---
 
 Add Simple Analytics to React apps with our official React package.
@@ -39,6 +39,7 @@ Most React component options map directly to Simple Analytics script settings. B
 The script is injected once. Add these options when you render `<SimpleAnalytics />`; changing them after the script has loaded will not reconfigure the existing script.
 For example, you can collect visits from browsers with Do Not Track enabled, ignore a few metrics, and allow extra URL parameters:
 
+{% raw %}
 ```tsx
 <SimpleAnalytics
   collectDnt
@@ -49,6 +50,7 @@ For example, you can collect visits from browsers with Do Not Track enabled, ign
   allowParams={["product-id", "article-slug"]}
 />
 ```
+{% endraw %}
 
 ### Available options
 
