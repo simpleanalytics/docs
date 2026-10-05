@@ -2,7 +2,7 @@
 title: Import Google Analytics data
 category: features
 permalink: /import-google-analytics-data
-last_modified_at: 2022-07-08
+last_modified_at: 2026-09-16
 ---
 
 With Simple Analytics you can import Google Analytics 4 properties.
@@ -12,6 +12,12 @@ With Simple Analytics you can import Google Analytics 4 properties.
 ## Import Google Analytics 4 data
 
 We filter the Google Analytics 4 data based on a match on `eventName`. When this `eventName` is [`page_view`](https://support.google.com/analytics/answer/9356037), we import that event. All other events are discarded. Another filter we apply is a hostname filter. When you have multiple hostnames in your data, we ask you which hostnames to import. For example you might have `www.example.com` and `m.example.com`. You can pick the hostnames you want [in our UI](https://simpleanalytics.com/select-website/import).
+
+### Import range
+
+We never overwrite the data you already collect with Simple Analytics. The import stops at the first Simple Analytics pageview of that website: everything Google Analytics recorded before that moment is imported, everything after it is skipped. When we have no Simple Analytics data for the website yet, we import everything up to today.
+
+Google Analytics only accepts whole days as a range boundary, so we request one extra day and apply the exact cutoff ourselves. This means the single hour in which your first Simple Analytics pageview happened can contain both imported Google Analytics pageviews and Simple Analytics pageviews.
 
 ### Dimensions
 
