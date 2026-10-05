@@ -35,6 +35,8 @@ Check if your custom domain page shows at `https://custom.domain.com`. It should
 
 If you get an SSL error, try opening the domain again after a few seconds. You can inspect the certificate with our [SSL checker](https://simpleanalytics.com/check-ssl), also linked as **Check SSL certificate** in your website settings. If the error persists, verify your DNS record and save the domain again in your website settings to retry.
 
+<img class="border" src="https://assets.simpleanalytics.com/docs/custom-domain/check-ssl-certificate.png" alt="Check SSL certificate link in website settings">
+
 ## Update your script
 
 Replace your existing Simple Analytics script with this script at the end of your `<body>` (or anywhere else):
