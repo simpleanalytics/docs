@@ -123,7 +123,7 @@ In the example above, `$%!k_e___y__` will be stored as `k_e_y`.
 
 ## Metadata values
 
-Metadata is a simple key/value object in JavaScript. We don't allow nesting, functions, objects, arrays, empty strings, `null`, and `undefined`. Booleans and the number `0` are allowed.
+Metadata is a simple key/value object in JavaScript. We don't allow nesting, functions, plain objects, arrays, empty strings, `null`, and `undefined`. Booleans, the number `0`, and [dates](#date) are allowed.
 
 You can send 4 different types as metadata:
 
