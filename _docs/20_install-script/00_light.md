@@ -3,7 +3,7 @@ title: Light version script
 category: install-script
 hidden: true
 permalink: /light
-last_modified_at: 2022-07-26
+last_modified_at: 2026-10-17
 ---
 
 Our script is already very light, but some customers love it even lighter. That's why we always create two versions of our script: normal and light.
@@ -20,30 +20,43 @@ We support both Brotli and Gzip compression depending on the browser capabilitie
 
 | Script    | Compressed size (Gzip) | Compressed size (Brotli) | Uncompressed size |
 | --------- | ---------------------- | ------------------------ | ----------------- |
-| light.js  | 1.9 KB                 | 2.0 KB                   | 3.3 KB            |
-| latest.js | 3.7 KB                 | 3.8 KB                   | 6.9 KB            |
+| light.js  | 2.0 KB                 | 1.9 KB                   | 3.5 KB            |
+| latest.js | 3.8 KB                 | 3.8 KB                   | 7.3 KB            |
 
-Source: [giftofspeed.com](https://www.giftofspeed.com/gzip-test/) for Brotli, [adresults.nl/tools/gzip-compression-test](https://adresults.nl/tools/gzip-compression-test) for Gzip.
+Sizes are approximate and measured on the current versions of both scripts.
 
 ## Features
 
 Obviously not all features are available in our light script. Here is a comparison of both versions:
 
-| Feature                                         | `latest.js` | `light.js` |
-| :---------------------------------------------- | :---------: | :--------: |
-| Page views                                      |      x      |     x      |
-| Referrer                                        |      x      |     x      |
-| UTM codes                                       |      x      |     x      |
-| [Uniques](/uniques)                             |      x      |     x      |
-| [Events](/events)                               |      x      |     x      |
-| Bot detection                                   |      x      |     x      |
-| Error reporting                                 |      x      |     x      |
-| Show warnings                                   |      x      |     x      |
-| Time on page                                    |      x      |            |
-| [Hash navigation](/hash-mode)                   |      x      |            |
-| Scroll depth                                    |      x      |            |
-| [SPA](/trigger-custom-page-views)               |      x      |            |
-| Screen sizes                                    |      x      |            |
-| [Ignore pages](/ignore-pages)                   |      x      |            |
-| [Overwrite domain name](/overwrite-domain-name) |      x      |            |
-| [Ignore DNT](/dnt)                              |      x      |            |
+| Feature                                                                      | `latest.js` | `light.js` |
+| :--------------------------------------------------------------------------- | :---------: | :--------: |
+| Page views                                                                   |      x      |     x      |
+| Referrer                                                                     |      x      |     x      |
+| UTM codes                                                                    |      x      |     x      |
+| [Strict UTMs](/strict-utms)                                                  |      x      |     x      |
+| [Overwrite domain name](/overwrite-domain-name)                              |      x      |     x      |
+| [Uniques](/uniques)                                                          |      x      |    x \*    |
+| Bot detection                                                                |      x      |   x \*\*   |
+| Show warnings                                                                |      x      |     x      |
+| [Events](/events)                                                            |      x      |            |
+| [Metadata](/metadata)                                                        |      x      |            |
+| Error reporting                                                              |      x      |            |
+| Time on page                                                                 |      x      |            |
+| Scroll depth                                                                 |      x      |            |
+| Screen sizes                                                                 |      x      |            |
+| [Hash navigation](/hash-mode)                                                |      x      |            |
+| [SPA](/trigger-custom-page-views)                                            |      x      |            |
+| [Custom page views](/trigger-custom-page-views#use-custom-collection-anyway) |      x      |            |
+| [Ignore pages](/ignore-pages)                                                |      x      |            |
+| [Ignore metrics](/ignore-metrics)                                            |      x      |            |
+| [Allow URL parameters](/allow-params)                                        |      x      |            |
+| [Non-unique hostnames](/non-unique-hostnames)                                |      x      |            |
+| [Overwrite path](/overwrite-path)                                            |      x      |            |
+| [Collect DNT visits](/dnt)                                                   |      x      |            |
+
+\* `light.js` only uses the referrer to detect unique visits. It doesn't detect reloads and back or forward navigation, so those can count as unique visits.
+
+\*\* In the browser, `light.js` only checks the user agent. The checks on our servers apply to both scripts.
+
+Because `light.js` doesn't support events, it doesn't define the `sa_event` function and doesn't send events, even if you added the placeholder function. Use `latest.js` if you want to collect events.

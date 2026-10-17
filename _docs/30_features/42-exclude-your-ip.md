@@ -2,12 +2,14 @@
 title: Exclude your IPs
 category: features
 permalink: /exclude-ips
-last_modified_at: 2025-01-09
+last_modified_at: 2026-10-17
 ---
 
 This feature allows you to exclude specific IP addresses from being tracked or block your own visits locally on your computer by modifying its hosts file. Excluded IPs or blocked domains ensure visits from internal users or other known sources don’t impact your analytics data. This is helpful for maintaining cleaner, more accurate insights.
 
 ## Block IPs in the dashboard
+
+> You need a plan that includes IP blocking. See our [pricing page](https://www.simpleanalytics.com/pricing).
 
 The exclusion applies only to visits from the moment you save the IP addresses. Previous visits from these IPs will remain in your analytics data. To ensure privacy, we never store the IP addresses of visitors. The only IPs stored are the ones you manually input into this feature. Currently, only IPv4 addresses are supported.
 

@@ -2,7 +2,7 @@
 title: Bypass ad-blockers
 category: features
 permalink: /bypass-ad-blockers
-last_modified_at: 2026-09-10
+last_modified_at: 2026-10-17
 ---
 
 Simple Analytics never collects any personal identifiable information. Ad-blockers see us just any other analytics company and some of the ad-blockers are blocking our domain as a result. To prevent your stats being blocked as a result we allow you to setup a bypass. This basically hides Simple Analytics' server name from the browser by redirecting a subdomain to our domain.
@@ -14,6 +14,8 @@ We created a video showing how to bypass adblockers in Simple Analytics. [Here y
 We cannot stress this enough, if you want the best ad-blocker bypass, set up [our proxy](/proxy). It requires technical knowledge, but is the least detectable by ad-blockers.
 
 ## Setup a custom subdomain
+
+> You need a plan that includes the ad-blocker bypass. See our [pricing page](https://www.simpleanalytics.com/pricing).
 
 You only need access to your DNS to set this up. Add a CNAME record to your DNS pointing to `simpleanalyticsexternal.com` and fill in your full domain in [your website settings](https://simpleanalytics.com/select-website/settings#bypass-ad-blockers). We advise to choose a domain like `api.example.com` instead of `track.example.com` _(tracking, analytics, collect, and similar keywords are usually blocked)_.
 

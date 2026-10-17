@@ -2,12 +2,12 @@
 title: Set up Microsoft Entra SAML SSO
 category: account
 permalink: /microsoft-entra-saml-sso
-last_modified_at: 2026-07-08
+last_modified_at: 2026-10-17
 ---
 
 Use this guide to connect Microsoft Entra to your Simple Analytics team with SAML SSO.
 
-Before you start, make sure you have admin access in Microsoft Entra and access to the [team settings](https://dashboard.simpleanalytics.com/settings/team) in Simple Analytics. If you do not see the SSO settings in Simple Analytics yet, [contact us](https://dashboard.simpleanalytics.com/contact) and ask us to enable SSO setup for your team.
+Before you start, make sure you have admin access in Microsoft Entra and are an owner or admin of your team in Simple Analytics, so you can open the SSO section of the [team settings](https://dashboard.simpleanalytics.com/settings/team). If you do not see the SSO settings in Simple Analytics yet, [contact us](https://dashboard.simpleanalytics.com/contact) and ask us to enable SSO setup for your team.
 
 ## 1. Create a Simple Analytics account
 
@@ -33,7 +33,7 @@ After creating the application, open **Single sign-on** and choose **SAML**.
 
 In the SAML setup page in Entra, open **Basic SAML Configuration**.
 
-Copy these values from the SSO section of your Simple Analytics [team settings](https://dashboard.simpleanalytics.com/settings/team):
+In the SSO section of your Simple Analytics [team settings](https://dashboard.simpleanalytics.com/settings/team), select **Microsoft Entra** as the **Provider**. Then copy these values from that section:
 
 | Microsoft Entra field                      | Simple Analytics value    |
 | ------------------------------------------ | ------------------------- |

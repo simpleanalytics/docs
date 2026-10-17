@@ -3,7 +3,7 @@ title: Data Security and Ownership
 menu: Data Security and Ownership
 category: legal
 permalink: /data-security-and-ownership
-last_modified_at: 2024-08-08
+last_modified_at: 2026-10-17
 redirect_from:
   - /how-we-protect-your-data
 ---
@@ -14,7 +14,7 @@ We do everything in our power to keep your data safe. We collect the bare minimu
 
 ## Data Hosting Infrastructure
 
-The data we collect belongs to you. We only collect non-personal data and don’t share the data with third parties or transfer it overseas. Your website data never leaves the Netherlands and, therefore, the EU. Also, no service providers receive any data except for our hosting provider- who is under binding obligations of confidentiality.
+The data we collect belongs to you. We only collect non-personal data and don’t share the data with third parties or transfer it overseas. Your website data never leaves the Netherlands and, therefore, the EU. Also, no service providers receive any data except for our hosting provider- who is under binding obligations of confidentiality. The only exception is the opt-in [AI chat](#ai-chat).
 
 The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both Dutch companies that adhere to EU law and GDPR policy.
 
@@ -26,13 +26,17 @@ We use a CDN for most of our customers. The CDN is called Bunny CDN and is part 
 
 ## Data Retention
 
-In order to provide its service, Simple Analytics will retain your data in line with your subscription plan and only when your account is active. We won’t store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The data will be deleted immediately when you delete your account (but will only be permanently deleted after 90 days).
+In order to provide its service, Simple Analytics will retain your data in line with your subscription plan and only when your account is active. We won’t store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The websites and data of teams that are deleted with your account are deleted immediately (but will only be permanently deleted after 90 days).
 
 ## No data transfers
 
-We provide our service **without transferring data** outside the European Union. We rely on trusted, GDPR-compliant European data processors with data centers in the EU.
+We provide our service **without transferring data** outside the European Union, except for the opt-in [AI chat](#ai-chat). We rely on trusted, GDPR-compliant European data processors with data centers in the EU.
 
 Because we do not collect personal data, we can forward data to our customers outside the EU with no compliance burden. This allows you to use Simple Analytics anywhere in the world without worrying about data transfers.
+
+## AI chat
+
+The AI chat in the dashboard is opt-in. Before you ask your first question, we ask whether you agree that we send your analytics data to OpenAI, a provider outside the EU, to answer your questions. After you agree, we send the aggregated analytics data needed for the answer (such as page views, visitors, pages, referrers, and countries of your website) to OpenAI together with your question. This is aggregated data from your dashboard, not personal data of your visitors. If you don't use the AI chat, we don't send any of your analytics data to OpenAI.
 
 ## Integrations and Portability
 

@@ -3,7 +3,7 @@ title: WordPress Plugin by Refined Practice
 category: integrations
 hidden: true
 permalink: /wordpress-plugin-by-refined-practice
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
 [Refined Practice](https://www.refinedpractice.com/) has created a WordPress plugin with more features than [the official Simple Analytics plugin](/install-simple-analytics-on-wordpress). It shows you a chart widget when you have your stats set to public, has support for events, ...
@@ -23,7 +23,7 @@ This is how the settings page looks:
 ## Install the Refined Practice plugin via WordPress dashboard
 
 1. Go to your WordPress admin (likely on /wp-admin or [wordpress.com/log-in](https://wordpress.com/log-in))
-1. Go to plugins in your WordPress admin and click on **Add new**:
+1. Go to **Plugins** in your WordPress admin and click on **Add Plugin**:
 
    ![](/images/wordpress-click-add-new-plugin.jpg)
 

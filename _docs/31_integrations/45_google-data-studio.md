@@ -3,7 +3,9 @@ title: Google Data Studio connector
 menu: Google Data Studio
 category: integrations
 permalink: /google-data-studio
-last_modified_at: 2026-08-13
+redirect_from:
+  - /google-looker-studio
+last_modified_at: 2026-10-17
 ---
 
 Connect Simple Analytics to Google Data Studio to create custom reports from

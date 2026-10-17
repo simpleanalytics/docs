@@ -2,7 +2,7 @@
 title: Transfer websites
 category: account
 permalink: /transfer-websites
-last_modified_at: 2026-09-16
+last_modified_at: 2026-10-17
 ---
 
 To transfer a website to another Simple Analytics customer, follow these steps:
@@ -17,7 +17,7 @@ The recipient will receive an email asking them to accept or decline the transfe
 
 ### Recipient team
 
-The websites are transferred to the team the recipient is currently using. Recipients who belong to multiple teams can use the **switch teams** link in the error message to select the team that should receive the websites, then continue accepting the transfer.
+The websites are transferred to the team the recipient is currently using. If that team already owns the websites, accepting fails with an error. Recipients who belong to multiple teams can use the **switch teams** link in that error message to select the team that should receive the websites, then continue accepting the transfer.
 
 ### Custom views
 

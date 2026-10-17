@@ -7,7 +7,7 @@ hidden: true
 excerpt: "We do everything to keep your data safe. Our servers are located in The Netherlands, and we don’t transfer data overseas."
 redirect_from:
   - /locations
-last_modified_at: 2022-04-21
+last_modified_at: 2026-10-17
 ---
 
 We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website's visitors and even go a few steps further.
@@ -18,7 +18,7 @@ We never collect IP addresses or any form of personal data. Therefore, there is 
 
 ## Data Hosting Infrastructure
 
-The data we collect belongs to you. We only collect non-personal data and don't share the data with third parties or transfer it overseas. Your website data never leaves The Netherlands and, therefore, the EU.  Also, no other third-party vendors have access to any data outside the hosting company that owns the servers on which the data is stored.
+The data we collect belongs to you. We only collect non-personal data and don't share the data with third parties or transfer it overseas. Your website data never leaves The Netherlands and, therefore, the EU.  Also, no other third-party vendors have access to any data outside the hosting company that owns the servers on which the data is stored. The only exception is the opt-in [AI chat](/data-security-and-ownership#ai-chat).
 
 The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both Dutch companies that adhere to EU law and GDPR policy. 
 
@@ -30,7 +30,7 @@ We use a CDN for most of our customers. The CDN is called Bunny CDN and is part 
 
 ## Data Retention
 
-In order to provide our service, Simple Analytics will retain your data for as long as your account is active. We won't store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The data will be deleted immediately when you delete your account (but will be permanently deleted after 90 days).
+How long we keep your data depends on your plan. On the Free plan, your dashboard shows the last 30 days, and we automatically delete older data. See [our pricing](https://www.simpleanalytics.com/pricing) for the data history of each plan. We won't store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The websites and data of teams that are deleted with your account are deleted immediately (but will only be permanently deleted after 90 days).
 
 ## No data transfer to the US
 

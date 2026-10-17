@@ -2,12 +2,12 @@
 title: Custom views
 category: features
 permalink: /custom-views
-last_modified_at: 2026-09-07
+last_modified_at: 2026-10-17
 ---
 
 Custom views help you to have permanent filters on your dashboard, merge multiple domains into one dashboard, or give others access to a limited subset of the data.
 
-> You need to have the Team subscription to use custom views.
+> You need a plan that includes custom views. See our [pricing page](https://www.simpleanalytics.com/pricing).
 
 1. Start by [creating a custom view](https://dashboard.simpleanalytics.com/views/create).
 2. Select the websites you want to include in the view. If you are part of multiple teams, you can only include websites from the same team in one custom view.

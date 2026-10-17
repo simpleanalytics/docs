@@ -3,7 +3,7 @@ title: Collect metadata
 category: events
 permalink: /metadata
 created_at: 2022-07-26
-last_modified_at: 2023-01-20
+last_modified_at: 2026-10-17
 ---
 
 To collect additional data on top of [our collected metrics](/metrics), you can append metadata. With this feature you can specify specific parameters and it will be included in our database with your datapoints (events or page views).
@@ -29,7 +29,7 @@ You can use the metadata fields in your [Goals](/goals).
 
 When using the [Events Explorer](/events-explorer), you can select metadata to be included as columns.
 
-<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-in-events-explorer.png" alt="Use metadata in the Events Explorer at Simple Analytics" />
+<img class="border" src="/images/metadata-in-events-explorer.png" alt="Use metadata in the Events Explorer at Simple Analytics" />
 <p class="caption">Use metadata in the Events Explorer of Goals at Simple Analytics</p>
 
 ### Export metadata
@@ -38,6 +38,14 @@ In our [export UI](https://simpleanalytics.com/select-website/export), you can d
 
 <img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-export-ui.png" alt="Export metadata the UI of Simple Analytics" />
 <p class="caption">Export metadata the UI of Simple Analytics</p>
+
+### Stats API
+
+You can [filter the Stats API by metadata](/api/stats#filter-by-metadata), for example to only get page views with a certain metadata value.
+
+### Google Data Studio
+
+Our [Google Data Studio connector](/google-data-studio#metadata-fields) adds metadata of page views and events as dimensions.
 
 ## Collect
 
@@ -53,7 +61,7 @@ When using multiple ways to add metadata, the objects will be merged into one. F
 
 ### 1. Send metadata along with the `sa_event`-function
 
-> This only works when you manually trigger an event. If you want to add metadata for page views or automated events, check the next two options.
+> This only works when you manually trigger an event. If you want to add metadata for page views or automated events, check the next two options. If you [send page views manually](/trigger-custom-page-views#use-custom-collection-anyway), you can pass metadata as the second argument: `sa_pageview("/pricing", { plan: "pro" })`.
 
 The most common way to send metadata is specifying it when you create an event:
 
@@ -73,7 +81,11 @@ An example on how to to set metadata on the `window` object:
 </script>
 ```
 
-Every time an event or page view is sent, we check for the `sa_metadata` object and append this metadata to your event or page view.
+Our script reads the `sa_metadata` object once, when it loads, and appends this metadata to every event and page view. Make sure to define it before the script loads. To change the metadata later, for example after a route change in a single page app, update the properties of the same object instead of assigning a new object:
+
+```js
+sa_metadata.theme_color = "blue";
+```
 
 ### 3. Add metadata via a callback function
 
@@ -97,7 +109,7 @@ You can specify the metadata callback function via `data-metadata-collector`. Le
 ></script>
 ```
 
-The function you specify in `data-metadata-collector` receives an object with 2 values: `type` and `path`. Value `type` is either `pageview` or `event`. The `path` is the path of the page. For example, `/contact`. Make sure to always return an object.
+The function you specify in `data-metadata-collector` receives an object with the metadata collected so far and a `type` value, which is either `pageview` or `event`. For page views, the object also contains `path`, the path of the page (for example, `/contact`). For events, it contains `event`, the name of the event. Make sure to always return an object.
 
 ## Metadata keys
 
@@ -111,7 +123,7 @@ In the example above, `$%!k_e___y__` will be stored as `k_e_y`.
 
 ## Metadata values
 
-Metadata is a simple key/value object in JavaScript. We don't allow nesting, functions, objects, arrays, and falsy values (except for booleans).
+Metadata is a simple key/value object in JavaScript. We don't allow nesting, functions, objects, arrays, empty strings, `null`, and `undefined`. Booleans and the number `0` are allowed.
 
 You can send 4 different types as metadata:
 

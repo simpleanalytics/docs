@@ -2,7 +2,7 @@
 title: Import Google Analytics data
 category: features
 permalink: /import-google-analytics-data
-last_modified_at: 2026-09-16
+last_modified_at: 2026-10-17
 ---
 
 With Simple Analytics you can import Google Analytics 4 properties.
@@ -22,14 +22,14 @@ Google Analytics only accepts whole days as a range boundary, so we request one 
 ### Dimensions
 
 - `dateHour` – The combined values of date and hour formatted as YYYYMMDDHH.
-- `fullPageUrl` – The hostname, page path, and query string for web pages visited; for example, the `fullPageUrl` portion of `https://www.example.com/store/contact-us?query_string=true` is `www.example.com/store/contact-us?query_string=true`.
-- `sessionSource` – The source that initiated a session on your website or app.
+- `pagePath` – The portion of the URL between the hostname and query string for web pages visited; for example, the `pagePath` portion of `https://www.example.com/store/contact-us?query_string=true` is `/store/contact-us`.
+- `pageReferrer` – The full referring URL including the hostname and path. This is the visitor's previous URL and can be your own website or another website.
 - `deviceCategory` – The type of device: Desktop, Tablet, or Mobile.
 - `countryId` – The geographic ID of the country from which the user activity originated, derived from their IP address. Formatted according to ISO 3166-1 alpha-2 standard.
 - `browser` – The browsers used to view your website.
 - `operatingSystem` – The operating systems used by visitors to your app or website. Includes desktop and mobile operating systems such as Windows and Android.
 - `eventName` – The name of the event. For example, `page_view`.
-- `hostname` – Includes the subdomain and domain names of a URL; for example, the Host Name of `www.example.com/contact.html` is `www.example.com`.
+- `hostName` – Includes the subdomain and domain names of a URL; for example, the Host Name of `www.example.com/contact.html` is `www.example.com`.
 
 ### Metrics
 
@@ -37,6 +37,6 @@ Google Analytics only accepts whole days as a range boundary, so we request one 
 - `totalUsers` – The number of distinct users who have logged at least one event, regardless of whether the site or app was in use when that event was logged.
 - `userEngagementDuration` – The total amount of time (in seconds) your website or app was in the foreground of users' devices.
 
-> Use the [GA4 query explorer](https://ga-dev-tools.web.app/ga4/query-explorer/?d=dateHour%2CfullPageUrl%2CsessionSource%2CdeviceCategory%2CcountryId%2Cbrowser%2CoperatingSystem%2CeventName%2ChostName&e=totalUsers%2CscreenPageViews%2CuserEngagementDuration) to see which data we can import from Google Analytics 4. We prefilled the dimensions and metrics if you use our link to the [query explorer](https://ga-dev-tools.web.app/ga4/query-explorer/?d=dateHour%2CfullPageUrl%2CsessionSource%2CdeviceCategory%2CcountryId%2Cbrowser%2CoperatingSystem%2CeventName%2ChostName&e=totalUsers%2CscreenPageViews%2CuserEngagementDuration).
+> Use the [GA4 query explorer](https://ga-dev-tools.web.app/ga4/query-explorer/?d=dateHour%2CpagePath%2CpageReferrer%2CdeviceCategory%2CcountryId%2Cbrowser%2CoperatingSystem%2CeventName%2ChostName&e=totalUsers%2CscreenPageViews%2CuserEngagementDuration) to see which data we can import from Google Analytics 4. We prefilled the dimensions and metrics if you use our link to the [query explorer](https://ga-dev-tools.web.app/ga4/query-explorer/?d=dateHour%2CpagePath%2CpageReferrer%2CdeviceCategory%2CcountryId%2Cbrowser%2CoperatingSystem%2CeventName%2ChostName&e=totalUsers%2CscreenPageViews%2CuserEngagementDuration).
 
 Go to [our Google Analytics importer](https://simpleanalytics.com/select-website/import) in our dashboard to import your Google Analytics data.

@@ -4,10 +4,12 @@ category: features
 permalink: /trend-lines
 redirect_from:
   - /trendlines
-last_modified_at: 2022-10-21
+last_modified_at: 2026-10-17
 ---
 
 Trend lines give you a quick overview of how your numbers are changing in the period shown in the charts.
+
+> You need a plan that includes trend lines. See our [pricing page](https://www.simpleanalytics.com/pricing).
 
 ### Curved trend lines with outliers excluded
 

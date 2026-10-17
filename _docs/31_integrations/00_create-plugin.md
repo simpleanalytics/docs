@@ -3,7 +3,7 @@ title: Create plugin for Simple Analytics
 hidden: true
 category: integrations
 permalink: /create-plugin
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
 To create a plugin for Simple Analytics, we have a few requirements that need to work within that plugin. The goal of the plugin is to make it as easy as possible to implement Simple Analytics.
@@ -56,7 +56,7 @@ Custom settings should be specified like this: `customSettings: { collectDarkMod
 
 ## System plugins
 
-A few examples: WordPress, Drupal, Google Tag Manager, and Cloudflare.
+A few examples: WordPress, Drupal, and Google Tag Manager.
 
 The settings below should be changeable via the UI of the plugin. All changed settings need to be passed to the `<script>`-tag. For example:
 
@@ -141,7 +141,7 @@ For both System plugins and Framework plugins, the following settings need to be
 |`data-collect-dnt`|[Collect DoNotTrack visits](https://docs.simpleanalytics.com/dnt)|boolean|`false`|no|`true`|
 |`data-ignore-pages`|[Ignore pages](https://docs.simpleanalytics.com/ignore-pages)|array|undefined|no|`/search/*,/account/*,/vouchers`|
 |`data-auto-collect` page views|[Auto collect](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway)|boolean|`true`|no|`false`|
-|`data-onload` callback|[Onload function](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway)|string|undefined|no|`onloadCallback()`|
+|`onload` callback|[Onload function](https://docs.simpleanalytics.com/trigger-custom-page-views#use-custom-collection-anyway), added as the native `onload` attribute (the script doesn't read `data-onload`)|string|undefined|no|`onloadCallback()`|
 |`data-hostname`|[Overwrite hostname](https://docs.simpleanalytics.com/overwrite-domain-name)|string|undefined|no|`otherdomain.com`|
 |`data-sa-global`|[Override global](https://docs.simpleanalytics.com/events#the-variable-sa_event-is-already-used)|string|`sa_event`|no|`ba_event`|
 
@@ -151,9 +151,9 @@ For both System plugins and Framework plugins, the following settings need to be
 
 |Setting|Description|Type|Default|Required|Example|
 |:---|:---|:---|:---|:---:|:---|
-|`data-collect`|[Auto collect downloads](https://docs.simpleanalytics.com/automated-events)|array|undefined|no|`outbound,emails,downloads`|
-|`data-extensions`|[Download file extensions](https://docs.simpleanalytics.com/automated-events)|array|`pdf,csv,docx,xlsx,zip`|if "auto collect downloads" is `true`|`pdf,txt`|
-|`data-use-title`|[Use titles of page](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
+|`data-collect`|[Types of automated events to collect](https://docs.simpleanalytics.com/automated-events)|array|`outbound,emails,downloads`|no|`outbound,downloads`|
+|`data-extensions`|[Download file extensions](https://docs.simpleanalytics.com/automated-events)|array|`pdf,csv,docx,xlsx,zip,doc,xls`|no|`pdf,txt`|
+|`data-use-title`|[Use the `title` attribute of a link as event name](https://docs.simpleanalytics.com/automated-events)|boolean|`true`|no|`false`|
 |`data-full-urls`|[Use full URLs](https://docs.simpleanalytics.com/automated-events)|boolean|`false`|no|`true`|
 |`data-sa-global`|[Override global](https://docs.simpleanalytics.com/events#the-variable-sa_event-is-already-used)|string|`sa_event`|no|`ba_event`|
 

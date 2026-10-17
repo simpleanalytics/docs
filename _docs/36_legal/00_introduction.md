@@ -3,7 +3,7 @@ title: Introduction to Legal
 menu: Introduction
 category: legal
 permalink: /introduction-to-legal
-last_modified_at: 2023-01-23
+last_modified_at: 2026-10-17
 ---
 
 ## Privacy
@@ -41,7 +41,7 @@ You can find more information about the data we collect [here](/data-collection)
 
 ## Data Security & Ownership
 
-Your data are **fully encrypted** on our dedicated servers. We only rely on **European, GDPR-compliant providers** to ensure that your data are handled as safely as possible.
+Your data are **fully encrypted** on our dedicated servers. We only rely on **European, GDPR-compliant providers** to ensure that your data are handled as safely as possible. For your analytics data, the only exception is the opt-in [AI chat](/data-security-and-ownership#ai-chat) in the dashboard.
 
 We retain your data as long as your Simple Analytics account is active (and in correspondence to your subscription plan) and never share the data with third parties. **You control your data** and can export it at any time.
 

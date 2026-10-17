@@ -2,7 +2,7 @@
 title: Trigger custom page views
 category: install-script
 permalink: /trigger-custom-page-views
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
 Normally you want to trigger a custom page view for _Single Page Apps_ (SPAs) like React, Vue, and Angular. Because pages are not completely reloaded on navigation we need a way to track those navigations as page views.
@@ -15,7 +15,7 @@ For some analytics tools like Google Analytics you need to trigger a page view v
 <summary>Technical explanation</summary>
 <div markdown="1">
 
-We make this work by overwriting the native `pushState`-function of the browser.
+We make this work by overwriting the native `pushState`-function of the browser. We also listen to the `popstate` event, so back and forward navigation in your app is collected as well.
 
 ```js
 // We check if the browser supports pushState
@@ -49,7 +49,7 @@ You can read our source code [on GitHub](https://github.com/simpleanalytics/scri
 
 ## Use custom collection anyway
 
-There might be situation where you don't want to auto collect page views. When you add the `data-auto-collect="false"` attribute you can expose a function called `sa_pageview`. When you call this function, the script will send a page view with the path you give as a parameter. If you don't give a path it will use `window.location.pathname` as a default.
+There might be situation where you don't want to auto collect page views. When you add the `data-auto-collect="false"` attribute you can expose a function called `sa_pageview`. When you call this function, the script will send a page view with the path you give as a parameter. If you don't give a path it will use `window.location.pathname` as a default. This only works with `latest.js`, not with our [light script](/light).
 
 ```html
 <script>
@@ -73,5 +73,13 @@ There might be situation where you don't want to auto collect page views. When y
     referrerpolicy="no-referrer-when-downgrade"
 /></noscript>
 ```
+
+You can add [metadata](/metadata) to the page view with a second argument:
+
+```js
+window.sa_pageview("/pricing", { plan: "pro" });
+```
+
+If you call `sa_pageview` with the same path as the previous page view, we don't send it again.
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

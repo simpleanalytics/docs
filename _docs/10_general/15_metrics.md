@@ -3,7 +3,7 @@ title: Metrics
 category: general
 permalink: /metrics
 excerpt: "We never track visitors so the data below is never linked to one specific visitor. Here is a list of metrics we collect."
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-17
 hidden: true
 redirect_from:
   - /data-points
@@ -39,13 +39,13 @@ To know where customers come from, we store the page's referrer. This means that
 
 For example `https://simpleanalytics.com/?utm_source=newsletter`
 
-The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes (`utm_source`/`ref`, `utm_medium`, `utm_content`, `utm_campaign`) and drop all other URL parameters. The UTM codes are something that the customer adds to the URLs. By nature these UTM codes don't include personal data. They are generic terms like "newsletter_may" or "twitter_campaign_2". [See below][5].
+The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes (`utm_source`/`ref`, `utm_medium`, `utm_content`, `utm_campaign`, `utm_term`) and drop all other URL parameters, unless you [allow them](/allow-params). The UTM codes are something that the customer adds to the URLs. By nature these UTM codes don't include personal data. They are generic terms like "newsletter_may" or "twitter_campaign_2". [See below][5].
 
 ### Unique
 
 <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> Very important</p>
 
-If a page view is unique or not. A simple yes or no. No data from the browser, cookies, or IP-addresses are used to determine this. [Read more on how we collect this metric](/explained/unique-visits).
+If a page view is unique or not. A simple yes or no. No data from the browser, cookies, or IP-addresses are used to determine this. A unique page view counts as a visitor in your dashboard and starts what we call a session. [Read more on how we collect this metric](/explained/unique-visits).
 
 ### Country / time zone
 
@@ -67,7 +67,7 @@ The second ID, page ID, is used to link multiple events (if a customer collects 
 
 The third ID, page-load ID, is a random in-memory ID used to link events and page views sent during one actual page load. On a SPA (Single Page Application), History API route changes do not reload the document, so consecutive virtual pages share the same page-load ID. Reloading, navigating to a new document, or closing the page ends the page load. On a website without SPA or History API navigation, every page gets a new page-load ID. The page-load ID is only needed for [sequential events](/events#tracking-over-multiple-pages), not for counting visitors. We measure visitors [with the referrer of the page](/explained/unique-visits).
 
-We previously called this value a session ID and exposed it as `session_id`. That name can suggest a conventional analytics session that continues across page loads, while this ID does not. We are replacing the name with `page_load_id` to describe its scope more accurately. We will keep `session_id` as a backward-compatible legacy field so existing exports, queries, and integrations do not break.
+We previously called this value a session ID. That name can suggest a conventional analytics session that continues across page loads, while this ID does not. Its field is still named `session_id` in exports and APIs, and the [ignore metrics](/ignore-metrics) setting still uses `session`.
 
 None of these IDs are linked to a person or personal data, and none are stored on the device. Reloading the page resets all of them.
 
@@ -115,7 +115,7 @@ UTM codes are bits of text you can add to a link that tell Simple Analytics (as 
 https://example.com/landing-page?utm_source=company-x&utm_medium=newsletter&utm_campaign=march
 ```
 
-We don't support `utm_term` as it is intended to contain user generated content.
+We also collect `utm_term`. Don't use it for personal data, like search terms that visitors typed themselves.
 
 [Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer.
 
@@ -140,7 +140,7 @@ In some browsers we collect browser name and operating system name without the u
 [3]: https://en.wikipedia.org/wiki/HTTP_referer
 [4]: /overwrite-domain-name
 [5]: #utm-codes-explained
-[6]: #user-agents-strings
+[6]: #user-agent-strings
 
 <style>
   .rating {

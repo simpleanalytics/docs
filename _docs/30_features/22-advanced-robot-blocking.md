@@ -3,7 +3,7 @@ title: Advanced robot blocking
 menu: Robot blocking
 category: features
 permalink: /robot-blocking
-last_modified_at: 2023-08-24
+last_modified_at: 2026-10-17
 ---
 
 By default, we block robots based on their user agent and some traces they leave in the browser by default. For most robots, this works great, but some slip through the cracks. We added *advanced robot blocking* to prevent those robots from polluting your data.
@@ -12,8 +12,10 @@ It works by having an extensive list of known IPs of data centers (from Udger, G
 
 Advanced robot blocking settings works for all of your websites in your account.
 
+> You need a plan that includes advanced robot blocking. See our [pricing page](https://www.simpleanalytics.com/pricing).
+
 Here is how it looks in your account settings when it's enabled:
 
-<img class="border" src="https://assets.simpleanalytics.com/docs/account/advanced-robot-blocking.png" alt="Advanced robot blocking in Simple Analytics account settings" />
+<img class="border" src="/images/advanced-robot-blocking.png" alt="Advanced robot blocking in Simple Analytics account settings" />
 
 Go to [your account](https://simpleanalytics.com/account#advanced-robot-blocking) to enable *Advanced robot blocking*.

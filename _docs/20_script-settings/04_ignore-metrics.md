@@ -3,14 +3,14 @@ title: Ignore metrics
 category: script-settings
 permalink: /ignore-metrics
 created_at: 2022-07-26
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-17
 ---
 
 Our script only collects non-personal data. Some customers might want to limit our metrics even more. That's why we created the ignore metrics feature.
 
 | Metric              | Slug           | Inferrered metric      |
 | ------------------- | -------------- | ---------------------- |
-| Referrer            | `referrer`     |                        |
+| Referrer            | `referrer`     | UTM codes, `ref` param |
 | UTM codes           | `utm`          | [`ref` param][0]       |
 | Country / time zone | `country`      |                        |
 | Page-load IDs       | `session`      |                        |
@@ -40,6 +40,8 @@ Our script only collects non-personal data. Some customers might want to limit o
 
 [See page](/metrics) where we explain those metrics.
 
+When you ignore `referrer`, we also drop UTM codes and the `ref` param from page views, because they describe where a visitor came from. Parameters from [allow params](/allow-params) are still collected. When a visitor navigates within your own website, we still send that internal referrer so we can tell [unique visits](/uniques) apart.
+
 ## Script setting `data-ignore-metrics`
 
 You can enable this feature by adding `data-ignore-metrics=...` to our script embed:
@@ -51,7 +53,7 @@ You can enable this feature by adding `data-ignore-metrics=...` to our script em
 ></script>
 ```
 
-In this case, it will not collect [a page-load ID](/metrics#ids). The `session` setting is the legacy name and remains supported so existing embed code does not break.
+In this case, it will not collect [a page-load ID](/metrics#ids). The slug is still called `session`, the old name of the page-load ID.
 
 ## Comma separated
 
