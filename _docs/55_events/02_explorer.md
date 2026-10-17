@@ -3,7 +3,7 @@ title: Events Explorer
 category: events
 permalink: /events-explorer
 created_at: 2023-01-20
-last_modified_at: 2023-01-20
+last_modified_at: 2026-10-17
 ---
 
 The Events Explorer is a great way to get a quick overview of all events in Simple Analytics. It allows you to export data very quickly and only get the data you need. You can add columns and if a column has different values, it will group by those values. See [add columns](#add-columns).
@@ -27,7 +27,7 @@ You can add as many columns as you want. Do note that if a column has a lot of d
 
 In our case we search for the `buy` event and added the `plan` metadata field. Now it shows us both values (starter, and business).
 
-<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-in-events-explorer.png" alt="Use metadata in the Events Explorer at Simple Analytics" />
+<img class="border" src="/images/metadata-in-events-explorer.png" alt="Use metadata in the Events Explorer at Simple Analytics" />
 <p class="caption">Use metadata in the Events Explorer of Goals at Simple Analytics</p>
 
 ## Export

@@ -3,10 +3,12 @@ title: Goals
 category: features
 permalink: /goals
 created_at: 2022-12-22
-last_modified_at: 2022-12-22
+last_modified_at: 2026-10-17
 ---
 
 Our goals feature is really helpful for organizing and understanding your data. With it, you can set up filters for your data and view the results in these cool goal cards. The cards make it easy to see how you're doing at a glance.
+
+> You need a plan that includes goals. See our [pricing page](https://www.simpleanalytics.com/pricing).
 
 ## Overview
 
@@ -37,7 +39,7 @@ In our next video, we'll show you how to set up a new goal with a filter that ta
   autoplay="true"
 %}
 
-Go to [your dashboard](https://simpleanalytics.com/select-website/events) and start playing with goals.
+Go to [your dashboard](https://simpleanalytics.com/select-website), click on **Goals** in the menu, and start playing with goals.
 
 ## Fields
 

@@ -5,7 +5,7 @@ category: explained
 permalink: /explained/unique-visits
 redirect_from:
   - /uniques
-last_modified_at: 2024-12-19
+last_modified_at: 2026-10-17
 ---
 
 At Simple Analytics, we approach things differently. Our priority is protecting your visitors' privacy while staying compliant with strict privacy laws. This means some of our statistics work differently than traditional analytics tools.
@@ -15,6 +15,12 @@ At Simple Analytics, we approach things differently. Our priority is protecting 
 Strictly speaking, Simple Analytics doesn't track "unique visitors" in the traditional sense. Instead, we track **unique pageviews**, which we call "visitors" in our dashboard. We chose this terminology because showing both "unique pageviews" and "pageviews" can be confusing for most users.
 
 So when you see "visitors" in Simple Analytics, you're looking at unique pageviews, not individual people tracked across sessions.
+
+## Visitors, visits, and sessions
+
+A unique pageview starts what we call a visit or session. The pageviews that follow on your website, with your own website as referrer, belong to that session. So the number of visitors in your dashboard is also the number of sessions.
+
+These sessions don't use an identifier. We don't recognize a person across separate visits, and there is no timeout: someone who leaves a tab open for hours and then clicks a link on your website stays in the same session. The [page-load ID](/metrics#ids) is not related to these sessions.
 
 ## How we detect unique pageviews
 
@@ -30,6 +36,7 @@ We use the [referrer](https://en.wikipedia.org/wiki/HTTP_referer) to determine w
 - The referrer's hostname matches your website's hostname (internal navigation)
 - The user navigates using browser history (back/forward buttons)
 - The user reloads the page
+- The referrer's hostname is in your [non-unique hostnames](/non-unique-hostnames) list, for example a payment provider
 
 For example, if someone visits `randomwebsite.com` and clicks a link to `yourwebsite.com`, the referrer (`randomwebsite.com`) is different from your site, so we count this as a unique pageview (visitor).
 

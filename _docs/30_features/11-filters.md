@@ -2,7 +2,7 @@
 title: Filters
 category: features
 permalink: /filters
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
 How can we make it easy to find that data about that specific page/referrer/UTM code? Well, we created filters just for that. With a few clicks, you will find the data you are looking for.
@@ -13,5 +13,7 @@ How can we make it easy to find that data about that specific page/referrer/UTM 
   formats="mp4,ogg,webm,wmv"
   poster="video.png"
 %}
+
+Visits without a referrer show as _(direct)_ in the referrers list. Click on _(direct)_ to filter your dashboard on those visits.
 
 Go to [your dashboard](https://simpleanalytics.com/select-website) and start playing with filters.

@@ -7,13 +7,13 @@ redirect_from:
   - /api/export-pageviews
   - /api/export-page-views
   - /api/export-events
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-17
 fields: added_iso,country_code,datapoint,device_type,path,query,query_and_path,session_id,utm_source,utm_campaign,utm_content,utm_medium
 ---
 
-With this API you can export raw data points (without sampling). Data points are both page views and events combined. Define a date range and it pulls out the data. The response will only include the selected fields.
+With this API you can export raw data points (without sampling). Data points are page views and events. Use the [`type` parameter](#query-parameters) to export page views (the default), events, or both. Define a date range and it pulls out the data. The response will only include the selected fields.
 
-> We now call the short-lived value formerly known as a session ID a **page-load ID** and are replacing `session_id` with `page_load_id` in our terminology. The export field remains available as `session_id` for backward compatibility, so existing exports, queries, and integrations do not break. It groups data only within one actual page load; it is not stored on the visitor's device and does not continue across reloads or full navigations.
+> We now call the short-lived value formerly known as a session ID a **page-load ID**. The export field is still named `session_id`. It groups data only within one actual page load; it is not stored on the visitor's device and does not continue across reloads or full navigations.
 
 > Want to use a simple interface to export your data? [See our video on exporting data](/export-data).
 
@@ -27,13 +27,17 @@ When using the API, it's recommended [to generate the export URL](/api/helpers#g
 | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | added_unix          | number  | The time of the page view in UNIX time format                                                                                                              |
 | added_iso           | date    | The time of the page view in ISO8601 format                                                                                                                |
+| added_date          | date    | The date of the data point in `YYYY-MM-DD` format (UTC)                                                                                                    |
 | hostname            | string  | The hostname of the website                                                                                                                                |
 | hostname_original   | string  | When the hostname is overwritten, we store the original hostname                                                                                           |
 | path                | string  | The path of the page view                                                                                                                                  |
 | query               | string  | The query parameters of the URL                                                                                                                            |
+| path_and_query      | string  | The path followed by the query parameters                                                                                                                  |
 | is_unique           | boolean | Is this page view unique                                                                                                                                   |
 | is_robot            | boolean | Is page view visited by a robot or crawler                                                                                                                 |
 | document_referrer   | string  | The [JavaScript `document.referrer`](https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer) of the page                                       |
+| referrer_hostname   | string  | The hostname of the referrer (normalized)                                                                                                                  |
+| referrer_path       | string  | The path of the referrer                                                                                                                                   |
 | utm_source          | string  | UTM source (specify via `ref=` or `utm_source` in your URL)                                                                                                |
 | utm_medium          | string  | UTM medium (specify via `utm_medium` in your URL)                                                                                                          |
 | utm_campaign        | string  | UTM campaign (specify via `utm_campaign` in your URL)                                                                                                      |
@@ -55,6 +59,7 @@ When using the API, it's recommended [to generate the export URL](/api/helpers#g
 | lang_region         | string  | The region part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language)                                       |
 | lang_language       | string  | The language part of [navigator.language](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language)                                     |
 | uuid                | string  | A UUID v4 of the page view (this is not always unique)                                                                                                     |
+| datapoint           | string  | The event name, or `pageview` for page views (only with `type=events` or `type=all`)                                                                       |
 | session_id          | string  | Legacy field name for the page-load ID; retained for backward compatibility                                                                                |
 | metadata.\*\*\*     | N/A     | Metadata are your own specified fields followed by a type (e.g. `project_text`)                                                                            |
 
@@ -67,7 +72,7 @@ Data like `scrolled_percentage` and `duration_seconds` is not always added becau
 <summary>Deprecated fields</summary>
 <div markdown="1">
 
-These fields are deprecated but we keep them for backward compatibility. It's recommended to not use it for new projects.
+These fields are deprecated but we keep them for backward compatibility. It's recommended to not use it for new projects. You can only select them in `fields` when you leave out the `version` parameter. If you leave out `fields`, page view exports return them by default.
 
 | Field               | Description                                                           |
 | ------------------- | --------------------------------------------------------------------- |
@@ -83,9 +88,31 @@ These fields are deprecated but we keep them for backward compatibility. It's re
 
 ## Authenticate
 
-For this API features you'll need to authenticate. See the [authenticate page](/api/authenticate) on how to authenticate.
+For this API you'll need to authenticate, unless your website is public. See the [authenticate page](/api/authenticate) on how to authenticate.
 
-In short: apply an `Api-Key`-header where the key starts with `sa_api_key_...` and a `User-Id` header starting with `sa_user_id_...`.
+In short: apply an `Api-Key`-header where the key starts with `sa_api_key_...`. The `User-Id` header in the examples is optional for this API.
+
+## Query parameters
+
+| Parameter  | Description                                                                                                                                                        |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hostname` | The website to export (required)                                                                                                                                   |
+| `start`    | The start date as `YYYY-MM-DD`, `YYYY-MM-DDTHH` ([hourly](#hourly-data-export)), or a [date placeholder](/api/helpers#date-placeholders) (defaults to 30 days ago) |
+| `end`      | The end date in the same format (defaults to today)                                                                                                                |
+| `timezone` | The time zone of the dates, like `Europe/Amsterdam` (defaults to `UTC`)                                                                                            |
+| `fields`   | A comma separated list of [fields](#selecting-fields) to export. Always specify it: without it, you get a legacy set of fields, and `type=all` returns an error                                                                                                    |
+| `type`     | `pageviews` (default), `events`, or `all` for page views and events                                                                                                |
+| `format`   | `csv` (default), `csv-excel`, `tsv`, `json`, `ndjson`, `parquet`, or `avro` (see [formats](#formats))                                                              |
+| `robots`   | Set to `true` to include data points from robots (defaults to `false`)                                                                                             |
+| `version`  | The version of the API (the latest version is `{{ site.api_version }}`). Without a version, the deprecated fields are available                                    |
+
+### Formats
+
+- `csv` and `tsv`: comma or tab separated values with a header row.
+- `csv-excel`: CSV with a `sep=,` first line, so Microsoft Excel detects the separator.
+- `json`: one JSON object with a `datapoints` array and a `meta` object.
+- `ndjson`: one JSON object per line.
+- `parquet` and `avro`: typed binary formats for data tools. Column names are converted to camel case and dots become underscores, with exceptions for `_id`, `utm_`, `os_`, and `uuid`. For example, `added_iso` becomes `addedIso`, `session_id` becomes `sessionID`, `utm_source` becomes `uTMsource`, and `metadata.app_id_text` becomes `metadata_appIDText`. Number metadata (`_int`) is exported as a double and date metadata (`_date`) as text.
 
 ## Selecting fields
 
@@ -181,6 +208,10 @@ curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_vers
      -H 'User-Id: sa_user_id_...' \
      -H 'Api-Key: sa_api_key_...'
 ```
+
+## Errors
+
+When a request fails, the response is JSON with `"ok": false` and an `error` message. If a website on the Free plan is locked because its [Simple Analytics badge](/free-plan-badge) is missing, the API returns HTTP `423` with `"code": "BADGE_REQUIRED"`.
 
 ## Performance
 

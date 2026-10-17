@@ -2,40 +2,17 @@
 title: Install Simple Analytics on Cloudflare
 menu: Cloudflare
 category: integrations
+hidden: true
 permalink: /install-simple-analytics-on-cloudflare
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
-You can embed our script in Cloudflare using [Cloudflare Apps](https://www.cloudflare.com/apps/simpleanalytics). On this page we will explain how to use this feature and help you installing the Simple Analytics app on Cloudflare.
+> Cloudflare has deprecated Cloudflare Apps, so you can no longer install Simple Analytics with our Cloudflare App.
 
-> This CloudFlare app does not install [the custom domain](/bypass-ad-blockers) for you. You need to add it yourself if you want to use it.
+To use Simple Analytics on a website that runs behind Cloudflare, add our script to the HTML of your website. Follow [how to add our script](/script), or use one of our [platform guides](/install-on-other-platforms) if your website runs on a platform like WordPress, Webflow, or Squarespace.
 
-Follow these steps to add Simple Analytics to your website:
+If you used our Cloudflare App, Cloudflare removed it from your website after August 31, 2024, and Simple Analytics stopped collecting visits through it. Add the script to collect visits again.
 
-1. Go to the <a href="https://www.cloudflare.com/apps/simpleanalytics" target="_blank">Simple Analytics app on Cloudflare</a>
-1. Make sure you are logged in
-1. Click on **Preview on your site**:
-
-   ![](/images/cloudflare-01.jpg)
-
-1. You can customize some settings like [recording DNT users](/dnt), a [custom domain](/bypass-ad-blockers), [track events](/events), or enabling [hash navigation](/hash-mode). Once you're done click the button **Finish installing onto your site**:
-
-   ![](/images/cloudflare-02.jpg)
-
-1. Next click on the domain where you want to add Simple Analytics on:
-
-   ![](/images/cloudflare-03.jpg)
-
-1. Next click on **Install on all pages**:
-
-   ![](/images/cloudflare-04.jpg)
-
-1. Next click on **Continue** (we don't use your email):
-
-   ![](/images/cloudflare-05.jpg)
-
-1. On the next page you will see the Simple Analytics app installed:
-
-   ![](/images/cloudflare-06.jpg)
+Do you want to use a [custom domain](/bypass-ad-blockers) and manage your DNS in Cloudflare? Set the DNS record to **DNS only** (the gray cloud).
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

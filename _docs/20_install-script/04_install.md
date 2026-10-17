@@ -3,7 +3,7 @@ title: Install Simple Analytics on other platforms
 menu: Install on other platforms
 category: install-script
 permalink: /install-on-other-platforms
-last_modified_at: 2022-11-04
+last_modified_at: 2026-10-17
 ---
 
 ## Platform guides
@@ -15,7 +15,6 @@ Read our guides on how to install Simple Analytics on:
 - [Google Tag Manager](/install-simple-analytics-with-google-tag-manager) <small>(source on [GitHub](https://github.com/simpleanalytics/google-tag-manager#readme))</small>
 - [Wordpress](/install-simple-analytics-on-wordpress) <small>(source on [GitHub](https://github.com/simpleanalytics/wordpress-plugin#readme))</small>
 - [Ghost](/install-simple-analytics-on-ghost)
-- [CloudFlare](/install-simple-analytics-on-cloudflare) <small>(source on [GitHub](https://github.com/simpleanalytics/cloudflare-app#readme))</small>
 - [WIX](/install-simple-analytics-on-wix)
 - [Squarespace](/install-simple-analytics-on-squarespace)
 - [Webflow](/install-simple-analytics-on-webflow)
@@ -23,6 +22,8 @@ Read our guides on how to install Simple Analytics on:
 - [MailerLite](/install-simple-analytics-on-mailerlite)
 - [GoDaddy](/install-simple-analytics-on-godaddy)
 - [Netlify](https://app.netlify.com/extensions/simpleanalytics)
+
+Cloudflare has deprecated Cloudflare Apps, so you can no longer install our [Cloudflare App](/install-simple-analytics-on-cloudflare). Add [our script](/script) to your website instead.
 
 > Are you missing your favorite platform? [Let us know!](https://simpleanalytics.com/contact) Happy to create a guide or plugin for you.
 
@@ -35,17 +36,17 @@ For most frameworks, you can include the script. We magically track page views, 
 
 Get our official plugins for these frameworks:
 
-- [React](/install-simple-analytics-with-react) <small>(guide only)</small>
+- [React](/install-simple-analytics-with-react) <small>(package on [npm](https://www.npmjs.com/package/@simpleanalytics/react))</small>
 - [Ruby on Rails](/install-simple-analytics-with-ruby-on-rails) <small>(source on [GitHub](https://github.com/simpleanalytics/rubyonrails-plugin#readme))</small>
 - [Gatsby](/install-simple-analytics-with-gatsby) <small>(source on [GitHub](https://github.com/simpleanalytics/gatsby-plugin#readme))</small>
 - [Vue](/install-simple-analytics-with-vue) <small>(source on [GitHub](https://github.com/simpleanalytics/vue-plugin#readme))</small>
 - [VuePress](/install-simple-analytics-with-vuepress) <small>(source on [GitHub](https://github.com/simpleanalytics/vuepress-plugin#readme))</small>
-- [Nuxt.js](/install-simple-analytics-with-nuxt) <small>(guide only)</small>
+- [Nuxt.js](/install-simple-analytics-with-nuxt) <small>(package on [npm](https://www.npmjs.com/package/@simpleanalytics/nuxt))</small>
 - [Gridsome](/install-simple-analytics-with-gridsome) <small>(source on [GitHub](https://github.com/simpleanalytics/gridsome-plugin#readme))</small>
 - [Django](/install-simple-analytics-with-django) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
 - [Analytics library](/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>
 - [Hugo](/install-simple-analytics-with-hugo) <small>(guide only)</small>
-- [Next.js](/install-simple-analytics-with-next) <small>(guide only)</small>
+- [Next.js](/install-simple-analytics-with-next) <small>(package on [npm](https://www.npmjs.com/package/@simpleanalytics/next))</small>
 - [Docusaurus](/install-simple-analytics-with-docusaurus) <small>(source on [GitHub](https://github.com/simpleanalytics/docusaurus-plugin#readme))</small>
 - [Astro](https://github.com/simpleanalytics/astro-plugin) <small>(guide on GitHub)</small>
 

@@ -2,7 +2,7 @@
 title: How to add our script
 category: install-script
 permalink: /script
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
 Include these two lines on every page at the end of your `<body>` (or anywhere else):
@@ -19,7 +19,7 @@ We have a website setup wizard to test if you installed your script correctly. I
 
 ## Server-side tracking
 
-We support server-side tracking, [read more about it here](https://docs.simpleanalytics.com/events/server-side#page-views).
+We support server-side tracking, [read more about it here](/events/server-side#page-view-data-structure).
 
 ## Non-JavaScript environments
 
@@ -38,6 +38,8 @@ Some people like a very light script. All our scripts are heavily compressed and
 
 If you want to run the script on localhost, please use our dev (`https://scripts.simpleanalyticscdn.com/latest.dev.js`) version. Note the `.dev` part. You might want to [overwrite your hostname](/overwrite-domain-name) from localhost to something like `dev.example.com` (where `example.com` is your domain) to receive it in your dashboard. Make sure to remove the `.dev` part from the script on production.
 
+We drop data from some shared preview and proxy domains, like `*.vercel.app`, `*.lovable.app`, and `*.translate.goog`, unless that exact hostname is added to your dashboard. To collect data on such a domain, add the hostname to your dashboard or [overwrite the hostname](/overwrite-domain-name).
+
 When you are done implementing [go to your dashboard](https://simpleanalytics.com/websites).
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).
@@ -52,6 +54,57 @@ const script = document.createElement("script");
 script.setAttribute("src", "https://scripts.simpleanalyticscdn.com/latest.js");
 document.head.appendChild(script);
 ```
+
+### Settings via JavaScript
+
+Instead of `data-` attributes, you can pass settings with a `window.sa_settings` object. Define it before the script loads. Settings in this object take precedence over `data-` attributes.
+
+```html
+<script>
+  window.sa_settings = {
+    hostname: "example.com",
+    ignorePages: ["/search/*", "/account/*"],
+    collectDnt: true,
+  };
+</script>
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+```
+
+These settings are available:
+
+| Setting              | Same as                          | Example                      |
+| -------------------- | -------------------------------- | ---------------------------- |
+| `hostname`           | [`data-hostname`][1]             | `"example.com"`              |
+| `mode`               | [`data-mode`][2]                 | `"hash"`                     |
+| `collectDnt`         | [`data-collect-dnt`][3]          | `true`                       |
+| `autoCollect`        | [`data-auto-collect`][4]         | `false`                      |
+| `ignorePages`        | [`data-ignore-pages`][5]         | `["/search/*", "/vouchers"]` |
+| `ignoreMetrics`      | [`data-ignore-metrics`][6]       | `["timeonpage", "scrolled"]` |
+| `allowParams`        | [`data-allow-params`][7]         | `["product-id"]`             |
+| `nonUniqueHostnames` | [`data-non-unique-hostnames`][8] | `["checkout.stripe.com"]`    |
+| `strictUtm`          | [`data-strict-utm`][9]           | `true`                       |
+| `namespace`          | [`data-namespace`][10]           | `"ba"`                       |
+| `pathOverwriter`     | [`data-path-overwriter`][11]     | `"myPathOverwriter"`         |
+| `metadataCollector`  | [`data-metadata-collector`][12]  | `"myAddMetadataFunction"`    |
+
+For `pathOverwriter` and `metadataCollector`, use the name of a function on `window`, not the function itself. The script logs the settings it received in the browser console.
+
+[1]: /overwrite-domain-name
+[2]: /hash-mode
+[3]: /dnt
+[4]: /trigger-custom-page-views#use-custom-collection-anyway
+[5]: /ignore-pages
+[6]: /ignore-metrics
+[7]: /allow-params
+[8]: /non-unique-hostnames
+[9]: /strict-utms
+[10]: /events#the-variable-sa_event-is-already-used
+[11]: /overwrite-path
+[12]: /metadata
+
+## Browser support
+
+We test our script on a wide range of browsers and real devices with [BrowserStack](https://www.browserstack.com/). We support browser, OS, and device versions that their vendors still maintain, and we keep testing them for two years after their end of life. Older browser versions with more than 0.1% global usage stay covered.
 
 ## Open source
 

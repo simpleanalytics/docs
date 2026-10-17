@@ -3,7 +3,7 @@ title: Privacy
 menu: Privacy
 category: legal
 permalink: /privacy
-last_modified_at: 2024-08-08
+last_modified_at: 2026-10-17
 ---
 
 At Simple Analytics, our mission is to make web analytics intuitive, ethical, and privacy-friendly. We empower organizations of all sizes with straightforward and actionable insights into their website traffic while easing compliance burdens and helping build trust with customers and visitors.
@@ -28,7 +28,7 @@ By not collecting personal data, we allow customers to use Simple Analytics **wi
 
 We don’t transfer your visitors’ data outside of the EU. Our customers can move their Simple Analytics data anywhere in the world without the compliance burdens associated with data transfers.
 
-Ever since we started our business in 2018, we have only relied on European service providers. This is a choice. The data we collect is not personal and does not fall under the GDPR. It can be transferred anywhere with no legal issues and can be lawfully sent to our customers located outside the EU, including non-Privacy Shield-certified US customers.
+Ever since we started our business in 2018, we have only relied on European service providers. This is a choice. For your analytics data, the only exception is the opt-in [AI chat](/data-security-and-ownership#ai-chat) in the dashboard, which sends your aggregated analytics data to OpenAI after you agree to it. The data we collect is not personal and does not fall under the GDPR. It can be transferred anywhere with no legal issues and can be lawfully sent to our customers located outside the EU, including non-Privacy Shield-certified US customers.
 
 Are you coming from Google Analytics? Please read our blog post on [the differences between Google Analytics and Simple Analytics](https://www.simpleanalytics.com/blog/why-simple-analytics-is-a-great-alternative-to-google-analytics). You can import your Google Analytics data into Simple Analytics.
 

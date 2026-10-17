@@ -2,10 +2,10 @@
 title: Collect without JavaScript
 category: install-script
 permalink: /without-javascript
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
-Normally you would collect page view via our [open source JavaScript](/script). But there are other way to collect those. You can either send data via [your own server](/server-side-tracking) or send it through a pixel (a small GIF image).
+Normally you would collect page view via our [open source JavaScript](/script). But there are other way to collect those. You can either send data via [your own server](/events/server-side) or send it through a pixel (a small GIF image).
 
 > By default we already include a pixel (image) with our `<noscript>` tag. This tag gets executed when a visitor disabled JavaScript in their browser. The pixel inside the tag will still record that page view. The data connected to that page view is limited, but still useful for the overall picture.
 

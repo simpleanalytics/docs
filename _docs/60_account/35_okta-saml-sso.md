@@ -2,12 +2,12 @@
 title: Set up Okta SAML SSO
 category: account
 permalink: /okta-saml-sso
-last_modified_at: 2026-06-16
+last_modified_at: 2026-10-17
 ---
 
 Use this guide to connect Okta to your Simple Analytics team with SAML SSO.
 
-Before you start, make sure you have admin access in Okta and access to the [team settings](https://dashboard.simpleanalytics.com/settings/team) in Simple Analytics. If you do not see the SSO settings in Simple Analytics yet, [contact us](https://dashboard.simpleanalytics.com/contact) and ask us to enable SSO setup for your team.
+Before you start, make sure you have admin access in Okta and are an owner or admin of your team in Simple Analytics, so you can open the SSO section of the [team settings](https://dashboard.simpleanalytics.com/settings/team). If you do not see the SSO settings in Simple Analytics yet, [contact us](https://dashboard.simpleanalytics.com/contact) and ask us to enable SSO setup for your team.
 
 ## 1. Create a Simple Analytics account (if you don't have one)
 
@@ -15,13 +15,15 @@ Create a Simple Analytics account if you do not have one yet. You need access to
 
 ## 2. Create the Okta application
 
+In the SSO section of your Simple Analytics [team settings](https://dashboard.simpleanalytics.com/settings/team), select **Okta** as the **Provider**. This shows the values you need in Okta.
+
 In Okta, create a new application integration and select **SAML 2.0** as the sign-in method.
 
 Use these settings for the application:
 
 1. Set the app name to **Simple Analytics**.
 1. Optionally, add the Simple Analytics logo from our [media kit](https://www.simpleanalytics.com/media-kit).
-1. For **Single sign-on URL**, use the SSO URL shown in the SSO section of your Simple Analytics [team settings](https://dashboard.simpleanalytics.com/settings/team).
+1. For **Single sign-on URL**, use the **ACS / SSO URL** shown in the SSO section of your Simple Analytics [team settings](https://dashboard.simpleanalytics.com/settings/team).
 1. Keep **Use this for Recipient URL and Destination URL** checked.
 1. For **Audience URI**, use the SP Entity ID shown in the SSO section of your Simple Analytics [team settings](https://dashboard.simpleanalytics.com/settings/team).
 1. Leave **Default RelayState** empty.

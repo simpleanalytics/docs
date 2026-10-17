@@ -4,7 +4,7 @@ category: general
 permalink: /what-we-collect
 hidden: true
 excerpt: "Simple Analytics only collects privacy-insensitive data. Here is a list of what we do and don’t collect from your visitors."
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-17
 ---
 
 Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your visitors.
@@ -51,7 +51,7 @@ We use timestamps to generate the graphs you see on your dashboard, which allows
 
 > We **do collect and store** user agents anonymized
 
-We detect and exclude bots and spiders based on the visitor's User Agent. We **don't** use User Agents for fingerprinting, only for counting **operating systems, device types, and browsers** in your dashboard. We allow customers to download these counts alongside the User Agent string itself. We do anonymize the User Agent string. For example, when it has a very detailed version number we truncate it from `Chrome/78.0.3904.108` into `Chrome/78.0.0.0`.
+We detect and exclude bots and spiders, mostly based on the visitor's User Agent. [Read how we detect bots](/bots#how-we-detect-bots-on-your-website). We **don't** use User Agents for fingerprinting, only for counting **operating systems, device types, and browsers** in your dashboard. We allow customers to download these counts alongside the User Agent string itself. We do anonymize the User Agent string. For example, when it has a very detailed version number we truncate it from `Chrome/78.0.3904.108` into `Chrome/78.0.0.0`.
 
 Browsers or devices identify themselves to websites. They give themselves some kind of name. For example, a user agent can look like this ([wiki][1]):
 
@@ -123,7 +123,7 @@ The second ID, page ID, is used to link multiple events (if a customer collects 
 
 The third ID, page-load ID, is a random in-memory ID used to link events and page views sent during one actual page load. On a SPA (Single Page Application), History API route changes do not reload the document, so consecutive virtual pages share the same page-load ID. Reloading, navigating to a new document, or closing the page ends the page load. On a website without SPA or History API navigation, every page gets a new page-load ID.
 
-We previously called this value a session ID and exposed it as `session_id`. That name can suggest a conventional analytics session that continues across page loads, while this ID does not. We are replacing the name with `page_load_id` to describe its scope more accurately. We will keep `session_id` as a backward-compatible legacy field so existing exports, queries, and integrations do not break.
+We previously called this value a session ID. That name can suggest a conventional analytics session that continues across page loads, while this ID does not. Its field is still named `session_id` in exports and APIs, and the [ignore metrics](/ignore-metrics) setting still uses `session`.
 
 None of these IDs are linked to a person or personal data, and none are stored on the device. Reloading the page resets all of them.
 
@@ -161,7 +161,7 @@ We track these UTM codes:
 - `utm_medium` (e.g.: `search`)
 - `utm_campaign` (e.g.: `get_customers_02`)
 - `utm_content` (e.g.: `sidebar`)
-- _`utm_term` (this is deprecated as it is intended to contain user data)_
+- `utm_term` (e.g.: `shoes`, don't use it for personal data like search terms that visitors typed themselves)
 
 Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. These are all saved as the `utm_source`. Read more on [using URL parameters](/how-to-use-url-parameters).
 

@@ -2,16 +2,16 @@
 title: Passwords
 category: account
 permalink: /passwords
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
-You can always login with just your email. Some users like to login with a password. This can be faster than with email only.
+You can always log in with just your email, unless your team requires single sign-on (SSO). Some users like to log in with a password. This can be faster than with email only.
 
-> We know you can share your passwords with colleagues, but it's not allowed with the Starter plan. Only with the Business plan.
+> Don't share your password with colleagues. [Add them to your team](/explained/team-roles#add-team-members) instead, so everyone has their own login and role.
 
 Here are the steps you need to take to reset or set your password:
 
-1. Make sure to be logged in (you can always use [email login](https://simpleanalytics.com/login)).
+1. Make sure to be logged in (you can use [email login](https://simpleanalytics.com/login)).
 
 1. Go to [your account settings](https://simpleanalytics.com/account).
 
@@ -19,9 +19,9 @@ Here are the steps you need to take to reset or set your password:
 
    ![](/images/password-set.jpg)
 
-1. Fill in a password (a) and click on the "Update password" button (b).
+1. Fill in a password (a) and click on the "Set password" button (b). If you already have a password, the button is called "Update password".
 
-   Make sure the **password is long**, we don't enforce this, but length is the most important security of a password.
+   Your password needs at least 6 characters, but make sure the **password is long**. Length is the most important security of a password.
 
    ![](/images/password-fill.jpg)
 

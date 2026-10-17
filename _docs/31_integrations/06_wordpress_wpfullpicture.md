@@ -3,7 +3,7 @@ title: WP Full Picture plugin
 category: integrations
 hidden: true
 permalink: /wordpress-full-picture-plugin
-last_modified_at: 2023-05-29
+last_modified_at: 2026-10-17
 ---
 
 [WP Full Picture](https://wordpress.org/plugins/full-picture-analytics-cookie-notice/) is a WordPress plugin with more features than [the official Simple Analytics plugin](/install-simple-analytics-on-wordpress).
@@ -28,7 +28,7 @@ This is how the settings page looks:
 ## How to install Simple Analytics with the WP Full Picture plugin
 
 1. Go to your WordPress admin
-1. Go to **Plugins** in your WordPress admin and click on **Add new**:
+1. Go to **Plugins** in your WordPress admin and click on **Add Plugin**:
 1. Click on **Search Plugins** and type `wp full picture`
 1. Click on **Install Now**
 

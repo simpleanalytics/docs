@@ -4,7 +4,7 @@ menu: How to use URL params
 category: general
 permalink: /how-to-use-url-parameters
 excerpt: "You can add URL parameters to see where your customers are coming from."
-last_modified_at: 2022-07-26
+last_modified_at: 2026-10-17
 ---
 
 There are a few ways we determine where a visitor comes from. We automatically detect the previous page (referrer) from the visitor's browser, but you can also add a URL parameter to override this and set a custom referrer.
@@ -33,7 +33,9 @@ We support the following codes:
 - UTM medium (e.g.: `utm_medium=newsletter`)
 - UTM campaign (e.g.: `utm_campaign=march_01`)
 - UTM content (e.g.: `utm_content=button_red`)
-- UTM term (e.g.: `utm_term=shoes`, this param is deprecated as it is intended to contain user generated content)
+- UTM term (e.g.: `utm_term=shoes`)
+
+Don't put personal data in UTM codes, like search terms that visitors typed themselves.
 
 The UTM codes will show up on the dashboard in the "Referrals" dropdown menu:
 

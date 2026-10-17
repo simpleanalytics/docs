@@ -4,7 +4,7 @@ category: events
 permalink: /automated-events
 redirect_from:
   - /capture-outbound-links
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-17
 ---
 
 [Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, and amount of downloads for common files (pdf, csv, docx, xlsx). Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
@@ -50,6 +50,14 @@ Or if you want to change some settings (these are the defaults):
 ```
 
 It takes care of sending it as an event to Simple Analytics. Events can only be letters, numbers, and underscores. We convert the event names directly in this script.
+
+If you changed the event function with [`data-namespace`](/events#the-variable-sa_event-is-already-used), add `data-sa-global` with the name of that function to the automated events script. For example, with `data-namespace="ba"`:
+
+<!-- prettier-ignore -->
+```html
+<script async data-namespace="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<script async data-sa-global="ba_event" src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
+```
 
 ## Demo of the script
 

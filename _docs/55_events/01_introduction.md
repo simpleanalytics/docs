@@ -3,7 +3,7 @@ title: Introduction to events
 menu: Introduction
 category: events
 permalink: /events
-last_modified_at: 2026-08-12
+last_modified_at: 2026-10-17
 ---
 
 With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email links. You will need to install our separate script for it, but after that you don't need to modify any code.
@@ -85,15 +85,19 @@ First, check if the events you need are part of our [automated events script](/a
 
 ## Valid event names
 
-We want to keep events very simple. That's why we only allow alphanumeric characters and underscores (`_`). We convert events to lower case and invalid names to a version which is valid. This way your events are always saved. If you return a function for an event we run this function and if the result is a string we will store the event. For example: `sa_event(function() { return "clicked_signup_on_" + window.document.location.pathname })`.
+We want to keep events very simple. That's why we only allow alphanumeric characters and underscores (`_`). Our script replaces every other character (or group of characters) with an underscore and removes leading and trailing underscores. This way your events are always saved. If you return a function for an event we run this function and if the result is a string we will store the event. For example: `sa_event(function() { return "clicked_signup_on_" + window.document.location.pathname })`.
 
-Event names are limited to 200 characters. If this exceeds we truncate the name to 200 characters.
+Event names are case-sensitive. We don't convert them to lower case, so `Click_Signup` and `click_signup` are two different events.
+
+Keep event names shorter than 1,000 characters. Longer names don't show up in your dashboard.
+
+Events you send [from your server](/events/server-side) are stored exactly as you send them, so make sure they follow the same rules.
 
 ## Tracking over multiple pages
 
 Events and page views sent during one actual page load can be grouped with a page-load ID. On a SPA (Single Page Application), History API route changes do not reload the document, so consecutive virtual pages share the same page-load ID. On a website without SPA or History API navigation, a full navigation loads a new document and creates a new page-load ID. Nothing is stored on the visitor's device to continue the ID across page loads.
 
-The page-load ID was previously called a session ID and exposed as `session_id`. We are replacing that name with `page_load_id` because it describes the short-lived scope more accurately. The legacy `session_id` field remains available so existing code and integrations do not break.
+The page-load ID was previously called a session ID. Its field is still named `session_id` in exports and APIs, and the [ignore metrics](/ignore-metrics) setting still uses `session`.
 
 ## Export events
 
@@ -139,4 +143,4 @@ If the `sa_event` variable is already in use you can change it with the `data-na
 <script async data-namespace="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
-Do note that the namespace will also change other functions as well. For example, `sa_metadata` becomes `ba_metadata`, `sa_loaded` becomes `ba_loaded`, and `sa_pageview` becomes `ba_pageview`.
+The namespace also changes other variables. For example, `sa_metadata` becomes `ba_metadata` and `sa_loaded` becomes `ba_loaded`. The [`sa_pageview`](/trigger-custom-page-views#use-custom-collection-anyway) function keeps its name. If you use [automated events](/automated-events), add `data-sa-global="ba_event"` to the automated events script.

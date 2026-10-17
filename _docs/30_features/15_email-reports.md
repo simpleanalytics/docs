@@ -2,12 +2,14 @@
 title: Email reports
 category: features
 permalink: /email-reports
-last_modified_at: 2026-08-07
+last_modified_at: 2026-10-17
 ---
 
 Want to start your Monday morning by checking how your website is doing? Want to send updates to others? Use our weekly or monthly email reports so you don't have to check the dashboard all the time. Never miss that spike of traffic.
 
 Monthly email reports are enabled by default for new websites. They have also been enabled for eligible members of existing teams. If you don't want to receive these reports, use the one-click link in the first automatically enabled email or turn them off in [your website settings](https://simpleanalytics.com/select-website/settings#email-reports).
+
+> The unsubscribe link in a report email turns off all email reports for that email address, for every website. You can't add the address back to those reports yourself, so [contact us](https://simpleanalytics.com/contact) if this was a mistake. To stop the report for one website only, click **remove** next to the recipient in [your website settings](https://simpleanalytics.com/select-website/settings#email-reports).
 
 In your website settings, you can also add a report or choose between weekly and monthly reports. Look for the section that looks like this:
 

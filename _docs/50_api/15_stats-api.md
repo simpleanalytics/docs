@@ -4,7 +4,7 @@ category: api
 permalink: /api/stats
 redirect_from:
   - /api/json-api
-last_modified_at: 2026-08-11
+last_modified_at: 2026-10-17
 ---
 
 To get the aggregated statistics you see in our dashboard, use this Stats API. This API helps integrate Simple Analytics into your systems. For example, you can get KPIs out of your data or embed your data into a customized dashboard.
@@ -31,10 +31,10 @@ We have a list of query parameters that you can use with this API.
 
 The complete list of all query params you can use with the latest Stats API.
 
-- `version` the version of the API (the latest version is `{{ site.api_version }}`)
+- `version` the version of the API (the latest version is `{{ site.api_version }}`). Always specify it. Without it, we fall back to version 1, which has an older response format
 - `start` the start date with this format `YYYY-MM-DD` (defaults to 1 month ago)
 - `end` the end date with the above format (defaults to today)
-- `limit` a limit for the fields (1-1000)
+- `limit` a limit for the fields (1-1000, defaults to 50)
 - `timezone` a valid time zone like `Europe/Amsterdam` (with capitals)
 - `info` shows more information about fields in the response (defaults to true)
 - `callback` wraps the response in a callback for [JSONP](https://en.wikipedia.org/wiki/JSONP)
@@ -44,8 +44,8 @@ The complete list of all query params you can use with the latest Stats API.
 - `fields` a comma separated list of fields you want to get returned:
   - `pageviews` the total amount of page views in the specified period
   - `visitors` the total amount of visitors (unique page views) in the specified period
-  - `histogram` an array with page views and visitors per day
-  - `pages` a comma separated list of pages you want to get stats for
+  - `histogram` an array with page views and visitors per day (or per `interval`)
+  - `pages` a list of the most visited pages (to filter by pages, see [the filters](#get-data-for-specific-pages))
   - `countries` a list of country codes
   - `referrers` a list of referrers (normalized)
   - `utm_sources` a list of UTM sources
@@ -96,7 +96,7 @@ For example, this request only returns page views where the `app_id` metadata va
 https://simpleanalytics.com/example.com.json?version=6&fields=histogram&metadata.app_id=nl-123
 ```
 
-The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata, while boolean and date values also fall back to their exact text value. Matches are exact and wildcards are not supported. When you specify multiple metadata filters, all of them must match (AND).
+The Stats API automatically checks the stored metadata type. Numeric values match both number and text metadata. The values `true` and `false` match boolean metadata, and dates in ISO 8601 format in UTC (such as `2026-08-11T10:00:00Z`) match date metadata. Both also fall back to their exact text value. Matches are exact and wildcards are not supported. When you specify multiple metadata filters, all of them must match (AND).
 
 ## Get data for specific pages
 
@@ -191,6 +191,10 @@ https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version
 ```
 
 If you use `events=*`, all events are returned (limited to 1000 events).
+
+## Errors
+
+When a request fails, the response contains `"ok": false` and usually an `error` message. If a website on the Free plan is locked because its [Simple Analytics badge](/free-plan-badge) is missing, the API returns HTTP `423` with `"code": "BADGE_REQUIRED"`.
 
 ## CORS and JSONP
 
