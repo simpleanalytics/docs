@@ -90,6 +90,8 @@ These fields are deprecated but we keep them for backward compatibility. It's re
 
 For this API you'll need to authenticate, unless your website is public. See the [authenticate page](/api/authenticate) on how to authenticate.
 
+When a public website hides its top pages, fields that contain page paths (`path`, `query`, `path_and_query`, `url`, `document_referrer`, `referrer_path`, and the deprecated `referrer` and `referrer_raw`) need an API key with access to the website. Without a key, these requests return HTTP `403`.
+
 In short: apply an `Api-Key`-header where the key starts with `sa_api_key_...`. The `User-Id` header in the examples is optional for this API.
 
 ## Query parameters
