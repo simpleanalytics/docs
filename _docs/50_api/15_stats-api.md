@@ -13,6 +13,8 @@ To get the aggregated statistics you see in our dashboard, use this Stats API. T
 
 For this API, you need to be [authenticated with an API key](/api/authenticate). If your website is public, you can get the JSON data without credentials.
 
+> When a public website hides its top pages, page data still needs an API key with access to the website. This applies to the `pages` field, page filters (including a path in the URL), and `version=2` requests, which always include pages. Other fields, like `pageviews`, `visitors`, and `histogram`, stay available without credentials.
+
 You can find the Stats API by adding `.json` to the URL of your dashboard in Simple Analytics. For example, for our website, it is:
 
 ```
