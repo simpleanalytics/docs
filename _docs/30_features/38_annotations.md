@@ -27,6 +27,6 @@ If you want to communicate even more with the annotations, add a link to it. Whe
 
 ### Website settings
 
-You can add your own annotations in [your website settings](https://simpleanalytics.com/select-website/settings#annotations). Our default annotations are listed there too. Admins can click **remove** next to a default annotation to hide it.
+You can add your own annotations in [your website settings](https://simpleanalytics.com/select-website/settings#annotations). Our default annotations are listed there too. Click **remove** next to a default annotation to hide it.
 
 <img src="/images/annotations-settings.png" alt="Custom annotations settings in Simple Analytics" class="border">
