@@ -26,6 +26,4 @@ Let's say you have referral SPAM from _"free-traffic.example"_. To hide it from 
 
 1. Go through the next step and click **Update view**.
 
-You need the [analyst role](/explained/team-roles) or higher to hide visits.
-
 > You can also hide page views based on other fields, like the page path or UTM codes. Go to [the filters of your view](https://simpleanalytics.com/select-website/edit), add a filter, and save the view.

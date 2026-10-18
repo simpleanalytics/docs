@@ -19,7 +19,7 @@ If you don't mention a period, we use the last 30 complete days and compare them
 
 ## Compare websites
 
-AI chat uses the website you have open in your dashboard. You can also ask about other websites in the same team that you have access to, for example _"Compare website Y traffic with website X traffic"_. Websites in other teams aren't included.
+AI chat uses the website you have open in your dashboard. You can also ask about your other websites, for example _"Compare website Y traffic with website X traffic"_.
 
 ## Your data
 
