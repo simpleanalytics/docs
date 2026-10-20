@@ -2,7 +2,6 @@
 title: AI chat
 category: features
 permalink: /ai-chat
-created_at: 2026-10-17
 last_modified_at: 2026-10-17
 ---
 
