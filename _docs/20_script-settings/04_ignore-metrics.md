@@ -3,23 +3,24 @@ title: Ignore metrics
 category: script-settings
 permalink: /ignore-metrics
 created_at: 2022-07-26
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-25
 ---
 
 Our script only collects non-personal data. Some customers might want to limit our metrics even more. That's why we created the ignore metrics feature.
 
-| Metric              | Slug           | Inferrered metric      |
-| ------------------- | -------------- | ---------------------- |
-| Referrer            | `referrer`     | UTM codes, `ref` param |
-| UTM codes           | `utm`          | [`ref` param][0]       |
-| Country / time zone | `country`      |                        |
-| Page-load IDs       | `session`      |                        |
-| Time on page        | `timeonpage`   | Data point ID, Page ID |
-| Scrolled            | `scrolled`     | Data point ID, Page ID |
-| User Agent          | `useragent`    |                        |
-| Screen size         | `screensize`   |                        |
-| Viewport size       | `viewportsize` |                        |
-| Language            | `language`     |                        |
+| Metric                | Slug           | Inferrered metric      |
+| --------------------- | -------------- | ---------------------- |
+| Referrer              | `referrer`     | UTM codes, `ref` param |
+| UTM codes             | `utm`          | [`ref` param][0]       |
+| Country / time zone   | `country`      |                        |
+| Page-load IDs         | `session`      |                        |
+| Time on page          | `timeonpage`   | Data point ID, Page ID |
+| Scrolled              | `scrolled`     | Data point ID, Page ID |
+| User Agent            | `useragent`    |                        |
+| Screen size           | `screensize`   |                        |
+| Viewport size         | `viewportsize` |                        |
+| Language              | `language`     |                        |
+| Query parameter names | `querykeys`    |                        |
 
 [0]: /how-to-use-url-parameters#using-a-url-parameter
 
@@ -40,7 +41,9 @@ Our script only collects non-personal data. Some customers might want to limit o
 
 [See page](/metrics) where we explain those metrics.
 
-When you ignore `referrer`, we also drop UTM codes and the `ref` param from page views, because they describe where a visitor came from. Parameters from [allow params](/allow-params) are still collected. When a visitor navigates within your own website, we still send that internal referrer so we can tell [unique visits](/uniques) apart.
+From script version 12, we collect the **names** of query parameters in the URL of the first page view of a visit, for example `gclid,ref` for `?gclid=123&ref=newsletter`. We never collect their values, and skip parameters without a value. Ignore `querykeys` to turn this off.
+
+When you ignore `referrer`, we also drop UTM codes, query parameter names and the `ref` param from page views, because they describe where a visitor came from. Parameters from [allow params](/allow-params) are still collected. When a visitor navigates within your own website, we still send that internal referrer so we can tell [unique visits](/uniques) apart.
 
 ## Script setting `data-ignore-metrics`
 
@@ -72,7 +75,7 @@ To ignore all metrics that you can ignore, you can use this embed script:
 
 ```html
 <script
-  data-ignore-metrics="referrer,utm,country,session,timeonpage,scrolled,useragent,screensize,viewportsize,language"
+  data-ignore-metrics="referrer,utm,country,session,timeonpage,scrolled,useragent,screensize,viewportsize,language,querykeys"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
 ></script>
 ```

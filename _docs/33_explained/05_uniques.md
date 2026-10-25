@@ -5,7 +5,7 @@ category: explained
 permalink: /explained/unique-visits
 redirect_from:
   - /uniques
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-25
 ---
 
 At Simple Analytics, we approach things differently. Our priority is protecting your visitors' privacy while staying compliant with strict privacy laws. This means some of our statistics work differently than traditional analytics tools.
@@ -33,7 +33,7 @@ We use the [referrer](https://en.wikipedia.org/wiki/HTTP_referer) to determine w
 
 **A pageview is NOT counted as unique when:**
 
-- The referrer's hostname matches your website's hostname (internal navigation)
+- The referrer's hostname matches your website's hostname (internal navigation), except right after a Cloudflare challenge (see below)
 - The user navigates using browser history (back/forward buttons)
 - The user reloads the page
 - The referrer's hostname is in your [non-unique hostnames](/non-unique-hostnames) list, for example a payment provider
@@ -49,6 +49,8 @@ The same logic applies to direct visits. When someone types `yourwebsite.com` di
 If they then navigate to `yourwebsite.com/page`, the referrer is now `yourwebsite.com`, so this second pageview is not counted as unique.
 
 ![](/images/direct-visit.jpg)
+
+If your website uses a Cloudflare challenge (such as "I'm Under Attack" mode), visitors arrive from the challenge page on your own domain. From script version 12, we count that first pageview as unique and send it without a referrer, because the challenge replaced the original one.
 
 ## Why some pages have pageviews but (almost) no visitors
 

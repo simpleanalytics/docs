@@ -1,69 +1,57 @@
 ---
-title: Inline events helper
+title: Inline events
 category: events
 permalink: /events/inline
-hidden: true
-last_modified_at: 2025-04-22
+last_modified_at: 2026-10-25
 ---
 
-This small script watches your page for any element with a `data-simple-event`-attribute and automatically sends events to Simple Analytics when the user interacts. You don’t need to write any extra JavaScript calls—just add the right attributes to your HTML.
-
-<blockquote class="red">
-  <p>Warning, this script is in beta and can change any time.</p>
-</blockquote>
-
-### Installation
-
-Include the tracker snippet somewhere on your page, just before the closing `</body>` tag.
+From script version 12, our main script sends an event when a visitor interacts with an element that has a `data-simple-event` attribute. You don't need to write JavaScript or load an extra script.
 
 ```html
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<script async src="https://scripts.simpleanalyticscdn.com/inline-events.js"></script>
 ```
 
-### Tracking button clicks
+If you added the beta `inline-events.js` script, remove it. Otherwise every event is sent twice.
 
-To track a click, add `data-simple-event="event_name"` to any clickable element. The script prevents the default action, sends your event, then continues with the click (including opening links).
+### Clicks
+
+Add `data-simple-event="event_name"` to any clickable element:
 
 ```html
 <a href="/pricing" data-simple-event="visit_pricing_page">See pricing</a>
 ```
 
-Tracking form submissions
+The script never delays or cancels the click, so links, downloads and new tabs work as before.
 
-Simply put `data-simple-event="form_name"` on your form tag. When the user submits, the script sends an event with the name of the form and the text of the submit button, then submits the form.
+### Form submissions
+
+Put `data-simple-event="form_name"` on your `form` tag. The event is sent when the form is submitted and includes the text of the submit button as `button_text`. We never collect what visitors type into your form.
 
 ```html
 <form action="/signup" data-simple-event="signup_form">
   <input name="email" type="email" />
-  <input name="password" type="password" />
   <button type="submit">Sign up</button>
 </form>
 ```
 
-### Adding custom metadata
+### Metadata
 
-Any attribute starting with `data-simple-event-` will be included as event metadata. Dashes convert to underscores.
+Every inline event includes the element's tag name as `tag`. Attributes starting with `data-simple-event-` are added as [metadata](/metadata), with dashes converted to underscores:
 
 ```html
-<button
-  data-simple-event="select_plan"
-  data-simple-event-plan="enterprise"
-  data-simple-event-referrer="homepage"
->
+<button data-simple-event="select_plan" data-simple-event-plan="enterprise">
   Choose Enterprise
 </button>
 ```
 
-### Manual event tracking
+### 404 pages
 
-You can also fire events from code using `sa_event("event_name", { key: value })`. This works before or after the auto‑binding. For this you don't need this extra script.
+Add `data-detect-404="true"` to the script to send a `page_404` event when a page contains "404" and a request to the same URL confirms the 404 status.
 
-```js
-// custom event on newsletter popup
-sa_event("newsletter_signup", { source: "modal" })
+```html
+<script
+  async
+  data-detect-404="true"
+  src="https://scripts.simpleanalyticscdn.com/latest.js"
+></script>
 ```
-
-### 404 detection
-
-On DOMContentLoaded the script checks for "404" in your page HTML. If it finds it and the server HEAD request confirms status 404, it will send a page_404 event with the URL and status code.
