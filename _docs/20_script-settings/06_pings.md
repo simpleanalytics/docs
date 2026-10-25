@@ -26,4 +26,4 @@ Or with the [settings object](/script#settings-via-javascript):
 </script>
 ```
 
-There are no pings by default. Every threshold adds a request per page view, so only add the ones you need. Pings don't send anything when you ignore `timeonpage` with [ignore metrics](/ignore-metrics).
+There are no pings by default. Every threshold adds a request per page view, so only add the ones you need. When you ignore `timeonpage` with [ignore metrics](/ignore-metrics), pings only send how far visitors scrolled.

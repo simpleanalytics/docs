@@ -21,7 +21,7 @@ Do you have links to email addresses on your website? Then it could make sense t
 
 ## Phone numbers
 
-From script version 12, we also collect clicks on `tel:` links. The event is named after the number (for example `phone_31612345678`) and includes the number as `phone` metadata. To keep the old behavior, leave `phones` out of `data-collect`.
+From script version 12, we also collect clicks on `tel:` links. The event is named after the number (for example `phone_31612345678`), or after the link's title if it has one, and includes the number as `phone` metadata. To keep the old behavior, leave `phones` out of `data-collect`.
 
 ## Downloads
 

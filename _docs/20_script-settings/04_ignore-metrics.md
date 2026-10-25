@@ -41,7 +41,7 @@ Our script only collects non-personal data. Some customers might want to limit o
 
 [See page](/metrics) where we explain those metrics.
 
-From script version 12, we collect the **names** of query parameters in the URL of the first page view of a visit, for example `gclid,ref` for `?gclid=123&ref=newsletter`. We never collect their values, and skip parameters without a value. Ignore `querykeys` to turn this off.
+From script version 12, we collect the **names** of query parameters in the page URL, for example `gclid,ref` for `?gclid=123&ref=newsletter`. We skip them for single-page app navigations, reloads and back/forward navigation. This only adds names: values are still only collected for UTM codes, `ref` and [allowed parameters](/allow-params). Ignore `querykeys` to turn this off.
 
 When you ignore `referrer`, we also drop UTM codes, query parameter names and the `ref` param from page views, because they describe where a visitor came from. Parameters from [allow params](/allow-params) are still collected. When a visitor navigates within your own website, we still send that internal referrer so we can tell [unique visits](/uniques) apart.
 
