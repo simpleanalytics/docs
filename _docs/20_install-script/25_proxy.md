@@ -2,7 +2,7 @@
 title: Proxy
 category: install-script
 permalink: /proxy
-last_modified_at: 2025-06-18
+last_modified_at: 2026-10-25
 ---
 
 Concerned about your website visitors’ privacy when using Simple Analytics? We understand. Let’s be clear: we never collect your visitors’ IP addresses. And with our proxy setup option using Caddy, NGINX, Netlify, or Vercel, you have the power to ensure those IP addresses never reach us. This setup acts as a privacy shield, keeping your visitors' IP addresses from reaching external services.
@@ -30,13 +30,13 @@ location ^~ /simple/ {
 }
 
 location = /proxy.js {
-  expires 7d;
+  expires 1h;
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
   proxy_pass https://simpleanalyticsexternal.com/proxy.js?hostname=example.com&path=/simple;
 }
 
 location = /auto-events.js {
-  expires 7d;
+  expires 1h;
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
   proxy_pass https://scripts.simpleanalyticscdn.com/auto-events.js;
 }
