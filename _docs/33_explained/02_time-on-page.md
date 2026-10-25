@@ -3,7 +3,7 @@ title: Time on page explained
 menu: Time on page
 category: explained
 permalink: /explained/time-on-page
-last_modified_at: 2022-04-14
+last_modified_at: 2026-10-25
 ---
 
 _Time on page_ is an important metric to measure how engaged your visitors are with your content. But in most analytics tools, there is something very wrong with that metric. You might think when using Simple Analytics: "These numbers are lower than I'm used to", well, that's probably right.
@@ -35,6 +35,8 @@ Simple Analytics detects when a user navigates to a different website (in a new 
 ![](/images/time-on-page-sa.png)
 
 In the above example, we get the expected result: a visitor was 15 seconds on `page1` and 5 seconds on `page2`. Nothing more, nothing less. That's what you can expect from Simple Analytics. We make sure your data is as close to real-world scenarios as possible.
+
+From script version 12, only the time a page is visible counts. The timer pauses when a visitor switches to another tab or app, and continues when they come back. We send the time every time the page gets hidden, so we also keep it when a mobile browser closes the page in the background. Times are rounded down to whole seconds. To also send the time while the page is still open, use [pings](/pings).
 
 {%
   include video.html

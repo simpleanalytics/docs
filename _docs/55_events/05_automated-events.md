@@ -4,10 +4,10 @@ category: events
 permalink: /automated-events
 redirect_from:
   - /capture-outbound-links
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-25
 ---
 
-[Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, and amount of downloads for common files (pdf, csv, docx, xlsx). Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
+[Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, phone number clicks, and amount of downloads for common files (pdf, csv, docx, xlsx). Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
 
 We created a simple video showing how to collect automated events in Simple Analytics. [Here you go](https://www.youtube.com/watch?v=CCvdgTReqms)
 
@@ -18,6 +18,10 @@ Outbound links are basically just links that go to a different website. For exam
 ## Emails
 
 Do you have links to email addresses on your website? Then it could make sense to see how many clicks you get on your `mailto` links.
+
+## Phone numbers
+
+From script version 12, we also collect clicks on `tel:` links. The event is named after the number (for example `phone_31612345678`) and includes the number as `phone` metadata. To keep the old behavior, leave `phones` out of `data-collect`.
 
 ## Downloads
 
@@ -42,14 +46,14 @@ Or if you want to change some settings (these are the defaults):
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 <script
   async
-  data-collect="outbound,emails,downloads"
+  data-collect="outbound,emails,downloads,phones"
   data-extensions="pdf,csv,docx,xlsx,zip,doc,xls"
   data-use-title="true"
   data-full-urls="false"
   src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
 ```
 
-It takes care of sending it as an event to Simple Analytics. Events can only be letters, numbers, and underscores. We convert the event names directly in this script.
+It takes care of sending it as an event to Simple Analytics. Events can only be letters, numbers, and underscores. We convert the event names directly in this script. From script version 12, the script never delays or cancels a click. Links with a [`data-simple-event`](/events/inline) attribute are tracked as inline events instead.
 
 If you changed the event function with [`data-namespace`](/events#the-variable-sa_event-is-already-used), add `data-sa-global` with the name of that function to the automated events script. For example, with `data-namespace="ba"`:
 
