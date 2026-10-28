@@ -40,14 +40,21 @@
 
     <!-- Apply dark mode before rendering to prevent a white flash -->
     <script>
+      var darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+      function setDarkMode(dark) {
+        var toggle = document.querySelector('.theme-toggle button')
+        document.documentElement.classList.toggle('dark', dark)
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#2A373A' : '#FFFFFF')
+        if (toggle) toggle.setAttribute('aria-pressed', dark)
+      }
+
       (function() {
         var dark = null
         try {
           dark = localStorage.getItem('dark')
         } catch (error) {}
-        if (dark === null) dark = window.matchMedia('(prefers-color-scheme: dark)').matches
-        else dark = dark === 'true'
-        document.documentElement.classList.toggle('dark', dark)
+        setDarkMode(dark === null ? darkModeQuery.matches : dark === 'true')
       })()
     </script>
 
@@ -267,16 +274,8 @@
     }, false)
 
     // Dark mode follows the system setting, unless the visitor picked the other one
-    var darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)')
     var darkModeToggle = document.querySelector('.theme-toggle button')
-
-    function setDarkMode(dark) {
-      document.documentElement.classList.toggle('dark', dark)
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#2A373A' : '#FFFFFF')
-      darkModeToggle.setAttribute('aria-pressed', dark)
-    }
-
-    setDarkMode(document.documentElement.classList.contains('dark'))
+    darkModeToggle.setAttribute('aria-pressed', document.documentElement.classList.contains('dark'))
 
     darkModeToggle.addEventListener('click', function() {
       var dark = !document.documentElement.classList.contains('dark')

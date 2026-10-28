@@ -91,11 +91,23 @@ nav .brand {
     margin-left: auto;
   }
 
-  button,
-  button:hover {
+  // Too narrow to fit next to the logo and menu, these follow the system setting
+  @media (max-width: 359px) {
+    display: none;
+  }
+
+  button {
     height: auto;
     padding: 1rem;
     border-radius: 0;
+
+    @media (max-width: $breakpoint-medium) {
+      padding: 0.5rem;
+    }
+  }
+
+  button,
+  button:hover {
     background: none;
   }
 }

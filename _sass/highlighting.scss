@@ -89,7 +89,7 @@ pre.highlight code {
   html.dark .highlight {
     .hll { background-color: #3d3a1f }
     .err { border-color: #ff938a }
-    .c, .cm, .cp, .c1, .cs, .go, .ni, .w { color: #768390 }
+    .c, .cm, .cp, .c1, .cs, .go, .ni, .w { color: var(--color-muted) }
     .k, .kc, .kd, .kn, .kp, .kr, .kt, .ow { color: #f47067 }
     .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #96d0ff }
     .o, .m, .mf, .mh, .mi, .mo, .il, .nv, .vc, .vg, .vi { color: #f69d50 }
