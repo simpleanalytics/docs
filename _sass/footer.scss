@@ -127,13 +127,13 @@ footer.general {
   .bottom {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     padding: 1.5rem 0;
     border-top: 1px solid var(--footer-divider);
 
     @media (min-width: 640px) {
       flex-direction: row;
-      align-items: center;
       justify-content: space-between;
     }
   }
@@ -142,7 +142,12 @@ footer.general {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem 1.5rem;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+
+    @media (min-width: 640px) {
+      justify-content: flex-start;
+    }
 
     > * {
       display: inline-flex;
@@ -173,6 +178,7 @@ footer.general {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 0.25rem;
 
     a {
