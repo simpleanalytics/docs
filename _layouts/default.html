@@ -43,10 +43,11 @@
       var darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
       function setDarkMode(dark) {
-        var toggle = document.querySelector('.theme-toggle button')
         document.documentElement.classList.toggle('dark', dark)
         document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#2A373A' : '#FFFFFF')
-        if (toggle) toggle.setAttribute('aria-pressed', dark)
+        document.querySelectorAll('.theme-toggle button').forEach(function(toggle) {
+          toggle.setAttribute('aria-pressed', dark)
+        })
       }
 
       (function() {
@@ -75,16 +76,7 @@
         </a>
       </li>
       <li class="menu-item m-l-a"><a href="https://simpleanalytics.com/">Go to Simple Analytics →</a></li>
-      <li class="theme-toggle">
-        <button type="button" aria-label="Dark mode" aria-pressed="false">
-          <span class="moon-container">
-            <span class="moon"></span>
-            {%- for i in (1..12) %}
-            <span class="shine" style="--shine-id: {{ i }}"></span>
-            {%- endfor %}
-          </span>
-        </button>
-      </li>
+      <li class="theme-toggle">{% include theme-toggle.html %}</li>
       <li class="menu-toggle">
         <div class="hamburger hamburger--collapse" aria-label="Menu" aria-controls="navigation">
           <div class="hamburger-box">
@@ -217,51 +209,96 @@
 
 
   <footer class="general">
-    <div class="intro">
-      <h3><a href="https://simpleanalytics.com/" class="brand">
-        <svg style="width: 30px; height: 30px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><rect fill="#FF4F64" x="20" y="53" width="10" height="30"></rect><rect fill="#FF4F64" x="44" y="35" width="10" height="48"></rect><rect fill="#FF4F64" x="68" y="18" width="10" height="65"></rect></svg>
-        Simple Analytics
-      </a></h3>
-      <h3>Simple, clean, privacy-friendly analytics</h3>
-      <p>We care about your data. We will never sell it, our servers are located in The Netherlands, and your data is always encrypted – <a href="https://twitter.com/intent/user?screen_name=SimpleAnalytic">follow us on Twitter</a></p>
-    </div>
-
-    <div class="link-container">
-      <div>
-        <h3>Privacy</h3>
-        <ul>
-          <li><a href="/what-we-collect">What we collect</a></li>
-          <li><a href="https://simpleanalytics.com/privacy">Privacy Policy</a></li>
-          <li><a href="https://simpleanalytics.com/general-terms-and-conditions">Terms and Condition</a></li>
-        </ul>
+    <div class="container">
+      <div class="sections">
+        <div>
+          <h3>Product</h3>
+          <ul>
+            <li><a href="https://www.simpleanalytics.com/features"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/></svg>Features</a></li>
+            <li><a href="https://www.simpleanalytics.com/methodology"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>How it works</a></li>
+            <li><a href="https://www.simpleanalytics.com/integrations"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z"/></svg>Integrations</a></li>
+            <li><a href="https://www.simpleanalytics.com/api"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/></svg>API</a></li>
+            <li><a href="https://www.simpleanalytics.com/features/ai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"/></svg>AI assistant</a></li>
+            <li><a href="https://www.simpleanalytics.com/pricing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"/></svg>Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Why Simple Analytics</h3>
+          <ul>
+            <li><a href="https://www.simpleanalytics.com/consent-analytics-gap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.807 3.808 9.98 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>Consent analytics gap</a></li>
+            <li><a href="https://www.simpleanalytics.com/analytics-without-consent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>Analytics without consent</a></li>
+            <li><a href="https://www.simpleanalytics.com/google-analytics-alternative"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>Google Analytics alternative</a></li>
+            <li><a href="https://www.simpleanalytics.com/eu-hosted-analytics"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5"/></svg>Hosted in EU</a></li>
+            <li><a href="https://www.simpleanalytics.com/migrate-from-google-analytics"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"/></svg>Migrate from GA4</a></li>
+            <li><a href="https://www.simpleanalytics.com/web-analytics"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg>Website analytics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Comparison</h3>
+          <ul>
+            <li><a href="https://www.simpleanalytics.com/google-analytics-alternative"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"/></svg>vs Google Analytics</a></li>
+            <li><a href="https://www.simpleanalytics.com/matomo-alternative"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"/></svg>vs Matomo</a></li>
+            <li><a href="https://www.simpleanalytics.com/plausible-alternative"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"/></svg>vs Plausible</a></li>
+            <li><a href="https://www.simpleanalytics.com/fathom-alternative"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"/></svg>vs Fathom</a></li>
+            <li><a href="https://www.simpleanalytics.com/piwik-pro-alternative"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"/></svg>vs Piwik PRO</a></li>
+            <li><a href="https://www.simpleanalytics.com/adobe-analytics-alternative"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"/></svg>vs Adobe Analytics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Solutions</h3>
+          <ul>
+            <li><a href="https://www.simpleanalytics.com/use-cases/agencies"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"/></svg>Agencies</a></li>
+            <li><a href="https://www.simpleanalytics.com/use-cases/enterprise"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"/></svg>Enterprise</a></li>
+            <li><a href="https://www.simpleanalytics.com/eu-hosted-analytics"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m20.893 13.393-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76m11.928 9.869A9 9 0 0 0 8.965 3.525m11.928 9.868A9 9 0 1 1 8.965 3.525"/></svg>EU companies</a></li>
+            <li><a href="https://www.simpleanalytics.com/use-cases/white-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"/></svg>White label</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Learn</h3>
+          <ul>
+            <li><a href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>Documentation</a></li>
+            <li><a href="https://www.simpleanalytics.com/guides"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>Guides</a></li>
+            <li><a href="https://www.simpleanalytics.com/blog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z"/></svg>Blog</a></li>
+            <li><a href="https://www.simpleanalytics.com/changelog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"/></svg>Changelog</a></li>
+            <li><a href="https://www.simpleanalytics.com/partners"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>Partner Program</a></li>
+            <li><a href="https://www.simpleanalytics.com/tools"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"/></svg>Free tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="https://www.simpleanalytics.com/about"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>About us</a></li>
+            <li><a href="https://www.simpleanalytics.com/jobs/devops"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>Jobs</a></li>
+            <li><a href="https://www.simpleanalytics.com/customers"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>Customers</a></li>
+            <li><a href="https://www.simpleanalytics.com/our-promise"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>Our promise</a></li>
+            <li><a href="https://www.simpleanalytics.com/data-collection"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"/></svg>What we collect</a></li>
+            <li><a href="https://www.simpleanalytics.com/security"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>Security</a></li>
+            <li><a href="https://www.simpleanalytics.com/gdpr-compliance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12"/></svg>GDPR compliance</a></li>
+            <li><a href="https://www.simpleanalytics.com/subprocessors"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z"/></svg>Subprocessors</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div>
-        <h3>Product</h3>
-        <ul>
-          <li><a href="https://simpleanalytics.com/#signup">Pricing</a></li>
-          <li><a href="https://simpleanalytics.com/roadmap">Roadmap</a></li>
-        </ul>
-      </div>
+      <div class="bottom">
+        <div class="company">
+          <span>
+            <svg class="logo" viewBox="0 0 1000 1000" aria-hidden="true"><path d="M54 538h154v462H54zm369-276h154v738H423zM792 0h154v1000H792z"/></svg>
+            Simple Analytics B.V.
+          </span>
+          <a href="https://www.simpleanalytics.com/eu-hosted-analytics">
+            <svg class="eu" viewBox="0 0 512 512" aria-hidden="true"><circle fill="currentColor" cx="256" cy="256" r="256"/><g fill="#ffda44"><polygon points="256.001,100.174 264.29,125.683 291.11,125.683 269.411,141.448 277.7,166.957 256.001,151.191 234.301,166.957 242.59,141.448 220.891,125.683 247.712,125.683"/><polygon points="145.814,145.814 169.714,157.99 188.679,139.026 184.482,165.516 208.381,177.693 181.89,181.889 177.694,208.381 165.517,184.482 139.027,188.679 157.992,169.714"/><polygon points="100.175,256 125.684,247.711 125.684,220.89 141.448,242.59 166.958,234.301 151.191,256 166.958,277.699 141.448,269.411 125.684,291.11 125.684,264.289"/><polygon points="145.814,366.186 157.991,342.286 139.027,323.321 165.518,327.519 177.693,303.62 181.89,330.111 208.38,334.307 184.484,346.484 188.679,372.974 169.714,354.009"/><polygon points="256.001,411.826 247.711,386.317 220.891,386.317 242.591,370.552 234.301,345.045 256.001,360.809 277.7,345.045 269.411,370.552 291.11,386.317 264.289,386.317"/><polygon points="366.187,366.186 342.288,354.01 323.322,372.975 327.519,346.483 303.622,334.307 330.112,330.111 334.308,303.62 346.484,327.519 372.974,323.321 354.009,342.288"/><polygon points="411.826,256 386.317,264.289 386.317,291.11 370.552,269.41 345.045,277.699 360.81,256 345.045,234.301 370.553,242.59 386.317,220.89 386.317,247.712"/><polygon points="366.187,145.814 354.01,169.714 372.975,188.679 346.483,184.481 334.308,208.38 330.112,181.889 303.622,177.692 327.519,165.516 323.322,139.027 342.289,157.991"/></g></svg>
+            EU-owned · EU-hosted
+          </a>
+        </div>
 
-      <div class="flex-tablet-devider"></div>
+        <div class="links">
+          <a href="https://www.simpleanalytics.com/privacy-policy">Privacy</a>
+          <a href="https://www.simpleanalytics.com/general-terms-and-conditions">Terms</a>
+          <a href="https://www.simpleanalytics.com/data-processing-agreement">DPA</a>
+          <a href="https://status.simpleanalytics.com">Status</a>
+        </div>
 
-      <div>
-        <h3>Learn</h3>
-        <ul>
-          <li><a href="/">Documentation</a></li>
-          <li><a href="https://www.simpleanalytics.com/blog">Blog</a></li>
-          <li><a href="https://simpleanalytics.com/team">Team</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Contact</h3>
-        <ul>
-          <li><a href="https://simpleanalytics.com/contact">Email address</a></li>
-          <li><a href="https://simpleanalytics.com/contact">Contact form</a></li>
-          <li><a href="https://twitter.com/intent/user?screen_name=SimpleAnalytic">Twitter</a></li>
-        </ul>
+        <div class="theme-toggle">{% include theme-toggle.html %}</div>
       </div>
     </div>
   </footer>
@@ -274,16 +311,16 @@
     }, false)
 
     // Dark mode follows the system setting, unless the visitor picked the other one
-    var darkModeToggle = document.querySelector('.theme-toggle button')
-    darkModeToggle.setAttribute('aria-pressed', document.documentElement.classList.contains('dark'))
-
-    darkModeToggle.addEventListener('click', function() {
-      var dark = !document.documentElement.classList.contains('dark')
-      setDarkMode(dark)
-      try {
-        if (dark === darkModeQuery.matches) localStorage.removeItem('dark')
-        else localStorage.setItem('dark', dark)
-      } catch (error) {}
+    document.querySelectorAll('.theme-toggle button').forEach(function(toggle) {
+      toggle.setAttribute('aria-pressed', document.documentElement.classList.contains('dark'))
+      toggle.addEventListener('click', function() {
+        var dark = !document.documentElement.classList.contains('dark')
+        setDarkMode(dark)
+        try {
+          if (dark === darkModeQuery.matches) localStorage.removeItem('dark')
+          else localStorage.setItem('dark', dark)
+        } catch (error) {}
+      })
     })
 
     darkModeQuery.addEventListener('change', function(event) {

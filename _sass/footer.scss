@@ -1,170 +1,199 @@
+// Same footer as on the marketing site, using its gray and red colors
 footer.general {
-  background-color: var(--color-surface);
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 3rem 2rem;
-  align-items: center;
-  text-align: left;
-  flex-direction: row;
+  --footer-background: #f9fbfb;
+  --footer-border: #d0e1e3;
+  --footer-divider: #d0e1e3;
+  --footer-label: #8da3a6;
+  --footer-text: #425659;
+  --footer-muted: #697d80;
+  --footer-red: #ff4f64;
+  --footer-hover: #1f2728;
+  --footer-hover-background: #e7f4f4;
 
-  @media (max-width: $breakpoint-footer) {
-    flex-direction: column-reverse;
-    padding: 2rem 2rem 1rem;
-    align-items: start;
+  html.dark & {
+    --footer-background: #1f2728;
+    --footer-border: #2a373a;
+    --footer-divider: #232e2f;
+    --footer-label: #697d80;
+    --footer-text: #8da3a6;
+    --footer-muted: #8da3a6;
+    --footer-red: #de3243;
+    --footer-hover: #fff;
+    --footer-hover-background: #232e2f;
   }
 
-  .brand {
-    display: flex;
-    align-items: center;
-
-    font-size: 23px;
-    font-weight: 500;
-
-    @media (max-width: $breakpoint-medium) {
-      font-size: 16px;
-    }
-
-    svg {
-      height: 30px;
-      width: 30px;
-      fill: $primary-color;
-      margin-right: 0.5rem;
-    }
-  }
-
-  .intro h3 {
-    margin-top: 0;
-    font-size: unset;
-    margin-bottom: 1rem;
-
-    @media (max-width: $breakpoint-footer) {
-      margin-top: 2rem;
-    }
-  }
-
-  @media (hover: hover) {
-    &:hover .intro h3 {
-      opacity: 1;
-    }
-    .intro h3 {
-      opacity: 0.6;
-      transition: opacity 250ms linear;
-    }
-  }
+  border-top: 1px solid var(--footer-border);
+  background-color: var(--footer-background);
+  font-family: "Space Grotesk", Arial, sans-serif;
+  line-height: 1.5;
 
   a {
-    color: var(--color-heading);
     text-decoration: none;
+    transition:
+      color 150ms ease,
+      background-color 150ms ease;
   }
 
-  > .intro {
-    flex: 2;
-    margin-right: 2rem;
-
-    @media (max-width: $breakpoint-medium) {
-      margin-right: 0;
-    }
+  svg {
+    flex-shrink: 0;
   }
 
-  > .link-container {
-    flex: 5;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  .container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
 
-    > div {
-      padding: 0.5rem;
-
-      @media (max-width: $breakpoint-small) {
-        padding: 0;
-      }
+    @media (min-width: 640px) {
+      padding: 0 1.5rem;
     }
-
-    .flex-tablet-devider {
-      display: none;
-    }
-
-    @media (max-width: $breakpoint-footer) {
-      align-items: start;
-      flex-direction: column;
-    }
-
-    @media (max-width: $breakpoint-small) {
-      div + div {
-        padding-top: 1.5rem;
-      }
+    @media (min-width: 1024px) {
+      padding: 0 2rem;
     }
   }
 
-  @media (min-width: $breakpoint-small) and (max-width: 1080px) {
-    .intro {
-      max-width: 360px;
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-
-    > .link-container {
-      flex: 2;
-      justify-content: unset;
-      margin-left: 3rem;
-
-      > div:nth-child(2),
-      > div:nth-child(5) {
-        margin-left: 2rem;
-      }
-      .flex-tablet-devider {
-        flex-basis: 100%;
-        display: block;
-      }
+    @media (min-width: 1024px) {
+      gap: 3rem;
+      padding: 4rem 0;
     }
-  }
-
-  @media (min-width: $breakpoint-small) and (max-width: $breakpoint-footer) {
-    > .link-container {
-      margin-left: 0;
-      flex-wrap: wrap;
-      flex-direction: row;
+    @media (min-width: 1280px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
     }
-
-    div + div {
-      padding-top: 0;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-  }
-
-  li {
-    font-size: 14px;
-  }
-
-  li + li {
-    margin-top: 0.5rem;
-  }
-
-  h2 {
-    margin-top: 0;
-    font-size: 18px;
-    color: #7d9598;
   }
 
   h3 {
-    margin-top: 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: #8aa3a6;
-    margin-bottom: 0.5rem;
+    margin: 0 0 1rem;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--footer-label);
   }
 
-  p {
-    font-size: 13px;
-    color: #7d9598;
-    transition: color 250ms linear;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    margin: 0;
+    line-height: inherit;
+  }
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+
+  li a {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.375rem 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--footer-text);
+
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      fill: none;
+      stroke: var(--footer-label);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 150ms ease;
+    }
 
     &:hover {
-      color: var(--color-text);
+      color: var(--footer-red);
+
+      svg {
+        stroke: var(--footer-red);
+      }
     }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--footer-divider);
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .company {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+
+    > * {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--footer-muted);
+    }
+
+    a:hover {
+      color: var(--footer-red);
+    }
+
+    .logo {
+      height: 20px;
+      fill: var(--footer-red);
+    }
+
+    .eu {
+      width: 20px;
+      height: 20px;
+      color: #2c61fb;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+
+    a {
+      padding: 0.375rem 0.75rem;
+      border-radius: 0.375rem;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--footer-muted);
+
+      &:hover {
+        color: var(--footer-hover);
+        background-color: var(--footer-hover-background);
+      }
+    }
+  }
+
+  .theme-toggle button {
+    padding: 0;
+  }
+
+  .moon-container {
+    --moon-cutout-color: var(--footer-background);
   }
 }

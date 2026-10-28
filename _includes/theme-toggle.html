@@ -1,0 +1,8 @@
+<button type="button" aria-label="Dark mode" aria-pressed="false">
+  <span class="moon-container">
+    <span class="moon"></span>
+    {%- for i in (1..12) %}
+    <span class="shine" style="--shine-id: {{ i }}"></span>
+    {%- endfor %}
+  </span>
+</button>
