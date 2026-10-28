@@ -17,7 +17,7 @@ With every page view, we collect some metrics. We never track visitors, so the d
 
 You can limit the metrics we collect via our [ignore metrics](/ignore-metrics)-feature.
 
-<hr style="border: none; background-color: #eef9ff; height: 5px; margin-top: 2rem;" />
+<hr style="border: none; background-color: var(--color-surface); height: 5px; margin-top: 2rem;" />
 
 ### URL of the page
 
@@ -105,7 +105,7 @@ The language of the browser, for example, `en-US`.
 
 <p style="text-align: center; margin-top: 4rem;">That's it!</p>
 
-<hr style="border: none; background-color: #eef9ff; height: 5px;" />
+<hr style="border: none; background-color: var(--color-surface); height: 5px;" />
 
 ## UTM codes explained
 
@@ -146,7 +146,7 @@ In some browsers we collect browser name and operating system name without the u
   .rating {
     display: inline-flex;
     margin: 0;
-    background-color: #eef9ff;
+    background-color: var(--color-surface);
     padding: 3px 8px;
     border-radius: 5px;
   }

@@ -1,5 +1,5 @@
 footer.general {
-  background-color: #eef9ff;
+  background-color: var(--color-surface);
   display: flex;
   justify-content: space-between;
   padding: 2rem 3rem 2rem;
@@ -53,7 +53,7 @@ footer.general {
   }
 
   a {
-    color: $text-color;
+    color: var(--color-heading);
     text-decoration: none;
   }
 
@@ -164,7 +164,7 @@ footer.general {
     transition: color 250ms linear;
 
     &:hover {
-      color: black;
+      color: var(--color-text);
     }
   }
 }

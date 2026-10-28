@@ -17,3 +17,37 @@ $primary-color: #ff4f64;
 $secondary-color: #098195;
 $text-color: #415659;
 $text-muted: #777;
+
+:root {
+  --color-background: #fff;
+  --color-surface: #eef9ff;
+  --color-code-background: #f6f6f6;
+  --color-note-background: #f2f2f2;
+  --color-red-background: #fff0ee;
+  --color-text: #000;
+  --color-heading: #415659;
+  --color-muted: #6f6f6f;
+  --color-link: #098195;
+  --color-code: #068fa5;
+  --color-success: #227522;
+  --color-table-header: #65aed7;
+}
+
+// Only on screens, so printed pages always use the light colors
+@media screen {
+  html.dark {
+    color-scheme: dark;
+    --color-background: #232e2f;
+    --color-surface: #2a373a;
+    --color-code-background: #1f2728;
+    --color-note-background: #2a373a;
+    --color-red-background: #3e111c;
+    --color-text: #a4bdc0;
+    --color-heading: #d0e1e3;
+    --color-muted: #8da3a6;
+    --color-link: #43ceee;
+    --color-code: #2ec6df;
+    --color-success: #8ddb8c;
+    --color-table-header: #425659;
+  }
+}

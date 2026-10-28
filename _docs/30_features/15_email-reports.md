@@ -21,6 +21,6 @@ The email will look more or less like this:
 
 It includes the top 5 referrers and we compare them with the previous period. This gives you an indication of where your website is getting its traffic from, and how those numbers might have changed.
 
-In the example above it shows that we got significantly more traffic from our referral website _(referral.simpleanalytics.com <span style="color: #227522;">+963%</span>)_ than last week. Time for us to find out why. Thanks email report :)
+In the example above it shows that we got significantly more traffic from our referral website _(referral.simpleanalytics.com <span style="color: var(--color-success);">+963%</span>)_ than last week. Time for us to find out why. Thanks email report :)
 
 We send this email at 9AM in your local time zone. You can change this time zone per website in your [website settings](https://simpleanalytics.com/select-website/settings#timezone).
