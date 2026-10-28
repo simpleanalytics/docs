@@ -85,17 +85,19 @@ nav .brand {
   }
 }
 
-// Same moon and sun toggle as on the marketing site and dashboard
-.theme-toggle {
+nav .theme-toggle {
   @media (max-width: $breakpoint-medium) {
     margin-left: auto;
   }
 
-  // Too narrow to fit next to the logo and menu, these follow the system setting
+  // Too narrow to fit next to the logo and menu, the footer has the same toggle
   @media (max-width: 359px) {
     display: none;
   }
+}
 
+// Same moon and sun toggle as on the marketing site and dashboard
+.theme-toggle {
   button {
     height: auto;
     padding: 1rem;
@@ -115,6 +117,7 @@ nav .brand {
 .moon-container {
   --size: 30px;
   --duration: 0.5s;
+  --moon-cutout-color: var(--color-surface);
 
   display: block;
   position: relative;
@@ -146,7 +149,7 @@ nav .brand {
     transition-property: right, top, width, height, transform;
     transition-delay: 100ms;
     transition-duration: var(--duration);
-    background-color: var(--color-surface);
+    background-color: var(--moon-cutout-color);
   }
 
   html.dark & .moon {
