@@ -38,6 +38,19 @@
 
     {%- if page.url != '/404.html' -%}{% seo %}{%- endif %}
 
+    <!-- Apply dark mode before rendering to prevent a white flash -->
+    <script>
+      (function() {
+        var dark = null
+        try {
+          dark = localStorage.getItem('dark')
+        } catch (error) {}
+        if (dark === null) dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        else dark = dark === 'true'
+        document.documentElement.classList.toggle('dark', dark)
+      })()
+    </script>
+
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="/css/app.css">
   </head>
@@ -54,6 +67,17 @@
           Simple Analytics&nbsp;<span class="text-light">Docs</span>
         </a>
       </li>
+      <li class="menu-item m-l-a"><a href="https://simpleanalytics.com/">Go to Simple Analytics →</a></li>
+      <li class="theme-toggle">
+        <button type="button" aria-label="Dark mode" aria-pressed="false">
+          <span class="moon-container">
+            <span class="moon"></span>
+            {%- for i in (1..12) %}
+            <span class="shine" style="--shine-id: {{ i }}"></span>
+            {%- endfor %}
+          </span>
+        </button>
+      </li>
       <li class="menu-toggle">
         <div class="hamburger hamburger--collapse" aria-label="Menu" aria-controls="navigation">
           <div class="hamburger-box">
@@ -61,7 +85,6 @@
           </div>
         </div>
       </li>
-      <li class="menu-item m-l-a"><a href="https://simpleanalytics.com/">Go to Simple Analytics →</a></li>
     </ul>
   </nav>
 
@@ -156,12 +179,12 @@
           {% endfor %}
         </div>
         <div class="content">
-          <h1 class="mb-0">{{ page.title }} <a href="https://github.com/simpleanalytics/docs/blob/master/{{ page.path }}" target="_blank"><img class="icon" src="/images/pencil.svg" alt="edit"></a></h1>
+          <h1 class="mb-0">{{ page.title }} <a href="https://github.com/simpleanalytics/docs/blob/master/{{ page.path }}" target="_blank"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="edit"><path fill="currentColor" d="M18.311 2.828l2.861 2.861-15.033 15.032-2.859-2.862 15.031-15.031zm0-2.828l-16.873 16.872-1.438 7.127 7.127-1.437 16.873-16.873-5.689-5.689z"/></svg></a></h1>
 
           {% if page.download != false %}
             <p style="margin-top: 0.5rem;" class="print-button">
-              <a rel="nofollow" style="font-size: 12px; border-radius: 4px; background-color: #eef9ff; padding: 5px 10px; text-decoration: none;">
-                <svg style="vertical-align: text-bottom; fill: #098195; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M15.003 3h2.997v5h-2.997v-5zm8.997 1v20h-24v-24h20l4 4zm-19 5h14v-7h-14v7zm16 4h-18v9h18v-9z"/></svg>
+              <a rel="nofollow" style="font-size: 12px; border-radius: 4px; background-color: var(--color-surface); padding: 5px 10px; text-decoration: none;">
+                <svg style="vertical-align: text-bottom; fill: currentColor; margin-right: 5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M15.003 3h2.997v5h-2.997v-5zm8.997 1v20h-24v-24h20l4 4zm-19 5h14v-7h-14v7zm16 4h-18v9h18v-9z"/></svg>
                 Download PDF
               </a>
             </p>
@@ -242,6 +265,34 @@
     document.querySelector('.hamburger').addEventListener('click', function(event) {
       event.target.closest('nav').classList.toggle('is-active')
     }, false)
+
+    // Dark mode follows the system setting, unless the visitor picked the other one
+    var darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    var darkModeToggle = document.querySelector('.theme-toggle button')
+
+    function setDarkMode(dark) {
+      document.documentElement.classList.toggle('dark', dark)
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', dark ? '#2A373A' : '#FFFFFF')
+      darkModeToggle.setAttribute('aria-pressed', dark)
+    }
+
+    setDarkMode(document.documentElement.classList.contains('dark'))
+
+    darkModeToggle.addEventListener('click', function() {
+      var dark = !document.documentElement.classList.contains('dark')
+      setDarkMode(dark)
+      try {
+        if (dark === darkModeQuery.matches) localStorage.removeItem('dark')
+        else localStorage.setItem('dark', dark)
+      } catch (error) {}
+    })
+
+    darkModeQuery.addEventListener('change', function(event) {
+      try {
+        if (localStorage.getItem('dark') !== null) return
+      } catch (error) {}
+      setDarkMode(event.matches)
+    })
 
     // Everything we make interactive after page load and pjax
     function pageSugar() {

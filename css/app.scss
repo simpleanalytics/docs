@@ -23,11 +23,11 @@ details {
 }
 blockquote.red {
   border-left-color: #e51800;
-  background-color: #fff0ee;
+  background-color: var(--color-red-background);
 }
 blockquote.note {
   border-left-color: #b1b1b1;
-  background-color: #f2f2f2;
+  background-color: var(--color-note-background);
 
   p {
     font-size: 14px;

@@ -1,5 +1,5 @@
 pre.highlight {
-  background: #f6f6f6;
+  background: var(--color-code-background);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   line-height: 25px;
@@ -7,10 +7,10 @@ pre.highlight {
 }
 
 code {
-  background: #f6f6f6;
+  background: var(--color-code-background);
   padding: 0.2rem 0.3rem;
   border-radius: 3px;
-  color: #068fa5;
+  color: var(--color-code);
   font-size: 14px;
 }
 
@@ -83,3 +83,19 @@ pre.highlight code {
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+// Dark mode, based on the code colors of the marketing site
+@media screen {
+  html.dark .highlight {
+    .hll { background-color: #3d3a1f }
+    .err { border-color: #ff938a }
+    .c, .cm, .cp, .c1, .cs, .go, .ni, .w { color: #768390 }
+    .k, .kc, .kd, .kn, .kp, .kr, .kt, .ow { color: #f47067 }
+    .s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .sr, .s1, .ss { color: #96d0ff }
+    .o, .m, .mf, .mh, .mi, .mo, .il, .nv, .vc, .vg, .vi { color: #f69d50 }
+    .na, .no, .nl, .gh, .gp, .gu { color: #6cb6ff }
+    .nb, .bp, .nc, .nn, .nt, .ne, .gi { color: #8ddb8c }
+    .nf, .nd { color: #dcbdfb }
+    .gd, .gr, .gt { color: #ff938a }
+  }
+}

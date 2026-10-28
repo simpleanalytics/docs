@@ -1,10 +1,10 @@
 nav {
   a {
-    color: $text-color;
+    color: var(--color-heading);
     font-weight: 500;
     font-size: 18px;
   }
-  background-color: $background-color;
+  background-color: var(--color-surface);
 }
 nav ul {
   padding: 0;
@@ -61,7 +61,6 @@ nav .brand {
   }
 }
 .menu-toggle {
-  margin-left: auto;
   display: none;
 
   @media (max-width: $breakpoint-medium) {
@@ -70,6 +69,7 @@ nav .brand {
 }
 .menu-item {
   @media (max-width: $breakpoint-medium) {
+    order: 1;
     overflow: hidden;
     transition: max-height 500ms ease 0s, opacity 500ms ease 0s;
     max-height: 0px;
@@ -82,6 +82,90 @@ nav .brand {
       font-size: 14px;
       margin-left: 5px;
     }
+  }
+}
+
+// Same moon and sun toggle as on the marketing site and dashboard
+.theme-toggle {
+  @media (max-width: $breakpoint-medium) {
+    margin-left: auto;
+  }
+
+  button,
+  button:hover {
+    height: auto;
+    padding: 1rem;
+    border-radius: 0;
+    background: none;
+  }
+}
+
+.moon-container {
+  --size: 30px;
+  --duration: 0.5s;
+
+  display: block;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  overflow: hidden;
+
+  .moon {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: $icon-color;
+    border-radius: 50%;
+    transition: all var(--duration);
+    transform: scale(0.75);
+    z-index: 1;
+  }
+
+  .moon::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    right: calc(var(--size) / -3);
+    top: calc(var(--size) / -4);
+    width: var(--size);
+    height: var(--size);
+    transition-property: right, top, width, height, transform;
+    transition-delay: 100ms;
+    transition-duration: var(--duration);
+    background-color: var(--color-surface);
+  }
+
+  html.dark & .moon {
+    transform: scale(0.6);
+    background-color: gold;
+  }
+
+  html.dark & .moon::after {
+    width: 0;
+    height: 0;
+    transform: scale(0.6);
+  }
+
+  .shine {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 5px / 2);
+    width: calc(var(--size) / 10);
+    height: calc(var(--size) / 10);
+    border-radius: 50%;
+    background-color: gold;
+    transform-origin: 2.5px calc(var(--size) / 2);
+    transition: all var(--duration);
+    transform: rotate(calc(360deg / 12 * var(--shine-id)))
+      translateY(calc(var(--size) / 10));
+    opacity: 0;
+  }
+
+  html.dark & .shine {
+    transform: rotate(calc(360deg / 12 * var(--shine-id)));
+    opacity: 1;
   }
 }
 
@@ -117,7 +201,7 @@ nav .brand {
   &::after {
     width: 40px;
     height: 3px;
-    background-color: #293033;
+    background-color: var(--color-heading);
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
