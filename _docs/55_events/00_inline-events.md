@@ -2,7 +2,7 @@
 title: Inline events
 category: events
 permalink: /events/inline
-last_modified_at: 2026-10-25
+last_modified_at: 2026-10-29
 ---
 
 From script version 12, our main script sends an event when a visitor interacts with an element that has a `data-simple-event` attribute. You don't need to write JavaScript or load an extra script.
@@ -11,7 +11,7 @@ From script version 12, our main script sends an event when a visitor interacts 
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
-If you added the beta `inline-events.js` script, remove it. Otherwise every event is sent twice.
+The beta `inline-events.js` script no longer does anything, besides logging a warning in the browser console, so you can remove it. The beta also sent `page_404` events by default. To keep those, turn on [404 detection](#404-pages).
 
 ### Clicks
 
