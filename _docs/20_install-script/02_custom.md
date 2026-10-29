@@ -2,7 +2,7 @@
 title: Trigger custom page views
 category: install-script
 permalink: /trigger-custom-page-views
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-29
 ---
 
 Normally you want to trigger a custom page view for _Single Page Apps_ (SPAs) like React, Vue, and Angular. Because pages are not completely reloaded on navigation we need a way to track those navigations as page views.
@@ -49,7 +49,7 @@ You can read our source code [on GitHub](https://github.com/simpleanalytics/scri
 
 ## Use custom collection anyway
 
-There might be situation where you don't want to auto collect page views. When you add the `data-auto-collect="false"` attribute you can expose a function called `sa_pageview`. When you call this function, the script will send a page view with the path you give as a parameter. If you don't give a path it will use `window.location.pathname` as a default. This only works with `latest.js`, not with our [light script](/light).
+There might be situation where you don't want to auto collect page views. When you add the `data-auto-collect="false"` attribute, the script doesn't send page views by itself and you send them with the `sa_pageview` function. When you call this function, the script will send a page view with the path you give as a parameter. If you don't give a path it will use `window.location.pathname` as a default. This only works with `latest.js`, not with our [light script](/light).
 
 ```html
 <script>
@@ -81,5 +81,19 @@ window.sa_pageview("/pricing", { plan: "pro" });
 ```
 
 If you call `sa_pageview` with the same path as the previous page view, we don't send it again.
+
+From script version 12:
+
+- `sa_pageview` is also available when we collect page views automatically.
+- You can pass a callback as the last argument. It runs after the page view is sent, and also when we skip it (for example, for the same path or an [ignored page](/ignore-pages)):
+
+  ```js
+  window.sa_pageview("/pricing", { plan: "pro" }, function () {
+    window.location.href = "/checkout";
+  });
+  ```
+
+- You can add a query string to the path, for example `/pricing?utm_source=newsletter`. We treat it like the query string of a normal page view. The same path with a different query string counts as a new page view.
+- With a [custom namespace](/events#the-variable-sa_event-is-already-used), the function uses that namespace, for example `ba_pageview`. `sa_pageview` stays available unless your website already uses that name.
 
 If you encounter issues, don't hesitate to contact us via [our support channels](https://simpleanalytics.com/contact).

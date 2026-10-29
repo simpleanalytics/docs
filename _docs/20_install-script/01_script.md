@@ -2,7 +2,7 @@
 title: How to add our script
 category: install-script
 permalink: /script
-last_modified_at: 2026-10-25
+last_modified_at: 2026-10-29
 ---
 
 Include these two lines on every page at the end of your `<body>` (or anywhere else):
@@ -88,6 +88,7 @@ These settings are available:
 | `metadataCollector`  | [`data-metadata-collector`][12]  | `"myAddMetadataFunction"`    |
 | `pings`              | [`data-pings`][13]               | `[5, 30, 60]`                |
 | `detect404`          | [`data-detect-404`][14]          | `true`                       |
+| `referrer`           | [`data-referrer`][15]            | `"https://example.com/"`     |
 
 For `pathOverwriter` and `metadataCollector`, use the name of a function on `window`, not the function itself. The script logs the settings it received in the browser console.
 
@@ -105,6 +106,7 @@ For `pathOverwriter` and `metadataCollector`, use the name of a function on `win
 [12]: /metadata
 [13]: /pings
 [14]: /events/inline#404-pages
+[15]: /overwrite-referrer
 
 ## Browser support
 

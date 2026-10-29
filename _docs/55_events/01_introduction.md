@@ -3,10 +3,10 @@ title: Introduction to events
 menu: Introduction
 category: events
 permalink: /events
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-29
 ---
 
-With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email links. You will need to install our separate script for it, but after that you don't need to modify any code.
+With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email and phone links. You will need to install our separate script for it, but after that you don't need to modify any code.
 
 If you want to get your hands dirty, you can collect events for all kinds of custom events. Like form submits, button clicks, and many more. We created a simple video showing how to collect events in Simple Analytics. [Here you go](https://www.youtube.com/watch?v=CCvdgTReqms)
 
@@ -64,7 +64,7 @@ To send metadata with your event, [check our metadata page](/metadata).
 
 ## Inline events helper
 
-We created a simple helper script that allows you to use data attributes for events:
+From script version 12, our main script supports data attributes for events:
 
 ```html
 <a href="/pricing" data-simple-event="click_pricing_page">See pricing</a>
@@ -143,4 +143,4 @@ If the `sa_event` variable is already in use you can change it with the `data-na
 <script async data-namespace="ba" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
-The namespace also changes other variables. For example, `sa_metadata` becomes `ba_metadata` and `sa_loaded` becomes `ba_loaded`. The [`sa_pageview`](/trigger-custom-page-views#use-custom-collection-anyway) function keeps its name. If you use [automated events](/automated-events), add `data-sa-global="ba_event"` to the automated events script.
+The namespace also changes other variables. For example, `sa_metadata` becomes `ba_metadata` and `sa_loaded` becomes `ba_loaded`. From script version 12, the [`sa_pageview`](/trigger-custom-page-views#use-custom-collection-anyway) function becomes `ba_pageview` too. Older versions keep `sa_pageview`. If you use [automated events](/automated-events), add `data-sa-global="ba_event"` to the automated events script.

@@ -4,7 +4,7 @@ menu: How to use URL params
 category: general
 permalink: /how-to-use-url-parameters
 excerpt: "You can add URL parameters to see where your customers are coming from."
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-29
 ---
 
 There are a few ways we determine where a visitor comes from. We automatically detect the previous page (referrer) from the visitor's browser, but you can also add a URL parameter to override this and set a custom referrer.
@@ -43,7 +43,7 @@ The UTM codes will show up on the dashboard in the "Referrals" dropdown menu:
 
 [Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer to learn more about UTM codes.
 
-We drop non-UTM parameters from the URLs. If you want to allow more URL parameters, for example, `project-id`, use our [allow params](/allow-params)-feature.
+We drop non-UTM parameters from the URLs. From script version 12, we do collect their names, like `gclid`, but never their values, so you can tell paid from organic traffic. You can turn this off with [ignore metrics](/ignore-metrics). If you want to allow more URL parameters, for example, `project-id`, use our [allow params](/allow-params)-feature.
 
 ### Forbidden characters
 
