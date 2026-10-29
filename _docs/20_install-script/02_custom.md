@@ -49,7 +49,7 @@ You can read our source code [on GitHub](https://github.com/simpleanalytics/scri
 
 ## Use custom collection anyway
 
-There might be situation where you don't want to auto collect page views. When you add the `data-auto-collect="false"` attribute, the script doesn't send page views by itself and you send them with the `sa_pageview` function. When you call this function, the script will send a page view with the path you give as a parameter. If you don't give a path it will use `window.location.pathname` as a default. This only works with `latest.js`, not with our [light script](/light).
+There might be a situation where you don't want to auto collect page views. When you add the `data-auto-collect="false"` attribute, the script doesn't send page views by itself and you send them with the `sa_pageview` function. When you call this function, the script will send a page view with the path you give as a parameter. If you don't give a path it will use `window.location.pathname` as a default. This only works with `latest.js`, not with our [light script](/light).
 
 ```html
 <script>
