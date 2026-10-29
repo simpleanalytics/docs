@@ -3,7 +3,7 @@ title: Collect metadata
 category: events
 permalink: /metadata
 created_at: 2022-07-26
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-29
 ---
 
 To collect additional data on top of [our collected metrics](/metrics), you can append metadata. With this feature you can specify specific parameters and it will be included in our database with your datapoints (events or page views).
@@ -81,7 +81,9 @@ An example on how to to set metadata on the `window` object:
 </script>
 ```
 
-Our script reads the `sa_metadata` object once, when it loads, and appends this metadata to every event and page view. Make sure to define it before the script loads. To change the metadata later, for example after a route change in a single page app, update the properties of the same object instead of assigning a new object:
+Our script appends this metadata to every event and page view. From script version 12, it reads `sa_metadata` every time it sends data, so you can also assign a new object later, for example after a route change in a single page app.
+
+Older versions read the object once, when the script loads. With those, define it before the script loads and update the properties of the same object instead of assigning a new object:
 
 ```js
 sa_metadata.theme_color = "blue";

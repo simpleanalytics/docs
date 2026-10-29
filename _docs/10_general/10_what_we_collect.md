@@ -4,7 +4,7 @@ category: general
 permalink: /what-we-collect
 hidden: true
 excerpt: "Simple Analytics only collects privacy-insensitive data. Here is a list of what we do and don’t collect from your visitors."
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-29
 ---
 
 Not collecting any information would be silly and unrealistic for an analytics tool. We do collect information that is necessary to show you _simple_ analytics, but unlike other analytics tools, we don't collect more than absolutely necessary. Here is a list of what we **do and don't** collect from your visitors.
@@ -131,7 +131,7 @@ None of these IDs are linked to a person or personal data, and none are stored o
 
 > We **partially collect** and **partially store** URLs
 
-Too much information in the URL can be confusing and can make your stats messy. We only collect and store the first part of the URL. If an URL looks like this `https://example.com/index.html?search=keyword#top` we will only store `https://example.com/index.html`, also known as the protocol (`https`), hostname (`example.com`), and pathname (`/index.html`).
+Too much information in the URL can be confusing and can make your stats messy. We only collect and store the first part of the URL. If an URL looks like this `https://example.com/index.html?search=keyword#top` we will only store `https://example.com/index.html`, also known as the protocol (`https`), hostname (`example.com`), and pathname (`/index.html`). From script version 12, we also collect the names of the URL parameters, like `search`, but never their values. Read more on [using URL parameters](/how-to-use-url-parameters).
 
 ### Referrers
 
@@ -195,7 +195,7 @@ When a visitor scrolls on a page we record how far they scrolled. We do store th
 
 ### Script settings
 
-We send some script settings along with the page view. To identify the embed script and check if the page view comes from a robot. The script settings include things like `version: script_version_2`, `robot: true`.
+We send some script settings along with the page view. To identify the embed script and check if the page view comes from a robot. The script settings include things like `version: script_version_2`, `robot: true`. From script version 12, we also send the URL of the embed script without its query string.
 
 ### Do Not Track
 
