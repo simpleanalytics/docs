@@ -131,7 +131,7 @@ None of these IDs are linked to a person or personal data, and none are stored o
 
 > We **partially collect** and **partially store** URLs
 
-Too much information in the URL can be confusing and can make your stats messy. We only collect and store the first part of the URL. If an URL looks like this `https://example.com/index.html?search=keyword#top` we will only store `https://example.com/index.html`, also known as the protocol (`https`), hostname (`example.com`), and pathname (`/index.html`). From script version 12, we also collect the names of the URL parameters, like `search`, but never their values. Read more on [using URL parameters](/how-to-use-url-parameters).
+Too much information in the URL can be confusing and can make your stats messy. We only collect and store the first part of the URL. If an URL looks like this `https://example.com/index.html?search=keyword#top` we will only store `https://example.com/index.html`, also known as the protocol (`https`), hostname (`example.com`), and pathname (`/index.html`). From script version 12, we also collect the names of URL parameters that have a value, like `search`, but not their values. Read more on [using URL parameters](/how-to-use-url-parameters).
 
 ### Referrers
 
