@@ -11,8 +11,6 @@ From script version 12, our main script sends an event when a visitor interacts 
 <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
-The beta `inline-events.js` script no longer does anything, besides logging a warning in the browser console, so you can remove it. The beta also sent `page_404` events by default. To keep those, turn on [404 detection](#404-pages).
-
 ### Clicks
 
 Add `data-simple-event="event_name"` to any clickable element:
