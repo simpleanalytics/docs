@@ -43,7 +43,7 @@ The UTM codes will show up on the dashboard in the "Referrals" dropdown menu:
 
 [Read the UTM guide](https://buffer.com/library/utm-guide/) at Buffer to learn more about UTM codes.
 
-We drop non-UTM parameters from the URLs. From script version 12, we do collect their names, like `gclid`, but never their values, so you can tell paid from organic traffic. You can turn this off with [ignore metrics](/ignore-metrics). If you want to allow more URL parameters, for example, `project-id`, use our [allow params](/allow-params)-feature.
+We drop non-UTM parameters from the URLs. From script version 12, we do collect the names of parameters that have a value, like `gclid`, but not their values, so you can tell paid from organic traffic. You can turn this off with [ignore metrics](/ignore-metrics). If you want to allow more URL parameters, for example, `project-id`, use our [allow params](/allow-params)-feature.
 
 ### Forbidden characters
 
