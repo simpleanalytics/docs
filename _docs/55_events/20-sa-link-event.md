@@ -3,10 +3,10 @@ title: Collect events for link clicks
 category: events
 permalink: /events/custom-link-clicks
 menu: Custom link clicks
-last_modified_at: 2022-07-18
+last_modified_at: 2026-10-29
 ---
 
-The [automated events script](/automated-events) does collect events for outbound links. It does not require any coding, just adding a script. You probably want to use [that script](/automated-events).
+The [automated events script](/automated-events) does collect events for outbound links. It does not require any coding, just adding a script. You probably want to use [that script](/automated-events). From script version 12, you can also add a [`data-simple-event`](/events/inline) attribute to any link without extra code.
 
 If you want to collect events for other links or control a bit more on how it works, you can use the code below. Let's say you have a HTML page with this content:
 

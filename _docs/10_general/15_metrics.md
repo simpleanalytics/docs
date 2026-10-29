@@ -3,7 +3,7 @@ title: Metrics
 category: general
 permalink: /metrics
 excerpt: "We never track visitors so the data below is never linked to one specific visitor. Here is a list of metrics we collect."
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-29
 hidden: true
 redirect_from:
   - /data-points
@@ -39,7 +39,7 @@ To know where customers come from, we store the page's referrer. This means that
 
 For example `https://simpleanalytics.com/?utm_source=newsletter`
 
-The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes (`utm_source`/`ref`, `utm_medium`, `utm_content`, `utm_campaign`, `utm_term`) and drop all other URL parameters, unless you [allow them](/allow-params). The UTM codes are something that the customer adds to the URLs. They are usually generic terms like "newsletter_may" or "twitter_campaign_2". Don't put personal data in UTM codes. [See below][5].
+The part after the `?` is called [URL parameters](/how-to-use-url-parameters). We only keep the UTM codes (`utm_source`/`ref`, `utm_medium`, `utm_content`, `utm_campaign`, `utm_term`) and drop all other URL parameters, unless you [allow them](/allow-params). From script version 12, we also collect the names of the other parameters, never their values, unless you [ignore `querykeys`](/ignore-metrics). The UTM codes are something that the customer adds to the URLs. They are usually generic terms like "newsletter_may" or "twitter_campaign_2". Don't put personal data in UTM codes. [See below][5].
 
 ### Unique
 
@@ -89,7 +89,7 @@ To know which type of device the visitor used, we store the user agent. This is 
 
 <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
 
-We send some script settings along with the page view. To identify the embed script and check if the page view comes from a robot. The script settings include things like `version: script_version_2`, `robot: true`.
+We send some script settings along with the page view. To identify the embed script and check if the page view comes from a robot. The script settings include things like `version: script_version_2`, `robot: true`. From script version 12, we also send the URL of the embed script without its query string.
 
 ### Dimensions
 

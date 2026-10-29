@@ -3,7 +3,7 @@ title: Allow URL parameters
 category: script-settings
 permalink: /allow-params
 created_at: 2022-07-26
-last_modified_at: 2026-10-17
+last_modified_at: 2026-10-29
 ---
 
 By default, we collect all UTM parameters (with and without the `utm_` prefix) and the `ref` (which is short for `utm_source`) parameter:
@@ -27,6 +27,6 @@ If you want to capture `product-id` and `article-slug` from your website's URLs,
 ></script>
 ```
 
-> **Warning:** Defined parameters in `data-allow-params` are case-sensitive.
+From script version 12, parameter names in `data-allow-params` are case-insensitive, so `product-id` also allows `Product-ID`. In older versions they are case-sensitive.
 
 Read more on [how to use URL parameters](/how-to-use-url-parameters) on your website.
