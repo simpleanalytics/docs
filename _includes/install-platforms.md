@@ -4,11 +4,12 @@
 - [WIX]({{ site.url }}/install-simple-analytics-on-wix)
 - [Squarespace]({{ site.url }}/install-simple-analytics-on-squarespace)
 - [Webflow]({{ site.url }}/install-simple-analytics-on-webflow)
+- [Framer](https://www.framer.com/marketplace/plugins/simple-analytics/) <small>(plugin on the Framer Marketplace)</small>
 - [Jimdo Creator]({{ site.url }}/install-simple-analytics-on-jimdo-creator)
 - [MailerLite]({{ site.url }}/install-simple-analytics-on-mailerlite)
 - [GoDaddy]({{ site.url }}/install-simple-analytics-on-godaddy)
 - [Netlify](https://app.netlify.com/extensions/simpleanalytics) <small>(turn it on per site, only for sites with a build step)</small>
 - [Buttondown](https://buttondown.com/settings/integrations) <small>(turn on Simple Analytics under Integrations)</small>
 - GitHub Pages <small>(add the script to the main template, like `_layouts/default.html` for Jekyll)</small>
-- Google Sites <small>(Insert, Embed, Embed code, with `data-hostname` set to a domain you added, because you can't add `sites.google.com`)</small>
+- Google Sites <small>(limited: it runs the script in a sandbox, so page paths, referrers and UTM codes aren't tracked. Insert, Embed, Embed code, with `data-path="/"` and `data-hostname` set to a domain you added, because you can't add `sites.google.com`)</small>
 - NodeBB <small>(drag an HTML widget with the script into the Global Footer, under Extend and Widgets)</small>
