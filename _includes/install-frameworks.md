@@ -1,0 +1,17 @@
+- [React]({{ site.url }}/install-simple-analytics-with-react) <small>(package on [npm](https://www.npmjs.com/package/@simpleanalytics/react))</small>
+- [Next.js]({{ site.url }}/install-simple-analytics-with-next) <small>(package on [npm](https://www.npmjs.com/package/@simpleanalytics/next))</small>
+- [Vue]({{ site.url }}/install-simple-analytics-with-vue) <small>(source on [GitHub](https://github.com/simpleanalytics/vue-plugin#readme))</small>
+- [Nuxt.js]({{ site.url }}/install-simple-analytics-with-nuxt) <small>(package on [npm](https://www.npmjs.com/package/@simpleanalytics/nuxt))</small>
+- [VuePress]({{ site.url }}/install-simple-analytics-with-vuepress) <small>(source on [GitHub](https://github.com/simpleanalytics/vuepress-plugin#readme))</small>
+- [Gatsby]({{ site.url }}/install-simple-analytics-with-gatsby) <small>(source on [GitHub](https://github.com/simpleanalytics/gatsby-plugin#readme))</small>
+- [Gridsome]({{ site.url }}/install-simple-analytics-with-gridsome) <small>(source on [GitHub](https://github.com/simpleanalytics/gridsome-plugin#readme))</small>
+- [Astro](https://github.com/simpleanalytics/astro-plugin) <small>(guide on GitHub)</small>
+- [Docusaurus]({{ site.url }}/install-simple-analytics-with-docusaurus) <small>(source on [GitHub](https://github.com/simpleanalytics/docusaurus-plugin#readme))</small>
+- [Hugo]({{ site.url }}/install-simple-analytics-with-hugo) <small>(guide only)</small>
+- Jekyll <small>(add the script to `_layouts/default.html`, just before `</body>`)</small>
+- Vite <small>(add the script to `index.html`, or add it with the [`transformIndexHtml`](https://vite.dev/guide/api-plugin.html#transformindexhtml) plugin hook)</small>
+- [Ruby on Rails]({{ site.url }}/install-simple-analytics-with-ruby-on-rails) <small>(source on [GitHub](https://github.com/simpleanalytics/rubyonrails-plugin#readme))</small>
+- [Django]({{ site.url }}/install-simple-analytics-with-django) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>
+- [Laravel](https://github.com/simpleanalytics/laravel-package#readme) <small>(package on [Packagist](https://packagist.org/packages/simpleanalytics/laravel-package))</small>
+- [Drupal](https://github.com/simpleanalytics/drupal-module#readme) <small>(source on GitHub)</small>
+- [Analytics library]({{ site.url }}/install-simple-analytics-via-analytics-package) <small>(source on [GitHub](https://github.com/DavidWells/analytics/tree/master/packages/analytics-plugin-simple-analytics))</small>

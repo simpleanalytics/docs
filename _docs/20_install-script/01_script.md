@@ -2,8 +2,18 @@
 title: How to add our script
 category: install-script
 permalink: /script
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-06
 ---
+
+## Install with AI
+
+Using Claude Code, Codex, Cursor or another AI agent? Let it install the script and check that it works. When you add a website in the dashboard, click **Copy AI instructions** and paste them into your agent. They have the right script for your website and let the agent check the installation. Or ask your agent:
+
+```
+Install Simple Analytics on example.com, follow https://docs.simpleanalytics.com/install.md
+```
+
+## Install manually
 
 Include these two lines on every page at the end of your `<body>` (or anywhere else):
 
@@ -36,7 +46,12 @@ With Simple Analytics you don't need to manually trigger page views in SPA. We a
 
 Some people like a very light script. All our scripts are heavily compressed and we have [an extra light](/light) version.
 
-If you want to run the script on localhost, please use our dev (`https://scripts.simpleanalyticscdn.com/latest.dev.js`) version. Note the `.dev` part. You might want to [overwrite your hostname](/overwrite-domain-name) from localhost to something like `dev.example.com` (where `example.com` is your domain) to receive it in your dashboard. Make sure to remove the `.dev` part from the script on production.
+To test the script on localhost or a preview URL, set `data-hostname` to the hostname of your website. Page views there then count for that website, so you can check the requests before your website is live. See [overwrite domain name](/overwrite-domain-name).
+
+<!-- prettier-ignore -->
+```html
+<script async data-hostname="example.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+```
 
 We drop data from some shared preview and proxy domains, like `*.vercel.app`, `*.lovable.app`, and `*.translate.goog`, unless that exact hostname is added to your dashboard. To collect data on such a domain, add the hostname to your dashboard or [overwrite the hostname](/overwrite-domain-name).
 

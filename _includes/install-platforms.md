@@ -1,0 +1,14 @@
+- [Google Tag Manager]({{ site.url }}/install-simple-analytics-with-google-tag-manager) <small>(source on [GitHub](https://github.com/simpleanalytics/google-tag-manager#readme))</small>
+- [WordPress]({{ site.url }}/install-simple-analytics-on-wordpress) <small>(source on [GitHub](https://github.com/simpleanalytics/wordpress-plugin#readme))</small>
+- [Ghost]({{ site.url }}/install-simple-analytics-on-ghost)
+- [WIX]({{ site.url }}/install-simple-analytics-on-wix)
+- [Squarespace]({{ site.url }}/install-simple-analytics-on-squarespace)
+- [Webflow]({{ site.url }}/install-simple-analytics-on-webflow)
+- [Jimdo Creator]({{ site.url }}/install-simple-analytics-on-jimdo-creator)
+- [MailerLite]({{ site.url }}/install-simple-analytics-on-mailerlite)
+- [GoDaddy]({{ site.url }}/install-simple-analytics-on-godaddy)
+- [Netlify](https://app.netlify.com/extensions/simpleanalytics) <small>(turn it on per site, only for sites with a build step)</small>
+- [Buttondown](https://buttondown.com/settings/integrations) <small>(turn on Simple Analytics under Integrations)</small>
+- GitHub Pages <small>(add the script to the main template, like `_layouts/default.html` for Jekyll)</small>
+- Google Sites <small>(Insert, Embed, Embed code, with `data-hostname` set to a domain you added, because you can't add `sites.google.com`)</small>
+- NodeBB <small>(drag an HTML widget with the script into the Global Footer, under Extend and Widgets)</small>
