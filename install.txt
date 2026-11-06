@@ -22,7 +22,7 @@ Always set `data-hostname`. Page views on localhost and on preview or staging UR
 
 Does the website use a [custom domain]({{ site.url }}/bypass-ad-blockers) for Simple Analytics? Load the script from that domain instead: `https://<custom domain>/latest.js`.
 
-Use the guide or plugin for the platform or framework of the website, with the same hostname. Single-page apps don't need extra code, the script tracks page views when the URL changes. Is the platform not listed? Add the script to the template or layout every page uses.
+Use the guide or plugin for the platform or framework of the website, with the same hostname. Single-page apps don't need extra code, the script tracks page views when the URL changes. With hash routing (`/#/page`), add `data-mode="hash"`, see [hash mode]({{ site.url }}/hash-mode). Is the platform not listed? Add the script to the template or layout every page uses.
 
 Hosted platforms:
 
@@ -34,9 +34,11 @@ Frameworks:
 
 All script settings, like `data-collect-dnt="true"`, are on [the script page]({{ site.url }}/script).
 
+Is the website on the Free plan? It needs to show a [Simple Analytics badge]({{ site.url }}/free-plan-badge), in a footer on every page. Without it, we lock the dashboard data and API of the website after 14 days.
+
 ## 2. Content Security Policy
 
-Does the website have a Content Security Policy? Allow Simple Analytics in it:
+Does the website have a Content Security Policy? Add Simple Analytics to the directives it already has, also to `script-src-elem` when the policy has it:
 
 ```
 script-src https://scripts.simpleanalyticscdn.com;
@@ -44,12 +46,13 @@ connect-src https://queue.simpleanalyticscdn.com;
 img-src https://queue.simpleanalyticscdn.com;
 ```
 
-With a custom domain, allow that domain instead of both. See [Content Security Policy]({{ site.url }}/csp).
+With a custom domain, allow that domain instead of both. The Free plan badge also needs `img-src https://simpleanalyticsbadges.com`. See [Content Security Policy]({{ site.url }}/csp).
 
 ## 3. Check that it works
 
 1. Open a page with the script in a browser and find the `simple.gif` request, in DevTools or with the Chrome DevTools Protocol. Its `simple-analytics-feedback` response header says:
-   - `Thanks for sending this page view!`, `Thanks for sending this event!` or `Thanks for sending this additional data!` (sent when leaving a page): it works.
+   - `Thanks for sending this page view!`: page views work.
+   - `Thanks for sending this event!` or `Thanks for sending this additional data!` (sent when leaving a page): that request works, but also check the page view request.
    - `Website not registered in Simple Analytics, dropping request`: the hostname that was sent isn't added to Simple Analytics, check `data-hostname`.
    - `IP in excluded IP list for website`: the website settings exclude this IP address.
    - Anything else explains what is wrong.
