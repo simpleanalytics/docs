@@ -1,0 +1,67 @@
+---
+layout: null
+permalink: /install.md
+sitemap: false
+---
+# Install Simple Analytics
+
+How to add Simple Analytics, privacy-first analytics, to a website and check that it works. Written for AI agents, like Claude Code, Codex and Cursor, and for developers.
+
+Came here from the Simple Analytics dashboard or its MCP tools? They gave you the hostname and the script for the website, use those.
+
+## 1. Add the script
+
+Add the script to every page, for example just before `</body>`. Replace `example.com` with the hostname of the website, as it's added in Simple Analytics:
+
+```html
+<!-- 100% privacy-first analytics -->
+<script async data-hostname="example.com" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+```
+
+Always set `data-hostname`. Page views on localhost and on preview or staging URLs then count for the website, so you can test the script before the website is live. See [overwrite domain name]({{ site.url }}/overwrite-domain-name).
+
+Does the website use a [custom domain]({{ site.url }}/bypass-ad-blockers) for Simple Analytics? Load the script from that domain instead: `https://<custom domain>/latest.js`.
+
+Use the guide or plugin for the platform or framework of the website, with the same hostname. Single-page apps don't need extra code, the script tracks page views when the URL changes. Is the platform not listed? Add the script to the template or layout every page uses.
+
+Hosted platforms:
+
+{% include install-platforms.md %}
+
+Frameworks:
+
+{% include install-frameworks.md %}
+
+All script settings, like `data-collect-dnt="true"`, are on [the script page]({{ site.url }}/script).
+
+## 2. Content Security Policy
+
+Does the website have a Content Security Policy? Allow Simple Analytics in it:
+
+```
+script-src https://scripts.simpleanalyticscdn.com;
+connect-src https://queue.simpleanalyticscdn.com;
+img-src https://queue.simpleanalyticscdn.com;
+```
+
+With a custom domain, allow that domain instead of both. See [Content Security Policy]({{ site.url }}/csp).
+
+## 3. Check that it works
+
+1. Open a page with the script in a browser and find the `simple.gif` request, in DevTools or with the Chrome DevTools Protocol. Its `simple-analytics-feedback` response header says:
+   - `Thanks for sending this page view!`, `Thanks for sending this event!` or `Thanks for sending this additional data!` (sent when leaving a page): it works.
+   - `Website not registered in Simple Analytics, dropping request`: the hostname that was sent isn't added to Simple Analytics, check `data-hostname`.
+   - `IP in excluded IP list for website`: the website settings exclude this IP address.
+   - Anything else explains what is wrong.
+2. No `simple.gif` request? Check the console for `Simple Analytics:` warnings and Content Security Policy errors.
+3. Never replay the `simple.gif` request with curl or other tools, it adds fake page views.
+
+JavaScript on the page can't read this header. Server-side page views, like `trackPageview` in Next.js middleware, don't show up in the browser at all.
+
+With access to Simple Analytics, through its MCP tools or a token the user approved, `check_installation` checks the live website and `get_recent_hits` shows the latest page views and events.
+
+Headless browsers, like the ones AI agents use, count as robots. Simple Analytics stores robots but doesn't show them in the dashboard, so a test visit by an agent only shows up in the recent hits, marked as a robot.
+
+If the recent hits show nothing, that doesn't mean the installation failed. A page view that got `Thanks for sending this page view!` is almost always stored, also when the website isn't added yet. Hits of new websites can take over an hour to show up.
+
+Need help? See [our support channels](https://simpleanalytics.com/contact).
