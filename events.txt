@@ -27,6 +27,8 @@ Use the first option that covers the event:
 
    With a custom domain or the proxy, load it from that domain. With `data-namespace="ba"`, add `data-sa-global="ba_event"` to it.
 
+   It only sees the links that are on the page when it loads, so links a single-page app adds later need option 2 or 3. Outbound and download links send their full URL as `url` metadata. Does a URL have personal data or a token in it, like a download link per customer? Give that link a `data-simple-event` name instead, the automated script then skips it.
+
 2. **Clicks and form submissions:** add `data-simple-event="signup_form"` to the element, from script version 12. See [inline events]({{ site.url }}/events/inline).
 3. **Everything else,** like a signup that succeeded: call `sa_event` in JavaScript.
 
@@ -34,9 +36,9 @@ Use the first option that covers the event:
    sa_event("signup_completed", { plan: "starter" });
    ```
 
-   Events that can happen right after the page loads need the [placeholder function]({{ site.url }}/events#placeholder-event-function) in `<head>`, before other scripts.
+   Add the [placeholder function]({{ site.url }}/events#placeholder-event-function) to `<head>`, before other scripts. It queues events that happen before the script loads, and keeps `sa_event` defined when an ad blocker blocks the script, so the call doesn't throw.
 
-4. **From a server or app:** send them to our endpoint, see [server-side events]({{ site.url }}/events/server-side). User agents with `bot`, `spider`, `crawl` or `agent` in them are stored as robots, so use one like `ServerSide/1.0 (+https://www.example.com/)`.
+4. **From a server or app:** send them to our endpoint, see [server-side events]({{ site.url }}/events/server-side). Send the visitor's user agent when the event comes from their request, so robots stay robots. Otherwise use one like `ServerSide/1.0 (+https://www.example.com/)`: user agents with `bot`, `spider`, `crawl` or `agent` in them are stored as robots.
 
 ## 3. Name events and add metadata
 
