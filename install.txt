@@ -67,4 +67,15 @@ Headless browsers, like the ones AI agents use, count as robots. Simple Analytic
 
 If the recent hits show nothing, that doesn't mean the installation failed. A page view that got `Thanks for sending this page view!` is almost always stored, also when the website isn't added yet. Hits of new websites can take over an hour to show up.
 
+## 4. Collect the right data
+
+- **URL parameters:** we only keep UTM codes and `ref`. To collect another parameter, like `product-id`, add it to [`data-allow-params`]({{ site.url }}/allow-params) first. It's only collected from then on.
+- **No personal data:** never put email addresses, names, user IDs or other personal data in paths, URL parameters, [events]({{ site.url }}/events) or [metadata]({{ site.url }}/metadata). It's not allowed, and the account might be suspended.
+- **Missing data,** for example because of ad blockers? Set up a [custom domain]({{ site.url }}/bypass-ad-blockers), or even better the [proxy]({{ site.url }}/proxy).
+
+## How the data works
+
+- **Visitors are [unique pageviews]({{ site.url }}/explained/unique-visits),** not people. A page view is unique when it has no referrer or comes from another website. We use no cookies or identifiers, so websites need no cookie banner.
+- **Each step of a [goal]({{ site.url }}/goals) counts the matching data on its own.** Visitors don't have to go through the earlier steps, so a later step can be higher than an earlier one.
+
 Need help? See [our support channels](https://simpleanalytics.com/contact).
