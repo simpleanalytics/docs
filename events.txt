@@ -36,7 +36,7 @@ Use the first option that covers the event:
    sa_event("signup_completed", { plan: "starter" });
    ```
 
-   Add the [placeholder function]({{ site.url }}/events#placeholder-event-function) to `<head>`, before other scripts. It queues events that happen before the script loads, and keeps `sa_event` defined when an ad blocker blocks the script, so the call doesn't throw.
+   Add the [placeholder function]({{ site.url }}/events#placeholder-event-function) to `<head>`, before other scripts. It queues events that happen before the script loads, and keeps `sa_event` defined when an ad blocker blocks the script, so the call doesn't throw. With `data-namespace="ba"`, replace every `sa_event` in it with `ba_event`, like [the namespace example]({{ site.url }}/events#the-variable-sa_event-is-already-used).
 
 4. **From a server or app:** send them to our endpoint, see [server-side events]({{ site.url }}/events/server-side). Send the visitor's user agent when the event comes from their request, so robots stay robots. Otherwise use one like `ServerSide/1.0 (+https://www.example.com/)`: user agents with `bot`, `spider`, `crawl` or `agent` in them are stored as robots.
 
