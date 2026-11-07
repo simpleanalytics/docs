@@ -27,7 +27,7 @@ Use the first option that covers the event:
 
    With a custom domain or the proxy, load it from that domain. With `data-namespace="ba"`, add `data-sa-global="ba_event"` to it.
 
-   It only sees the links that are on the page when it loads, so links a single-page app adds later need option 2 or 3. Outbound and download links send their full URL as `url` metadata. Does a URL have personal data or a token in it, like a download link per customer? Give that link a `data-simple-event` name instead, the automated script then skips it.
+   It only sees the links that are on the page when it loads, so links a single-page app adds later need option 2 or 3. Outbound and download links can send their full URL as `url` metadata. Does a URL have personal data or a token in it, like a download link per customer? Give that link a `data-simple-event` name instead, the automated script then skips it.
 
 2. **Clicks and form submissions:** add `data-simple-event="signup_form"` to the element, from script version 12. See [inline events]({{ site.url }}/events/inline).
 3. **Everything else,** like a signup that succeeded: call `sa_event` in JavaScript.
