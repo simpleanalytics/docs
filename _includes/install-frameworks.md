@@ -8,7 +8,7 @@
 - [Astro](https://github.com/simpleanalytics/astro-plugin) <small>(guide on GitHub)</small>
 - [Docusaurus]({{ site.url }}/install-simple-analytics-with-docusaurus) <small>(source on [GitHub](https://github.com/simpleanalytics/docusaurus-plugin#readme))</small>
 - [Hugo]({{ site.url }}/install-simple-analytics-with-hugo) <small>(guide only)</small>
-- Jekyll <small>(add the script to `_layouts/default.html`, just before `</body>`)</small>
+- Jekyll <small>(add the script to the base layout, usually `_layouts/default.html`, just before `</body>`. With a theme gem, copy the theme's layout into `_layouts/` first)</small>
 - Vite <small>(add the script to `index.html`, or add it with the [`transformIndexHtml`](https://vite.dev/guide/api-plugin.html#transformindexhtml) plugin hook)</small>
 - [Ruby on Rails]({{ site.url }}/install-simple-analytics-with-ruby-on-rails) <small>(source on [GitHub](https://github.com/simpleanalytics/rubyonrails-plugin#readme))</small>
 - [Django]({{ site.url }}/install-simple-analytics-with-django) <small>(source on [GitHub](https://github.com/simpleanalytics/django-plugin#readme))</small>

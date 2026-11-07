@@ -22,7 +22,7 @@ Always set `data-hostname`. Page views on localhost and on preview or staging UR
 
 Does the website use a [custom domain]({{ site.url }}/bypass-ad-blockers) for Simple Analytics? Load the script from that domain instead: `https://<custom domain>/latest.js`.
 
-Use the guide or plugin for the platform or framework of the website, with the same hostname. Single-page apps don't need extra code, the script tracks page views when the URL changes. With hash routing (`/#/page`), add `data-mode="hash"`, see [hash mode]({{ site.url }}/hash-mode). Is the platform not listed? Add the script to the template or layout every page uses.
+Has the platform or framework a guide or plugin below? Use it instead of the script tag above, with the same hostname, so the script isn't added twice. Single-page apps don't need extra code, the script tracks page views when the URL changes. With hash routing (`/#/page`), add `data-mode="hash"`, see [hash mode]({{ site.url }}/hash-mode). Is the platform not listed? Add the script to the template or layout every page uses.
 
 Hosted platforms:
 
@@ -38,7 +38,7 @@ Is the website on the Free plan? It needs to show a [Simple Analytics badge]({{ 
 
 ## 2. Content Security Policy
 
-Does the website have a Content Security Policy? Add Simple Analytics to the directives it already has, also to `script-src-elem` when the policy has it:
+Does the website have a Content Security Policy? Add Simple Analytics to the directives it already has, also to `script-src-elem` when the policy has it. With `'strict-dynamic'`, hosts are ignored, so give the script tag the policy's nonce instead:
 
 ```
 script-src https://scripts.simpleanalyticscdn.com;
@@ -75,7 +75,7 @@ If the recent hits show nothing, that doesn't mean the installation failed. A pa
 
 ## How the data works
 
-- **Visitors are [unique pageviews]({{ site.url }}/explained/unique-visits),** not people. A page view is unique when it has no referrer or comes from another website. We use no cookies or identifiers, so websites need no cookie banner.
+- **Visitors are [unique pageviews]({{ site.url }}/explained/unique-visits),** not people. A page view is unique when it has no referrer or comes from another website. Simple Analytics uses no cookies or identifiers, so it needs no cookie banner. Other tools on the website might.
 - **Each step of a [goal]({{ site.url }}/goals) counts the matching data on its own.** Visitors don't have to go through the earlier steps, so a later step can be higher than an earlier one.
 
 Need help? See [our support channels](https://simpleanalytics.com/contact).
