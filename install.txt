@@ -61,7 +61,7 @@ With a custom domain, allow that domain instead of both. The Free plan badge als
 
 JavaScript on the page can't read this header. Server-side page views, like `trackPageview` in Next.js middleware, don't show up in the browser at all.
 
-With access to Simple Analytics, through its MCP tools or a token the user approved, `check_installation` checks the live website and `get_recent_hits` shows the latest page views and events.
+With access to Simple Analytics, through its [MCP tools]({{ site.url }}/mcp) or a token the user approved, `check_installation` checks the live website and `get_recent_hits` shows the latest page views and events.
 
 Headless browsers, like the ones AI agents use, can count as robots. Simple Analytics stores robots but doesn't show them in the dashboard, so a test visit by an agent might only show up in the recent hits, marked as a robot.
 
