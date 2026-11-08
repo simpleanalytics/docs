@@ -11,7 +11,7 @@ Came here from the Simple Analytics dashboard or its MCP tools? They gave you th
 
 ## 1. Before you start
 
-- Events in the browser need the Simple Analytics script on every page. Not there yet? Follow [the install guide]({{ site.url }}/install.md) first. Events from a server or app don't need the script, see option 4 below.
+- Events in the browser need the Simple Analytics script on every page, `latest.js` and not [`light.js`]({{ site.url }}/light), which doesn't send events. Not there yet? Follow [the install guide]({{ site.url }}/install.md) first. Events from a server or app don't need the script, see option 4 below.
 - Load event scripts the same way as the main script: from the same custom domain or proxy. Does the script have an uncommon [`data-namespace`]({{ site.url }}/events#the-variable-sa_event-is-already-used), like `data-namespace="ba"`? Then the function is `ba_event` instead of `sa_event`.
 - Look for events the website already sends, like `sa_event` calls and `data-simple-event` attributes, so you don't send them twice.
 
@@ -27,7 +27,7 @@ Use the first option that covers the event:
 
    With a custom domain or the proxy, load it from that domain. In the rare case that `data-namespace="ba"` is used, add `data-sa-global="ba_event"` to it.
 
-   Outbound and download links can send their full URL as `url` metadata. Does a URL have personal data or a token in it, like a download link per customer? Give that link a `data-simple-event` name instead, the automated script then skips it.
+   Downloads are links to pdf, csv, docx, xlsx, zip, doc and xls files, set `data-extensions` for other files. Outbound and download links can send their full URL as `url` metadata, email and phone links their address or number. Does a link have personal data or a token in it, like a download link per customer or the visitor's own email address? Give that link a `data-simple-event` name instead, the automated script then skips it.
 
 2. **Clicks and form submissions:** add `data-simple-event="signup_form"` to the element, from script version 12. Add metadata with `data-simple-event-` attributes, like `data-simple-event-logged-in="true"` for `logged_in` metadata. See [inline events]({{ site.url }}/events/inline).
 3. **Everything else,** like a signup that succeeded: call `sa_event` in JavaScript.
