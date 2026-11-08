@@ -12,7 +12,7 @@ Came here from the Simple Analytics dashboard or its MCP tools? They gave you th
 ## 1. Before you start
 
 - Events in the browser need the Simple Analytics script on every page. Not there yet? Follow [the install guide]({{ site.url }}/install.md) first. Events from a server or app don't need the script, see option 4 below.
-- Load event scripts the same way as the main script: from the same custom domain or proxy. Does the script have a [`data-namespace`]({{ site.url }}/events#the-variable-sa_event-is-already-used), like `data-namespace="ba"`? Then the function is `ba_event` instead of `sa_event`.
+- Load event scripts the same way as the main script: from the same custom domain or proxy. Does the script have an uncommon [`data-namespace`]({{ site.url }}/events#the-variable-sa_event-is-already-used), like `data-namespace="ba"`? Then the function is `ba_event` instead of `sa_event`.
 - Look for events the website already sends, like `sa_event` calls and `data-simple-event` attributes, so you don't send them twice.
 
 ## 2. Send events
@@ -25,11 +25,11 @@ Use the first option that covers the event:
    <script async src="https://scripts.simpleanalyticscdn.com/auto-events.js"></script>
    ```
 
-   With a custom domain or the proxy, load it from that domain. With `data-namespace="ba"`, add `data-sa-global="ba_event"` to it.
+   With a custom domain or the proxy, load it from that domain. In the rare case that `data-namespace="ba"` is used, add `data-sa-global="ba_event"` to it.
 
-   It only sees the links that are on the page when it loads, so links a single-page app adds later need option 2 or 3. Outbound and download links can send their full URL as `url` metadata. Does a URL have personal data or a token in it, like a download link per customer? Give that link a `data-simple-event` name instead, the automated script then skips it.
+   Outbound and download links can send their full URL as `url` metadata. Does a URL have personal data or a token in it, like a download link per customer? Give that link a `data-simple-event` name instead, the automated script then skips it.
 
-2. **Clicks and form submissions:** add `data-simple-event="signup_form"` to the element, from script version 12. See [inline events]({{ site.url }}/events/inline).
+2. **Clicks and form submissions:** add `data-simple-event="signup_form"` to the element, from script version 12. Add metadata with `data-simple-event-` attributes, like `data-simple-event-logged-in="true"` for `logged_in` metadata. See [inline events]({{ site.url }}/events/inline).
 3. **Everything else,** like a signup that succeeded: call `sa_event` in JavaScript.
 
    ```js
@@ -49,10 +49,10 @@ Use the first option that covers the event:
 
 ## 4. Check that it works
 
-1. **In the browser:** trigger the event and find its `simple.gif` request. Its `simple-analytics-feedback` response header says `Thanks for sending this event!` when it works. Never replay the request with curl or other tools, it adds fake events.
+1. **In the browser:** trigger the event and find its `simple.gif` request. Its `simple-analytics-feedback` response header says `Thanks for sending this event!` when it works. Avoid replaying the request with curl or other tools, because it adds fake events. Only do that when nothing else works, and tell the user.
 2. **From a server or app:** our endpoint answers `201` with `"ok": true` when it stores the event. Otherwise `message` says what's wrong.
-3. With access to Simple Analytics, through its MCP tools or a token the user approved, `get_recent_hits` with `type: "events"` shows the latest events, including robots. Headless browsers, like the ones AI agents use, count as robots, so a test event by an agent only shows up there.
-4. `get_events` counts the events that aren't robots per name, and `get_metadata` shows their metadata. On an existing website, new events show up within minutes. On a new website, it can take over an hour.
+3. With access to Simple Analytics, through its MCP tools or a token the user approved, `get_recent_hits` with `type: "events"` shows the latest events, including robots. Headless browsers, like the ones AI agents use, can count as robots, so a test event by an agent might only show up there.
+4. `get_events` counts the events that aren't robots per name, and `get_metadata` shows their metadata. On an existing website, new events show up within minutes. On a new website, it can take longer because of caching or DNS changes.
 
 ## 5. Use events
 
