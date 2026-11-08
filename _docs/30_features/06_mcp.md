@@ -19,11 +19,27 @@ Other apps that support remote MCP servers with OAuth can use the same URL.
 
 ## Claude
 
-In Claude, on claude.ai or in Claude Desktop, open **Customize → Connectors**. Click **+ Add → Add custom connector** and paste the URL.
+In Claude, on claude.ai or in Claude Desktop:
+
+1. Open **Customize → Connectors** and click **+ Add → Add custom connector**.
+2. Enter a name, like Simple Analytics, paste the URL and click **Continue** twice.
+3. Keep **Use Claude's published identity** as the OAuth client, Simple Analytics doesn't support **Register automatically**.
+4. Click **Add** and log in when Claude asks.
+
+In a chat, turn it on with **+ → Connectors**.
+
+On a Team or Enterprise plan, an owner adds the connector first, the same way in **Organization settings → Connectors** with **Add → Custom → Web**. Members then click **Connect** next to it in **Customize → Connectors**.
 
 ## ChatGPT
 
-In ChatGPT, open **Plugins**. Click **+ → Add custom MCP server**, paste the URL and use it with OAuth.
+On ChatGPT on the web, open [Plugins](https://chatgpt.com/plugins):
+
+1. Click **+ → Add custom MCP server**.
+2. Enter a name, paste the URL as the server URL and pick **OAuth**.
+3. Accept the warning and click **Create as a plugin**.
+4. Install the plugin and log in.
+
+In a chat, type `@` and pick the plugin. In a workspace, its permissions decide whether you can add custom MCP servers.
 
 ## Claude Code
 
