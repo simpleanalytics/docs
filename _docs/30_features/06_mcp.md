@@ -12,7 +12,7 @@ Connect Simple Analytics to Claude, ChatGPT, Claude Code, Codex or another AI ap
 When you connect, you log in to Simple Analytics, pick a team and approve what the app can do. This is the URL of our MCP server:
 
 ```
-https://mcp.simpleanalytics.com/mcp
+https://mcp.simpleanalytics.com/mcp/v1
 ```
 
 Other apps that support remote MCP servers with OAuth can use the same URL.
@@ -46,7 +46,7 @@ In a chat, type `@` and pick the plugin. In a workspace, its permissions decide 
 Run this and log in when your browser opens:
 
 ```sh
-claude mcp add --scope user --transport http simple-analytics https://mcp.simpleanalytics.com/mcp
+claude mcp add --scope user --transport http simple-analytics https://mcp.simpleanalytics.com/mcp/v1
 claude mcp login simple-analytics
 ```
 
@@ -57,7 +57,7 @@ With `--scope user`, Simple Analytics is available in all your projects.
 Run this and log in when your browser opens:
 
 ```sh
-codex mcp add simple-analytics --url https://mcp.simpleanalytics.com/mcp
+codex mcp add simple-analytics --url https://mcp.simpleanalytics.com/mcp/v1
 ```
 
 Codex starts the login itself. If no browser opens, log in with:
@@ -81,7 +81,7 @@ Cursor and some other agents can't log in to Simple Analytics over MCP yet. Give
 Each connection has access to one team. To use another team, connect Simple Analytics once more under another name and pick that team when you log in. For example, in Claude Code:
 
 ```sh
-claude mcp add --scope user --transport http simple-analytics-acme https://mcp.simpleanalytics.com/mcp
+claude mcp add --scope user --transport http simple-analytics-acme https://mcp.simpleanalytics.com/mcp/v1
 claude mcp login simple-analytics-acme
 ```
 
