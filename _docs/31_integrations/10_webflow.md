@@ -6,7 +6,7 @@ permalink: /install-simple-analytics-on-webflow
 last_modified_at: 2022-04-14
 ---
 
-You can embed our script in Webflow using their feature called "Custom code". On this page we will explain how to use this feature and help you installing the Simple Analytics script on Webflow.
+You can embed our script in Webflow using their feature called "Custom code". On this page we will explain how to use this feature and help you install the Simple Analytics script on Webflow.
 
 > You need a paid Webflow account or an active site plan for your project to add custom code.
 

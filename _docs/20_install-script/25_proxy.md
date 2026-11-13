@@ -151,7 +151,7 @@ The embed script should be changed into this:
 ```
 
 <details markdown="1">
-  <summary>If you really need to noscript-tag (we recommend against it)</summary>
+  <summary>If you really need the noscript-tag (we recommend against it)</summary>
 
 We recommend against using the `<noscript>`-tag, because it's adding more bot traffic.
 
@@ -195,7 +195,7 @@ After these changes you should be able to visit the script at `https://example.c
 It should return our embed script, starting with:
 
 ```js
-/* Simple Analytics - Privacy friendly analytics ... */
+/* Simple Analytics - Privacy-first analytics ... */
 ```
 
 The `simple.gif` request (in your developer tools) should come back as a GIF with HTTP status code 202. If that's the case, it works.

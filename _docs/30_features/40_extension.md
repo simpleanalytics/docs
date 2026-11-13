@@ -20,7 +20,7 @@ We do this via an extension so we don't need to record IP addresses. It basicall
 
 When you click on the icon you are asked to allow the extension to load the data from the current website. This is needed to block the visits. You need to do this once per website. We don't get access to other websites.
 
-When a visits is blocked it shows as a counter on the icon. The counter does reset when you close your tab. For more stats of blocked visits you can go to the options page.
+When a visit is blocked it shows as a counter on the icon. The counter does reset when you close your tab. For more stats of blocked visits you can go to the options page.
 
 On the options page you will find all websites being blocked and you can change what the extension should block.
 

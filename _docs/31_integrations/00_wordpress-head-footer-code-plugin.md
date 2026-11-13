@@ -6,7 +6,7 @@ permalink: /install-simple-analytics-in-wordpress-with-head-footer-code-plugin
 last_modified_at: 2023-09-27
 ---
 
-Sometimes you want to use more script features then our official WordPress plugin offers.
+Sometimes you want to use more script features than our official WordPress plugin offers.
 
 You can easily embed Simple Analytics script into your WordPress website using the "Head & Footer Code" plugin. Follow the steps below to get started:
 
@@ -43,6 +43,6 @@ Congratulations! Now Simple Analytics will start collecting data from your WordP
 
 ## Troubleshooting
 
-If the Simple Analytics script does not appear in the source code or if data is not being collected, ensure the plugin is activated and the script is correctly pasted in the “Site-wide Head Code” section. Also, check for any script blockers or browser extensions that may prevent the script from loading. [Use our debug guide](https://www.simpleanalytics.com/blog/debug-simple-analytics-script) to debug issue with your script installation.
+If the Simple Analytics script does not appear in the source code or if data is not being collected, ensure the plugin is activated and the script is correctly pasted in the “Site-wide Head Code” section. Also, check for any script blockers or browser extensions that may prevent the script from loading. [Use our debug guide](https://www.simpleanalytics.com/blog/debug-simple-analytics-script) to debug issues with your script installation.
 
 If you encounter any issues or need further assistance, feel free to reach out to us via [our support channels](https://simpleanalytics.com/contact).

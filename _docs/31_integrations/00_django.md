@@ -3,7 +3,7 @@ title: Install Simple Analytics with Django
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-django
-last_modified_at: 2022-04-14
+last_modified_at: 2026-11-13
 ---
 
 Install the plugin:
@@ -19,30 +19,32 @@ Add the package to the `INSTALLED_APPS`:
 ```python
 INSTALLED_APPS = [
    ...,
-   simpleanalytics,
+   "simpleanalytics",
 ]
 ```
 
 Next use the `templatetag` in your template:
 
+{% raw %}
 ```html
 <!DOCTYPE html>
-\{\% load static simpleanalytics_tags %}
+{% load static simpleanalytics_tags %}
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>\{\% block page_title %}\{{ site.name }}\{\% endblock %}</title>
+    <title>{% block page_title %}{{ site.name }}{% endblock %}</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    ... \{\% simpleanalytics_sync %} ...
+    ... {% simpleanalytics_async %} ...
   </head>
   <body>
-    \{\% simpleanalytics_noscript_block %}
+    ...
   </body>
 </html>
 ```
+{% endraw %}
 
 This will translate to roughly this:
 
@@ -54,34 +56,24 @@ This will translate to roughly this:
 		<title>example.com</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     ...
-    <script type="text/javascript" src="https://cdn.simpleanalytics.io/hello.js"></script>
+    <script async type="text/javascript" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     ...
     </head>
     <body>
-      <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt="hello"></noscript>
+      ...
     </body>
 </html>
 ```
 
 ## Template tags
 
-This app has four template tags:
+This app has two template tags:
 
-- `simpleanalytics_sync`
 - `simpleanalytics_async`
-- `simpleanalytics_noscript_block`
-- `simpleanalytics_noscript_img`
+- `simpleanalytics_sync`
+
+`simpleanalytics_async` converts to a plain `<script>` tag with the `async`
+keyword. Use this one, so the script doesn't slow down your page.
 
 `simpleanalytics_sync` converts to a plain `<script>` tag without the `async`
 keyword.
-
-`simpleanalytics_async` converts to a plain `<script>` tag with the `async`
-keyword.
-
-`simpleanalytics_noscript_block` converts to an `<noscript>` block, which
-includes an `img` element that is used to load the image. Use this when you
-don't have and don't need a `<noscript>` block on your page at all.
-
-`simpleanalytics_noscript_img` converts to an `<img>` tag which src points to
-the hello.img. Use this when you're using a `<noscript>` block, and you want to
-add privacy-friendly stats to your page.

@@ -4,7 +4,7 @@ menu: Chartbrew
 category: integrations
 permalink: /import-simple-analytics-data-in-chartbrew
 canonical_url: https://chartbrew.com/blog/how-to-visualize-simple-analytics-data-with-chartbrew/
-last_modified_at: 2022-04-14
+last_modified_at: 2026-11-13
 ---
 
 In this tutorial, we will connect Simple Analytics' API, get different datasets, and create a dashboard in Chartbrew to show all this data.
@@ -29,7 +29,7 @@ Grab your favorite brew, create a new project in Chartbrew and let's get started
 We will follow the [Stats API](https://docs.simpleanalytics.com/api/stats) documentation to fetch the data we need for the charts. The documentation gives us the main URL that we can use to fetch the data:
 
 ```
-https://simpleanalytics.com/simpleanalytics.com.json?version=4&fields=histogram
+https://simpleanalytics.com/simpleanalytics.com.json?version=6&fields=histogram
 ```
 
 Head over to the connections menu in your new project in Chartbrew and create a new API connection. Fill in the details like in the screenshot below.
@@ -58,7 +58,7 @@ Once we have the first dataset, we can connect it to the Simple Analytics connec
 We can configure the API call we're making to the Simple Analytics connection in the next window. Copy the following in the **route** field, and then press on "Make the request":
 
 ```
-/simpleanalytics.com.json?version=4&fields=histogram
+/simpleanalytics.com.json?version=6&fields=histogram
 ```
 
 <img class="border" src="/images/chartbrew-test-request.png" alt="Test request in Chartbrew" />
@@ -92,7 +92,7 @@ For starters, let's focus on getting the referrers. Create a new chart like we d
 Click on "Make request" and add the following route in the field:
 
 ```
-/simpleanalytics.com.json?version=4&fields=referrers
+/simpleanalytics.com.json?version=6&fields=referrers
 ```
 
 Proceed to send the request to the API and then click on the "table view" button like shown in the screenshot below. The table should load quickly after and we'll get another type of view.
@@ -104,7 +104,7 @@ Like with the time-series chart above, we can add multiple datasets to the table
 Repeat all the steps above, but change the route to the following:
 
 ```
-/simpleanalytics.com.json?version=4&fields=utm_sources
+/simpleanalytics.com.json?version=6&fields=utm_sources
 ```
 
 <img class="border" src="/images/chartbrew-select-utm-sources.png" alt="Select UTM sources in Chartbrew" />

@@ -6,7 +6,7 @@ permalink: /install-simple-analytics-on-wix
 last_modified_at: 2022-04-14
 ---
 
-You can embed our script in WIX by adding a **New Tool**. On this page we will explain how to use this feature and help you installing the Simple Analytics script on WIX.
+You can embed our script in WIX by adding a **New Tool**. On this page we will explain how to use this feature and help you install the Simple Analytics script on WIX.
 
 Don't want to read a manual? We also created a video sharing how to install Simple Analytics on Wix. [Here you go](https://www.youtube.com/watch?v=95EZHMFMfKU)
 
@@ -14,7 +14,7 @@ Don't want to read a manual? We also created a video sharing how to install Simp
 
 Follow these steps to add Simple Analytics to your website:
 
-1. Go to [Settings in your site's dashboard](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/{{metaSiteId}}/manage-website).
+1. Go to [Settings in your site's dashboard](https://www.wix.com/my-account/site-selector/?buttonText=Manage%20Settings&title=Select%20a%20Site&autoSelectOnSingleSite=true&actionUrl=https://www.wix.com/dashboard/{% raw %}{{metaSiteId}}{% endraw %}/manage-website).
 1. Click the **Tracking & Analytics** menu item under **Settings**.
 
    ![](/images/wix-select-analytics.jpg)

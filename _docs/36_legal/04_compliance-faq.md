@@ -55,6 +55,6 @@ For the same reason, it is not mandatory to include Simple Analytics in a websit
 
 Adding us to your privacy policy is not strictly necessary, but we still encourage you to do so in order to be as transparent as possible with your visitors. This is a template you can use or take inspiration from:
 
-*We use anonymous metrics to understand how you use your website and where our traffic comes from. We use this insight to improve our website and create a better experience for visitors. We do not track you, serve personalized advertising, or sell the data to anyone.*
+*We use anonymous metrics to understand how you use our website and where our traffic comes from. We use this insight to improve our website and create a better experience for visitors. We do not track you, serve personalized advertising, or sell the data to anyone.*
 
 *Our website is powered by Simple Analytics, a privacy-friendly web analytics provider. You can learn more about Simple Analytics on its website.*

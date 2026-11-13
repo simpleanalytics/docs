@@ -16,9 +16,9 @@ We do everything in our power to keep your data safe. We collect the bare minimu
 
 The data we collect belongs to you. We only collect non-personal data and don’t share the data with third parties or transfer it overseas. Your website data never leaves the Netherlands and, therefore, the EU. Also, no service providers receive any data except for our hosting provider- who is under binding obligations of confidentiality. The only exception is the opt-in [AI chat](#ai-chat).
 
-The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both Dutch companies that adhere to EU law and GDPR policy.
+The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/eu-countries/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both Dutch companies that adhere to EU law and GDPR policy.
 
-We use a CDN for most of our customers. The CDN is called Bunny CDN and is part of a company called [BunnyWay](https://bunny.net/cdn/), located in Slovenia, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/slovenia_en).
+We use a CDN for most of our customers. The CDN is called Bunny CDN and is part of a company called [BunnyWay](https://bunny.net/cdn/), located in Slovenia, [part of the EU](https://european-union.europa.eu/principles-countries-history/eu-countries/slovenia_en).
 
 ## Data Security
 
@@ -26,7 +26,7 @@ We use a CDN for most of our customers. The CDN is called Bunny CDN and is part 
 
 ## Data Retention
 
-In order to provide its service, Simple Analytics will retain your data in line with your subscription plan and only when your account is active. We won’t store your data longer than necessary. Once you delete your account, you can export your data and [delete the data from our servers](https://docs.simpleanalytics.com/delete-account). The websites and data of teams that are deleted with your account are deleted immediately (but will only be permanently deleted after 90 days).
+In order to provide its service, Simple Analytics will retain your data in line with your subscription plan and only when your account is active. We won’t store your data longer than necessary. Before you delete your account, you can export your data. Deleting your account [deletes the data from our servers](https://docs.simpleanalytics.com/delete-account). The websites and data of teams that are deleted with your account are deleted immediately (but will only be permanently deleted after 90 days).
 
 ## No data transfers
 

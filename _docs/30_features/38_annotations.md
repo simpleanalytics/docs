@@ -5,7 +5,7 @@ permalink: /annotations
 last_modified_at: 2026-10-17
 ---
 
-Annotations are a great way to remember yourself or your team, what happened, and when. Annotations can be helpful to mark events like a new campaign, a change in SEO, or a new pricing strategy.
+Annotations are a great way to remind yourself or your team what happened and when. Annotations can be helpful to mark events like a new campaign, a change in SEO, or a new pricing strategy.
 
 > You need a plan that includes annotations to add custom annotations. See our [pricing page](https://www.simpleanalytics.com/pricing).
 
@@ -23,7 +23,7 @@ The real power comes with custom annotations. You can define as many annotations
 
 If you want to communicate even more with the annotations, add a link to it. When you do, the annotations will become links. If you click them, you will navigate to the predefined link.
 
-<img src="https://assets.simpleanalytics.com/docs/annotations/annotations-dashboard.png" alt="Curved trend lines with outliers included" class="border">
+<img src="https://assets.simpleanalytics.com/docs/annotations/annotations-dashboard.png" alt="Custom annotations in the Simple Analytics dashboard" class="border">
 
 ### Website settings
 

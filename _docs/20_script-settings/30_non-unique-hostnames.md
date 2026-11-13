@@ -17,7 +17,7 @@ You can specify a list of hostnames (without `https://`) in the `data-non-unique
 ></script>
 ```
 
-In the above example, visitors coming from `checkout.stripe.com` will be counted a non-unique.
+In the above example, visitors coming from `checkout.stripe.com` will be counted as non-unique.
 
 ## Multiple non-unique hostnames
 

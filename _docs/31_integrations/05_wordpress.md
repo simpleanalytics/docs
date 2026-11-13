@@ -3,10 +3,10 @@ title: Install Simple Analytics on WordPress
 menu: WordPress
 category: integrations
 permalink: /install-simple-analytics-on-wordpress
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 ---
 
-You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you installing the Simple Analytics plugin on WordPress.
+You can embed our script in WordPress using a plugin. On this page we will explain how to download this plugin and help you install the Simple Analytics plugin on WordPress.
 
 We created a video showing how to install Simple Analytics on a WordPress website. [Here you go](https://www.youtube.com/watch?v=x_w0uiWlNwM)
 
@@ -105,8 +105,8 @@ You find the settings of the plugin in your WordPress admin under **Settings** >
 
 **Events**
 
-- **Collect automated events**: adds our [automated events](/automated-events) script, which collects clicks on outbound links, email addresses, and downloads.
-- **Auto collect downloads**: which automated events to collect, as a comma-separated list of `outbound`, `emails`, and `downloads`. Leave it empty to collect all three.
+- **Collect automated events**: adds our [automated events](/automated-events) script, which collects clicks on outbound links, email addresses, phone numbers, and downloads.
+- **Auto collect downloads**: which automated events to collect, as a comma-separated list of `outbound`, `emails`, `downloads`, and `phones`. Leave it empty to collect all four.
 - **Download file extensions**: the file extensions to collect as downloads, for example `pdf, zip`. Leave it empty to use [the defaults](/automated-events#script).
 - **Use titles of page**: use the `title` attribute of a link as event name, when the link has one.
 - **Use full URLs**: use the full URL in event names for outbound links and downloads, instead of only the hostname or file name.
@@ -141,7 +141,7 @@ When you are excluded by your IP address or user role, the plugin doesn't add ou
 
 ## Others
 
-> See our plugin in action by [creating a temporary Wordpress website on tastewp.com in one click](https://tastewp.com/new?pre-installed-plugin-slug=simpleanalytics&redirect=plugins.php&ni=true). Do note that by default we don't collect visits from logged-in users. Log out to see the requests to Simple Analytics.
+> See our plugin in action by [creating a temporary WordPress website on tastewp.com in one click](https://tastewp.com/new?pre-installed-plugin-slug=simpleanalytics&redirect=plugins.php&ni=true). Do note that by default we don't collect visits from logged-in users. Log out to see the requests to Simple Analytics.
 
 <details markdown="1">
    <summary>Non-official plugins</summary>

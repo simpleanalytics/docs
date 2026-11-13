@@ -24,7 +24,7 @@ Usually it's just a user or team setting in your platform.
 
 ## Embed script
 
-The only thing that's required, is enabling this script somewhere in the `<body>` (or `<head>`) of your platform when your user enables the *Simple Analytics Enabled* checkbox. They don't need to enter a website ID and don't need to create a Simple Analytics account before this checkbox can be enabled. We use the domain as an identifier.
+The only thing that's required, is enabling this script somewhere in the `<body>` (or `<head>`) of your platform when your user enables the **Enable Simple Analytics** checkbox. They don't need to enter a website ID and don't need to create a Simple Analytics account before this checkbox can be enabled. We use the domain as an identifier.
 
 ```html
 <!-- Simple Analytics platform integration -->
@@ -32,7 +32,7 @@ The only thing that's required, is enabling this script somewhere in the `<body>
 ```
 
 - *`<customer_domain>`* (required) is the stable identifier you create for that site on day one. Usually this is `customerxxx.yourplatform.com`, or `customerdomain.com`. Keep it even if the user changes domains later. It's also the hostname the Simple Analytics users will see in their dashboard.
-- *`<your-platform-name>`* (required) is a unique name of your platform (e.g.: `netlify`, `partner.com`, `kennis.shop`). This helps us linking all domains to your platform. Allowing us to give your users tailored instructions.
+- *`<your-platform-name>`* (required) is a unique name of your platform (e.g.: `netlify`, `partner.com`, `kennis.shop`). This helps us link all domains to your platform, so we can give your users tailored instructions.
 
 ## Optional event tracking
 
@@ -49,7 +49,7 @@ window.sa_event = window.sa_event || function () {
 </script>
 ```
 
-Front end events send with this function:
+Send front-end events with this function:
 
 ```js
 sa_event("click_signup");

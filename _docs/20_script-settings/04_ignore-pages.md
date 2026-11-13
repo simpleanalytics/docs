@@ -31,7 +31,7 @@ If you want to block all these pages you can separate them with a comma:
 
 ```html
 <script
-  data-ignore-pages="/search/contact,/accounts/@adriaan,/vouchers"
+  data-ignore-pages="/contact,/accounts/@adriaan,/vouchers"
   src="https://scripts.simpleanalyticscdn.com/latest.js"
 ></script>
 ```
@@ -42,7 +42,7 @@ If you need to match a part of a string you need to add a wildcard asterisk (`*`
 
 Let's say you have these pages:
 
-- `https://example.com/search/keyword` (where `keyword` kan be any keyword)
+- `https://example.com/search/keyword` (where `keyword` can be any keyword)
 - `https://example.com/accounts/@profilename` (where `profilename` can be any name)
 - `https://example.com/vouchers` (only one page)
 

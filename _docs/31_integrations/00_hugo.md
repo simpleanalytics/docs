@@ -8,7 +8,7 @@ last_modified_at: 2022-04-14
 
 <img src="/images/hugo-logo.svg" width="200px">
 
-You can embed our script in Hugo using their feature called ["Base Template"](https://gohugo.io/templates/base/). On this page we will explain how to use this feature and help you installing the Simple Analytics script with Hugo.
+You can embed our script in Hugo using their feature called ["Base Template"](https://gohugo.io/templates/base/). On this page we will explain how to use this feature and help you install the Simple Analytics script with Hugo.
 
 Follow these steps to add Simple Analytics to your website:
 

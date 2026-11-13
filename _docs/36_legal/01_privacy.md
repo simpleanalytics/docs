@@ -18,7 +18,7 @@ We only collect non-personal data such as UTM codes, referrer, time zone (as a p
 
 Bottom line: we do not track people, period.
 
-Read more on **what we collect** [here](/data-collection)
+Read more on **what we collect** [here](/data-collection).
 
 ## No Consent Requirement
 

@@ -3,7 +3,7 @@ title: Install Simple Analytics with Gatsby
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-with-gatsby
-last_modified_at: 2024-11-05
+last_modified_at: 2026-11-13
 ---
 
 Run the following command:
@@ -14,7 +14,7 @@ npm install gatsby-plugin-simple-analytics --save-dev
 
 ## What does it do
 
-It tracks page views with support for `pushState` navigation. It sends the data to [Simple Analytics](https://simpleanalytics.com) and it will be available in your dashboard. You need to have a paid subscription for it to work.
+It tracks page views with support for `pushState` navigation. It sends the data to [Simple Analytics](https://simpleanalytics.com) and it will be available in your dashboard. You need a Simple Analytics account for it to work.
 
 ## How to use
 

@@ -14,5 +14,3 @@ You will find them if you click on one of the referrals below the main graph. We
 ## Hide parts of your website in the screenshots
 
 If you want to hide certain parts from your own screenshots you can hide them. You or your developers can add `data-screenshot="hidden"` to the elements that you don't want to see in your screenshots. The Simple Analytics Screenshots Grabber will add a CSS style to the page where those elements get the style `display: none !important;`. This way those specific elements will be hidden from the screenshots.
-
-> If you want to edit the screenshots, you can help us by [submitting a pull request on GitHub](https://github.com/simpleanalytics/screenshot-grabber).

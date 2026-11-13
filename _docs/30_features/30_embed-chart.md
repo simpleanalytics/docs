@@ -28,7 +28,7 @@ Simple Analytics allows you to embed a chart of your public website statistics o
 
 The chart above is highly customizable. You can overwrite colors, which data types to show, period to show, and much more.
 
-> Want to built your own dashboard with your website data? Check out our [APIs](/api).
+> Want to build your own dashboard with your website data? Check out our [APIs](/api).
 
 ## Embed chart script
 

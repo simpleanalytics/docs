@@ -32,7 +32,7 @@ if (history.pushState && Event && dispatchEvent) {
     };
   };
 
-  // We connect our own created a listener to the pushState feature
+  // We connect our own listener to the pushState feature
   history.pushState = stateListener("pushState");
 
   // Now we can listen for pushState events and keep the original feature of the browser working

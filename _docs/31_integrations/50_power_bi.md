@@ -14,7 +14,7 @@ This connector lets customers query data from the [API](/api/export-data-points)
 
    ![](https://assets.simpleanalytics.com/images/docs/power-bi/00-simple-analytics-export-dashboard.png)
 
-1. Copy the URL with a right mouse, click on the "Export" button and select "Copy link" (or something like that). Save this link for a later step.
+1. Right-click on the "Export" button and select "Copy link" (the label depends on your browser). Save this link for a later step.
 
 1. Add a data connector in Power BI by selecting the web connector:
 
@@ -24,7 +24,7 @@ This connector lets customers query data from the [API](/api/export-data-points)
 
    ![](https://assets.simpleanalytics.com/images/docs/power-bi/02-advanced-web.png)
 
-1. In the URL parts, you can add the URL you copy the link you copied from the "Export" button.
+1. In the URL parts, add the link you copied from the "Export" button.
 
 1. You can decide to break the URL up into parts by adding, for example, the dates programmatically
 

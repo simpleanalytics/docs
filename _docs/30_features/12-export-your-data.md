@@ -16,7 +16,7 @@ As a privacy-friendly business, we care a lot about who owns the data. We are ve
 
 > The video above is slightly out-dated, for a more recent version, check the [Generate export URL](/api/helpers#generate-export-url) in the API helpers or [the live version](https://simpleanalytics.com/select-website/export).
 
-Go to [the export your data](https://simpleanalytics.com/select-website/export) in your dashboard to download your data. You can export page views, events, or both, and pick the fields you need. If you collect [metadata](/metadata), you can include metadata fields as well.
+Go to [the export page](https://simpleanalytics.com/select-website/export) in your dashboard to download your data. You can export page views, events, or both, and pick the fields you need. If you collect [metadata](/metadata), you can include metadata fields as well.
 
 You can download your export in these formats:
 

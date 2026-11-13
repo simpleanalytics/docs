@@ -8,7 +8,7 @@ last_modified_at: 2026-11-06
 
 ## Platform guides
 
-We try to make installing Simple Analytics as simple as possible. We want privacy to be accessible as possible. We don't require the need for a developer if you use any of the following tools.
+We try to make installing Simple Analytics as simple as possible. We want privacy to be as accessible as possible. We don't require the need for a developer if you use any of the following tools.
 
 Read our guides on how to install Simple Analytics on:
 
@@ -21,9 +21,6 @@ Cloudflare has deprecated Cloudflare Apps, so you can no longer install our [Clo
 ## Framework plugins
 
 For most frameworks, you can include the script. We magically track page views, so you don't have to change your app code. [Read on how we do that](/trigger-custom-page-views). For some, we got requests to create a plugin for them.
-
-{% assign currentDate = 'now' | date: '%s' | plus: 0 %}
-{% assign threeMonthsLater = '2023-02-07' | date: '%s' | plus: 7884000 %}
 
 Get our official plugins for these frameworks:
 

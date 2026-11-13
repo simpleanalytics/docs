@@ -51,7 +51,7 @@ The response looks like this:
 
 To add a website, you need the owner, admin, or developer [role](/explained/team-roles) in the team, and the team can't have reached the website limit of its plan.
 
-You can specify a time zone via `timezone` and set the website to public or private via the `isPublic` boolean (defaults to `false`). [See wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of valid time zones. If you don't specify a valid time zone we will set it to UTC.
+You can specify a time zone via `timezone` and set the website to public or private via the `isPublic` boolean (defaults to `false`). [See Wikipedia](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) for a list of valid time zones. If you don't specify a valid time zone we will set it to UTC.
 
 We add the website to your default team.
 
@@ -85,7 +85,7 @@ When the website can't be added, the API returns HTTP `400` with `"ok": false` a
 
 ### Labels
 
-If you want to keep track of your websites in a different way, a label could help. This is how a labels looks on the websites overview page:
+If you want to keep track of your websites in a different way, a label could help. This is how a label looks on the websites overview page:
 
 <img loading="lazy" src="https://assets.simpleanalytics.com/docs/dashboard/labels-in-website-overview.png" alt="Simple Analytics websites overview with custom labels" class="border">
 
@@ -93,4 +93,4 @@ Add `"label": "customer note"` to your request body to set a label. Only strings
 
 ## Custom endpoints
 
-For bigger customers we make custom endpoints. If you are in the need of a custom endpoint, [let us know](https://simpleanalytics.com/contact).
+For bigger customers we make custom endpoints. If you need a custom endpoint, [let us know](https://simpleanalytics.com/contact).

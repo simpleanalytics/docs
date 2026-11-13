@@ -19,7 +19,7 @@ WP Full Picture lets you:
 * Run on localhost without having to modify the script
 * Track single-page websites (clicks on navigation links that scroll to different parts of the page will be counted as different page views)
 
-> See the plugin in action on a temporary Wordpress website on tastewp.com. Simply [click this link to generate a new test site](https://tastewp.com/new?pre-installed-plugin-slug=full-picture-analytics-cookie-notice&redirect=plugins.php&ni=true).
+> See the plugin in action on a temporary WordPress website on tastewp.com. Simply [click this link to generate a new test site](https://tastewp.com/new?pre-installed-plugin-slug=full-picture-analytics-cookie-notice&redirect=plugins.php&ni=true).
 
 This is how the settings page looks:
 

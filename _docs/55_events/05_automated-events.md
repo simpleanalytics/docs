@@ -7,7 +7,7 @@ redirect_from:
 last_modified_at: 2026-10-25
 ---
 
-[Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, phone number clicks, and amount of downloads for common files (pdf, csv, docx, xlsx). Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
+[Normal events](/events) need to be added into your code. To make it easier we created a separate automated events script. This script has to be installed once, and it will track outbound links, email addresses clicks, phone number clicks, and amount of downloads for common files (pdf, csv, docx, xlsx, zip, doc, xls). Events will appear on [your events page](https://simpleanalytics.com/select-website/events).
 
 We created a simple video showing how to collect automated events in Simple Analytics. [Here you go](https://www.youtube.com/watch?v=CCvdgTReqms)
 
@@ -25,7 +25,7 @@ From script version 12, we also collect clicks on `tel:` links. The event is nam
 
 ## Downloads
 
-Do you have links to pdf's or other files? Collect the amount of downloads. You can specify the extensions of the files your want to collect downloads for.
+Do you have links to pdf's or other files? Collect the amount of downloads. You can specify the extensions of the files you want to collect downloads for.
 
 ## Script
 

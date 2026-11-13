@@ -10,7 +10,7 @@ By default, we block robots based on their user agent and some traces they leave
 
 It works by having an extensive list of known IPs of data centers (from Udger, Google Cloud, Amazon AWS,  Microsoft Azure). This list does not contain the IPs of your visitors. Before we store a data point, we check if the IP matches this list of IPs of data centers. If it does, we tag the datapoint as being from a robot. We never store (not even a hashed version of) the IPs of your visitors.
 
-Advanced robot blocking settings works for all of your websites in your account.
+The advanced robot blocking setting works for all websites in your account.
 
 > You need a plan that includes advanced robot blocking. See our [pricing page](https://www.simpleanalytics.com/pricing).
 

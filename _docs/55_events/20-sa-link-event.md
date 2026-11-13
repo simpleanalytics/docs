@@ -3,7 +3,7 @@ title: Collect events for link clicks
 category: events
 permalink: /events/custom-link-clicks
 menu: Custom link clicks
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-13
 ---
 
 The [automated events script](/automated-events) does collect events for outbound links. It does not require any coding, just adding a script. You probably want to use [that script](/automated-events). From script version 12, you can also add a [`data-simple-event`](/events/inline) attribute to any link without extra code.
@@ -29,7 +29,7 @@ Then you can use this code to add a `data-sa-link-event`-helper that will collec
 
           element.addEventListener("click", function (event) {
             var target = element.getAttribute("target");
-            if (target === "_blank") {
+            if (target !== "_blank") {
               event.preventDefault();
               window.sa_event(eventName, function () {
                 window.location.href = href;
@@ -54,10 +54,10 @@ Then you can use this code to add a `data-sa-link-event`-helper that will collec
 </script>
 ```
 
-After your installed the helper, somewhere on the page, you can change your HTML like this:
+After you installed the helper somewhere on the page, you can change your HTML like this:
 
 ```html
 <p>This is <a href="/" data-sa-link-event="link_name_text">a link</a>.</p>
 ```
 
-It will then collect an events called "link_name_text" every time a visitor clicks on that link.
+It will then collect an event called "link_name_text" every time a visitor clicks on that link.

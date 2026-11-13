@@ -3,7 +3,7 @@ title: Install Simple Analytics on Circle
 hidden: true
 category: integrations
 permalink: /install-simple-analytics-on-circle
-last_modified_at: 2025-01-01
+last_modified_at: 2026-11-13
 ---
 
 You can track conversions and successful payments in Simple Analytics when using Circle paywalls. Circle allows you to add custom JavaScript code to your paywall thank you page, which is perfect for tracking conversion events.
@@ -18,32 +18,31 @@ To track successful payments in Simple Analytics when [creating](https://help.ci
 
 1. To track a conversion event, use the following code that dynamically loads Simple Analytics and waits for it to be ready:
 
-```html
-<script>
-  (function () {
-    // Load Simple Analytics script dynamically
-    const script = document.createElement("script");
-    script.setAttribute(
-      "src",
-      "https://scripts.simpleanalyticscdn.com/latest.js"
-    );
-    script.setAttribute("async", "true");
+   ```html
+   <script>
+     (function () {
+       // Load Simple Analytics script dynamically
+       const script = document.createElement("script");
+       script.setAttribute(
+         "src",
+         "https://scripts.simpleanalyticscdn.com/latest.js"
+       );
+       script.setAttribute("async", "true");
 
-    // Wait for script to load and then send event
-    script.onload = function () {
-      if (window.sa_event && window.sa_loaded) {
-        sa_event("circle_payment_success");
-      }
-    };
+       // Wait for script to load and then send event
+       script.onload = function () {
+         if (window.sa_event && window.sa_loaded) {
+           sa_event("circle_payment_success");
+         }
+       };
 
-    document.head.appendChild(script);
-  })();
-</script>
-```
+       document.head.appendChild(script);
+     })();
+   </script>
+   ```
 
-1. To add dynamic variables from Circle (like payment amount or member email), click the **"Add variable {…}"** icon and select an option from the list. You can use the following variables:
+1. To add dynamic variables from Circle (like the payment amount or the paywall name), click the **"Add variable {…}"** icon and select an option from the list. You can use the following variables:
 
-   - `{member_email}` - The email address of the member who made the payment
    - `{amount_paid}` - The amount paid
    - `{coupon_code}` - The coupon code used (if any)
    - `{paywall_internal_name}` - The internal name of the paywall
@@ -51,7 +50,48 @@ To track successful payments in Simple Analytics when [creating](https://help.ci
    - `{paywall_trial_days}` - The number of trial days
    - `{paywall_price_amount}` - The price amount
 
+   Don't send `{member_email}` or other personal data as metadata. [We don't allow personal data](/metadata) in events and metadata.
+
    Example with metadata:
+
+   ```html
+   <script>
+     (function () {
+       // Load Simple Analytics script dynamically
+       const script = document.createElement("script");
+       script.setAttribute(
+         "src",
+         "https://scripts.simpleanalyticscdn.com/latest.js"
+       );
+       script.setAttribute("async", "true");
+
+       // Wait for script to load and then send event with metadata
+       script.onload = function () {
+         if (window.sa_event && window.sa_loaded) {
+           sa_event("circle_payment_success", {
+             amount: "{amount_paid}",
+             paywall: "{paywall_display_name}",
+             coupon: "{coupon_code}",
+           });
+         }
+       };
+
+       document.head.appendChild(script);
+     })();
+   </script>
+   ```
+
+1. Save changes to the paywall.
+
+## Good to know
+
+The `<script>` tags are required and must wrap your code. Be sure your code is valid and has no runtime issues before you save your paywall.
+
+The code dynamically loads the Simple Analytics script and uses the `onload` event to wait for it to be ready before sending the event. This ensures the event is properly tracked once the script has loaded and initialized.
+
+## Example: Complete conversion tracking
+
+Here's a complete example that dynamically loads Simple Analytics and tracks the conversion with metadata:
 
 ```html
 <script>
@@ -69,47 +109,6 @@ To track successful payments in Simple Analytics when [creating](https://help.ci
       if (window.sa_event && window.sa_loaded) {
         sa_event("circle_payment_success", {
           amount: "{amount_paid}",
-          email: "{member_email}",
-          paywall: "{paywall_display_name}",
-          coupon: "{coupon_code}",
-        });
-      }
-    };
-
-    document.head.appendChild(script);
-  })();
-</script>
-```
-
-1. Save changes to the paywall.
-
-## Good to know
-
-The `<script>` tags are required and must wrap your code. Be sure your code is valid and has no runtime issues before you save your paywall.
-
-The code dynamically loads the Simple Analytics script and uses the `onload` event to wait for it to be ready before sending the event. This ensures the event is properly tracked once the script has loaded and initialized.
-
-## Example: Complete conversion tracking
-
-Here's a complete example that dynamically loads Simple Analytics and tracks the conversion with all available metadata:
-
-```html
-<script>
-  (function () {
-    // Load Simple Analytics script dynamically
-    const script = document.createElement("script");
-    script.setAttribute(
-      "src",
-      "https://scripts.simpleanalyticscdn.com/latest.js"
-    );
-    script.setAttribute("async", "true");
-
-    // Wait for script to load and then send event with all metadata
-    script.onload = function () {
-      if (window.sa_event && window.sa_loaded) {
-        sa_event("circle_payment_success", {
-          amount: "{amount_paid}",
-          email: "{member_email}",
           paywall_name: "{paywall_display_name}",
           paywall_internal: "{paywall_internal_name}",
           trial_days: "{paywall_trial_days}",

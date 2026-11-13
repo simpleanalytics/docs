@@ -21,7 +21,7 @@ At Simple Analytics, **when we say we do not collect personal data, we mean it**
 
 ## PECR
 
-Simple Analytics is PECR compliant and does not need consent. We track page views from a script in the website where we don’t use cookies or similar technologies. We don’t store IPs in any way and don’t use techniques that identify or track a user. [Read here](https://docs.simpleanalytics.com/what-we-collect) what metrics we store and or collect.
+Simple Analytics is PECR compliant and does not need consent. We track page views from a script in the website where we don’t use cookies or similar technologies. We don’t store IPs in any way and don’t use techniques that identify or track a user. [Read here](https://docs.simpleanalytics.com/what-we-collect) what metrics we store and collect.
 
 We had a chance to ask the ICO directly about this. After contacting Daniel Morgan from ICO about the need for consent with Simple Analytics, he replied:
 

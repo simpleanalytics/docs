@@ -61,8 +61,6 @@ When calculating the median, you sort the numbers from low to high and pick the 
 
 We believe (and our customers with us) the more accurate number for the above dataset is 15 seconds. Those 1000 seconds represent likely somebody that left their computer running while not actively interacting with the website.
 
-[Read the discussion](https://github.com/simpleanalytics/roadmap/issues/100) we had with our customers on GitHub.
-
 ### Bounce rate and bots
 
 To make the _time on page_ more accurate, we exclude the page views with a _time on page_ **lower than 5 seconds**. We see those visits as bounced visits and don't include them in the _time on page_ metric. Page views that have a _time on page_ lower than 5 seconds will be visible in all other metrics and the charts. Just not included in the _time on page_ metric.
