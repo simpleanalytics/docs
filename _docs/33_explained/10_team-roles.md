@@ -2,7 +2,7 @@
 title: Team roles
 category: explained
 permalink: /explained/team-roles
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 ---
 
 You can invite users to your Simple Analytics team. Every user has their own role. You can give those users access to all your websites (and custom views), or a selection of them. See [add team members](#add-team-members) for how inviting works.
@@ -23,7 +23,7 @@ Analysts play a crucial role in working with the dashboards, goals, and events. 
 
 ## Developer
 
-Developers focus on the technical aspects of the analytics dashboard. They can do everything that an analyst can and more. They can add websites to the team, and modify website settings such as visibility (public/private), custom domain, and alerts for no traffic. Additionally, developers have the authority to reset website data, which can be useful during significant updates or troubleshooting.
+Developers focus on the technical aspects of the analytics dashboard. They can do everything that an analyst can and more. They can add websites to the team, and modify website settings such as visibility (public/private) and custom domain. Additionally, developers have the authority to reset website data, which can be useful during significant updates or troubleshooting.
 
 ## Finance Manager
 

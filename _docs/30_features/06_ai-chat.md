@@ -2,10 +2,12 @@
 title: AI chat
 category: features
 permalink: /ai-chat
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 ---
 
-With AI chat you can ask questions about your analytics in plain English. Click on **AI** in the menu of [your dashboard](https://simpleanalytics.com/select-website/ai) to start. See [our AI page](https://www.simpleanalytics.com/features/ai) for examples.
+With AI chat you can ask questions about your analytics in plain English. Click on **Integrate AI** in the menu of [your dashboard](https://simpleanalytics.com/select-website/ai) and then on **Legacy chat** to start. See [our AI page](https://www.simpleanalytics.com/features/ai) for examples.
+
+> AI chat is our older way to ask questions about your stats. Do you use Claude, ChatGPT or another AI app? [Connect it with MCP](/mcp) to ask about your stats there, and to set up websites, events and goals right from the chat.
 
 ## What you can ask
 
