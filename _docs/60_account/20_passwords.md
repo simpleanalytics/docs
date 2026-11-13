@@ -15,7 +15,7 @@ Here are the steps you need to take to reset or set your password:
 
 1. Go to [your account settings](https://simpleanalytics.com/account).
 
-1. In account settings you see a link (when you didn't setup a password yet) to setup a password. Click this link:
+1. In account settings you see a link to set a password (when you haven't set one yet). Click this link:
 
    ![](/images/password-set.jpg)
 
@@ -25,6 +25,6 @@ Here are the steps you need to take to reset or set your password:
 
    ![](/images/password-fill.jpg)
 
-1. Once saved you see the confirmation message saying "Password is successfully updated"
+1. Once saved you see the confirmation message saying "Password is successfully updated".
 
    ![](/images/password-done.jpg)

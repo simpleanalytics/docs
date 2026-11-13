@@ -3,7 +3,7 @@ title: Install Simple Analytics with Next.js
 menu: Next.js
 category: integrations
 permalink: /install-simple-analytics-with-next
-last_modified_at: 2024-01-15
+last_modified_at: 2026-11-13
 ---
 
 We recommend using the official **Simple Analytics for Next.js** plugin (`@simpleanalytics/next`). It provides cookie-less analytics, request proxying to avoid ad blockers, and event tracking on both client and server.
@@ -44,11 +44,11 @@ The `withSimpleAnalytics` plugin enables proxying of client-side tracking reques
 
 In your project root, update `next.config.ts` (or `next.config.mjs` / `next.config.js`):
 
-```js
+```ts
 import type { NextConfig } from "next";
 import withSimpleAnalytics from "@simpleanalytics/next/plugin";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   /* your existing config */
 };
 

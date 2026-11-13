@@ -3,7 +3,7 @@ title: Light version script
 category: install-script
 hidden: true
 permalink: /light
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 ---
 
 Our script is already very light, but some customers love it even lighter. That's why we always create two versions of our script: normal and light.
@@ -20,8 +20,8 @@ We support both Brotli and Gzip compression depending on the browser capabilitie
 
 | Script    | Compressed size (Gzip) | Compressed size (Brotli) | Uncompressed size |
 | --------- | ---------------------- | ------------------------ | ----------------- |
-| light.js  | 2.0 KB                 | 1.9 KB                   | 3.5 KB            |
-| latest.js | 3.8 KB                 | 3.8 KB                   | 7.3 KB            |
+| light.js  | 2.0 KB                 | 2.0 KB                   | 3.6 KB            |
+| latest.js | 4.7 KB                 | 4.8 KB                   | 9.4 KB            |
 
 Sizes are approximate and measured on the current versions of both scripts.
 

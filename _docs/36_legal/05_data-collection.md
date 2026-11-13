@@ -3,7 +3,7 @@ title: Data Collection
 menu: Data Collection
 category: legal
 permalink: /data-collection
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 redirect_from:
   - /what-we-do-and-dont-collect
 ---
@@ -39,11 +39,11 @@ To know where customers come from, we store the page’s referrer. This means th
 
 For example, https://simpleanalytics.com/?utm\_source=newsletter
 
-The part after the `?` is called [URL parameters](https://docs.simpleanalytics.com/how-to-use-url-parameters). We only keep the UTM codes (`utm_source`/`ref`, `utm_medium`, `utm_content`, `utm_campaign`) and drop all other URL parameters. The UTM codes are something that the customer adds to the URLs. By nature, these UTM codes don’t include personal data. They are generic terms like “newsletter\_may” or “twitter\_campaign\_2”. [See below](https://docs.simpleanalytics.com/metrics#utm-codes-explained).
+The part after the `?` is called [URL parameters](https://docs.simpleanalytics.com/how-to-use-url-parameters). We only keep the UTM codes (`utm_source`/`ref`, `utm_medium`, `utm_content`, `utm_campaign`, `utm_term`) and drop all other URL parameters, unless you [allow them](/allow-params). From script version 12, we also collect the names of the other parameters that have a value, but not their values, unless you [ignore `querykeys`](/ignore-metrics). The UTM codes are something that the customer adds to the URLs. By nature, these UTM codes don’t include personal data. They are generic terms like “newsletter\_may” or “twitter\_campaign\_2”. [Read more about UTM codes](/metrics#utm-codes-explained).
 
 ### Time zone
 
-In contrast with most services that collect countries based on IP address, we collect them based on the visitors' time zone. This way, we don’t have to touch their IP address and still can define their country. Every country has its own time zone, and modern devices automatically update the time zone when the device travels. The time zone is limited to a country, so we can’t get data about a city or region within a country. [Test this for yourself](https://simpleanalytics.com/timezone).
+In contrast with most services that collect countries based on IP address, we collect them based on the visitors' time zone. This way, we don’t have to touch their IP address and still can define their country. Every country has its own time zone, and modern devices automatically update the time zone when the device travels. The time zone is limited to a country, so we can’t get data about a city or region within a country. [Test this for yourself](https://www.simpleanalytics.com/tools/timezone).
 
 ### IDs
 

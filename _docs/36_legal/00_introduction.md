@@ -17,7 +17,7 @@ What do we do to protect your privacy and that of your visitors?
 3.  **The drives storing your data are fully encrypted.** If anybody did manage to steal them, they’d be useless.
 4.  **We will never sell your data.** Because, once again, it’s yours!
 
-You can find more about our privacy measures [here](/privacy)
+You can find more about our privacy measures [here](/privacy).
 
 ## Compliance
 

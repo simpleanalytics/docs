@@ -75,9 +75,9 @@ None of these IDs are linked to a person or personal data, and none are stored o
 
 <p class="rating"><svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#65aed7"/></svg> <svg xmlns="http://www.w3.org/2000/svg" width="16px" viewBox="0 0 24 24"><path fill="#65aed7" fill-rule="evenodd" d="M12 24a12 12 0 1 0 0-24 12 12 0 0 0 0 24Zm0-5a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" /></svg> Somewhat important</p>
 
-We collect those numbers to know how far visitors scrolled (for example, 80%) and how long they were on the page (for example, 45 seconds). The "The ID of the page view" is required.
+We collect those numbers to know how far visitors scrolled (for example, 80%) and how long they were on the page (for example, 45 seconds).
 
-> The data point ID is required for time on page.
+> The data point ID is required for scrolled percentage and time on page.
 
 ### User-agent
 

@@ -8,7 +8,7 @@ last_modified_at: 2026-10-25
 
 Our script only collects non-personal data. Some customers might want to limit our metrics even more. That's why we created the ignore metrics feature.
 
-| Metric                | Slug           | Inferrered metric      |
+| Metric                | Slug           | Inferred metric      |
 | --------------------- | -------------- | ---------------------- |
 | Referrer              | `referrer`     | UTM codes, `ref` param |
 | UTM codes             | `utm`          | [`ref` param][0]       |

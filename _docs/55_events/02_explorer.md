@@ -28,7 +28,7 @@ You can add as many columns as you want. Do note that if a column has a lot of d
 In our case we search for the `buy` event and added the `plan` metadata field. Now it shows us both values (starter, and business).
 
 <img class="border" src="/images/metadata-in-events-explorer.png" alt="Use metadata in the Events Explorer at Simple Analytics" />
-<p class="caption">Use metadata in the Events Explorer of Goals at Simple Analytics</p>
+<p class="caption">Use metadata in the Events Explorer of Simple Analytics</p>
 
 ## Export
 

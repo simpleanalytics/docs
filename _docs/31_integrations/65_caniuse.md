@@ -7,13 +7,13 @@ permalink: /use-website-data-in-caniuse
 last_modified_at: 2022-12-23
 ---
 
-If you ware a developer you know the website caniuse.com. Can I use provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers. It's super useful when you develop features for your visitors.
+If you are a developer you know the website caniuse.com. Can I use provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers. It's super useful when you develop features for your visitors.
 
 > We don't support the export format required by Can I Use anymore.
 
 Can I use shows percentages of support of features you can use in the browser. Let's say you develop a new feature and you want to know how many of your visitors support Flexbox. You would [search for Flexbox](https://caniuse.com/?search=Flexbox) and find out the percentage of visitors around the world who support Flexbox. But, this does not say much about **your** visitors.
 
-That's where the Simple Analytics integrations comes in. Want to try it?
+That's where the Simple Analytics integration comes in. Want to try it?
 
 First you need to export your website data:
 
@@ -27,7 +27,7 @@ First you need to export your website data:
 1. Select the json file:
   ![image](https://user-images.githubusercontent.com/1079135/147510563-a7d55d28-98d6-41ad-a1f1-cdccc02eaadf.png)
 1. Click "Import"
-2. You will see a list of browser that are imported:
+2. You will see a list of browsers that are imported:
   ![image](https://user-images.githubusercontent.com/1079135/147510708-e246e55f-be7e-4463-8543-8956454167e7.png)
 1. When searching for features, you will see your own visitors support:
   ![image](https://user-images.githubusercontent.com/1079135/147510810-ff0f6e32-c4bf-49a6-9343-628bda87ea47.png)

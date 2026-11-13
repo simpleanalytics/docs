@@ -3,7 +3,7 @@ title: Introduction to events
 menu: Introduction
 category: events
 permalink: /events
-last_modified_at: 2026-10-29
+last_modified_at: 2026-11-13
 ---
 
 With events in Simple Analytics you can collect counts of certain events. Let's say, you want to record a button click, you can fire an event for that. To make it easier for non-developers, we created [an automated events script](/automated-events). This script collects events for downloads, outbound links, and clicks on email and phone links. You will need to install our separate script for it, but after that you don't need to modify any code.
@@ -33,7 +33,7 @@ To allow this, place this `<script>`-tag in the `<head>` of the page (best befor
 <script>window.sa_event=window.sa_event||function(){var a=[].slice.call(arguments);window.sa_event.q?window.sa_event.q.push(a):window.sa_event.q=[a]};</script>
 ```
 
-This little snippet creates a simple function called `sa_event`. After that it loads the Simple Analytics script asynchronously (it does not have any effect on your page load).
+This little snippet creates a simple function called `sa_event` that queues your events until the Simple Analytics script has loaded. It does not have any effect on your page load.
 
 ## Install script
 
@@ -46,11 +46,7 @@ The next part is probably already on your page for collecting page views. If not
 
 If you **can't** add it to your `<body>` tag, place it in the `<head>` of the page.
 
-Don't place the `<noscript>` part in the `<head>`.
-If you can't add it to the body, just omit it.
-We don't recommend adding a noscript tag, because it's mostly collecting data from robots.
-
-If you use our [custom domain feature](/bypass-ad-blockers), make sure to replace `scripts.simpleanalyticscdn.com` and `queue.simpleanalyticscdn.com` with your custom domain.
+If you use our [custom domain feature](/bypass-ad-blockers), make sure to replace `scripts.simpleanalyticscdn.com` with your custom domain.
 
 ## `sa_event`-function
 

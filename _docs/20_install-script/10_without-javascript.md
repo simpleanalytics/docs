@@ -2,12 +2,12 @@
 title: Collect without JavaScript
 category: install-script
 permalink: /without-javascript
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 ---
 
-Normally you would collect page view via our [open source JavaScript](/script). But there are other way to collect those. You can either send data via [your own server](/events/server-side) or send it through a pixel (a small GIF image).
+Normally you would collect page views via our [open source JavaScript](/script). But there are other ways to collect those. You can either send data via [your own server](/events/server-side) or send it through a pixel (a small GIF image).
 
-> By default we already include a pixel (image) with our `<noscript>` tag. This tag gets executed when a visitor disabled JavaScript in their browser. The pixel inside the tag will still record that page view. The data connected to that page view is limited, but still useful for the overall picture.
+> You can also add a pixel (image) to your website with our [`<noscript>` tag](/script#non-javascript-environments). This tag gets executed when a visitor disabled JavaScript in their browser. The pixel inside the tag will still record that page view. The data connected to that page view is limited, but still useful for the overall picture.
 
 To collect page views with our pixel you can add parameters to the URL of the image:
 
@@ -44,7 +44,7 @@ These are the values we can't get with the pixel alone:
 - unique (if a visit is unique; true or false)
 - collect-dnt (boolean to tell if it should collect [DNT visits](/dnt#enable-collecting-dnt-visits-for-noscriptgif-pixel))
 
-> \* We advice to always include the `hostname` and `path` parameters if possible. Some times the browser does not send a referrer with the image and then we can't store a page view.
+> \* We advise to always include the `hostname` and `path` parameters if possible. Sometimes the browser does not send a referrer with the image and then we can't store a page view.
 
 This way you are more in control what you are sending to our servers. It's also a great way if you need to avoid JavaScript for example within Google AMP environments.
 

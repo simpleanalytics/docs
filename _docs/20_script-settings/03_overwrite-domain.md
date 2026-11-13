@@ -2,21 +2,21 @@
 title: Overwrite domain name
 category: script-settings
 permalink: /overwrite-domain-name
-last_modified_at: 2025-06-06
+last_modified_at: 2026-11-13
 ---
 
 Sometimes you want to link multiple domains into one domain in your dashboard. Or you want to use a different domain than people see in their browser address bar. You can overwrite the default domain name by specifying its hostname.
 
 > With [custom views](/custom-views) you can keep websites separate **and** combine multiple websites into one view.
 
-Make sure to include the our `simpleanalyticscdn.com` script (note the **cdn** part). Include these two lines at the end of your `<body>`:
+Make sure to include our `simpleanalyticscdn.com` script (note the **cdn** part). Include this line at the end of your `<body>`:
 
 <!-- prettier-ignore -->
 ```html
 <script async data-hostname="" src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 ```
 
-You see that we added an attribute (`data-hostname=""`) to the script tag and `hostname` param to the `img` tag. If you add your domain to it (e.g. `example.com`) it will look like this:
+You see that we added an attribute (`data-hostname=""`) to the script tag. If you add your domain to it (e.g. `example.com`) it will look like this:
 
 <!-- prettier-ignore -->
 ```html
@@ -29,11 +29,11 @@ Now all the visits you collect with this script are collected under the name `ex
 
 ## Noscript
 
-If you want to use our <noscript>-feature, you can add it like this:
+If you want to use our `<noscript>`-feature, you can add it like this:
 
 <!-- prettier-ignore -->
 ```html
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?hostname=example.com" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
-We not recommend adding it, because it's mostly collecting data from robots.
+We don't recommend adding it, because it's mostly collecting data from robots.

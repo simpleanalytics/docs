@@ -13,7 +13,7 @@ Trend lines give you a quick overview of how your numbers are changing in the pe
 
 ### Curved trend lines with outliers excluded
 
-The default in Simple Analytics is to show these curved trend lines, excluding outliers. It gives a bit more information than linear instead of curved trend lines. Curved trend lines use a [polynomial regression](https://en.wikipedia.org/wiki/Polynomial_regression) with an order of 2. It does not always play nice with outliers. To exclude them, we use an [interquartile range (IQR) x 1.5](https://en.wikipedia.org/wiki/Interquartile_range).
+The default in Simple Analytics is to show these curved trend lines, excluding outliers. They give a bit more information than linear trend lines. Curved trend lines use a [polynomial regression](https://en.wikipedia.org/wiki/Polynomial_regression) with an order of 2. It does not always play nice with outliers. To exclude them, we use an [interquartile range (IQR) x 1.5](https://en.wikipedia.org/wiki/Interquartile_range).
 
 <img src="https://assets.simpleanalytics.com/docs/trend-lines/curved-excluding-outliers.png" alt="Curved trend lines with outliers excluded" class="border">
 

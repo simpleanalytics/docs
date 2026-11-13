@@ -16,7 +16,7 @@ We will show you how to export your Simple Analytics data with two examples:
 1.  a [SQLite database](#example-1-exporting-to-sqlite),
 2.  a [BigQuery Data Warehouse](#example-2-exporting-to-bigquery) running on Google Cloud.
 
-This should give you the general idea for any supported database, data warehouse or data lake. The same steps can applied with slight modifications for any other destination supported by CloudQuery. Authentication steps specific to each destination are documented in the CloudQuery documentation for the destination.
+This should give you the general idea for any supported database, data warehouse or data lake. The same steps can be applied with slight modifications for any other destination supported by CloudQuery. Authentication steps specific to each destination are documented in the CloudQuery documentation for the destination.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ The inner plugin spec section defines the configuration specific to the Simple A
 
 - The `user_id` and `api_key` values are set to environment variables, which we will set in the next step.
 - The `period` value defines the time period for which data will be synced. We chose `7d` here to fetch only the last 7 days, but you can also choose `1m` for the last month, `1y` for the last year, and so on, or omit this setting to fetch all your historical data.
-- The `websites` section defines the websites for which data will be synced. You should replace `<your-website.com>` with the website as defined can add multiple websites to this list.
+- The `websites` section defines the websites for which data will be synced. Replace `<your-website.com>` with the hostname of your website as it's added in Simple Analytics. You can add multiple websites to this list.
 - The `metadata_fields` is an optional list of metadata fields to sync, e.g. `["fieldname_text", "fieldname_int"]`. If not specified, no metadata fields will be synced. To get your available metadata_fields, [check the Simple Analytics exporter](https://simpleanalytics.com/select-website/export). The fields are made of name + underscore + type (`fieldname_text`).
 
 All the available options for the Simple Analytics CloudQuery plugin are documented in the [plugin repository README](https://github.com/simpleanalytics/cq-source-simpleanalytics).
@@ -112,10 +112,10 @@ You will see a progress bar as CloudQuery syncs the data. It might take a few mi
 
 ```text
 ➜ playground cloudquery sync simpleanalytics.yml sqlite.yml
-Loading spec(s) from simple-analytics.yml
-Starting migration with 2 tables for: simple-analytics (v1.0.0) -> [sqlite (v1.2.1)]
+Loading spec(s) from simpleanalytics.yml
+Starting migration with 2 tables for: simpleanalytics (v1.0.0) -> [sqlite (v1.2.1)]
 Migration completed successfully.
-Starting sync for: simple-analytics (v1.0.0) -> [sqlite (v1.2.1)]
+Starting sync for: simpleanalytics (v1.0.0) -> [sqlite (v1.2.1)]
 Sync completed successfully. Resources: 105666, Errors: 0, Panics: 0, Time: 41s
 ```
 
@@ -123,7 +123,7 @@ If anything goes wrong, you can inspect the `cloudquery.log` file to look for er
 
 ### Step 5. Query the data
 
-We can now open the SQLite database file to see the data (you will need have [SQLite installed](https://www.sqlite.org/download.html) for this step):
+We can now open the SQLite database file to see the data (you will need to have [SQLite installed](https://www.sqlite.org/download.html) for this step):
 
 ```bash
 sqlite3 db.sql

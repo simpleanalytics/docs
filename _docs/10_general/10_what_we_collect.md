@@ -72,7 +72,7 @@ In some browsers we collect browser name and operating system name without the u
   <summary>Technical explanation of anonymize function</summary>
   <div markdown="1">
 
-We drop certain information from the User Agent. Below it the function we use to anonymize the User Agent. Facebook for example sends way more information then just the normal User Agent. We drop all FB related information information from the string. The same goes for `V1_AND_...`.
+We drop certain information from the User Agent. Below is the function we use to anonymize the User Agent. Facebook for example sends way more information than just the normal User Agent. We drop all FB related information from the string. The same goes for `V1_AND_...`.
 
 ```js
 const truncate = (number) =>
@@ -107,15 +107,15 @@ const anonymizeAgent = (ua) =>
 
 > We **collect** and **store** country of visitor
 
-In contrast with most services that collect countries based on IP address, we collect them based on the visitors time zone. This way we don't have to touch their IP address and still are able to define their country. Every country has their own time zone and modern devices automatically update the time zone when the device travels. The time zone is limited to a country, so we can't get data about a city or region within a country. [Test this for yourself](https://simpleanalytics.com/timezone).
+In contrast with most services that collect countries based on IP address, we collect them based on the visitors time zone. This way we don't have to touch their IP address and still are able to define their country. Every country has their own time zone and modern devices automatically update the time zone when the device travels. The time zone is limited to a country, so we can't get data about a city or region within a country. [Test this for yourself](https://www.simpleanalytics.com/tools/timezone).
 
 ### Language
 
 > We **collect** and **store** the language of the visitor
 
-Devices are set to a certain language. We collect the language of the device being used by a visitor. We don't show this in our dashboard, but advanced users can get this data out of our [APIs](/api). Some language have a different region. For example English is used in the US and in the UK. We also store the region of the language.
+Devices are set to a certain language. We collect the language of the device being used by a visitor. We don't show this in our dashboard, but advanced users can get this data out of our [APIs](/api). Some languages have a different region. For example English is used in the US and in the UK. We also store the region of the language.
 
-### ID's
+### IDs
 
 The first ID, data point ID, is a technical ID. When a visitor lands on a page, we send a request to our server. When we measure [time on page](/explained/time-on-page) we need to send a request at the end of a page view. To link those two requests together we match them with an ID. The data point ID. If time on page is not relevant, we can drop this ID.
 
@@ -166,7 +166,7 @@ We track these UTM codes:
 Website owners can add a URL parameter to links to their website, like `ref=...`, `source=...` or `utm_source=...`. These are all saved as the `utm_source`. Read more on [using URL parameters](/how-to-use-url-parameters).
 
 <blockquote class="note">
-  <p>Added: July 20, 2020. We now store all UTM-parameters and not just the `utm_source`. UTM-parameters are not privacy invasive as they are being used for groups of visitors and not for individuals.</p>
+  <p>Added: July 20, 2020. We now store all UTM-parameters and not just the <code>utm_source</code>. UTM-parameters are not privacy invasive as they are being used for groups of visitors and not for individuals.</p>
 </blockquote>
 
 ### Device dimensions

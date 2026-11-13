@@ -16,7 +16,7 @@ Do **not** include personal data in your metadata like email addresses, identifi
 
 ## How to use metadata within Simple Analytics
 
-You cans use metadata in multiple ways in Simple Analytics
+You can use metadata in multiple ways in Simple Analytics:
 
 ### Goals
 
@@ -30,14 +30,14 @@ You can use the metadata fields in your [Goals](/goals).
 When using the [Events Explorer](/events-explorer), you can select metadata to be included as columns.
 
 <img class="border" src="/images/metadata-in-events-explorer.png" alt="Use metadata in the Events Explorer at Simple Analytics" />
-<p class="caption">Use metadata in the Events Explorer of Goals at Simple Analytics</p>
+<p class="caption">Use metadata in the Events Explorer of Simple Analytics</p>
 
 ### Export metadata
 
 In our [export UI](https://simpleanalytics.com/select-website/export), you can download your metadata. Metadata fields will only show when they are included in the selected period.
 
-<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-export-ui.png" alt="Export metadata the UI of Simple Analytics" />
-<p class="caption">Export metadata the UI of Simple Analytics</p>
+<img class="border" src="https://assets.simpleanalytics.com/docs/metadata/metadata-export-ui.png" alt="Export metadata in the UI of Simple Analytics" />
+<p class="caption">Export metadata in the UI of Simple Analytics</p>
 
 ### Stats API
 
@@ -73,7 +73,7 @@ In above example you send the `filename` as metadata.
 
 ### 2. Set metadata on the `window` object
 
-An example on how to to set metadata on the `window` object:
+An example of how to set metadata on the `window` object:
 
 ```html
 <script>

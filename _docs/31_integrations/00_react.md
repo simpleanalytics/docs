@@ -18,7 +18,7 @@ npm i @simpleanalytics/react
 
 ## Usage
 
-Import the `<SimpleAnalytics />` to start tracking pageviews
+Add the `<SimpleAnalytics />` component to start tracking pageviews:
 
 ```tsx
 import { SimpleAnalytics } from "@simpleanalytics/react";

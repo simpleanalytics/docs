@@ -102,9 +102,9 @@ The Stats API automatically checks the stored metadata type. Numeric values matc
 
 ## Get data for specific pages
 
-With the Stats API, you can also retrieve data for a specific page of your website. You can specify this via the `pages` parameter: [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=histogram&pages=/contact`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=histogram&pages=/contact)).
+With the Stats API, you can also retrieve data for a specific page of your website. You can specify this via the `pages` parameter: [`https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=histogram&pages=/contact`](https://simpleanalytics.com/simpleanalytics.com.json?version={{ site.api_version }}&fields=histogram&pages=/contact).
 
-You can also add the path to the URL, and Simple Analytics returns the data for only that path. For example, if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ site.api_version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ site.api_version }}&fields=histogram)).
+You can also add the path to the URL, and Simple Analytics returns the data for only that path. For example, if you want to know how many visits you got on `simpleanalytics.com/contact`, you can get the JSON with this URL: [`https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ site.api_version }}&fields=histogram`](https://simpleanalytics.com/simpleanalytics.com/contact.json?version={{ site.api_version }}&fields=histogram).
 
 ## Wildcards
 
@@ -159,7 +159,7 @@ it embeds the time on page in those pages:
 }
 ```
 
-Note the `seconds_on_page` being part of the `pages` ánd part of the root of the JSON response. We have [an explainer on time on page](/explained/time-on-page), which goes into more detail about the metric and why we did choose to make it a median instead of average.
+Note the `seconds_on_page` being part of the `pages` and part of the root of the JSON response. We have [an explainer on time on page](/explained/time-on-page), which goes into more detail about the metric and why we chose a median instead of an average.
 
 ## Date placeholders
 
