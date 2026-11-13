@@ -7,7 +7,7 @@ redirect_from:
   - /api/export-pageviews
   - /api/export-page-views
   - /api/export-events
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 fields: added_iso,country_code,datapoint,device_type,path,query,query_and_path,session_id,utm_source,utm_campaign,utm_content,utm_medium
 ---
 
@@ -49,7 +49,7 @@ When using the API, it's recommended [to generate the export URL](/api/helpers#g
 | viewport_height     | number  | Viewport height in pixels                                                                                                                                  |
 | screen_width        | number  | Screen width in pixels                                                                                                                                     |
 | screen_height       | number  | Screen height in pixels                                                                                                                                    |
-| user_agent          | string  | The [`navigator.userAgent`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) of a browser (in case of a fake one we don't store it. |
+| user_agent          | string  | The [`navigator.userAgent`](https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent) of a browser (in case of a fake one we don't store it) |
 | device_type         | string  | Either desktop, mobile, tablet, or tv.                                                                                                                     |
 | country_code        | string  | 2 letter country code                                                                                                                                      |
 | browser_name        | string  | Browser name                                                                                                                                               |
@@ -72,7 +72,7 @@ Data like `scrolled_percentage` and `duration_seconds` is not always added becau
 <summary>Deprecated fields</summary>
 <div markdown="1">
 
-These fields are deprecated but we keep them for backward compatibility. It's recommended to not use it for new projects. You can only select them in `fields` when you leave out the `version` parameter. If you leave out `fields`, page view exports return them by default.
+These fields are deprecated but we keep them for backward compatibility. It's recommended to not use them for new projects. You can only select them in `fields` when you leave out the `version` parameter. If you leave out `fields`, page view exports return them by default.
 
 | Field               | Description                                                           |
 | ------------------- | --------------------------------------------------------------------- |
@@ -213,7 +213,7 @@ curl "https://simpleanalytics.com/api/export/datapoints?version={{ site.api_vers
 
 ## Errors
 
-When a request fails, the response is JSON with `"ok": false` and an `error` message. If a website on the Free plan is locked because its [Simple Analytics badge](/free-plan-badge) is missing, the API returns HTTP `423` with `"code": "BADGE_REQUIRED"`.
+When a request fails, the response is JSON with `"ok": false` and an `error` message. If a website on the Free plan is locked because its [Simple Analytics badge](/free-plan-badge) is missing, the API returns HTTP `423` with `"code": "BADGE_REQUIRED"`. If the trial or subscription of the website's team has expired, the API returns HTTP `403`.
 
 ## Performance
 

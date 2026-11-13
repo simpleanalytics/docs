@@ -3,7 +3,7 @@ title: Bots
 hidden: true
 category: general
 permalink: /bots
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 redirect_from:
   - /b
 ---
@@ -17,7 +17,7 @@ A few use-cases where we use our bots:
 - We generate screenshots of public referral pages
 - We check if websites on the Free plan show the [Simple Analytics badge](/free-plan-badge)
 
-> You can to disable alerts for your missing script in [your website settings](https://simpleanalytics.com/select-website/settings#alerts).
+> When the page views of a website suddenly drop, we can email the owner, admins and developers of its team. Every email has links to turn these alerts off for that website or for all your websites.
 
 The bots are usually identified with this User-Agent string:
 
