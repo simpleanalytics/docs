@@ -125,7 +125,9 @@
             {% assign isOpen = false %}
             {% assign items = cat.items | sort: 'path' %}
             {% for item in items %}
-              {% if item.hidden != true and item.url == page.url %}
+              {% comment %}A page with redirect_to is an alias: it lists another page in this category too{% endcomment %}
+              {% assign target = item.redirect_to | default: item.url %}
+              {% if item.hidden != true and target == page.url %}
                 {% assign isOpen = true %}
               {% endif %}
             {% endfor %}
@@ -150,8 +152,9 @@
                   {% assign items = cat.items | sort: 'path' %}
                   {% for item in items %}
                     {% if item.hidden != true %}
-                      <li class="{% if item.url == page.url %}active{% endif %}">
-                        <a href="{{ item.url }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
+                      {% assign target = item.redirect_to | default: item.url %}
+                      <li class="{% if target == page.url %}active{% endif %}">
+                        <a href="{{ target }}" {% if item.skip_pjax == true %}data-js="skip-pjax"{% endif %}>
                           {% if item.menu %}
                             {{ item.menu }}
                           {% else %}

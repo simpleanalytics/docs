@@ -1,0 +1,119 @@
+# How /tools groups the tools of tools.json. A tool that's in no group shows
+# under "Other tools", so a new tool is never missing from the page.
+- title: Websites and installation
+  id: websites
+  tools:
+    - list_websites
+    - add_website
+    - get_website_settings
+    - update_website
+    - refresh_website_icon
+    - get_install_instructions
+    - get_event_instructions
+    - check_installation
+    - get_recent_hits
+
+- title: Stats
+  id: stats
+  tools:
+    - get_histogram
+    - get_stats
+    - get_search_traffic
+    - get_metadata
+    - export_data
+
+- title: Events
+  id: events
+  tools:
+    - get_events
+    - get_event_table
+    - export_event_table
+
+- title: Goals
+  id: goals
+  tools:
+    - list_goals
+    - get_goal_results
+    - create_goal
+    - update_goal
+    - reorder_goals
+
+- title: Annotations
+  id: annotations
+  intro: >-
+    <code>list_annotations</code> and <code>add_annotation</code> only take a
+    website. The tools with <code>view</code> in their name do the same for
+    websites and custom views, and return the ID you need to remove an
+    annotation.
+  tools:
+    - list_view_annotations
+    - add_view_annotation
+    - list_annotations
+    - add_annotation
+
+- title: Email reports
+  id: email-reports
+  intro: >-
+    <code>list_email_reports</code> and <code>add_email_report</code> only take
+    a website. The tools with <code>view</code> in their name do the same for
+    websites and custom views.
+  tools:
+    - list_view_email_reports
+    - add_view_email_report
+    - list_email_reports
+    - add_email_report
+
+- title: Custom views and saved filters
+  id: views
+  tools:
+    - list_views
+    - create_view
+    - update_view
+    - list_saved_filters
+    - save_filter
+    - remove_saved_filter
+
+- title: Free plan badge
+  id: badge
+  tools:
+    - get_badge_status
+    - check_badge
+
+- title: Team and preferences
+  id: team
+  tools:
+    - list_team_members
+    - update_team_settings
+    - get_preferences
+    - update_preferences
+
+- title: Requests you confirm
+  id: confirmations
+  intro: >-
+    These tools change nothing themselves. They return a link where you review
+    and confirm the change, see <a href="#changes-you-confirm">changes you
+    confirm</a>.
+  tools:
+    - invite_team_member
+    - request_deletion
+    - request_change
+    - request_billing_change
+
+- title: Account, billing and imports
+  id: account
+  intro: >-
+    Payments, API keys, single sign-on and Google consent only happen in your
+    browser. These tools tell where things stand and give the page to continue
+    on.
+  tools:
+    - list_connections
+    - get_api_key_setup
+    - get_sso_setup
+    - get_billing
+    - get_google_analytics_import
+    - list_website_transfers
+
+- title: Support
+  id: support
+  tools:
+    - contact_support
