@@ -3,12 +3,12 @@ title: Simple Analytics APIs
 menu: Introduction
 category: api
 permalink: /api
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 ---
 
-Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. Our APIs are a good example of that. Most analytics companies do not give you access to your raw data. We believe it should be easy for our customers to get your data out of our database. You should decide what you want to do with your data.
+Simple Analytics does not own your data. That's why we care a lot about the interoperability of your data. Our APIs are a good example of that. Most analytics companies do not give you access to your raw data. We believe it should be easy for you to get your data out of our database. You should decide what you want to do with your data.
 
-There are a few ways to interact with our API. We have the Stats API for aggregated data, Export API for raw level data, and the Admin API for listing and adding websites.
+There are a few ways to interact with our API. We have the Stats API for aggregated data, Export API for raw level data, and the Admin API for listing and adding websites. AI apps and agents use our [MCP server and Tools API](#ai-apps-and-agents).
 
 <div class="apis">
      <a class="api" href="/api/stats">
@@ -32,6 +32,14 @@ There are a few ways to interact with our API. We have the Stats API for aggrega
 </div>
 
 Depending on the public settings of a website you'll need to authenticate. Learn [how to authenticate with Simple Analytics APIs](/api/authenticate).
+
+## AI apps and agents
+
+AI apps and agents don't call these APIs. They use tools to read your stats, set up websites and events, and manage goals, annotations, email reports and more. You log in or approve a token instead of creating an API key, and it works on every plan.
+
+- [MCP server](/mcp): connect Claude, ChatGPT, Claude Code or Codex, and ask about your stats in the chat.
+- [Tools API](/api/tools): the same tools over HTTPS, for AI agents without MCP and for your own scripts.
+- [All tools](/tools): everything apps, agents and scripts can do, with their inputs.
 
 <style>
      .apis {

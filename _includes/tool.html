@@ -1,0 +1,57 @@
+{%- comment -%}
+  One tool of _data/tools.json: its name, description and inputs.
+  Usage: {% include tool.html tool=tool %}
+{%- endcomment -%}
+{%- capture tool_newline %}
+{% endcapture -%}
+{%- assign tool_paragraph = tool_newline | append: tool_newline -%}
+{%- assign tool_schema = include.tool.input_schema -%}
+<h3 id="{{ include.tool.name }}"><code>{{ include.tool.name }}</code></h3>
+<p>{{ include.tool.description | escape | replace: tool_paragraph, '</p><p>' }}</p>
+{%- if tool_schema.properties.size > 0 %}
+<table>
+  <thead>
+    <tr><th>Input</th><th>Type</th><th>Description</th></tr>
+  </thead>
+  <tbody>
+  {%- for tool_input in tool_schema.properties -%}
+    {%- assign tool_prop = tool_input[1] %}
+    <tr>
+      <td>
+        <code>{{ tool_input[0] }}</code>
+        {%- if tool_schema.required contains tool_input[0] %}<br><span class="tool-required">required</span>{% endif -%}
+      </td>
+      <td>{% include tool-type.html prop=tool_prop %}</td>
+      <td>
+        {{- tool_prop.description | escape -}}
+        {%- assign tool_last = tool_prop.description | slice: -1 -%}
+        {%- if tool_prop.description and tool_last != '.' %}.{% endif -%}
+        {%- if tool_prop.default != nil and tool_prop.type != 'object' -%}
+          {%- if tool_prop.default.first %} Default:
+            {% for value in tool_prop.default -%}
+              <code>{{ value | escape }}</code>{% unless forloop.last %}, {% endunless %}
+            {%- endfor %}.
+          {%- elsif tool_prop.type != 'array' %} Default: <code>{{ tool_prop.default | escape }}</code>.
+          {%- endif -%}
+        {%- endif -%}
+        {%- if tool_prop.minimum and tool_prop.maximum and tool_prop.maximum < 100000 %} From {{ tool_prop.minimum }} to {{ tool_prop.maximum }}.{% endif -%}
+        {%- if tool_prop.properties.saved_filter %} See <a href="#filters">filters</a>.
+        {%- else -%}
+          {%- assign tool_fields = tool_prop.properties | default: tool_prop.items.properties -%}
+          {%- if tool_fields.size > 0 %}
+          <ul>
+            {%- for tool_field in tool_fields -%}
+              {%- assign tool_field_prop = tool_field[1] %}
+            <li><code>{{ tool_field[0] }}</code> ({% include tool-type.html prop=tool_field_prop %}){% if tool_field_prop.description %}: {{ tool_field_prop.description | escape }}{% endif %}</li>
+            {%- endfor %}
+          </ul>
+          {%- endif -%}
+        {%- endif %}
+      </td>
+    </tr>
+  {%- endfor %}
+  </tbody>
+</table>
+{%- else %}
+<p>No inputs.</p>
+{%- endif %}

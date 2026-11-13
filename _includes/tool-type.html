@@ -1,0 +1,33 @@
+{%- comment -%}
+  The type of one input of a tool, from its JSON Schema in _data/tools.json.
+  Reads include.prop directly: includes share variables with their caller.
+{%- endcomment -%}
+{%- if include.prop.enum -%}
+  {%- for value in include.prop.enum -%}
+    <code>{{ value | escape }}</code>{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}
+{%- elsif include.prop.const -%}
+  <code>{{ include.prop.const | escape }}</code>
+{%- elsif include.prop.type == 'array' -%}
+  {%- if include.prop.items.enum -%}
+    list of {% for value in include.prop.items.enum -%}
+      <code>{{ value | escape }}</code>{% unless forloop.last %}, {% endunless %}
+    {%- endfor -%}
+  {%- elsif include.prop.items.anyOf -%}
+    list of {% for option in include.prop.items.anyOf -%}
+      {{ option.type }}{% unless forloop.last %} or {% endunless %}
+    {%- endfor -%}
+  {%- elsif include.prop.items.type == 'object' -%}
+    list of objects
+  {%- elsif include.prop.items.type -%}
+    list of {{ include.prop.items.type }}s
+  {%- else -%}
+    list
+  {%- endif -%}
+{%- elsif include.prop.type.first -%}
+  {{ include.prop.type | join: ' or ' }}
+{%- elsif include.prop.type -%}
+  {{ include.prop.type }}
+{%- else -%}
+  any
+{%- endif -%}

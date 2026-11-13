@@ -3,7 +3,7 @@ title: API Authenticate
 menu: Authenticate
 category: api
 permalink: /api/authenticate
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-13
 ---
 
 For some API features you'll need to authenticate. You can do this with an `Api-Key`-header where the key starts with `sa_api_key_...`.
@@ -30,5 +30,9 @@ curl "https://simpleanalytics.com/api/websites" \
 Your user ID is shown in [your account settings](https://dashboard.simpleanalytics.com/account#api) after you create a key.
 
 If an API key fails authentication 20 times within 15 minutes, we reject all requests with that key for up to 15 minutes. The Stats API and Admin API then return the error `Too many failed attempts, please try again later`.
+
+## MCP server and Tools API
+
+Our [MCP server](/mcp) and [Tools API](/api/tools) don't use API keys. AI apps log in to your Simple Analytics account when you connect them. AI agents and scripts use a token that you approve in your dashboard, for a period you pick. See [get a token](/api/tools#get-a-token).
 
 If you have any problems, drop us a line via [our contact page](https://simpleanalytics.com/contact).
