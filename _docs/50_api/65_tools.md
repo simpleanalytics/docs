@@ -4,7 +4,7 @@ menu: All tools
 category: api
 permalink: /tools
 created_at: 2026-11-13
-last_modified_at: 2026-11-13
+last_modified_at: 2026-11-14
 ---
 
 {%- assign tools = site.data.tools.tools -%}
@@ -109,7 +109,7 @@ Tools can't do more than you can do in your dashboard. Your [role](/explained/te
 
 The tools work on every plan, including Free. Features that need a plan in the dashboard need the same plan here, like [goals](/goals), [custom views](/custom-views), custom [annotations](/annotations) and [raw data](/api/export-data-points). When the stats of a website on the Free plan are locked, `get_badge_status` tells why.
 
-Does a tool answer `Missing permission`? Then you connected the app or agent before that tool existed. [Disconnect it](/mcp#disconnect) and connect it again.
+Every app and agent you connect can use all tools, also the ones we add later. You never have to connect again for a new tool.
 
 ### Changes you confirm
 

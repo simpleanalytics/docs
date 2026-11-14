@@ -4,7 +4,7 @@ menu: MCP server
 category: features
 permalink: /mcp
 created_at: 2026-11-08
-last_modified_at: 2026-11-13
+last_modified_at: 2026-11-14
 ---
 
 Connect Simple Analytics to Claude, ChatGPT, Claude Code, Codex or another AI app. Then ask about your stats and set up websites and events right from the chat. It works on every plan, including Free.
@@ -101,7 +101,7 @@ Ask in plain language, for example _"Which pages got the most visitors from Goog
 - **Your account:** see who is in your team, your plan and subscription, the websites you transfer, your Google Analytics imports, the single sign-on setup, and the apps, agents and API keys with access. Apps can change settings like [excluded IP addresses](/exclude-ips) and [advanced robot blocking](/robot-blocking), and check the [Free plan badge](/free-plan-badge).
 - **Support:** when troubleshooting doesn't solve a problem, an app can send a request to our support from your email address. It asks you first. On the Free plan that's only for problems that look like a bug on our side.
 
-See [all tools](/tools) for everything apps can use, with their inputs.
+See [all tools](/tools) for everything apps can use, with their inputs. Every app you connect can use all of them, also the tools we add later, so you never have to connect again.
 
 Answers explain the data when it matters, like that visitors are [unique pageviews](/explained/unique-visits) because we don't use cookies, or that each step of a goal counts on its own.
 
