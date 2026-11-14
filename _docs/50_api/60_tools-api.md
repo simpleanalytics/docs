@@ -3,7 +3,7 @@ title: Tools API
 category: api
 permalink: /api/tools
 created_at: 2026-11-13
-last_modified_at: 2026-11-13
+last_modified_at: 2026-11-14
 ---
 
 The Tools API runs the tools of our [MCP server](/mcp) over HTTPS. It's for AI agents that can't connect over MCP, and for your own scripts. You can read stats, set up websites and events, and manage goals, annotations, email reports, custom views and more. See [all tools](/tools).
@@ -148,4 +148,4 @@ A token stops working when its time is up. To end it sooner, open the [Integrate
 
 ## Versions
 
-The `v1` in the URL is the version of the tools. We do our best to keep `v1` backwards compatible: we add tools and optional inputs instead of changing the ones that are there. That's not a guarantee, so check the [list of tools](#list-the-tools) when a request stops working. The older URL `/api/tools` is the same as `/api/v1/tools`.
+The `v1` in the URL is the version of the tools. We do our best to keep `v1` backwards compatible: we add tools and optional inputs instead of changing the ones that are there. That's not a guarantee, so check the [list of tools](#list-the-tools) when a request stops working.
