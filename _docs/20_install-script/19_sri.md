@@ -15,7 +15,6 @@ When you want to use our SRI version of our script you will need to update your 
 <!-- prettier-ignore -->
 ```html
 <script async src="https://scripts.simpleanalyticscdn.com/sri/v{{ page.sriVersion }}.js" integrity="{{ page.sriHash }}" crossorigin="anonymous"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 ```
 
 When using a [custom domain](/bypass-ad-blockers), use `https://CUSTOM.DOMAIN/sri/v{{ page.sriVersion }}.js` instead. That script contains your custom domain, so its hash differs from the one above. Enter your custom domain to get the embed script with its hash, calculated in your browser:
