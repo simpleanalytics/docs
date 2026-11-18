@@ -2,7 +2,7 @@
 title: How to add our script
 category: install-script
 permalink: /script
-last_modified_at: 2026-11-06
+last_modified_at: 2026-11-18
 ---
 
 ## Install with AI
@@ -26,6 +26,16 @@ Include these two lines on every page at the end of your `<body>` (or anywhere e
 > To install the script on Wordpress, Ghost, WIX, Squarespace, Webflow, Gatsby, Vue, Django, Ruby, and others, go to [Install on other platforms](/install-on-other-platforms).
 
 We have a website setup wizard to test if you installed your script correctly. If you still have problems installing it, please let us know! We helped a lot of people with setting up their script and we love to help you as well. Just [contact](https://simpleanalytics.com/contact) us.
+
+## Count AI agents and robots (beta)
+
+AI agents, like ChatGPT-User, and robots request your pages without running the script. To count them too, your website's server can report its page requests with server-side collection. Using an AI agent? Ask it:
+
+```
+Set up Simple Analytics server-side collection for example.com, follow https://docs.simpleanalytics.com/server-side-collection.md
+```
+
+To set it up yourself, see [server-side collection](/server-side-collection).
 
 ## Server-side tracking
 
