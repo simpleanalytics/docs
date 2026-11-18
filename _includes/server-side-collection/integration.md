@@ -22,7 +22,7 @@ Report a request only when all of these are true:
 
 1. Its method is `GET`.
 2. Its path doesn't end in the file extension of a stylesheet, JavaScript, image, font, audio, video or JSON file, in any case: `.css`, `.js`, `.mjs`, `.cjs`, `.apng`, `.avif`, `.bmp`, `.gif`, `.ico`, `.jpg`, `.jpeg`, `.png`, `.svg`, `.tif`, `.tiff`, `.webp`, `.eot`, `.otf`, `.ttf`, `.woff`, `.woff2`, `.aac`, `.flac`, `.m4a`, `.mp3`, `.oga`, `.ogg`, `.opus`, `.wav`, `.weba`, `.m4v`, `.mov`, `.mp4`, `.ogv`, `.webm`, `.json`, `.map` or `.webmanifest`.
-3. When the integration sees the response: its status is `200`, and its `Content-Type` isn't one of those either: `text/css`, `text/javascript`, `application/javascript`, anything that starts with `image/`, `font/`, `audio/` or `video/`, `application/json`, or anything that ends in `+json`.
+3. When the integration sees the response: its status is `200`, and its media type isn't one of those either: `text/css`, `text/javascript`, `application/javascript`, anything that starts with `image/`, `font/`, `audio/` or `video/`, `application/json`, or anything that ends in `+json`. The media type is the part before any `;` of the response's `Content-Type`, trimmed and compared case-insensitively, so `application/json; charset=utf-8` and `Text/CSS` are skipped and `text/html; charset=utf-8` is reported.
 
 Pages are reported, also `.html`, `.txt`, `.xml` and `.pdf` files. Don't filter on anything else: no lists of user agents or addresses, and no checks of other request headers. Simple Analytics decides who made each request, so the requests of people are sent too.
 
