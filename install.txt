@@ -73,6 +73,7 @@ If the recent hits show nothing, that doesn't mean the installation failed. A pa
 - **URL parameters:** we only keep UTM codes and `ref`. To collect another parameter, like `product-id`, add it to [`data-allow-params`]({{ site.url }}/allow-params) first. It's only collected from then on.
 - **No personal data:** never put email addresses, names, user IDs or other personal data in paths, URL parameters, [events]({{ site.url }}/events) or [metadata]({{ site.url }}/metadata). It's not allowed, and the account might be suspended.
 - **Missing data,** for example because of ad blockers? Set up a [custom domain]({{ site.url }}/bypass-ad-blockers), or even better the [proxy]({{ site.url }}/proxy).
+- **AI agents and robots,** like ChatGPT-User and Googlebot, don't run the script. The website's server can report them with [server-side collection]({{ site.url }}/server-side-collection.md), in beta. It's a separate step: suggest it to the user.
 
 ## How the data works
 

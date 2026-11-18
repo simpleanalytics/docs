@@ -1,0 +1,66 @@
+---
+layout: null
+permalink: /server-side-collection.md
+sitemap: false
+---
+# Set up server-side collection with Simple Analytics (beta)
+
+How to make a website's own server report its page requests to Simple Analytics, so AI agents and robots that don't run the script are counted too, and how to test it. Written for AI agents, like Claude Code, Codex and Cursor, and for developers.
+
+Server-side collection is in beta. The beta covers how Simple Analytics classifies and shows these page requests. What the integration sends, described below, is fixed: it can only gain optional fields later, so an integration written today keeps working. Follow it exactly.
+
+Came here from the Simple Analytics dashboard? Its instructions gave you the hostname of the website, use it.
+
+## How it works
+
+- The script counts people. AI agents, like ChatGPT-User and Claude-User fetching a page because a person asked an AI product, and robots, like Googlebot, GPTBot and curl, mostly don't run JavaScript, so the script misses them.
+- An integration is a small piece of code on the website's server. For each page request the server answers, it sends a description of the request to Simple Analytics, which decides who made it. AI agents and robots are stored. Requests from people are discarded right away, because the script already counts them.
+- Keep the script. Server-side collection adds to it and doesn't replace it.
+- AI agents show up in the dashboard and count toward the account's usage, so the website's numbers go up. Robots are stored but hidden by default, and don't count toward usage.
+- It needs no token and no setting in Simple Analytics.
+
+## 1. Before you start
+
+1. Find out how the website is served: the framework and language, where it's deployed, and what is in front of it, like Cloudflare, another CDN, a cache or a proxy such as Nginx.
+2. Search the code for `queue.simpleanalyticscdn.com/requests` and `trackRequest`. Is there an integration already? Fix that one instead of adding a second.
+3. Has the website no server, like a static export, GitHub Pages or files on a CDN? Then there's nothing to run an integration. Tell the user that server-side collection isn't possible for it yet, and stop.
+4. Ask the user, in one message, and tell them that AI agents will raise the website's numbers and count toward the account's usage:
+   - The hostname of the website, as it's added in Simple Analytics, like `example.com`. Skip this when you have it.
+   - Which query parameters to report besides `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_term`, `source`, `medium`, `campaign`, `content`, `term` and `ref`. No others are sent. Never add parameters that hold tokens, email addresses, names, IDs of people or other personal data.
+
+The hostname goes in the configuration once, and is never read from the request.
+
+## 2. Next.js: use the package
+
+Does the website use Next.js with a server? Follow this step and skip step 3.
+
+{% include server-side-collection/nextjs.md %}
+
+Environment variables only the user can set, like the ones at the hosting provider? Tell the user which ones to set.
+
+## 3. Other frameworks: write the integration
+
+{% include server-side-collection/integration.md %}
+
+## 4. Tell the user which pages are not counted
+
+{% include server-side-collection/not-counted.md %}
+
+Find out which of these apply to the website, like a cache in front of it or HTML files served from disk, and tell the user.
+
+## 5. Test it
+
+{% include server-side-collection/tests.md %}
+
+## 6. Finish
+
+1. Turn test mode off, and make sure it's off in production.
+2. Tell the user:
+   - What you added and where, and how to turn it off.
+   - The query parameters it reports.
+   - Which pages are not counted, from step 4.
+   - Each test request, with the expected and the actual `outcome` and `name`.
+   - What you could not do or check, like settings only the user can change, a CDN you couldn't look into, or a reply that didn't match. Point the user to [Simple Analytics support](https://simpleanalytics.com/contact) for help with those, and give them that list to send.
+3. Nothing is sent to Simple Analytics automatically. Don't contact Simple Analytics yourself, the user decides.
+
+Once the integration runs in production, AI agents show up in the website's reports. Robots are stored but hidden by default.

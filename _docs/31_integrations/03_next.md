@@ -3,7 +3,7 @@ title: Install Simple Analytics with Next.js
 menu: Next.js
 category: integrations
 permalink: /install-simple-analytics-with-next
-last_modified_at: 2026-11-13
+last_modified_at: 2026-11-18
 ---
 
 We recommend using the official **Simple Analytics for Next.js** plugin (`@simpleanalytics/next`). It provides cookie-less analytics, request proxying to avoid ad blockers, and event tracking on both client and server.
@@ -92,6 +92,16 @@ The `SimpleAnalytics` component collects pageviews automatically. For manual tra
 ```jsx
 <SimpleAnalytics autoCollect={false} />
 ```
+
+### Counting AI agents and robots (beta)
+
+AI agents and robots request your pages without running the script. `trackRequest` reports page requests from `proxy.ts` (`middleware.ts` before Next.js 16), so they are counted too. Using an AI agent? Ask it:
+
+```
+Set up Simple Analytics server-side collection for example.com, follow https://docs.simpleanalytics.com/server-side-collection.md
+```
+
+To set it up yourself, see [server-side collection](/server-side-collection#install-with-nextjs).
 
 ### Tracking pageviews server-side
 
