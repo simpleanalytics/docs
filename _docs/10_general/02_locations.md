@@ -7,7 +7,7 @@ hidden: true
 excerpt: "We do everything to keep your data safe. Our servers are located in The Netherlands, and we don’t transfer data overseas."
 redirect_from:
   - /locations
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-26
 ---
 
 We do everything in our power to keep your data safe. We collect the bare minimum amount of data required to give you a broad picture of your website's visitors and even go a few steps further.
@@ -20,7 +20,7 @@ We never collect IP addresses or any form of personal data. Therefore, there is 
 
 The data we collect belongs to you. We only collect non-personal data and don't share the data with third parties or transfer it overseas. Your website data never leaves The Netherlands and, therefore, the EU.  Also, no other third-party vendors have access to any data outside the hosting company that owns the servers on which the data is stored. The only exception is the opt-in [AI chat](/data-security-and-ownership#ai-chat).
 
-The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both Dutch companies that adhere to EU law and GDPR policy. 
+The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/netherlands_en). [Worldstream](https://www.worldstream.com/) owns the servers, a Dutch company that adheres to EU law and GDPR policy. 
 
 We use a CDN for most of our customers. The CDN is called Bunny CDN and is part of a company called [BunnyWay](https://bunny.net/cdn/), located in Slovenia, [part of the EU](https://european-union.europa.eu/principles-countries-history/country-profiles/slovenia_en). Simple Analytics and Bunny CDN have signed a written agreement protecting data exits.
 

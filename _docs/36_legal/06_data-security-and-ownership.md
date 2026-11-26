@@ -3,7 +3,7 @@ title: Data Security and Ownership
 menu: Data Security and Ownership
 category: legal
 permalink: /data-security-and-ownership
-last_modified_at: 2026-10-17
+last_modified_at: 2026-11-26
 redirect_from:
   - /how-we-protect-your-data
 ---
@@ -16,7 +16,7 @@ We do everything in our power to keep your data safe. We collect the bare minimu
 
 The data we collect belongs to you. We only collect non-personal data and don’t share the data with third parties or transfer it overseas. Your website data never leaves the Netherlands and, therefore, the EU. Also, no service providers receive any data except for our hosting provider- who is under binding obligations of confidentiality. The only exception is the opt-in [AI chat](#ai-chat).
 
-The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/eu-countries/netherlands_en). [Worldstream](https://www.worldstream.com/) and [Leaseweb](https://www.leaseweb.com/) own the servers, both Dutch companies that adhere to EU law and GDPR policy.
+The data is hosted fully secured and encrypted in The Netherlands, [part of the EU](https://european-union.europa.eu/principles-countries-history/eu-countries/netherlands_en). [Worldstream](https://www.worldstream.com/) owns the servers, a Dutch company that adheres to EU law and GDPR policy.
 
 We use a CDN for most of our customers. The CDN is called Bunny CDN and is part of a company called [BunnyWay](https://bunny.net/cdn/), located in Slovenia, [part of the EU](https://european-union.europa.eu/principles-countries-history/eu-countries/slovenia_en).
 
