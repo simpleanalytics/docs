@@ -4,7 +4,7 @@ menu: All tools
 category: api
 permalink: /tools
 created_at: 2026-11-13
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-28
 ---
 
 {%- assign tools = site.data.tools.tools -%}
@@ -92,7 +92,7 @@ Stats tools take `filters`, like the [filters in your dashboard](/filters). Data
 - **URL parameters and metadata:** `url_parameters` and `metadata` take up to 20 keys with their value, like `{ "plan": "pro" }`. URL parameters are the ones you collect with [allowed parameters](/allow-params).
 - **Rules:** `rules` are for what one exact value can't do. Each rule has a `dimension`, an `op` and up to 20 `values`. With `eq` the data matches any of the values, with `ne` none of them. `contains` and `not_contains` match a part of a page, with the limits below.
 - **No value:** the value `null` in a rule matches data without a value, like visits without a referrer.
-- **Paid and organic search:** the referrers `google:paid` and `google:organic` match visits from a search engine that landed with or without an ad click ID, like `gclid`. This works for the search engines `get_search_traffic` returns.
+- **Paid and organic visits:** the referrers `google:paid` and `chatgpt.com:organic` match visits from a search engine or AI chat that landed with or without an ad click ID, like `gclid` or `oppref`. This works for the referrers `get_search_traffic` returns.
 - **Saved filters:** `saved_filter` applies a set of filters you saved in your dashboard or with `save_filter`, by its name.
 
 `contains` and `not_contains` rules search through all your data, which takes more work. Like [contains searches in the Stats API](/api/stats#wildcards), stats tools take one such rule, with one page value of at least 12 characters besides slashes. It only works for totals and histograms: `get_histogram`, or `get_stats` without lists, both without `compare` or a goal. These rules are rate limited.
