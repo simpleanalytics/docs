@@ -2,7 +2,7 @@
 title: Filters
 category: features
 permalink: /filters
-last_modified_at: 2026-11-13
+last_modified_at: 2026-11-28
 ---
 
 How can we make it easy to find that data about that specific page/referrer/UTM code? Well, we created filters just for that. With a few clicks, you will find the data you are looking for.
@@ -42,11 +42,13 @@ Do you use the same filters often? Click the star on the right of your filters, 
 
 Saved filters are yours: other members of your team don't see them. You save them per website or [custom view](/custom-views). For filters that everybody sees and can't turn off, use a custom view.
 
-## Paid and organic search
+## Paid and organic visits
 
-Click a search engine in the **Referrals** list, like Google or Bing, to see its **Paid** and **Organic** visits. Paid visits landed on your website with an ad click ID in the URL, like `gclid` for Google Ads or `msclkid` for Microsoft Advertising. Organic visits came from the search engine without one. Click **Paid** or **Organic** to filter your dashboard on those visits.
+Click a search engine or AI chat in the **Referrals** list, like Google, Bing or ChatGPT, to see its **Paid** and **Organic** visits. Paid visits landed on your website with an ad click ID in the URL, like `gclid` for Google Ads, `msclkid` for Microsoft Advertising and Microsoft Copilot, or `oppref` for ChatGPT ads. Organic visits came without one. Click **Paid** or **Organic** to filter your dashboard on those visits.
 
 We only collect the names of these URL parameters, not their values, and only with [version 12 of our script](/script/v12) or `latest.js`. That's why the split starts on October 29, 2026. Visits we can't tell apart count as organic, for example from before that date or collected with the [light script](/light).
+
+ChatGPT often opens links without a referrer. We count a visit without a referrer as a ChatGPT visit when its URL has `oppref`, `utm_source=chatgpt.com` or `utm_source=chatgpt`, and we count visits from the ChatGPT app for Android as ChatGPT visits too. Visits from before we started doing this stay under _(direct)_.
 
 ## Filters in the API and AI apps
 
